@@ -28,3 +28,7 @@
 * [MLGRush](mg/mlgrush.md)
 * [PixelPaint](mg/pixelpaint.md)
 * [CakeWars](mg/cakewars.md)
+
+## Sonstiges <a href="#more" id="more"></a>
+
+* [Rechtliches](more/contact.md)
