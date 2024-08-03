@@ -19,9 +19,9 @@ Zeile 3:
 
 Zeile 4: ? (Nach dem Erstellen musst du mit dem Item auf das Schild klicken) \
 \
-» 1. (Bild 1 bzw. erste Truhe im [Video](https://youtu.be/tjeOA\_qcuAY)) \
-» 2. (Bild 2 bzw. zweite Truhe im [Video](https://youtu.be/tjeOA\_qcuAY)) \
-» 3. (Bild 3 bzw. dritte Truhe im [Video](https://youtu.be/tjeOA\_qcuAY))
+» 1. (Bild 1 bzw. erste Truhe im [Video](https://youtu.be/x9OwppcvUNk)) \
+» 2. (Bild 2 bzw. zweite Truhe im [Video](https://youtu.be/x9OwppcvUNk)) \
+» 3. (Bild 3 bzw. dritte Truhe im [Video](https://youtu.be/x9OwppcvUNk))
 
 <figure><img src="../.gitbook/assets/cs1.png" alt=""><figcaption><p>Bild 1</p></figcaption></figure>
 
