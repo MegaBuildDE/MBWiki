@@ -49,7 +49,7 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 {% tab title="Rocket Artefact" %}
 |         | Stufe 1                                              | Stufe 2                                              | Stufe 3                                              |
 | ------- | ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
-| Kosten  | 4 Mana                                               | 7 Mana                                               | 10 Mana                                              |
+| Kosten  | 4 [Mana](mana.md)                                    | 7 [Mana](mana.md)                                    | 10 [Mana](mana.md)                                   |
 | Effekte | <p>- Power 1 Raketenboost<br>-> Elytra notwendig</p> | <p>- Power 2 Raketenboost<br>-> Elytra notwendig</p> | <p>- Power 3 Raketenboost<br>-> Elytra notwendig</p> |
 {% endtab %}
 
