@@ -14,6 +14,8 @@
 * [Economy](cb/eco.md)
 * [Head](cb/head.md)
 * [Home, Teleport](cb/tp.md)
+* [Artefakte und Pets](cb/artefakte-und-pets.md)
+* [Helfer am CB-Spawn](cb/helfer-am-cb-spawn.md)
 * [Mob-Plates](cb/mobs.md)
 * [Plot, Wall and Border](cb/plot.md)
 * [Redstone](cb/redstone.md)
