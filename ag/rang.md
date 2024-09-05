@@ -6,6 +6,10 @@ description: >-
 
 # Ränge
 
+{% hint style="info" %}
+Ränge auf MegaBuild.de kannst du über `/rshop`mit Ingame Geld, sowie über den [MegaBuild.de-Shop](https://shop.megabuild.de/) mit Echtgeld erwerben
+{% endhint %}
+
 ### Titan Rang
 
 Kosten Titan: 90k\
