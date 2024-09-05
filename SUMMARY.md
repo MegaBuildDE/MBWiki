@@ -14,6 +14,7 @@
 * [Economy](cb/eco.md)
 * [Head](cb/head.md)
 * [Home, Teleport](cb/tp.md)
+* [Mana](cb/mana.md)
 * [Artefacts and Pets](cb/artefacts.md)
 * [Helfer am CB-Spawn](cb/helper-cbspawn.md)
 * [Mob-Plates](cb/mobs.md)

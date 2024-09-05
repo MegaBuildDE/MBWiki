@@ -22,7 +22,10 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 
 {% tabs %}
 {% tab title="Carrot Pet" %}
-test
+|         | Stufe 1       | Stufe 2 | Stufe 3 |
+| ------- | ------------- | ------- | ------- |
+| Kosten  | 2 Mana        | 4 Mana  | 6 Mana  |
+| Effekte | <p>-<br>-</p> |         |         |
 {% endtab %}
 
 {% tab title="Weather Pet" %}
