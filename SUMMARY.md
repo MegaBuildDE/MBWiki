@@ -9,14 +9,14 @@
 ## 🏰 CityBuild <a href="#cb" id="cb"></a>
 
 * [CityBuild](cb/cbi.md)
+* [Artefacts and Pets](cb/artefacts.md)
 * [ChestShop](cb/cs.md)
 * [Clan](cb/clan.md)
 * [Economy](cb/eco.md)
 * [Head](cb/head.md)
+* [Helper](cb/helper-cbspawn.md)
 * [Home, Teleport](cb/tp.md)
 * [Mana](cb/mana.md)
-* [Artefacts and Pets](cb/artefacts.md)
-* [Helfer am CB-Spawn](cb/helper-cbspawn.md)
 * [Mob-Plates](cb/mobs.md)
 * [Plot, Wall and Border](cb/plot.md)
 * [Redstone](cb/redstone.md)
