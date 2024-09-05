@@ -13,3 +13,7 @@ Du hast die Möglichkeit "Stündliche", "Tägliche", ''Wöchentliche", "Monatlic
 Somit lohnt es sich immer wieder online zu kommen, um keine kostenlosen Belohnungen zu verschwenden und die jeweilige immer direkt einzusammeln.\
 \
 Um das Reward System zu öffnen, nutze den Command `/reward` auf dem CityBuild.
+
+### Was ist die Reward-Kiste?
+
+Um die Reward-Kiste zu nutzen, welche du am CB-Spawn findest, benötigst du einen Reward-Key, welchen du durch das Reward-System bekommst. Auch in dieser Kiste hast du die Möglichkeit zahlreiche Items oder auch Geld zu gewinnen.

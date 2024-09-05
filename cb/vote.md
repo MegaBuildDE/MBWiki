@@ -22,3 +22,7 @@ Nutze den Command `/vr` auf dem CityBuild um deinen aktuellen Fortschritt anzeig
 ### Was ist die Top-Voter-Liste?
 
 Jeden Monat wird auf unserem Discord Server die Top-Voter-Liste der Top 3 Voter des jeweiligen Monats in den News Kanal gesendet. Diese Top 3 Voter kriegen dann nochmal zusätzlich Geld und können dies dann im [🎫┃ticket-erstellen](https://megabuild.de/ticket) beantragen.
+
+### Was ist die Vote-Kiste?
+
+Um die Vote-Kiste zu nutzen, welche du am CB-Spawn findest, benötigst du einen Vote-Key, welchen du durch das einfache Voten mit `/vote` und das VoteStreak-System bekommst. Auch in dieser Kiste hast du die Möglichkeit zahlreiche Items oder auch Geld zu gewinnen.
