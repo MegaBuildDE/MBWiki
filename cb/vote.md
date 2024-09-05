@@ -16,8 +16,9 @@ Mit jedem Vote unterstützt du MegaBuild.de neue Leute zu erreichen. Zusätzlich
 ### Was ist das VoteStreak System?
 
 Im VoteStreak System hast du die Möglichkeit eine VoteStreak zu sammeln und somit zusätzliche weitere Preise abzuholen. Hierfür musst du jeden Tag in Folge Voten und kannst dann deine Streak in Wöchentlichen-, Monatlichen- und Jährlichen VoteStreaks auszahlen lassen.\
-Nutze den Command **/vr** auf dem CityBuild um deinen aktuellen Fortschritt anzeigen zu lassen und dort auch deine Streak abzuholen.
+\
+Nutze den Command `/vr` auf dem CityBuild um deinen aktuellen Fortschritt anzeigen zu lassen und dort auch deine Streak abzuholen.
 
 ### Was ist die Top-Voter-Liste?
 
-Jeden Monat wird auf unserem Discord Server die Top-Voter-Liste der Top 3 Voter des jeweiligen Monats in den News Kanal gesendet. Diese Top 3 Voter kriegen dann nochmal zusätzlich Geld und können dies dann im [Ticket-Support](https://megabuild.de/ticket) beantragen.
+Jeden Monat wird auf unserem Discord Server die Top-Voter-Liste der Top 3 Voter des jeweiligen Monats in den News Kanal gesendet. Diese Top 3 Voter kriegen dann nochmal zusätzlich Geld und können dies dann im [🎫┃ticket-erstellen](https://megabuild.de/ticket) beantragen.
