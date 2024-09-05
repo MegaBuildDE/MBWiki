@@ -10,7 +10,7 @@ Mit Artefakten und Pets bringen wir neue Möglichkeiten ins Spielgeschehen auf M
 
 ### Wie bekomme ich diese?
 
-Artefakte und Pets erhältst du über die Toolkiste, durch [Moony](helper-cbspawn.md#moony) und [Milly und Chilly](helper-cbspawn.md#milly-und-chilly), sowie über [ChestShops](cs.md) erhalten.
+Artefakte und Pets erhältst du über die Toolkiste, durch [Moony](helper-cbspawn.md#moony) und [Milly & Chilly](helper-cbspawn.md#milly-und-chilly), sowie über [ChestShops](cs.md) erhalten.
 
 ### Was ist die Toolkiste?
 
