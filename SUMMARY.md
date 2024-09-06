@@ -20,7 +20,7 @@
 * [Mob-Plates](cb/mobs.md)
 * [Plot, Wall and Border](cb/plot.md)
 * [Redstone](cb/redstone.md)
-* [Reward](cb/reward.md)
+* [Reward, Daily and Weekly](cb/reward-daily-and-weekly.md)
 * [Vote](cb/vote.md)
 * [Worlds](cb/worlds.md)
 

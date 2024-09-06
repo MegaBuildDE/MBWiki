@@ -79,7 +79,7 @@ Mit den Minigames kannst du auch Coins verdienen, welche du in der Lobby wieder 
 
 ### Geld per Reward
 
-Alle Infos zu deinen Belohnungen beim Reward System erhältst du beim [reward.md](reward.md "mention") Beitrag
+Alle Infos zu deinen Belohnungen beim Reward System erhältst du beim [reward-daily-and-weekly.md](reward-daily-and-weekly.md "mention") Beitrag
 
 ### Geld per Vote/VoteStreak
 

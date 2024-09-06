@@ -4,7 +4,7 @@ description: >-
   CityBuild
 ---
 
-# Reward
+# Reward, Daily and Weekly
 
 ### Was ist das Reward System?
 
@@ -17,3 +17,7 @@ Um das Reward System zu öffnen, nutze den Command `/reward` auf dem CityBuild.
 ### Was ist die Reward-Kiste?
 
 Um die Reward-Kiste zu nutzen, welche du am CB-Spawn findest, benötigst du einen Reward-Key, welchen du durch das Reward-System bekommst. Auch in dieser Kiste hast du die Möglichkeit zahlreiche Items oder auch Geld zu gewinnen.
+
+### Was ist die Daily und Weekly Belohung?
+
+Durch `/daily` und `/weekly` hast du nochmal die Möglichkeit zusätzlich Geld zu erhalten&#x20;

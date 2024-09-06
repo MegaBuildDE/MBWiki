@@ -14,7 +14,7 @@ Artefakte und Pets erhältst du über die Toolkiste, durch [Moony](helper-cbspaw
 
 ### Was ist die Toolkiste?
 
-Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Artefakt/Pet erhalten. Um einen Toolkey zu erhalten kannst du das [VoteStreak ](vote.md#was-ist-das-votestreak-system)und [Reward-System](reward.md#was-ist-das-reward-system) nutzen oder dir im AdminShop, welcher über `/ashop` zu erreichen ist, für 5000 CBN$ einen Toolkey kaufen.&#x20;
+Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Artefakt/Pet erhalten. Um einen Toolkey zu erhalten kannst du das [VoteStreak ](vote.md#was-ist-das-votestreak-system)und [Reward-System](reward-daily-and-weekly.md#was-ist-das-reward-system) nutzen oder dir im AdminShop, welcher über `/ashop` zu erreichen ist, für 5000 CBN$ einen Toolkey kaufen.&#x20;
 
 ### Welche Artefakte und Pets gibt es?
 
