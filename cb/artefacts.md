@@ -20,21 +20,15 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 
 {% tabs %}
 {% tab title="Carrot Pet" %}
-|         | Stufe 1                                                              | Stufe 2                                                          | Stufe 3                                                             |
-| ------- | -------------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------- |
-| Kosten  | 2 [Mana](mana.md)                                                    | 4 [Mana](mana.md)                                                | 6 [Mana](mana.md)                                                   |
-| Effekte | <p>Heilt dir:<br>- 1.5x Hungerkeulen <br>- 3.6x Sättigungspunkte</p> | <p>Heilt dir:<br>- 5x Hungerkeulen <br>- 9x Sättigungspunkte</p> | <p>Heilt dir:<br>- 7x Hungerkeulen <br>- 14.4x Sättigungspunkte</p> |
+<table><thead><tr><th width="102"></th><th>Stufe 1</th><th>Stufe 2</th><th>Stufe 3</th></tr></thead><tbody><tr><td>Kosten</td><td>2 <a href="mana.md">Mana</a></td><td>4 <a href="mana.md">Mana</a></td><td>6 <a href="mana.md">Mana</a></td></tr><tr><td>Effekte</td><td>Heilt dir:<br>- 1.5x Hungerkeulen <br>- 3.6x Sättigungspunkte</td><td>Heilt dir:<br>- 5x Hungerkeulen <br>- 9x Sättigungspunkte</td><td>Heilt dir:<br>- 7x Hungerkeulen <br>- 14.4x Sättigungspunkte</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Weather Pet" %}
-<table><thead><tr><th></th><th width="135">Clear Pet</th><th>Rain Pet</th><th>Thunder Pet</th></tr></thead><tbody><tr><td>Kosten</td><td>90 <a href="mana.md">Mana</a></td><td>90 <a href="mana.md">Mana</a></td><td>100 <a href="mana.md">Mana</a></td></tr><tr><td>Effekte</td><td>Setzt Wetter auf Klar</td><td>Setzt Wetter auf Regen</td><td>Setzt Wetter auf Gewitter</td></tr></tbody></table>
+<table><thead><tr><th width="101"></th><th width="135">Clear Pet</th><th>Rain Pet</th><th>Thunder Pet</th></tr></thead><tbody><tr><td>Kosten</td><td>90 <a href="mana.md">Mana</a></td><td>90 <a href="mana.md">Mana</a></td><td>100 <a href="mana.md">Mana</a></td></tr><tr><td>Effekte</td><td>Setzt Wetter auf Klar</td><td>Setzt Wetter auf Regen</td><td>Setzt Wetter auf Gewitter</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Coffein Pet" %}
-|         | Stufe 1                                 | Stufe 2                                 | Stufe 3                                 |
-| ------- | --------------------------------------- | --------------------------------------- | --------------------------------------- |
-| Kosten  | 70 [Mana](mana.md)                      | 108 [Mana](mana.md)                     | 220 [Mana](mana.md)                     |
-| Effekte | <p>- 3min Haste 1<br>- 3min Speed 1</p> | <p>- 6min Haste 1<br>- 6min Speed 2</p> | <p>- 9min Haste 2<br>- 9min Speed 3</p> |
+<table><thead><tr><th width="101"></th><th>Stufe 1</th><th>Stufe 2</th><th>Stufe 3</th></tr></thead><tbody><tr><td>Kosten</td><td>70 <a href="mana.md">Mana</a></td><td>108 <a href="mana.md">Mana</a></td><td>220 <a href="mana.md">Mana</a></td></tr><tr><td>Effekte</td><td>- 3min Haste 1<br>- 3min Speed 1</td><td>- 6min Haste 1<br>- 6min Speed 2</td><td>- 9min Haste 2<br>- 9min Speed 3</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Magnet Pet" %}
@@ -47,10 +41,7 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 
 {% tabs %}
 {% tab title="Rocket Artefact" %}
-|         | Stufe 1                                              | Stufe 2                                              | Stufe 3                                              |
-| ------- | ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
-| Kosten  | 4 [Mana](mana.md)                                    | 7 [Mana](mana.md)                                    | 10 [Mana](mana.md)                                   |
-| Effekte | <p>- Power 1 Raketenboost<br>-> Elytra notwendig</p> | <p>- Power 2 Raketenboost<br>-> Elytra notwendig</p> | <p>- Power 3 Raketenboost<br>-> Elytra notwendig</p> |
+<table><thead><tr><th width="101"></th><th>Stufe 1</th><th>Stufe 2</th><th>Stufe 3</th></tr></thead><tbody><tr><td>Kosten</td><td>4 <a href="mana.md">Mana</a></td><td>7 <a href="mana.md">Mana</a></td><td>10 <a href="mana.md">Mana</a></td></tr><tr><td>Effekte</td><td>- Power 1 Raketenboost<br>-> Elytra notwendig</td><td>- Power 2 Raketenboost<br>-> Elytra notwendig</td><td>- Power 3 Raketenboost<br>-> Elytra notwendig</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Heal Artefact" %}
