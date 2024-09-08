@@ -94,7 +94,7 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 {% tab title="Feder der Sanftheit" %}
 |         | Feder der Sanftheit                                                                                                                                                                                                       |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Kosten  | 100                                                                                                                                                                                                                       |
+| Kosten  | 100 [Mana](mana.md)                                                                                                                                                                                                       |
 | Effekte | <p>- Baue Spawner, Budding Amethysten &#x26; End Portal Rahmen ab<br>-> Diese Droppen jedoch nicht immer und auch nur ein magisches Item, welches du dann wieder rum zu einem der oben stehenden Items craften kannst</p> |
 
 #### Nutze das folgende Crafting-Rezept:
@@ -103,10 +103,10 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 {% endtab %}
 
 {% tab title="Mana Ballon" %}
-|         | Mana Ballon                                                                                 |
-| ------- | ------------------------------------------------------------------------------------------- |
-| Kosten  | <p>- Aktivierung 3 Mana<br>- Während dem Use 1 Mana</p>                                     |
-| Effekte | <p>- Levitation 3<br>-> Du fliegst so lange hoch wie du das Artefact in der Hand hältst</p> |
+|         | Mana Ballon                                                                                         |
+| ------- | --------------------------------------------------------------------------------------------------- |
+| Kosten  | <p>- Aktivierung 3 <a href="mana.md">Mana</a><br>- Während dem Use 1 <a href="mana.md">Mana</a></p> |
+| Effekte | <p>- Levitation 3<br>-> Du fliegst so lange hoch wie du das Artefact in der Hand hältst</p>         |
 
 #### Nutze das folgende Crafting-Rezept:
 
