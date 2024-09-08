@@ -81,10 +81,7 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 
 {% tabs %}
 {% tab title="Chorus Pearl" %}
-|         | Chorus Pearl                                                    |
-| ------- | --------------------------------------------------------------- |
-| Kosten  | 100 [Mana](mana.md)                                             |
-| Effekte | - Teleportiere dich in der Welt zufällig in irgendeine Richtung |
+<table><thead><tr><th width="126"></th><th>Chorus Pearl</th></tr></thead><tbody><tr><td>Kosten</td><td>100 <a href="mana.md">Mana</a></td></tr><tr><td>Effekte</td><td>- Teleportiere dich in der Welt zufällig in irgendeine Richtung</td></tr></tbody></table>
 
 #### Nutze das folgende Crafting-Rezept:
 
@@ -92,10 +89,7 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 {% endtab %}
 
 {% tab title="Feder der Sanftheit" %}
-|         | Feder der Sanftheit                                                                                                                                                                                                       |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Kosten  | 100 [Mana](mana.md)                                                                                                                                                                                                       |
-| Effekte | <p>- Baue Spawner, Budding Amethysten &#x26; End Portal Rahmen ab<br>-> Diese Droppen jedoch nicht immer und auch nur ein magisches Item, welches du dann wieder rum zu einem der oben stehenden Items craften kannst</p> |
+<table><thead><tr><th width="113"></th><th>Feder der Sanftheit</th></tr></thead><tbody><tr><td>Kosten</td><td>100 <a href="mana.md">Mana</a></td></tr><tr><td>Effekte</td><td>- Baue Spawner, Budding Amethysten &#x26; End Portal Rahmen ab<br>-> Diese Droppen jedoch nicht immer und auch nur ein magisches Item, welches du dann wieder rum zu einem der oben stehenden Items craften kannst</td></tr></tbody></table>
 
 #### Nutze das folgende Crafting-Rezept:
 
@@ -103,10 +97,7 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 {% endtab %}
 
 {% tab title="Mana Ballon" %}
-|         | Mana Ballon                                                                                         |
-| ------- | --------------------------------------------------------------------------------------------------- |
-| Kosten  | <p>- Aktivierung 3 <a href="mana.md">Mana</a><br>- Während dem Use 1 <a href="mana.md">Mana</a></p> |
-| Effekte | <p>- Levitation 3<br>-> Du fliegst so lange hoch wie du das Artefact in der Hand hältst</p>         |
+<table><thead><tr><th width="102"></th><th>Mana Ballon</th></tr></thead><tbody><tr><td>Kosten</td><td>- Aktivierung 3 <a href="mana.md">Mana</a><br>- Während dem Use 1 <a href="mana.md">Mana</a></td></tr><tr><td>Effekte</td><td>- Levitation 3<br>-> Du fliegst so lange hoch wie du das Artefact in der Hand hältst</td></tr></tbody></table>
 
 #### Nutze das folgende Crafting-Rezept:
 
