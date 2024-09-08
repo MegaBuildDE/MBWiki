@@ -71,4 +71,46 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 | Kosten  | 180 [Mana](mana.md)                      |
 | Effekte | Verwandel einen Villager in einem Zombie |
 {% endtab %}
+
+{% tab title="Sanduhr" %}
+<table><thead><tr><th width="111"></th><th>Sanduhr</th><th>Verwitterte Sanduhr</th><th>Oxidierte Sanduhr</th></tr></thead><tbody><tr><td>Kosten</td><td>30 <a href="mana.md">Mana</a></td><td>40 <a href="mana.md">Mana</a></td><td>50 <a href="mana.md">Mana</a></td></tr><tr><td>Effekte</td><td>- Alle Mobs im 15 Block Radius um dich herum, erhalten Slowness 3</td><td>- Alle Mobs im 10 Block Radius um dich herum, erhalten Slowness 4</td><td>- Alle Mobs im 5 Block Radius um dich herum, erhalten Slowness 5</td></tr></tbody></table>
+{% endtab %}
 {% endtabs %}
+
+### Welche craftbaren Artefakte und Pets gibt es?
+
+{% tabs %}
+{% tab title="Chorus Pearl" %}
+|         | Chorus Pearl                                                    |
+| ------- | --------------------------------------------------------------- |
+| Kosten  | 100 [Mana](mana.md)                                             |
+| Effekte | - Teleportiere dich in der Welt zufällig in irgendeine Richtung |
+
+#### Nutze das folgende Crafting-Rezept:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-08 231653.png" alt=""><figcaption><p>Weitere Infos zu den einzelnen Items, <br>welche du zum Craften benötigst,<br> findest du auf der <a href="mana.md">Mana Seite</a> </p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Feder der Sanftheit" %}
+|         | Feder der Sanftheit                                                                                                                                                                                                       |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kosten  | 100                                                                                                                                                                                                                       |
+| Effekte | <p>- Baue Spawner, Budding Amethysten &#x26; End Portal Rahmen ab<br>-> Diese Droppen jedoch nicht immer und auch nur ein magisches Item, welches du dann wieder rum zu einem der oben stehenden Items craften kannst</p> |
+
+#### Nutze das folgende Crafting-Rezept:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-08 231838.png" alt=""><figcaption><p>Weitere Infos zu den einzelnen Items, <br>welche du zum Craften benötigst,<br> findest du auf der <a href="mana.md">Mana Seite</a></p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Mana Ballon" %}
+|         | Mana Ballon                                                                                 |
+| ------- | ------------------------------------------------------------------------------------------- |
+| Kosten  | <p>- Aktivierung 3 Mana<br>- Während dem Use 1 Mana</p>                                     |
+| Effekte | <p>- Levitation 3<br>-> Du fliegst so lange hoch wie du das Artefact in der Hand hältst</p> |
+
+#### Nutze das folgende Crafting-Rezept:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-08 231755.png" alt=""><figcaption><p>Weitere Infos zu den einzelnen Items, <br>welche du zum Craften benötigst,<br> findest du auf der <a href="mana.md">Mana Seite</a></p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
