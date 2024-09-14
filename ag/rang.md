@@ -36,7 +36,7 @@ Kosten im [MB-Shop](https://shop.megabuild.de/category/ranks): 28,99€
 
 ### Platin Rang
 
-Kosten mit Platin: 55k\
+Kosten Platin: 55k\
 Kosten mit Gold: 25k\
 Kosten im [MB-Shop](https://shop.megabuild.de/category/ranks): 18,99€
 
@@ -62,7 +62,7 @@ Kosten im [MB-Shop](https://shop.megabuild.de/category/ranks): 18,99€
 
 ### Gold Rang
 
-Kosten mit Gold: 30k\
+Kosten Gold: 30k\
 Kosten im [MB-Shop](https://shop.megabuild.de/category/ranks): 8,99€
 
 * Alle Perms von Spieler
