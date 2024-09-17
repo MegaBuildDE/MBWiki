@@ -33,7 +33,7 @@ Lasse dir bei Milly & Chilly dein altes [Artefact/Pet](artefacts.md) in ein neue
 
 ### Moony
 
-Gebe Moony ein Totem und 10000 [Mana](mana.md), und er lässt seine Fähigkeiten für dich arbeiten. Warte einen Tag und hole dir dann dein neues zufälliges [Artefact/Pet](artefacts.md) ab.
+Gebe Moony ein Totem und 15000 [Mana](mana.md), und er lässt seine Fähigkeiten für dich arbeiten. Warte einen Tag und hole dir dann dein neues zufälliges [Artefact/Pet](artefacts.md) ab.
 
 <figure><img src="../.gitbook/assets/2024-09-05_23.07.27.png" alt=""><figcaption><p>Direkt neben Milly &#x26; Chilly wartet Moony auf dich</p></figcaption></figure>
 
