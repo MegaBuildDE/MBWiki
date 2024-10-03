@@ -32,6 +32,7 @@ Kosten im [MB-Shop](https://shop.megabuild.de/category/ranks): 28,99€
 * /daily » Hole dir täglich eine Belohnung zwischen 50$ und 250$ ab
 * /border » Verfüge über 14 weitere Borders (+ die der vorherigen Ränge)
 * /wall » Verfüge über 14 weitere Walls (+ die der vorherigen Ränge)
+* /flag » Verfüge über 11 weitere Flags (+ die der vorherigen Ränge)
 * /head » Erstelle dir pro Tag einen Head
 
 ### Platin Rang
@@ -58,6 +59,7 @@ Kosten im [MB-Shop](https://shop.megabuild.de/category/ranks): 18,99€
 * /weekly » Hole dir wöchentlich eine Belohnung zwischen 1$ und 150$ ab
 * /border » Verfüge über 9 weitere Borders (+ die der vorherigen Ränge)
 * /wall » Verfüge über 9 weitere Walls (+ die der vorherigen Ränge)
+* /flag » Verfüge über 9 weitere Flags (+ die der vorherigen Ränge)
 * /head » Erstelle dir pro Woche einen Head
 
 ### Gold Rang
@@ -76,4 +78,5 @@ Kosten im [MB-Shop](https://shop.megabuild.de/category/ranks): 8,99€
 * /rename » Zugriff auf farbiges Renamen
 * /border » Verfüge über 6 weitere Borders (+ die der vorherigen Ränge)
 * /wall » Verfüge über 6 weitere Walls (+ die der vorherigen Ränge)
+* /flag » Verfüge über 8 weitere Flags (+ die der vorherigen Ränge)
 * /head » Erstelle dir pro Monat einen Head
