@@ -77,6 +77,30 @@ Mit einem Toolkey kannst du die Toolkiste öffnen und ein neues zufälliges Arte
 {% endtab %}
 {% endtabs %}
 
+#### Limitierte Artefakte:
+
+{% tabs %}
+{% tab title="Snow Artefact" %}
+|         | Snow Artefakt                  |
+| ------- | ------------------------------ |
+| Kosten  | 1 [Mana](mana.md#was-ist-mana) |
+| Effekte | - Schieße 10 Schneebälle       |
+
+
+{% endtab %}
+
+{% tab title="Gingerbread Artefact" %}
+|         | Gingerbread Artefact            |
+| ------- | ------------------------------- |
+| Kosten  | 20 [Mana](mana.md#was-ist-mana) |
+| Effekte | - Sättigung für 10 Minuten      |
+
+
+{% endtab %}
+{% endtabs %}
+
+
+
 ### Welche craftbaren Artefakte gibt es?
 
 {% tabs %}
