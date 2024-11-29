@@ -9,7 +9,7 @@
 ## 🏰 CityBuild <a href="#cb" id="cb"></a>
 
 * [CityBuild](cb/cbi.md)
-* [Artefacts and Pets](cb/artefacts.md)
+* [Artefacts](cb/artefacts.md)
 * [ChestShop](cb/cs.md)
 * [Clan](cb/clan.md)
 * [Economy](cb/eco.md)
