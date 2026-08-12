@@ -1,82 +1,95 @@
 ---
 description: >-
-  Auf MegaBuild.de hast du die Auswahl zwischen verschiedenen Rängen, um dein
-  Spielerlebnis auf MB zu erweitern
+  Die Ränge auf MegaBuild.de – Gold, Platin und Titan – und wo du sie bekommst.
+icon: crown
 ---
 
 # Ränge
 
-{% hint style="info" %}
-Ränge auf MegaBuild.de kannst du über `/rshop` mit Ingame Geld, sowie über den [MegaBuild.de-Shop](https://shop.megabuild.de/) mit Echtgeld erwerben
+Auf MegaBuild.de kannst du dir einen Rang holen und damit gleichzeitig den Server unterstützen.
+
+{% hint style="warning" %}
+**Die Rang-Vorteile für den Custom Skyblock stehen noch nicht fest.**
+
+Die früheren Rang-Perks bezogen sich auf den alten CityBuild (Grundstücke, `/p merge`, Plot-Flags usw.) und gelten für den neuen Skyblock **nicht** mehr. Die neuen Vorteile werden zum Skyblock-Start bekannt gegeben und hier eingetragen.
 {% endhint %}
 
-### Titan Rang
+## Verfügbare Ränge
 
-Kosten Titan: 90k\
-Kosten mit Platin: 65k\
-Kosten mit Gold: 75k\
-Kosten im [MB-Shop](https://shop.megabuild.de/category/ranks): 28,99€
+Aktuell im [MegaBuild.de-Shop](https://shop.megabuild.de/) erhältlich:
 
-* Alle Perms von Spieler, Gold und Platin
-* 8x Grundstücke
-* 8x /p merge » Merge deine GSe zu einem großen Plot
-* /fly » Unbegrenztes Fliegen
-* /fixme » Repariere all deine Items und heile/fülle zusätzlich deine(n) Leben/Hunger alle 10min
-* /heal » Heile alle 15min deine Leben
-* /food » Fülle alle 10min deine Hungerbalken
-* /repair all » Repariere alle Items in deinem Inventar
-* /sign » Signiere deine Items in 16 verschiedenen Farben
-* /day » Setze die Uhrzeit auf Tag
-* /night » Setze die Uhrzeit auf Nacht
-* /werbung » Mache für dein(en) Plot/Shop jeden Tag Werbung
-* /daily » Hole dir täglich eine Belohnung zwischen 50$ und 250$ ab
-* /border » Verfüge über 14 weitere Borders (+ die der vorherigen Ränge)
-* /wall » Verfüge über 14 weitere Walls (+ die der vorherigen Ränge)
-* /flag » Verfüge über 11 weitere Flags (+ die der vorherigen Ränge)
-* /head » Erstelle dir pro Tag einen Head
+<table><thead><tr><th width="200">Rang</th><th width="160">Preis</th><th>Shop</th></tr></thead><tbody><tr><td><strong>Gold</strong></td><td>9,99 €</td><td><a href="https://shop.megabuild.de/">shop.megabuild.de</a></td></tr><tr><td><strong>Platin</strong></td><td>19,99 €</td><td><a href="https://shop.megabuild.de/">shop.megabuild.de</a></td></tr><tr><td><strong>Titan</strong></td><td>34,99 €</td><td><a href="https://shop.megabuild.de/">shop.megabuild.de</a></td></tr></tbody></table>
 
-### Platin Rang
+{% hint style="info" %}
+**Stand: August 2026.** Preise und Aktionen können sich ändern – maßgeblich ist immer der [Shop](https://shop.megabuild.de/). Dort laufen regelmäßig Rabatte, aktuell zum Beispiel auf den Titan-Rang.
+{% endhint %}
 
-Kosten Platin: 55k\
-Kosten mit Gold: 25k\
-Kosten im [MB-Shop](https://shop.megabuild.de/category/ranks): 18,99€
+## Weitere Angebote im Shop
 
-* Alle Perms von Spieler und Gold
-* 6x Grundstücke
-* 6x /p merge » Merge deine GSe zu einem großen Plot
-* Zusätzlich dickes schreiben im Chat
-* /fly » Fliege 120min pro Tag
-* /nick » Setze dir einen Nickname
-* /fixme » Repariere all deine Items und heile/fülle zusätzlich deine(n) Leben/Hunger alle 20min
-* /heal » Heile alle 25min deine Leben
-* /food » Fülle alle 20min deine Hungerbalken
-* /repair » Repariere dein Item
-* /rename » Zusätzlich dickes Renamen
-* /sign » Signiere deine Items in 8 verschiedenen Farben
-* /sunrise » Setze die Uhrzeit auf Sonnenaufgang
-* /sunset » Setze die Uhrzeit auf Sonnenuntergang
-* /werbung » Mache für dein(en) Plot/Shop alle 3 Tage Werbung
-* /weekly » Hole dir wöchentlich eine Belohnung zwischen 1$ und 150$ ab
-* /border » Verfüge über 9 weitere Borders (+ die der vorherigen Ränge)
-* /wall » Verfüge über 9 weitere Walls (+ die der vorherigen Ränge)
-* /flag » Verfüge über 9 weitere Flags (+ die der vorherigen Ränge)
-* /head » Erstelle dir pro Woche einen Head
+{% columns %}
+{% column %}
+### 🎁 Gutscheine
 
-### Gold Rang
+Gutscheine gibt es ab 5,99 € – praktisch, wenn du jemandem etwas schenken möchtest.
+{% endcolumn %}
 
-Kosten Gold: 30k\
-Kosten im [MB-Shop](https://shop.megabuild.de/category/ranks): 8,99€
+{% column %}
+### 🐾 Pets
 
-* Alle Perms von Spieler
-* 4x Grundstücke
-* 4x /p merge » Merge deine GSe zu einem großen Plot
-* Farbiges schreiben im Chat
-* /fly » Fliege 60min pro Tag
-* /heal » Heile alle 40min deine Leben
-* /food » Fülle alle 35min deine Hungerbalken
-* /tpignore » Deaktiviere eingehende TP-Anfragen
-* /rename » Zugriff auf farbiges Renamen
-* /border » Verfüge über 6 weitere Borders (+ die der vorherigen Ränge)
-* /wall » Verfüge über 6 weitere Walls (+ die der vorherigen Ränge)
-* /flag » Verfüge über 8 weitere Flags (+ die der vorherigen Ränge)
-* /head » Erstelle dir pro Monat einen Head
+Im Shop ist eine eigene Pets-Kategorie angelegt. Die Inhalte dazu folgen.
+{% endcolumn %}
+{% endcolumns %}
+
+{% embed url="https://shop.megabuild.de/" %}
+
+## Häufige Fragen
+
+<details>
+
+<summary>Behalte ich meinen alten Rang nach dem Relaunch?</summary>
+
+Wie Ränge aus der Zeit vor dem Relaunch behandelt werden, wurde noch nicht öffentlich angekündigt. Frag am besten direkt im [Discord](https://megabuild.de/dc/) oder über ein [Ticket](https://megabuild.de/ticket/) nach.
+
+</details>
+
+<details>
+
+<summary>Gilt mein Rang auch auf meinem Bedrock-Account?</summary>
+
+Wenn du deinen Java- und Bedrock-Account miteinander verbunden hast, teilen sich beide denselben Spielstand.
+
+{% content-ref url="connect-account.md" %}
+[connect-account.md](connect-account.md)
+{% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>Meine Bestellung ist nicht angekommen</summary>
+
+Wende dich an den [Ticket-Support](https://megabuild.de/ticket/) oder schreibe an [support@megabuild.de](mailto:support@megabuild.de). Halte deine Bestell- bzw. Transaktionsnummer bereit.
+
+</details>
+
+<details>
+
+<summary>Kann ich Ränge auch ingame kaufen?</summary>
+
+Auf dem alten CityBuild gab es dafür `/rshop` mit Ingame-Geld. Ob es so etwas im Custom Skyblock wieder geben wird, ist noch nicht angekündigt.
+
+</details>
+
+## Verwandte Seiten
+
+{% columns %}
+{% column %}
+* [Voten](vote.md)
+* [Support & Kontakt](support.md)
+{% endcolumn %}
+
+{% column %}
+* [Wirtschaft & Handel](../sb/eco.md)
+* [FAQ](../more/faq.md)
+{% endcolumn %}
+{% endcolumns %}
