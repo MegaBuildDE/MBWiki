@@ -21,19 +21,12 @@ Ablauf, Häufigkeit und Belohnungen der Events werden vor dem Start im [Discord]
 
 Der Discord ist die zentrale Anlaufstelle neben dem Server selbst:
 
-{% columns %}
-{% column %}
 * Ankündigungen zum Skyblock-Start
 * Unterstützte Minecraft-Versionen
 * Events und Aktionen
-{% endcolumn %}
-
-{% column %}
 * Support und Tickets
 * Austausch mit anderen Spielern
 * Feedback und Vorschläge
-{% endcolumn %}
-{% endcolumns %}
 
 {% embed url="https://megabuild.de/dc/" %}
 
@@ -75,14 +68,7 @@ Für ein funktionierendes Miteinander gelten die Serverregeln – auf dem Server
 
 ## Verwandte Seiten
 
-{% columns %}
-{% column %}
 * [Wirtschaft & Handel](eco.md)
 * [Support & Kontakt](../ag/support.md)
-{% endcolumn %}
-
-{% column %}
 * [Voten](../ag/vote.md)
 * [FAQ](../more/faq.md)
-{% endcolumn %}
-{% endcolumns %}

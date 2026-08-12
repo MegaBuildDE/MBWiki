@@ -79,14 +79,7 @@ Once the systems are final you will find the real values here. Announcements go 
 
 ## Related pages
 
-{% columns %}
-{% column %}
 * [Progression & upgrades](progression.md)
 * [Farming & automation](farming.md)
-{% endcolumn %}
-
-{% column %}
 * [Community & events](community.md)
 * [Ranks](ranks.md)
-{% endcolumn %}
-{% endcolumns %}

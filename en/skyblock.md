@@ -27,33 +27,10 @@ For announcements: [Discord](https://megabuild.de/dc/) · [status.megabuild.de](
 
 Everything is aimed at giving you a motivating main game with its own direction, real progression and enough depth for many hours. MegaBuild should feel like a server you keep coming back to, not one you join once.
 
-{% columns %}
-{% column %}
-### 🏝️ Build, expand, grow
-
-Your island starts small but gains more character, value and possibilities with every step.
-{% endcolumn %}
-
-{% column %}
-### 🌱 Custom farming and automation
-
-Not just standard routines, but systems that make growth, efficiency and planning genuinely fun.
-{% endcolumn %}
-{% endcolumns %}
-
-{% columns %}
-{% column %}
-### 📈 Progression that feels good
-
-Trading, upgrades and unlocks interlock so you constantly feel like you are actually building something.
-{% endcolumn %}
-
-{% column %}
-### ✨ Your own island world
-
-Even the start should feel special: islands that don't look generic and make you want to expand and explore right away.
-{% endcolumn %}
-{% endcolumns %}
+* **Build, expand, grow** – Your island starts small but gains more character, value and possibilities with every step.
+* **Custom farming and automation** – Not just standard routines, but systems that make growth, efficiency and planning genuinely fun.
+* **Progression that feels good** – Trading, upgrades and unlocks interlock so you constantly feel like you are actually building something.
+* **Your own island world** – Even the start should feel special: islands that don't look generic and make you want to expand and explore right away.
 
 ## The systems
 
@@ -83,16 +60,9 @@ Players, trading and community should feel alive and gain more depth through ser
 
 ## Continue in the wiki
 
-{% columns %}
-{% column %}
 * [Getting started](start.md)
 * [Your island](island.md)
 * [Progression & upgrades](progression.md)
-{% endcolumn %}
-
-{% column %}
 * [Farming & automation](farming.md)
 * [Economy & trading](economy.md)
 * [Community & events](community.md)
-{% endcolumn %}
-{% endcolumns %}

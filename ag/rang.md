@@ -82,14 +82,7 @@ Auf dem alten CityBuild gab es dafür `/rshop` mit Ingame-Geld. Ob es so etwas i
 
 ## Verwandte Seiten
 
-{% columns %}
-{% column %}
 * [Voten](vote.md)
 * [Support & Kontakt](support.md)
-{% endcolumn %}
-
-{% column %}
 * [Wirtschaft & Handel](../sb/eco.md)
 * [FAQ](../more/faq.md)
-{% endcolumn %}
-{% endcolumns %}

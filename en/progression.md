@@ -11,35 +11,13 @@ The guiding idea behind the relaunch: **every expansion, every upgrade and every
 
 Instead of progression that runs out after a few hours, it is designed for long-term play.
 
-## The building blocks
+## The three building blocks
 
-{% columns %}
-{% column %}
-### Island upgrades
+* **Island upgrades** – Expansion tiers that increase space, capacity and possibilities.
+* **Unlocks** – Features and content you earn, rather than have handed to you from the start.
+* **Long-term goals** – Goals deliberately designed for many hours instead of being ticked off in one evening.
 
-Expansion tiers for your island that increase space, capacity and possibilities.
-{% endcolumn %}
-
-{% column %}
-### Unlocks
-
-Features and content you earn – not things handed to you from the start.
-{% endcolumn %}
-{% endcolumns %}
-
-{% columns %}
-{% column %}
-### Long-term goals
-
-Goals deliberately designed for many hours instead of being ticked off in one evening.
-{% endcolumn %}
-
-{% column %}
-### How it connects
-
-Trading, upgrades and unlocks interlock – progress in one area opens up options in the others.
-{% endcolumn %}
-{% endcolumns %}
+The three interlock: progress in one area opens up options in the others.
 
 ## Custom generators
 
@@ -93,14 +71,7 @@ Announcements go out via [Discord](https://megabuild.de/dc/).
 
 ## Related pages
 
-{% columns %}
-{% column %}
 * [Your island](island.md)
 * [Farming & automation](farming.md)
-{% endcolumn %}
-
-{% column %}
 * [Economy & trading](economy.md)
 * [Ranks](ranks.md)
-{% endcolumn %}
-{% endcolumns %}

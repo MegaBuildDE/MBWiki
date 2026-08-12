@@ -9,41 +9,12 @@ icon: headset
 
 ## Wo melde ich mich?
 
-{% columns %}
-{% column %}
-### 🎫 Ticket-Support
-
-Der richtige Weg für alles Persönliche: Bestellungen, Account-Probleme, Meldungen.
-
-[megabuild.de/ticket](https://megabuild.de/ticket/)
-{% endcolumn %}
-
-{% column %}
-### 💬 Discord
-
-Für schnelle Fragen, Ankündigungen und den Austausch mit anderen Spielern.
-
-[megabuild.de/dc](https://megabuild.de/dc/)
-{% endcolumn %}
-{% endcolumns %}
-
-{% columns %}
-{% column %}
-### 📧 E-Mail
-
-Für alles, was schriftlich laufen soll.
-
-[support@megabuild.de](mailto:support@megabuild.de)
-{% endcolumn %}
-
-{% column %}
-### 📡 Status
-
-Erst hier nachsehen, wenn der Server nicht erreichbar ist.
-
-[status.megabuild.de](https://status.megabuild.de/)
-{% endcolumn %}
-{% endcolumns %}
+| Weg | Wofür |
+| --- | ----- |
+| [Ticket-Support](https://megabuild.de/ticket/) | Alles Persönliche: Bestellungen, Account-Probleme, Meldungen |
+| [Discord](https://megabuild.de/dc/) | Schnelle Fragen, Ankündigungen, Austausch mit anderen Spielern |
+| [support@megabuild.de](mailto:support@megabuild.de) | Alles, was schriftlich laufen soll |
+| [status.megabuild.de](https://status.megabuild.de/) | Zuerst nachsehen, wenn der Server nicht erreichbar ist |
 
 ## So bekommst du am schnellsten Hilfe
 
@@ -61,17 +32,10 @@ Je genauer deine Beschreibung, desto schneller die Lösung. Nenne direkt in der 
 
 Viele Fragen lassen sich schneller selbst klären:
 
-{% columns %}
-{% column %}
 * [Server nicht erreichbar?](join.md)
 * [Accounts verbinden](connect-account.md)
-{% endcolumn %}
-
-{% column %}
 * [FAQ](../more/faq.md)
 * [Vote-Belohnung fehlt](vote.md)
-{% endcolumn %}
-{% endcolumns %}
 
 ## Regeln melden und Regelverstöße
 

@@ -13,17 +13,10 @@ Farming is not a side activity on MegaBuild.de but one of the core systems. The 
 
 In Skyblock, everything you own came from your island at some point. Farms and generators are therefore the basis for:
 
-{% columns %}
-{% column %}
 * **Resources** for expanding your island
 * **Goods** for trading and the economy
-{% endcolumn %}
-
-{% column %}
 * **Capital** for upgrades and unlocks
 * **Throughput** for long-term goals
-{% endcolumn %}
-{% endcolumns %}
 
 Automating sensibly early on pays off heavily later.
 
@@ -59,14 +52,7 @@ This page will be filled with the real values and rules once Skyblock launches. 
 
 ## Related pages
 
-{% columns %}
-{% column %}
 * [Your island](island.md)
 * [Progression & upgrades](progression.md)
-{% endcolumn %}
-
-{% column %}
 * [Economy & trading](economy.md)
 * [Getting started](start.md)
-{% endcolumn %}
-{% endcolumns %}

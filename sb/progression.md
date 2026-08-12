@@ -13,33 +13,11 @@ Statt eines Fortschritts, der nach ein paar Stunden ausläuft, ist die Progressi
 
 ## Die drei Bausteine
 
-{% columns %}
-{% column %}
-### Inselupgrades
+* **Inselupgrades** – Ausbaustufen für deine Insel, die Platz, Kapazität und Möglichkeiten erhöhen.
+* **Freischaltungen** – Funktionen und Inhalte, die du dir erarbeitest, statt sie von Anfang an offen zu haben.
+* **Langzeitziele** – Ziele, die bewusst auf viele Stunden ausgelegt sind, statt nach einem Abend abgehakt zu sein.
 
-Ausbaustufen für deine Insel, die Platz, Kapazität und Möglichkeiten erhöhen.
-{% endcolumn %}
-
-{% column %}
-### Freischaltungen
-
-Funktionen und Inhalte, die du dir erarbeitest – nicht solche, die von Anfang an offen liegen.
-{% endcolumn %}
-{% endcolumns %}
-
-{% columns %}
-{% column %}
-### Langzeitziele
-
-Ziele, die bewusst auf viele Stunden ausgelegt sind, statt nach einem Abend abgehakt zu sein.
-{% endcolumn %}
-
-{% column %}
-### Und wie das zusammenhängt
-
-Handel, Upgrades und Freischaltungen greifen ineinander – Fortschritt in einem Bereich öffnet Möglichkeiten in den anderen.
-{% endcolumn %}
-{% endcolumns %}
+Diese drei greifen ineinander: Fortschritt in einem Bereich öffnet Möglichkeiten in den anderen.
 
 ## Eigene Generatoren
 
@@ -93,14 +71,7 @@ Ankündigungen laufen über den [Discord](https://megabuild.de/dc/).
 
 ## Verwandte Seiten
 
-{% columns %}
-{% column %}
 * [Deine Insel](insel.md)
 * [Farming & Automatisierung](farming.md)
-{% endcolumn %}
-
-{% column %}
 * [Wirtschaft & Handel](eco.md)
 * [Ränge](../ag/rang.md)
-{% endcolumn %}
-{% endcolumns %}

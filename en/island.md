@@ -63,14 +63,7 @@ We deliberately do **not** publish estimated values here. Once the systems are f
 
 ## Related pages
 
-{% columns %}
-{% column %}
 * [Progression & upgrades](progression.md)
 * [Farming & automation](farming.md)
-{% endcolumn %}
-
-{% column %}
 * [Economy & trading](economy.md)
 * [Getting started](start.md)
-{% endcolumn %}
-{% endcolumns %}

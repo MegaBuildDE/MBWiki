@@ -27,33 +27,10 @@ Für Ankündigungen: [Discord](https://megabuild.de/dc/) · [status.megabuild.de
 
 Alles zielt darauf ab, dir ein motivierendes Hauptspiel mit eigener Richtung, echtem Fortschritt und genug Tiefe für viele Stunden zu geben. MegaBuild soll sich wie ein Server anfühlen, auf den man nicht nur kurz joint, sondern immer wieder zurückkommt.
 
-{% columns %}
-{% column %}
-### 🏝️ Aufbauen, erweitern, wachsen
-
-Deine Insel startet klein, entwickelt aber mit jedem Schritt mehr Charakter, Wert und Möglichkeiten.
-{% endcolumn %}
-
-{% column %}
-### 🌱 Custom Farming und Automatisierung
-
-Nicht einfach nur Standard-Abläufe, sondern Systeme, mit denen Wachstum, Effizienz und Planung wirklich Spaß machen.
-{% endcolumn %}
-{% endcolumns %}
-
-{% columns %}
-{% column %}
-### 📈 Fortschritt, der sich gut anfühlt
-
-Handel, Upgrades und Freischaltungen greifen ineinander, damit du ständig das Gefühl hast, wirklich etwas aufzubauen.
-{% endcolumn %}
-
-{% column %}
-### ✨ Dein Start in eine eigene Inselwelt
-
-Schon der Einstieg soll besonders wirken: mit Inseln, die nicht nach 08/15 aussehen, sondern direkt Lust auf Ausbau und Entdeckung machen.
-{% endcolumn %}
-{% endcolumns %}
+* **Aufbauen, erweitern, wachsen** – Deine Insel startet klein, entwickelt aber mit jedem Schritt mehr Charakter, Wert und Möglichkeiten.
+* **Custom Farming und Automatisierung** – Nicht einfach nur Standard-Abläufe, sondern Systeme, mit denen Wachstum, Effizienz und Planung wirklich Spaß machen.
+* **Fortschritt, der sich gut anfühlt** – Handel, Upgrades und Freischaltungen greifen ineinander, damit du ständig das Gefühl hast, wirklich etwas aufzubauen.
+* **Dein Start in eine eigene Inselwelt** – Schon der Einstieg soll besonders wirken: mit Inseln, die nicht nach 08/15 aussehen, sondern direkt Lust auf Ausbau und Entdeckung machen.
 
 ## Die Systeme im Überblick
 
@@ -83,16 +60,9 @@ Spieler, Handel und Community sollen sich lebendig anfühlen und durch servereig
 
 ## Weiter im Wiki
 
-{% columns %}
-{% column %}
 * [Erste Schritte](start.md)
 * [Deine Insel](insel.md)
 * [Progression & Upgrades](progression.md)
-{% endcolumn %}
-
-{% column %}
 * [Farming & Automatisierung](farming.md)
 * [Wirtschaft & Handel](eco.md)
 * [Community & Events](community.md)
-{% endcolumn %}
-{% endcolumns %}

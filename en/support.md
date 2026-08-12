@@ -7,41 +7,12 @@ icon: headset
 
 ## Where do I go?
 
-{% columns %}
-{% column %}
-### 🎫 Ticket support
-
-The right channel for anything personal: orders, account issues, reports.
-
-[megabuild.de/ticket](https://megabuild.de/ticket/)
-{% endcolumn %}
-
-{% column %}
-### 💬 Discord
-
-For quick questions, announcements and chatting with other players.
-
-[megabuild.de/dc](https://megabuild.de/dc/)
-{% endcolumn %}
-{% endcolumns %}
-
-{% columns %}
-{% column %}
-### 📧 Email
-
-For anything you want in writing.
-
-[support@megabuild.de](mailto:support@megabuild.de)
-{% endcolumn %}
-
-{% column %}
-### 📡 Status
-
-Check here first if the server is unreachable.
-
-[status.megabuild.de](https://status.megabuild.de/)
-{% endcolumn %}
-{% endcolumns %}
+| Channel | What for |
+| ------- | -------- |
+| [Ticket support](https://megabuild.de/ticket/) | Anything personal: orders, account issues, reports |
+| [Discord](https://megabuild.de/dc/) | Quick questions, announcements, chatting with other players |
+| [support@megabuild.de](mailto:support@megabuild.de) | Anything you want in writing |
+| [status.megabuild.de](https://status.megabuild.de/) | Check here first if the server is unreachable |
 
 ## How to get help fastest
 
@@ -59,17 +30,10 @@ The more precise your description, the faster the fix. Include in your first mes
 
 Many questions are faster to answer yourself:
 
-{% columns %}
-{% column %}
 * [Can't reach the server?](join.md)
 * [Linking accounts](connect-account.md)
-{% endcolumn %}
-
-{% column %}
 * [FAQ](faq.md)
 * [Vote reward missing](vote.md)
-{% endcolumn %}
-{% endcolumns %}
 
 ## Reporting rule violations
 

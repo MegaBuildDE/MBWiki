@@ -89,14 +89,7 @@ Der Vote selbst wird auf den Serverlisten registriert. Belohnungen können aber 
 
 ## Verwandte Seiten
 
-{% columns %}
-{% column %}
 * [Ränge](rang.md)
 * [Community & Events](../sb/community.md)
-{% endcolumn %}
-
-{% column %}
 * [Support & Kontakt](support.md)
 * [FAQ](../more/faq.md)
-{% endcolumn %}
-{% endcolumns %}

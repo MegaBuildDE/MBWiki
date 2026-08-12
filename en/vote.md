@@ -89,14 +89,7 @@ The vote itself is registered on the server lists. Rewards can only be handed ou
 
 ## Related pages
 
-{% columns %}
-{% column %}
 * [Ranks](ranks.md)
 * [Community & events](community.md)
-{% endcolumn %}
-
-{% column %}
 * [Support & contact](support.md)
 * [FAQ](faq.md)
-{% endcolumn %}
-{% endcolumns %}

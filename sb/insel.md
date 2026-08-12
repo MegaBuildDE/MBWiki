@@ -63,14 +63,7 @@ Wir tragen hier bewusst **keine geschätzten Werte** ein. Sobald die Systeme fin
 
 ## Verwandte Seiten
 
-{% columns %}
-{% column %}
 * [Progression & Upgrades](progression.md)
 * [Farming & Automatisierung](farming.md)
-{% endcolumn %}
-
-{% column %}
 * [Wirtschaft & Handel](eco.md)
 * [Erste Schritte](start.md)
-{% endcolumn %}
-{% endcolumns %}

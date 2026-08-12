@@ -81,14 +81,7 @@ On the old CityBuild there was `/rshop` using in-game money. Whether something s
 
 ## Related pages
 
-{% columns %}
-{% column %}
 * [Voting](vote.md)
 * [Support & contact](support.md)
-{% endcolumn %}
-
-{% column %}
 * [Economy & trading](economy.md)
 * [FAQ](faq.md)
-{% endcolumn %}
-{% endcolumns %}

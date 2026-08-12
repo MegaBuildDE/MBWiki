@@ -79,14 +79,7 @@ Sobald die Systeme final sind, findest du die echten Werte hier. Ankündigungen 
 
 ## Verwandte Seiten
 
-{% columns %}
-{% column %}
 * [Progression & Upgrades](progression.md)
 * [Farming & Automatisierung](farming.md)
-{% endcolumn %}
-
-{% column %}
 * [Community & Events](community.md)
 * [Ränge](../ag/rang.md)
-{% endcolumn %}
-{% endcolumns %}

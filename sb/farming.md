@@ -13,17 +13,10 @@ Farming ist auf MegaBuild.de kein Nebenschauplatz, sondern eines der Kernsysteme
 
 Im Skyblock ist alles, was du besitzt, irgendwann einmal von deiner Insel gekommen. Farmen und Generatoren sind damit die Grundlage für:
 
-{% columns %}
-{% column %}
 * **Ressourcen** für den Inselausbau
 * **Waren** für Handel und Wirtschaft
-{% endcolumn %}
-
-{% column %}
 * **Kapital** für Upgrades und Freischaltungen
 * **Durchsatz** für langfristige Ziele
-{% endcolumn %}
-{% endcolumns %}
 
 Wer früh sinnvoll automatisiert, kommt später deutlich schneller voran.
 
@@ -59,14 +52,7 @@ Diese Seite wird mit den echten Werten und Regeln ergänzt, sobald der Skyblock 
 
 ## Verwandte Seiten
 
-{% columns %}
-{% column %}
 * [Deine Insel](insel.md)
 * [Progression & Upgrades](progression.md)
-{% endcolumn %}
-
-{% column %}
 * [Wirtschaft & Handel](eco.md)
 * [Erste Schritte](start.md)
-{% endcolumn %}
-{% endcolumns %}

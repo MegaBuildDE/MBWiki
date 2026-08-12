@@ -19,19 +19,12 @@ How events work, how often they run and what they reward will be announced on [D
 
 Discord is the central hub next to the server itself:
 
-{% columns %}
-{% column %}
 * Announcements about the Skyblock launch
 * Supported Minecraft versions
 * Events and campaigns
-{% endcolumn %}
-
-{% column %}
 * Support and tickets
 * Chatting with other players
 * Feedback and suggestions
-{% endcolumn %}
-{% endcolumns %}
 
 {% embed url="https://megabuild.de/dc/" %}
 
@@ -73,14 +66,7 @@ The server rules apply both in game and on Discord.
 
 ## Related pages
 
-{% columns %}
-{% column %}
 * [Economy & trading](economy.md)
 * [Support & contact](support.md)
-{% endcolumn %}
-
-{% column %}
 * [Voting](vote.md)
 * [FAQ](faq.md)
-{% endcolumn %}
-{% endcolumns %}
