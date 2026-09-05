@@ -87,7 +87,7 @@ Die Assets liegen bereits im Repo unter `.gitbook/assets/`:
 | `mb-logo.png` | 64×64 | Favicon |
 | `mb-logo-round.png` | 512×512 | Logo im Header |
 
-Quelle: `megabuild.de/images/mblogo.png` bzw. `mblogo-normal-rund.png`.
+Quelle: `MegaBuildDE/MBLogo` – Fassung `mblogo-pink` (rosa Raute).
 
 > Ein eigenes Logo erfordert ebenfalls Premium/Ultimate. Ohne diesen Plan bleibt es beim Titel-Text.
 
@@ -118,8 +118,8 @@ Copyright-Text: `© 2026 MegaBuild.de – nicht verbunden mit Mojang oder Micros
 
 | Datei | Herkunft |
 | --- | --- |
-| `.gitbook/assets/mb-logo.png` | `megabuild.de/images/mblogo.png` |
-| `.gitbook/assets/mb-logo-round.png` | `megabuild.de/images/mblogo-normal-rund.png` |
+| `.gitbook/assets/mb-logo.png` | `MBLogo/mblogo-pink-1024.png` (auf 64 px) |
+| `.gitbook/assets/mb-logo-round.png` | `MBLogo/mblogo-pink-1024.png` (auf 512 px) |
 | `.gitbook/assets/mb-skyblock-one.jpg` | `megabuild.de/images/about-img-one.jpg` |
 | `.gitbook/assets/mb-skyblock-two.jpg` | `megabuild.de/images/about-img-two.jpg` |
 | `.gitbook/assets/mb-skyblock-three.jpg` | `megabuild.de/images/about-img-three.jpg` |
