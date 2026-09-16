@@ -1,58 +1,66 @@
 ---
 description: >-
-  Custom farming and automation on MegaBuild.de – systems that make growth,
-  efficiency and planning genuinely fun.
+  Ores, Mana Ore, cobblestone generator, monsters and farms – the resources you
+  find on MegaBuild.de.
 icon: seedling
 ---
 
-# Farming & automation
+# Resources & Farming
 
-Farming is not a side activity on MegaBuild.de but one of the core systems. The goal: **not just standard routines, but systems that make growth, efficiency and planning genuinely fun.**
+## Ores
 
-## Why farming matters here
+Every newly generated main island has around **60 ore blocks** on average – most of them in its cave.
 
-In Skyblock, everything you own came from your island at some point. Farms and generators are therefore the basis for:
+| Ore | Per main island (average) |
+| --- | ------------------------: |
+| Coal | 20 |
+| Copper | 12 |
+| Iron | 11 |
+| Lapis | 5 |
+| Gold | 4 |
+| Redstone | 4 |
+| Diamond | 1 |
 
-* **Resources** for expanding your island
-* **Goods** for trading and the economy
-* **Capital** for upgrades and unlocks
-* **Throughput** for long-term goals
+Need more? Keep exploring: every new main island brings new ores.
 
-Automating sensibly early on pays off heavily later.
+## Mana Ore
 
-## Custom generators
+<table><thead><tr><th width="220">Property</th><th>Value</th></tr></thead><tbody><tr><td>Appearance</td><td>Glowing, magenta deepslate lapis lazuli ore</td></tr><tr><td>Occurrence</td><td>About 5–7 per main island, mostly on cave walls</td></tr><tr><td>Mining</td><td>Pickaxe only</td></tr><tr><td>Yield</td><td>6–12 Mana, +25 % per Fortune level, plus some XP</td></tr><tr><td>Daily limit</td><td>200 Mana, separate from the limit for actions</td></tr></tbody></table>
 
-MegaBuild uses **custom generators** instead of the usual off-the-shelf solutions. They are part of progression: what a generator produces evolves with your progress.
+Mana Ore never drops lapis and survives explosions.
 
-{% content-ref url="progression.md" %}
-[progression.md](progression.md)
-{% endcontent-ref %}
-
-## Planning beats speed
-
-{% hint style="success" %}
-**Build farms where they still fit later.** Space on an island is limited. A farm you have to tear down in three days costs you more than the time you spend planning now.
+{% hint style="info" %}
+There's no Mana Ore on the **starting island**. You only find it on main islands that are newly generated as you explore.
 {% endhint %}
 
-Principles that work on any Skyblock:
+## Cobblestone generator
 
-* **Throughput first, comfort later.** A simple farm that runs beats a perfect one that never gets finished.
-* **Think in layers.** Building vertically saves surface area for later projects.
-* **Collect centrally.** One shared storage beats twenty scattered chests.
-* **Secure your walkways.** The most common loss in Skyblock is still falling into the void.
-* **Automate what you do most often.** Not what looks most exciting.
-
-## Still open
+If your starting island has no water and no lava of its own, it gets both on a stone pedestal – enough for a classic cobblestone generator.
 
 {% hint style="warning" %}
-Which generator types, farm mechanics, automation blocks and redstone rules will exist – and whether there are limits on things like hoppers or ticking entities – has **not been announced publicly** yet.
-
-This page will be filled with the real values and rules once Skyblock launches. Announcements go out via [Discord](https://megabuild.de/dc/).
+Stone from lava-water generators **doesn't count for quests**.
 {% endhint %}
+
+## Monsters and animals
+
+* **Monsters:** Around **60 % fewer** monsters spawn naturally on the islands than in normal Minecraft.
+* **Animals:** Every island has animals that match its biome.
+
+## Loot
+
+Chests, barrels, pots, shelves and suspicious sand or gravel in structures are **filled once**. A chest you place yourself stays empty.
+
+## Farms and automation
+
+MegaBuild doesn't have any special rules of its own for farms, hoppers and redstone. The [server rules](https://megabuild.de/rules/) apply.
+
+Just keep this in mind when it comes to Mana and quests:
+
+* **Blocks you placed yourself** – such as ores, logs, melons or pumpkins – don't give Mana and don't count for mining quests.
+* **Monsters from spawners** don't give Mana.
 
 ## Related pages
 
+* [Mana & Ruby](economy.md)
+* [Quests](quests.md)
 * [Your island](island.md)
-* [Progression & upgrades](progression.md)
-* [Economy & trading](economy.md)
-* [Getting started](start.md)

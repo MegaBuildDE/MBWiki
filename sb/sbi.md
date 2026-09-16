@@ -1,7 +1,7 @@
 ---
 description: >-
-  MegaBuild.de relauncht als Custom Skyblock – mit eigener Inselgenerierung,
-  spürbarer Progression und Systemen, die auf Langzeitspaß ausgelegt sind.
+  So funktioniert der Custom Skyblock auf MegaBuild.de – eigene Inselserver,
+  eine Welt, die beim Erkunden wächst, und Biome zum Freischalten.
 icon: cube
 cover: ../.gitbook/assets/mb-skyblock-two.jpg
 coverY: 0
@@ -9,60 +9,59 @@ coverY: 0
 
 # Custom Skyblock
 
-MegaBuild.de startet neu – mit einem klaren Fokus: **ein Hauptspiel statt vieler nebeneinanderlaufender Modi.**
+Auf MegaBuild.de bekommt jeder Spieler **seinen eigenen Inselserver**. Du startest in der Lobby, erstellst dort deine Insel und reist mit dem Luftschiff hin.
 
-Der Anspruch dahinter: MegaBuild soll sich nicht wie der nächste Standard-Server anfühlen, sondern wie deine eigene Welt zum Aufbauen, Freischalten und Immer-weiter-Spielen.
+Um deine Insel herum entstehen beim Erkunden immer neue Inseln – mit Höhlen, Erzen, Dörfern und Ruinen. Welche Biome dabei vorkommen, bestimmst du selbst: Du schaltest sie mit **Mana** im Skilltree frei.
 
-<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="Eine Skyblock-Insel über den Wolken"><figcaption>Custom-generierte Inseln statt Standard-Startplattform</figcaption></figure>
+<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="Eine Skyblock-Insel über den Wolken"><figcaption>Eine Hauptinsel in einer der Biom-Regionen</figcaption></figure>
 
-{% hint style="warning" %}
-**Status: in Entwicklung.**
+## So greift alles ineinander
 
-Der Server befindet sich im Wartungsmodus, ein finaler Starttermin ist noch nicht öffentlich angekündigt. Die Systeme auf dieser Seite sind offiziell bestätigt, die **konkreten Details** – Befehle, Zahlen, Preise, Upgrade-Stufen – werden hier ergänzt, sobald sie feststehen.
+{% stepper %}
+{% step %}
+#### Erkunden und abbauen
 
-Für Ankündigungen: [Discord](https://megabuild.de/dc/) · [status.megabuild.de](https://status.megabuild.de/)
+Baue Erze ab, farme, kämpfe und entdecke neue Inseln.
+{% endstep %}
+
+{% step %}
+#### Mana verdienen
+
+Viele Aktionen geben mit etwas Glück Mana. Dazu kommen Quests und das seltene Mana-Erz.
+{% endstep %}
+
+{% step %}
+#### Biome freischalten
+
+Im Skilltree kaufst du mit Mana neue Biome.
+{% endstep %}
+
+{% step %}
+#### Neue Inseln entdecken
+
+Neu freigeschaltete Biome tauchen in den Regionen auf, die du als Nächstes erkundest – mit neuen Ressourcen, Tieren und Quests.
+{% endstep %}
+{% endstepper %}
+
+## Die Systeme
+
+| System | Worum es geht |
+| ------ | ------------- |
+| [Deine Insel](insel.md) | Eigener Server, Startbiom, eine Welt, die beim Erkunden wächst |
+| [Mitglieder & Rechte](mitglieder.md) | Bis zu 25 Mitspieler mit einstellbaren Rechten |
+| [Mana & Ruby](eco.md) | Mana zum Freischalten, Ruby zum Handeln |
+| [Quests](quests.md) | Tägliche und wöchentliche Aufgaben für Mana |
+| [Skilltree & Biome](skilltree.md) | 45 Biome in 8 Kategorien |
+| [Ressourcen & Farming](farming.md) | Erze, Mana-Erz, Generator, Monster |
+| [Warpetts](warpetts.md) | Teleportieren über Blumen-Netze |
+| [HUD & Statistiken](hud.md) | Was du auf dem Bildschirm siehst |
+
+{% hint style="info" %}
+Die Zahlen in diesem Wiki sind die Standardwerte des Servers. Bis zum Start und danach können sie noch angepasst werden.
 {% endhint %}
 
-## Der neue Fokus
+## Los geht's
 
-Alles zielt darauf ab, dir ein motivierendes Hauptspiel mit eigener Richtung, echtem Fortschritt und genug Tiefe für viele Stunden zu geben. MegaBuild soll sich wie ein Server anfühlen, auf den man nicht nur kurz joint, sondern immer wieder zurückkommt.
-
-* **Aufbauen, erweitern, wachsen** – Deine Insel startet klein, entwickelt aber mit jedem Schritt mehr Charakter, Wert und Möglichkeiten.
-* **Custom Farming und Automatisierung** – Nicht einfach nur Standard-Abläufe, sondern Systeme, mit denen Wachstum, Effizienz und Planung wirklich Spaß machen.
-* **Fortschritt, der sich gut anfühlt** – Handel, Upgrades und Freischaltungen greifen ineinander, damit du ständig das Gefühl hast, wirklich etwas aufzubauen.
-* **Dein Start in eine eigene Inselwelt** – Schon der Einstieg soll besonders wirken: mit Inseln, die nicht nach 08/15 aussehen, sondern direkt Lust auf Ausbau und Entdeckung machen.
-
-## Die Systeme im Überblick
-
-### Custom Insel-Progression
-
-Deine Insel ist der Mittelpunkt von allem, was du freischaltest, ausbaust und dir langfristig erarbeitest.
-
-* Inselupgrades und Freischaltungen
-* Eigene Generatoren und Startbedingungen statt Standard-Abläufen
-* Ziele, die auf Langzeitspiel ausgelegt sind
-
-{% content-ref url="progression.md" %}
-[progression.md](progression.md)
+{% content-ref url="start.md" %}
+[start.md](start.md)
 {% endcontent-ref %}
-
-### Wirtschaft und Community
-
-Spieler, Handel und Community sollen sich lebendig anfühlen und durch servereigene Systeme mehr Tiefe bekommen als bei typischen Standardlösungen.
-
-* Handel und serverweite Wirtschaft
-* Aktive Events und Community-Ziele
-* Vorteile, die sinnvoll in das Hauptspiel integriert sind
-
-{% content-ref url="eco.md" %}
-[eco.md](eco.md)
-{% endcontent-ref %}
-
-## Weiter im Wiki
-
-* [Erste Schritte](start.md)
-* [Deine Insel](insel.md)
-* [Progression & Upgrades](progression.md)
-* [Farming & Automatisierung](farming.md)
-* [Wirtschaft & Handel](eco.md)
-* [Community & Events](community.md)

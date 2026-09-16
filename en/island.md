@@ -1,69 +1,72 @@
 ---
 description: >-
-  Your island is the centre of everything on MegaBuild.de – custom generated
-  instead of a standard starter platform.
+  Your island on MegaBuild.de – your own server, a world that grows as you
+  explore, and how to manage it.
 icon: tree
 cover: ../.gitbook/assets/mb-skyblock-three.jpg
 coverY: 0
 ---
 
-# Your island
+# Your Island
 
-On MegaBuild.de your island is not just a starting point, but the **centre of everything** you unlock, expand and work towards long term.
+Every island is **its own server**. Only you and members with the **Join** right can enter it. You can own an island yourself and also be a member on other players' islands.
 
-## Custom island generation
+## A world that grows with you
 
-The biggest difference to standard Skyblock: you don't land on a bare 3×3 platform with a single tree.
+Your island has no fixed upgrade levels. Instead, **new islands appear around you as you explore.**
 
-MegaBuild uses **custom-generated islands** – starting worlds that look like a place you want to stay from the very beginning, and that make you want to expand and explore right away.
+* **Starting island:** It sits in the middle, along with a few small side islands.
+* **Grid:** The world is divided into cells of 220 × 220 blocks. Each cell has one main island and 2–3 small side islands, slightly offset and at different heights.
+* **When islands appear:** On foot, cells up to 2 cells around you are generated. With an Elytra it's up to 4.
+* **Biome regions:** Islands of the same biome lie in regions of about 880 × 880 blocks – that's around 16 main islands.
+* **Only unlocked biomes:** Only biomes your island has unlocked are generated. A newly bought biome shows up especially often in the next regions.
 
-<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="Custom generated Skyblock island"><figcaption>Your island shouldn't feel interchangeable, but like the beginning of something of your own</figcaption></figure>
-
-This includes:
-
-* **Custom starting conditions** instead of the usual standard routines
-* **Custom generators** that evolve over the course of the game
-* Islands with real character instead of interchangeable copies
-
-{% hint style="info" %}
-How many island templates exist at launch, and whether you can choose between them, will be announced on [Discord](https://megabuild.de/dc/) before release.
-{% endhint %}
-
-## Expanding and growing
-
-Your island starts small but gains more character, value and possibilities with every step. Expansion works along two paths that feed into each other:
-
-{% columns %}
-{% column %}
-### Expansion
-
-More space, more area, more room to build – the basis for larger farms and projects.
-{% endcolumn %}
-
-{% column %}
-### Unlocks
-
-New features, blocks and systems that weren't available before.
-{% endcolumn %}
-{% endcolumns %}
-
-{% content-ref url="progression.md" %}
-[progression.md](progression.md)
+{% content-ref url="skilltree.md" %}
+[skilltree.md](skilltree.md)
 {% endcontent-ref %}
 
-## Still open
+## What you find on main islands
 
-The following are common on Skyblock servers but **not yet officially confirmed** for MegaBuild. They will be added here once they are final:
+| What | Details |
+| ---- | ------- |
+| Cave | A cave system with an entrance from above, partly lit |
+| Ores | Around 60 ore blocks per island on average |
+| Mana Ore | About 5–7 per main island |
+| Structures | With a bit of luck, villages, ruins, outposts and floating builds |
+| Animals | Matching the biome |
+| Loot | Chests, barrels and pots in structures are filled when first opened |
 
-<table><thead><tr><th width="300">Topic</th><th>Status</th></tr></thead><tbody><tr><td>Island size and expansion tiers</td><td>Not yet announced</td></tr><tr><td>Shared islands / teams</td><td>Not yet announced</td></tr><tr><td>Island levels and scoring</td><td>Not yet announced</td></tr><tr><td>Visiting other islands</td><td>Not yet announced</td></tr><tr><td>Island reset</td><td>Not yet announced</td></tr><tr><td>Command reference</td><td>Will be added after launch</td></tr></tbody></table>
+{% content-ref url="farming.md" %}
+[farming.md](farming.md)
+{% endcontent-ref %}
 
-{% hint style="warning" %}
-We deliberately do **not** publish estimated values here. Once the systems are final, you will find the real numbers and commands on this page.
+## Managing your island
+
+In the lobby, `/sky` opens the Skyblock menu. As the owner you'll find:
+
+| Menu item | What you do there |
+| --------- | ----------------- |
+| **Join Island** | Travel to your island. If it isn't running, it gets started |
+| **Management** | Change the server name (3–20 characters), server info, statistics, **Server löschen** (Delete server) |
+| **Members** | Invite players and assign rights |
+| **Statistics** | Your stats and leaderboards |
+| **Shared Servers** | Islands you're a member of |
+
+On the island itself, `/sky` opens the island menu with quests, skill tree, members and statistics.
+
+{% hint style="danger" %}
+**Deleting the server is permanent.** Your island and everything on it will be gone. The menu asks you to confirm first.
 {% endhint %}
+
+## Good to know
+
+* **The starting biome stays.** It's set when you create the island and can't be changed.
+* **One island of your own per player.** If you already have one, "Create Skyblock" opens the management menu directly.
+* **Coming back:** If you were last on your own island, you land there again when you log in.
+* **Fewer monsters:** Far fewer monsters spawn on the islands than in normal Minecraft.
 
 ## Related pages
 
-* [Progression & upgrades](progression.md)
-* [Farming & automation](farming.md)
-* [Economy & trading](economy.md)
-* [Getting started](start.md)
+* [Members & rights](members.md)
+* [Skill tree & biomes](skilltree.md)
+* [Warpetts](warpetts.md)

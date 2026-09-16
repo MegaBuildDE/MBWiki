@@ -16,6 +16,8 @@ icon: headset
 | [support@megabuild.de](mailto:support@megabuild.de) | Alles, was schriftlich laufen soll |
 | [status.megabuild.de](https://status.megabuild.de/) | Zuerst nachsehen, wenn der Server nicht erreichbar ist |
 
+Im Spiel bekommst du die Links mit `/discord` und `/wiki` direkt in den Chat.
+
 ## So bekommst du am schnellsten Hilfe
 
 {% hint style="success" %}
@@ -37,7 +39,7 @@ Viele Fragen lassen sich schneller selbst klären:
 * [FAQ](../more/faq.md)
 * [Vote-Belohnung fehlt](vote.md)
 
-## Regeln melden und Regelverstöße
+## Regelverstöße melden
 
 Verstöße gegen die [Serverregeln](https://megabuild.de/rules/) meldest du über den [Ticket-Support](https://megabuild.de/ticket/) – möglichst mit Screenshot oder Videobeleg und Zeitangabe.
 

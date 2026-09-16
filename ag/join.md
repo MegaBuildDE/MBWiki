@@ -92,6 +92,18 @@ Wähle MegaBuild.de unter deinen Servern aus und tritt bei.
 {% endtab %}
 {% endtabs %}
 
+## Resourcepack
+
+Auf der Java Edition bekommst du beim Betreten ein **Resourcepack** mit den Symbolen, Menüs und Modellen von MegaBuild.de.
+
+{% hint style="warning" %}
+**Das Resourcepack ist Pflicht.** Lehnst du es ab oder schlägt der Download fehl, wirst du vom Server getrennt. Nimm es beim nächsten Beitreten an.
+
+Hast du es aus Versehen abgelehnt? Bearbeite den Server in deiner Serverliste und stelle **Server-Ressourcenpakete** auf **Aktiviert**.
+{% endhint %}
+
+Bedrock-Spieler müssen nichts tun – sie bekommen die Inhalte automatisch.
+
 ## Java und Bedrock zusammen nutzen
 
 Wenn du sowohl mit einem Java- als auch mit einem Bedrock-Account spielst, kannst du beide zu **einem gemeinsamen Spielstand** verbinden.

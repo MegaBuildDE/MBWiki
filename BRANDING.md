@@ -136,14 +136,11 @@ Sauberer wäre GitBooks **Variants**-Feature (echter Sprachumschalter wie der DE
 
 ## Offene Inhalte
 
-Das Wiki dokumentiert bewusst **keine geschätzten Skyblock-Werte**. Sobald der Server startet, sind zu ergänzen:
+Die Skyblock-Seiten beruhen auf den Standardwerten im Plugin-Code (Stand 16.09.2026: MBSkyManager, MBSkyConnector, MBEconomy, MBFriend, MBMail, MBPM). Weicht die Live-Konfiguration ab, müssen die Zahlen nachgezogen werden.
 
-* Befehlsübersicht
-* Inselgrößen und Upgrade-Stufen
-* Generator-Typen und Farm-Mechaniken
-* Währung, Spielershops, Handelssysteme
-* Vote-Belohnungen
-* Rang-Perks für Skyblock
-* Event-Ablauf und Belohnungen
+Noch offen:
 
-Die entsprechenden Stellen sind in den Seiten mit einem `hint style="warning"` markiert.
+* Rang-Vorteile im Skyblock (liegen in LuckPerms, nicht im Code)
+* Wie Spieler Ruby verdienen
+* Events und Community-Ziele
+* Unterstützte Java-Version zum Start

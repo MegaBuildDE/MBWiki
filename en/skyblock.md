@@ -1,7 +1,7 @@
 ---
 description: >-
-  MegaBuild.de is relaunching as Custom Skyblock – custom island generation,
-  real progression and systems built for the long run.
+  How Custom Skyblock works on MegaBuild.de – your own island servers, a world
+  that grows as you explore, and biomes to unlock.
 icon: cube
 cover: ../.gitbook/assets/mb-skyblock-two.jpg
 coverY: 0
@@ -9,60 +9,59 @@ coverY: 0
 
 # Custom Skyblock
 
-MegaBuild.de is starting fresh with a clear focus: **one main game instead of many parallel modes.**
+On MegaBuild.de every player gets **their own island server**. You start in the lobby, create your island there and travel to it by airship.
 
-The idea behind it: MegaBuild should not feel like the next standard server, but like your own world to build, unlock and keep playing.
+As you explore, new islands keep appearing around yours – with caves, ores, villages and ruins. You decide which biomes show up: you unlock them with **Mana** in the skill tree.
 
-<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="A Skyblock island above the clouds"><figcaption>Custom-generated islands instead of a standard starter platform</figcaption></figure>
+<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="A Skyblock island above the clouds"><figcaption>A main island in one of the biome regions</figcaption></figure>
 
-{% hint style="warning" %}
-**Status: in development.**
+## How it all fits together
 
-The server is in maintenance mode and no final release date has been announced. The systems on this page are officially confirmed, but the **concrete details** – commands, numbers, prices, upgrade tiers – will be added here once they are final.
+{% stepper %}
+{% step %}
+#### Explore and mine
 
-For announcements: [Discord](https://megabuild.de/dc/) · [status.megabuild.de](https://status.megabuild.de/)
-{% endhint %}
+Mine ores, farm, fight and discover new islands.
+{% endstep %}
 
-## The new focus
+{% step %}
+#### Earn Mana
 
-Everything is aimed at giving you a motivating main game with its own direction, real progression and enough depth for many hours. MegaBuild should feel like a server you keep coming back to, not one you join once.
+Many actions give Mana with a bit of luck. On top of that there are quests and the rare Mana Ore.
+{% endstep %}
 
-* **Build, expand, grow** – Your island starts small but gains more character, value and possibilities with every step.
-* **Custom farming and automation** – Not just standard routines, but systems that make growth, efficiency and planning genuinely fun.
-* **Progression that feels good** – Trading, upgrades and unlocks interlock so you constantly feel like you are actually building something.
-* **Your own island world** – Even the start should feel special: islands that don't look generic and make you want to expand and explore right away.
+{% step %}
+#### Unlock biomes
+
+In the skill tree you buy new biomes with Mana.
+{% endstep %}
+
+{% step %}
+#### Discover new islands
+
+Newly unlocked biomes show up in the regions you explore next – with new resources, animals and quests.
+{% endstep %}
+{% endstepper %}
 
 ## The systems
 
-### Custom island progression
+| System | What it's about |
+| ------ | --------------- |
+| [Your island](island.md) | Your own server, starting biome, a world that grows as you explore |
+| [Members & rights](members.md) | Up to 25 fellow players with adjustable rights |
+| [Mana & Ruby](economy.md) | Mana for unlocking, Ruby for trading |
+| [Quests](quests.md) | Daily and weekly tasks for Mana |
+| [Skill tree & biomes](skilltree.md) | 45 biomes in 8 categories |
+| [Resources & farming](farming.md) | Ores, Mana Ore, generator, monsters |
+| [Warpetts](warpetts.md) | Teleporting via flower networks |
+| [HUD & statistics](hud.md) | What you see on your screen |
 
-Your island is the centre of everything you unlock, expand and work towards long term.
+{% hint style="info" %}
+The numbers in this wiki are the server's default values. They may still be adjusted before and after launch.
+{% endhint %}
 
-* Island upgrades and unlocks
-* Custom generators and starting conditions instead of standard routines
-* Goals designed for long-term play
+## Let's go
 
-{% content-ref url="progression.md" %}
-[progression.md](progression.md)
+{% content-ref url="start.md" %}
+[start.md](start.md)
 {% endcontent-ref %}
-
-### Economy and community
-
-Players, trading and community should feel alive and gain more depth through server-native systems than typical off-the-shelf solutions offer.
-
-* Trading and a server-wide economy
-* Active events and community goals
-* Perks that are meaningfully integrated into the main game
-
-{% content-ref url="economy.md" %}
-[economy.md](economy.md)
-{% endcontent-ref %}
-
-## Continue in the wiki
-
-* [Getting started](start.md)
-* [Your island](island.md)
-* [Progression & upgrades](progression.md)
-* [Farming & automation](farming.md)
-* [Economy & trading](economy.md)
-* [Community & events](community.md)

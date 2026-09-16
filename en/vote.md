@@ -1,13 +1,13 @@
 ---
 description: >-
-  How to vote for MegaBuild.de, what it does and how it supports the server for
-  free.
+  How to vote for MegaBuild.de, what it does and how it lets you support the
+  server for free.
 icon: thumbs-up
 ---
 
 # Voting
 
-Voting is the easiest way to support MegaBuild.de – it's free and takes less than a minute.
+Voting is the easiest way to support MegaBuild.de – it costs nothing and takes less than a minute.
 
 ## How to vote
 
@@ -15,19 +15,19 @@ Voting is the easiest way to support MegaBuild.de – it's free and takes less t
 {% step %}
 #### Open the vote page
 
-Go to [megabuild.de/vote](https://megabuild.de/vote/).
+Go to [megabuild.de/vote](https://megabuild.de/vote/) – or type `/vote` in-game to get the link in chat.
 {% endstep %}
 
 {% step %}
 #### Enter your name
 
-Enter your Minecraft name **exactly as it is written on the server**, including capitalisation. A typo is the most common reason a reward never arrives.
+Enter your Minecraft name – **exactly as it's spelled on the server**, including upper and lower case. A typo is the most common reason a reward doesn't arrive.
 {% endstep %}
 
 {% step %}
 #### Vote on the server lists
 
-Confirm your vote on the linked server lists. Most lists allow **one vote every 24 hours**.
+Confirm your vote on the linked server lists. Usually you can vote **once every 24 hours** per list.
 {% endstep %}
 {% endstepper %}
 
@@ -39,23 +39,23 @@ Confirm your vote on the linked server lists. Most lists allow **one vote every 
 {% column %}
 ### For the server
 
-Every vote pushes MegaBuild.de up the server lists and helps reach new players. More players means a livelier community and a more active server.
+Every vote pushes MegaBuild.de up the server lists and helps us reach new players. More players mean a livelier community and a more active server.
 {% endcolumn %}
 
 {% column %}
 ### For you
 
-Votes come with in-game rewards. Exactly what they look like in Custom Skyblock will be announced at launch.
+Votes earn you in-game rewards. What exactly they look like in Custom Skyblock will be announced at launch.
 {% endcolumn %}
 {% endcolumns %}
 
 {% hint style="warning" %}
-**Vote rewards for Custom Skyblock have not been finalised yet.**
+**The vote rewards for Custom Skyblock haven't been decided yet.**
 
-The old CityBuild had vote keys, a vote crate at spawn, a VoteStreak system (`/vr`) and a monthly top-voter list. Whether and how these carry over to Skyblock has not been announced.
+The old CityBuild had vote keys, a vote chest at spawn, a VoteStreak system (`/vr`) and a monthly top voter list. Whether and in what form these systems will carry over to Skyblock hasn't been announced yet.
 {% endhint %}
 
-## Common questions
+## Frequently asked questions
 
 <details>
 
@@ -63,11 +63,11 @@ The old CityBuild had vote keys, a vote crate at spawn, a VoteStreak system (`/v
 
 The most common causes:
 
-1. **Misspelled name.** Watch the capitalisation.
-2. **The 24 hours aren't up yet.** Most lists allow only one vote per day.
-3. **You were offline.** Some systems only hand out rewards on your next login.
+1. **Misspelled name.** Pay attention to upper and lower case.
+2. **The 24 hours aren't up yet.** Usually only one vote per day is possible per list.
+3. **You were offline.** Some systems only hand out rewards at your next login.
 
-Still nothing? Contact [ticket support](https://megabuild.de/ticket/).
+Nothing helped? Contact [ticket support](https://megabuild.de/ticket/).
 
 </details>
 
@@ -75,7 +75,7 @@ Still nothing? Contact [ticket support](https://megabuild.de/ticket/).
 
 <summary>Can I vote with multiple accounts?</summary>
 
-No. Voting with multiple accounts or bypassing vote limits violates the [server rules](https://megabuild.de/rules/).
+No. Voting with multiple accounts or getting around the vote limits breaks the [server rules](https://megabuild.de/rules/).
 
 </details>
 
@@ -90,6 +90,6 @@ The vote itself is registered on the server lists. Rewards can only be handed ou
 ## Related pages
 
 * [Ranks](ranks.md)
-* [Community & events](community.md)
-* [Support & contact](support.md)
+* [Community & Events](community.md)
+* [Support & Contact](support.md)
 * [FAQ](faq.md)

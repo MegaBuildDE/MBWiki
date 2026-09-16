@@ -1,7 +1,7 @@
 ---
 description: >-
-  The most common questions about MegaBuild.de, the Custom Skyblock relaunch and
-  getting started.
+  The most common questions about MegaBuild.de – getting started, Skyblock,
+  Mana, the shop and support.
 icon: circle-question
 ---
 
@@ -13,7 +13,7 @@ icon: circle-question
 
 <summary>What happened to MegaBuild.de?</summary>
 
-MegaBuild.de is relaunching as **Custom Skyblock**: a fresh restart with a clear focus on one main game instead of many parallel modes.
+MegaBuild.de is relaunching as **Custom Skyblock**: a fresh start with one main game, in which every player gets their own island server.
 
 {% content-ref url="skyblock.md" %}
 [skyblock.md](skyblock.md)
@@ -25,9 +25,7 @@ MegaBuild.de is relaunching as **Custom Skyblock**: a fresh restart with a clear
 
 <summary>When does Skyblock launch?</summary>
 
-No final release date has been announced publicly yet. The server is currently in maintenance mode.
-
-You'll hear about it first on [Discord](https://megabuild.de/dc/) and at [status.megabuild.de](https://status.megabuild.de/).
+No launch date has been announced yet. News comes first on our [Discord](https://megabuild.de/dc/) and on [status.megabuild.de](https://status.megabuild.de/).
 
 </details>
 
@@ -35,17 +33,7 @@ You'll hear about it first on [Discord](https://megabuild.de/dc/) and at [status
 
 <summary>Do CityBuild and the minigames still exist?</summary>
 
-The relaunch puts Custom Skyblock at the centre as the main game. CityBuild and the minigames are not part of the announced restart.
-
-The old wiki pages remain as an archive but are no longer current. What happens to old saves and ranks has not been announced – ask on [Discord](https://megabuild.de/dc/).
-
-</details>
-
-<details>
-
-<summary>Will my old progress be kept?</summary>
-
-There is no official announcement on this yet. For questions about your specific account, open a [ticket](https://megabuild.de/ticket/).
+The relaunch puts Custom Skyblock at the center. The old wiki pages about CityBuild and the minigames are kept as an archive, but they're no longer up to date. Questions about old saves and ranks are best asked on our [Discord](https://megabuild.de/dc/).
 
 </details>
 
@@ -53,25 +41,29 @@ There is no official announcement on this yet. For questions about your specific
 
 <details>
 
-<summary>Which Minecraft versions are supported?</summary>
+<summary>What's the server IP?</summary>
 
-MegaBuild supports the latest compatible Java version and Bedrock, so you can join across platforms without detours.
+`megabuild.de` – for Bedrock, also port `19132`.
 
-Which Java version exactly is supported at launch will be announced on [Discord](https://megabuild.de/dc/).
+{% content-ref url="join.md" %}
+[join.md](join.md)
+{% endcontent-ref %}
 
 </details>
 
 <details>
 
-<summary>What is the server IP?</summary>
+<summary>Which Minecraft versions are supported?</summary>
 
-**Java and Bedrock:** `megabuild.de`
+The latest compatible Java version and Bedrock. Which Java version exactly is supported is posted on our [Discord](https://megabuild.de/dc/).
 
-**Bedrock port:** `19132`
+</details>
 
-{% content-ref url="join.md" %}
-[join.md](join.md)
-{% endcontent-ref %}
+<details>
+
+<summary>Do I have to accept the resource pack?</summary>
+
+Yes. On Java Edition the resource pack is required – if you decline it, you'll be disconnected from the server. Bedrock players don't need to do anything.
 
 </details>
 
@@ -79,19 +71,15 @@ Which Java version exactly is supported at launch will be announced on [Discord]
 
 <summary>Can I play on mobile or console?</summary>
 
-Yes – via Bedrock Edition. On consoles, adding custom servers is restricted depending on the platform.
-
-{% content-ref url="join.md" %}
-[join.md](join.md)
-{% endcontent-ref %}
+Yes, via Bedrock Edition. On consoles, adding your own servers is restricted depending on the platform.
 
 </details>
 
 <details>
 
-<summary>Can Java and Bedrock players play together?</summary>
+<summary>Can I use Java and Bedrock together?</summary>
 
-Yes. You can also link your Java and Bedrock accounts into one shared save.
+Yes. With `/linkaccount` you link both accounts into one shared save.
 
 {% content-ref url="connect-account.md" %}
 [connect-account.md](connect-account.md)
@@ -99,15 +87,91 @@ Yes. You can also link your Java and Bedrock accounts into one shared save.
 
 </details>
 
+## Skyblock
+
 <details>
 
-<summary>I can't connect to the server</summary>
+<summary>How do I get an island?</summary>
 
-First check [status.megabuild.de](https://status.megabuild.de/) to see whether the server is running or under maintenance. More causes and fixes here:
+Type `/sky` in the lobby, select **Create Skyblock** and pick a starting biome. Your island gets started and you're taken there automatically.
 
-{% content-ref url="join.md" %}
-[join.md](join.md)
+{% content-ref url="start.md" %}
+[start.md](start.md)
 {% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>Can I change my starting biome later?</summary>
+
+No. But you can unlock all other biomes with Mana in the skill tree.
+
+</details>
+
+<details>
+
+<summary>How do I earn Mana?</summary>
+
+Through quests, Mana Ore and lots of normal actions like mining ore, taming animals or enchanting. Actions give up to 150 Mana a day, Mana Ore up to 200 – quests have no limit.
+
+{% content-ref url="economy.md" %}
+[economy.md](economy.md)
+{% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>Why am I not getting any Mana?</summary>
+
+The most common reasons:
+
+* You've reached your **daily limit** (it resets at 04:00).
+* The block was **placed by you**.
+* You mined ore **without a pickaxe**.
+* You're not in **Survival mode**.
+* The monster came from a **spawner**.
+
+</details>
+
+<details>
+
+<summary>When are there new quests?</summary>
+
+Daily quests renew at **04:00**, the weekly quest on Mondays at 04:00.
+
+{% content-ref url="quests.md" %}
+[quests.md](quests.md)
+{% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>How many fellow players can I bring to my island?</summary>
+
+Up to **25 members**. For each one you decide what they may do.
+
+{% content-ref url="members.md" %}
+[members.md](members.md)
+{% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>Can I send Mana to other players?</summary>
+
+No, Mana can't be transferred. Ruby, on the other hand, you can send with `/pay <player> <amount>`.
+
+</details>
+
+<details>
+
+<summary>Can I restart my island?</summary>
+
+You can delete your island in the lobby under `/sky` → **Management** and then create a new one. Deleting is **permanent**.
 
 </details>
 
@@ -115,9 +179,9 @@ First check [status.megabuild.de](https://status.megabuild.de/) to see whether t
 
 <details>
 
-<summary>Which ranks exist and what do they cost?</summary>
+<summary>Which ranks are there?</summary>
 
-Currently in the shop: **Gold** (€9.99), **Platin** (€19.99) and **Titan** (€34.99).
+In the [shop](https://shop.megabuild.de/): **Gold** (€9.99), **Platin** (€19.99) and **Titan** (€34.99). The perks in Skyblock will be announced later.
 
 {% content-ref url="ranks.md" %}
 [ranks.md](ranks.md)
@@ -127,29 +191,9 @@ Currently in the shop: **Gold** (€9.99), **Platin** (€19.99) and **Titan** (
 
 <details>
 
-<summary>What perks does a rank give in Skyblock?</summary>
+<summary>How can I support the server for free?</summary>
 
-Rank perks for Custom Skyblock have not been finalised and will be announced at launch. The previous perks applied to the old CityBuild and no longer apply.
-
-</details>
-
-<details>
-
-<summary>How do I support the server for free?</summary>
-
-By voting – it takes less than a minute and helps MegaBuild.de reach new players.
-
-{% content-ref url="vote.md" %}
-[vote.md](vote.md)
-{% endcontent-ref %}
-
-</details>
-
-<details>
-
-<summary>My order hasn't arrived</summary>
-
-Contact [ticket support](https://megabuild.de/ticket/) or email [support@megabuild.de](mailto:support@megabuild.de) – with your order or transaction number.
+By voting on [megabuild.de/vote](https://megabuild.de/vote/) – or in-game with `/vote`.
 
 </details>
 
@@ -157,22 +201,21 @@ Contact [ticket support](https://megabuild.de/ticket/) or email [support@megabui
 
 <details>
 
-<summary>Where do I find shop, status and support?</summary>
+<summary>Where can I find the server rules?</summary>
 
-| What    | Link                                                |
-| ------- | --------------------------------------------------- |
-| Shop    | [shop.megabuild.de](https://shop.megabuild.de/)     |
-| Status  | [status.megabuild.de](https://status.megabuild.de/) |
-| Vote    | [megabuild.de/vote](https://megabuild.de/vote/)     |
-| Support | [megabuild.de/dc](https://megabuild.de/dc/)         |
+At [megabuild.de/rules](https://megabuild.de/rules/). They apply on the server and on the Discord.
 
 </details>
 
 <details>
 
-<summary>Where are the server rules?</summary>
+<summary>Why was I kicked?</summary>
 
-At [megabuild.de/rules](https://megabuild.de/rules/). They apply on the server and on Discord.
+Common reasons are a declined **resource pack** or the **chat filter** (insults, advertising, begging for permissions).
+
+{% content-ref url="messages.md" %}
+[messages.md](messages.md)
+{% endcontent-ref %}
 
 </details>
 
@@ -180,23 +223,11 @@ At [megabuild.de/rules](https://megabuild.de/rules/). They apply on the server a
 
 <summary>How do I report a rule violation?</summary>
 
-Through [ticket support](https://megabuild.de/ticket/) – ideally with a screenshot or video and a timestamp, not in public chat.
-
-{% content-ref url="support.md" %}
-[support.md](support.md)
-{% endcontent-ref %}
+Through [ticket support](https://megabuild.de/ticket/) – ideally with a screenshot or video and the time.
 
 </details>
 
-<details>
-
-<summary>Is there a wiki explaining the systems?</summary>
-
-Yes – this one, at [wiki.megabuild.de](https://wiki.megabuild.de/). It is expanded continuously as new systems are finalised.
-
-</details>
-
-## Still have questions?
+## Any more questions?
 
 {% content-ref url="support.md" %}
 [support.md](support.md)

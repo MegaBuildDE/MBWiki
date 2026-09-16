@@ -17,6 +17,13 @@ Zu den bestätigten Systemen gehören **aktive Events und Community-Ziele** – 
 Ablauf, Häufigkeit und Belohnungen der Events werden vor dem Start im [Discord](https://megabuild.de/dc/) angekündigt.
 {% endhint %}
 
+## Mit anderen spielen
+
+* [Freunde](../ag/freunde.md) – Freundesliste im ganzen Netzwerk
+* [Nachrichten & Post](../ag/nachrichten.md) – `/msg` und `/mail`
+* [Mitglieder & Rechte](mitglieder.md) – Mitspieler auf deine Insel holen
+* [Mana & Ruby](eco.md) – Ruby mit `/pay` verschicken
+
 ## Discord
 
 Der Discord ist die zentrale Anlaufstelle neben dem Server selbst:
@@ -68,7 +75,7 @@ Für ein funktionierendes Miteinander gelten die Serverregeln – auf dem Server
 
 ## Verwandte Seiten
 
-* [Wirtschaft & Handel](eco.md)
+* [Mana & Ruby](eco.md)
 * [Support & Kontakt](../ag/support.md)
 * [Voten](../ag/vote.md)
 * [FAQ](../more/faq.md)

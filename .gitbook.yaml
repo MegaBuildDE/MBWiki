@@ -3,3 +3,7 @@ root: ./
 structure:
   readme: README.md
   summary: SUMMARY.md
+
+redirects:
+  sb/progression: sb/skilltree.md
+  en/progression: en/skilltree.md

@@ -1,7 +1,7 @@
 ---
 description: >-
-  The official MegaBuild.de wiki – everything you need to get started with our
-  Custom Skyblock server.
+  The official MegaBuild.de wiki – Custom Skyblock. Here you'll find everything
+  you need to get started and all about the server's systems.
 icon: house
 cover: ../.gitbook/assets/mb-skyblock-one.jpg
 coverY: 0
@@ -9,12 +9,12 @@ coverY: 0
 
 # Welcome to the MegaBuild.de Wiki
 
-MegaBuild.de is relaunching as **Custom Skyblock** – with its own island generation, progression you can actually feel, and systems built for the long run.
+MegaBuild.de is a **Custom Skyblock**: every island runs as its own server, the world around your island is created as you explore, and with Mana you unlock new biomes step by step.
 
 {% hint style="warning" %}
 **The server is currently in maintenance mode.**
 
-No release date for Custom Skyblock has been announced yet. For updates, see [status.megabuild.de](https://status.megabuild.de/) and our [Discord](https://megabuild.de/dc/).
+No launch date for Custom Skyblock has been announced yet. For updates, see [status.megabuild.de](https://status.megabuild.de/) and our [Discord](https://megabuild.de/dc/).
 {% endhint %}
 
 ## Server address
@@ -30,12 +30,12 @@ No release date for Custom Skyblock has been announced yet. For updates, see [st
 [join.md](join.md)
 {% endcontent-ref %}
 
-{% content-ref url="skyblock.md" %}
-[skyblock.md](skyblock.md)
+{% content-ref url="start.md" %}
+[start.md](start.md)
 {% endcontent-ref %}
 
-{% content-ref url="faq.md" %}
-[faq.md](faq.md)
+{% content-ref url="commands.md" %}
+[commands.md](commands.md)
 {% endcontent-ref %}
 
 ## Outside the wiki

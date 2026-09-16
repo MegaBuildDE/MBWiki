@@ -9,7 +9,7 @@ coverY: 0
 
 # Willkommen im MegaBuild.de Wiki
 
-MegaBuild.de relauncht als **Custom Skyblock** – mit eigener Inselgenerierung, spürbarer Progression und Systemen, die auf Langzeitspaß ausgelegt sind.
+MegaBuild.de ist ein **Custom Skyblock**: Jede Insel läuft als eigener Server, die Welt um deine Insel entsteht beim Erkunden, und mit Mana schaltest du nach und nach neue Biome frei.
 
 {% hint style="warning" %}
 **Der Server befindet sich aktuell im Wartungsmodus.**
@@ -30,12 +30,12 @@ Ein Starttermin für den Custom Skyblock ist noch nicht angekündigt. Aktuelles 
 [join.md](ag/join.md)
 {% endcontent-ref %}
 
-{% content-ref url="sb/sbi.md" %}
-[sbi.md](sb/sbi.md)
+{% content-ref url="sb/start.md" %}
+[start.md](sb/start.md)
 {% endcontent-ref %}
 
-{% content-ref url="more/faq.md" %}
-[faq.md](more/faq.md)
+{% content-ref url="ag/befehle.md" %}
+[befehle.md](ag/befehle.md)
 {% endcontent-ref %}
 
 ## Außerhalb des Wikis

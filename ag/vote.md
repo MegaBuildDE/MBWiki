@@ -15,7 +15,7 @@ Voten ist die einfachste Art, MegaBuild.de zu unterstützen – es kostet nichts
 {% step %}
 #### Vote-Seite öffnen
 
-Gehe auf [megabuild.de/vote](https://megabuild.de/vote/).
+Gehe auf [megabuild.de/vote](https://megabuild.de/vote/) – oder gib im Spiel `/vote` ein, dann bekommst du den Link in den Chat.
 {% endstep %}
 
 {% step %}

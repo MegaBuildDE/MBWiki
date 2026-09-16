@@ -1,51 +1,55 @@
 ---
-description: Where to get help when something isn't working – ticket support, Discord and email.
+description: >-
+  Where to get help when something isn't working – ticket support, Discord and
+  email.
 icon: headset
 ---
 
-# Support & contact
+# Support & Contact
 
-## Where do I go?
+## Where do I get in touch?
 
 | Channel | What for |
 | ------- | -------- |
-| [Ticket support](https://megabuild.de/ticket/) | Anything personal: orders, account issues, reports |
+| [Ticket support](https://megabuild.de/ticket/) | Anything personal: orders, account problems, reports |
 | [Discord](https://megabuild.de/dc/) | Quick questions, announcements, chatting with other players |
-| [support@megabuild.de](mailto:support@megabuild.de) | Anything you want in writing |
-| [status.megabuild.de](https://status.megabuild.de/) | Check here first if the server is unreachable |
+| [support@megabuild.de](mailto:support@megabuild.de) | Anything that should be handled in writing |
+| [status.megabuild.de](https://status.megabuild.de/) | Check here first if the server can't be reached |
+
+In-game, `/discord` and `/wiki` send you the links straight to chat.
 
 ## How to get help fastest
 
 {% hint style="success" %}
-The more precise your description, the faster the fix. Include in your first message:
+The more precise your description, the faster the solution. Include right in your first message:
 {% endhint %}
 
 * **Your Minecraft name** (spelled exactly)
 * **Java or Bedrock?** And which version?
-* **What exactly happened** – and what you expected instead
+* **What exactly happened** – and what you expected
 * **The full error message**, ideally as a screenshot
-* **For purchases:** your order or transaction number
+* **For purchases:** the order or transaction number
 
 ## Before you open a ticket
 
-Many questions are faster to answer yourself:
+Many questions can be answered faster on your own:
 
-* [Can't reach the server?](join.md)
+* [Server unreachable?](join.md)
 * [Linking accounts](connect-account.md)
 * [FAQ](faq.md)
 * [Vote reward missing](vote.md)
 
 ## Reporting rule violations
 
-Report violations of the [server rules](https://megabuild.de/rules/) through [ticket support](https://megabuild.de/ticket/) – ideally with a screenshot or video and a timestamp.
+Report violations of the [server rules](https://megabuild.de/rules/) through [ticket support](https://megabuild.de/ticket/) – ideally with a screenshot or video as proof and the time it happened.
 
 {% hint style="warning" %}
-Please do **not** report rule violations in public chat or general Discord channels. A ticket keeps the report confidential and sends it straight to the team.
+Please **don't** report rule violations in public chat or in general Discord channels. A ticket keeps your report confidential and sends it straight to the team.
 {% endhint %}
 
 ## Wiki feedback
 
-Something missing in the wiki, or did you find a mistake? Reach out via [ticket support](https://megabuild.de/ticket/) or email [support@megabuild.de](mailto:support@megabuild.de).
+Is something missing from the wiki, or did you find a mistake? Reach out via [ticket support](https://megabuild.de/ticket/) or email [support@megabuild.de](mailto:support@megabuild.de).
 
 ## Legal
 

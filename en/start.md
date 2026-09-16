@@ -1,23 +1,19 @@
 ---
 description: >-
-  Your first steps on MegaBuild.de Custom Skyblock – from connecting to building
-  your first island.
+  From the lobby to your own island – getting started with Custom Skyblock on
+  MegaBuild.de.
 icon: rocket
 ---
 
-# Getting started
+# Getting Started
 
-{% hint style="warning" %}
-Skyblock has not launched yet – the server is currently in **maintenance mode**. This page prepares you for the start. Concrete commands and numbers will be added once they are official.
-{% endhint %}
-
-## Before launch
+## Creating your island
 
 {% stepper %}
 {% step %}
-#### Add the server
+#### Connect
 
-Add MegaBuild.de to your server list now so you can join right at launch.
+Join the server via `megabuild.de` (Bedrock: port `19132`). On Java Edition you have to accept the resource pack.
 
 {% content-ref url="join.md" %}
 [join.md](join.md)
@@ -25,97 +21,84 @@ Add MegaBuild.de to your server list now so you can join right at launch.
 {% endstep %}
 
 {% step %}
-#### Link your accounts
+#### Open the Skyblock menu
 
-If you play both Java **and** Bedrock: link them so you share one save everywhere.
-
-{% content-ref url="connect-account.md" %}
-[connect-account.md](connect-account.md)
-{% endcontent-ref %}
+You arrive in the lobby. Type `/sky` or click the Skyblock NPC and select **Create Skyblock**.
 {% endstep %}
 
 {% step %}
-#### Join the Discord
+#### Choose your starting biome
 
-[Discord](https://megabuild.de/dc/) is the fastest source for the release date, supported versions, events and support.
+Choose the landscape your island starts in. **You can't change this choice later.** You unlock all other biomes in-game.
+
+| Category | Your starting island |
+| -------- | -------------------- |
+| Ebenen (Plains) | Plains |
+| Wälder (Forests) | Forest |
+| Schnee & Eis (Snow & Ice) | Snowy Plains |
+| Wüste & Steppe (Desert & Steppe) | Desert |
+| Dschungel (Jungle) | Sparse Jungle |
+| Gebirge (Mountains) | Windswept Hills |
+| Gewässer (Water) | River |
+| Sumpf & Selten (Swamp & Rare) | Swamp |
 {% endstep %}
 
 {% step %}
-#### Read the rules
+#### Wait a moment
 
-The [server rules](https://megabuild.de/rules/) apply from the first minute. A quick read saves you trouble later.
+Your island is now started as its own server. You can see the progress above your hotbar. As soon as everything is ready, you're connected automatically.
 {% endstep %}
 {% endstepper %}
 
-## After you join
+## Arriving by airship
 
-Once Skyblock is live, everything starts on your own island. The rough flow:
+On your first visit you arrive on an **airship**. On the way, guide **Moony** tells you the story of the new world. You can move around freely on deck – if you jump overboard, you land back on the ship.
+
+Your first **Warpett** is also waiting on the ship. This is how you get from the ship to your island:
 
 {% stepper %}
 {% step %}
-#### Create your island
+#### Pick the dandelion
 
-On your first join you receive your own, custom-generated island. It is not a standard starter block but already a small world with its own character.
-
-{% content-ref url="island.md" %}
-[island.md](island.md)
-{% endcontent-ref %}
+Pick the dandelion on deck.
 {% endstep %}
 
 {% step %}
-#### Secure the basics
+#### Give it to the Warpett
 
-As in any Skyblock, the rule early on is: don't waste resources. Building materials, wood and your starting inventory are limited – one lost block can slow you down badly.
+Hold the dandelion in your hand and **right-click** the Warpett on the ship. It eats the flower and links up with the Warpett on your starting island.
 {% endstep %}
 
 {% step %}
-#### Set up production
+#### Travel
 
-Generators and farms are the foundation for everything else. They supply the materials that later fund upgrades and trading.
-
-{% content-ref url="farming.md" %}
-[farming.md](farming.md)
-{% endcontent-ref %}
-{% endstep %}
-
-{% step %}
-#### Expand your island
-
-Use your resources to unlock upgrades and expansions. Every step forward should feel rewarding and open up new options.
-
-{% content-ref url="progression.md" %}
-[progression.md](progression.md)
-{% endcontent-ref %}
-{% endstep %}
-
-{% step %}
-#### Trade and take part
-
-Trading, events and community goals get you much further than playing alone.
-
-{% content-ref url="economy.md" %}
-[economy.md](economy.md)
-{% endcontent-ref %}
+Click the Warpett again – it takes you to your starting island. You can get back to the ship the same way at any time.
 {% endstep %}
 {% endstepper %}
 
-## Tips for the start
+{% content-ref url="warpetts.md" %}
+[warpetts.md](warpetts.md)
+{% endcontent-ref %}
 
-{% hint style="success" %}
-**Plan before you build.** On a Skyblock island, space is a resource. Decide early where farms, storage and living areas should go – rebuilding later costs far more time than planning once.
+## The first few hours
+
+* **Open your quests.** `/quest` shows your first tasks. They're the most reliable source of Mana.
+* **Look under the island.** New main islands have a cave with an entrance from above – that's where most of the ores are.
+* **Build bridges.** New islands appear around yours as you explore. The further you go, the more there is to discover.
+* **Secure the edges.** Falling into the void is the most common reason for lost items in Skyblock.
+* **Invite friends.** With members you progress faster.
+* **Pick your first biome.** You start with 1000 Mana – a new biome in the skill tree costs from 100 Mana.
+
+{% hint style="info" %}
+Mana is only available in Survival mode and not for blocks you placed yourself. More on this under [Mana & Ruby](economy.md).
 {% endhint %}
 
-* **Fall protection first.** The most common loss of progress in Skyblock is falling into the void. Secure edges and walkways early.
-* **Don't throw anything away.** What looks useless early on is often needed later for upgrades or trading.
-* **Together is faster.** Coordinate with other players – splitting up farming work pays off a lot.
-* **Don't forget to vote.** Voting is free and supports the server.
+## Coming back later
 
-{% content-ref url="vote.md" %}
-[vote.md](vote.md)
-{% endcontent-ref %}
+The next time you log in, you land straight back on your island if that's where you were last. Otherwise you arrive in the lobby and join your island via `/sky` → **Join Island**.
 
-## Still have questions?
+## Next
 
-{% content-ref url="faq.md" %}
-[faq.md](faq.md)
-{% endcontent-ref %}
+* [Your island](island.md)
+* [Quests](quests.md)
+* [Commands](commands.md)
