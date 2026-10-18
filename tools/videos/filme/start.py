@@ -55,7 +55,7 @@ def szene_verbinden(e, t, d):
         slots = {11: "create_world", 13: "island", 15: "shared", 20: "settings", 22: "friends", 24: "stats"}
         tipps = {11: [L("§a§lSkyblock erstellen", "§a§lCreate Skyblock"), L("§7Startbiom wählen", "§7Pick a start biome"),
                       L("§7und losfliegen", "§7and take off")],
-                 13: [L("§bInsel betreten", "§bEnter island"), L("§7Zu deiner Insel reisen", "§7Travel to your island")]}
+                 13: [L("§a§lInsel betreten", "§a§lJoin Island"), L("§7Zu deiner Insel reisen", "§7Travel to your island")]}
         menue_mit_zeiger(e, t - 2.9, "§b§lSkyblock", 3, slots, tipps, [(.5, 1.0, 13), (1.6, 2.0, 11)], 900, 450, 4, u)
         klick(e, t - 2.9, 2.4, *slot_mitte(11, 900, 450, 4), alpha=u)
 

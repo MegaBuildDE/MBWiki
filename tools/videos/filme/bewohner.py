@@ -98,8 +98,8 @@ def szene_alltag(e, t, d):
 
 
 STUFEN = [("member", L("Fremd", "Stranger"), L("spricht dich an", "talks to you")),
-          ("friends", L("Bekannt", "Acquaintance"), L("reden, Lager ansehen", "chat, see the stock")),
-          ("coin", L("Handelspartner", "Trading partner"), L("kaufen und verkaufen", "buy and sell")),
+          ("friends", L("Bekannt", "Acquainted"), L("reden, Lager ansehen", "chat, see the stock")),
+          ("coin", L("Handelspartner", "Trade partner"), L("kaufen und verkaufen", "buy and sell")),
           ("shared", L("Offen", "Open"), L("Tausch, Aufgaben, Aufträge", "barter, tasks, orders")),
           ("star", L("Vertraut", "Trusted"), L("persönliche Angebote", "personal offers"))]
 
@@ -191,7 +191,7 @@ def szene_ki(e, t, d):
     eintraege = [L("§7Spieler", "§7Players"), "§fLena", "§fTom", "", "§#5CE1E6Bewohner (KI)",
                  L("§fPip §7– Wald, 212 / -88", "§fPip §7– Forest, 212 / -88"),
                  L("§fMoss §7– Sumpf, -340 / 410", "§fMoss §7– Swamp, -340 / 410")]
-    eintraege[4] = L("§bBewohner (KI)", "§bResidents (AI)")
+    eintraege[4] = L("§bBewohner (KI)", "§bResidents (KI)")
     tablist(e, 1330, 220, eintraege, 4, ein * u)
     befehle = [("/bewohner", L("alle Bewohner, die du kennst", "all residents you know")),
                ("/ki", L("was Bewohner bei dir dürfen", "what residents may do with you")),

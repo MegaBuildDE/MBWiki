@@ -4,6 +4,7 @@
     python3 bauen.py <film> [--sprache de|en] [--teile 8] [--crf 23]
     python3 bauen.py <film> --standbild 3.0 12.5 …     PNGs nach test/
     python3 bauen.py <film> --kontakt [zeiten …]        Kontaktbogen nach test/
+    python3 bauen.py <film> --poster                    nur das Vorschaubild
 
 <film> ist eine Datei in filme/ ohne .py (clans, start, bewohner, skilltree).
 Ergebnis: ../../.gitbook/assets/videos/<film>[-en].mp4 und .jpg (Vorschaubild).
@@ -30,6 +31,13 @@ def lade_film(name, sprache):
     return modul.FILM
 
 
+def speichere_poster(film, name, sprache):
+    """Vorschaubild fuer die Wiki-Seite: ein Bild aus der Mitte des Films."""
+    poster_t = getattr(film, "poster", None) or film.gesamt * .3
+    datei = name + ("" if sprache == "de" else "-" + sprache) + ".jpg"
+    film.bild(poster_t).convert("RGB").save(os.path.join(ZIEL, datei), quality=86)
+
+
 def worker(name, sprache, von, bis, ausgabe):
     import ton
     film = lade_film(name, sprache)
@@ -53,8 +61,11 @@ def main():
     p.add_argument("--crf", type=int, default=23)
     p.add_argument("--standbild", nargs="*", type=float)
     p.add_argument("--kontakt", nargs="*", type=float)
+    p.add_argument("--poster", action="store_true", help="nur das Vorschaubild neu")
     p.add_argument("--worker", nargs=3)
     a = p.parse_args()
+    # Vor jedem Import von basis (auch ueber ton): basis liest SPRACHE beim Laden.
+    os.environ["SPRACHE"] = a.sprache
 
     if a.worker:
         worker(a.film, a.sprache, int(a.worker[0]), int(a.worker[1]), a.worker[2])
@@ -65,6 +76,11 @@ def main():
     from basis import W, H, FPS
     from PIL import Image
     test = os.path.join(HIER, "test")
+
+    if a.poster:
+        ton.untertitel(film, a.sprache)
+        speichere_poster(film, a.film, a.sprache)
+        return
 
     if a.standbild is not None or a.kontakt is not None:
         ton.untertitel(film, a.sprache)
@@ -118,8 +134,7 @@ def main():
                     "-c:v", "libx264", "-preset", "slow", "-tune", "animation", "-crf", str(a.crf),
                     "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-t", f"{film.gesamt:.3f}",
                     "-movflags", "+faststart", mp4], check=True)
-    poster_t = getattr(film, "poster", None) or film.gesamt * .3
-    film.bild(poster_t).convert("RGB").save(os.path.join(ZIEL, name + ".jpg"), quality=86)
+    speichere_poster(film, a.film, a.sprache)
     groesse = os.path.getsize(mp4) / 1e6
     print(f"fertig: {mp4} ({groesse:.1f} MB, {film.gesamt:.1f} s) in {time.time() - start:.0f} s")
 

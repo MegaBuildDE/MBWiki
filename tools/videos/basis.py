@@ -739,7 +739,7 @@ def _sprite_bild(pfad, groesse, spiegeln):
 
 def sprite(e, name, t, cx, cy, groesse, alpha=1.0, schleife=True, spiegeln=False, tempo=1.0):
     """Modell-Animation (30 Bilder/s) mittig bei (cx, cy) in groesse x groesse."""
-    if alpha <= 0.003:
+    if alpha <= 0.003 or groesse < 2:
         return
     dateien = _sprite_dateien(name)
     i = int(max(0.0, t) * FPS * tempo)
@@ -763,6 +763,8 @@ def sprite_boden(e, name, t, cx, y_boden, groesse, alpha=1.0, **kw):
 
 def schatten(e, cx, cy, breite, alpha=1.0):
     """Weicher Schatten unter einer Figur."""
+    if breite < 8 or alpha <= 0.003:
+        return
     s = _schatten_bild(int(breite))
     mc.einfuegen(e, s, cx - s.width / 2, cy - s.height / 2, alpha)
 
