@@ -1,0 +1,159 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Modell-Sprites</title>
+<!-- Gestartet von modelle.py: rendert eine .bbmodel-Animation Bild fuer Bild mit
+     durchsichtigem Hintergrund und schickt jedes Bild an /save/<auftrag>/<nr>.png.
+     Der Renderer (Knochen, UV, Blockbench-Achsen) stammt aus
+     MBSkyManager/tools/ki_animationen_vorschau/bogen.html. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head><body style="margin:0;background:#333"><pre id="log"></pre>
+<script>
+const P = new URLSearchParams(location.search);
+const log = (s) => { document.getElementById('log').textContent += s + '\n'; };
+const deg = (v) => v * Math.PI / 180;
+
+function sampleChannel(kfs, t) {
+  const val = (k, i) => { const dp = k.data_points[Math.min(i, k.data_points.length - 1)];
+    return ['x', 'y', 'z'].map(a => parseFloat(dp[a]) || 0); };
+  if (t <= kfs[0].time) return val(kfs[0], 0);
+  const last = kfs[kfs.length - 1];
+  if (t >= last.time) return val(last, 1);
+  let i = 0; while (i < kfs.length - 1 && kfs[i + 1].time <= t) i++;
+  const b = kfs[i], a = kfs[i + 1];
+  const alpha = (t - b.time) / (a.time - b.time);
+  if (b.interpolation === 'step') return val(b, 1);
+  const vb = val(b, 1), va = val(a, 0);
+  if (b.interpolation === 'catmullrom' || a.interpolation === 'catmullrom') {
+    const bp = kfs[i - 1], ap = kfs[i + 2];
+    return [0, 1, 2].map(ax => {
+      const pts = [];
+      if (bp) pts.push(new THREE.Vector2(bp.time, val(bp, 1)[ax]));
+      pts.push(new THREE.Vector2(b.time, vb[ax]));
+      pts.push(new THREE.Vector2(a.time, va[ax]));
+      if (ap) pts.push(new THREE.Vector2(ap.time, val(ap, 0)[ax]));
+      const tt = (alpha + (bp ? 1 : 0)) / (pts.length - 1);
+      return new THREE.SplineCurve(pts).getPoint(tt).y;
+    });
+  }
+  return vb.map((v, ax) => v + (va[ax] - v) * alpha);
+}
+
+async function buildModel(d) {
+  const res = d.resolution || {width: 16, height: 16};
+  const loader = new THREE.TextureLoader();
+  const textures = await Promise.all((d.textures || []).map(t => new Promise(ok => {
+    const tx = loader.load(t.source, () => ok(mk(tx)), undefined, () => ok(mk(tx)));
+    function mk(tx) { tx.magFilter = THREE.NearestFilter; tx.minFilter = THREE.NearestFilter;
+      return {tx, uvw: t.uv_width || res.width, uvh: t.uv_height || res.height,
+        mat: new THREE.MeshLambertMaterial({map: tx, alphaTest: 0.1, side: THREE.DoubleSide})}; }
+  })));
+  const invisible = new THREE.MeshBasicMaterial({visible: false});
+  const groups = {}; (d.groups || []).forEach(g => groups[g.uuid] = g);
+  const els = {}; d.elements.forEach(e => els[e.uuid] = e);
+  const root = new THREE.Group();
+  const bones = {};
+  const dirs = ['east', 'west', 'up', 'down', 'south', 'north'];
+  function addCube(e, parent, pOrigin) {
+    if (!e || e.visibility === false || (e.type && e.type !== 'cube')) return;
+    const inf = e.inflate || 0, o = e.origin || [0, 0, 0];
+    const s = [0, 1, 2].map(i => Math.max(e.to[i] - e.from[i] + 2 * inf, 0.0001));
+    const geo = new THREE.BoxGeometry(s[0], s[1], s[2]);
+    geo.translate((e.from[0] + e.to[0]) / 2 - o[0], (e.from[1] + e.to[1]) / 2 - o[1], (e.from[2] + e.to[2]) / 2 - o[2]);
+    const uv = geo.attributes.uv, mats = [];
+    dirs.forEach((dir, fi) => {
+      const f = e.faces && e.faces[dir];
+      const ti = f && (typeof f.texture === 'number' ? f.texture : (f.texture === null ? -1 : 0));
+      const t = textures[ti];
+      if (!f || !t || !f.uv) { mats.push(invisible); return; }
+      const [u1, v1, u2, v2] = f.uv;
+      const ring = [[u1, v1], [u2, v1], [u2, v2], [u1, v2]];
+      const k = ((f.rotation || 0) / 90) % 4;
+      const at = (i) => ring[(i - k + 4) % 4];
+      const order = [at(0), at(1), at(3), at(2)];
+      order.forEach((c, vi) => uv.setXY(fi * 4 + vi, c[0] / t.uvw, 1 - c[1] / t.uvh));
+      mats.push(t.mat);
+    });
+    const mesh = new THREE.Mesh(geo, mats);
+    mesh.rotation.order = 'ZYX';
+    mesh.position.set(o[0] - pOrigin[0], o[1] - pOrigin[1], o[2] - pOrigin[2]);
+    const r = e.rotation || [0, 0, 0];
+    mesh.rotation.set(deg(r[0]), deg(r[1]), deg(r[2]));
+    parent.add(mesh);
+  }
+  function addGroup(node, parent, pOrigin) {
+    const g = Object.assign({}, node, groups[node.uuid] || {});
+    const o = g.origin || [0, 0, 0];
+    const obj = new THREE.Group(); obj.rotation.order = 'ZYX';
+    obj.position.set(o[0] - pOrigin[0], o[1] - pOrigin[1], o[2] - pOrigin[2]);
+    const r = g.rotation || [0, 0, 0];
+    obj.rotation.set(deg(r[0]), deg(r[1]), deg(r[2]));
+    if (g.visibility === false || /^hit/i.test(g.name || '')) obj.visible = false;
+    parent.add(obj);
+    bones[node.uuid] = {obj, name: g.name, basePos: obj.position.clone(), baseRot: obj.rotation.clone()};
+    for (const c of node.children || []) typeof c === 'string' ? addCube(els[c], obj, o) : addGroup(c, obj, o);
+  }
+  for (const n of d.outliner) typeof n === 'string' ? addCube(els[n], root, [0, 0, 0]) : addGroup(n, root, [0, 0, 0]);
+  return {root, bones};
+}
+
+function pose(model, anim, t) {
+  for (const b of Object.values(model.bones)) {
+    b.obj.position.copy(b.basePos); b.obj.rotation.copy(b.baseRot); b.obj.scale.set(1, 1, 1);
+  }
+  if (!anim) return;
+  for (const [uuid, an] of Object.entries(anim.animators || {})) {
+    const b = model.bones[uuid] || Object.values(model.bones).find(x => x.name === an.name);
+    if (!b || !an.keyframes || !an.keyframes.length) continue;
+    const by = {};
+    for (const k of an.keyframes) (by[k.channel] = by[k.channel] || []).push(k);
+    for (const ch in by) by[ch].sort((p, q) => p.time - q.time);
+    if (by.rotation) { const v = sampleChannel(by.rotation, t);
+      b.obj.rotation.x += -deg(v[0]); b.obj.rotation.y += -deg(v[1]); b.obj.rotation.z += deg(v[2]); }
+    if (by.position) { const v = sampleChannel(by.position, t);
+      b.obj.position.x += -v[0]; b.obj.position.y += v[1]; b.obj.position.z += v[2]; }
+    if (by.scale) { const v = sampleChannel(by.scale, t); b.obj.scale.set(v[0], v[1], v[2]); }
+  }
+}
+
+async function main() {
+  const jobs = await (await fetch('/auftraege.json')).json();
+  const size = +(P.get('size') || 512);
+  const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true, preserveDrawingBuffer: true});
+  renderer.setSize(size, size);
+  renderer.setClearColor(0x000000, 0);
+  for (const job of jobs) {
+    const d = await (await fetch(job.url)).json();
+    const model = await buildModel(d);
+    const scene = new THREE.Scene();
+    scene.add(new THREE.AmbientLight(0xffffff, 0.78));
+    const sun = new THREE.DirectionalLight(0xffffff, 0.5); sun.position.set(14, 30, -24); scene.add(sun);
+    scene.add(model.root);
+    const anim = job.anim ? d.animations.find(a => a.name === job.anim) : null;
+    if (job.anim && !anim) { log('Animation fehlt: ' + job.name + ' ' + job.anim); continue; }
+    // Rahmen aus der Ruhepose und ein paar Bildern der Animation
+    // Rahmen aus der Ruhepose: was die Animation weit hinauswirft, darf aus dem Bild
+    const box = new THREE.Box3();
+    pose(model, null, 0); model.root.updateMatrixWorld(true); box.expandByObject(model.root);
+    const c = box.getCenter(new THREE.Vector3()), s = box.getSize(new THREE.Vector3());
+    const half = Math.max(Math.hypot(s.x, s.z), s.y) * .6 * (job.zoom ? 1 / job.zoom : 1);
+    const cam = new THREE.OrthographicCamera(-half, half, half, -half, 0.1, 400);
+    const r = 120;
+    const blick = (yawGrad) => { const yaw = deg(yawGrad);
+      cam.position.set(c.x + Math.sin(yaw) * r, c.y + (job.hoehe || 18) * (job.drehen ? 2.2 : 1), c.z - Math.cos(yaw) * r);
+      cam.lookAt(c.x, c.y, c.z); cam.updateProjectionMatrix(); };
+    blick(job.yaw || 0);
+    const tempo = job.tempo || 1;
+    const n = job.drehen ? job.drehen : anim ? Math.max(1, Math.round(anim.length * job.fps / tempo)) : 1;
+    for (let i = 0; i < n; i++) {
+      if (job.drehen) blick((job.yaw || 0) + 360 * i / n);
+      pose(model, anim, anim ? i * tempo / job.fps : 0);
+      renderer.render(scene, cam);
+      const r2 = await fetch('/save/' + job.name + '/' + String(i).padStart(3, '0') + '.png',
+        {method: 'POST', body: renderer.domElement.toDataURL('image/png')});
+      if (!r2.ok) log('Speichern fehlgeschlagen ' + job.name);
+    }
+    log(job.name + ': ' + n + ' Bilder');
+  }
+  await fetch('/fertig', {method: 'POST', body: document.getElementById('log').textContent || 'ok'});
+}
+main().catch(e => fetch('/fertig', {method: 'POST', body: 'FEHLER ' + e.stack}));
+</script></body></html>
