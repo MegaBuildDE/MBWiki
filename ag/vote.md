@@ -21,7 +21,7 @@ Gehe auf [megabuild.de/vote](https://megabuild.de/vote/) – oder gib im Spiel `
 {% step %}
 #### Namen eintragen
 
-Gib deinen Minecraft-Namen ein – **exakt so, wie er auf dem Server geschrieben wird**, inklusive Groß- und Kleinschreibung. Ein Tippfehler ist der häufigste Grund dafür, dass eine Belohnung nicht ankommt.
+Gib deinen Minecraft-Namen ein. Groß- und Kleinschreibung ist egal – aber achte auf Tippfehler, sonst kommt die Belohnung bei jemand anderem an. Bedrock-Spieler geben ihren Namen so ein, wie er auf dem Server angezeigt wird.
 {% endstep %}
 
 {% step %}
@@ -35,25 +35,27 @@ Bestätige deinen Vote auf den verlinkten Serverlisten. Meist ist pro Liste **ei
 
 ## Was bringt das?
 
-{% columns %}
-{% column %}
+### Deine Belohnung
+
+| Pro Vote | |
+| -------- | -: |
+| Mana | **20** |
+| Ruby | **1** |
+
+* Belohnt werden deine **ersten 3 Votes am Tag**. Der Tag wechselt um Mitternacht.
+* Vote-Mana zählt **nicht** zum Tageslimit für Aktionen.
+* **Warst du offline?** Dann bekommst du die Belohnung trotzdem – mit einer Nachricht von *MegaBuild.de* in deiner [Post](nachrichten.md).
+* **Noch nie auf dem Server gewesen?** Votes der letzten 7 Tage vor deinem ersten Join werden beim ersten Betreten nachgetragen.
+
+Neben den 1.000 Ruby, mit denen jedes Konto startet, sind Votes der regelmäßige Weg zu mehr **Ruby** – der Währung für den Handel zwischen Spielern.
+
+### Im Spiel
+
+`/vote` zeigt dir den Link, deine Belohnung, wie oft du **heute** schon gevotet hast (zum Beispiel `2/3`) und deine Votes im Monat und insgesamt.
+
 ### Für den Server
 
-Jeder Vote schiebt MegaBuild.de in den Serverlisten nach oben und hilft dabei, neue Spieler zu erreichen. Mehr Spieler bedeuten eine lebendigere Community und einen aktiveren Server.
-{% endcolumn %}
-
-{% column %}
-### Für dich
-
-Für Votes gibt es Belohnungen im Spiel. Wie diese im Custom Skyblock genau aussehen, wird zum Start bekannt gegeben.
-{% endcolumn %}
-{% endcolumns %}
-
-{% hint style="warning" %}
-**Die Vote-Belohnungen für den Custom Skyblock stehen noch nicht fest.**
-
-Auf dem alten CityBuild gab es Vote-Keys, eine Vote-Kiste am Spawn, ein VoteStreak-System (`/vr`) und eine monatliche Top-Voter-Liste. Ob und in welcher Form diese Systeme in den Skyblock übernommen werden, ist noch nicht angekündigt.
-{% endhint %}
+Jeder Vote schiebt MegaBuild.de in den Serverlisten nach oben und hilft dabei, neue Spieler zu erreichen.
 
 ## Häufige Fragen
 
@@ -63,11 +65,11 @@ Auf dem alten CityBuild gab es Vote-Keys, eine Vote-Kiste am Spawn, ein VoteStre
 
 Die häufigsten Ursachen:
 
-1. **Falsch geschriebener Name.** Achte auf Groß- und Kleinschreibung.
-2. **Die 24 Stunden sind noch nicht um.** Pro Liste ist meist nur ein Vote pro Tag möglich.
-3. **Du warst offline.** Manche Systeme geben Belohnungen erst beim nächsten Login aus.
+1. **Tippfehler im Namen.** Dann ging die Belohnung an einen anderen Namen.
+2. **Schon 3 Votes heute.** Weitere Votes am selben Tag helfen dem Server, bringen dir aber nichts mehr.
+3. **Du warst offline.** Schau in deine Post mit `/mail`.
 
-Hilft alles nichts? Melde dich beim [Ticket-Support](https://megabuild.de/ticket/).
+Hilft alles nichts? Melde dich im [Support](support.md).
 
 </details>
 

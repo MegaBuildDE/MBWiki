@@ -134,13 +134,23 @@ Sauberer wäre GitBooks **Variants**-Feature (echter Sprachumschalter wie der DE
 
 ---
 
+## Videos
+
+Die Feature-Videos in `.gitbook/assets/videos/` (DE, dazu `-en` für den englischen Teil) entstehen mit dem Werkzeug in [`tools/videos/`](tools/videos/README.md): Szenen in Python, echte 3D-Modelle aus dem Pool, Malas aufgenommene Stimme mit Untertiteln, synthetische Musik. Neu rendern mit `python3 tools/videos/bauen.py <film> [--sprache en]`.
+
+GitBook spielt hochgeladene MP4 nicht im Text ab. Jede Seite zeigt deshalb das Standbild (`<film>.jpg`) und darunter den Film als Datei-Block. Für einen Player im Text müsste der Film auf YouTube liegen und per `{% embed %}` eingebunden werden.
+
+---
+
 ## Offene Inhalte
 
-Die Skyblock-Seiten beruhen auf den Standardwerten im Plugin-Code (Stand 16.09.2026: MBSkyManager, MBSkyConnector, MBEconomy, MBFriend, MBMail, MBPM). Weicht die Live-Konfiguration ab, müssen die Zahlen nachgezogen werden.
+Die Skyblock-Seiten beruhen auf den Docs und Standardwerten im Plugin-Code (Stand 19.10.2026: MBSkyManager, MBSkyConnector, MBEconomy, MBFriend, MBMail, MBPM, MBMod). Weicht die Live-Konfiguration ab, müssen die Zahlen nachgezogen werden.
 
 Noch offen:
 
 * Rang-Vorteile im Skyblock (liegen in LuckPerms, nicht im Code)
-* Wie Spieler Ruby verdienen
-* Events und Community-Ziele
+* Events und Community-Ziele (`MBSkyManager/docs/EREIGNISSE.md` ist ein Vorschlag)
+* Clans – nur Konzept (`MBSkyManager/docs/CLANS.md`), die Seite ist als Vorschau markiert
+* Der Ofen-Golem zum Einzahlen der Mana-Kugeln
+* ChestShops für den Handel mit Ruby
 * Unterstützte Java-Version zum Start

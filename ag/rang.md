@@ -18,10 +18,12 @@ Die früheren Rang-Perks bezogen sich auf den alten CityBuild (Grundstücke, `/p
 
 Aktuell im [MegaBuild.de-Shop](https://shop.megabuild.de/) erhältlich:
 
-<table><thead><tr><th width="200">Rang</th><th width="160">Preis</th><th>Shop</th></tr></thead><tbody><tr><td><strong>Gold</strong></td><td>9,99 €</td><td><a href="https://shop.megabuild.de/">shop.megabuild.de</a></td></tr><tr><td><strong>Platin</strong></td><td>19,99 €</td><td><a href="https://shop.megabuild.de/">shop.megabuild.de</a></td></tr><tr><td><strong>Titan</strong></td><td>34,99 €</td><td><a href="https://shop.megabuild.de/">shop.megabuild.de</a></td></tr></tbody></table>
+<table><thead><tr><th width="200">Rang</th><th width="160">Preis</th><th>Shop</th></tr></thead><tbody><tr><td><strong>Gold</strong></td><td>9,99 €</td><td><a href="https://shop.megabuild.de/">shop.megabuild.de</a></td></tr><tr><td><strong>Platin</strong></td><td>19,99 €</td><td><a href="https://shop.megabuild.de/">shop.megabuild.de</a></td></tr><tr><td><strong>Titan</strong></td><td>49,99 € – derzeit im Angebot für 34,99 €</td><td><a href="https://shop.megabuild.de/">shop.megabuild.de</a></td></tr></tbody></table>
 
 {% hint style="info" %}
-**Stand: August 2026.** Preise und Aktionen können sich ändern – maßgeblich ist immer der [Shop](https://shop.megabuild.de/). Dort laufen regelmäßig Rabatte, aktuell zum Beispiel auf den Titan-Rang.
+**Stand: Oktober 2026.** Preise und Aktionen können sich ändern – maßgeblich ist immer der [Shop](https://shop.megabuild.de/).
+
+Einen Rang direkt für einen anderen Spieler zu kaufen, ist im Shop derzeit nicht möglich.
 {% endhint %}
 
 ## Weitere Angebote im Shop
@@ -36,7 +38,7 @@ Gutscheine gibt es ab 5,99 € – praktisch, wenn du jemandem etwas schenken m�
 {% column %}
 ### 🐾 Pets
 
-Im Shop ist eine eigene Pets-Kategorie angelegt. Die Inhalte dazu folgen.
+Pets sind in Planung. Mit den [Warpetts](../sb/warpetts.md) haben sie nichts zu tun.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -76,7 +78,7 @@ Wende dich an den [Ticket-Support](https://megabuild.de/ticket/) oder schreibe a
 
 <summary>Kann ich Ränge auch ingame kaufen?</summary>
 
-Auf dem alten CityBuild gab es dafür `/rshop` mit Ingame-Geld. Ob es so etwas im Custom Skyblock wieder geben wird, ist noch nicht angekündigt.
+Nein. Ränge gibt es nur im [Shop](https://shop.megabuild.de/) – nicht gegen Mana oder Ruby.
 
 </details>
 
@@ -84,5 +86,5 @@ Auf dem alten CityBuild gab es dafür `/rshop` mit Ingame-Geld. Ob es so etwas i
 
 * [Voten](vote.md)
 * [Support & Kontakt](support.md)
-* [Wirtschaft & Handel](../sb/eco.md)
+* [Mana & Ruby](../sb/eco.md)
 * [FAQ](../more/faq.md)

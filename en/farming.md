@@ -1,66 +1,79 @@
 ---
 description: >-
-  Ores, Mana Ore, cobblestone generator, monsters and farms – the resources you
-  find on MegaBuild.de.
+  Ores, Mana ore, cobblestone generator, animals, monsters and farms – where you
+  get your resources on MegaBuild.de.
 icon: seedling
 ---
 
 # Resources & Farming
 
+Your starting island has neither a cave nor ore. You get resources on the islands that appear as you explore – and with farms on your own island.
+
 ## Ores
 
-Every newly generated main island has around **60 ore blocks** on average – most of them in its cave.
-
-| Ore | Per main island (average) |
-| --- | ------------------------: |
-| Coal | 20 |
-| Copper | 12 |
-| Iron | 11 |
-| Lapis | 5 |
-| Gold | 4 |
-| Redstone | 4 |
-| Diamond | 1 |
+Every main island has around **170 ore blocks**, including about **6 diamonds**. They sit in small clusters all through the rock and individually on the cave walls – **the deeper, the more**. Side islands only have a few, the starting island has none.
 
 Need more? Keep exploring: every new main island brings new ores.
 
-## Mana Ore
+{% content-ref url="world.md" %}
+[world.md](world.md)
+{% endcontent-ref %}
 
-<table><thead><tr><th width="220">Property</th><th>Value</th></tr></thead><tbody><tr><td>Appearance</td><td>Glowing, magenta deepslate lapis lazuli ore</td></tr><tr><td>Occurrence</td><td>About 5–7 per main island, mostly on cave walls</td></tr><tr><td>Mining</td><td>Pickaxe only</td></tr><tr><td>Yield</td><td>6–12 Mana, +25 % per Fortune level, plus some XP</td></tr><tr><td>Daily limit</td><td>200 Mana, separate from the limit for actions</td></tr></tbody></table>
+## Mana ore
 
-Mana Ore never drops lapis and survives explosions.
+| Property | Value |
+| -------- | ----- |
+| Appearance | Stone with **glowing pink veins** |
+| Occurrence | 4–14 per main island, in the caves |
+| Mining | Pickaxe only |
+| Yield | 3–5 Mana orbs, up to 20 with Fortune III, plus some XP |
+| Daily limit | 200 Mana from Mana ore |
 
-{% hint style="info" %}
-There's no Mana Ore on the **starting island**. You only find it on main islands that are newly generated as you explore.
-{% endhint %}
+You can read more about Mana orbs under [Mana & Ruby](economy.md#mana-ore).
 
 ## Cobblestone generator
 
 If your starting island has no water and no lava of its own, it gets both on a stone pedestal – enough for a classic cobblestone generator.
 
 {% hint style="warning" %}
-Stone from lava-water generators **doesn't count for quests**.
+Stone from lava-water generators **doesn't count for quests** or biome quests.
 {% endhint %}
 
-## Monsters and animals
+## Animals
 
-* **Monsters:** Around **60 % fewer** monsters spawn naturally on the islands than in normal Minecraft.
-* **Animals:** Every island has animals that match its biome.
+* Every island has animals that match its biome.
+* **Animals come back:** Islands near you fill up again after a few minutes.
+* Breeding, taming and shearing give Mana with a bit of luck and count for quests.
+
+## Monsters
+
+Monsters spawn in the dark as usual, but at most **15 at a time per player** – far fewer than in normal Minecraft.
+
+{% hint style="info" %}
+**Building a mob farm?** The farm shares the limit with everything around it. Light up the islands nearby so the monsters spawn in your farm. Monsters from spawners don't give Mana and don't count for quests.
+{% endhint %}
 
 ## Loot
 
-Chests, barrels, pots, shelves and suspicious sand or gravel in structures are **filled once**. A chest you place yourself stays empty.
+Chests, barrels, pots and shelves in structures are **filled once**, when they're first opened. A chest you place yourself stays empty. With a brush, you uncover suspicious sand and gravel. With a bit of luck, there's a [Warpett egg](warpetts.md#warpett-eggs) inside.
+
+## Trading
+
+* **Villagers** in villages trade as usual.
+* **AI residents** buy and sell goods for Mana – see [AI residents](residents.md#trading).
 
 ## Farms and automation
 
 MegaBuild doesn't have any special rules of its own for farms, hoppers and redstone. The [server rules](https://megabuild.de/rules/) apply.
 
-Just keep this in mind when it comes to Mana and quests:
+When it comes to Mana and quests, only this applies:
 
 * **Blocks you placed yourself** – such as ores, logs, melons or pumpkins – don't give Mana and don't count for mining quests.
-* **Monsters from spawners** don't give Mana.
+* **Sugar cane, bamboo and cacti** don't give Mana when you harvest them, but they do count for harvesting quests.
+* **AFK fishing** doesn't give Mana and doesn't count.
 
 ## Related pages
 
+* [The island world](world.md)
 * [Mana & Ruby](economy.md)
 * [Quests](quests.md)
-* [Your island](island.md)

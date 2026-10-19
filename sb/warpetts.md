@@ -1,64 +1,123 @@
 ---
 description: >-
-  Warpetts bringen dich auf deiner Insel von Ort zu Ort – verbunden über
-  Blumen.
+  Warpetts auf MegaBuild.de – kleine Tiere, die dich fressen und woanders
+  wieder ausspucken. Blumen-Netze, Warpett-Eier und junge Warpetts.
 icon: dove
 ---
 
 # Warpetts
 
-Warpetts sind kleine Begleiter, die dich innerhalb deiner Inselwelt **teleportieren**. Welche Warpetts miteinander verbunden sind, bestimmt die **Blume**, die du ihnen gibst.
+Warpetts sind kleine, gehörnte Tiere mit einer Blume auf dem Kopf. Sie bringen dich in deiner Inselwelt von Ort zu Ort – auf ihre Art: **Das Warpett frisst dich, und sein Partner spuckt dich am Ziel wieder aus.**
 
-Dein erstes Warpett-Paar hast du von Anfang an: eines auf dem **Luftschiff** und eines auf deiner **Startinsel**.
+Welche Warpetts zusammengehören, bestimmt die **Blume**, die sie gefressen haben.
 
-## So funktioniert's
+## Dein erstes Paar
+
+Zwei Warpetts hast du von Anfang an: eines auf dem **Luftschiff** und eines neben dem Spawn deiner **Startinsel**. Beide tragen einen Löwenzahn und sind verbunden. Mit ihnen kommst du jederzeit zwischen Insel und Schiff hin und her.
+
+## Reisen
+
+Klicke ein Warpett an – **Rechts- oder Linksklick**. Auf **Bedrock** schleichst du daneben.
+
+* Das Warpett beißt zu, kurz wird es dunkel, dann bist du da.
+* Zwischen zwei Reisen liegen **1,5 Sekunden** Pause.
+* Wer auf einem Pferd, in einem Boot oder in einer Lore sitzt, reist nicht – erst absteigen.
+
+## Das Blumen-Netz
 
 {% stepper %}
 {% step %}
-#### Blume geben
+#### Blume hinhalten
 
-Nimm eine Blume in die Haupthand und klicke ein Warpett ohne Blume mit **Rechtsklick** an. Es frisst die Blume und gehört ab jetzt zum Netz dieser Blumenart.
+Halte einem Warpett **ohne Blume** eine Blume in der Haupthand hin und klicke es an. Es frisst die Blume und gehört ab jetzt zum **Netz dieser Blumenart**.
 {% endstep %}
 
 {% step %}
-#### Zweites Warpett verbinden
+#### Partner verbinden
 
-Gib einem zweiten Warpett **dieselbe Blumenart**. Jetzt sind beide verbunden.
-{% endstep %}
-
-{% step %}
-#### Reisen
-
-Klicke ein Warpett an:
-
-* **Zwei Warpetts im Netz:** Du reist direkt zum anderen.
-* **Drei oder mehr:** Es öffnet sich ein Menü mit allen Zielen.
+Gib einem zweiten Warpett **dieselbe Blumenart**. Jetzt sind beide verbunden – und das Warpett nimmt dich gleich mit.
 {% endstep %}
 {% endstepper %}
 
-Jede der **26 Blumenarten** ist ein eigenes Netz. Ist ein Warpett allein in seinem Netz, sagt es dir, dass noch ein zweites fehlt.
+| Warpetts im Netz | Ein Klick … |
+| ---------------- | ----------- |
+| 1 | sagt dir, dass noch ein Partner fehlt |
+| 2 | bringt dich direkt zum anderen |
+| 3 oder mehr | bringt dich zu einem **zufälligen** davon |
 
-## Warpetts verwalten
+{% hint style="info" %}
+**Du willst genau wissen, wo du landest?** Verbinde immer nur **zwei** Warpetts mit derselben Blume. Jedes weitere macht das Netz zum Würfel – es gibt kein Zielmenü.
+{% endhint %}
+
+* Es gibt **26 Blumenarten** – vom Löwenzahn über Tulpen und Sonnenblume bis zur Sporenblüte. Jede ist ein eigenes Netz.
+* Einige Blumen geben dem Warpett ein eigenes Aussehen.
+* Warpetts verbinden nur Orte in **deiner eigenen Inselwelt**, nicht zwischen Inseln verschiedener Spieler.
+
+### Netz wechseln oder Blume zurückholen
 
 | Was | Wie |
 | --- | --- |
-| **Ziel umbenennen** | Im Zielmenü **Rechtsklick** auf das Ziel, dann den Namen in den Chat schreiben (max. 24 Zeichen). `abbrechen` bricht ab |
-| **Netz wechseln** | Einem Warpett eine **andere Blume** geben. Die alte Blume ist dann weg |
-| **Blume zurückholen** | Das Warpett mit einer **Schere** anklicken. Kostet 1 Haltbarkeit |
+| **Anderes Netz** | Dem Warpett eine **andere Blume** geben. Die alte ist dann gefressen |
+| **Blume zurückholen** | Das Warpett mit einer **Schere** in der Haupthand anklicken. Die Blume kommt zurück, die Schere nutzt sich ab wie beim Schafescheren. Danach frisst das Warpett die nächste Blume |
 
-* Zwischen zwei Reisen liegen **1,5 Sekunden** Abklingzeit.
-* Warpetts verbinden nur Orte **auf derselben Insel**.
-* Ohne Umbenennen heißen die Ziele *Luftschiff*, *Startinsel* oder *Warpett* mit einer Nummer.
+## Warpett-Eier
 
-{% hint style="info" %}
-**Bedrock:** Statt mit Rechtsklick benutzt du ein Warpett, indem du in seiner Nähe **schleichst**. Umbenennen wählst du im Zielmenü über einen Umschalter.
+Neue Warpetts findest du als **Ei** – als Beute beim Erkunden.
+
+| Wo | Wie oft ungefähr |
+| -- | ---------------- |
+| Truhen und Fässer | etwa jede elfte |
+| Verdächtiger Sand und Kies | etwa jeder vierzehnte |
+| Verzierte Töpfe | etwa jeder vierzehnte |
+
+### Ausbrüten
+
+{% stepper %}
+{% step %}
+#### Ablegen
+
+Rechtsklick mit dem Ei auf einen festen Block. Daneben braucht es etwas Platz.
+{% endstep %}
+
+{% step %}
+#### Warten
+
+Das Ei brütet **10 Minuten** – auf **weinendem Obsidian** nur 5. Es knackt, wackelt und bekommt Risse, je näher das Schlüpfen rückt. Die Zeit läuft auch, wenn du nicht online bist.
+{% endstep %}
+
+{% step %}
+#### Schlüpfen
+
+Heraus kommt ein **junges Warpett** – noch ohne Blume.
+{% endstep %}
+{% endstepper %}
+
+* **Aufheben:** Rechtsklick mit leerer Hand. Die Brutzeit beginnt beim nächsten Ablegen von vorn.
+* **Abbauen:** Maustaste eine Sekunde halten, dann springt es als Item heraus.
+* Weinenden Obsidian erst später unterzuschieben hilft nicht – er muss beim Ablegen schon liegen.
+
+## Junge Warpetts
+
+Ein frisch geschlüpftes Warpett tapst um seinen Platz herum. So machst du daraus eine Station:
+
+| Klick auf das junge Warpett | Was passiert |
+| --------------------------- | ------------ |
+| mit einer **Leine** | Es folgt dir |
+| mit **leerer Hand**, während es angeleint ist | Die Leine ist ab – **hier ist sein neues Zuhause** |
+| mit einer **Blume** | Es setzt sich genau hier hin und gehört zum Netz der Blume |
+
+Läuft ein junges Warpett zu weit weg oder fällt es von der Insel, ist es gleich wieder zu Hause. Reisen kannst du erst, wenn es eine Blume hat.
+
+{% hint style="success" %}
+**Tipp:** Führe das junge Warpett an der Leine dorthin, wo du die Station haben willst – zum Beispiel an deine Farm oder in eine Höhle –, und gib ihm erst dort die Blume.
 {% endhint %}
 
-{% hint style="warning" %}
-Weitere Warpetts kannst du aktuell noch nicht selbst bekommen.
-{% endhint %}
+## Wer darf was?
+
+Verbinden, Blume tauschen, abschneiden und reisen darf jeder, der auf deiner Insel ist. Auf die Insel kommen nur du und deine [Mitglieder](mitglieder.md).
 
 ## Verwandte Seiten
 
 * [Erste Schritte](start.md)
-* [Deine Insel](insel.md)
+* [Die Inselwelt](welt.md)
+* [Ressourcen & Farming](farming.md)

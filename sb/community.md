@@ -9,12 +9,12 @@ icon: users
 
 Der Skyblock ist als **gemeinsames Hauptspiel** gedacht: Spieler, Handel und Community sollen sich lebendig anfühlen, statt nebeneinanderher zu laufen.
 
-## Aktive Events und Community-Ziele
+## Events
 
-Zu den bestätigten Systemen gehören **aktive Events und Community-Ziele** – also Inhalte, an denen der Server gemeinsam arbeitet, nicht nur jeder für sich auf der eigenen Insel.
+Gemeinsame Events und Community-Ziele sind geplant – Inhalte, an denen der Server zusammen arbeitet, nicht nur jeder für sich auf der eigenen Insel.
 
 {% hint style="info" %}
-Ablauf, Häufigkeit und Belohnungen der Events werden vor dem Start im [Discord](https://megabuild.de/dc/) angekündigt.
+Events, Aktionen und Neuerungen kündigen wir im [Discord](../ag/discord.md) an.
 {% endhint %}
 
 ## Mit anderen spielen
@@ -23,19 +23,15 @@ Ablauf, Häufigkeit und Belohnungen der Events werden vor dem Start im [Discord]
 * [Nachrichten & Post](../ag/nachrichten.md) – `/msg` und `/mail`
 * [Mitglieder & Rechte](mitglieder.md) – Mitspieler auf deine Insel holen
 * [Mana & Ruby](eco.md) – Ruby mit `/pay` verschicken
+* [Clans (Vorschau)](clans.md) – das geplante Clansystem
 
 ## Discord
 
-Der Discord ist die zentrale Anlaufstelle neben dem Server selbst:
+Der Discord ist die zentrale Anlaufstelle neben dem Server selbst: Ankündigungen, Support-Tickets, Bug-Bounty, Feedback und Austausch mit anderen Spielern.
 
-* Ankündigungen zum Skyblock-Start
-* Unterstützte Minecraft-Versionen
-* Events und Aktionen
-* Support und Tickets
-* Austausch mit anderen Spielern
-* Feedback und Vorschläge
-
-{% embed url="https://megabuild.de/dc/" %}
+{% content-ref url="../ag/discord.md" %}
+[discord.md](../ag/discord.md)
+{% endcontent-ref %}
 
 ## Social Media
 

@@ -1,7 +1,7 @@
 ---
 description: >-
   How Custom Skyblock works on MegaBuild.de – your own island servers, a world
-  that grows as you explore, and biomes to unlock.
+  that grows as you explore, AI residents and biomes to unlock.
 icon: cube
 cover: ../.gitbook/assets/mb-skyblock-two.jpg
 coverY: 0
@@ -9,11 +9,11 @@ coverY: 0
 
 # Custom Skyblock
 
-On MegaBuild.de every player gets **their own island server**. You start in the lobby, create your island there and travel to it by airship.
+On MegaBuild.de every player gets **their own island world on their own server**. You create it in the lobby, experience the intro with Captain **Mala** aboard her airship, and a **Warpett** takes you to your starting island.
 
-As you explore, new islands keep appearing around yours – with caves, ores, villages and ruins. You decide which biomes show up: you unlock them with **Mana** in the skill tree.
+As you explore, new islands keep appearing around yours – with caves, ores, villages, ruins and **AI residents** who chat and trade with you. You decide which biomes show up: you unlock them with **Mana** in the skill tree.
 
-<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="A Skyblock island above the clouds"><figcaption>A main island in one of the biome regions</figcaption></figure>
+<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="A Skyblock island above the clouds"><figcaption><p>A main island with its side islands</p></figcaption></figure>
 
 ## How it all fits together
 
@@ -21,25 +21,25 @@ As you explore, new islands keep appearing around yours – with caves, ores, vi
 {% step %}
 #### Explore and mine
 
-Mine ores, farm, fight and discover new islands.
+Discover new islands, mine ores, farm, fight and meet residents.
 {% endstep %}
 
 {% step %}
 #### Earn Mana
 
-Many actions give Mana with a bit of luck. On top of that there are quests and the rare Mana Ore.
+Quests, Mana ore, trading with residents and many actions earn you Mana.
 {% endstep %}
 
 {% step %}
-#### Unlock biomes
+#### Complete the biome quest and buy a biome
 
-In the skill tree you buy new biomes with Mana.
+Every biome has a biome quest. Once it's done, you buy the next biome in the skill tree.
 {% endstep %}
 
 {% step %}
-#### Discover new islands
+#### Discover new areas
 
-Newly unlocked biomes show up in the regions you explore next – with new resources, animals and quests.
+The new biome appears in the next area you explore – with new resources, animals, structures and Forestlings.
 {% endstep %}
 {% endstepper %}
 
@@ -47,17 +47,23 @@ Newly unlocked biomes show up in the regions you explore next – with new resou
 
 | System | What it's about |
 | ------ | --------------- |
-| [Your island](island.md) | Your own server, starting biome, a world that grows as you explore |
+| [Getting started](start.md) | From the lobby to your first resident |
+| [Your island](island.md) | Your own server, menus, dying, deleting |
+| [The island world](world.md) | How new islands appear – areas, caves, ores, structures |
 | [Members & rights](members.md) | Up to 25 fellow players with adjustable rights |
 | [Mana & Ruby](economy.md) | Mana for unlocking, Ruby for trading |
-| [Quests](quests.md) | Daily and weekly tasks for Mana |
-| [Skill tree & biomes](skilltree.md) | 45 biomes in 8 categories |
-| [Resources & farming](farming.md) | Ores, Mana Ore, generator, monsters |
-| [Warpetts](warpetts.md) | Teleporting via flower networks |
+| [Quests](quests.md) | Daily, weekly and bonus quests for Mana |
+| [Skill tree & biomes](skilltree.md) | 8 crystal paths with 47 biomes |
+| [AI residents](residents.md) | Goblins and Shroomlings who talk, work and trade |
+| [Forestlings](forestlings.md) | Forest elves who give you a blessing for Mana |
+| [Warpetts](warpetts.md) | Travel through flower networks, hatch eggs |
+| [Resources & farming](farming.md) | Ores, Mana ore, generator, animals, monsters |
+| [Achievements](achievements.md) | 20 achievements in the "MegaBuild Sky" tab |
 | [HUD & statistics](hud.md) | What you see on your screen |
+| [Clans (preview)](clans.md) | The planned clan system |
 
 {% hint style="info" %}
-The numbers in this wiki are the server's default values. They may still be adjusted before and after launch.
+The numbers in this wiki are the server's current values. They may still change with updates.
 {% endhint %}
 
 ## Let's go

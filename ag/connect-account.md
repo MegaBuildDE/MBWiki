@@ -11,6 +11,8 @@ MegaBuild.de ist crossplay-fähig. Wenn du sowohl mit einem **Java**- als auch m
 
 {% hint style="info" %}
 Wenn du **nur** mit Java **oder nur** mit Bedrock spielst, brauchst du diese Seite nicht.
+
+Deinen Minecraft-Account mit **Discord** verbindest du dagegen mit `/connect` – siehe [Discord](discord.md#minecraft-account-verbinden).
 {% endhint %}
 
 {% hint style="danger" %}
@@ -70,7 +72,7 @@ Hat alles geklappt, wirst du gekickt und zum erneuten Beitreten aufgefordert. Ab
 ## Wichtige Hinweise
 
 {% hint style="warning" %}
-**Geld auf andere Accounts zu übertragen, um Regeln zu umgehen, ist nicht erlaubt** und wird als Regelverstoß behandelt. Die vollständigen Regeln findest du unter [megabuild.de/rules](https://megabuild.de/rules/).
+**Ruby oder Gegenstände über Zweitaccounts zu verschieben, um Regeln zu umgehen, ist nicht erlaubt** und wird als Regelverstoß behandelt. Die vollständigen Regeln findest du unter [megabuild.de/rules](https://megabuild.de/rules/).
 {% endhint %}
 
 <details>

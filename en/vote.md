@@ -21,7 +21,7 @@ Go to [megabuild.de/vote](https://megabuild.de/vote/) – or type `/vote` in-gam
 {% step %}
 #### Enter your name
 
-Enter your Minecraft name – **exactly as it's spelled on the server**, including upper and lower case. A typo is the most common reason a reward doesn't arrive.
+Enter your Minecraft name. Upper and lower case don't matter – but watch out for typos, otherwise the reward goes to someone else. Bedrock players enter their name the way it's shown on the server.
 {% endstep %}
 
 {% step %}
@@ -35,25 +35,27 @@ Confirm your vote on the linked server lists. Usually you can vote **once every 
 
 ## What does it do?
 
-{% columns %}
-{% column %}
+### Your reward
+
+| Per vote | |
+| -------- | -: |
+| Mana | **20** |
+| Ruby | **1** |
+
+* Your **first 3 votes of the day** are rewarded. The day changes at midnight.
+* Vote Mana does **not** count toward the daily limit for actions.
+* **Were you offline?** You still get the reward – with a message from *MegaBuild.de* in your [mailbox](messages.md).
+* **Never been on the server?** Votes from the 7 days before your first join are credited when you join for the first time.
+
+Apart from the 1,000 Ruby every account starts with, votes are the regular way to get more **Ruby** – the currency for trading between players.
+
+### In-game
+
+`/vote` shows you the link, your reward, how often you've already voted **today** (for example `2/3`) and your votes this month and in total.
+
 ### For the server
 
-Every vote pushes MegaBuild.de up the server lists and helps us reach new players. More players mean a livelier community and a more active server.
-{% endcolumn %}
-
-{% column %}
-### For you
-
-Votes earn you in-game rewards. What exactly they look like in Custom Skyblock will be announced at launch.
-{% endcolumn %}
-{% endcolumns %}
-
-{% hint style="warning" %}
-**The vote rewards for Custom Skyblock haven't been decided yet.**
-
-The old CityBuild had vote keys, a vote chest at spawn, a VoteStreak system (`/vr`) and a monthly top voter list. Whether and in what form these systems will carry over to Skyblock hasn't been announced yet.
-{% endhint %}
+Every vote pushes MegaBuild.de up the server lists and helps us reach new players.
 
 ## Frequently asked questions
 
@@ -63,11 +65,11 @@ The old CityBuild had vote keys, a vote chest at spawn, a VoteStreak system (`/v
 
 The most common causes:
 
-1. **Misspelled name.** Pay attention to upper and lower case.
-2. **The 24 hours aren't up yet.** Usually only one vote per day is possible per list.
-3. **You were offline.** Some systems only hand out rewards at your next login.
+1. **A typo in your name.** Then the reward went to a different name.
+2. **Already 3 votes today.** Further votes on the same day help the server, but don't give you anything more.
+3. **You were offline.** Check your mailbox with `/mail`.
 
-Nothing helped? Contact [ticket support](https://megabuild.de/ticket/).
+Nothing helped? Get in touch with [support](support.md).
 
 </details>
 

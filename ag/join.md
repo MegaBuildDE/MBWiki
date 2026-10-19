@@ -104,6 +104,15 @@ Hast du es aus Versehen abgelehnt? Bearbeite den Server in deiner Serverliste un
 
 Bedrock-Spieler müssen nichts tun – sie bekommen die Inhalte automatisch.
 
+## Wo du landest
+
+* **Beim ersten Mal** in der **Lobby**. Dort erstellst du mit `/sky` deine Insel – siehe [Erste Schritte](../sb/start.md).
+* **Später** direkt auf deiner Insel, wenn sie gerade läuft – sonst wieder in der Lobby.
+
+## Sprache
+
+Der Server richtet sich nach der **Sprache deines Minecraft-Clients**: Mit deutschem Client ist alles auf Deutsch, mit jeder anderen Sprache auf Englisch – Menüs, Chat-Meldungen und Malas Stimme im Vorspann. Ein eigener Befehl dafür ist nicht nötig.
+
 ## Java und Bedrock zusammen nutzen
 
 Wenn du sowohl mit einem Java- als auch mit einem Bedrock-Account spielst, kannst du beide zu **einem gemeinsamen Spielstand** verbinden.

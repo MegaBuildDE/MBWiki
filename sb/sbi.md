@@ -1,7 +1,7 @@
 ---
 description: >-
   So funktioniert der Custom Skyblock auf MegaBuild.de – eigene Inselserver,
-  eine Welt, die beim Erkunden wächst, und Biome zum Freischalten.
+  eine Welt, die beim Erkunden wächst, KI-Bewohner und Biome zum Freischalten.
 icon: cube
 cover: ../.gitbook/assets/mb-skyblock-two.jpg
 coverY: 0
@@ -9,11 +9,11 @@ coverY: 0
 
 # Custom Skyblock
 
-Auf MegaBuild.de bekommt jeder Spieler **seinen eigenen Inselserver**. Du startest in der Lobby, erstellst dort deine Insel und reist mit dem Luftschiff hin.
+Auf MegaBuild.de bekommt jeder Spieler **seine eigene Inselwelt auf einem eigenen Server**. Du erstellst sie in der Lobby, erlebst mit Kapitänin **Mala** den Vorspann an Bord ihres Luftschiffs und wirst von einem **Warpett** auf deine Startinsel gebracht.
 
-Um deine Insel herum entstehen beim Erkunden immer neue Inseln – mit Höhlen, Erzen, Dörfern und Ruinen. Welche Biome dabei vorkommen, bestimmst du selbst: Du schaltest sie mit **Mana** im Skilltree frei.
+Um deine Insel herum entstehen beim Erkunden immer neue Inseln – mit Höhlen, Erzen, Dörfern, Ruinen und **KI-Bewohnern**, die mit dir im Chat reden und handeln. Welche Biome dabei vorkommen, bestimmst du selbst: Du schaltest sie mit **Mana** im Skilltree frei.
 
-<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="Eine Skyblock-Insel über den Wolken"><figcaption>Eine Hauptinsel in einer der Biom-Regionen</figcaption></figure>
+<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="Eine Skyblock-Insel über den Wolken"><figcaption><p>Eine Hauptinsel mit ihren Nebeninseln</p></figcaption></figure>
 
 ## So greift alles ineinander
 
@@ -21,25 +21,25 @@ Um deine Insel herum entstehen beim Erkunden immer neue Inseln – mit Höhlen, 
 {% step %}
 #### Erkunden und abbauen
 
-Baue Erze ab, farme, kämpfe und entdecke neue Inseln.
+Entdecke neue Inseln, baue Erze ab, farme, kämpfe und triff Bewohner.
 {% endstep %}
 
 {% step %}
 #### Mana verdienen
 
-Viele Aktionen geben mit etwas Glück Mana. Dazu kommen Quests und das seltene Mana-Erz.
+Quests, Mana-Erz, Handel mit Bewohnern und viele Aktionen bringen Mana.
 {% endstep %}
 
 {% step %}
-#### Biome freischalten
+#### Biomquest schaffen und Biom kaufen
 
-Im Skilltree kaufst du mit Mana neue Biome.
+Jedes Biom hat eine Biomquest. Ist sie geschafft, kaufst du im Skilltree das nächste Biom.
 {% endstep %}
 
 {% step %}
-#### Neue Inseln entdecken
+#### Neue Gegenden entdecken
 
-Neu freigeschaltete Biome tauchen in den Regionen auf, die du als Nächstes erkundest – mit neuen Ressourcen, Tieren und Quests.
+Das neue Biom erscheint in der nächsten Gegend, die du erkundest – mit neuen Ressourcen, Tieren, Bauwerken und Forestlingen.
 {% endstep %}
 {% endstepper %}
 
@@ -47,17 +47,23 @@ Neu freigeschaltete Biome tauchen in den Regionen auf, die du als Nächstes erku
 
 | System | Worum es geht |
 | ------ | ------------- |
-| [Deine Insel](insel.md) | Eigener Server, Startbiom, eine Welt, die beim Erkunden wächst |
+| [Erste Schritte](start.md) | Von der Lobby bis zu deinem ersten Bewohner |
+| [Deine Insel](insel.md) | Eigener Server, Menüs, Sterben, Löschen |
+| [Die Inselwelt](welt.md) | Wie neue Inseln entstehen – Gegenden, Höhlen, Erze, Bauwerke |
 | [Mitglieder & Rechte](mitglieder.md) | Bis zu 25 Mitspieler mit einstellbaren Rechten |
 | [Mana & Ruby](eco.md) | Mana zum Freischalten, Ruby zum Handeln |
-| [Quests](quests.md) | Tägliche und wöchentliche Aufgaben für Mana |
-| [Skilltree & Biome](skilltree.md) | 45 Biome in 8 Kategorien |
-| [Ressourcen & Farming](farming.md) | Erze, Mana-Erz, Generator, Monster |
-| [Warpetts](warpetts.md) | Teleportieren über Blumen-Netze |
+| [Quests](quests.md) | Tages-, Wochen- und Bonusquests für Mana |
+| [Skilltree & Biome](skilltree.md) | 8 Kristall-Pfade mit 47 Biomen |
+| [KI-Bewohner](bewohner.md) | Goblins und Shroomlinge, die reden, arbeiten und handeln |
+| [Forestlinge](forestlinge.md) | Waldelfen, die dir gegen Mana einen Segen schenken |
+| [Warpetts](warpetts.md) | Reisen über Blumen-Netze, Eier ausbrüten |
+| [Ressourcen & Farming](farming.md) | Erze, Mana-Erz, Generator, Tiere, Monster |
+| [Erfolge](erfolge.md) | 20 Erfolge im Tab „MegaBuild Sky“ |
 | [HUD & Statistiken](hud.md) | Was du auf dem Bildschirm siehst |
+| [Clans (Vorschau)](clans.md) | Das geplante Clansystem |
 
 {% hint style="info" %}
-Die Zahlen in diesem Wiki sind die Standardwerte des Servers. Bis zum Start und danach können sie noch angepasst werden.
+Die Zahlen in diesem Wiki sind die aktuellen Werte des Servers. Sie können sich mit Updates noch ändern.
 {% endhint %}
 
 ## Los geht's

@@ -11,12 +11,16 @@ icon: headset
 
 | Weg | Wofür |
 | --- | ----- |
-| [Ticket-Support](https://megabuild.de/ticket/) | Alles Persönliche: Bestellungen, Account-Probleme, Meldungen |
+| **Ticket im [Discord](discord.md#tickets)** | Alles Persönliche: Fragen, Account-Probleme, Meldungen von Regelverstößen, Bug-Meldungen |
 | [Discord](https://megabuild.de/dc/) | Schnelle Fragen, Ankündigungen, Austausch mit anderen Spielern |
-| [support@megabuild.de](mailto:support@megabuild.de) | Alles, was schriftlich laufen soll |
+| [support@megabuild.de](mailto:support@megabuild.de) | Wenn du nicht auf den Discord kannst – etwa bei einem **Entbannungsantrag** – und für Fragen zum **Datenschutz** |
 | [status.megabuild.de](https://status.megabuild.de/) | Zuerst nachsehen, wenn der Server nicht erreichbar ist |
 
-Im Spiel bekommst du die Links mit `/discord` und `/wiki` direkt in den Chat.
+E-Mails an support@megabuild.de landen direkt beim Team. Im Spiel bekommst du die Links mit `/discord` und `/wiki` direkt in den Chat.
+
+{% hint style="info" %}
+**Fehler gefunden?** Melde ihn über ein **Bug-Bounty-Ticket** im Discord – dafür gibt es eine Belohnung. Siehe [Bug-Bounty](discord.md#bug-bounty-und-clipcoin).
+{% endhint %}
 
 ## So bekommst du am schnellsten Hilfe
 
@@ -38,10 +42,11 @@ Viele Fragen lassen sich schneller selbst klären:
 * [Accounts verbinden](connect-account.md)
 * [FAQ](../more/faq.md)
 * [Vote-Belohnung fehlt](vote.md)
+* [Befehle](befehle.md)
 
 ## Regelverstöße melden
 
-Verstöße gegen die [Serverregeln](https://megabuild.de/rules/) meldest du über den [Ticket-Support](https://megabuild.de/ticket/) – möglichst mit Screenshot oder Videobeleg und Zeitangabe.
+Verstöße gegen die [Serverregeln](https://megabuild.de/rules/) meldest du über ein [Support-Ticket](discord.md#tickets) im Discord – möglichst mit Screenshot oder Videobeleg und Zeitangabe.
 
 {% hint style="warning" %}
 Bitte melde Regelverstöße **nicht** im öffentlichen Chat oder in allgemeinen Discord-Kanälen. Über ein Ticket wird die Meldung vertraulich behandelt und geht direkt an das Team.
@@ -49,7 +54,7 @@ Bitte melde Regelverstöße **nicht** im öffentlichen Chat oder in allgemeinen 
 
 ## Feedback zum Wiki
 
-Dir fehlt etwas im Wiki, oder du hast einen Fehler gefunden? Melde dich über den [Ticket-Support](https://megabuild.de/ticket/) oder per E-Mail an [support@megabuild.de](mailto:support@megabuild.de).
+Dir fehlt etwas im Wiki, oder du hast einen Fehler gefunden? Melde dich über ein [Ticket](discord.md#tickets) im Discord oder per E-Mail an [support@megabuild.de](mailto:support@megabuild.de).
 
 ## Rechtliches
 

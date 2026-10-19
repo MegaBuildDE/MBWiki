@@ -93,7 +93,7 @@ Yes. With `/linkaccount` you link both accounts into one shared save.
 
 <summary>How do I get an island?</summary>
 
-Type `/sky` in the lobby, select **Create Skyblock** and pick a starting biome. Your island gets started and you're taken there automatically.
+Type `/sky` in the lobby, select **Create Skyblock** and pick a **crystal** – it decides your starting biome. While Captain Mala tells you the story in the intro, your island is created in the background. Afterwards a Warpett takes you there.
 
 {% content-ref url="start.md" %}
 [start.md](start.md)
@@ -113,7 +113,7 @@ No. But you can unlock all other biomes with Mana in the skill tree.
 
 <summary>How do I earn Mana?</summary>
 
-Through quests, Mana Ore and lots of normal actions like mining ore, taming animals or enchanting. Actions give up to 150 Mana a day, Mana Ore up to 200 – quests have no limit.
+Through quests, biome quests, votes, trading with AI residents, Mana ore and lots of normal actions like mining ore, taming animals or enchanting. Actions give up to 150 Mana a day, Mana ore up to 200 – quests have no limit.
 
 {% content-ref url="economy.md" %}
 [economy.md](economy.md)
@@ -163,7 +163,7 @@ Up to **25 members**. For each one you decide what they may do.
 
 <summary>Can I send Mana to other players?</summary>
 
-No, Mana can't be transferred. Ruby, on the other hand, you can send with `/pay <player> <amount>`.
+No, Mana can't be transferred. Ruby, on the other hand, you can send with `/pay <player> <amount>` – every account starts with 1,000 Ruby.
 
 </details>
 
@@ -171,7 +171,51 @@ No, Mana can't be transferred. Ruby, on the other hand, you can send with `/pay 
 
 <summary>Can I restart my island?</summary>
 
-You can delete your island in the lobby under `/sky` → **Management** and then create a new one. Deleting is **permanent**.
+You can delete your island in the lobby under `/sky` → **Management** and then create a new one – even with a different crystal. Deleting is **permanent**. You keep your Mana, Ruby and achievements, but not the biomes you bought.
+
+</details>
+
+<details>
+
+<summary>I bought a biome but can't find it</summary>
+
+New biomes only appear in areas nobody has explored yet. A freshly bought biome is guaranteed to show up in the **next new area** – so fly or build in a direction you haven't been yet.
+
+{% content-ref url="world.md" %}
+[world.md](world.md)
+{% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>Are the residents with "(KI)" real players?</summary>
+
+No. Goblins and Shroomlings with "(KI)" in their name – German for "AI" – are AI residents. They chat with you, work and trade for Mana. With `/ki` you set what they may do around you.
+
+{% content-ref url="residents.md" %}
+[residents.md](residents.md)
+{% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>How do I get more Warpetts?</summary>
+
+From **Warpett eggs**, which you find as loot in chests, barrels, decorated pots and suspicious sand or gravel. An egg hatches in 10 minutes, on crying obsidian in 5.
+
+{% content-ref url="warpetts.md" %}
+[warpetts.md](warpetts.md)
+{% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>Are there clans?</summary>
+
+Not yet – the clan system is being planned. The [preview](clans.md) shows what's planned. Feedback on it is welcome on the [Discord](discord.md).
 
 </details>
 
@@ -181,7 +225,7 @@ You can delete your island in the lobby under `/sky` → **Management** and then
 
 <summary>Which ranks are there?</summary>
 
-In the [shop](https://shop.megabuild.de/): **Gold** (€9.99), **Platin** (€19.99) and **Titan** (€34.99). The perks in Skyblock will be announced later.
+In the [shop](https://shop.megabuild.de/): **Gold** (€9.99), **Platin** (€19.99) and **Titan** (€49.99, currently on sale). The perks in Skyblock will be announced later.
 
 {% content-ref url="ranks.md" %}
 [ranks.md](ranks.md)
@@ -193,7 +237,7 @@ In the [shop](https://shop.megabuild.de/): **Gold** (€9.99), **Platin** (€19
 
 <summary>How can I support the server for free?</summary>
 
-By voting on [megabuild.de/vote](https://megabuild.de/vote/) – or in-game with `/vote`.
+By voting on [megabuild.de/vote](https://megabuild.de/vote/) – or in-game with `/vote`. For your first 3 votes of the day you get 20 Mana and 1 Ruby each.
 
 </details>
 

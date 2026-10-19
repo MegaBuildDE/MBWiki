@@ -19,7 +19,7 @@ This works even if the player is currently offline.
 {% endtab %}
 
 {% tab title="By menu" %}
-Open `/friend` and click **Freund hinzufügen** (Add friend). There you'll see all players who are currently online. Use the search to find players who are offline too: type part of the name in chat. Type `abbrechen` to cancel the search.
+Open `/friend` and click **Add a friend**. There you'll see all players who are currently online. Use the search to find players who are offline too: type part of the name in chat. Type `cancel` to stop the search.
 {% endtab %}
 {% endtabs %}
 
@@ -30,6 +30,8 @@ If you've both sent each other a request, you're friends right away.
 `/friend requests` shows your pending requests. You can accept or decline them there. Players you decline don't get a message about it.
 
 If you have a pending request when you log in, a chat message lets you know.
+
+Players you've blocked in your [mailbox](messages.md) can't send you a friend request.
 
 ## Your friends list
 

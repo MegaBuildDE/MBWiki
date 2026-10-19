@@ -9,7 +9,7 @@ coverY: 0
 
 # Willkommen im MegaBuild.de Wiki
 
-MegaBuild.de ist ein **Custom Skyblock**: Jede Insel läuft als eigener Server, die Welt um deine Insel entsteht beim Erkunden, und mit Mana schaltest du nach und nach neue Biome frei.
+MegaBuild.de ist ein **Custom Skyblock**: Jede Insel läuft als eigener Server, die Welt um deine Insel entsteht beim Erkunden, KI-Bewohner reden und handeln mit dir, und mit Mana schaltest du nach und nach neue Biome frei.
 
 {% hint style="warning" %}
 **Der Server befindet sich aktuell im Wartungsmodus.**
@@ -37,6 +37,17 @@ Ein Starttermin für den Custom Skyblock ist noch nicht angekündigt. Aktuelles 
 {% content-ref url="ag/befehle.md" %}
 [befehle.md](ag/befehle.md)
 {% endcontent-ref %}
+
+## Die Videos
+
+Kurze Filme mit Ton, die dir die wichtigsten Systeme zeigen:
+
+| Video | Worum es geht |
+| ----- | ------------- |
+| [Dein Start](sb/start.md) | Mit Mala von der Lobby bis zu deinem ersten Bewohner |
+| [Deine Insel lebt](sb/bewohner.md) | KI-Bewohner und Forestlinge |
+| [Mana & Biome](sb/skilltree.md) | Wie du Mana verdienst und neue Biome freischaltest |
+| [Clans – ein erster Blick](sb/clans.md) | Vorschau auf das geplante Clansystem |
 
 ## Außerhalb des Wikis
 

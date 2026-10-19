@@ -11,12 +11,16 @@ icon: headset
 
 | Channel | What for |
 | ------- | -------- |
-| [Ticket support](https://megabuild.de/ticket/) | Anything personal: orders, account problems, reports |
+| **Ticket on [Discord](discord.md#tickets)** | Anything personal: questions, account problems, reports of rule violations, bug reports |
 | [Discord](https://megabuild.de/dc/) | Quick questions, announcements, chatting with other players |
-| [support@megabuild.de](mailto:support@megabuild.de) | Anything that should be handled in writing |
+| [support@megabuild.de](mailto:support@megabuild.de) | If you can't get onto the Discord – for example for a **ban appeal** – and for questions about **data protection** |
 | [status.megabuild.de](https://status.megabuild.de/) | Check here first if the server can't be reached |
 
-In-game, `/discord` and `/wiki` send you the links straight to chat.
+Emails to support@megabuild.de go straight to the team. In-game, `/discord` and `/wiki` send you the links straight to chat.
+
+{% hint style="info" %}
+**Found a bug?** Report it with a **bug bounty ticket** on the Discord – you get a reward for it. See [Bug bounty](discord.md#bug-bounty-and-clipcoin).
+{% endhint %}
 
 ## How to get help fastest
 
@@ -38,10 +42,11 @@ Many questions can be answered faster on your own:
 * [Linking accounts](connect-account.md)
 * [FAQ](faq.md)
 * [Vote reward missing](vote.md)
+* [Commands](commands.md)
 
 ## Reporting rule violations
 
-Report violations of the [server rules](https://megabuild.de/rules/) through [ticket support](https://megabuild.de/ticket/) – ideally with a screenshot or video as proof and the time it happened.
+Report violations of the [server rules](https://megabuild.de/rules/) with a [support ticket](discord.md#tickets) on the Discord – ideally with a screenshot or video as proof and the time it happened.
 
 {% hint style="warning" %}
 Please **don't** report rule violations in public chat or in general Discord channels. A ticket keeps your report confidential and sends it straight to the team.
@@ -49,7 +54,7 @@ Please **don't** report rule violations in public chat or in general Discord cha
 
 ## Wiki feedback
 
-Is something missing from the wiki, or did you find a mistake? Reach out via [ticket support](https://megabuild.de/ticket/) or email [support@megabuild.de](mailto:support@megabuild.de).
+Is something missing from the wiki, or did you find a mistake? Reach out with a [ticket](discord.md#tickets) on the Discord or email [support@megabuild.de](mailto:support@megabuild.de).
 
 ## Legal
 

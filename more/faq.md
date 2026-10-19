@@ -93,7 +93,7 @@ Ja. Mit `/linkaccount` verbindest du beide Accounts zu einem gemeinsamen Spielst
 
 <summary>Wie bekomme ich eine Insel?</summary>
 
-Gib in der Lobby `/sky` ein, wähle **Skyblock erstellen** und such dir ein Startbiom aus. Deine Insel wird gestartet und du wirst automatisch hingebracht.
+Gib in der Lobby `/sky` ein, wähle **Skyblock erstellen** und such dir einen **Kristall** aus – er bestimmt dein Startbiom. Während Kapitänin Mala dir im Vorspann die Geschichte erzählt, entsteht deine Insel im Hintergrund. Ein Warpett bringt dich danach hin.
 
 {% content-ref url="../sb/start.md" %}
 [start.md](../sb/start.md)
@@ -113,7 +113,7 @@ Nein. Alle anderen Biome kannst du aber im Skilltree mit Mana freischalten.
 
 <summary>Wie verdiene ich Mana?</summary>
 
-Über Quests, Mana-Erz und viele normale Aktionen wie Erz abbauen, Tiere zähmen oder Verzaubern. Aus Aktionen gibt es bis zu 150 Mana am Tag, aus Mana-Erz bis zu 200 – Quests haben kein Limit.
+Über Quests, Biomquests, Votes, Handel mit KI-Bewohnern, Mana-Erz und viele normale Aktionen wie Erz abbauen, Tiere zähmen oder Verzaubern. Aus Aktionen gibt es bis zu 150 Mana am Tag, aus Mana-Erz bis zu 200 – Quests haben kein Limit.
 
 {% content-ref url="../sb/eco.md" %}
 [eco.md](../sb/eco.md)
@@ -163,7 +163,7 @@ Bis zu **25 Mitglieder**. Für jedes legst du fest, was es darf.
 
 <summary>Kann ich Mana an andere Spieler schicken?</summary>
 
-Nein, Mana lässt sich nicht übertragen. Ruby dagegen kannst du mit `/pay <Spieler> <Menge>` verschicken.
+Nein, Mana lässt sich nicht übertragen. Ruby dagegen kannst du mit `/pay <Spieler> <Menge>` verschicken – jedes Konto startet mit 1.000 Ruby.
 
 </details>
 
@@ -171,7 +171,51 @@ Nein, Mana lässt sich nicht übertragen. Ruby dagegen kannst du mit `/pay <Spie
 
 <summary>Kann ich meine Insel neu anfangen?</summary>
 
-Du kannst deine Insel in der Lobby unter `/sky` → **Verwaltung** löschen und danach eine neue erstellen. Das Löschen ist **endgültig**.
+Du kannst deine Insel in der Lobby unter `/sky` → **Verwaltung** löschen und danach eine neue erstellen – auch mit einem anderen Kristall. Das Löschen ist **endgültig**. Mana, Ruby und Erfolge behältst du, gekaufte Biome nicht.
+
+</details>
+
+<details>
+
+<summary>Ich habe ein Biom gekauft, finde es aber nicht</summary>
+
+Neue Biome entstehen nur in Gegenden, die noch niemand erkundet hat. Ein frisch gekauftes Biom kommt sicher in der **nächsten neuen Gegend** – flieg oder bau also in eine Richtung, in der du noch nicht warst.
+
+{% content-ref url="../sb/welt.md" %}
+[welt.md](../sb/welt.md)
+{% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>Sind die Bewohner mit „(KI)“ echte Spieler?</summary>
+
+Nein. Goblins und Shroomlinge mit „(KI)“ im Namen sind KI-Bewohner. Sie reden mit dir im Chat, arbeiten und handeln gegen Mana. Mit `/ki` stellst du ein, was sie bei dir dürfen.
+
+{% content-ref url="../sb/bewohner.md" %}
+[bewohner.md](../sb/bewohner.md)
+{% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>Wie bekomme ich weitere Warpetts?</summary>
+
+Aus **Warpett-Eiern**, die du als Beute in Truhen, Fässern, Töpfen und verdächtigem Sand oder Kies findest. Ein Ei brütet 10 Minuten, auf weinendem Obsidian 5.
+
+{% content-ref url="../sb/warpetts.md" %}
+[warpetts.md](../sb/warpetts.md)
+{% endcontent-ref %}
+
+</details>
+
+<details>
+
+<summary>Gibt es Clans?</summary>
+
+Noch nicht – das Clansystem ist in Planung. Was geplant ist, zeigt die [Vorschau](../sb/clans.md). Feedback dazu gern im [Discord](../ag/discord.md).
 
 </details>
 
@@ -181,7 +225,7 @@ Du kannst deine Insel in der Lobby unter `/sky` → **Verwaltung** löschen und 
 
 <summary>Welche Ränge gibt es?</summary>
 
-Im [Shop](https://shop.megabuild.de/): **Gold** (9,99 €), **Platin** (19,99 €) und **Titan** (34,99 €). Die Vorteile im Skyblock werden noch bekannt gegeben.
+Im [Shop](https://shop.megabuild.de/): **Gold** (9,99 €), **Platin** (19,99 €) und **Titan** (49,99 €, derzeit im Angebot). Die Vorteile im Skyblock werden noch bekannt gegeben.
 
 {% content-ref url="../ag/rang.md" %}
 [rang.md](../ag/rang.md)
@@ -193,7 +237,7 @@ Im [Shop](https://shop.megabuild.de/): **Gold** (9,99 €), **Platin** (19,99 �
 
 <summary>Wie unterstütze ich den Server kostenlos?</summary>
 
-Durch Voten auf [megabuild.de/vote](https://megabuild.de/vote/) – oder im Spiel mit `/vote`.
+Durch Voten auf [megabuild.de/vote](https://megabuild.de/vote/) – oder im Spiel mit `/vote`. Für deine ersten 3 Votes am Tag bekommst du je 20 Mana und 1 Ruby.
 
 </details>
 

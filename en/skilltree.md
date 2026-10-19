@@ -1,136 +1,174 @@
 ---
 description: >-
-  The skill tree on MegaBuild.de – all 45 biomes, how to unlock them with Mana
-  and what they cost.
+  The skill tree on MegaBuild.de – eight crystal paths with 47 biomes, biome
+  quests, crystal quests, prices and favourites.
 icon: sitemap
 ---
 
 # Skill Tree & Biomes
 
-In the skill tree you unlock **new biomes** for your island with Mana. Only unlocked biomes show up in the regions that appear as you explore.
+<figure><img src="../.gitbook/assets/videos/skilltree-en.jpg" alt="The skill tree with the Forests path"><figcaption><p>From the video “Mana & biomes”</p></figcaption></figure>
 
-Open it with `/sky skills` or via `/sky` → **Skill tree**. You can only buy on the island itself.
+{% file src="../.gitbook/assets/videos/skilltree-en.mp4" %}
+**Video: Mana & biomes** (1:16) – how you earn Mana and use it to grow your island world.
+{% endfile %}
 
-## How it works
+In the skill tree you unlock **new biomes** for your island. New areas you explore only ever come from biomes your island owns.
 
-* Your island starts with **one biome** – the starting biome of your category.
-* Every biome has a **tier from 1 to 4**. For tiers 2–4 you need a biome of the tier below from the same category.
-* **Other categories** open after **3 purchases** – or as soon as you've completed your starting category.
-* A newly bought biome shows up **especially often** in the next regions.
-* The biome applies to the whole island. All fellow players see the progress.
+Open it **on your island** with `/sky skills` or via `/sky` → **Skill tree**. Clicking the **golem** on your airship opens the skill tree too (Bedrock: sneak next to it).
 
-{% hint style="warning" %}
-**Who can buy:** the owner and members with the **Settings** right. The Mana always comes from the account of **whoever clicks**.
-{% endhint %}
+## Eight crystals, eight paths
 
-## Prices
-
-Every purchase makes the next biomes a little more expensive.
-
-| Tier | Base price |
-| ---- | ---------: |
-| Tier 1 | 100 Mana |
-| Tier 2 | 135 Mana |
-| Tier 3 | 180 Mana |
-| Tier 4 | 240 Mana |
-
-* **+5 %** for every biome your island has already bought
-* **+30 %** for biomes from a category other than your starting category
-* Rounded to 5 Mana
-
-All 44 biomes together cost around **31,000–38,000 Mana**, depending on the order.
-
-## All biomes
+The skill tree is made of **eight paths** – each path is a **crystal**. A path leads from left to right through its biomes. The first biome of a path is also the starting biome you get when you choose that path at the start.
 
 {% tabs %}
 {% tab title="Plains" %}
-| Tier | Biome |
-| :--: | ----- |
-| 1 | Plains |
-| 2 | Meadow |
-| 3 | Sunflower Plains |
-| 3 | Savanna |
-| 4 | Windswept Savanna |
+Plains → Sunflower Plains → Meadow → Flower Forest → Birch Forest → Cherry Grove
 {% endtab %}
 
 {% tab title="Forests" %}
-| Tier | Biome |
-| :--: | ----- |
-| 1 | Forest |
-| 1 | Taiga |
-| 2 | Flower Forest |
-| 2 | Wooded Hills |
-| 3 | Birch Forest |
-| 3 | Dark Forest |
-| 4 | Old Growth Birch Forest |
-| 4 | Old Growth Pine Taiga |
-| 4 | Old Growth Spruce Taiga |
+Forest → Wooded Hills → Taiga → Grove → Old Growth Spruce Taiga → Old Growth Pine Taiga
 {% endtab %}
 
 {% tab title="Snow & Ice" %}
-| Tier | Biome |
-| :--: | ----- |
-| 1 | Snowy Plains |
-| 2 | Snowy Beach |
-| 2 | Frozen River |
-| 3 | Snowy Taiga |
-| 3 | Frozen Ocean |
-| 4 | Ice Spikes |
-{% endtab %}
-
-{% tab title="Desert & Steppe" %}
-| Tier | Biome |
-| :--: | ----- |
-| 1 | Desert |
-| 2 | Badlands |
-| 3 | Wooded Badlands |
-| 4 | Eroded Badlands |
-{% endtab %}
-
-{% tab title="Jungle" %}
-| Tier | Biome |
-| :--: | ----- |
-| 1 | Sparse Jungle |
-| 2 | Jungle |
-| 3 | Bamboo Jungle |
+Snowy Plains → Snowy Beach → Snowy Taiga → Frozen River → Frozen Ocean → Ice Spikes
 {% endtab %}
 
 {% tab title="Mountains" %}
-| Tier | Biome |
-| :--: | ----- |
-| 1 | Windswept Hills |
-| 2 | Grove |
-| 2 | Windswept Forest |
-| 3 | Stony Peaks |
-| 3 | Windswept Gravelly Hills |
-| 4 | Jagged Peaks |
-| 4 | Frozen Peaks |
-| 4 | Snowy Slopes |
-{% endtab %}
-
-{% tab title="Water" %}
-| Tier | Biome |
-| :--: | ----- |
-| 1 | River |
-| 2 | Beach |
-| 2 | Lukewarm Ocean |
-| 3 | Warm Ocean |
-| 3 | Cold Ocean |
-| 3 | Stony Shore |
-| 4 | Deep Ocean |
+Windswept Hills → Windswept Forest → Windswept Gravelly Hills → Snowy Slopes → Frozen Peaks → Jagged Peaks
 {% endtab %}
 
 {% tab title="Swamp & Rare" %}
-| Tier | Biome |
-| :--: | ----- |
-| 1 | Swamp |
-| 2 | Mangrove Swamp |
-| 3 | Mushroom Fields |
+Swamp → Mangrove Swamp → Dark Forest → Old Growth Birch Forest → Mushroom Fields → Pale Garden
+{% endtab %}
+
+{% tab title="Jungle" %}
+Sparse Jungle → Jungle → Stony Peaks → Bamboo Jungle
+{% endtab %}
+
+{% tab title="Desert & Steppe" %}
+Desert → Savanna → Badlands → Windswept Savanna → Wooded Badlands → Eroded Badlands
+{% endtab %}
+
+{% tab title="Water" %}
+River → Beach → Stony Shore → Lukewarm Ocean → Cold Ocean → Warm Ocean → Deep Ocean
+
+{% hint style="info" %}
+The **Water** crystal is coming soon. Until then it's locked.
+{% endhint %}
 {% endtab %}
 {% endtabs %}
+
+That makes **47 biomes** in total, **40** of which can already be unlocked.
+
+## How to unlock a biome
+
+{% stepper %}
+{% step %}
+#### In your own path: the biome quest of the biome before
+
+Every biome has a **biome quest**. You can only buy the next biome of a path once your island owns the biome before it **and** its biome quest is complete. This applies to your starting biome too.
+{% endstep %}
+
+{% step %}
+#### In a new path: the crystal quest first
+
+If you want to start another crystal, you first complete its **crystal quest**. After that, the first biome of that path can be bought. All crystal quests run at the same time from the start.
+{% endstep %}
+
+{% step %}
+#### Buy
+
+Tapping buys the biome right away at the price shown – without asking again. What you buy stays bought.
+{% endstep %}
+{% endstepper %}
+
+{% hint style="warning" %}
+**Who can buy:** the owner and members with the **Settings** right. The Mana always comes from the account of **whoever clicks** – and only on the island itself.
+{% endhint %}
+
+## Biome quests
+
+* **Everyone helps.** The HUD shows the progress of the whole island. Every owner and every member who helps gets **25 Mana** when it's completed. Visitors get nothing.
+* **Where they count:** A biome quest only counts on islands of that biome – so the quest of your starting biome counts on your starting island and its neighbours. **Crystal quests** count on all your islands.
+* **Always fair:** You can do the first quests of a path alone in a few minutes; the later ones take more like an hour.
+* **What doesn't count:** The same rules as for quests – blocks you placed yourself, spawner monsters and AFK don't count. Biome quests **can't be skipped**.
+* **Progress updates** at 25, 50 and 75% appear in chat.
+
+If you tap a biome in the skill tree that's waiting for a quest, the quest gets pinned to your HUD.
+
+<details>
+
+<summary>All biome quests at a glance</summary>
+
+The number is the biome's position in the path. The quest at position 1 opens position 2, and so on.
+
+| Path | 1 | 2 | 3 | 4 | 5 | 6 |
+| ---- | - | - | - | - | - | - |
+| Plains | Shear 8 sheep | 48 sunflowers | Breed 5 rabbits | 160 flowers | 288 birch logs | 192 pink petals |
+| Forests | 48 oak logs | Loot 5 containers | 96 sweet berries | Breed 3 foxes | 384 spruce logs | Tame 3 wolves |
+| Snow & Ice | 96 snow blocks | 32 fish | Tame 2 wolves | 192 ice | 256 packed or blue ice | 16 strays |
+| Mountains | 12 ores | 160 logs | 384 gravel | Breed 6 goats | 40 monsters | 640 stone |
+| Swamp & Rare | 24 blue orchids | 32 fish | 64 mushrooms | 320 birch logs | Breed 8 mooshrooms | 48 eyeblossoms |
+| Jungle | 48 jungle logs | Tame 3 parrots | 32 ores | Breed 3 pandas | – | – |
+| Desert & Steppe | 128 sand | Tame 3 horses | Breed 5 armadillos | 256 acacia logs | 384 terracotta | 64 monsters |
+
+| Crystal quest | Task |
+| ------------- | ---- |
+| Snow & Ice | Catch 32 fish |
+| Mountains | Mine 384 stone |
+| Forests | Chop 128 logs |
+| Plains | Harvest 128 wheat |
+| Swamp & Rare | Loot 6 containers |
+| Jungle | Breed 16 animals |
+| Desert & Steppe | Defeat 40 monsters |
+
+</details>
+
+## Prices
+
+The first biome costs **100 Mana**. After that, the price rises slowly:
+
+* **+5%** for every biome your island has already bought
+* **+25%** for every position further along the path
+* rounded to 5 Mana
+
+| Purchase no. | Position 1 | Position 2 | Position 3 | Position 4 | Position 5 | Position 6 |
+| -----------: | ---------: | ---------: | ---------: | ---------: | ---------: | ---------: |
+| 1st | 100 | 125 | 150 | 175 | 200 | 225 |
+| 10th | 155 | 195 | 235 | 270 | 310 | 350 |
+| 20th | 255 | 315 | 380 | 440 | 505 | 570 |
+| 39th | 640 | 800 | 960 | 1,115 | 1,275 | 1,435 |
+
+All 39 purchases together cost around **20,900 Mana**. You get the first ten biomes for about 1,400 Mana.
+
+## What a new biome gives you
+
+* **New areas.** A freshly bought biome is **guaranteed to appear in the next new area** you explore.
+* **New resources, animals and structures** of the biome – and the quests that go with them.
+* **New Forestlings**, depending on the biome.
+* **Achievements**, for example *New Land* for your first biome and one achievement for each complete path.
+
+## Favourites
+
+You can mark up to **three** of your biomes as a **favourite**. Favourites appear in new areas **three times as often**. It's free and you can change it at any time: tap a biome in the skill tree that your island already owns.
+
+## What the symbols mean
+
+| In the menu | Meaning |
+| ----------- | ------- |
+| Biome with glint and ✔ | Belongs to your island |
+| ★ | Favourite |
+| Price | Can be bought – or it says how much Mana you're missing |
+| Lock | Buy the biome before it first |
+| Scroll | Waiting for a biome or crystal quest – with task, progress and helpers |
+| Clock | Locked (Water) |
+
+Use the arrows at the bottom to flip through the eight crystals.
 
 ## Related pages
 
 * [Mana & Ruby](economy.md)
-* [Your island](island.md)
-* [Members & rights](members.md)
+* [Quests](quests.md)
+* [The Island World](world.md)
+* [Achievements](achievements.md)

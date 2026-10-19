@@ -104,6 +104,15 @@ Declined it by accident? Edit the server in your server list and set **Server Re
 
 Bedrock players don't need to do anything – they get the content automatically.
 
+## Where you land
+
+* **The first time**, in the **lobby**. There you create your island with `/sky` – see [Getting Started](start.md).
+* **Later**, straight on your island if it's running – otherwise back in the lobby.
+
+## Language
+
+The server follows the **language of your Minecraft client**: with a German client everything is in German, with any other language it's in English – menus, chat messages and Mala's voice in the intro. You don't need a command for this.
+
 ## Using Java and Bedrock together
 
 If you play with both a Java and a Bedrock account, you can link them into **one shared save**.

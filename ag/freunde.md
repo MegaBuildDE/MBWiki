@@ -31,6 +31,8 @@ Mit `/friend requests` siehst du deine offenen Anfragen. Dort nimmst du sie an o
 
 Hast du beim Einloggen eine offene Anfrage, weist dich eine Nachricht im Chat darauf hin.
 
+Spieler, die du in deiner [Post](nachrichten.md) blockiert hast, können dir keine Freundschaftsanfrage schicken.
+
 ## Deine Freundesliste
 
 In `/friend` siehst du bei jedem Freund:

@@ -20,7 +20,7 @@ Mit `/msg` schreibst du einem Spieler privat, mit `/r` antwortest du auf die let
 
 ## Das Postfach
 
-Öffne es mit `/mail`. Das Postfach gilt im ganzen Netzwerk und fasst bis zu **200 Nachrichten**. Nachrichten bleiben dort, bis du sie löschst.
+Öffne es mit `/mail`. Auch `/post` funktioniert. Das Postfach gilt im ganzen Netzwerk. Nachrichten bleiben dort, bis du sie löschst – räum ab und zu auf.
 
 Ungelesene Nachrichten erkennst du am fett geschriebenen Namen. Wenn du eine Nachricht öffnest, kannst du:
 
@@ -28,7 +28,7 @@ Ungelesene Nachrichten erkennst du am fett geschriebenen Namen. Wenn du eine Nac
 * den **Absender blockieren**
 * die Nachricht **löschen**
 
-Beim Einloggen siehst du, ob neue Post auf dich wartet.
+Beim Einloggen siehst du, ob neue Post auf dich wartet. Auch Nachrichten vom Server landen hier – etwa die Belohnung für einen [Vote](vote.md), während du offline warst, oder ein Danke für eine [Bug-Meldung](discord.md#bug-bounty-und-clipcoin).
 
 ### Nachricht schreiben
 

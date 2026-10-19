@@ -20,15 +20,15 @@ Use `/msg` to write to a player privately and `/r` to reply to the last private 
 
 ## The mailbox
 
-Open it with `/mail`. The mailbox works across the whole network and holds up to **200 messages**. Messages stay there until you delete them.
+Open it with `/mail`. `/post` works too. The mailbox works across the whole network. Messages stay there until you delete them – so tidy up now and then.
 
 Unread messages are shown with the name in bold. When you open a message, you can:
 
-* **Antworten** (Reply)
-* **Absender blockieren** (Block sender)
-* **Löschen** (Delete) the message
+* **Reply**
+* **Block the sender**
+* **Delete** the message
 
-When you log in, you'll see whether new mail is waiting for you.
+When you log in, you'll see whether new mail is waiting for you. Messages from the server land here too – for example the reward for a [vote](vote.md) while you were offline, or a thank-you for a [bug report](discord.md#bug-bounty-and-clipcoin).
 
 ### Writing a message
 
@@ -36,7 +36,7 @@ When you log in, you'll see whether new mail is waiting for you.
 {% step %}
 #### Choose a recipient
 
-In `/mail`, click **Neue Nachricht** (New message) and pick a friend or search for a name.
+In `/mail`, click **New message** and pick a friend or search for a name.
 {% endstep %}
 
 {% step %}
@@ -64,7 +64,7 @@ If your message wasn't sent, for example because of the chat filter, you get the
 
 ### Blocking
 
-If you block a sender, you won't get any more mail from them. They won't notice. You can lift the block again in `/mail` under **Blockierte Spieler** (Blocked players).
+If you block a sender, you won't get any more mail from them. They won't notice. You can lift the block again in `/mail` under **Blocked players**.
 
 ## Chat filter
 

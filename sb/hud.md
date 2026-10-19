@@ -1,39 +1,54 @@
 ---
 description: >-
-  Was die Anzeigen auf deinem Bildschirm bedeuten und wo du deine Statistiken
-  findest.
+  Was die Anzeigen auf deinem Bildschirm bedeuten – auf Java und Bedrock – und
+  wo du deine Statistiken findest.
 icon: gauge
 ---
 
 # HUD & Statistiken
 
+Jeder Kasten im HUD zeigt nur **Symbol und Zahl**. Das Symbol sagt, was gezählt wird – eine Spitzhacke für eine Abbau-Quest, ein Schwert für Kämpfe.
+
 ## Oben: drei Kästen
 
-Auf deiner Insel siehst du oben am Bildschirm drei Kästen.
-
-| Kasten | Symbol | Was er zeigt |
-| ------ | ------ | ------------ |
-| **1** | Weltkugel | Freigeschaltete Biome der Insel, z. B. `12/45` |
-| **2** | Quest-Symbol | Fortschritt einer Quest, z. B. `7/12` |
-| **3** | wechselt alle 5 Sekunden | Erledigte Quests · Spielzeit auf dieser Insel · besiegte Monster · Spieler auf diesem Server |
+| Kasten | Symbol | Beispiel | Was er zeigt |
+| ------ | ------ | -------- | ------------ |
+| **1** | Weltkugel | `12/40` | Biome, die deiner Insel gehören. Alle Mitspieler sehen den Stand der Insel. 40 sind es, solange der Kristall Gewässer gesperrt ist |
+| **2** | Symbol des Quest-Themas | `7/12` | Die Quest, die du gerade verfolgst |
+| **3** | wechselt alle 5 Sekunden | | Erledigte Quests · deine Spielzeit **auf dieser Insel** · besiegte Tiere und Monster · Spieler auf dieser Insel |
 
 **Welche Quest in Kasten 2 steht:**
 
 1. die Quest, die du im Questmenü **angeheftet** hast,
-2. sonst die Quest, bei der du zuletzt vorangekommen bist,
+2. sonst die Quest, bei der du in den letzten 10 Minuten vorangekommen bist,
 3. sonst die erste offene Quest.
 
-Ist eine Quest erledigt, zeigt der Kasten kurz einen Haken. Hast du keine offene Quest, zählt er die Blöcke, die du seit dem Betreten des Servers abgebaut hast.
+Das gilt auch für die [Biomquest](skilltree.md#biomquests) deiner Insel – dann siehst du den Stand der ganzen Insel. Nach einem Abschluss steht kurz ein Haken da. Hast du keine offene Quest, zählt der Kasten die Blöcke, die du seit dem Betreten des Servers abgebaut hast.
 
-In der **Lobby** zeigen die Kästen stattdessen die Uhrzeit und wie viele Spieler im Netzwerk online sind.
+{% hint style="info" %}
+**Sonderquest:** Solange du deinen ersten Bewohner suchst, zeigt Kasten 2 einen **Pfeil**, der sich mit deinem Blick dreht, und die Entfernung in Metern.
+{% endhint %}
 
 ## Unten rechts: Mana & Ruby
 
-Über deiner Hungerleiste stehen dein **Mana** (rosa Kugel) und darüber dein **Ruby** (roter Edelstein).
+Direkt über deiner Hungerleiste steht dein **Mana** (rosa Kugel), darüber dein **Ruby** (roter Edelstein).
 
 {% content-ref url="eco.md" %}
 [eco.md](eco.md)
 {% endcontent-ref %}
+
+## In der Lobby
+
+In der Lobby zeigen die Kästen die **Uhrzeit**, den **Server**, auf dem du bist, und wie viele **Spieler** im Netzwerk online sind.
+
+## Auf Bedrock
+
+Bedrock zeigt dieselben Zahlen, mit ein paar Unterschieden:
+
+* **Keine Balken** hinter den Zahlen – die Zahl sagt dasselbe.
+* Im Quest-Kasten steht **immer die Schriftrolle** statt des Themen-Symbols, auch nach einem Abschluss.
+* Bei sehr großen Zielen, etwa langen Laufquests, steht statt `4321/9000` der Anteil in Prozent: `48%`.
+* Die Tablist zeigt den Abschnitt **Bewohner (KI)** nicht – nutze dort `/bewohner`.
 
 ## Statistiken
 
@@ -55,7 +70,7 @@ In der **Lobby** zeigen die Kästen stattdessen die Uhrzeit und wie viele Spiele
 | `/sky stats` | Deine Werte im Chat |
 | `/sky global` | Die Werte des ganzen Servers im Chat |
 
-Auf fremden Inseln brauchst du dafür das Recht **Statistiken**.
+Auf fremden Inseln brauchst du dafür das Recht **Statistiken**. Die Spielzeit deiner Mitspieler auf deiner Insel steht in der Mitgliederliste.
 {% endtab %}
 {% endtabs %}
 
@@ -65,13 +80,14 @@ Auf fremden Inseln brauchst du dafür das Recht **Statistiken**.
 /ot [Spieler]
 ```
 
-Zeigt deine gesamte Spielzeit im Netzwerk und deinen ersten Join – oder die eines anderen Spielers.
+Zeigt deine gesamte Spielzeit im Netzwerk und deinen ersten Join – oder die eines anderen Spielers. Auch `/onlinetime` und `/pt` funktionieren.
 
 ## Sprache
 
-Die Menüs richten sich nach der **Spracheinstellung deines Minecraft-Clients**: Deutsch bei deutschem Client, sonst Englisch. Einige Texte gibt es nur auf Deutsch.
+Menüs, Chat und Malas Stimme richten sich nach der **Sprache deines Minecraft-Clients**: Deutsch bei deutschem Client, sonst Englisch.
 
 ## Verwandte Seiten
 
 * [Quests](quests.md)
 * [Skilltree & Biome](skilltree.md)
+* [Erfolge](erfolge.md)

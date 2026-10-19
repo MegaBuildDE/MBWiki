@@ -45,6 +45,10 @@ Einladen dürfen der Besitzer und Mitglieder mit dem Recht **Freunde verwalten**
 
 Als Besitzer hast du immer alle Rechte.
 
+{% hint style="danger" %}
+**Lade nur Spieler ein, denen du vertraust.** Wer deine Insel betreten darf, kann dort auch **bauen, abbauen und jede Kiste öffnen** – auch mit der Rolle Besucher. Feinere Rechte für Bauen, Kisten und Türen sind in Planung.
+{% endhint %}
+
 ## Rollen
 
 Damit du nicht jedes Recht einzeln setzen musst, gibt es drei Rollen:
@@ -68,6 +72,12 @@ In der Mitgliederliste siehst du die Köpfe deiner Mitglieder:
 **Biome kauft, wer klickt.** Kauft ein Mitglied mit dem Recht Einstellungen ein Biom, wird das Mana **von seinem Konto** abgebucht – nicht von deinem.
 {% endhint %}
 
+## Was Mitglieder davon haben
+
+* Mitglieder helfen bei den [Biomquests](skilltree.md#biomquests) mit und bekommen beim Abschluss **25 Mana** – genau wie du.
+* Ihre [Quests](quests.md) zählen auch auf deiner Insel.
+* Ihre Spielzeit auf deiner Insel steht in der Mitgliederliste.
+
 ## Inseln, auf denen du Mitglied bist
 
 In der Lobby öffnest du mit `/sky` → **Geteilte Server** eine Liste aller Inseln, auf denen du Mitglied bist. Ein Klick bringt dich hin, auch wenn die Insel gerade nicht läuft.
@@ -79,3 +89,4 @@ Welche Rechte du auf einer Insel hast, siehst du dort unter `/sky` → **Deine R
 * [Freunde](../ag/freunde.md)
 * [Deine Insel](insel.md)
 * [Skilltree & Biome](skilltree.md)
+* [Clans (Vorschau)](clans.md)

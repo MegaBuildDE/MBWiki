@@ -47,7 +47,7 @@ Der Kristall bestimmt, womit deine Insel beginnt. **Diese Wahl kannst du später
 | Gebirge | Windschliff-Hügel | Schroffe Gipfel und Geröll |
 | Sumpf & Selten | Sumpf | Moorige und ungewöhnliche Biome |
 
-Der Kristall **Gewässer** ist schon zu sehen, aber noch **bald verfügbar**.
+Der Kristall **Gewässer** ist schon zu sehen, aber noch gesperrt – er kommt **bald**.
 {% endstep %}
 
 {% step %}

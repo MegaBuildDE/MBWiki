@@ -11,6 +11,8 @@ MegaBuild.de supports crossplay. If you play on both a **Java** and a **Bedrock*
 
 {% hint style="info" %}
 If you play **only** Java **or only** Bedrock, you can skip this page.
+
+Linking your Minecraft account to **Discord** is a different thing – you do that with `/connect`. See [Discord](discord.md#linking-your-minecraft-account).
 {% endhint %}
 
 {% hint style="danger" %}
@@ -53,7 +55,7 @@ Type this in chat on your **Java** account:
 {% step %}
 #### Enter the code on your Bedrock account
 
-You will receive a code in the chat of your Java account. Enter it on your **Bedrock** account:
+You will then receive a code in the chat of your Java account. Enter it on your **Bedrock** account:
 
 ```
 /linkaccount <java-account-name> <code>
@@ -70,7 +72,7 @@ If everything worked, you will be kicked and asked to rejoin. From your next log
 ## Important notes
 
 {% hint style="warning" %}
-**Transferring money to other accounts in order to bypass rules is not allowed** and is treated as a rule violation. The full rules are at [megabuild.de/rules](https://megabuild.de/rules/).
+**Moving Ruby or items through second accounts to get around the rules is not allowed** and is treated as a rule violation. The full rules are at [megabuild.de/rules](https://megabuild.de/rules/).
 {% endhint %}
 
 <details>
@@ -87,7 +89,7 @@ If everything worked, you will be kicked and asked to rejoin. From your next log
 
 <summary>Can I unlink the accounts again?</summary>
 
-Contact [ticket support](https://megabuild.de/ticket/). Note that unlinking does not automatically restore the merged save.
+Contact [ticket support](https://megabuild.de/ticket/) for that. Note that unlinking does not automatically restore the merged save.
 
 </details>
 
@@ -100,6 +102,8 @@ Contact [ticket support](https://megabuild.de/ticket/) as soon as possible – t
 </details>
 
 ## More help
+
+If you have questions or problems, use [MegaBuild.de ticket support](https://megabuild.de/ticket/) or email [support@megabuild.de](mailto:support@megabuild.de).
 
 {% content-ref url="support.md" %}
 [support.md](support.md)

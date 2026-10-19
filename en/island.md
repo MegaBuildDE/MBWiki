@@ -1,7 +1,7 @@
 ---
 description: >-
-  Your island on MegaBuild.de – your own server, a world that grows as you
-  explore, and how to manage it.
+  Your island on MegaBuild.de – your own server, menus, management, dying and
+  what happens when you delete it.
 icon: tree
 cover: ../.gitbook/assets/mb-skyblock-three.jpg
 coverY: 0
@@ -9,64 +9,86 @@ coverY: 0
 
 # Your Island
 
-Every island is **its own server**. Only you and members with the **Join** right can enter it. You can own an island yourself and also be a member on other players' islands.
+Every island is **its own server** with its own world. Only you and your [members](members.md) can enter it. You can own an island yourself and also be a member on other players' islands.
 
-## A world that grows with you
+As you explore, a whole island world grows around your starting island:
 
-Your island has no fixed upgrade levels. Instead, **new islands appear around you as you explore.**
-
-* **Starting island:** It sits in the middle, along with a few small side islands.
-* **Grid:** The world is divided into cells of 220 × 220 blocks. Each cell has one main island and 2–3 small side islands, slightly offset and at different heights.
-* **When islands appear:** On foot, cells up to 2 cells around you are generated. With an Elytra it's up to 4.
-* **Biome regions:** Islands of the same biome lie in regions of about 880 × 880 blocks – that's around 16 main islands.
-* **Only unlocked biomes:** Only biomes your island has unlocked are generated. A newly bought biome shows up especially often in the next regions.
-
-{% content-ref url="skilltree.md" %}
-[skilltree.md](skilltree.md)
+{% content-ref url="world.md" %}
+[world.md](world.md)
 {% endcontent-ref %}
 
-## What you find on main islands
+## The Skyblock menu
 
-| What | Details |
-| ---- | ------- |
-| Cave | A cave system with an entrance from above, partly lit |
-| Ores | Around 60 ore blocks per island on average |
-| Mana Ore | About 5–7 per main island |
-| Structures | With a bit of luck, villages, ruins, outposts and floating builds |
-| Animals | Matching the biome |
-| Loot | Chests, barrels and pots in structures are filled when first opened |
+`/sky` opens the Skyblock menu. What's in it depends on where you are.
 
-{% content-ref url="farming.md" %}
-[farming.md](farming.md)
-{% endcontent-ref %}
-
-## Managing your island
-
-In the lobby, `/sky` opens the Skyblock menu. As the owner you'll find:
-
+{% tabs %}
+{% tab title="In the lobby" %}
 | Menu item | What you do there |
 | --------- | ----------------- |
 | **Join Island** | Travel to your island. If it isn't running, it gets started |
-| **Management** | Change the server name (3–20 characters), server info, statistics, **Server löschen** (Delete server) |
+| **Management** | Rename your island (3–20 characters), server info, statistics, **Delete the server** |
 | **Members** | Invite players and assign rights |
-| **Statistics** | Your stats and leaderboards |
+| **Statistics** | Your stats, leaderboards and the whole network |
 | **Shared Servers** | Islands you're a member of |
 
-On the island itself, `/sky` opens the island menu with quests, skill tree, members and statistics.
+If you don't have an island yet, you'll find **Create Skyblock** here instead – see [Getting started](start.md).
+{% endtab %}
+
+{% tab title="On the island" %}
+| Menu item | Command | What you do there |
+| --------- | ------- | ----------------- |
+| **Skill tree** | `/sky skills` | Buy biomes, biome quests, favourites |
+| **Quests** | `/quest` | Daily, weekly and bonus quests |
+| **Members** | `/sky friends` | Members and rights |
+| **Statistics** | `/sky stats` | Your stats on this island |
+| **Your rights** | | What you're allowed to do on this island |
+
+Clicking the **Golem** on your airship also opens the skill tree.
+{% endtab %}
+{% endtabs %}
+
+## Getting around
+
+* **To your island:** In the lobby, `/sky` → **Join Island**. To islands you're a member of: `/sky` → **Shared Servers**.
+* **Back to the lobby:** `/hub` (or `/lobby`).
+* **Coming back:** The next time you log in, you land straight on your island if it's running. Otherwise you arrive in the lobby.
+* **Getting around on the island:** With the [Warpetts](warpetts.md) – your first pair connects your starting island and the airship.
+
+## Dying
+
+If you die on your island in Survival mode:
+
+* **You keep your inventory and levels.**
+* You lose **5–15 Mana**, but never more than 10 % of your balance. Below 10 Mana you lose nothing.
+* You wake up in your **bed** – or on the deck of your **airship** if you don't have one.
+
+Below height 0 you die instantly.
+
+## Deleting your island
+
+In the lobby under `/sky` → **Management** → **Delete the server**. The menu asks you to confirm first.
+
+| Stays | Gone |
+| ----- | ---- |
+| Your **Mana and Ruby** | The island and everything on it |
+| Quest progress and streak | Bought **biomes**, biome quests and favourites |
+| Your **achievements** | Warpetts, residents and their trust on this island |
+
+You don't get spent Mana back. Afterwards you can create a new island and choose a new crystal.
 
 {% hint style="danger" %}
-**Deleting the server is permanent.** Your island and everything on it will be gone. The menu asks you to confirm first.
+**Deleting the server is permanent.** Your island and everything on it will be gone.
 {% endhint %}
 
 ## Good to know
 
-* **The starting biome stays.** It's set when you create the island and can't be changed.
 * **One island of your own per player.** If you already have one, "Create Skyblock" opens the management menu directly.
-* **Coming back:** If you were last on your own island, you land there again when you log in.
-* **Fewer monsters:** Far fewer monsters spawn on the islands than in normal Minecraft.
+* **The crystal stays.** Your starting biome is set when you create the island and can't be changed – only with a new island.
+* **Your island, your world.** On your island you only see other players if they're members. The lobby is where everyone meets.
 
 ## Related pages
 
+* [The island world](world.md)
 * [Members & rights](members.md)
 * [Skill tree & biomes](skilltree.md)
 * [Warpetts](warpetts.md)
