@@ -53,7 +53,7 @@ The new biome appears in the next area you explore – with new resources, anima
 | [Members & rights](members.md) | Up to 25 fellow players with adjustable rights |
 | [Mana & Ruby](economy.md) | Mana for unlocking, Ruby for trading |
 | [Quests](quests.md) | Daily, weekly and bonus quests for Mana |
-| [Skill tree & biomes](skilltree.md) | 8 crystal paths with 47 biomes |
+| [Skill tree & biomes](skilltree.md) | Crystal paths full of custom biomes |
 | [AI residents](residents.md) | Goblins and Shroomlings who talk, work and trade |
 | [Forestlings](forestlings.md) | Forest elves who give you a blessing for Mana |
 | [Warpetts](warpetts.md) | Travel through flower networks, hatch eggs |

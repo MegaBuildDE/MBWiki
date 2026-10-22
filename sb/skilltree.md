@@ -1,6 +1,6 @@
 ---
 description: >-
-  Der Skilltree auf MegaBuild.de – acht Kristall-Pfade mit 47 Biomen,
+  Der Skilltree auf MegaBuild.de – acht Kristall-Pfade voller Custom-Biome,
   Biomquests, Kristallquests, Preise und Lieblinge.
 icon: sitemap
 ---
@@ -59,7 +59,7 @@ Der Kristall **Gewässer** kommt bald. Bis dahin ist er gesperrt.
 {% endtab %}
 {% endtabs %}
 
-Zusammen sind das **47 Biome**, davon sind **40** schon freischaltbar.
+Jeder Pfad bringt seine eigenen **Custom-Biome** mit, und mit neuen Kristallen kommen weitere dazu.
 
 ## So schaltest du ein Biom frei
 

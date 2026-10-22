@@ -53,7 +53,7 @@ Das neue Biom erscheint in der nächsten Gegend, die du erkundest – mit neuen 
 | [Mitglieder & Rechte](mitglieder.md) | Bis zu 25 Mitspieler mit einstellbaren Rechten |
 | [Mana & Ruby](eco.md) | Mana zum Freischalten, Ruby zum Handeln |
 | [Quests](quests.md) | Tages-, Wochen- und Bonusquests für Mana |
-| [Skilltree & Biome](skilltree.md) | 8 Kristall-Pfade mit 47 Biomen |
+| [Skilltree & Biome](skilltree.md) | Kristall-Pfade voller Custom-Biome |
 | [KI-Bewohner](bewohner.md) | Goblins und Shroomlinge, die reden, arbeiten und handeln |
 | [Forestlinge](forestlinge.md) | Waldelfen, die dir gegen Mana einen Segen schenken |
 | [Warpetts](warpetts.md) | Reisen über Blumen-Netze, Eier ausbrüten |

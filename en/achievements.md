@@ -45,7 +45,7 @@ Besides the normal Minecraft advancements, there's a tab of its own called **“
 | ----------- | ---------- | -------- |
 | **New Land** | *Neues Land* | Buy your first biome in the [skill tree](skilltree.md) |
 | **Whole Path** | *Ganzer Pfad* | Own every biome of a path |
-| **World Builder** | *Weltenbauer* | Own all 40 unlockable biomes |
+| **World Builder** | *Weltenbauer* | Own all unlockable biomes |
 
 On top of that, there's an achievement **for every complete crystal path**:
 

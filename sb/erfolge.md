@@ -44,7 +44,7 @@ Neben den normalen Minecraft-Fortschritten gibt es einen eigenen Tab **„MegaBu
 | ------ | ----- |
 | **Neues Land** | Dein erstes Biom im [Skilltree](skilltree.md) kaufen |
 | **Ganzer Pfad** | Alle Biome eines Pfads besitzen |
-| **Weltenbauer** | Alle 40 freischaltbaren Biome besitzen |
+| **Weltenbauer** | Alle freischaltbaren Biome besitzen |
 
 Dazu kommt ein Erfolg **für jeden ganzen Kristall-Pfad**:
 

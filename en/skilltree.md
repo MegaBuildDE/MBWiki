@@ -1,6 +1,6 @@
 ---
 description: >-
-  The skill tree on MegaBuild.de – eight crystal paths with 47 biomes, biome
+  The skill tree on MegaBuild.de – eight crystal paths full of custom biomes, biome
   quests, crystal quests, prices and favourites.
 icon: sitemap
 ---
@@ -59,7 +59,7 @@ The **Water** crystal is coming soon. Until then it's locked.
 {% endtab %}
 {% endtabs %}
 
-That makes **47 biomes** in total, **40** of which can already be unlocked.
+Every path brings its own **custom biomes**, and new crystals add more.
 
 ## How to unlock a biome
 
