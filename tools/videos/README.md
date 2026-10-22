@@ -68,19 +68,3 @@ python3 modelle.py mala_hello goblin_talk
 4. Ändert sich die Länge, die Angabe auf der Wiki-Seite nachziehen (DE und EN).
 
 Fakten in den Filmen kommen aus den Docs der Plugins (`MBSkyManager/docs/`). Ändert sich dort etwas – etwa ein Preis oder eine Dauer –, den Film neu bauen.
-
-## GIF-Schleifen für Serverlisten
-
-`.gitbook/assets/gifs/mbsky-*.gif` sind kurze Ausschnitte aus den deutschen Filmen, ohne Text und Untertitel. Sie hängen in der Beschreibung auf minecraft-server.eu (über jsDelivr eingebunden). Baut man einen Film neu, die passende Schleife neu schneiden:
-
-| GIF | Film | Start | Länge | Ausschnitt (1080p) | Breite |
-| --- | ---- | ----: | ----: | ------------------ | -----: |
-| `mbsky-bewohner.gif` | `bewohner.mp4` | 28,5 s | 5 s | `900:646:830:200` | 720 |
-| `mbsky-warpett.gif` | `start.mp4` | 47,5 s | 6 s | `720:640:880:260` | 600 |
-| `mbsky-luftschiff.gif` | `start.mp4` | 21,5 s | 6 s | `600:460:1020:150` | 560 |
-
-```bash
-ffmpeg -ss 28.5 -t 5 -i .gitbook/assets/videos/bewohner.mp4 \
-  -vf "fps=12,crop=900:646:830:200,scale=720:-1:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff:max_colors=128[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle" \
-  -loop 0 .gitbook/assets/gifs/mbsky-bewohner.gif
-```
