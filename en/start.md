@@ -63,6 +63,8 @@ If a lot of players are starting at the same time, the bar above your hotbar sho
 
 You wake up on the deck of an **airship**. At the helm stands **Mala**, the captain. In about a minute and a half she tells you what happened to the old world – with **voice and subtitles**, in German or English depending on your Minecraft client's language.
 
+<figure><img src="../.gitbook/assets/screenshots/mbsky-luftschiff.webp" alt="Mala's airship above the islands"><figcaption><p>Mala's airship – Mala and the Warpett are waiting on deck</p></figcaption></figure>
+
 {% hint style="success" %}
 **Sound on!** The intro lives on Mala's voice.
 {% endhint %}

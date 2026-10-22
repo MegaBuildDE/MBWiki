@@ -24,10 +24,14 @@ The skill tree is made of **eight paths** – each path is a **crystal**. A path
 {% tabs %}
 {% tab title="Plains" %}
 Plains → Sunflower Plains → Meadow → Flower Forest → Birch Forest → Cherry Grove
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-kirschhain.webp" alt="Cherry Grove"><figcaption><p>Cherry Grove</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Forests" %}
 Forest → Wooded Hills → Taiga → Grove → Old Growth Spruce Taiga → Old Growth Pine Taiga
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-wald.webp" alt="A forest with an old statue"><figcaption><p>Forest</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Snow & Ice" %}
@@ -40,14 +44,22 @@ Windswept Hills → Windswept Forest → Windswept Gravelly Hills → Snowy Slop
 
 {% tab title="Swamp & Rare" %}
 Swamp → Mangrove Swamp → Dark Forest → Old Growth Birch Forest → Mushroom Fields → Pale Garden
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-pilzland-nacht.webp" alt="Giant mushrooms at night"><figcaption><p>Mushroom Fields at night</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-blasser-garten.webp" alt="An island in the Pale Garden"><figcaption><p>Pale Garden</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Jungle" %}
 Sparse Jungle → Jungle → Stony Peaks → Bamboo Jungle
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-dschungelinsel.webp" alt="A jungle island"><figcaption><p>Jungle</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Desert & Steppe" %}
 Desert → Savanna → Badlands → Windswept Savanna → Wooded Badlands → Eroded Badlands
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-ballon-abendrot.webp" alt="A badlands island at sunset"><figcaption><p>Badlands and savanna</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Water" %}

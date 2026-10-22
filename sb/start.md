@@ -63,6 +63,8 @@ Starten gerade sehr viele Spieler gleichzeitig, zeigt dir die Leiste über der S
 
 Du wachst an Deck eines **Luftschiffs** auf. Am Ruder steht **Mala**, die Kapitänin. Sie erzählt dir in rund eineinhalb Minuten, was mit der alten Welt passiert ist – mit **Stimme und Untertiteln**, auf Deutsch oder Englisch, je nach Sprache deines Minecraft-Clients.
 
+<figure><img src="../.gitbook/assets/screenshots/mbsky-luftschiff.webp" alt="Malas Luftschiff über den Inseln"><figcaption><p>Malas Luftschiff – an Deck warten Mala und das Warpett</p></figcaption></figure>
+
 {% hint style="success" %}
 **Ton an!** Der Vorspann lebt von Malas Stimme.
 {% endhint %}

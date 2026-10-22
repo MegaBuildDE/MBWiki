@@ -3,7 +3,7 @@ description: >-
   Deine Insel auf MegaBuild.de – eigener Server, Menüs, Verwaltung, Sterben
   und was beim Löschen passiert.
 icon: tree
-cover: ../.gitbook/assets/mb-skyblock-three.jpg
+cover: ../.gitbook/assets/screenshots/mbsky-wuestenhaus.webp
 coverY: 0
 ---
 

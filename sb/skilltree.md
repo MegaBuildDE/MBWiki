@@ -24,10 +24,14 @@ Der Skilltree besteht aus **acht Pfaden** – jeder Pfad ist ein **Kristall**. E
 {% tabs %}
 {% tab title="Ebenen" %}
 Ebene → Sonnenblumenebene → Wiese → Blumenwald → Birkenwald → Kirschhain
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-kirschhain.webp" alt="Kirschhain"><figcaption><p>Kirschhain</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Wälder" %}
 Wald → Bewaldete Hügel → Taiga → Hain → Fichten-Urtaiga → Kiefern-Urtaiga
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-wald.webp" alt="Wald mit einer alten Statue"><figcaption><p>Wald</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Schnee & Eis" %}
@@ -40,14 +44,22 @@ Windschliff-Hügel → Windschliff-Wald → Windschliff-Kieshügel → Verschnei
 
 {% tab title="Sumpf & Selten" %}
 Sumpf → Mangrovensumpf → Dunkler Wald → Birkenurwald → Pilzland → Blasser Garten
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-pilzland-nacht.webp" alt="Riesenpilze bei Nacht"><figcaption><p>Pilzland bei Nacht</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-blasser-garten.webp" alt="Eine Insel im Blassen Garten"><figcaption><p>Blasser Garten</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Dschungel" %}
 Lichter Dschungel → Dschungel → Steinige Gipfel → Bambusdschungel
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-dschungelinsel.webp" alt="Eine Dschungelinsel"><figcaption><p>Dschungel</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Wüste & Steppe" %}
 Wüste → Savanne → Tafelberge → Zerzauste Savanne → Bewaldete Tafelberge → Abgetragene Tafelberge
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-ballon-abendrot.webp" alt="Eine Tafelberg-Insel im Abendrot"><figcaption><p>Tafelberge und Savanne</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Gewässer" %}

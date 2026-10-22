@@ -3,7 +3,7 @@ description: >-
   Das offizielle Wiki zu MegaBuild.de – Custom Skyblock. Hier findest du alles
   für deinen Einstieg und zu den Systemen des Servers.
 icon: house
-cover: .gitbook/assets/mb-skyblock-one.jpg
+cover: .gitbook/assets/screenshots/mbsky-luftschiff.webp
 coverY: 0
 ---
 

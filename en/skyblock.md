@@ -3,7 +3,7 @@ description: >-
   How Custom Skyblock works on MegaBuild.de – your own island servers, a world
   that grows as you explore, AI residents and biomes to unlock.
 icon: cube
-cover: ../.gitbook/assets/mb-skyblock-two.jpg
+cover: ../.gitbook/assets/screenshots/mbsky-kirschhain.webp
 coverY: 0
 ---
 
@@ -13,7 +13,7 @@ On MegaBuild.de every player gets **their own island world on their own server**
 
 As you explore, new islands keep appearing around yours – with caves, ores, villages, ruins and **AI residents** who chat and trade with you. You decide which biomes show up: you unlock them with **Mana** in the skill tree.
 
-<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="A Skyblock island above the clouds"><figcaption><p>A main island with its side islands</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/screenshots/mbsky-dschungelinsel.webp" alt="A jungle island with a house"><figcaption><p>A jungle island – every area looks different</p></figcaption></figure>
 
 ## How it all fits together
 

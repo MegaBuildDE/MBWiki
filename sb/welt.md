@@ -3,7 +3,7 @@ description: >-
   Die Inselwelt auf MegaBuild.de – wie neue Inseln beim Erkunden entstehen,
   Biom-Gegenden, Höhlen, Erze, Bauwerke, Tiere und Monster.
 icon: earth-europe
-cover: ../.gitbook/assets/mb-skyblock-three.jpg
+cover: ../.gitbook/assets/screenshots/mbsky-blasser-garten.webp
 coverY: 0
 ---
 
@@ -11,7 +11,7 @@ coverY: 0
 
 Deine Insel hat keine festen Ausbaustufen. Stattdessen **wächst die Welt, während du erkundest**: Wo du hinfliegst oder hinbaust, entstehen neue Inseln – mit Höhlen, Erzen, Dörfern, Ruinen und Bewohnern.
 
-<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="Inseln über den Wolken"><figcaption><p>Eine Hauptinsel mit ihren Nebeninseln</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/screenshots/mbsky-rankenbruecken.webp" alt="Eine Hauptinsel mit Nebeninseln und Rankentreppen"><figcaption><p>Eine Hauptinsel mit ihren Nebeninseln, verbunden über Rankentreppen</p></figcaption></figure>
 
 ## Wie die Welt aufgebaut ist
 
@@ -25,6 +25,8 @@ Deine Insel hat keine festen Ausbaustufen. Stattdessen **wächst die Welt, währ
 | **Startinsel** | In der Mitte, mit vier Nebeninseln in rund 100 Blöcken Abstand. Auf einer davon wohnt dein [erster Bewohner](bewohner.md) |
 
 Neue Inseln entstehen, **wenn du in ihre Nähe kommst** – in Blickrichtung zuerst. Was einmal entstanden ist, bleibt.
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-ballon-abendrot.webp" alt="Ein Ballon im Abendrot über einer Tafelberg-Insel"><figcaption><p>Zwischen den Inseln hängen Ballons und Luftschiffe</p></figcaption></figure>
 
 ## Biom-Gegenden
 
@@ -75,6 +77,10 @@ Mit etwas Glück findest du auf einer Insel:
 * **Schwebende Bauwerke** über der Insel – etwa jede elfte Hauptinsel hat eins
 
 Nebeninseln haben höchstens ein kleines Bauwerk. Dazu kommen die Häuser und Lager der [KI-Bewohner](bewohner.md).
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-wuestenhaus.webp" alt="Ein Wüstenhaus mit Kakteen"><figcaption><p>Ein Dorf in der Wüste</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-wald.webp" alt="Eine alte Statue im Wald"><figcaption><p>Eine alte Statue im Wald</p></figcaption></figure>
 
 ### Beute
 

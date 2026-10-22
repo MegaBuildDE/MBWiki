@@ -3,7 +3,7 @@ description: >-
   The island world on MegaBuild.de – how new islands appear as you explore,
   biome areas, caves, ores, structures, animals and monsters.
 icon: earth-europe
-cover: ../.gitbook/assets/mb-skyblock-three.jpg
+cover: ../.gitbook/assets/screenshots/mbsky-blasser-garten.webp
 coverY: 0
 ---
 
@@ -11,7 +11,7 @@ coverY: 0
 
 Your island has no fixed upgrade levels. Instead, **the world grows as you explore**: wherever you fly or build, new islands appear – with caves, ores, villages, ruins and residents.
 
-<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="Islands above the clouds"><figcaption><p>A main island with its side islands</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/screenshots/mbsky-rankenbruecken.webp" alt="A main island with side islands and vine staircases"><figcaption><p>A main island with its side islands, linked by vine staircases</p></figcaption></figure>
 
 ## How the world is laid out
 
@@ -25,6 +25,8 @@ Your island has no fixed upgrade levels. Instead, **the world grows as you explo
 | **Starting island** | In the middle, with four side islands about 100 blocks away. Your [first resident](residents.md) lives on one of them |
 
 New islands appear **when you get close to them** – the ones in the direction you're looking first. Once something has been generated, it stays.
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-ballon-abendrot.webp" alt="A balloon at sunset over a badlands island"><figcaption><p>Balloons and airships hang between the islands</p></figcaption></figure>
 
 ## Biome areas
 
@@ -75,6 +77,10 @@ With a bit of luck you'll find on an island:
 * **Floating structures** above the island – about one main island in eleven has one
 
 Side islands have at most one small structure. On top of that there are the houses and camps of the [AI residents](residents.md).
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-wuestenhaus.webp" alt="A desert house with cacti"><figcaption><p>A village in the desert</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/screenshots/mbsky-wald.webp" alt="An old statue in the forest"><figcaption><p>An old statue in the forest</p></figcaption></figure>
 
 ### Loot
 

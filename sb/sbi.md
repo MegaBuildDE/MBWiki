@@ -3,7 +3,7 @@ description: >-
   So funktioniert der Custom Skyblock auf MegaBuild.de – eigene Inselserver,
   eine Welt, die beim Erkunden wächst, KI-Bewohner und Biome zum Freischalten.
 icon: cube
-cover: ../.gitbook/assets/mb-skyblock-two.jpg
+cover: ../.gitbook/assets/screenshots/mbsky-kirschhain.webp
 coverY: 0
 ---
 
@@ -13,7 +13,7 @@ Auf MegaBuild.de bekommt jeder Spieler **seine eigene Inselwelt auf einem eigene
 
 Um deine Insel herum entstehen beim Erkunden immer neue Inseln – mit Höhlen, Erzen, Dörfern, Ruinen und **KI-Bewohnern**, die mit dir im Chat reden und handeln. Welche Biome dabei vorkommen, bestimmst du selbst: Du schaltest sie mit **Mana** im Skilltree frei.
 
-<figure><img src="../.gitbook/assets/mb-skyblock-one.jpg" alt="Eine Skyblock-Insel über den Wolken"><figcaption><p>Eine Hauptinsel mit ihren Nebeninseln</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/screenshots/mbsky-dschungelinsel.webp" alt="Eine Dschungelinsel mit Haus"><figcaption><p>Eine Dschungelinsel – jede Gegend sieht anders aus</p></figcaption></figure>
 
 ## So greift alles ineinander
 
