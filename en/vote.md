@@ -39,8 +39,8 @@ Confirm your vote on the linked server lists. Usually you can vote **once every 
 
 | Per vote | |
 | -------- | -: |
-| Mana | **20** |
-| Ruby | **1** |
+| Mana | **50** |
+| Ruby | **5** |
 
 * **Every vote** is rewarded – there is no daily limit.
 * Vote Mana does **not** count toward the daily limit for actions.

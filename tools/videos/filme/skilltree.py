@@ -41,7 +41,7 @@ def szene_intro(e, t, d):
         skaliert(e, mc.icon16("mana_orb"), W / 2, 640 + 8 * math.sin(t * 2), 180 * s)
 
 
-EREIGNISSE = [(1.4, "quests", L("Tagesquest", "Daily quest"), 60), (2.6, "coin", "Vote", 20),
+EREIGNISSE = [(1.4, "quests", L("Tagesquest", "Daily quest"), 60), (2.6, "coin", "Vote", 50),
               (3.6, "mining", L("Erz abbauen", "Mining ore"), 2), (4.6, "biome", "Biomquest", 25),
               (5.6, "combat", L("Monster", "Monster"), 1), (6.4, "quest_weekly", L("Wochenquest", "Weekly quest"), 310)]
 
@@ -69,7 +69,7 @@ QUELLEN = [("quests", L("Tagesquests", "Daily quests"), L("leicht, mittel, schwe
            ("quest_weekly", L("Wochenquest", "Weekly quest"), L("Montag bis Montag", "Monday to Monday"), "250–400 Mana"),
            ("quest_bonus", L("Bonusquest", "Bonus quest"), L("Woche in 3 Tagen geschafft", "week done within 3 days"),
             "120–180 Mana"),
-           ("coin", "Votes", L("jeder Vote zählt", "every vote counts"), "20 Mana + 1 Ruby"),
+           ("coin", "Votes", L("jeder Vote zählt", "every vote counts"), "50 Mana + 5 Ruby"),
            ("biome", "Biomquest", L("je Helfer, der Mitglied ist", "per helper who is a member"), "25 Mana"),
            ("mining", L("Aktionen", "Actions"), L("Erz, Kampf, Angeln, Zähmen …", "ore, combat, fishing, taming …"),
             L("bis 150 Mana/Tag", "up to 150 Mana/day"))]

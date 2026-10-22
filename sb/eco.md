@@ -27,7 +27,7 @@ Auf MegaBuild.de gibt es zwei Währungen. Beide gelten auf allen Servern und ste
 | Wochenquest | 250–400 | eine pro Woche |
 | Bonusquest | 120–180 | eine pro Woche |
 | [Biomquest](skilltree.md#biomquests) | 25 je Helfer | Besitzer und Mitglieder der Insel |
-| [Voten](../ag/vote.md) | 20 + 1 Ruby | keine – jeder Vote zählt |
+| [Voten](../ag/vote.md) | 50 + 5 Ruby | keine – jeder Vote zählt |
 | Aktionen (siehe unten) | meist 1–8 | **150 am Tag** |
 | [Mana-Erz](#mana-erz) | 3–5 Mana-Kugeln | **200 am Tag** |
 | Ware an [Bewohner](bewohner.md) verkaufen | je nach Ware | 30–40 je Bewohner, höchstens 100 am Tag |
@@ -113,7 +113,7 @@ Unterhalb von Höhe 0 bist du sofort tot. Du wachst in deinem Bett auf – oder 
 
 Ruby ist die Währung für den **Handel zwischen Spielern**. Jedes Konto startet mit **1.000 Ruby** – sie sind gleich beim ersten Login da.
 
-* **Dazuverdienen:** 1 Ruby pro [Vote](../ag/vote.md) und Belohnungen für [Bug-Meldungen und Clips](../ag/discord.md#bug-bounty-und-clipcoin).
+* **Dazuverdienen:** 5 Ruby pro [Vote](../ag/vote.md) und Belohnungen für [Bug-Meldungen und Clips](../ag/discord.md#bug-bounty-und-clipcoin).
 * **Ausgeben:** An andere Spieler schicken mit `/pay` – etwa als Bezahlung für Ware, die ihr untereinander tauscht. Shops für Spieler sind in Arbeit.
 * KI-Bewohner und Forestlinge nehmen **nie** Ruby.
 * Ruby gibt es nicht gegen Echtgeld, und Mana und Ruby lassen sich nicht tauschen.

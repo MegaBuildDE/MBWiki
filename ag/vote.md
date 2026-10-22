@@ -39,8 +39,8 @@ Bestätige deinen Vote auf den verlinkten Serverlisten. Meist ist pro Liste **ei
 
 | Pro Vote | |
 | -------- | -: |
-| Mana | **20** |
-| Ruby | **1** |
+| Mana | **50** |
+| Ruby | **5** |
 
 * Belohnt wird **jeder Vote** – ein Tageslimit gibt es nicht.
 * Vote-Mana zählt **nicht** zum Tageslimit für Aktionen.
