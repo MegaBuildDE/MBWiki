@@ -27,7 +27,7 @@ MegaBuild.de has two currencies. Both work on all servers and are shown at the b
 | Weekly quest | 250–400 | one per week |
 | Bonus quest | 120–180 | one per week |
 | [Biome quest](skilltree.md#biome-quests) | 25 per helper | owner and members of the island |
-| [Voting](vote.md) | 20 + 1 Ruby | your first 3 votes a day |
+| [Voting](vote.md) | 20 + 1 Ruby | none – every vote counts |
 | Actions (see below) | mostly 1–8 | **150 a day** |
 | [Mana ore](#mana-ore) | 3–5 Mana orbs | **200 a day** |
 | Selling goods to [residents](residents.md) | depends on the goods | 30–40 per resident, at most 100 a day |
@@ -113,7 +113,7 @@ Below height 0 you die instantly. You wake up in your bed – or on the deck of 
 
 Ruby is the currency for **trading between players**. Every account starts with **1,000 Ruby** – they're there from your very first login.
 
-* **Earning more:** 1 Ruby per [vote](vote.md) (up to 3 a day) and rewards for [bug reports and clips](discord.md#bug-bounty-and-clipcoin).
+* **Earning more:** 1 Ruby per [vote](vote.md) and rewards for [bug reports and clips](discord.md#bug-bounty-and-clipcoin).
 * **Spending:** Send it to other players with `/pay` – for example as payment for goods you trade among yourselves. Player shops are in the works.
 * AI residents and Forestlings **never** take Ruby.
 * Ruby can't be bought with real money, and Mana and Ruby can't be exchanged for each other.

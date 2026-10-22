@@ -42,7 +42,7 @@ Confirm your vote on the linked server lists. Usually you can vote **once every 
 | Mana | **20** |
 | Ruby | **1** |
 
-* Your **first 3 votes of the day** are rewarded. The day changes at midnight.
+* **Every vote** is rewarded – there is no daily limit.
 * Vote Mana does **not** count toward the daily limit for actions.
 * **Were you offline?** You still get the reward – with a message from *MegaBuild.de* in your [mailbox](messages.md).
 * **Never been on the server?** Votes from the 7 days before your first join are credited when you join for the first time.
@@ -51,7 +51,7 @@ Apart from the 1,000 Ruby every account starts with, votes are the regular way t
 
 ### In-game
 
-`/vote` shows you the link, your reward, how often you've already voted **today** (for example `2/3`) and your votes this month and in total.
+`/vote` shows you the link, your reward, how often you've already voted **today** and your votes this month and in total.
 
 ### For the server
 
@@ -66,8 +66,7 @@ Every vote pushes MegaBuild.de up the server lists and helps us reach new player
 The most common causes:
 
 1. **A typo in your name.** Then the reward went to a different name.
-2. **Already 3 votes today.** Further votes on the same day help the server, but don't give you anything more.
-3. **You were offline.** Check your mailbox with `/mail`.
+2. **You were offline.** Check your mailbox with `/mail`.
 
 Nothing helped? Get in touch with [support](support.md).
 
@@ -77,7 +76,7 @@ Nothing helped? Get in touch with [support](support.md).
 
 <summary>Can I vote with multiple accounts?</summary>
 
-No. Voting with multiple accounts or getting around the vote limits breaks the [server rules](https://megabuild.de/rules/).
+No. Voting with multiple accounts or getting around the server lists' limits breaks the [server rules](https://megabuild.de/rules/).
 
 </details>
 

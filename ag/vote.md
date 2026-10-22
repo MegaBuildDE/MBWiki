@@ -42,7 +42,7 @@ Bestätige deinen Vote auf den verlinkten Serverlisten. Meist ist pro Liste **ei
 | Mana | **20** |
 | Ruby | **1** |
 
-* Belohnt werden deine **ersten 3 Votes am Tag**. Der Tag wechselt um Mitternacht.
+* Belohnt wird **jeder Vote** – ein Tageslimit gibt es nicht.
 * Vote-Mana zählt **nicht** zum Tageslimit für Aktionen.
 * **Warst du offline?** Dann bekommst du die Belohnung trotzdem – mit einer Nachricht von *MegaBuild.de* in deiner [Post](nachrichten.md).
 * **Noch nie auf dem Server gewesen?** Votes der letzten 7 Tage vor deinem ersten Join werden beim ersten Betreten nachgetragen.
@@ -51,7 +51,7 @@ Neben den 1.000 Ruby, mit denen jedes Konto startet, sind Votes der regelmäßig
 
 ### Im Spiel
 
-`/vote` zeigt dir den Link, deine Belohnung, wie oft du **heute** schon gevotet hast (zum Beispiel `2/3`) und deine Votes im Monat und insgesamt.
+`/vote` zeigt dir den Link, deine Belohnung, wie oft du **heute** schon gevotet hast und deine Votes im Monat und insgesamt.
 
 ### Für den Server
 
@@ -66,8 +66,7 @@ Jeder Vote schiebt MegaBuild.de in den Serverlisten nach oben und hilft dabei, n
 Die häufigsten Ursachen:
 
 1. **Tippfehler im Namen.** Dann ging die Belohnung an einen anderen Namen.
-2. **Schon 3 Votes heute.** Weitere Votes am selben Tag helfen dem Server, bringen dir aber nichts mehr.
-3. **Du warst offline.** Schau in deine Post mit `/mail`.
+2. **Du warst offline.** Schau in deine Post mit `/mail`.
 
 Hilft alles nichts? Melde dich im [Support](support.md).
 
@@ -77,7 +76,7 @@ Hilft alles nichts? Melde dich im [Support](support.md).
 
 <summary>Kann ich mit mehreren Accounts voten?</summary>
 
-Nein. Das Voten mit mehreren Accounts oder das Umgehen der Vote-Limits verstößt gegen die [Serverregeln](https://megabuild.de/rules/).
+Nein. Das Voten mit mehreren Accounts oder das Umgehen der Limits der Serverlisten verstößt gegen die [Serverregeln](https://megabuild.de/rules/).
 
 </details>
 

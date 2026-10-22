@@ -69,7 +69,7 @@ QUELLEN = [("quests", L("Tagesquests", "Daily quests"), L("leicht, mittel, schwe
            ("quest_weekly", L("Wochenquest", "Weekly quest"), L("Montag bis Montag", "Monday to Monday"), "250–400 Mana"),
            ("quest_bonus", L("Bonusquest", "Bonus quest"), L("Woche in 3 Tagen geschafft", "week done within 3 days"),
             "120–180 Mana"),
-           ("coin", "Votes", L("bis zu 3 am Tag", "up to 3 a day"), "20 Mana + 1 Ruby"),
+           ("coin", "Votes", L("jeder Vote zählt", "every vote counts"), "20 Mana + 1 Ruby"),
            ("biome", "Biomquest", L("je Helfer, der Mitglied ist", "per helper who is a member"), "25 Mana"),
            ("mining", L("Aktionen", "Actions"), L("Erz, Kampf, Angeln, Zähmen …", "ore, combat, fishing, taming …"),
             L("bis 150 Mana/Tag", "up to 150 Mana/day"))]

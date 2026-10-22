@@ -237,7 +237,7 @@ In the [shop](https://shop.megabuild.de/): **Gold** (€9.99), **Platin** (€19
 
 <summary>How can I support the server for free?</summary>
 
-By voting on [megabuild.de/vote](https://megabuild.de/vote/) – or in-game with `/vote`. For your first 3 votes of the day you get 20 Mana and 1 Ruby each.
+By voting on [megabuild.de/vote](https://megabuild.de/vote/) – or in-game with `/vote`. For every vote you get 20 Mana and 1 Ruby.
 
 </details>
 
