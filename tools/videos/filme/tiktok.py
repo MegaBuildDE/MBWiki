@@ -6,8 +6,9 @@ Darum steigt der Film direkt mit dem Besonderen ein - KI-Bewohner, die im Chat
 antworten - und die Musik setzt sofort beim Drop ein. Danach kurz der Titel,
 vier schnelle Bilder mit Malas Zeilen und am Ende Logo und Beta-Hinweis.
 
-Alles Wichtige liegt in der sicheren Zone (oben ~180 px und unten ~380 px
-sowie rechts ~140 px verdeckt die TikTok-Oberflaeche). Bilder, Stimmen und
+Alles Wichtige liegt in der sicheren Zone: Handys mit 19,5:9 schneiden links und
+rechts je ~100 px ab, dazu verdeckt die TikTok-Oberflaeche oben ~180 px, unten
+~380 px und rechts die Knoepfe. Im ersten Bild steht die Ueberschrift schon da. Bilder, Stimmen und
 Musik sind dieselben wie im Trailer (trailer-bilder/, stimmen/, musik/).
 
     python3 bauen.py tiktok --crf 18
@@ -34,8 +35,8 @@ BETA_LINK = "megabuild.de/dc"
 LILA = (201, 133, 255)
 HELL = (255, 250, 255)
 SANFT = (221, 210, 238)
-MITTE_X = 470  # Mitte der sicheren Zone (rechts liegen TikToks Knoepfe)
-TEXT_BREITE = 860
+MITTE_X = 480  # Mitte der sicheren Zone (rechts liegen TikToks Knoepfe)
+TEXT_BREITE = 620  # 160..800 px - bleibt auch bei beschnittenem Bild lesbar
 UNTERTITEL_Y = 1450
 
 
@@ -145,25 +146,25 @@ def szene_haken(e, t, d):
     a = blende(t, d, ein=0, aus=.15)
     mc.einfuegen(e, _buehne(), 0, 0, a)
     staub(e, t, a * .5)
-    punch(e, t, 0.0, "MINECRAFT-BEWOHNER,", 230, 84, SANFT, sperrung=2)
-    punch(e, t, .25, "DIE MIT DIR CHATTEN", 330, 96, HELL, sperrung=2)
-    zeilen = chatzeilen(CHAT, breite_gui=210)
+    punch(e, t, -1.0, "MINECRAFT-BEWOHNER,", 230, 84, SANFT)  # ab dem ersten Bild da
+    punch(e, t, -1.0, "DIE MIT DIR CHATTEN", 320, 96, HELL)
+    zeilen = chatzeilen(CHAT, breite_gui=150)
     y = 520
-    for t0, z in [(t0, z) for t0, z in zeilen if t >= t0][-7:]:
+    for t0, z in [(t0, z) for t0, z in zeilen if t >= t0][-10:]:
         v = aus_kubisch(phase(t, t0, t0 + .2)) * a
-        b = mc.chat_zeile_bild(z, 4, breite_gui=214)
+        b = mc.chat_zeile_bild(z, 4, breite_gui=154)
         mc.einfuegen(e, b, MITTE_X - b.width / 2, y + 10 * (1 - v), v)
         y += b.height
-    boden = 1330
-    for i, (sp, x, gr) in enumerate([("goblin_talk", MITTE_X - 220, 400), ("shroom_hello", MITTE_X + 220, 380)]):
-        g = rueckschwung(phase(t, .1 + i * SCHLAG, .45 + i * SCHLAG))
+    boden = 1360
+    for i, (sp, x, gr) in enumerate([("goblin_talk", MITTE_X - 170, 360), ("shroom_hello", MITTE_X + 170, 340)]):
+        g = 1.0 if i == 0 else rueckschwung(phase(t, .1, .45))  # Pip steht von Anfang an da
         if g > 0:
-            schatten(e, x, boden, 240 * g, .8 * a)
+            schatten(e, x, boden, 200 * g, .8 * a)
             sprite_boden(e, sp, t, x, boden, gr * max(.01, g), a)
     if t >= 4.6:  # "(KI)" als Abzeichen - das ist der Punkt
         p = abzeichen("ECHTE KI-ANTWORTEN", farbe=(120, 220, 255), text_farbe=(170, 235, 255))
         v = rueckschwung(phase(t, 4.6, 4.95))
-        skaliert(e, p, MITTE_X, 455, p.width * 1.6 * v, p.height * 1.6 * v, alpha=a, glatt=True)
+        skaliert(e, p, MITTE_X, 455, p.width * 1.4 * v, p.height * 1.4 * v, alpha=a, glatt=True)
 
 
 def szene_titel(e, t, d):
@@ -194,21 +195,21 @@ def schnitt(name, zeilen, unter, fx=0.0, z=(1.0, 1.07)):
 
 def szene_logo(e, t, d):
     g = aus_kubisch(phase(t, .02, .7))
-    lw = 720 * (1.08 - .08 * g)
+    lw = 560 * (1.08 - .08 * g)
     cy = 520
     mc.einfuegen(e, glanz(420, (169, 88, 255), int(70 * g)), MITTE_X - 420, cy - 420, 1)
     skaliert(e, MB_LOGO, MITTE_X, cy, lw, lw, alpha=g, glatt=True)
-    funkenkranz(e, MITTE_X, cy, t, .05, radius=300, n=8, farbe=(230, 200, 255), groesse=20)
+    funkenkranz(e, MITTE_X, cy, t, .05, radius=240, n=8, farbe=(230, 200, 255), groesse=20)
     u = aus_kubisch(phase(t, .4, .9))
     av(e, "MEGABUILD SKY", MITTE_X, 830 + 14 * (1 - u), passend("MEGABUILD SKY", 84, sperrung=12), "heavy", HELL, u,
        anker="m", sperrung=12)
     u2 = rueckschwung(phase(t, .8, 1.2))
     if u2 > 0:
         p = abzeichen("BETA  ·  BALD", farbe=(140, 255, 184), text_farbe=(180, 255, 210))
-        skaliert(e, p, MITTE_X, 975, p.width * 1.8 * u2, p.height * 1.8 * u2, glatt=True)
+        skaliert(e, p, MITTE_X, 975, p.width * 1.5 * u2, p.height * 1.5 * u2, glatt=True)
     u3 = aus_kubisch(phase(t, 1.3, 1.8))
-    av(e, "Jetzt für die Beta anmelden", MITTE_X, 1060, 54, "demi", HELL, u3, anker="m")
-    av(e, BETA_LINK, MITTE_X, 1140, 62, "heavy", LILA, u3, anker="m")
+    av(e, "Jetzt für die Beta anmelden", MITTE_X, 1060, passend("Jetzt für die Beta anmelden", 54, "demi"), "demi", HELL, u3, anker="m")
+    av(e, BETA_LINK, MITTE_X, 1140, passend(BETA_LINK, 62), "heavy", LILA, u3, anker="m")
     av(e, "Java & Bedrock", MITTE_X, 1226, 42, "medium", SANFT, u3, anker="m")
 
 
@@ -218,10 +219,10 @@ def untertitel_hoch(e, text, alpha, S=4):
     """Malas Untertitel: erste Zeile der Name (Aqua), darunter ihr Text, in der sicheren Zone."""
     if alpha <= .003 or not text:
         return
-    zeilen = ["§bMala"] + mc_umbruch("§f" + text, 205)
+    zeilen = ["§bMala"] + mc_umbruch("§f" + text, 150)
     hoehe = len(zeilen) * 11 * S
     y0 = UNTERTITEL_Y - hoehe / 2
-    deck = Image.new("RGBA", (int(215 * S), int(hoehe + 6 * S)), (0, 0, 0, 110))
+    deck = Image.new("RGBA", (int(160 * S), int(hoehe + 6 * S)), (0, 0, 0, 110))
     mc.einfuegen(e, deck, MITTE_X - deck.width / 2, y0 - 4 * S, alpha)
     for i, z in enumerate(zeilen):
         mct(e, MITTE_X, y0 + i * 11 * S, z, S, alpha, anker="m")
