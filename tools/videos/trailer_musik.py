@@ -6,8 +6,7 @@ filme/trailer.py (Drop bei 6 s, Abbruch bei 34 s, Logo-Schlag bei 38 s):
 
 - musik/trailer-haupt.mp3   0-34 s
 - musik/trailer-logo.mp3    8 s ab dem Logo
-- musik/trailer-leere.mp3   duesterer Einschlag ("alles ist weg"), ElevenLabs Sound Effects
-- musik/trailer-erwachen.mp3  Atmosphaere beim Aufwachen an Bord, ElevenLabs Sound Effects
+- musik/trailer-leere.mp3   duesterer Einstieg ("alles ist weg"), ElevenLabs Sound Effects
 
 Die Plaene stehen in PLAENE. Neu komponiert wird nur, was fehlt (--neu: alles,
 --nur haupt|logo: nur dieses Stueck). Der API-Schluessel kommt wie bei
@@ -96,9 +95,6 @@ def komponiere(name):
 
 # Geraeusche (ElevenLabs Sound Effects): Name -> (Beschreibung, Laenge in s)
 GERAEUSCHE = {
-    "erwachen": ("Waking up slowly on a wooden airship high above the clouds: at first muffled and underwater-like, "
-                 "then gradually clearer. Gentle wind, creaking wooden deck and ropes, soft flapping of a canvas sail, "
-                 "a calm distant breeze. Peaceful, dreamy, no music, no voices.", 12.0),
     "leere": ("Dark cinematic trailer opening: a massive deep boom as an entire world collapses, distant crumbling "
               "and debris falling away into an abyss, then a hollow, eerie emptiness with a low ominous sub drone "
               "and faint cold wind. Everything is gone. Bleak, haunting, no music, no voices.", 6.0),

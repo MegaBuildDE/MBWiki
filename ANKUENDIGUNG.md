@@ -8,7 +8,7 @@ Trailer und die passenden Bilder.
 
 | Was | Datei |
 | --- | --- |
-| Trailer (nur Deutsch, 1:13, WQHD 2560 × 1440) | `.gitbook/assets/videos/trailer.mp4` |
+| Trailer (nur Deutsch, 1:01, WQHD 2560 × 1440) | `.gitbook/assets/videos/trailer.mp4` |
 | Vorschaubild | `.gitbook/assets/videos/trailer.jpg` |
 | Bauplan des Trailers | `tools/videos/filme/trailer.py` (`python3 bauen.py trailer --crf 16`) |
 | Malas Trailer-Zeilen | `tools/videos/stimmen/texte.json` (aufnehmen: `python3 trailer_stimme.py`) |

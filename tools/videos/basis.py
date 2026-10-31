@@ -751,9 +751,8 @@ def sprite(e, name, t, cx, cy, groesse, alpha=1.0, schleife=True, spiegeln=False
 @functools.lru_cache(maxsize=None)
 def sprite_unten(name):
     """Unterkante der Figur im ersten Bild als Anteil der Bildhoehe (fuer die Fuesse)."""
-    bild = Image.open(_sprite_dateien(name)[0])
-    box = bild.getchannel("A").getbbox()
-    return box[3] / bild.height if box else 1.0
+    box = Image.open(_sprite_dateien(name)[0]).getchannel("A").getbbox()
+    return box[3] / 512 if box else 1.0
 
 
 def sprite_boden(e, name, t, cx, y_boden, groesse, alpha=1.0, **kw):

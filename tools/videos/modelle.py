@@ -7,7 +7,7 @@
 
 Startet einen kleinen Server (modelle.html, Pool-Modelle, Speichern) und ein
 kopfloses Chrome, das modelle.html abarbeitet. Ergebnis: .cache/sprites/<auftrag>/NNN.png
-(512 x 512, Grossaufnahmen nach GROSS, durchsichtig). basis.sprite() liest sie.
+(512 x 512, durchsichtig). basis.sprite() liest sie.
 """
 import argparse
 import base64
@@ -33,9 +33,6 @@ FPS = 30
 AUFTRAEGE = {
     "mala_idle": ("crew/mala_mage.bbmodel", "Idle.model.new", -28, 1.0),
     "mala_hello": ("crew/mala_mage.bbmodel", "hello.model.new", -28, 1.0),
-    # Grossaufnahmen (Trailer): dieselben Animationen in 1024 x 1024, siehe GROSS
-    "mala_idle_gross": ("crew/mala_mage.bbmodel", "Idle.model.new", -18, 1.0),
-    "mala_hello_gross": ("crew/mala_mage.bbmodel", "hello.model.new", -18, 1.0),
     "golem_idle": ("command_golem/command_golem_1.bbmodel", None, -30, 1.0),
     "goblin_idle": ("goblins/goblin-standart-1.bbmodel", "idle", -25, 1.0),
     "goblin_hello": ("goblins/goblin-standart-1.bbmodel", "hello", -25, 1.0),
@@ -107,10 +104,6 @@ class Server(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(b"ok")
 
 
-# Auftraege, die groesser als 512 x 512 gerendert werden (Kantenlaenge in Pixeln)
-GROSS = {"mala_idle_gross": 1024, "mala_hello_gross": 1024}
-
-
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("namen", nargs="*")
@@ -129,21 +122,14 @@ def main():
     if not jobs:
         print("Alle Sprites vorhanden (--neu baut sie neu).")
         return
-    for groesse in sorted({GROSS.get(j["name"], 512) for j in jobs}):
-        rendere([j for j in jobs if GROSS.get(j["name"], 512) == groesse], groesse)
-
-
-def rendere(jobs, groesse):
-    """Ein Chrome-Lauf fuer alle Auftraege einer Groesse."""
-    Server.fertig.clear()
     Server.auftraege = jobs
     srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Server)
     threading.Thread(target=srv.serve_forever, daemon=True).start()
-    url = f"http://127.0.0.1:{srv.server_address[1]}/modelle.html?size={groesse}"
+    url = f"http://127.0.0.1:{srv.server_address[1]}/modelle.html"
     profil = os.path.join(HIER, ".cache", "chrome")
     chrome = subprocess.Popen([CHROME, "--headless=new", "--use-angle=swiftshader", "--enable-unsafe-swiftshader",
                                "--ignore-gpu-blocklist", f"--user-data-dir={profil}", "--no-first-run",
-                               f"--window-size={groesse + 88},{groesse + 88}", url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                               "--window-size=600,600", url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
         if not Server.fertig.wait(timeout=900):
             raise SystemExit("Zeitueberschreitung beim Rendern der Modelle")
