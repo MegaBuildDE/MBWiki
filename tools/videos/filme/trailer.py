@@ -19,13 +19,14 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps  # noqa: E
 
 import mc  # noqa: E402
 from basis import *  # noqa: E402,F401,F403
-from basis import LOGO  # noqa: E402
 
 ASSETS = os.path.join(WIKI, ".gitbook", "assets")
 SHOT = os.path.join(ASSETS, "screenshots")
 ALT_HALLE = os.path.join(ASSETS, "2024-09-05_23.07.27.png")
 BALKEN = 132  # Hoehe der Kinobalken oben und unten
-MB_LOGO = Image.open(os.path.join(LOGO, "mblogo.png")).convert("RGBA")
+# Das neue MB-Logo (Wortmarke mit Glow, transparent) aus dem MBLogo-Repo
+MB_LOGO = Image.open(os.path.join(os.environ.get("MBLOGO", os.path.expanduser("~/Coding/MBLogo")),
+                                   "mblogo-wortmarke-1024.png")).convert("RGBA")
 BETA_LINK = "megabuild.de/dc"
 
 
@@ -43,31 +44,36 @@ def blende(t, d, ein=.5, aus=.5):
 
 
 @functools.lru_cache(maxsize=24)
-def bild_gross(pfad, art="normal"):
-    """Screenshot in 1.12-facher Bildschirmgroesse (Spielraum fuer Zoom und Schwenk)."""
-    w, h = int(W * 1.12), int(H * 1.12)
+def bild_quelle(pfad, art="normal"):
+    """Screenshot in Originalgroesse, auf 16:9 beschnitten (alt: grau und dunkler)."""
     img = Image.open(pfad).convert("RGB")
-    img = ImageOps.fit(img, (w, h), Image.LANCZOS)
+    h = min(img.height, round(img.width * 9 / 16))
+    w = round(h * 16 / 9)
+    img = img.crop(((img.width - w) // 2, (img.height - h) // 2, (img.width - w) // 2 + w, (img.height - h) // 2 + h))
     if art == "alt":
         img = ImageOps.grayscale(img).convert("RGB")
         img = ImageEnhance.Brightness(img).enhance(.62)
         img = ImageEnhance.Contrast(img).enhance(1.15)
-    return img.convert("RGBA")
+    return img
 
 
-def vollbild(e, pfad, t, d, zoom=(1.0, 1.08), schwenk=(0.0, 0.0), alpha=1.0, art="normal", versatz=(0, 0)):
-    """Screenshot randlos mit langsamem Zoom (Faktor von->bis) und Schwenk (-1..1 in x)."""
+def vollbild(e, pfad, t, d, zoom=(1.0, 1.05), schwenk=(0.0, 0.0), alpha=1.0, art="normal"):
+    """Screenshot randlos mit langsamem Zoom (Faktor von->bis) und Schwenk (-1..1 in x).
+
+    Der Ausschnitt wird in einem Schritt aus dem Original auf 1920 x 1080 gebracht
+    (Lanczos, leicht nachgeschaerft), damit das Bild scharf bleibt."""
     if alpha <= .003:
         return
-    src = bild_gross(pfad, art)
+    src = bild_quelle(pfad, art)
     u = ein_aus(phase(t, 0, d)) * .6 + phase(t, 0, d) * .4
     z = zoom[0] + (zoom[1] - zoom[0]) * u
-    bw, bh = min(src.width, src.width / z), min(src.height, src.height / z)
+    bw, bh = src.width / z, src.height / z
     sx = schwenk[0] + (schwenk[1] - schwenk[0]) * u
     ox = (src.width - bw) * (.5 + .5 * sx)
     oy = (src.height - bh) * .5
-    aus = src.crop((int(ox), int(oy), int(ox + bw), int(oy + bh))).resize((W, H), Image.BILINEAR)
-    mc.einfuegen(e, aus, versatz[0], versatz[1], alpha)
+    aus = src.resize((W, H), Image.LANCZOS, box=(ox, oy, ox + bw, oy + bh))
+    aus = aus.filter(ImageFilter.UnsharpMask(radius=1.2, percent=45, threshold=2))
+    mc.einfuegen(e, aus.convert("RGBA"), 0, 0, alpha)
 
 
 def vignette_bild():
@@ -154,7 +160,7 @@ def _riss_leuchten():
 def szene_fall(e, t, d):
     a = blende(t, d, ein=1.4, aus=1.0)
     voll = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    vollbild(voll, ALT_HALLE, t, d, zoom=(1.0, 1.1), art="alt")
+    vollbild(voll, ALT_HALLE, t, d, zoom=(1.0, 1.05), art="alt")
     riss = phase(t, 4.1, 6.4)
     if riss <= 0:
         mc.einfuegen(e, voll, 0, 0, a)
@@ -175,7 +181,7 @@ def szene_fall(e, t, d):
 
 def szene_magie(e, t, d):
     a = blende(t, d, ein=.9, aus=.6)
-    vollbild(e, s("ballon-abendrot"), t, d, zoom=(1.0, 1.1), schwenk=(.3, -.2), alpha=a)
+    vollbild(e, s("ballon-abendrot"), t, d, zoom=(1.0, 1.06), schwenk=(.3, -.2), alpha=a)
     staub(e, t, a * .9)
     mc.einfuegen(e, VIGNETTE, 0, 0, a * .8)
 
@@ -183,7 +189,7 @@ def szene_magie(e, t, d):
 def szene_mala(e, t, d):
     a = blende(t, d, ein=.4, aus=.5)
     if t < 3.4:
-        vollbild(e, s("luftschiff"), t, 3.4, zoom=(1.08, 1.0), schwenk=(-.4, .2), alpha=a * (1 - phase(t, 3.1, 3.4)))
+        vollbild(e, s("luftschiff"), t, 3.4, zoom=(1.05, 1.0), schwenk=(-.4, .2), alpha=a * (1 - phase(t, 3.1, 3.4)))
         mc.einfuegen(e, VIGNETTE, 0, 0, a * .7)
         return
     lt = t - 3.4
@@ -209,11 +215,11 @@ def szene_tafel(text, unter):
 
 def szene_insel(e, t, d):
     a = blende(t, d, ein=.5, aus=.4)
-    vollbild(e, s("dschungelinsel"), t, d, zoom=(1.12, 1.0), schwenk=(.5, 0), alpha=a)
+    vollbild(e, s("dschungelinsel"), t, d, zoom=(1.07, 1.0), schwenk=(.5, 0), alpha=a)
     mc.einfuegen(e, VIGNETTE, 0, 0, a * .6)
 
 
-def schnitt(name, titel, unter=None, zoom=(1.0, 1.07), schwenk=(-.3, .3)):
+def schnitt(name, titel, unter=None, zoom=(1.0, 1.04), schwenk=(-.3, .3)):
     def zeichne(e, t, d):
         a = blende(t, d, ein=.12, aus=.12)
         vollbild(e, s(name), t, d, zoom=zoom, schwenk=schwenk, alpha=a)
@@ -253,7 +259,7 @@ def szene_figuren(e, t, d):
 
 def szene_abschied(e, t, d):
     a = blende(t, d, ein=.5, aus=.9)
-    vollbild(e, s("luftschiff"), t, d, zoom=(1.0, 1.16), schwenk=(0, 0), alpha=a)
+    vollbild(e, s("luftschiff"), t, d, zoom=(1.0, 1.08), schwenk=(0, 0), alpha=a)
     staub(e, t, a * .6, n=18)
     mc.einfuegen(e, VIGNETTE, 0, 0, a * .8)
 
@@ -261,10 +267,10 @@ def szene_abschied(e, t, d):
 def szene_logo(e, t, d):
     # Logo
     g = aus_kubisch(phase(t, .05, .9))
-    lw = MB_LOGO.width * 2.6 * (1.08 - .08 * g)
-    cy = 360
-    mc.einfuegen(e, glanz(420, (169, 88, 255), int(110 * g)), W / 2 - 420, cy - 420, 1)
-    skaliert(e, MB_LOGO, W / 2, cy, lw, lw * MB_LOGO.height / MB_LOGO.width, alpha=g)
+    lw = 760 * (1.06 - .06 * g)
+    cy = 345
+    mc.einfuegen(e, glanz(380, (169, 88, 255), int(70 * g)), W / 2 - 380, cy - 380, 1)
+    skaliert(e, MB_LOGO, W / 2, cy, lw, lw, alpha=g, glatt=True)
     funkenkranz(e, W / 2, cy, t, .1, radius=300, n=8, farbe=(230, 200, 255))
     # Schriftzug
     u = aus_kubisch(phase(t, .7, 1.3))
@@ -322,13 +328,14 @@ SZENEN = [
                                     L("jeden Tag etwas Neues", "something new every day"))),
     dict(dauer=2.6, zeichne=schnitt("wald", L("Java & Bedrock", "Java & Bedrock"),
                                     L("zusammen auf einem Server", "together on one server"), schwenk=(.3, -.3)),
-         ton=[(.2, "sfx:riser", .7)]),
+),
     dict(dauer=9.5, zeichne=szene_figuren,
          ton=[(.0, "sfx:boom", .8), (.6, "mala:resident-grow")]
          + [(.4 + i * .9, "sfx:pop", .5) for i in range(4)] + [(5.0, "pool:goblin/frage_1", .6)]),
-    dict(dauer=6.5, zeichne=szene_abschied, ton=[(.4, "mala:farewell"), (4.2, "sfx:riser", .9)]),
+    dict(dauer=6.5, zeichne=szene_abschied, ton=[(.4, "mala:farewell"), (4.6, "sfx:swell", .8)]),
     dict(dauer=8.5, zeichne=szene_logo, ton=[(.0, "sfx:boom", 1.3), (.1, "sfx:chime", .7), (1.6, "sfx:erfolg", .6)]),
 ]
 
 FILM = Trailer("trailer", SZENEN, musik=dict(tonart="D", tempo=66, stimmung="dunkel"), wortmarke=False)
+FILM.whoosh = False  # die Rausch-Whooshes zwischen den Szenen passen nicht zum Trailer
 FILM.poster = sum(sz["dauer"] for sz in SZENEN[:2]) + 4.0

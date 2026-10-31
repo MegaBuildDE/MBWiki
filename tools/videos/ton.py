@@ -5,7 +5,7 @@ Alles wird hier erzeugt oder aus dem Pool gelesen - keine fremden Aufnahmen.
 - Musik: ruhiges Stueck aus Flaechen, Spieluhr-Arpeggio und Bass, je Film
   gleich gebaut, nur Tonart und Tempo wechseln (Film.musik). Unter Malas
   Stimme wird sie leiser.
-- Effekte 'sfx:<name>': whoosh, pop, chime, klick, funkeln, tippen - synthetisch.
+- Effekte 'sfx:<name>': whoosh, pop, chime, klick, funkeln, tippen, erfolg, boom, swell - synthetisch.
 - Stimme 'mala:<name>': Malas Aufnahmen aus dem Pool (assets/sounds/mala/<sprache>/),
   Text und Wortzeiten aus MBSkyManager/src/main/resources/story/voice-lines.yml.
   Daraus entstehen auch die Untertitel im Bild (Film.untertitel).
@@ -260,31 +260,27 @@ def sfx(name, seed=0):
                 out[i0 + k] += (math.sin(w * k) + .2 * math.sin(2 * w * k)) * math.exp(-t / .5) * min(1, t / .003) * .3
         return out
     if name == "boom":
-        # Trailer-Schlag: tiefer, fallender Ton mit etwas Rauschen und langem Nachhall
+        # Trailer-Schlag: tiefer, fallender Sinus mit Obertoenen und langem Ausklang (kein Rauschen)
         d = 3.2
-        r = rauschen(d, seed + 11)
-        out, ph, y = [], 0.0, 0.0
+        out, ph = [], 0.0
         for k in range(int(d * SR)):
             t = k / SR
-            hz = 38 + 70 * math.exp(-t / .12)
+            hz = 41 + 60 * math.exp(-t / .1)
             ph += 2 * math.pi * hz / SR
-            y += .02 * (r[k] - y)
-            ton = math.sin(ph) + .35 * math.sin(2 * ph) + .25 * math.sin(3.01 * ph)
-            out.append((ton * .8 + y * 6 * math.exp(-t / .25)) * math.exp(-t / .9) * min(1, t / .004))
+            ton = math.sin(ph) + .3 * math.sin(2 * ph) + .12 * math.sin(3 * ph)
+            out.append(ton * .9 * math.exp(-t / 1.0) * min(1, t / .006))
         return out
-    if name == "riser":
-        # Ansteigendes Rauschen mit Ton, endet hart (vor einem Schnitt setzen)
-        d = 2.4
-        r = rauschen(d, seed + 13)
-        out, ph, y1 = [], 0.0, 0.0
-        for k in range(int(d * SR)):
-            t = k / SR
-            u = t / d
-            hz = 110 * 2 ** (2.5 * u)
-            ph += 2 * math.pi * hz / SR
-            a = 1 - math.exp(-2 * math.pi * (300 + 5000 * u * u) / SR)
-            y1 += a * (r[k] - y1)
-            out.append((y1 * .7 + .25 * math.sin(ph)) * u ** 2.2 * min(1, (d - t) / .01))
+    if name == "swell":
+        # Anschwellender Akkord (Grundton, Quinte, Oktave), steigt leicht an und reisst vor dem Schnitt ab
+        d = 2.0
+        out = [0.0] * int(d * SR)
+        for j, (ton, g) in enumerate(((50, .5), (57, .35), (62, .3), (69, .15))):
+            ph = 0.0
+            for k in range(len(out)):
+                t = k / SR
+                u = t / d
+                ph += 2 * math.pi * midi_hz(ton + 1.5 * u) / SR
+                out[k] += g * math.sin(ph + .6 * math.sin(ph * .5)) * u ** 2.5 * min(1, (d - t) / .015)
         return out
     raise KeyError("unbekannter Effekt: " + name)
 
@@ -318,7 +314,7 @@ def untertitel(film, sprache="de"):
     return sprechen
 
 
-def baue(film, ordner, sprache="de", szenen_whoosh=True):
+def baue(film, ordner, sprache="de", szenen_whoosh=None):
     """Schreibt musik.wav und rest.wav nach ordner und fuellt film.untertitel."""
     os.makedirs(ordner, exist_ok=True)
     dauer = film.gesamt
@@ -336,6 +332,8 @@ def baue(film, ordner, sprache="de", szenen_whoosh=True):
             addiere(rest, sfx(name, seed=int(t * 100)), t, .5 * laut)
         else:
             raise KeyError(quelle)
+    if szenen_whoosh is None:
+        szenen_whoosh = getattr(film, "whoosh", True)
     if szenen_whoosh:
         for i, t0 in enumerate(film.starts[1:], 1):
             addiere(rest, sfx("whoosh", seed=i), t0 - .45, .07, pan=(-.4 if i % 2 else .4))

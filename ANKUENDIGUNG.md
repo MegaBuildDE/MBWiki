@@ -8,7 +8,7 @@ Trailer und die passenden Bilder.
 
 | Was | Datei |
 | --- | --- |
-| Trailer (DE, 1:10) | `.gitbook/assets/videos/trailer.mp4` |
+| Trailer (DE, 1:10, 27 MB) | `.gitbook/assets/videos/trailer.mp4` |
 | Trailer (EN) | `.gitbook/assets/videos/trailer-en.mp4` |
 | Vorschaubild | `.gitbook/assets/videos/trailer.jpg` |
 | Bauplan des Trailers | `tools/videos/filme/trailer.py` (`python3 bauen.py trailer`) |

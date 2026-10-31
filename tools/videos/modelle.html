@@ -64,7 +64,11 @@ async function buildModel(d) {
       const ti = f && (typeof f.texture === 'number' ? f.texture : (f.texture === null ? -1 : 0));
       const t = textures[ti];
       if (!f || !t || !f.uv) { mats.push(invisible); return; }
-      const [u1, v1, u2, v2] = f.uv;
+      // Etwas nach innen ruecken: genau auf der Texelgrenze greift die Kante sonst
+      // den Nachbarpixel ab (helle Striche an den Wuerfelkanten, z. B. Malas Hut).
+      const E = 0.3;
+      const ein = (a, b) => a < b ? [a + E, b - E] : (a > b ? [a - E, b + E] : [a, b]);
+      const [u1, u2] = ein(f.uv[0], f.uv[2]), [v1, v2] = ein(f.uv[1], f.uv[3]);
       const ring = [[u1, v1], [u2, v1], [u2, v2], [u1, v2]];
       const k = ((f.rotation || 0) / 90) % 4;
       const at = (i) => ring[(i - k + 4) % 4];
