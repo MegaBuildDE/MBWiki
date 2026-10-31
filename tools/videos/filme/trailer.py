@@ -205,6 +205,21 @@ FIGUREN = [  # Sprite, Name, Zeile, Groesse (1080p-Raster)
 ]
 
 
+PIP_CHAT = [  # (Zeit in der Szene, Zeile)
+    (.9, "§7Du → Pip: Hey Pip, was machst du gerade?"),
+    (1.8, "§fPip §b(KI)§7: §fIch ernte Weizen! Willst du handeln?"),
+    (3.0, "§7Du → Pip: handeln"),
+    (3.8, "§fPip §b(KI)§7: §fGern! Soll ich dir 16 Brot backen? Du zahlst in Mana."),
+    (5.6, "§fPip §b(KI)§7: §fUnd hast du 64 Bruchstein? Die brauch ich für unseren Brunnen."),
+]
+KANN = [  # Hinweise unter den Figuren
+    ("SCHREIBEN IM CHAT", (120, 220, 255)),
+    ("HANDELN MIT MANA & WARE", (140, 255, 184)),
+    ("AUFTRÄGE & TAUSCH", (255, 210, 90)),
+    ("VERTRAUEN AUFBAUEN", (230, 160, 255)),
+]
+
+
 def szene_figuren(e, t, d):
     a = blende(t, d, ein=.1, aus=.15)
     mc.einfuegen(e, _buehne(), 0, 0, a)
@@ -222,11 +237,25 @@ def szene_figuren(e, t, d):
         sprite_boden(e, sp, t, x, boden, gr * K * max(.01, g), a)
         v = aus_kubisch(phase(t, .25 + i * SCHLAG, .55 + i * SCHLAG)) * a
         av(e, name.upper(), x, boden + 40, 46, "heavy", HELL, v, anker="m", schatten=.5, sperrung=5)
-        av(e, zeile, x, boden + 106, 34, "medium", LILA, v, anker="m", schatten=.4)
-    pip = "§fPip §b(KI)§7: §f" + L("Hallo! Bist du neu hier oben?", "Hello! Are you new up here?")
-    v = aus_kubisch(phase(t, 2.2, 2.5)) * a
-    b = mc.chat_zeile_bild(pip, 4)
-    mc.einfuegen(e, b, TW / 2 - b.width / 2, BALKEN + 170, v)
+    # Chat wie im Spiel: "Du → Pip" grau, die Antwort als "Pip (KI)" (siehe sb/bewohner.md)
+    zeilen = chatzeilen([(t0, txt) for t0, txt in PIP_CHAT])
+    sichtbar = [(t0, z) for t0, z in zeilen if t >= t0][-6:]
+    y = BALKEN + 140
+    for t0, z in sichtbar:
+        v = aus_kubisch(phase(t, t0, t0 + .25)) * a
+        b = mc.chat_zeile_bild(z, 5)
+        mc.einfuegen(e, b, TW / 2 - b.width / 2, y + 12 * (1 - v), v)
+        y += b.height
+    # Was Bewohner koennen - im Takt, als eigene Reihe (gehoert zu allen, nicht zu einer Figur)
+    pillen = [abzeichen(text, farbe=f, text_farbe=tuple(min(255, c + 40) for c in f)) for text, f in KANN]
+    luecke, faktor = 36, 1.3
+    x = TW / 2 - (sum(p_.width * faktor for p_ in pillen) + luecke * (len(pillen) - 1)) / 2
+    for i, p_ in enumerate(pillen):
+        w = p_.width * faktor
+        v = rueckschwung(phase(t, 2.4 + i * SCHLAG, 2.75 + i * SCHLAG))
+        if v > 0:
+            skaliert(e, p_, x + w / 2, 1180, w * v, p_.height * faktor * v, alpha=a, glatt=True)
+        x += w + luecke
 
 
 def szene_logo(e, t, d):
@@ -324,9 +353,12 @@ SZENEN += [dict(dauer=4 * SCHLAG, zeichne=szene_titel, ton=[(0, "sfx:boom", 1.1)
 SZENEN += [dict(dauer=n_schlag * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.03, titel=ti, unter=un, staerke=.25),
                 ton=[(.3, "mala:" + zeile)])
            for n, ti, un, z, fx, zeile, n_schlag in FEATURES]
-SZENEN += [dict(dauer=10 * SCHLAG, zeichne=szene_figuren,
-                ton=[(.1 + i * SCHLAG, "sfx:pop", .6) for i in range(4)] + [(.4, "pool:goblin/frage_1", .4),
-                                                                           (1.2, "mala:trailer-allein")])]
+SZENEN += [dict(dauer=18 * SCHLAG, zeichne=szene_figuren,
+                ton=[(.1 + i * SCHLAG, "sfx:pop", .6) for i in range(4)]
+                + [(t0, "pool:goblin/" + ("freude_1" if i == 1 else "frage_1"), .35)
+                   for i, (t0, z) in enumerate(PIP_CHAT) if "(KI)" in z]
+                + [(2.4 + i * SCHLAG, "sfx:pop", .4) for i in range(4)]
+                + [(.8, "mala:trailer-handeln"), (5.1, "mala:trailer-allein")])]
 # Stille vor dem Logo: die Musik blendet aus, Herzschlag, Mala fluestert
 HERZ2 = [.25, 1.05, 1.75, 2.35, 2.85, 3.3, 3.65]
 SZENEN += [dict(dauer=4.0, zeichne=puls(HERZ2),
@@ -334,17 +366,17 @@ SZENEN += [dict(dauer=4.0, zeichne=puls(HERZ2),
 SZENEN += [dict(dauer=16 * SCHLAG, zeichne=szene_logo, ton=[(1.2, "mala:trailer-beta")])]
 
 _stille = sum(sz["dauer"] for sz in SZENEN[:-2])  # Musik laeuft bis zur Stille vor dem Logo
-# Das Hauptstueck (34 s) ist 8 s kuerzer als der Film bis zur Stille: nach 22 s geht es bei 14 s
-# weiter, die Takte 14-22 s (vier Takte) kommen also ein zweites Mal. Beide Schnittstellen liegen auf Taktgrenzen (120 BPM, 2-s-Takte).
+# Das Hauptstueck (34 s) ist 12 s kuerzer als der Film bis zur Stille: nach 22 s geht es bei 10 s
+# weiter, die Takte 10-22 s (sechs Takte) kommen also ein zweites Mal. Beide Schnittstellen liegen auf Taktgrenzen (120 BPM, 2-s-Takte).
 _m0 = KALT - 6.0
 _verlaengerung = _stille - _m0 - 34.0
-assert abs(_verlaengerung - 8.0) < .01, f"Musik passt nicht: {_verlaengerung:.2f} s statt 8 s Verlaengerung"
-_kurve_aus = [(0, 1.0), (20.0 - 3.0, 1.0), (20.0, 0.0)]  # vor der Stille weich ausblenden statt hart abbrechen
+assert abs(_verlaengerung - 12.0) < .01, f"Musik passt nicht: {_verlaengerung:.2f} s statt 12 s Verlaengerung"
+_kurve_aus = [(0, 1.0), (24.0 - 3.0, 1.0), (24.0, 0.0)]  # vor der Stille weich ausblenden statt hart abbrechen
 FILM = Trailer("trailer", SZENEN, wortmarke=False,
                musik=dict(art="dateien", pegel=.35, stuecke=[  # Musik bewusst leise: Stimme und Effekte vorn
                    # im Kaltstart leise unter Herzschlag und Mala, voll ab dem Drop
                    (_m0, "musik/trailer-haupt.mp3", [(0, .22), (5.5, .3), (6.0, 1.0)], (0, 22.04)),
-                   (_m0 + 22.0, "musik/trailer-haupt.mp3", _kurve_aus, (14.0, 34.0)),
+                   (_m0 + 22.0, "musik/trailer-haupt.mp3", _kurve_aus, (10.0, 34.0)),
                    (_stille + 4.0, "musik/trailer-logo.mp3", [(0, .5)]),  # Logo-Schlag, gedaempft
                ]))
 FILM.musik_hall = False  # die komponierte Musik bringt ihren Raum selbst mit

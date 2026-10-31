@@ -189,5 +189,23 @@
       ],
       "hash": "3709b6b1f11007e8"
     }
+  },
+  "trailer-handeln": {
+    "de": {
+      "ms": 3870,
+      "text": "Sie reden mit dir, handeln und nehmen Aufträge an.",
+      "words": [
+        120,
+        360,
+        760,
+        1040,
+        1560,
+        2200,
+        2600,
+        2840,
+        3400
+      ],
+      "hash": "48faf9d37f9afb85"
+    }
   }
 }
