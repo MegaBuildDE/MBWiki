@@ -7,10 +7,10 @@ icon: rocket
 
 # Erste Schritte
 
-<figure><img src="../.gitbook/assets/videos/start.jpg" alt="Mala und ein KI-Bewohner auf der Begegnungsinsel"><figcaption><p>Aus dem Video „Dein Start“</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/videos/start.jpg" alt="Cover des Videos „Dein Start“ mit Mala und einem Warpett"><figcaption><p>Das Video „Dein Start“ – Mala erklärt, Ton an</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/start.mp4" %}
-**Video: Dein Start** (1:34, mit Ton) – Mala begleitet dich von der Lobby bis zu deinem ersten Bewohner.
+**Video: Dein Start** (1:35, mit Ton) – Mala begleitet dich von der Lobby bis zu deinem ersten Bewohner.
 {% endfile %}
 
 ## Deine Insel erstellen

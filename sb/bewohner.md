@@ -7,7 +7,7 @@ icon: house-user
 
 # KI-Bewohner
 
-<figure><img src="../.gitbook/assets/videos/bewohner.jpg" alt="Ein Goblin-Bewohner im Chat"><figcaption><p>Aus dem Video „Deine Insel lebt“</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/videos/bewohner.jpg" alt="Cover des Videos „Deine Insel lebt“ mit einem Goblin und einem Shroomling"><figcaption><p>Das Video „Deine Insel lebt“ – Mala erklärt, Ton an</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/bewohner.mp4" %}
 **Video: Deine Insel lebt** (1:22, mit Ton) – KI-Bewohner und Forestlinge, vorgestellt von Mala.

@@ -12,10 +12,10 @@ icon: shield-halved
 **Still being planned.** Clans don't exist on the server yet. This page shows the current plan – numbers and details may still change before launch.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/videos/clans.jpg" alt="Preview of the clan system"><figcaption><p>From the video “Clans – a first look” (in German)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/videos/clans.jpg" alt="Cover of the video “Clans – a first look” with three clan crests"><figcaption><p>The video “Clans – a first look” – Mala explains, in German</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/clans.mp4" %}
-**Video: Clans – a first look** (1:11, in German) – what the clan system is meant to bring.
+**Video: Clans – a first look** (1:17, in German, with sound) – Mala explains what your clan brings you.
 {% endfile %}
 
 On MegaBuild.de, everyone has their own island world on their own server. Clans are meant to connect these worlds: **playing together, shared goals and an island for the whole clan.**

@@ -11,10 +11,10 @@ icon: shield-halved
 **Noch in Planung.** Clans gibt es auf dem Server noch nicht. Diese Seite zeigt den aktuellen Plan – Zahlen und Details können sich bis zum Start noch ändern.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/videos/clans.jpg" alt="Vorschau auf das Clansystem"><figcaption><p>Aus dem Video „Clans – ein erster Blick“</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/videos/clans.jpg" alt="Cover des Videos „Clans – ein erster Blick“ mit drei Clan-Wappen"><figcaption><p>Das Video „Clans – ein erster Blick“ – Mala erklärt, Ton an</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/clans.mp4" %}
-**Video: Clans – ein erster Blick** (1:11) – was das Clansystem bringen soll.
+**Video: Clans – ein erster Blick** (1:17, mit Ton) – Mala erklärt, was dein Clan dir bringt.
 {% endfile %}
 
 Auf MegaBuild.de hat jeder seine eigene Inselwelt auf einem eigenen Server. Clans sollen diese Welten verbinden: **gemeinsam spielen, gemeinsame Ziele und eine Insel für den ganzen Clan.**

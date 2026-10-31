@@ -7,10 +7,10 @@ icon: sitemap
 
 # Skilltree & Biome
 
-<figure><img src="../.gitbook/assets/videos/skilltree.jpg" alt="Der Skilltree mit dem Pfad Wälder"><figcaption><p>Aus dem Video „Mana & Biome“</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/videos/skilltree.jpg" alt="Cover des Videos „Mana & Biome“ mit dem Golem und Mana-Kugeln"><figcaption><p>Das Video „Mana & Biome“ – Mala erklärt, Ton an</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/skilltree.mp4" %}
-**Video: Mana & Biome** (1:16) – wie du Mana verdienst und damit deine Inselwelt wachsen lässt.
+**Video: Mana & Biome** (1:18, mit Ton) – Mala erklärt, wie du Mana verdienst und damit deine Inselwelt wachsen lässt.
 {% endfile %}
 
 Im Skilltree schaltest du **neue Biome** für deine Insel frei. Neue Gegenden entstehen beim Erkunden nur aus Biomen, die deiner Insel gehören.
