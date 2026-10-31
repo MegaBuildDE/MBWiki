@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """Ankuendigungs-Trailer fuer MegaBuild Sky - schneller Teaser in WQHD (2560 x 1440).
 
-Kaltstart mit Text auf Schwarz, dann Beat (120 BPM), drei Biom-Bilder,
-Titeltafel, fuenf Feature-Einblendungen, die Figuren und das neue MB-Logo mit
-Beta-Hinweis. Jedes Bild kommt nur einmal vor; Malas Stimme ist bewusst nicht
-drin (ihre Zeilen gehoeren zum Intro im Spiel). Alle Schnitte liegen auf Zaehlzeiten
-(0,5 s), die Musik setzt bei 4,0 s ein.
+Kaltstart auf Schwarz mit Herzschlag und Mala, Drop in den Beat (120 BPM),
+drei Biom-Bilder, Titeltafel, fuenf Feature-Einblendungen, die Figuren, eine
+Stille vor dem Logo und das neue MB-Logo mit Beta-Hinweis. Jedes Bild kommt nur
+einmal vor. Malas Zeilen sind eigene Trailer-Aufnahmen (stimmen/, nicht im Spiel).
+Nur auf Deutsch. Alle Schnitte liegen auf Zaehlzeiten
+(0,5 s), die Musik setzt bei 6,0 s ein.
 
 Die Bilder sind die Shader-Originale (2940 px breit) in trailer-bilder/, damit
 WQHD ohne Hochskalieren scharf bleibt.
 
-    python3 bauen.py trailer --crf 16 [--sprache en]
+    python3 trailer_stimme.py      # Malas Trailer-Zeilen (stimmen/texte.json), nur bei neuen Texten
+    python3 bauen.py trailer --crf 16
 """
 import functools
 import math
@@ -162,12 +164,18 @@ def zeilen_punch(e, t, zeilen, y, groessen, farben, takte):
 
 # ── Szenen ──────────────────────────────────────────────────────────────────
 
-def szene_kalt(e, t, d):
-    a1 = aus_kubisch(phase(t, .3, 1.0)) * (1 - phase(t, 1.6, 1.9))
-    av(e, L("Es war lange still.", "It's been quiet for a while."), TW / 2, TH / 2 - 50, 72, "medium", SANFT, a1,
-       anker="m", schatten=0)
-    a2 = aus_kubisch(phase(t, 2.1, 2.5)) * (1 - phase(t, 3.6, 3.95))
-    av(e, L("Zu still.", "Too quiet."), TW / 2, TH / 2 - 60, 96, "heavy", HELL, a2, anker="m", schatten=0)
+def puls(schlaege):
+    """Schwarzes Bild mit violettem Lichtpuls auf jedem Herzschlag (Spannung vor dem Drop)."""
+    def zeichne(e, t, d):
+        st = 0.0
+        for t0 in schlaege:
+            if t >= t0:
+                st = max(st, math.exp(-(t - t0) / .35))
+        st *= 1 - ein_kubisch(phase(t, d - .15, d))
+        if st > .01:
+            r = int(520 + 160 * st)
+            mc.einfuegen(e, glanz(r, (169, 88, 255), int(140 * st)), TW / 2 - r, TH / 2 - r, 1)
+    return zeichne
 
 
 def schnitt(name, z=(1.0, 1.05), fx=(0.0, 0.0), fy=0.0, stoss=.06, titel=None, unter=None, staerke=.4):
@@ -297,19 +305,28 @@ FEATURES = [  # Bild, Titel, Zeile, Zoom, Schwenk
      L("zusammen auf einem Server", "together on one server"), (1.0, 1.08), (-.3, .2)),
 ]
 
-SZENEN = [dict(dauer=4.0, zeichne=szene_kalt, ton=[(2.0, "sfx:swell", .7)])]
-SZENEN += [dict(dauer=4 * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.03, staerke=.3)) for n, z, fx in AUFTAKT]
-SZENEN[1]["ton"] = [(0, "sfx:boom", .9)]
+# Kaltstart: Herzschlag wird schneller, Mala leise - Drop auf "Man hat sich geirrt."
+HERZ1 = [.3, 1.3, 2.25, 3.1, 3.8, 4.4, 4.9, 5.3, 5.65]
+SZENEN = [dict(dauer=6.0, zeichne=puls(HERZ1),
+               ton=[(t, "sfx:herz", .9) for t in HERZ1] + [(.6, "mala:trailer-nichts"), (3.85, "mala:trailer-geirrt"),
+                                                         (4.0, "sfx:swell", .8)])]
+SZENEN += [dict(dauer=4 * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.04, staerke=.45)) for n, z, fx in AUFTAKT]
+SZENEN[1]["ton"] = [(0, "sfx:boom", 1.2)]
 SZENEN += [dict(dauer=4 * SCHLAG, zeichne=szene_titel, ton=[(0, "sfx:boom", 1.1), (1.0, "sfx:boom", .8)])]
 SZENEN += [dict(dauer=6 * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.03, titel=ti, unter=un, staerke=.25))
            for n, ti, un, z, fx in FEATURES]
+SZENEN[-len(FEATURES)]["ton"] = [(.4, "mala:trailer-welt")]
 SZENEN += [dict(dauer=10 * SCHLAG, zeichne=szene_figuren,
-                ton=[(.1 + i * SCHLAG, "sfx:pop", .6) for i in range(4)] + [(2.2, "pool:goblin/frage_1", .6),
-                                                                           (3.0, "sfx:swell", .9)])]
+                ton=[(.1 + i * SCHLAG, "sfx:pop", .6) for i in range(4)] + [(2.2, "pool:goblin/frage_1", .5),
+                                                                           (.6 + 4 * SCHLAG, "mala:trailer-allein")])]
+# Stille vor dem Logo: Beat bricht ab, Herzschlag, Mala fluestert
+HERZ2 = [.25, 1.05, 1.75, 2.35, 2.85, 3.3, 3.65]
+SZENEN += [dict(dauer=4.0, zeichne=puls(HERZ2),
+                ton=[(t, "sfx:herz", .9) for t in HERZ2] + [(.9, "mala:trailer-bereit"), (2.0, "sfx:swell", .9)])]
 SZENEN += [dict(dauer=16 * SCHLAG, zeichne=szene_logo,
                 ton=[(0, "sfx:boom", 1.3), (.05, "sfx:chime", .7), (1.0, "sfx:erfolg", .6)])]
 
-_logo = sum(sz["dauer"] for sz in SZENEN[:-1])  # Beat und Musik laufen bis zum Logo
+_stille = sum(sz["dauer"] for sz in SZENEN[:-2])  # Beat und Musik laufen bis zur Stille vor dem Logo
 FILM = Trailer("trailer", SZENEN, wortmarke=False,
-               musik=dict(tonart="D", tempo=120, stimmung="hell", ab=4.0, ende=_logo, beat=True))
-FILM.poster = 4.0 + 6 * 2 * SCHLAG + 2 * SCHLAG + 1.5  # erste Feature-Einblendung
+               musik=dict(tonart="D", tempo=120, stimmung="hell", ab=6.0, ende=_stille, beat=True))
+FILM.poster = 6.0 + 6 * 2 * SCHLAG + 2 * SCHLAG + 1.5  # erste Feature-Einblendung

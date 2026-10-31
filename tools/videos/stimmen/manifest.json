@@ -1,0 +1,161 @@
+{
+  "trailer-nichts": {
+    "de": {
+      "ms": 3010,
+      "text": "Man hat uns gesagt, hier oben gibt es nichts mehr.",
+      "words": [
+        50,
+        290,
+        450,
+        610,
+        1330,
+        1570,
+        1810,
+        2050,
+        2210,
+        2530
+      ],
+      "hash": "b9d64df1a525abf3"
+    },
+    "en": {
+      "ms": 2590,
+      "text": "They told us there was nothing left up here.",
+      "words": [
+        70,
+        270,
+        550,
+        790,
+        950,
+        1110,
+        1510,
+        1830,
+        2150
+      ],
+      "hash": "33b0374ee2ae082c"
+    }
+  },
+  "trailer-geirrt": {
+    "de": {
+      "ms": 2030,
+      "text": "Man hat sich geirrt.",
+      "words": [
+        370,
+        730,
+        930,
+        1210
+      ],
+      "hash": "5707168f41dfed9c"
+    },
+    "en": {
+      "ms": 1710,
+      "text": "They were wrong.",
+      "words": [
+        350,
+        590,
+        910
+      ],
+      "hash": "300c120ee6ae27b6"
+    }
+  },
+  "trailer-welt": {
+    "de": {
+      "ms": 4880,
+      "text": "Jede Insel eine eigene Welt. Und jede Welt wächst – mit dir.",
+      "words": [
+        160,
+        560,
+        960,
+        1360,
+        1800,
+        2480,
+        2800,
+        3080,
+        3360,
+        4027,
+        4080,
+        4480
+      ],
+      "hash": "d2dd12001f67cdc0"
+    },
+    "en": {
+      "ms": 5380,
+      "text": "Every island its own world. And every world grows – with you.",
+      "words": [
+        100,
+        580,
+        1060,
+        1380,
+        1780,
+        2660,
+        2900,
+        3300,
+        3620,
+        4500,
+        4580,
+        4900
+      ],
+      "hash": "52854f6477b36193"
+    }
+  },
+  "trailer-allein": {
+    "de": {
+      "ms": 3580,
+      "text": "Und glaub mir: Allein bist du hier oben nie.",
+      "words": [
+        160,
+        480,
+        880,
+        1520,
+        2080,
+        2320,
+        2453,
+        2640,
+        3040
+      ],
+      "hash": "f063df1d6236650b"
+    },
+    "en": {
+      "ms": 3360,
+      "text": "And trust me: you're never alone up here.",
+      "words": [
+        160,
+        480,
+        880,
+        1520,
+        2000,
+        2240,
+        2640,
+        2800
+      ],
+      "hash": "2e507b441b86370c"
+    }
+  },
+  "trailer-bereit": {
+    "de": {
+      "ms": 2850,
+      "text": "Mach dich bereit. Es geht bald los.",
+      "words": [
+        50,
+        330,
+        690,
+        1410,
+        1650,
+        1850,
+        2130
+      ],
+      "hash": "6f2fb7a949ebbe19"
+    },
+    "en": {
+      "ms": 2550,
+      "text": "Get ready. It's starting soon.",
+      "words": [
+        60,
+        300,
+        1100,
+        1580,
+        1900
+      ],
+      "hash": "9a8ce92a93738a53"
+    }
+  }
+}

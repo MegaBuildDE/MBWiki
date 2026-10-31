@@ -8,10 +8,10 @@ Trailer und die passenden Bilder.
 
 | Was | Datei |
 | --- | --- |
-| Trailer (DE, 0:40, WQHD 2560 × 1440) | `.gitbook/assets/videos/trailer.mp4` |
-| Trailer (EN) | `.gitbook/assets/videos/trailer-en.mp4` |
+| Trailer (nur Deutsch, 0:46, WQHD 2560 × 1440) | `.gitbook/assets/videos/trailer.mp4` |
 | Vorschaubild | `.gitbook/assets/videos/trailer.jpg` |
 | Bauplan des Trailers | `tools/videos/filme/trailer.py` (`python3 bauen.py trailer --crf 16`) |
+| Malas Trailer-Zeilen | `tools/videos/stimmen/texte.json` (aufnehmen: `python3 trailer_stimme.py`) |
 
 Bilder in voller Auflösung (2940 px, Shader-Originale) in dieser Reihenfolge anhängen
 (Discord zeigt bis zu 10 pro Nachricht), alle in `tools/videos/trailer-bilder/`:
@@ -36,8 +36,8 @@ Bilder in voller Auflösung (2940 px, Shader-Originale) in dieser Reihenfolge an
 ```text
 # 🏝️ Wir arbeiten wieder an etwas Großem.
 
-> *„Da unten lag einmal MegaBuild. Dann riss die Welt auseinander.
-> Doch in den Rissen blieb Magie zurück. Genug für ein Schiff. Genug für dich.“*
+> *„Man hat uns gesagt, hier oben gibt es nichts mehr.
+> Man hat sich geirrt.“*
 > — Mala, Kapitänin des Luftschiffs
 
 Es war lange still hier. Jetzt dürfen wir endlich zeigen, warum: **MegaBuild Sky** – ein Custom Skyblock, wie ihr ihn noch nicht gespielt habt.
@@ -93,10 +93,10 @@ MegaBuild Sky – ein Custom Skyblock mit eigener Inselwelt auf eigenem Server, 
 ```text
 # 🏝️ We're working on something big again.
 
-> *"Down there lay MegaBuild, once. Then the world tore itself apart."* — Mala
+> *"They told us there was nothing left up here. They were wrong."* — Mala
 
 **MegaBuild Sky** is a custom Skyblock: your own island world on its own server, a world that grows as you explore, AI residents who chat and trade with you, custom biomes you unlock with Mana – and Captain Mala's airship to take you there.
 
 🧪 **The beta is coming soon** – sign up on our Discord: megabuild.de/dc
-🎮 Java & Bedrock together · Trailer attached ⬇️
+🎮 Java & Bedrock together · Trailer (German) attached ⬇️
 ```

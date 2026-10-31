@@ -5,7 +5,7 @@ Alles wird hier erzeugt oder aus dem Pool gelesen - keine fremden Aufnahmen.
 - Musik: ruhiges Stueck aus Flaechen, Spieluhr-Arpeggio und Bass, je Film
   gleich gebaut, nur Tonart und Tempo wechseln (Film.musik). Unter Malas
   Stimme wird sie leiser.
-- Effekte 'sfx:<name>': whoosh, pop, chime, klick, funkeln, tippen, erfolg, boom, swell - synthetisch.
+- Effekte 'sfx:<name>': whoosh, pop, chime, klick, funkeln, tippen, erfolg, boom, swell, herz - synthetisch.
 - Stimme 'mala:<name>': Malas Aufnahmen aus dem Pool (assets/sounds/mala/<sprache>/),
   Text und Wortzeiten aus MBSkyManager/src/main/resources/story/voice-lines.yml.
   Daraus entstehen auch die Untertitel im Bild (Film.untertitel).
@@ -51,7 +51,27 @@ def stimmen(sprache):
                 woerter = [int(w) for w in feld["words"].strip("[]").split(",") if w.strip()]
                 out[schluessel] = (int(feld["ms"]), text, woerter)
                 feld = {}
+    # Zeilen nur fuer Wiki-Filme (z. B. den Trailer), aufgenommen mit trailer_stimme.py
+    for name, sprachen in _wiki_stimmen().items():
+        if sprache in sprachen:
+            e = sprachen[sprache]
+            out[name] = (int(e["ms"]), e["text"], [int(w) for w in e["words"]])
     return out
+
+
+WIKI_STIMMEN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stimmen")
+
+
+def _wiki_stimmen():
+    import json
+    pfad = os.path.join(WIKI_STIMMEN, "manifest.json")
+    return json.load(open(pfad, encoding="utf-8")) if os.path.isfile(pfad) else {}
+
+
+def stimm_pfad(sprache, name):
+    """OGG einer Mala-Zeile: erst die Wiki-eigenen Aufnahmen, sonst der Pool."""
+    eigen = os.path.join(WIKI_STIMMEN, sprache, name + ".ogg")
+    return eigen if os.path.isfile(eigen) else os.path.join(POOL, "assets", "sounds", "mala", sprache, name + ".ogg")
 
 
 def stuecke(text, woerter, ms, maxlen=58):
@@ -292,6 +312,17 @@ def sfx(name, seed=0):
             ton = math.sin(ph) + .3 * math.sin(2 * ph) + .12 * math.sin(3 * ph)
             out.append(ton * .9 * math.exp(-t / 1.0) * min(1, t / .006))
         return out
+    if name == "herz":
+        # Herzschlag: zwei tiefe, weiche Schlaege (lub-dub), rein tonal
+        d = .7
+        out = [0.0] * int(d * SR)
+        for start, hz0, g in ((0.0, 62, 1.0), (.2, 55, .7)):
+            ph, i0 = 0.0, int(start * SR)
+            for k in range(len(out) - i0):
+                t = k / SR
+                ph += 2 * math.pi * (hz0 + 30 * math.exp(-t / .03)) / SR
+                out[i0 + k] += g * math.sin(ph) * math.exp(-t / .09) * min(1, t / .004)
+        return out
     if name == "swell":
         # Anschwellender Akkord (Grundton, Quinte, Oktave), steigt leicht an und reisst vor dem Schnitt ab
         d = 2.0
@@ -346,8 +377,7 @@ def baue(film, ordner, sprache="de", szenen_whoosh=None):
     for t, quelle, laut in film.cues():
         art, name = quelle.split(":", 1)
         if art == "mala":
-            pfad = os.path.join(POOL, "assets", "sounds", "mala", sprache, name + ".ogg")
-            addiere(rest, lade_ogg(pfad), t, 1.1 * laut)
+            addiere(rest, lade_ogg(stimm_pfad(sprache, name)), t, 1.1 * laut)
         elif art == "pool":
             addiere(rest, lade_ogg(os.path.join(POOL, "assets", "sounds", name + ".ogg")), t, .7 * laut)
         elif art == "sfx":

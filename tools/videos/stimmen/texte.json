@@ -1,0 +1,30 @@
+{
+  "_hinweis": "Malas Zeilen nur fuer den Trailer (nicht im Spiel). Aufnehmen mit: python3 trailer_stimme.py. Regie in eckigen Klammern wird nicht gesprochen.",
+  "zeilen": {
+    "trailer-nichts": {
+      "regie": "[quietly, tense]",
+      "de": "Man hat uns gesagt, hier oben gibt es nichts mehr.",
+      "en": "They told us there was nothing left up here."
+    },
+    "trailer-geirrt": {
+      "regie": "[with a confident smirk]",
+      "de": "Man hat sich geirrt.",
+      "en": "They were wrong."
+    },
+    "trailer-welt": {
+      "regie": "[excited, building energy]",
+      "de": "Jede Insel eine eigene Welt. Und jede Welt wächst – mit dir.",
+      "en": "Every island its own world. And every world grows – with you."
+    },
+    "trailer-allein": {
+      "regie": "[playfully]",
+      "de": "Und glaub mir: Allein bist du hier oben nie.",
+      "en": "And trust me: you're never alone up here."
+    },
+    "trailer-bereit": {
+      "regie": "[intense whisper]",
+      "de": "Mach dich bereit. Es geht bald los.",
+      "en": "Get ready. It's starting soon."
+    }
+  }
+}
