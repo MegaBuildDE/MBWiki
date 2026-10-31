@@ -259,6 +259,33 @@ def sfx(name, seed=0):
                 t = k / SR
                 out[i0 + k] += (math.sin(w * k) + .2 * math.sin(2 * w * k)) * math.exp(-t / .5) * min(1, t / .003) * .3
         return out
+    if name == "boom":
+        # Trailer-Schlag: tiefer, fallender Ton mit etwas Rauschen und langem Nachhall
+        d = 3.2
+        r = rauschen(d, seed + 11)
+        out, ph, y = [], 0.0, 0.0
+        for k in range(int(d * SR)):
+            t = k / SR
+            hz = 38 + 70 * math.exp(-t / .12)
+            ph += 2 * math.pi * hz / SR
+            y += .02 * (r[k] - y)
+            ton = math.sin(ph) + .35 * math.sin(2 * ph) + .25 * math.sin(3.01 * ph)
+            out.append((ton * .8 + y * 6 * math.exp(-t / .25)) * math.exp(-t / .9) * min(1, t / .004))
+        return out
+    if name == "riser":
+        # Ansteigendes Rauschen mit Ton, endet hart (vor einem Schnitt setzen)
+        d = 2.4
+        r = rauschen(d, seed + 13)
+        out, ph, y1 = [], 0.0, 0.0
+        for k in range(int(d * SR)):
+            t = k / SR
+            u = t / d
+            hz = 110 * 2 ** (2.5 * u)
+            ph += 2 * math.pi * hz / SR
+            a = 1 - math.exp(-2 * math.pi * (300 + 5000 * u * u) / SR)
+            y1 += a * (r[k] - y1)
+            out.append((y1 * .7 + .25 * math.sin(ph)) * u ** 2.2 * min(1, (d - t) / .01))
+        return out
     raise KeyError("unbekannter Effekt: " + name)
 
 
