@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Ankuendigungs-Trailer fuer MegaBuild Sky - schneller Teaser in WQHD (2560 x 1440).
 
-Kaltstart mit Text auf Schwarz, dann Beat (120 BPM) und Biom-Schnitte im Takt,
-Feature-Einblendungen, die Figuren, ein zweiter schneller Block, Malas Abschied
-und das neue MB-Logo mit Beta-Hinweis. Alle Schnitte liegen auf Zaehlzeiten
+Kaltstart mit Text auf Schwarz, dann Beat (120 BPM), drei Biom-Bilder,
+Titeltafel, fuenf Feature-Einblendungen, die Figuren und das neue MB-Logo mit
+Beta-Hinweis. Jedes Bild kommt nur einmal vor; Malas Stimme ist bewusst nicht
+drin (ihre Zeilen gehoeren zum Intro im Spiel). Alle Schnitte liegen auf Zaehlzeiten
 (0,5 s), die Musik setzt bei 4,0 s ein.
 
 Die Bilder sind die Shader-Originale (2940 px breit) in trailer-bilder/, damit
@@ -96,12 +97,25 @@ def blitz(e, t, staerke=.45, dauer=.16):
         mc.einfuegen(e, WEISS, 0, 0, a)
 
 
+@functools.lru_cache(maxsize=1)
+def _bauchbinden_schatten():
+    """Weicher dunkler Fleck unten links, damit die Einblendung auch auf hellen Bildern lesbar bleibt."""
+    k = 8
+    m = Image.new("L", (TW // k, TH // k), 0)
+    ImageDraw.Draw(m).ellipse((-TW // k * .25, TH // k * .5, TW // k * .62, TH // k * 1.2), fill=170)
+    m = m.filter(ImageFilter.GaussianBlur(28)).resize((TW, TH), Image.BILINEAR)
+    out = Image.new("RGBA", (TW, TH), (6, 4, 14, 0))
+    out.putalpha(m)
+    return out
+
+
 def bauchbinde(e, t, t0, titel, unter=None, alpha=1.0):
     """Grosse Einblendung unten links: Titel in gesperrten Grossbuchstaben, Zeile darunter."""
     u = aus_kubisch(phase(t, t0, t0 + .3)) * alpha
     if u <= .003:
         return
     x, y = 150, TH - BALKEN - 250
+    mc.einfuegen(e, _bauchbinden_schatten(), 0, 0, u)
     balken = Image.new("RGBA", (int(10 * u) + 1, 150), LILA + (255,))
     mc.einfuegen(e, balken, x, y, u)
     dx = -30 * (1 - u)
@@ -207,13 +221,6 @@ def szene_figuren(e, t, d):
     mc.einfuegen(e, b, TW / 2 - b.width / 2, BALKEN + 170, v)
 
 
-def szene_abschied(e, t, d):
-    a = blende(t, d, ein=.15, aus=.6)
-    vollbild(e, "ballon-abendrot", t, d, z=(1.0, 1.09), fx=(.25, -.1), alpha=a)
-    staub(e, t, a * .8)
-    mc.einfuegen(e, VIGNETTE, 0, 0, a * .8)
-
-
 def szene_logo(e, t, d):
     g = aus_kubisch(phase(t, .02, .7))
     lw = 1000 * (1.08 - .08 * g)
@@ -268,57 +275,41 @@ class Trailer(Film):
         return f
 
 
-# Erster schneller Block: ein Schnitt je zwei Schlaege
-BLOCK1 = [
+# Jedes Bild kommt genau einmal vor (es gibt neun Shader-Aufnahmen).
+# Auftakt: drei Bilder ohne Text, je vier Schlaege
+AUFTAKT = [
     ("ballon-abendrot", (1.0, 1.06), (.2, -.2)),
     ("kirschhain", (1.08, 1.0), (0, .2)),
-    ("pilzland-nacht", (1.0, 1.07), (-.3, .1)),
-    ("rankenbruecken", (1.07, 1.0), (.2, -.2)),
-    ("wuestenhaus", (1.0, 1.06), (0, .3)),
-    ("dschungelinsel", (1.06, 1.0), (.3, 0)),
-    ("blasser-garten", (1.0, 1.07), (-.2, .2)),
-    ("wald", (1.07, 1.0), (0, -.2)),
+    ("rankenbruecken", (1.0, 1.07), (-.2, .2)),
 ]
 
 FEATURES = [  # Bild, Titel, Zeile, Zoom, Schwenk
-    ("kirschhain", L("Deine eigene Inselwelt", "Your own island world"),
+    ("dschungelinsel", L("Deine eigene Inselwelt", "Your own island world"),
      L("auf einem eigenen Server – mit bis zu 25 Freunden", "on a server of its own – with up to 25 friends"),
      (1.0, 1.08), (-.3, .3)),
-    ("rankenbruecken", L("Eine Welt, die wächst", "A world that grows"),
+    ("blasser-garten", L("Eine Welt, die wächst", "A world that grows"),
      L("neue Inseln entstehen beim Erkunden", "new islands appear as you explore"), (1.08, 1.0), (.3, -.3)),
     ("pilzland-nacht", L("Custom-Biome", "Custom biomes"),
      L("mit Mana im Skilltree freischalten", "unlocked with Mana in the skill tree"), (1.0, 1.08), (.3, -.2)),
     ("wuestenhaus", L("Dörfer, Ruinen, Höhlen", "Villages, ruins, caves"),
-     L("und Erze, die sich lohnen", "and ores worth mining"), (1.08, 1.0), (-.2, .3)),
-    ("blasser-garten", L("Quests & Erfolge", "Quests & achievements"),
-     L("jeden Tag etwas Neues", "something new every day"), (1.0, 1.08), (.2, -.2)),
+     L("Quests und Erfolge an jeder Ecke", "quests and achievements everywhere"), (1.08, 1.0), (-.2, .3)),
     ("wald", L("Java & Bedrock", "Java & Bedrock"),
-     L("zusammen auf einem Server", "together on one server"), (1.08, 1.0), (-.3, .2)),
-]
-
-# Zweiter Block: Detailausschnitte, ein Schnitt je Schlag (Zoom bis 1,15 bleibt ohne Hochskalieren)
-BLOCK2 = [
-    ("pilzland-nacht", .4, .1), ("kirschhain", -.2, -.6), ("dschungelinsel", -.5, -.2), ("wuestenhaus", .3, -.4),
-    ("rankenbruecken", .1, .2), ("ballon-abendrot", -.1, -.7), ("wald", .5, .3), ("blasser-garten", 0, -.2),
+     L("zusammen auf einem Server", "together on one server"), (1.0, 1.08), (-.3, .2)),
 ]
 
 SZENEN = [dict(dauer=4.0, zeichne=szene_kalt, ton=[(2.0, "sfx:swell", .7)])]
-SZENEN += [dict(dauer=2 * SCHLAG, zeichne=schnitt(n, z=z, fx=fx)) for n, z, fx in BLOCK1]
-SZENEN[1]["ton"] = [(0, "sfx:boom", .9), (.5, "mala:island")]
+SZENEN += [dict(dauer=4 * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.03, staerke=.3)) for n, z, fx in AUFTAKT]
+SZENEN[1]["ton"] = [(0, "sfx:boom", .9)]
 SZENEN += [dict(dauer=4 * SCHLAG, zeichne=szene_titel, ton=[(0, "sfx:boom", 1.1), (1.0, "sfx:boom", .8)])]
-SZENEN += [dict(dauer=4 * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.04, titel=ti, unter=un, staerke=.25))
+SZENEN += [dict(dauer=6 * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.03, titel=ti, unter=un, staerke=.25))
            for n, ti, un, z, fx in FEATURES]
-SZENEN += [dict(dauer=8 * SCHLAG, zeichne=szene_figuren,
-                ton=[(.1 + i * SCHLAG, "sfx:pop", .6) for i in range(4)] + [(2.2, "pool:goblin/frage_1", .6)])]
-SZENEN += [dict(dauer=SCHLAG, zeichne=schnitt(n, z=(1.15, 1.12), fx=(x, x), fy=y, stoss=.05, staerke=.5))
-           for n, x, y in BLOCK2]
-SZENEN += [dict(dauer=10 * SCHLAG, zeichne=szene_abschied,
-                ton=[(0, "sfx:boom", .7), (.3, "mala:farewell"), (3.0, "sfx:swell", .9)])]
+SZENEN += [dict(dauer=10 * SCHLAG, zeichne=szene_figuren,
+                ton=[(.1 + i * SCHLAG, "sfx:pop", .6) for i in range(4)] + [(2.2, "pool:goblin/frage_1", .6),
+                                                                           (3.0, "sfx:swell", .9)])]
 SZENEN += [dict(dauer=16 * SCHLAG, zeichne=szene_logo,
                 ton=[(0, "sfx:boom", 1.3), (.05, "sfx:chime", .7), (1.0, "sfx:erfolg", .6)])]
 
-_ende_beat = sum(sz["dauer"] for sz in SZENEN[:-2])  # Beat bis zum Abschied
-_logo = sum(sz["dauer"] for sz in SZENEN[:-1])
+_logo = sum(sz["dauer"] for sz in SZENEN[:-1])  # Beat und Musik laufen bis zum Logo
 FILM = Trailer("trailer", SZENEN, wortmarke=False,
-               musik=dict(tonart="D", tempo=120, stimmung="hell", ab=4.0, ende=_logo, beat=True, beat_bis=_ende_beat))
-FILM.poster = 4.0 + 12 * 2 * SCHLAG + 1.2  # mitten in der ersten Feature-Einblendung
+               musik=dict(tonart="D", tempo=120, stimmung="hell", ab=4.0, ende=_logo, beat=True))
+FILM.poster = 4.0 + 6 * 2 * SCHLAG + 2 * SCHLAG + 1.5  # erste Feature-Einblendung
