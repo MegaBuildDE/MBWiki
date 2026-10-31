@@ -163,15 +163,37 @@ FOLGE = [
 MUSTER = [0, 1, 2, 3, 2, 1, 4, 2]  # Arpeggio-Reihenfolge durch die Akkordtoene (Achtel)
 
 
-def musik(dauer, tonart="D", tempo=84, stimmung="hell"):
+def kick():
+    """Tonaler Kick: kurzer, schnell fallender Sinus (kein Rauschen)."""
+    d = .45
+    out, ph = [], 0.0
+    for k in range(int(d * SR)):
+        t = k / SR
+        ph += 2 * math.pi * (46 + 110 * math.exp(-t / .035)) / SR
+        out.append(math.sin(ph) * math.exp(-t / .16) * min(1, t / .002))
+    return out
+
+
+def musik(dauer, tonart="D", tempo=84, stimmung="hell", ab=0.0, ende=None, beat=False, beat_ab=None, beat_bis=None):
+    """Musikbett. ab/ende: wann die Musik einsetzt und aufhoert (Sekunden, auf Taktgrenzen legen).
+    beat=True legt Kick auf jede Zaehlzeit und pumpenden Achtel-Bass darunter (zwischen beat_ab und beat_bis)."""
     n = int((dauer + 3) * SR)
     stereo = ([0.0] * n, [0.0] * n)
     grund = TONARTEN.get(tonart, 50)
     schlag = 60 / tempo
     takt = 4 * schlag
     rnd = random.Random(7)
-    t, i = 0.0, 0
-    while t < dauer + 1:
+    ende = dauer + 1 if ende is None else ende
+    beat_ab = ab if beat_ab is None else beat_ab
+    beat_bis = ende if beat_bis is None else beat_bis
+    k_kick = kick() if beat else None
+    t, i = ab, 0
+    while t < ende - 1e-6:
+        if beat and beat_ab - 1e-6 <= t < beat_bis - 1e-6:
+            bass_off = FOLGE[i % len(FOLGE)][0]
+            for b in range(4):
+                addiere(stereo, k_kick, t + b * schlag, .42)
+                addiere(stereo, bass(midi_hz(grund + bass_off - 12), schlag * .3), t + (b + .5) * schlag, .1)
         bass_off, toene = FOLGE[i % len(FOLGE)]
         # Flaeche: drei obere Akkordtoene, leicht verteilt
         for j, ton in enumerate(toene[1:4]):
@@ -180,7 +202,7 @@ def musik(dauer, tonart="D", tempo=84, stimmung="hell"):
         for b in (0, 2):
             addiere(stereo, bass(midi_hz(grund + bass_off - 12), 2 * schlag * .95), t + b * schlag, .16)
         # Spieluhr ab dem zweiten Takt
-        if t >= takt:
+        if t >= ab + takt:
             for k, m in enumerate(MUSTER):
                 ton = toene[m] + 12 + (12 if stimmung == "hell" and k == 6 else 0)
                 laut = .07 if k % 2 == 0 else .05

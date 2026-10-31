@@ -8,21 +8,22 @@ Trailer und die passenden Bilder.
 
 | Was | Datei |
 | --- | --- |
-| Trailer (DE, 1:10, 27 MB) | `.gitbook/assets/videos/trailer.mp4` |
+| Trailer (DE, 0:47, WQHD 2560 × 1440) | `.gitbook/assets/videos/trailer.mp4` |
 | Trailer (EN) | `.gitbook/assets/videos/trailer-en.mp4` |
 | Vorschaubild | `.gitbook/assets/videos/trailer.jpg` |
-| Bauplan des Trailers | `tools/videos/filme/trailer.py` (`python3 bauen.py trailer`) |
+| Bauplan des Trailers | `tools/videos/filme/trailer.py` (`python3 bauen.py trailer --crf 16`) |
 
-Bilder in dieser Reihenfolge anhängen (Discord zeigt bis zu 10 pro Nachricht):
+Bilder in voller Auflösung (2940 px, Shader-Originale) in dieser Reihenfolge anhängen
+(Discord zeigt bis zu 10 pro Nachricht), alle in `tools/videos/trailer-bilder/`:
 
-1. `.gitbook/assets/screenshots/mbsky-luftschiff.webp` – Malas Luftschiff
-2. `.gitbook/assets/screenshots/mbsky-ballon-abendrot.webp` – Ballon im Abendrot
-3. `.gitbook/assets/screenshots/mbsky-rankenbruecken.webp` – Rankenbrücken zwischen Inseln
-4. `.gitbook/assets/screenshots/mbsky-kirschhain.webp` – Kirschhain
-5. `.gitbook/assets/screenshots/mbsky-pilzland-nacht.webp` – Pilzland bei Nacht
-6. `.gitbook/assets/screenshots/mbsky-dschungelinsel.webp` – Dschungelinsel
-7. `.gitbook/assets/screenshots/mbsky-wuestenhaus.webp` – Wüstenhaus
-8. `.gitbook/assets/screenshots/mbsky-blasser-garten.webp` – Blasser Garten
+1. `ballon-abendrot.webp` – Ballon im Abendrot
+2. `kirschhain.webp` – Kirschhain
+3. `pilzland-nacht.webp` – Pilzland bei Nacht
+4. `rankenbruecken.webp` – Rankenbrücken zwischen Inseln
+5. `wuestenhaus.webp` – Wüstenhaus
+6. `dschungelinsel.webp` – Dschungelinsel
+7. `blasser-garten.webp` – Blasser Garten
+8. `wald.webp` – Wald
 
 > **Vor dem Posten klären:** Wie läuft die Beta-Anmeldung genau? Im Text steht
 > der Discord (`megabuild.de/dc`) als Anmeldeweg, Platzhalter: `#beta-anmeldung`.
@@ -66,7 +67,7 @@ Mehr über alle Systeme im Wiki. Wir sehen uns über den Wolken. ☁️
 ## 👀 Sneak Peeks
 Ein paar Eindrücke direkt vom Testserver – alles echte Ingame-Bilder:
 
-🎈 Malas Luftschiff ankert über deiner Startinsel
+🎈 Ein Ballon im Abendrot über den Inseln
 🌿 Rankenbrücken verbinden die Inseln
 🌸 Kirschhain, 🍄 Pilzland bei Nacht, 🏜️ Wüste, 🌴 Dschungel – und viele Biome mehr
 🛡️ Und als Ausblick: **Clans** mit Wochenaufträgen, Clan-Stufen und einer eigenen Clan-Insel sind in Planung.

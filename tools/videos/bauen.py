@@ -43,6 +43,7 @@ def worker(name, sprache, von, bis, ausgabe):
     film = lade_film(name, sprache)
     ton.untertitel(film, sprache)
     from basis import W, H, FPS
+    W, H = getattr(film, "groesse", (W, H))
     ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgra", "-s", f"{W}x{H}",
                            "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "10",
                            "-pix_fmt", "yuv420p", ausgabe], stdin=subprocess.PIPE)
@@ -75,6 +76,7 @@ def main():
     film = lade_film(a.film, a.sprache)
     from basis import W, H, FPS
     from PIL import Image
+    W, H = getattr(film, "groesse", (W, H))  # ein Film kann groesser als 1080p sein (Trailer: WQHD)
     test = os.path.join(HIER, "test")
 
     if a.poster:
