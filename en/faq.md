@@ -215,7 +215,7 @@ From **Warpett eggs**, which you find as loot in chests, barrels, decorated pots
 
 <summary>Are there clans?</summary>
 
-Not yet – the clan system is being planned. The [preview](clans.md) shows what's planned. Feedback on it is welcome on the [Discord](discord.md).
+Yes. With `/clan` you found a clan or join one – with clan chat across every server, visits to each other's islands, a weekly task and ten clan levels. Everything about it is under [Clans](clans.md).
 
 </details>
 

@@ -27,7 +27,7 @@ If you've both sent each other a request, you're friends right away.
 
 ## Answering requests
 
-`/friend requests` shows your pending requests. You can accept or decline them there. Players you decline don't get a message about it.
+`/friend requests` shows your pending requests. Under **To you**, left-click accepts and right-click declines. Players you decline don't get a message about it. Under **From you**, one click withdraws a request of your own.
 
 If you have a pending request when you log in, a chat message lets you know.
 
@@ -35,18 +35,30 @@ Players you've blocked in your [mailbox](messages.md) can't send you a friend re
 
 ## Your friends list
 
-In `/friend` you can see for each friend:
+In `/friend` you see for each friend **where** they're playing right now – for example on which island – or **when** they were last online, and since when you've been friends. **Favourites** are at the top of the list and carry a star. At the top left, the **Clan** card takes you to your [clan](clans.md).
 
-* **which server** they're currently playing on
-* **since when** you've been friends
+Clicking a friend opens their card:
 
-When a friend comes online, you get a short chat message.
+| Button | What it does |
+| ------ | ------------ |
+| **Visit their island** | To their island, if they give friends access |
+| **Write a letter** | A letter to their [mailbox](messages.md) |
+| **Invite to the clan** | Invites them to your clan. If they're already in one, you see its profile |
+| **Mark as favourite** | They're at the top of your list |
+| **End the friendship** | With a confirmation. To be friends again, it takes a new request |
 
-**Ending a friendship:** Right-click the friend's head twice.
+### Settings
+
+Under **Settings** in `/friend` you decide:
+
+* **Requests from** – everyone, only your clan or nobody
+* **Online notices** – a line when a friend comes online
+* **Show where I am** – whether friends and your clan see where you are
+* **Island access for friends** – what friends may do on your island
 
 ## Bringing friends to your island
 
-When you invite members to your island, your friends list is shown first.
+With **Island access for friends**, all your friends can come onto your island without you inviting each of them: as visitors, helpers or builders. At the start it's set to nobody. You invite individual friends as members – your friends list is shown first.
 
 {% content-ref url="members.md" %}
 [members.md](members.md)
@@ -54,5 +66,6 @@ When you invite members to your island, your friends list is shown first.
 
 ## Related pages
 
+* [Clans](clans.md)
 * [Messages & Mail](messages.md)
 * [Commands](commands.md)

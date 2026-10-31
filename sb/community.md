@@ -23,7 +23,7 @@ Events, Aktionen und Neuerungen kündigen wir im [Discord](../ag/discord.md) an.
 * [Nachrichten & Post](../ag/nachrichten.md) – `/msg` und `/mail`
 * [Mitglieder & Rechte](mitglieder.md) – Mitspieler auf deine Insel holen
 * [Mana & Ruby](eco.md) – Ruby mit `/pay` verschicken
-* [Clans (Vorschau)](clans.md) – das geplante Clansystem
+* [Clans](clans.md) – Clan-Chat, Besuche und gemeinsame Ziele
 
 ## Discord
 

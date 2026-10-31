@@ -30,7 +30,7 @@
 * [Erfolge](sb/erfolge.md)
 * [HUD & Statistiken](sb/hud.md)
 * [Community & Events](sb/community.md)
-* [Clans (Vorschau)](sb/clans.md)
+* [Clans](sb/clans.md)
 
 ## ❓ Hilfe <a href="#more" id="more"></a>
 
@@ -64,7 +64,7 @@
 * [Achievements](en/achievements.md)
 * [HUD & Statistics](en/hud.md)
 * [Community & Events](en/community.md)
-* [Clans (Preview)](en/clans.md)
+* [Clans](en/clans.md)
 * [FAQ](en/faq.md)
 * [Legal](en/legal.md)
 

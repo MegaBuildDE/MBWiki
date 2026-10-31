@@ -70,7 +70,7 @@ Bedrock zeigt dieselben Zahlen, mit ein paar Unterschieden:
 | `/sky stats` | Deine Werte im Chat |
 | `/sky global` | Die Werte des ganzen Servers im Chat |
 
-Auf fremden Inseln brauchst du dafür das Recht **Statistiken**. Die Spielzeit deiner Mitspieler auf deiner Insel steht in der Mitgliederliste.
+Auf fremden Inseln brauchst du dafür das Recht **Statistik**. Die Spielzeit deiner Mitspieler auf deiner Insel steht in der Mitgliederliste.
 {% endtab %}
 {% endtabs %}
 

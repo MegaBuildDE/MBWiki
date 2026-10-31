@@ -47,7 +47,7 @@ Kurze Filme mit Ton, die dir die wichtigsten Systeme zeigen:
 | [Dein Start](sb/start.md) | Mit Mala von der Lobby bis zu deinem ersten Bewohner |
 | [Deine Insel lebt](sb/bewohner.md) | KI-Bewohner und Forestlinge |
 | [Mana & Biome](sb/skilltree.md) | Wie du Mana verdienst und neue Biome freischaltest |
-| [Clans – ein erster Blick](sb/clans.md) | Vorschau auf das geplante Clansystem |
+| [Clans – ein erster Blick](sb/clans.md) | Was dein Clan dir bringt |
 
 ## Außerhalb des Wikis
 

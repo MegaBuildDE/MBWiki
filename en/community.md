@@ -23,7 +23,7 @@ We announce events, promotions and new features on the [Discord](discord.md).
 * [Messages & Mail](messages.md) – `/msg` and `/mail`
 * [Members & rights](members.md) – bring fellow players to your island
 * [Mana & Ruby](economy.md) – send Ruby with `/pay`
-* [Clans (preview)](clans.md) – the planned clan system
+* [Clans](clans.md) – clan chat, visits and shared goals
 
 ## Discord
 

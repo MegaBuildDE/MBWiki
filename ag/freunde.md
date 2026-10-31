@@ -27,7 +27,7 @@ Habt ihr euch gegenseitig eine Anfrage geschickt, seid ihr sofort befreundet.
 
 ## Anfragen beantworten
 
-Mit `/friend requests` siehst du deine offenen Anfragen. Dort nimmst du sie an oder lehnst sie ab. Wer abgelehnt wird, bekommt dazu keine Nachricht.
+Mit `/friend requests` siehst du deine offenen Anfragen. **An dich** nimmst du mit Linksklick an und lehnst mit Rechtsklick ab. Wer abgelehnt wird, bekommt dazu keine Nachricht. Unter **Von dir** ziehst du eigene Anfragen mit einem Klick zurück.
 
 Hast du beim Einloggen eine offene Anfrage, weist dich eine Nachricht im Chat darauf hin.
 
@@ -35,18 +35,30 @@ Spieler, die du in deiner [Post](nachrichten.md) blockiert hast, können dir kei
 
 ## Deine Freundesliste
 
-In `/friend` siehst du bei jedem Freund:
+In `/friend` siehst du bei jedem Freund, **wo** er gerade spielt – zum Beispiel auf welcher Insel – oder **wann** er zuletzt online war, und seit wann ihr befreundet seid. **Favoriten** stehen oben in der Liste und tragen einen Stern. Oben links führt die Karte **Clan** zu deinem [Clan](../sb/clans.md).
 
-* **auf welchem Server** er gerade spielt
-* **seit wann** ihr befreundet seid
+Ein Klick auf einen Freund öffnet seine Karte:
 
-Kommt ein Freund online, bekommst du eine kurze Nachricht im Chat.
+| Knopf | Was er tut |
+| ----- | ---------- |
+| **Insel besuchen** | Auf seine Insel, wenn er Freunden Zugang gibt |
+| **Brief schreiben** | Ein Brief in seine [Post](nachrichten.md) |
+| **In den Clan einladen** | Lädt ihn in deinen Clan ein. Ist er schon in einem, siehst du dessen Profil |
+| **Als Favorit markieren** | Er steht oben in deiner Liste |
+| **Freundschaft beenden** | Mit Rückfrage. Um wieder Freunde zu sein, braucht es eine neue Anfrage |
 
-**Freundschaft beenden:** Klicke zweimal mit der rechten Maustaste auf den Kopf des Freundes.
+### Einstellungen
+
+Unter **Einstellungen** in `/friend` legst du fest:
+
+* **Anfragen von** – allen, nur deinem Clan oder niemandem
+* **Online-Meldungen** – eine Zeile, wenn ein Freund online kommt
+* **Ort zeigen** – ob Freunde und dein Clan sehen, wo du gerade bist
+* **Inselzugang für Freunde** – was Freunde auf deiner Insel dürfen
 
 ## Freunde auf deine Insel holen
 
-Beim Einladen von Mitgliedern auf deine Insel wird dir zuerst deine Freundesliste angezeigt.
+Mit dem **Inselzugang für Freunde** kommen alle deine Freunde auf deine Insel, ohne dass du sie einzeln einlädst: als Besucher, Helfer oder Mitbauer. Von Anfang an steht er auf „niemand“. Einzelne Freunde lädst du als Mitglied ein – dabei wird dir zuerst deine Freundesliste angezeigt.
 
 {% content-ref url="../sb/mitglieder.md" %}
 [mitglieder.md](../sb/mitglieder.md)
@@ -54,5 +66,6 @@ Beim Einladen von Mitgliedern auf deine Insel wird dir zuerst deine Freundeslist
 
 ## Verwandte Seiten
 
+* [Clans](../sb/clans.md)
 * [Nachrichten & Post](nachrichten.md)
 * [Befehle](befehle.md)

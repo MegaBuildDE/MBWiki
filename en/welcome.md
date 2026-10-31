@@ -47,7 +47,7 @@ Short films with sound that show you the most important systems:
 | [Your start](start.md) | With Mala from the lobby to your first resident |
 | [Your island is alive](residents.md) | AI residents and Forestlings |
 | [Mana & biomes](skilltree.md) | How you earn Mana and unlock new biomes |
-| [Clans – a first look](clans.md) | Preview of the planned clan system (in German) |
+| [Clans – a first look](clans.md) | What your clan brings you (in German) |
 
 ## Outside the wiki
 

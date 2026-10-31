@@ -50,7 +50,7 @@ The new biome appears in the next area you explore – with new resources, anima
 | [Getting started](start.md) | From the lobby to your first resident |
 | [Your island](island.md) | Your own server, menus, dying, deleting |
 | [The island world](world.md) | How new islands appear – areas, caves, ores, structures |
-| [Members & rights](members.md) | Up to 25 fellow players with adjustable rights |
+| [Members & rights](members.md) | Up to 25 fellow players, rights, access for clan and friends |
 | [Mana & Ruby](economy.md) | Mana for unlocking, Ruby for trading |
 | [Quests](quests.md) | Daily, weekly and bonus quests for Mana |
 | [Skill tree & biomes](skilltree.md) | Crystal paths full of custom biomes |
@@ -60,7 +60,7 @@ The new biome appears in the next area you explore – with new resources, anima
 | [Resources & farming](farming.md) | Ores, Mana ore, generator, animals, monsters |
 | [Achievements](achievements.md) | 20 achievements in the "MegaBuild Sky" tab |
 | [HUD & statistics](hud.md) | What you see on your screen |
-| [Clans (preview)](clans.md) | The planned clan system |
+| [Clans](clans.md) | Clan chat across every server, weekly task, calls for help and clan levels |
 
 {% hint style="info" %}
 The numbers in this wiki are the server's current values. They may still change with updates.

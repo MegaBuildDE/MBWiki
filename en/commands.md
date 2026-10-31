@@ -18,8 +18,22 @@ You reach most features through menus. These commands take you there directly. S
 | `/sky island` | Info about your island |
 | `/sky stats` | Your statistics |
 | `/sky global` | Statistics for the whole server |
+| `/sky visit <player>` | To a friend's or clan member's island, if they give you access – from the lobby too |
 
-The `/sky …` commands and `/quest` only exist **on the islands**. In the lobby, `/sky` always opens the Skyblock menu. On other players' islands, `/sky stats` and `/sky global` require the **Statistics** permission.
+The `/sky …` commands and `/quest` only exist **on the islands**, except `/sky visit`. Otherwise, in the lobby `/sky` always opens the Skyblock menu. On other players' islands, `/sky stats` and `/sky global` require the **Statistics** right.
+
+## Clans
+
+| Command | What it does |
+| ------- | ------------ |
+| `/clan` | Your clan – or find and found one. Also `/clans` |
+| `/c <text>` | One line to the clan chat. `/c` on its own switches clan chat on and off. Also `#` in front of a message |
+| `/clan visit <player>` | To a clan member's island |
+| `/clan home` | Back to your own island |
+| `/clan meet` | Invite your clan to your island |
+| `/clan help` | All clan commands |
+
+All commands are listed under [Clans](clans.md#all-commands).
 
 ## AI residents
 

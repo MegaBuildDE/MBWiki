@@ -67,6 +67,22 @@ Dazu kommt ein Erfolg **für jeden ganzen Kristall-Pfad**:
 | **Wochenwerk** | Deine erste Wochenquest erledigen |
 | **Questmeister** | 50 Quests erledigen |
 
+### Clan
+
+Dazu kommen **8 Erfolge** für [Clans](clans.md):
+
+| Erfolg | Wofür |
+| ------ | ----- |
+| **Gemeinsam stark** | Mitglied eines Clans werden |
+| **Bronze** | Deine erste Bronze-Belohnung aus dem Wochenauftrag |
+| **Silber** | Deine erste Silber-Belohnung aus dem Wochenauftrag |
+| **Gold** | Deine erste Gold-Belohnung aus dem Wochenauftrag |
+| **Gastfreundlich** | Ein Clanmitglied auf deiner Insel empfangen |
+| **Helfende Hand** | Zum ersten Mal für deine Hilfe bei einem Hilferuf belohnt werden |
+| *versteckt* | Zwei Erfolge rund um die Clan-Insel – erscheinen, sobald sie freigeschaltet ist |
+
+Verdienst du einen Clan-Erfolg, während du offline bist, bekommst du ihn samt Mana beim nächsten Betreten einer Insel.
+
 ## Gut zu wissen
 
 * **Gelandet** bekommt der Besitzer der Insel – nur er erlebt den Vorspann.
@@ -78,3 +94,4 @@ Dazu kommt ein Erfolg **für jeden ganzen Kristall-Pfad**:
 * [Skilltree & Biome](skilltree.md)
 * [Quests](quests.md)
 * [Mana & Ruby](eco.md)
+* [Clans](clans.md)

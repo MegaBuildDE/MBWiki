@@ -68,6 +68,22 @@ On top of that, there's an achievement **for every complete crystal path**:
 | **A Week's Work** | *Wochenwerk* | Complete your first weekly quest |
 | **Quest Master** | *Questmeister* | Complete 50 quests |
 
+### Clan
+
+On top of that there are **8 achievements** for [clans](clans.md):
+
+| Achievement | On Bedrock | What for |
+| ----------- | ---------- | -------- |
+| **Stronger Together** | *Gemeinsam stark* | Become a member of a clan |
+| **Bronze** | *Bronze* | Your first bronze reward from the weekly task |
+| **Silver** | *Silber* | Your first silver reward from the weekly task |
+| **Gold** | *Gold* | Your first gold reward from the weekly task |
+| **Hospitable** | *Gastfreundlich* | Welcome a clan member to your island |
+| **Helping Hand** | *Helfende Hand* | Get rewarded for the first time for helping with a call for help |
+| *hidden* | *hidden* | Two achievements around the clan island – they appear as soon as it's unlocked |
+
+If you earn a clan achievement while you're offline, you get it, Mana included, the next time you enter an island.
+
 ## Good to know
 
 * **Touchdown** goes to the island owner – only they experience the intro.
@@ -79,3 +95,4 @@ On top of that, there's an achievement **for every complete crystal path**:
 * [Skill tree & biomes](skilltree.md)
 * [Quests](quests.md)
 * [Mana & Ruby](economy.md)
+* [Clans](clans.md)

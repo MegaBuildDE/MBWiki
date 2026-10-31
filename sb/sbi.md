@@ -50,7 +50,7 @@ Das neue Biom erscheint in der nächsten Gegend, die du erkundest – mit neuen 
 | [Erste Schritte](start.md) | Von der Lobby bis zu deinem ersten Bewohner |
 | [Deine Insel](insel.md) | Eigener Server, Menüs, Sterben, Löschen |
 | [Die Inselwelt](welt.md) | Wie neue Inseln entstehen – Gegenden, Höhlen, Erze, Bauwerke |
-| [Mitglieder & Rechte](mitglieder.md) | Bis zu 25 Mitspieler mit einstellbaren Rechten |
+| [Mitglieder & Rechte](mitglieder.md) | Bis zu 25 Mitspieler, Rechte, Zugang für Clan und Freunde |
 | [Mana & Ruby](eco.md) | Mana zum Freischalten, Ruby zum Handeln |
 | [Quests](quests.md) | Tages-, Wochen- und Bonusquests für Mana |
 | [Skilltree & Biome](skilltree.md) | Kristall-Pfade voller Custom-Biome |
@@ -60,7 +60,7 @@ Das neue Biom erscheint in der nächsten Gegend, die du erkundest – mit neuen 
 | [Ressourcen & Farming](farming.md) | Erze, Mana-Erz, Generator, Tiere, Monster |
 | [Erfolge](erfolge.md) | 20 Erfolge im Tab „MegaBuild Sky“ |
 | [HUD & Statistiken](hud.md) | Was du auf dem Bildschirm siehst |
-| [Clans (Vorschau)](clans.md) | Das geplante Clansystem |
+| [Clans](clans.md) | Clan-Chat über alle Server, Wochenauftrag, Hilferuf und Clan-Stufen |
 
 {% hint style="info" %}
 Die Zahlen in diesem Wiki sind die aktuellen Werte des Servers. Sie können sich mit Updates noch ändern.

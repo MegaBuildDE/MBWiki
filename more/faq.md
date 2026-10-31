@@ -215,7 +215,7 @@ Aus **Warpett-Eiern**, die du als Beute in Truhen, Fässern, Töpfen und verdäc
 
 <summary>Gibt es Clans?</summary>
 
-Noch nicht – das Clansystem ist in Planung. Was geplant ist, zeigt die [Vorschau](../sb/clans.md). Feedback dazu gern im [Discord](../ag/discord.md).
+Ja. Mit `/clan` gründest du einen Clan oder trittst einem bei – mit Clan-Chat über alle Server, Besuchen auf den Inseln der anderen, Wochenauftrag und zehn Clan-Stufen. Alles dazu steht unter [Clans](../sb/clans.md).
 
 </details>
 

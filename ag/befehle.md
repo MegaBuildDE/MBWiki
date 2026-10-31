@@ -18,8 +18,22 @@ Die meisten Funktionen erreichst du über Menüs. Diese Befehle bringen dich dir
 | `/sky island` | Infos zu deiner Insel |
 | `/sky stats` | Deine Statistiken |
 | `/sky global` | Statistiken des ganzen Servers |
+| `/sky visit <Spieler>` | Auf die Insel eines Freundes oder Clanmitglieds, wenn er dir Zugang gibt – auch aus der Lobby |
 
-Die Befehle mit `/sky …` und `/quest` gibt es nur **auf den Inseln**. In der Lobby öffnet `/sky` immer das Skyblock-Menü. `/sky stats` und `/sky global` brauchen auf fremden Inseln das Recht **Statistiken**.
+Die Befehle mit `/sky …` und `/quest` gibt es nur **auf den Inseln**, außer `/sky visit`. In der Lobby öffnet `/sky` sonst immer das Skyblock-Menü. `/sky stats` und `/sky global` brauchen auf fremden Inseln das Recht **Statistik**.
+
+## Clans
+
+| Befehl | Was er macht |
+| ------ | ------------ |
+| `/clan` | Dein Clan – oder Clan finden und gründen. Auch `/clans` |
+| `/c <Text>` | Eine Zeile in den Clan-Chat. `/c` allein schaltet den Clan-Chat an und aus. Auch `#` vor der Nachricht |
+| `/clan visit <Spieler>` | Auf die Insel eines Clanmitglieds |
+| `/clan home` | Zurück auf deine eigene Insel |
+| `/clan meet` | Deinen Clan zu dir auf die Insel einladen |
+| `/clan help` | Alle Clan-Befehle |
+
+Alle Befehle stehen unter [Clans](../sb/clans.md#alle-befehle).
 
 ## KI-Bewohner
 
@@ -76,6 +90,7 @@ Mana lässt sich nicht verschicken – nur Ruby.
 ## Verwandte Seiten
 
 * [Freunde](freunde.md)
+* [Clans](../sb/clans.md)
 * [Nachrichten & Post](nachrichten.md)
 * [Mana & Ruby](../sb/eco.md)
 * [Discord](discord.md)

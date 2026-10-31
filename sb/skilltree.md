@@ -96,7 +96,7 @@ Antippen kauft das Biom sofort zum angezeigten Preis – ohne weitere Nachfrage.
 {% endstepper %}
 
 {% hint style="warning" %}
-**Kaufen dürfen** der Besitzer und Mitglieder mit dem Recht **Einstellungen**. Bezahlt wird immer vom Konto **dessen, der klickt** – und nur auf der Insel selbst.
+**Kaufen dürfen** der Besitzer und Mitglieder mit dem Recht **Skilltree**. Bezahlt wird immer vom Konto **dessen, der klickt** – und nur auf der Insel selbst.
 {% endhint %}
 
 ## Biomquests

@@ -96,7 +96,7 @@ Tapping buys the biome right away at the price shown – without asking again. W
 {% endstepper %}
 
 {% hint style="warning" %}
-**Who can buy:** the owner and members with the **Settings** right. The Mana always comes from the account of **whoever clicks** – and only on the island itself.
+**Who can buy:** the owner and members with the **Skill tree** right. The Mana always comes from the account of **whoever clicks** – and only on the island itself.
 {% endhint %}
 
 ## Biome quests
