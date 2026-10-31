@@ -7,7 +7,7 @@ schreibt aber nichts ins Spiel oder in den Pool:
 - stimmen/<sprache>/<name>.ogg      die Aufnahme
 - stimmen/manifest.json             Laenge, Text und Wortzeiten (fuer die Untertitel)
 
-Die Texte stehen in stimmen/texte.json. Aufgenommen wird nur, was fehlt oder
+Die Texte stehen in stimmen/texte.json (aufgenommen werden die Sprachen, die dort stehen). Aufgenommen wird nur, was fehlt oder
 sich geaendert hat (--alle: alles neu). Der API-Schluessel kommt wie dort aus
 ELEVENLABS_API_KEY oder dem Schluesselbund (elevenlabs-api).
 
@@ -41,7 +41,7 @@ def main():
         if a.nur and name not in a.nur:
             continue
         konfig.setdefault("regie", {})["intro.mala." + name] = z.get("regie", "")
-        for sprache in konfig["sprachen"]:
+        for sprache in [sp for sp in konfig["sprachen"] if sp in z]:
             text = z[sprache]
             schluessel = "intro.mala." + name  # nur fuer Seed und Fingerabdruck
             abdruck = werkzeug.fingerabdruck(konfig, schluessel, sprache, text)
@@ -60,6 +60,20 @@ def main():
                 json.dump(manifest, fh, ensure_ascii=False, indent=2)
                 fh.write("\n")
             print(f"  {sprache} {name}: {eintrag['ms'] / 1000:.2f} s ({quelle}, {fmt})")
+    # Zeilen und Sprachen, die es in texte.json nicht mehr gibt, fallen samt Aufnahme heraus
+    for name in list(manifest):
+        for sprache in list(manifest[name]):
+            if name not in zeilen or sprache not in zeilen[name]:
+                datei = os.path.join(ORDNER, sprache, name + ".ogg")
+                if os.path.isfile(datei):
+                    os.remove(datei)
+                del manifest[name][sprache]
+                print(f"  entfernt: {sprache} {name}")
+        if not manifest[name]:
+            del manifest[name]
+    with open(MANIFEST, "w", encoding="utf-8") as fh:
+        json.dump(manifest, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
 
 
 if __name__ == "__main__":

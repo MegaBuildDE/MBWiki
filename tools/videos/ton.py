@@ -296,16 +296,35 @@ def lade_audio_stereo(pfad):
     return [v / 32768 for v in a[0::2]], [v / 32768 for v in a[1::2]]
 
 
-def musik_dateien(dauer, stuecke, pegel=1.0):
-    """Fertige Musikstuecke ins Bett legen: [(start_s, pfad, lautstaerkekurve)].
+@functools.lru_cache(maxsize=8)
+def _audio(pfad):
+    return lade_audio_stereo(pfad)
 
-    Die Kurve ist [(t relativ zum Stueck, gain), ...], linear dazwischen; None = durchgehend 1."""
+
+def musik_dateien(dauer, stuecke, pegel=1.0):
+    """Fertige Musikstuecke ins Bett legen: [(start_s, pfad, lautstaerkekurve[, (von_s, bis_s)])].
+
+    Die Kurve ist [(t relativ zum Stueck, gain), ...], linear dazwischen; None = durchgehend 1.
+    Mit Ausschnitt wird nur dieser Teil gelegt (an den Kanten 40 ms weich) - so laesst sich ein
+    Stueck taktgenau verlaengern, indem ein Ausschnitt ein zweites Mal kommt."""
     n = int((dauer + 3) * SR)
     links, rechts = [0.0] * n, [0.0] * n
-    for start, pfad, kurve in stuecke:
+    for eintrag in stuecke:
+        start, pfad, kurve = eintrag[:3]
         if not os.path.isabs(pfad):
             pfad = os.path.join(os.path.dirname(os.path.abspath(__file__)), pfad)
-        l, r = lade_audio_stereo(pfad)
+        l, r = _audio(pfad)
+        if len(eintrag) > 3:
+            von, bis = int(eintrag[3][0] * SR), int(eintrag[3][1] * SR)
+            rand = int(.04 * SR)
+            l, r = list(l[von:bis]), list(r[von:bis])
+            for k in range(min(rand, len(l))):
+                f = k / rand
+                if von > 0:
+                    l[k] *= f
+                    r[k] *= f
+                l[-1 - k] *= f
+                r[-1 - k] *= f
         i0 = int(start * SR)
         for k in range(min(len(l), n - i0)):
             g = pegel

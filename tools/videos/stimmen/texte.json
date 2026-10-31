@@ -1,30 +1,49 @@
 {
-  "_hinweis": "Malas Zeilen nur fuer den Trailer (nicht im Spiel). Aufnehmen mit: python3 trailer_stimme.py. Regie in eckigen Klammern wird nicht gesprochen.",
+  "_hinweis": "Malas Zeilen nur fuer den Trailer (nicht im Spiel), nur Deutsch. Aufnehmen mit: python3 trailer_stimme.py. Regie in eckigen Klammern wird nicht gesprochen. Feature-Zeilen muessen in 3 s passen (eine Einblendung).",
   "zeilen": {
     "trailer-nichts": {
       "regie": "[quietly, tense]",
-      "de": "Man hat uns gesagt, hier oben gibt es nichts mehr.",
-      "en": "They told us there was nothing left up here."
+      "de": "Man hat uns gesagt, hier oben gibt es nichts mehr."
     },
     "trailer-geirrt": {
       "regie": "[with a confident smirk]",
-      "de": "Man hat sich geirrt.",
-      "en": "They were wrong."
+      "de": "Man hat sich geirrt."
     },
-    "trailer-welt": {
-      "regie": "[excited, building energy]",
-      "de": "Jede Insel eine eigene Welt. Und jede Welt wächst – mit dir.",
-      "en": "Every island its own world. And every world grows – with you."
+    "trailer-inseln": {
+      "regie": "[in awe, warmly]",
+      "de": "Inseln, so weit das Auge reicht – und jede wartet nur auf dich."
+    },
+    "trailer-server": {
+      "regie": "[excited]",
+      "de": "Deine Insel – auf deinem eigenen Server."
+    },
+    "trailer-waechst": {
+      "regie": "[excited]",
+      "de": "Und mit jedem Schritt wächst deine Welt."
+    },
+    "trailer-biome": {
+      "regie": "[excited]",
+      "de": "Sammle Mana. Schalte neue Biome frei."
+    },
+    "trailer-doerfer": {
+      "regie": "[mysteriously]",
+      "de": "Dörfer, Ruinen, tiefe Höhlen – entdecke sie alle."
+    },
+    "trailer-zusammen": {
+      "regie": "[cheerfully]",
+      "de": "Java oder Bedrock? Egal – wir spielen zusammen."
     },
     "trailer-allein": {
       "regie": "[playfully]",
-      "de": "Und glaub mir: Allein bist du hier oben nie.",
-      "en": "And trust me: you're never alone up here."
+      "de": "Und glaub mir: Allein bist du hier oben nie."
     },
     "trailer-bereit": {
       "regie": "[intense whisper]",
-      "de": "Mach dich bereit. Es geht bald los.",
-      "en": "Get ready. It's starting soon."
+      "de": "Mach dich bereit. Es geht bald los."
+    },
+    "trailer-beta": {
+      "regie": "[warmly, inviting]",
+      "de": "Melde dich jetzt für die Beta an. Wir sehen uns über den Wolken."
     }
   }
 }

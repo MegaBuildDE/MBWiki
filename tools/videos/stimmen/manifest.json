@@ -16,22 +16,6 @@
         2530
       ],
       "hash": "b9d64df1a525abf3"
-    },
-    "en": {
-      "ms": 2590,
-      "text": "They told us there was nothing left up here.",
-      "words": [
-        70,
-        270,
-        550,
-        790,
-        950,
-        1110,
-        1510,
-        1830,
-        2150
-      ],
-      "hash": "33b0374ee2ae082c"
     }
   },
   "trailer-geirrt": {
@@ -45,56 +29,6 @@
         1210
       ],
       "hash": "5707168f41dfed9c"
-    },
-    "en": {
-      "ms": 1710,
-      "text": "They were wrong.",
-      "words": [
-        350,
-        590,
-        910
-      ],
-      "hash": "300c120ee6ae27b6"
-    }
-  },
-  "trailer-welt": {
-    "de": {
-      "ms": 4880,
-      "text": "Jede Insel eine eigene Welt. Und jede Welt wächst – mit dir.",
-      "words": [
-        160,
-        560,
-        960,
-        1360,
-        1800,
-        2480,
-        2800,
-        3080,
-        3360,
-        4027,
-        4080,
-        4480
-      ],
-      "hash": "d2dd12001f67cdc0"
-    },
-    "en": {
-      "ms": 5380,
-      "text": "Every island its own world. And every world grows – with you.",
-      "words": [
-        100,
-        580,
-        1060,
-        1380,
-        1780,
-        2660,
-        2900,
-        3300,
-        3620,
-        4500,
-        4580,
-        4900
-      ],
-      "hash": "52854f6477b36193"
     }
   },
   "trailer-allein": {
@@ -113,21 +47,6 @@
         3040
       ],
       "hash": "f063df1d6236650b"
-    },
-    "en": {
-      "ms": 3360,
-      "text": "And trust me: you're never alone up here.",
-      "words": [
-        160,
-        480,
-        880,
-        1520,
-        2000,
-        2240,
-        2640,
-        2800
-      ],
-      "hash": "2e507b441b86370c"
     }
   },
   "trailer-bereit": {
@@ -144,18 +63,131 @@
         2130
       ],
       "hash": "6f2fb7a949ebbe19"
-    },
-    "en": {
-      "ms": 2550,
-      "text": "Get ready. It's starting soon.",
+    }
+  },
+  "trailer-inseln": {
+    "de": {
+      "ms": 5460,
+      "text": "Inseln, so weit das Auge reicht – und jede wartet nur auf dich.",
+      "words": [
+        20,
+        1140,
+        1460,
+        1900,
+        2100,
+        2500,
+        3300,
+        3460,
+        3620,
+        4020,
+        4500,
+        4740,
+        4980
+      ],
+      "hash": "0beeb860420043b2"
+    }
+  },
+  "trailer-server": {
+    "de": {
+      "ms": 3250,
+      "text": "Deine Insel – auf deinem eigenen Server.",
+      "words": [
+        80,
+        560,
+        1280,
+        1440,
+        1560,
+        2000,
+        2480
+      ],
+      "hash": "fcba490cebd20203"
+    }
+  },
+  "trailer-waechst": {
+    "de": {
+      "ms": 2940,
+      "text": "Und mit jedem Schritt wächst deine Welt.",
+      "words": [
+        137,
+        240,
+        560,
+        1040,
+        1520,
+        1880,
+        2240
+      ],
+      "hash": "1aeedd212d0a3404"
+    }
+  },
+  "trailer-biome": {
+    "de": {
+      "ms": 3160,
+      "text": "Sammle Mana. Schalte neue Biome frei.",
+      "words": [
+        200,
+        600,
+        1400,
+        1800,
+        2120,
+        2600
+      ],
+      "hash": "4402c1c4ddc2fbfd"
+    }
+  },
+  "trailer-doerfer": {
+    "de": {
+      "ms": 4950,
+      "text": "Dörfer, Ruinen, tiefe Höhlen – entdecke sie alle.",
       "words": [
         60,
-        300,
         1100,
-        1580,
-        1900
+        2060,
+        2580,
+        3500,
+        3713,
+        4140,
+        4380
       ],
-      "hash": "9a8ce92a93738a53"
+      "hash": "c570ad5fbfb46a50"
+    }
+  },
+  "trailer-zusammen": {
+    "de": {
+      "ms": 4040,
+      "text": "Java oder Bedrock? Egal – wir spielen zusammen.",
+      "words": [
+        120,
+        680,
+        1000,
+        1880,
+        2680,
+        2733,
+        2920,
+        3320
+      ],
+      "hash": "a618d3d2d4f332da"
+    }
+  },
+  "trailer-beta": {
+    "de": {
+      "ms": 4030,
+      "text": "Melde dich jetzt für die Beta an. Wir sehen uns über den Wolken.",
+      "words": [
+        80,
+        400,
+        640,
+        1000,
+        1120,
+        1360,
+        1600,
+        2240,
+        2480,
+        2720,
+        2960,
+        3200,
+        3320
+      ],
+      "hash": "3709b6b1f11007e8"
     }
   }
 }

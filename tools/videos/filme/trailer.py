@@ -272,7 +272,10 @@ class Trailer(Film):
         sz, lt = self.szene_bei(t)
         ebene = Image.new("RGBA", (TW, TH), (0, 0, 0, 0))
         sz["zeichne"](ebene, lt, sz["dauer"])
-        f.alpha_composite(ebene)
+        if sz is self.szenen[-1]:  # am Ende weich ins Schwarz
+            mc.einfuegen(f, ebene, 0, 0, 1 - ein_aus(phase(lt, sz["dauer"] - 1.6, sz["dauer"])))
+        else:
+            f.alpha_composite(ebene)
         schwarz = Image.new("RGBA", (TW, BALKEN), (0, 0, 0, 255))
         f.alpha_composite(schwarz, (0, 0))
         f.alpha_composite(schwarz, (0, TH - BALKEN))
@@ -283,57 +286,66 @@ class Trailer(Film):
         return f
 
 
-# Jedes Bild kommt genau einmal vor (es gibt neun Shader-Aufnahmen).
-# Auftakt: drei Bilder ohne Text, je vier Schlaege
+# Jedes Bild kommt genau einmal vor (es gibt neun Shader-Aufnahmen). Mala erzaehlt durchgehend:
+# jede Szene hat ihre Zeile, die Laenge der Feature-Szenen richtet sich nach Malas Satz.
 AUFTAKT = [
     ("ballon-abendrot", (1.0, 1.06), (.2, -.2)),
     ("kirschhain", (1.08, 1.0), (0, .2)),
     ("rankenbruecken", (1.0, 1.07), (-.2, .2)),
 ]
 
-FEATURES = [  # Bild, Titel, Zeile, Zoom, Schwenk
+FEATURES = [  # Bild, Titel, Zeile, Zoom, Schwenk, Malas Zeile, Schlaege
     ("dschungelinsel", L("Deine eigene Inselwelt", "Your own island world"),
      L("auf einem eigenen Server – mit bis zu 25 Freunden", "on a server of its own – with up to 25 friends"),
-     (1.0, 1.08), (-.3, .3)),
+     (1.0, 1.08), (-.3, .3), "trailer-server", 8),
     ("blasser-garten", L("Eine Welt, die wächst", "A world that grows"),
-     L("neue Inseln entstehen beim Erkunden", "new islands appear as you explore"), (1.08, 1.0), (.3, -.3)),
+     L("neue Inseln entstehen beim Erkunden", "new islands appear as you explore"), (1.08, 1.0), (.3, -.3),
+     "trailer-waechst", 7),
     ("pilzland-nacht", L("Custom-Biome", "Custom biomes"),
-     L("mit Mana im Skilltree freischalten", "unlocked with Mana in the skill tree"), (1.0, 1.08), (.3, -.2)),
+     L("mit Mana im Skilltree freischalten", "unlocked with Mana in the skill tree"), (1.0, 1.08), (.3, -.2),
+     "trailer-biome", 8),
     ("wuestenhaus", L("Dörfer, Ruinen, Höhlen", "Villages, ruins, caves"),
-     L("Quests und Erfolge an jeder Ecke", "quests and achievements everywhere"), (1.08, 1.0), (-.2, .3)),
+     L("Quests und Erfolge an jeder Ecke", "quests and achievements everywhere"), (1.08, 1.0), (-.2, .3),
+     "trailer-doerfer", 11),
     ("wald", L("Java & Bedrock", "Java & Bedrock"),
-     L("zusammen auf einem Server", "together on one server"), (1.0, 1.08), (-.3, .2)),
+     L("zusammen auf einem Server", "together on one server"), (1.0, 1.08), (-.3, .2), "trailer-zusammen", 12),
 ]
 
-# Kaltstart: ein Einschlag, alles bricht weg, Leere. Dann Herzschlag, der schneller wird, Mala leise -
-# Drop auf "Man hat sich geirrt."
-KALT = 8.0
-HERZ1 = [2.3, 3.3, 4.25, 5.1, 5.8, 6.4, 6.9, 7.3, 7.65]
+# Kaltstart: ein Einschlag, alles bricht weg, Leere. Dann Herzschlag, Mala leise, eine Atempause,
+# "Man hat sich geirrt." - und erst danach der Drop.
+KALT = 9.0
+HERZ1 = [2.3, 3.3, 4.3, 5.25, 6.1, 6.85, 7.5, 8.05, 8.5]
 SZENEN = [dict(dauer=KALT, zeichne=puls([0.0] + HERZ1),  # Einschlag auch im Bild
                ton=[(0, "datei:musik/trailer-leere.mp3", 1.0)] + [(t, "sfx:herz", .9) for t in HERZ1]
-               + [(2.4, "mala:trailer-nichts"), (5.85, "mala:trailer-geirrt")])]
+               + [(2.2, "mala:trailer-nichts"), (6.4, "mala:trailer-geirrt")])]
 SZENEN += [dict(dauer=4 * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.04, staerke=.45)) for n, z, fx in AUFTAKT]
-SZENEN[1]["ton"] = [(0, "sfx:boom", 1.2)]
+SZENEN[1]["ton"] = [(0, "sfx:boom", 1.2), (.3, "mala:trailer-inseln")]
 SZENEN += [dict(dauer=4 * SCHLAG, zeichne=szene_titel, ton=[(0, "sfx:boom", 1.1), (1.0, "sfx:boom", .8)])]
-SZENEN += [dict(dauer=6 * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.03, titel=ti, unter=un, staerke=.25))
-           for n, ti, un, z, fx in FEATURES]
-SZENEN[-len(FEATURES)]["ton"] = [(.4, "mala:trailer-welt")]
+SZENEN += [dict(dauer=n_schlag * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.03, titel=ti, unter=un, staerke=.25),
+                ton=[(.3, "mala:" + zeile)])
+           for n, ti, un, z, fx, zeile, n_schlag in FEATURES]
 SZENEN += [dict(dauer=10 * SCHLAG, zeichne=szene_figuren,
-                ton=[(.1 + i * SCHLAG, "sfx:pop", .6) for i in range(4)] + [(2.2, "pool:goblin/frage_1", .5),
-                                                                           (.6 + 4 * SCHLAG, "mala:trailer-allein")])]
-# Stille vor dem Logo: Beat bricht ab, Herzschlag, Mala fluestert
+                ton=[(.1 + i * SCHLAG, "sfx:pop", .6) for i in range(4)] + [(.4, "pool:goblin/frage_1", .4),
+                                                                           (1.2, "mala:trailer-allein")])]
+# Stille vor dem Logo: die Musik blendet aus, Herzschlag, Mala fluestert
 HERZ2 = [.25, 1.05, 1.75, 2.35, 2.85, 3.3, 3.65]
 SZENEN += [dict(dauer=4.0, zeichne=puls(HERZ2),
-                ton=[(t, "sfx:herz", .9) for t in HERZ2] + [(.9, "mala:trailer-bereit")])]
-SZENEN += [dict(dauer=16 * SCHLAG, zeichne=szene_logo,
-                ton=[])]  # der Schlag kommt aus musik/trailer-logo.mp3
+                ton=[(t, "sfx:herz", .7) for t in HERZ2] + [(.9, "mala:trailer-bereit")])]
+SZENEN += [dict(dauer=16 * SCHLAG, zeichne=szene_logo, ton=[(1.2, "mala:trailer-beta")])]
 
-_stille = sum(sz["dauer"] for sz in SZENEN[:-2])  # Beat und Musik laufen bis zur Stille vor dem Logo
+_stille = sum(sz["dauer"] for sz in SZENEN[:-2])  # Musik laeuft bis zur Stille vor dem Logo
+# Das Hauptstueck (34 s) ist 8 s kuerzer als der Film bis zur Stille: nach 22 s geht es bei 14 s
+# weiter, die Takte 14-22 s (vier Takte) kommen also ein zweites Mal. Beide Schnittstellen liegen auf Taktgrenzen (120 BPM, 2-s-Takte).
+_m0 = KALT - 6.0
+_verlaengerung = _stille - _m0 - 34.0
+assert abs(_verlaengerung - 8.0) < .01, f"Musik passt nicht: {_verlaengerung:.2f} s statt 8 s Verlaengerung"
+_kurve_aus = [(0, 1.0), (20.0 - 3.0, 1.0), (20.0, 0.0)]  # vor der Stille weich ausblenden statt hart abbrechen
 FILM = Trailer("trailer", SZENEN, wortmarke=False,
                musik=dict(art="dateien", pegel=.35, stuecke=[  # Musik bewusst leise: Stimme und Effekte vorn
-                   # Hauptstueck 0-34 s: im Kaltstart leise unter Herzschlag und Mala, voll ab dem Drop
-                   (KALT - 6.0, "musik/trailer-haupt.mp3", [(0, .22), (5.5, .3), (6.0, 1.0)]),
-                   (_stille + 4.0, "musik/trailer-logo.mp3", None),  # Logo-Schlag
+                   # im Kaltstart leise unter Herzschlag und Mala, voll ab dem Drop
+                   (_m0, "musik/trailer-haupt.mp3", [(0, .22), (5.5, .3), (6.0, 1.0)], (0, 22.04)),
+                   (_m0 + 22.0, "musik/trailer-haupt.mp3", _kurve_aus, (14.0, 34.0)),
+                   (_stille + 4.0, "musik/trailer-logo.mp3", [(0, .5)]),  # Logo-Schlag, gedaempft
                ]))
 FILM.musik_hall = False  # die komponierte Musik bringt ihren Raum selbst mit
 FILM.lautheit_linear = True  # sonst zieht loudnorm die leise gestellte Musik wieder hoch
