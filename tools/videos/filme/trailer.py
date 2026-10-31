@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Ankuendigungs-Trailer fuer MegaBuild Sky - schneller Teaser in WQHD (2560 x 1440).
 
-Kaltstart auf Schwarz mit Herzschlag und Mala, Drop in die Musik (komponiert mit ElevenLabs Music, trailer_musik.py),
+Aufwachen an Bord (Spieler-Sicht, Mala), harter Schnitt in den Kaltstart auf Schwarz mit Herzschlag und Mala, Drop in die Musik (komponiert mit ElevenLabs Music, trailer_musik.py),
 drei Biom-Bilder, Titeltafel, fuenf Feature-Einblendungen, die Figuren, eine
 Stille vor dem Logo und das neue MB-Logo mit Beta-Hinweis. Jedes Bild kommt nur
 einmal vor. Malas Zeilen sind eigene Trailer-Aufnahmen (stimmen/, nicht im Spiel).
@@ -163,6 +163,62 @@ def zeilen_punch(e, t, zeilen, y, groessen, farben, takte):
 
 
 # ── Szenen ──────────────────────────────────────────────────────────────────
+
+# ── Aufwachen an Bord ───────────────────────────────────────────────────────
+
+WACH = 11.6  # Laenge der Aufwach-Szene; endet mit hartem Schnitt auf "... als alles zerbrach."
+
+
+def _offen(t):
+    """Wie weit die Augen offen sind (0..1): ein Spalt, kurz zu, dann ganz auf."""
+    for t0, t1, a, b in ((1.0, 1.7, 0, .4), (1.7, 2.0, .4, .05), (2.0, 2.3, .05, .05), (2.3, 3.3, .05, 1.0)):
+        if t < t1:
+            return a + (b - a) * ein_aus(phase(t, t0, t1)) if t >= t0 else (a if t0 > 1.0 else 0.0)
+    return 1.0
+
+
+@functools.lru_cache(maxsize=80)
+def _lider(stufe):
+    """Schwarz mit weicher, quer liegender Augen-Oeffnung; stufe = offen * 60."""
+    k = 4
+    w, h = TW // k, TH // k
+    m = Image.new("L", (w, h), 255)
+    if stufe > 0:
+        hoehe = stufe / 60 * h * 1.6
+        ImageDraw.Draw(m).ellipse((-w * .35, h / 2 - hoehe / 2, w * 1.35, h / 2 + hoehe / 2), fill=0)
+    m = m.filter(ImageFilter.GaussianBlur(10)).resize((TW, TH), Image.BILINEAR)
+    out = Image.new("RGBA", (TW, TH), (0, 0, 0, 0))
+    out.putalpha(m)
+    return out
+
+
+@functools.lru_cache(maxsize=24)
+def _deck(unschaerfe):
+    """Das Luftschiff als unscharfer Hintergrund (Tiefenschaerfe), etwas dunkler."""
+    k = 4
+    img = quelle("luftschiff").resize((TW // k, TH // k), Image.LANCZOS)
+    img = img.filter(ImageFilter.GaussianBlur(unschaerfe / k)).resize((TW, TH), Image.BILINEAR)
+    return Image.eval(img, lambda v: int(v * .8)).convert("RGBA")
+
+
+def szene_erwachen(e, t, d):
+    offen = _offen(t)
+    unscharf = 18 * (1 - ein_aus(phase(t, 1.0, 3.8)))  # wird beim Aufwachen scharf
+    dx, dy = 10 * math.sin(t * .7), 9 * math.sin(t * 1.1)  # leichtes Schwanken an Bord
+    mc.einfuegen(e, _deck(int(round(14 + unscharf))), dx * .4 - 10, dy * .4 - 10)
+    figur = Image.new("RGBA", (TW, TH), (0, 0, 0, 0))
+    winkt = 6.3 <= t < 7.3
+    sprite_boden(figur, "mala_hello_gross" if winkt else "mala_idle_gross", t - 6.3 if winkt else t,
+                 TW * .55 + dx, TH + 60 + dy, 1500, schleife=not winkt)
+    if unscharf > .6:
+        klein = figur.resize((TW // 2, TH // 2), Image.BILINEAR).filter(ImageFilter.GaussianBlur(unscharf / 2))
+        figur = klein.resize((TW, TH), Image.BILINEAR)
+    e.alpha_composite(figur)
+    mc.einfuegen(e, VIGNETTE, 0, 0, .9)
+    stufe = int(round(offen * 60))
+    if stufe < 60:
+        mc.einfuegen(e, _lider(stufe), 0, 0)
+
 
 def puls(schlaege):
     """Schwarzes Bild mit violettem Lichtpuls auf jedem Herzschlag (Spannung vor dem Drop)."""
@@ -365,10 +421,15 @@ SZENEN += [dict(dauer=4.0, zeichne=puls(HERZ2),
                 ton=[(t, "sfx:herz", .7) for t in HERZ2] + [(.9, "mala:trailer-bereit")])]
 SZENEN += [dict(dauer=16 * SCHLAG, zeichne=szene_logo, ton=[(1.2, "mala:trailer-beta")])]
 
+# Ganz vorn: Aufwachen an Bord - Malas echte Zeilen aus dem Spiel-Intro, harter Schnitt in den Einschlag
+SZENEN.insert(0, dict(dauer=WACH, zeichne=szene_erwachen,
+                      ton=[(0, "datei:musik/trailer-erwachen.mp3", .8), (.3, "sfx:herz", .45), (1.4, "sfx:herz", .4),
+                           (1.6, "mala:wake"), (6.3, "mala:name")]))
+
 _stille = sum(sz["dauer"] for sz in SZENEN[:-2])  # Musik laeuft bis zur Stille vor dem Logo
 # Das Hauptstueck (34 s) ist 12 s kuerzer als der Film bis zur Stille: nach 22 s geht es bei 10 s
 # weiter, die Takte 10-22 s (sechs Takte) kommen also ein zweites Mal. Beide Schnittstellen liegen auf Taktgrenzen (120 BPM, 2-s-Takte).
-_m0 = KALT - 6.0
+_m0 = WACH + KALT - 6.0
 _verlaengerung = _stille - _m0 - 34.0
 assert abs(_verlaengerung - 12.0) < .01, f"Musik passt nicht: {_verlaengerung:.2f} s statt 12 s Verlaengerung"
 _kurve_aus = [(0, 1.0), (24.0 - 3.0, 1.0), (24.0, 0.0)]  # vor der Stille weich ausblenden statt hart abbrechen
@@ -382,4 +443,4 @@ FILM = Trailer("trailer", SZENEN, wortmarke=False,
 FILM.musik_hall = False  # die komponierte Musik bringt ihren Raum selbst mit
 FILM.lautheit_linear = True  # sonst zieht loudnorm die leise gestellte Musik wieder hoch
 FILM.ducken = .82  # die dichte Musik muss unter Malas Stimme deutlich leiser werden
-FILM.poster = KALT + 6 * 2 * SCHLAG + 2 * SCHLAG + 1.5  # erste Feature-Einblendung
+FILM.poster = WACH + KALT + 6 * 2 * SCHLAG + 2 * SCHLAG + 1.5  # erste Feature-Einblendung
