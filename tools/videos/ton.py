@@ -286,13 +286,52 @@ def musik_feurig(dauer, tonart="D", tempo=120, ab=0.0, ende=None):
     return stereo
 
 
+def lade_audio_stereo(pfad):
+    """Beliebige Audiodatei (mp3, ogg, wav) -> Stereo-Floatlisten mit SR, ueber ffmpeg."""
+    roh = subprocess.run(["ffmpeg", "-v", "error", "-i", pfad, "-ac", "2", "-ar", str(SR), "-f", "s16le", "-"],
+                         capture_output=True, check=True).stdout
+    a = array.array("h")
+    a.frombytes(roh)
+    return [v / 32768 for v in a[0::2]], [v / 32768 for v in a[1::2]]
+
+
+def musik_dateien(dauer, stuecke, pegel=1.0):
+    """Fertige Musikstuecke ins Bett legen: [(start_s, pfad, lautstaerkekurve)].
+
+    Die Kurve ist [(t relativ zum Stueck, gain), ...], linear dazwischen; None = durchgehend 1."""
+    n = int((dauer + 3) * SR)
+    links, rechts = [0.0] * n, [0.0] * n
+    for start, pfad, kurve in stuecke:
+        if not os.path.isabs(pfad):
+            pfad = os.path.join(os.path.dirname(os.path.abspath(__file__)), pfad)
+        l, r = lade_audio_stereo(pfad)
+        i0 = int(start * SR)
+        for k in range(min(len(l), n - i0)):
+            g = pegel
+            if kurve:
+                t = k / SR
+                g *= kurve[-1][1]
+                for (ta, ga), (tb, gb) in zip(kurve, kurve[1:]):
+                    if ta <= t < tb:
+                        g = pegel * (ga + (gb - ga) * (t - ta) / (tb - ta))
+                        break
+                else:
+                    if t < kurve[0][0]:
+                        g = pegel * kurve[0][1]
+            links[i0 + k] += l[k] * g
+            rechts[i0 + k] += r[k] * g
+    return links, rechts
+
+
 def musik(dauer, tonart="D", tempo=84, stimmung="hell", ab=0.0, ende=None, beat=False, beat_ab=None, beat_bis=None,
-          art="ruhig"):
+          art="ruhig", stuecke=None, pegel=1.0):
     """Musikbett. ab/ende: wann die Musik einsetzt und aufhoert (Sekunden, auf Taktgrenzen legen).
     beat=True legt Kick auf jede Zaehlzeit und pumpenden Achtel-Bass darunter (zwischen beat_ab und beat_bis).
-    art="feurig" nimmt stattdessen musik_feurig() (Trailer)."""
+    art="feurig" nimmt stattdessen musik_feurig(), art="dateien" fertige Stuecke (siehe musik_dateien)."""
     if art == "feurig":
         return musik_feurig(dauer, tonart, tempo, ab, ende)
+    if art == "dateien":
+        return musik_dateien(dauer, stuecke, pegel)
     n = int((dauer + 3) * SR)
     stereo = ([0.0] * n, [0.0] * n)
     grund = TONARTEN.get(tonart, 50)
@@ -496,7 +535,8 @@ def baue(film, ordner, sprache="de", szenen_whoosh=None):
             hulle[k] = min(hulle[k], 1 - .55 * max(0.0, min(1.0, u)))
     for k in range(len(links)):
         t = k / SR
-        g = hulle[k] * min(1.0, t / 1.5) * max(0.0, min(1.0, (dauer - t) / 3.0))
+        g = hulle[k] * (1.0 if film.musik.get("art") == "dateien" else min(1.0, t / 1.5)) \
+            * max(0.0, min(1.0, (dauer - t) / 3.0))
         links[k] *= g
         rechts[k] *= g
     schreibe_wav(os.path.join(ordner, "musik.wav"), (links[:n], rechts[:n]), .9)

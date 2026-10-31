@@ -128,7 +128,8 @@ def main():
     os.makedirs(ZIEL, exist_ok=True)
     name = a.film + ("" if a.sprache == "de" else "-" + a.sprache)
     mp4 = os.path.join(ZIEL, name + ".mp4")
-    filter_ton = ("[1:a]aecho=0.8:0.5:110|230:0.2|0.1,highpass=f=35[m];"
+    hall = "aecho=0.8:0.5:110|230:0.2|0.1," if getattr(film, "musik_hall", True) else ""  # fertige Musik: ohne
+    filter_ton = (f"[1:a]{hall}highpass=f=35[m];"
                   "[m][2:a]amix=inputs=2:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=44100[a]")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", liste,
                     "-i", os.path.join(arbeit, "musik.wav"), "-i", os.path.join(arbeit, "rest.wav"),
