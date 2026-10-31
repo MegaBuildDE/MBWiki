@@ -279,11 +279,10 @@ def szene_logo(e, t, d):
 # ── Film ────────────────────────────────────────────────────────────────────
 
 def untertitel_gross(e, text, alpha, S=4):
-    """Malas Untertitel im unteren Kinobalken (wie im Spiel: Name in Aqua)."""
+    """Malas Untertitel im unteren Kinobalken: erste Zeile der Name (Aqua), darunter ihr Text."""
     if alpha <= .003 or not text:
         return
-    zeilen = mc_umbruch("§f" + text, 300)
-    zeilen[0] = "§bMala§7: " + zeilen[0]
+    zeilen = ["§bMala"] + mc_umbruch("§f" + text, 300)
     hoehe = len(zeilen) * 11 * S
     y0 = TH - BALKEN / 2 - hoehe / 2
     for i, z in enumerate(zeilen):
