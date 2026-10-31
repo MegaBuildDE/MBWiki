@@ -6,6 +6,7 @@ filme/trailer.py (Drop bei 6 s, Abbruch bei 34 s, Logo-Schlag bei 38 s):
 
 - musik/trailer-haupt.mp3   0-34 s
 - musik/trailer-logo.mp3    8 s ab dem Logo
+- musik/trailer-leere.mp3   duesterer Einstieg ("alles ist weg"), ElevenLabs Sound Effects
 
 Die Plaene stehen in PLAENE. Neu komponiert wird nur, was fehlt (--neu: alles,
 --nur haupt|logo: nur dieses Stueck). Der API-Schluessel kommt wie bei
@@ -92,6 +93,28 @@ def komponiere(name):
         raise SystemExit(f"FEHLER {fehler.code} bei {name}: {fehler.read().decode('utf-8', 'replace')[:600]}")
 
 
+# Geraeusche (ElevenLabs Sound Effects): Name -> (Beschreibung, Laenge in s)
+GERAEUSCHE = {
+    "leere": ("Dark cinematic trailer opening: a massive deep boom as an entire world collapses, distant crumbling "
+              "and debris falling away into an abyss, then a hollow, eerie emptiness with a low ominous sub drone "
+              "and faint cold wind. Everything is gone. Bleak, haunting, no music, no voices.", 6.0),
+}
+
+
+def erzeuge_geraeusch(name):
+    text, laenge = GERAEUSCHE[name]
+    koerper = {"text": text, "duration_seconds": laenge, "prompt_influence": 0.6}
+    anfrage = urllib.request.Request(
+        werkzeug.API + "/v1/sound-generation?output_format=mp3_44100_192", method="POST",
+        data=json.dumps(koerper).encode("utf-8"),
+        headers={"xi-api-key": werkzeug.api_schluessel(), "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(anfrage, context=werkzeug.tls(), timeout=300) as antwort:
+            return antwort.read()
+    except urllib.error.HTTPError as fehler:
+        raise SystemExit(f"FEHLER {fehler.code} bei {name}: {fehler.read().decode('utf-8', 'replace')[:600]}")
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--neu", action="store_true")
@@ -106,6 +129,16 @@ def main():
             continue
         print(f"komponiere {name} …", flush=True)
         daten = komponiere(name)
+        open(datei, "wb").write(daten)
+        print(f"  {datei}: {len(daten) // 1024} KB")
+    for name in GERAEUSCHE:
+        if a.nur and name not in a.nur:
+            continue
+        datei = os.path.join(ORDNER, f"trailer-{name}.mp3")
+        if os.path.isfile(datei) and not a.neu:
+            continue
+        print(f"erzeuge Geraeusch {name} …", flush=True)
+        daten = erzeuge_geraeusch(name)
         open(datei, "wb").write(daten)
         print(f"  {datei}: {len(daten) // 1024} KB")
 

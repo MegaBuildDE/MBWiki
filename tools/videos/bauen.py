@@ -54,6 +54,25 @@ def worker(name, sprache, von, bis, ausgabe):
         raise SystemExit("ffmpeg (Teil) fehlgeschlagen")
 
 
+def lineare_lautheit(mischung, arbeit):
+    """Zwei Durchgaenge loudnorm: erst messen, dann linear auf -16 LUFS bringen.
+
+    Der einfache Durchgang regelt dynamisch nach (wie eine Automatik) und zieht leise
+    gestellte Musik wieder hoch. Linear bleibt das Verhaeltnis von Musik und Stimme so,
+    wie es im Film eingestellt ist (film.lautheit_linear = True)."""
+    import json
+    # Eingang 0 ist im echten Lauf das Video - hier ein stummer Platzhalter, damit [1:a]/[2:a] passen
+    mess = subprocess.run(["ffmpeg", "-hide_banner", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo:d=1",
+                           "-i", os.path.join(arbeit, "musik.wav"),
+                           "-i", os.path.join(arbeit, "rest.wav"), "-filter_complex",
+                           mischung + ",loudnorm=I=-16:TP=-1.5:LRA=50:print_format=json", "-f", "null", "-"],
+                          capture_output=True, text=True, check=True).stderr
+    m = json.loads(mess[mess.rindex("{"):mess.rindex("}") + 1])
+    return ("loudnorm=I=-16:TP=-1.5:LRA=50:linear=true"
+            f":measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
+            f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}")
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("film")
@@ -129,8 +148,11 @@ def main():
     name = a.film + ("" if a.sprache == "de" else "-" + a.sprache)
     mp4 = os.path.join(ZIEL, name + ".mp4")
     hall = "aecho=0.8:0.5:110|230:0.2|0.1," if getattr(film, "musik_hall", True) else ""  # fertige Musik: ohne
-    filter_ton = (f"[1:a]{hall}highpass=f=35[m];"
-                  "[m][2:a]amix=inputs=2:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=44100[a]")
+    mischung = f"[1:a]{hall}highpass=f=35[m];[m][2:a]amix=inputs=2:normalize=0"
+    norm = "loudnorm=I=-16:TP=-1.5:LRA=11"
+    if getattr(film, "lautheit_linear", False):
+        norm = lineare_lautheit(mischung, arbeit)
+    filter_ton = f"{mischung},{norm},aresample=44100[a]"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", liste,
                     "-i", os.path.join(arbeit, "musik.wav"), "-i", os.path.join(arbeit, "rest.wav"),
                     "-filter_complex", filter_ton, "-map", "0:v", "-map", "[a]",

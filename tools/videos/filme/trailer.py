@@ -6,7 +6,7 @@ drei Biom-Bilder, Titeltafel, fuenf Feature-Einblendungen, die Figuren, eine
 Stille vor dem Logo und das neue MB-Logo mit Beta-Hinweis. Jedes Bild kommt nur
 einmal vor. Malas Zeilen sind eigene Trailer-Aufnahmen (stimmen/, nicht im Spiel).
 Nur auf Deutsch. Alle Schnitte liegen auf Zaehlzeiten
-(0,5 s), die Musik setzt bei 6,0 s ein.
+(0,5 s), der Drop liegt bei 8,0 s.
 
 Die Bilder sind die Shader-Originale (2940 px breit) in trailer-bilder/, damit
 WQHD ohne Hochskalieren scharf bleibt.
@@ -305,10 +305,13 @@ FEATURES = [  # Bild, Titel, Zeile, Zoom, Schwenk
      L("zusammen auf einem Server", "together on one server"), (1.0, 1.08), (-.3, .2)),
 ]
 
-# Kaltstart: Herzschlag wird schneller, Mala leise - Drop auf "Man hat sich geirrt."
-HERZ1 = [.3, 1.3, 2.25, 3.1, 3.8, 4.4, 4.9, 5.3, 5.65]
-SZENEN = [dict(dauer=6.0, zeichne=puls(HERZ1),
-               ton=[(t, "sfx:herz", .9) for t in HERZ1] + [(.6, "mala:trailer-nichts"), (3.85, "mala:trailer-geirrt")])]
+# Kaltstart: ein Einschlag, alles bricht weg, Leere. Dann Herzschlag, der schneller wird, Mala leise -
+# Drop auf "Man hat sich geirrt."
+KALT = 8.0
+HERZ1 = [2.3, 3.3, 4.25, 5.1, 5.8, 6.4, 6.9, 7.3, 7.65]
+SZENEN = [dict(dauer=KALT, zeichne=puls([0.0] + HERZ1),  # Einschlag auch im Bild
+               ton=[(0, "datei:musik/trailer-leere.mp3", 1.0)] + [(t, "sfx:herz", .9) for t in HERZ1]
+               + [(2.4, "mala:trailer-nichts"), (5.85, "mala:trailer-geirrt")])]
 SZENEN += [dict(dauer=4 * SCHLAG, zeichne=schnitt(n, z=z, fx=fx, stoss=.04, staerke=.45)) for n, z, fx in AUFTAKT]
 SZENEN[1]["ton"] = [(0, "sfx:boom", 1.2)]
 SZENEN += [dict(dauer=4 * SCHLAG, zeichne=szene_titel, ton=[(0, "sfx:boom", 1.1), (1.0, "sfx:boom", .8)])]
@@ -327,11 +330,12 @@ SZENEN += [dict(dauer=16 * SCHLAG, zeichne=szene_logo,
 
 _stille = sum(sz["dauer"] for sz in SZENEN[:-2])  # Beat und Musik laufen bis zur Stille vor dem Logo
 FILM = Trailer("trailer", SZENEN, wortmarke=False,
-               musik=dict(art="dateien", pegel=.8, stuecke=[
+               musik=dict(art="dateien", pegel=.35, stuecke=[  # Musik bewusst leise: Stimme und Effekte vorn
                    # Hauptstueck 0-34 s: im Kaltstart leise unter Herzschlag und Mala, voll ab dem Drop
-                   (0.0, "musik/trailer-haupt.mp3", [(0, .22), (5.5, .3), (6.0, 1.0)]),
+                   (KALT - 6.0, "musik/trailer-haupt.mp3", [(0, .22), (5.5, .3), (6.0, 1.0)]),
                    (_stille + 4.0, "musik/trailer-logo.mp3", None),  # Logo-Schlag
                ]))
 FILM.musik_hall = False  # die komponierte Musik bringt ihren Raum selbst mit
+FILM.lautheit_linear = True  # sonst zieht loudnorm die leise gestellte Musik wieder hoch
 FILM.ducken = .82  # die dichte Musik muss unter Malas Stimme deutlich leiser werden
-FILM.poster = 6.0 + 6 * 2 * SCHLAG + 2 * SCHLAG + 1.5  # erste Feature-Einblendung
+FILM.poster = KALT + 6 * 2 * SCHLAG + 2 * SCHLAG + 1.5  # erste Feature-Einblendung

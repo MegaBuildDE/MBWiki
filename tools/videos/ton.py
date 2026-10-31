@@ -10,6 +10,7 @@ Alles wird hier erzeugt oder aus dem Pool gelesen - keine fremden Aufnahmen.
   Text und Wortzeiten aus MBSkyManager/src/main/resources/story/voice-lines.yml.
   Daraus entstehen auch die Untertitel im Bild (Film.untertitel).
 - Spielgeraeusche 'pool:<pfad>': assets/sounds/<pfad>.ogg im Pool, z. B. 'pool:warpett/eat_1'.
+- Fertige Geraeusche 'datei:<pfad>': Audiodatei relativ zu tools/videos, z. B. 'datei:musik/trailer-leere.mp3'.
 
 Ergebnis sind zwei WAV-Dateien (Musik, Rest); bauen.py mischt sie mit ffmpeg.
 """
@@ -515,6 +516,10 @@ def baue(film, ordner, sprache="de", szenen_whoosh=None):
             addiere(rest, lade_ogg(stimm_pfad(sprache, name)), t, 1.1 * laut)
         elif art == "pool":
             addiere(rest, lade_ogg(os.path.join(POOL, "assets", "sounds", name + ".ogg")), t, .7 * laut)
+        elif art == "datei":  # fertiges Geraeusch, Pfad relativ zu tools/videos
+            pfad = name if os.path.isabs(name) else os.path.join(os.path.dirname(os.path.abspath(__file__)), name)
+            l, r = lade_audio_stereo(pfad)
+            addiere(rest, [(x + y) / 2 for x, y in zip(l, r)], t, laut)
         elif art == "sfx":
             addiere(rest, sfx(name, seed=int(t * 100)), t, .5 * laut)
         else:
