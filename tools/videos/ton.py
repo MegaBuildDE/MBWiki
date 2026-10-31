@@ -528,11 +528,12 @@ def baue(film, ordner, sprache="de", szenen_whoosh=None):
     # Musik unter der Stimme absenken, am Anfang ein- und am Ende ausblenden
     links, rechts = m
     hulle = [1.0] * len(links)
+    ducken = getattr(film, "ducken", .55)  # wie stark die Musik unter der Stimme leiser wird (0..1)
     for t0, t1 in sprechen:
         for k in range(max(0, int((t0 - .35) * SR)), min(len(hulle), int((t1 + .6) * SR))):
             t = k / SR
             u = min(1.0, (t - (t0 - .35)) / .35, ((t1 + .6) - t) / .6)
-            hulle[k] = min(hulle[k], 1 - .55 * max(0.0, min(1.0, u)))
+            hulle[k] = min(hulle[k], 1 - ducken * max(0.0, min(1.0, u)))
     for k in range(len(links)):
         t = k / SR
         g = hulle[k] * (1.0 if film.musik.get("art") == "dateien" else min(1.0, t / 1.5)) \

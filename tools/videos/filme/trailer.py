@@ -333,4 +333,5 @@ FILM = Trailer("trailer", SZENEN, wortmarke=False,
                    (_stille + 4.0, "musik/trailer-logo.mp3", None),  # Logo-Schlag
                ]))
 FILM.musik_hall = False  # die komponierte Musik bringt ihren Raum selbst mit
+FILM.ducken = .82  # die dichte Musik muss unter Malas Stimme deutlich leiser werden
 FILM.poster = 6.0 + 6 * 2 * SCHLAG + 2 * SCHLAG + 1.5  # erste Feature-Einblendung
