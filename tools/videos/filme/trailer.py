@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Ankuendigungs-Trailer fuer MegaBuild Sky - schneller Teaser in WQHD (2560 x 1440).
 
-Kaltstart auf Schwarz mit Herzschlag und Mala, Drop in den Beat (120 BPM),
+Kaltstart auf Schwarz mit Herzschlag und Mala, Drop in die feurige Musik (d-Moll, 120 BPM, Taiko und Streicher),
 drei Biom-Bilder, Titeltafel, fuenf Feature-Einblendungen, die Figuren, eine
 Stille vor dem Logo und das neue MB-Logo mit Beta-Hinweis. Jedes Bild kommt nur
 einmal vor. Malas Zeilen sind eigene Trailer-Aufnahmen (stimmen/, nicht im Spiel).
@@ -328,5 +328,5 @@ SZENEN += [dict(dauer=16 * SCHLAG, zeichne=szene_logo,
 
 _stille = sum(sz["dauer"] for sz in SZENEN[:-2])  # Beat und Musik laufen bis zur Stille vor dem Logo
 FILM = Trailer("trailer", SZENEN, wortmarke=False,
-               musik=dict(tonart="D", tempo=120, stimmung="hell", ab=6.0, ende=_stille, beat=True))
+               musik=dict(art="feurig", tonart="D", tempo=120, ab=6.0, ende=_stille))
 FILM.poster = 6.0 + 6 * 2 * SCHLAG + 2 * SCHLAG + 1.5  # erste Feature-Einblendung

@@ -14,6 +14,7 @@ Alles wird hier erzeugt oder aus dem Pool gelesen - keine fremden Aufnahmen.
 Ergebnis sind zwei WAV-Dateien (Musik, Rest); bauen.py mischt sie mit ffmpeg.
 """
 import array
+import functools
 import math
 import os
 import random
@@ -194,9 +195,104 @@ def kick():
     return out
 
 
-def musik(dauer, tonart="D", tempo=84, stimmung="hell", ab=0.0, ende=None, beat=False, beat_ab=None, beat_bis=None):
+# ── Feurig (Trailer) ────────────────────────────────────────────────────────
+# d-Moll, i - VI - III - VII (Dm, Bb, F, C), ein Akkord je Takt. Alles tonal,
+# kein Rauschen: Taiko und Toms sind fallende Sinus, Streicher und Blaeser
+# additive Saegezaehne.
+FOLGE_FEURIG = [(0, (0, 3, 7)), (-4, (0, 4, 7)), (3, (0, 4, 7)), (-2, (0, 4, 7))]
+# Ostinato in Sechzehnteln: Stufen relativ zum Akkordgrundton (12 = Oktave, 7 = Quinte)
+OSTINATO = [0, 0, 12, 0, 7, 0, 12, 0, 0, 0, 12, 0, 7, 12, 7, 0]
+# Taiko je Takt in Sechzehnteln (Position, Lautstaerke) - der typische Trailer-Galopp
+TAIKO = [(0, 1.0), (3, .55), (6, .7), (8, .9), (11, .55), (12, .75), (14, .6)]
+
+
+@functools.lru_cache(maxsize=None)
+def saege(midi, dauer, anschlag, abklang, obertoene=9, verstimmt=0.0):
+    """Saegezahn aus Obertoenen mit Huellkurve (Anschlag, exponentieller Abklang)."""
+    hz = midi_hz(midi)
+    n = int(dauer * SR)
+    ws = [2 * math.pi * hz * h / SR for h in range(1, obertoene + 1) if hz * h < 9000]
+    w2 = 2 * math.pi * hz * (1 + verstimmt) / SR
+    out = [0.0] * n
+    for k in range(n):
+        t = k / SR
+        e = min(1.0, t / anschlag) * math.exp(-t / abklang) * min(1.0, (dauer - t) / .01)
+        v = 0.0
+        for h, w in enumerate(ws, 1):
+            v += math.sin(w * k) / h
+        if verstimmt:
+            v = .65 * v + .35 * math.sin(w2 * k)
+        out[k] = e * v * .5
+    return tuple(out)
+
+
+@functools.lru_cache(maxsize=None)
+def trommel(hz_hoch, hz_tief, abklang, dauer=.9):
+    """Taiko/Tom: schnell fallender Sinus mit etwas Oberton fuer den Anschlag."""
+    out, ph = [], 0.0
+    for k in range(int(dauer * SR)):
+        t = k / SR
+        ph += 2 * math.pi * (hz_tief + (hz_hoch - hz_tief) * math.exp(-t / .025)) / SR
+        out.append((math.sin(ph) + .3 * math.sin(2.01 * ph) * math.exp(-t / .03))
+                   * math.exp(-t / abklang) * min(1, t / .002))
+    return tuple(out)
+
+
+def musik_feurig(dauer, tonart="D", tempo=120, ab=0.0, ende=None):
+    """Treibendes Trailer-Stueck: Taiko-Galopp, Streicher-Ostinato, Blaeser-Stoesse, Bass.
+
+    Steigerung: erste zwei Takte Trommeln und Streicher, dann Blaeser dazu,
+    in den letzten zwei Takten vor ende ein Tom-Wirbel."""
+    n = int((dauer + 3) * SR)
+    stereo = ([0.0] * n, [0.0] * n)
+    grund = TONARTEN.get(tonart, 50)
+    sech = 60 / tempo / 4
+    takt = 16 * sech
+    ende = dauer + 1 if ende is None else ende
+    takte = int(round((ende - ab) / takt))
+    for i in range(takte):
+        t0 = ab + i * takt
+        wurzel, drei = FOLGE_FEURIG[i % len(FOLGE_FEURIG)]
+        g = grund + wurzel
+        rest = takte - i
+        # Taiko-Galopp, im Wirbel zum Schluss alle Sechzehntel
+        if rest <= 2:
+            for k in range(16):
+                laut = .45 + .55 * (k / 15) if rest == 1 else .5
+                addiere(stereo, trommel(150, 70, .18), t0 + k * sech, .5 * laut, pan=(-.3 if k % 2 else .3))
+        for pos, laut in TAIKO:
+            addiere(stereo, trommel(110, 42, .32), t0 + pos * sech, .75 * laut)
+        addiere(stereo, trommel(170, 85, .16), t0 + 13 * sech, .35, pan=.4)
+        addiere(stereo, trommel(170, 85, .16), t0 + 15 * sech, .35, pan=-.4)
+        # Streicher-Ostinato, zwei Lagen links/rechts
+        for k, stufe in enumerate(OSTINATO):
+            akzent = 1.0 if k % 4 == 0 else .7
+            ton = g + stufe
+            addiere(stereo, saege(ton, sech * .95, .004, .09), t0 + k * sech, .11 * akzent, pan=-.45)
+            addiere(stereo, saege(ton + 12, sech * .95, .004, .07, 6), t0 + k * sech, .05 * akzent, pan=.45)
+        # Bass: Achtel, Grundton tief
+        for k in range(8):
+            addiere(stereo, saege(g - 12, 2 * sech * .9, .006, .2, 6), t0 + k * 2 * sech, .16)
+        # Blaeser-Stoesse ab dem dritten Takt: Akkord auf 1 und kurzer Nachschlag auf 3 und
+        if i >= 2:
+            for st in drei:
+                for pos, d, laut in ((0, 1.1, 1.0), (10, .35, .6)):
+                    addiere(stereo, saege(g + 12 + st, d, .03, .45, 9, .006), t0 + pos * sech, .07 * laut,
+                            pan=(st - 3) / 10)
+    # Auf den Pegel des ruhigen Musikbetts bringen (ca. -18 dB im Mittel), sonst geht die Stimme unter
+    for kanal in stereo:
+        for k in range(len(kanal)):
+            kanal[k] *= .56
+    return stereo
+
+
+def musik(dauer, tonart="D", tempo=84, stimmung="hell", ab=0.0, ende=None, beat=False, beat_ab=None, beat_bis=None,
+          art="ruhig"):
     """Musikbett. ab/ende: wann die Musik einsetzt und aufhoert (Sekunden, auf Taktgrenzen legen).
-    beat=True legt Kick auf jede Zaehlzeit und pumpenden Achtel-Bass darunter (zwischen beat_ab und beat_bis)."""
+    beat=True legt Kick auf jede Zaehlzeit und pumpenden Achtel-Bass darunter (zwischen beat_ab und beat_bis).
+    art="feurig" nimmt stattdessen musik_feurig() (Trailer)."""
+    if art == "feurig":
+        return musik_feurig(dauer, tonart, tempo, ab, ende)
     n = int((dauer + 3) * SR)
     stereo = ([0.0] * n, [0.0] * n)
     grund = TONARTEN.get(tonart, 50)
