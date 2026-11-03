@@ -57,8 +57,9 @@ Das neue Biom erscheint in der nächsten Gegend, die du erkundest – mit neuen 
 | [KI-Bewohner](bewohner.md) | Goblins und Shroomlinge, die reden, arbeiten und handeln |
 | [Forestlinge](forestlinge.md) | Waldelfen, die dir gegen Mana einen Segen schenken |
 | [Warpetts](warpetts.md) | Reisen über Blumen-Netze, Eier ausbrüten |
+| [Mobplates](mobplates.md) | Mobs einfangen und woanders wieder freisetzen |
 | [Ressourcen & Farming](farming.md) | Erze, Mana-Erz, Generator, Tiere, Monster |
-| [Erfolge](erfolge.md) | 20 Erfolge im Tab „MegaBuild Sky“ |
+| [Erfolge](erfolge.md) | 22 Erfolge im Tab „MegaBuild Sky“ |
 | [HUD & Statistiken](hud.md) | Was du auf dem Bildschirm siehst |
 | [Clans](clans.md) | Clan-Chat über alle Server, Wochenauftrag, Hilferuf und Clan-Stufen |
 

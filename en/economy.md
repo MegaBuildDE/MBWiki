@@ -65,7 +65,7 @@ Advancements and achievements only give Mana the first time – no matter which 
 * Anything outside **Survival mode**, and anything during the intro
 * Blocks you **placed yourself** – such as ores, logs, melons or pumpkins
 * Ore you mine **without a pickaxe**
-* Monsters from **spawners**, spawn eggs or commands
+* Monsters from **spawners**, spawn eggs, [Mobplates](mobplates.md) or commands
 * **AFK fishing** or fishing outside of open water
 * Taming animals you bred yourself
 * Levels you pick up again after dying
@@ -94,7 +94,8 @@ Mana ore gives you Mana as **orbs** in your inventory; one orb is one Mana. They
 You can also craft with orbs:
 
 * **Mana Charge** from 9 orbs – can be broken back down
-* **Mana Apple** from 4 orbs around an apple – it has no effect yet, and the orbs are gone afterwards
+* **Mana Apple** from 4 orbs around an apple – it takes half the hearts of a mob you marked with a [Mobplate](mobplates.md)
+* **Empty Mobplate** from 8 orbs around a Pale Sherd – see [Mobplates](mobplates.md)
 
 ## Spending Mana
 

@@ -75,7 +75,7 @@ Harder quests sometimes have an **extra condition**, for example *with TNT*, *wi
 * Anything outside **survival mode** and during the intro.
 * Blocks you **placed yourself** – including sand or gravel that fell down afterwards.
 * **Stone from lava-water generators.**
-* Monsters from **spawners**, spawn eggs or commands.
+* Monsters from **spawners**, spawn eggs, [Mobplates](mobplates.md) or commands.
 * **AFK fishing** and fishing outside open water.
 * For **building quests**, only what stays in place counts – if you break blocks again, the progress is deducted.
 * For **walking**, at most 8 blocks per second count, and nothing after 30 seconds without moving.

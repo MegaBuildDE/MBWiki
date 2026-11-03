@@ -8,7 +8,7 @@ icon: trophy
 
 # Achievements
 
-Besides the normal Minecraft advancements, there's a tab of its own called **“MegaBuild Sky”** with **20 achievements** around the airship, Mana, the skill tree and quests.
+Besides the normal Minecraft advancements, there's a tab of its own called **“MegaBuild Sky”** with **22 achievements** around the airship, Mana, Mobplates, the skill tree and quests.
 
 * Every achievement counts **once across the whole network**. If you got it on one island, you have it on all the others too.
 * The first time, you get **3–8 Mana** – only in survival mode, and it counts towards the daily limit for [actions](economy.md#from-actions).
@@ -38,6 +38,13 @@ Besides the normal Minecraft advancements, there's a tab of its own called **“
 | **Banked** | *Aufs Konto* | Deposit Mana orbs with the furnace golem – *not reachable yet, the furnace golem doesn't exist yet* |
 | **Condensed** | *Verdichtet* | Craft a Mana Charge |
 | **Magic Fruit** | *Magische Frucht* | Craft a Mana Apple |
+
+### Mobplates
+
+| Achievement | On Bedrock | What for |
+| ----------- | ---------- | -------- |
+| **First Catch** | *Erster Fang* | Catch a mob with a [Mobplate](mobplates.md) – a villager or Warpett without a fight counts too |
+| **Moved In** | *Neu eingezogen* | Place a caught mob with its Mobplate – someone else's plate counts too |
 
 ### Skill tree
 
@@ -95,4 +102,5 @@ If you earn a clan achievement while you're offline, you get it, Mana included, 
 * [Skill tree & biomes](skilltree.md)
 * [Quests](quests.md)
 * [Mana & Ruby](economy.md)
+* [Mobplates](mobplates.md)
 * [Clans](clans.md)

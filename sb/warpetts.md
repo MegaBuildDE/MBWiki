@@ -112,12 +112,17 @@ Läuft ein junges Warpett zu weit weg oder fällt es von der Insel, ist es gleic
 **Tipp:** Führe das junge Warpett an der Leine dorthin, wo du die Station haben willst – zum Beispiel an deine Farm oder in eine Höhle –, und gib ihm erst dort die Blume.
 {% endhint %}
 
+## Warpett umziehen
+
+Mit einer leeren [Mobplate](mobplates.md#warpetts-einsammeln) sammelst du ein aufgestelltes Warpett samt Blume ein und setzt es woanders wieder ab – auch auf einer anderen Insel. Dort gehört es sofort zum Netz seiner Blume. Das Warpett auf dem Luftschiff und das auf der Startinsel bleiben stehen.
+
 ## Wer darf was?
 
-Verbinden, Blume tauschen, abschneiden und reisen darf jeder, der auf deiner Insel ist. Auf die Insel kommen nur du und deine [Mitglieder](mitglieder.md).
+Verbinden, Blume tauschen, abschneiden, reisen und einsammeln braucht auf fremden Inseln das Recht **Warpetts**, siehe [Mitglieder & Rechte](mitglieder.md#die-rechte). Auf deiner eigenen Insel darfst du alles.
 
 ## Verwandte Seiten
 
 * [Erste Schritte](start.md)
+* [Mobplates](mobplates.md)
 * [Die Inselwelt](welt.md)
 * [Ressourcen & Farming](farming.md)

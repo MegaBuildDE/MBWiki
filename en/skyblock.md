@@ -57,8 +57,9 @@ The new biome appears in the next area you explore – with new resources, anima
 | [AI residents](residents.md) | Goblins and Shroomlings who talk, work and trade |
 | [Forestlings](forestlings.md) | Forest elves who give you a blessing for Mana |
 | [Warpetts](warpetts.md) | Travel through flower networks, hatch eggs |
+| [Mobplates](mobplates.md) | Catch mobs and release them somewhere else |
 | [Resources & farming](farming.md) | Ores, Mana ore, generator, animals, monsters |
-| [Achievements](achievements.md) | 20 achievements in the "MegaBuild Sky" tab |
+| [Achievements](achievements.md) | 22 achievements in the "MegaBuild Sky" tab |
 | [HUD & statistics](hud.md) | What you see on your screen |
 | [Clans](clans.md) | Clan chat across every server, weekly task, calls for help and clan levels |
 

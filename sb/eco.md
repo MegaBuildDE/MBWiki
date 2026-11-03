@@ -65,7 +65,7 @@ Fortschritte und Erfolge geben nur beim ersten Mal Mana – egal auf welcher Ins
 * Alles außerhalb des **Überlebensmodus** und während des Vorspanns
 * Blöcke, die du **selbst platziert** hast – etwa Erze, Stämme, Melonen oder Kürbisse
 * Erz, das du **ohne Spitzhacke** abbaust
-* Monster aus **Spawnern**, Spawn-Eiern oder Befehlen
+* Monster aus **Spawnern**, Spawn-Eiern, [Mobplates](mobplates.md) oder Befehlen
 * **AFK-Angeln** oder Angeln außerhalb von offenem Wasser
 * Tiere aus eigener Zucht zähmen
 * Level, die du nach dem Tod wieder aufsammelst
@@ -94,7 +94,8 @@ Mana-Erz gibt dir Mana als **Kugeln** ins Inventar, eine Kugel ist ein Mana. Auf
 Aus Kugeln kannst du außerdem craften:
 
 * **Mana-Ladung** aus 9 Kugeln – lässt sich wieder zerlegen
-* **Mana-Apfel** aus 4 Kugeln um einen Apfel – er hat noch keine Wirkung, die Kugeln sind danach weg
+* **Mana-Apfel** aus 4 Kugeln um einen Apfel – er nimmt einem Mob, den du mit einer [Mobplate](mobplates.md) markiert hast, die Hälfte seiner Herzen
+* **Leere Mobplate** aus 8 Kugeln um eine Blasse Scherbe – siehe [Mobplates](mobplates.md)
 
 ## Mana ausgeben
 

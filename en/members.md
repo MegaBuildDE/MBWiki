@@ -44,7 +44,7 @@ The owner and members with the **Members** right can invite.
 | **Switches** | Doors, trapdoors, fence gates, buttons, levers, pressure plates |
 | **Animals** | Hit, feed, breed, leash, shear, milk and ride animals |
 | **Harvest** | Harvest ripe crops and replant |
-| **Warpetts** | Use and place [Warpett](warpetts.md) flowers and eggs |
+| **Warpetts** | Use and place [Warpett](warpetts.md) flowers and eggs, collect and set down Warpetts with a [Mobplate](mobplates.md) |
 | **Skill tree** | Buy biomes, set favourites, ask the clan for help |
 | **Members** | Manage members, rights and access |
 | **Statistics** | View the island statistics |

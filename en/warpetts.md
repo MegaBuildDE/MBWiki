@@ -112,12 +112,17 @@ If a young Warpett wanders too far or falls off the island, it's right back home
 **Tip:** Take the young Warpett on a lead to where you want the station – for example to your farm or into a cave – and only give it the flower once you're there.
 {% endhint %}
 
+## Moving a Warpett
+
+With an empty [Mobplate](mobplates.md#collecting-warpetts) you collect a placed Warpett along with its flower and set it down somewhere else – on another island too. There it immediately belongs to its flower's network. The Warpett on the airship and the one on your starting island stay where they are.
+
 ## Who can do what?
 
-Anyone who's on your island can connect Warpetts, swap flowers, snip them off and travel. Only you and your [members](members.md) can get onto your island.
+Connecting Warpetts, swapping flowers, snipping them off, traveling and collecting need the **Warpetts** right on other players' islands, see [Members & rights](members.md#the-rights). On your own island you can do it all.
 
 ## Related pages
 
 * [Getting started](start.md)
+* [Mobplates](mobplates.md)
 * [The island world](world.md)
 * [Resources & farming](farming.md)

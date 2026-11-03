@@ -48,6 +48,7 @@ Kurze Filme mit Ton, die dir die wichtigsten Systeme zeigen:
 | [Deine Insel lebt](sb/bewohner.md) | KI-Bewohner und Forestlinge |
 | [Mana & Biome](sb/skilltree.md) | Wie du Mana verdienst und neue Biome freischaltest |
 | [Clans – ein erster Blick](sb/clans.md) | Was dein Clan dir bringt |
+| [Mobplates](sb/mobplates.md) | Mobs einfangen und woanders freisetzen |
 
 ## Außerhalb des Wikis
 

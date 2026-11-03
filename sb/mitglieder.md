@@ -44,7 +44,7 @@ Einladen dürfen der Besitzer und Mitglieder mit dem Recht **Mitglieder**.
 | **Schalter** | Türen, Falltüren, Zauntore, Knöpfe, Hebel, Druckplatten |
 | **Tiere** | Tiere schlagen, füttern, züchten, anleinen, scheren, melken, reiten |
 | **Ernten** | Reife Pflanzen ernten und neu pflanzen |
-| **Warpetts** | [Warpett](warpetts.md)-Blumen und -Eier nutzen und setzen |
+| **Warpetts** | [Warpett](warpetts.md)-Blumen und -Eier nutzen und setzen, Warpetts mit einer [Mobplate](mobplates.md) einsammeln und absetzen |
 | **Skilltree** | Biome kaufen, Lieblinge setzen, den Clan um Hilfe bitten |
 | **Mitglieder** | Mitglieder, Rechte und Zugang verwalten |
 | **Statistik** | Die Statistik der Insel ansehen |

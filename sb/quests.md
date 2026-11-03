@@ -75,7 +75,7 @@ Schwerere Quests haben manchmal eine **Zusatzbedingung**, zum Beispiel *mit TNT*
 * Alles außerhalb des **Überlebensmodus** und während des Vorspanns.
 * Blöcke, die du **selbst platziert** hast – auch Sand oder Kies, der danach heruntergefallen ist.
 * **Stein aus Lava-Wasser-Generatoren.**
-* Monster aus **Spawnern**, Spawn-Eiern oder Befehlen.
+* Monster aus **Spawnern**, Spawn-Eiern, [Mobplates](mobplates.md) oder Befehlen.
 * **AFK-Angeln** und Angeln außerhalb von offenem Wasser.
 * Bei **Bau-Quests** zählt nur, was stehen bleibt – baust du Blöcke wieder ab, wird der Fortschritt abgezogen.
 * Beim **Laufen** zählen höchstens 8 Blöcke pro Sekunde, und nach 30 Sekunden ohne Bewegung nichts mehr.

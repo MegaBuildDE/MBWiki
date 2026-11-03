@@ -48,6 +48,7 @@ Short films with sound that show you the most important systems:
 | [Your island is alive](residents.md) | AI residents and Forestlings |
 | [Mana & biomes](skilltree.md) | How you earn Mana and unlock new biomes |
 | [Clans – a first look](clans.md) | What your clan brings you (in German) |
+| [Mobplates](mobplates.md) | Catch mobs and release them somewhere else (in German) |
 
 ## Outside the wiki
 

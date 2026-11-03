@@ -1,13 +1,13 @@
 ---
 description: >-
-  Die Erfolge im Tab „MegaBuild Sky“ – alle 20 Erfolge rund um Luftschiff,
-  Mana, Skilltree und Quests, und wie du sie auf Java und Bedrock siehst.
+  Die Erfolge im Tab „MegaBuild Sky“ – alle 22 Erfolge rund um Luftschiff,
+  Mana, Mobplates, Skilltree und Quests, und wie du sie auf Java und Bedrock siehst.
 icon: trophy
 ---
 
 # Erfolge
 
-Neben den normalen Minecraft-Fortschritten gibt es einen eigenen Tab **„MegaBuild Sky“** mit **20 Erfolgen** rund um Luftschiff, Mana, Skilltree und Quests.
+Neben den normalen Minecraft-Fortschritten gibt es einen eigenen Tab **„MegaBuild Sky“** mit **22 Erfolgen** rund um Luftschiff, Mana, Mobplates, Skilltree und Quests.
 
 * Jeder Erfolg zählt **einmal im ganzen Netzwerk**. Hast du ihn auf einer Insel bekommen, hast du ihn auf allen anderen auch.
 * Beim ersten Mal gibt es **3–8 Mana** – nur im Überlebensmodus, und es zählt zum Tageslimit für [Aktionen](eco.md#durch-aktionen).
@@ -37,6 +37,13 @@ Neben den normalen Minecraft-Fortschritten gibt es einen eigenen Tab **„MegaBu
 | **Aufs Konto** | Mana-Kugeln beim Ofen-Golem einzahlen – *noch nicht erreichbar, den Ofen-Golem gibt es noch nicht* |
 | **Verdichtet** | Eine Mana-Ladung craften |
 | **Magische Frucht** | Einen Mana-Apfel craften |
+
+### Mobplates
+
+| Erfolg | Wofür |
+| ------ | ----- |
+| **Erster Fang** | Einen Mob mit einer [Mobplate](mobplates.md) fangen – ein Dorfbewohner oder Warpett ohne Kampf zählt auch |
+| **Neu eingezogen** | Einen gefangenen Mob mit seiner Mobplate platzieren – auch mit der Plate von jemand anderem |
 
 ### Skilltree
 
@@ -94,4 +101,5 @@ Verdienst du einen Clan-Erfolg, während du offline bist, bekommst du ihn samt M
 * [Skilltree & Biome](skilltree.md)
 * [Quests](quests.md)
 * [Mana & Ruby](eco.md)
+* [Mobplates](mobplates.md)
 * [Clans](clans.md)
