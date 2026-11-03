@@ -70,9 +70,10 @@ You take the filled plate along to other islands, like your whole inventory.
 A placed [Warpett](warpetts.md) goes into a plate too, with no fight and no mark – and its **flower travels along**.
 
 * **Collecting:** Click the Warpett with the empty plate. On Bedrock, as usual with Warpetts, sneaking next to it is enough; the plate must be in your main hand.
-* **Setting down:** Right-click a block, with solid ground and free space, not on water. The Warpett immediately rejoins its flower's network in that world; it eats nothing and doesn't set off. If that doesn't work there, you keep the plate.
+* **Setting down:** Right-click a block, with solid ground and free space. Not in water, lava or fire, not on a cactus or magma, not under a low ceiling and not on an egg. The Warpett immediately rejoins its flower's network in that world; it eats nothing and doesn't set off. If that doesn't work there, you keep the plate.
 * **On another island** it connects to the Warpetts with the same flower there.
-* **Flower:** The plate says which one is inside. Warpetts without a flower go in too.
+* **Flower:** The plate says which one is inside. Warpetts without a flower go in too, and after being set down they roam freely like freshly hatched ones.
+* **In a ChestShop:** The sign, messages and menu name the flower, for example “Warpett: Mohn”. The sign shortens long names.
 
 The Warpett on the airship and the one on your starting island stay where they are.
 
@@ -94,7 +95,8 @@ If no mob can appear at the spot when releasing, you keep the plate. Only one pl
 * **No reward:** Released mobs count neither for [Mana](economy.md#what-doesnt-give-mana) nor for [quests](quests.md).
 * **Babies** give the normal plate, and an adult always comes out.
 * **Other players' tamed animals** can't be marked. [Residents](residents.md), [Forestlings](forestlings.md) and the crew don't fit into a plate either.
-* **Trading:** You can trade empty and filled plates and the Pale Sherd in a ChestShop. Mana orbs, Mana Charges and Mana Apples stay blocked there.
+* **Trading:** You can trade Mana Apples, empty and filled plates and the Pale Sherd in a ChestShop. Mana orbs and Mana Charges stay blocked there. Plates and Mana Apples can't go into the backpack.
+* **Stacks:** Mobplates and Pale Sherds stack to 64. Warpett plates only stack with the same flower; all plates without a flower count as one kind.
 
 ### On other players' islands
 

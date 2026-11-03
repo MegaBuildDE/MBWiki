@@ -70,9 +70,10 @@ Die gefüllte Plate nimmst du wie dein ganzes Inventar mit auf andere Inseln.
 Auch ein aufgestelltes [Warpett](warpetts.md) kommt in die Plate, ohne Kampf und ohne Markierung – die **Blume reist mit**.
 
 * **Einsammeln:** Klick mit der leeren Plate auf das Warpett. Auf Bedrock reicht wie sonst beim Warpett das Schleichen daneben, die Plate muss in der Haupthand sein.
-* **Absetzen:** Rechtsklick auf einen Block, mit festem Boden und freiem Platz, nicht auf Wasser. Das Warpett gehört sofort wieder zum Netz seiner Blume in dieser Welt, es frisst nichts und reist nicht los. Geht es dort nicht, bleibt die Plate bei dir.
+* **Absetzen:** Rechtsklick auf einen Block, mit festem Boden und freiem Platz. Nicht in Wasser, Lava oder Feuer, nicht auf Kaktus oder Magma, nicht unter einer niedrigen Decke und nicht auf einem Ei. Das Warpett gehört sofort wieder zum Netz seiner Blume in dieser Welt, es frisst nichts und reist nicht los. Geht es dort nicht, bleibt die Plate bei dir.
 * **Auf einer anderen Insel** verbindet es sich mit den Warpetts derselben Blume dort.
-* **Blume:** Welche drinsteckt, steht auf der Plate. Warpetts ohne Blume kommen auch hinein.
+* **Blume:** Welche drinsteckt, steht auf der Plate. Warpetts ohne Blume kommen auch hinein und laufen nach dem Absetzen frei umher wie frisch geschlüpfte.
+* **Im ChestShop:** Schild, Meldungen und Menü nennen die Blume, zum Beispiel „Warpett: Mohn“. Das Schild kürzt lange Namen.
 
 Das Warpett auf dem Luftschiff und das auf der Startinsel bleiben stehen.
 
@@ -94,7 +95,8 @@ Passt beim Freisetzen kein Mob an die Stelle, bleibt die Plate bei dir. Einen Mo
 * **Keine Belohnung:** Freigesetzte Mobs zählen weder für [Mana](eco.md#was-kein-mana-gibt) noch für [Quests](quests.md).
 * **Babys** ergeben die normale Plate, heraus kommt immer ein Erwachsener.
 * **Fremde gezähmte Tiere** lassen sich nicht markieren. Auch [Bewohner](bewohner.md), [Forestlinge](forestlinge.md) und die Crew passen in keine Plate.
-* **Handel:** Leere und gefüllte Plates und die Blasse Scherbe kannst du im ChestShop handeln. Mana-Kugeln, Mana-Ladungen und Mana-Äpfel bleiben dort gesperrt.
+* **Handel:** Mana-Äpfel, leere und gefüllte Plates und die Blasse Scherbe kannst du im ChestShop handeln. Mana-Kugeln und Mana-Ladungen bleiben dort gesperrt. In den Rucksack dürfen Plates und Mana-Äpfel nicht.
+* **Stapel:** Mobplates und Blasse Scherben stapeln auf 64. Warpett-Plates stapeln nur bei gleicher Blume, alle Plates ohne Blume sind eine Sorte.
 
 ### Auf fremden Inseln
 
