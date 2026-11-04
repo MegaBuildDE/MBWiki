@@ -115,7 +115,7 @@ Below height 0 you die instantly. You wake up in your bed – or on the deck of 
 Ruby is the currency for **trading between players**. Every account starts with **1,000 Ruby** – they're there from your very first login.
 
 * **Earning more:** 5 Ruby per [vote](vote.md) and rewards for [bug reports and clips](discord.md#bug-bounty-and-clipcoin).
-* **Spending:** Send it to other players with `/pay` – for example as payment for goods you trade among yourselves. Player shops are in the works.
+* **Spending:** At other players' [ChestShops](chestshop.md) or directly with `/pay` – for example as payment for goods you trade among yourselves.
 * AI residents and Forestlings **never** take Ruby.
 * Ruby can't be bought with real money, and Mana and Ruby can't be exchanged for each other.
 
@@ -143,3 +143,4 @@ Your **Mana and Ruby stay**, and so do your quest progress, streak and achieveme
 * [Skill tree & biomes](skilltree.md)
 * [Quests](quests.md)
 * [Voting](vote.md)
+* [ChestShops](chestshop.md)

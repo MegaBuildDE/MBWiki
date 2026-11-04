@@ -95,7 +95,7 @@ If no mob can appear at the spot when releasing, you keep the plate. Only one pl
 * **No reward:** Released mobs count neither for [Mana](economy.md#what-doesnt-give-mana) nor for [quests](quests.md).
 * **Babies** give the normal plate, and an adult always comes out.
 * **Other players' tamed animals** can't be marked. [Residents](residents.md), [Forestlings](forestlings.md) and the crew don't fit into a plate either.
-* **Trading:** You can trade Mana Apples, empty and filled plates and the Pale Sherd in a ChestShop. Mana orbs and Mana Charges stay blocked there. Plates and Mana Apples can't go into the backpack.
+* **Trading:** You can trade Mana Apples, empty and filled plates and the Pale Sherd in a [ChestShop](chestshop.md). Mana orbs and Mana Charges stay blocked there. Plates and Mana Apples can't go into the backpack.
 * **Stacks:** Mobplates and Pale Sherds stack to 64. Warpett plates only stack with the same flower; all plates without a flower count as one kind.
 
 ### On other players' islands

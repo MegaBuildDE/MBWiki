@@ -115,7 +115,7 @@ Unterhalb von Höhe 0 bist du sofort tot. Du wachst in deinem Bett auf – oder 
 Ruby ist die Währung für den **Handel zwischen Spielern**. Jedes Konto startet mit **1.000 Ruby** – sie sind gleich beim ersten Login da.
 
 * **Dazuverdienen:** 5 Ruby pro [Vote](../ag/vote.md) und Belohnungen für [Bug-Meldungen und Clips](../ag/discord.md#bug-bounty-und-clipcoin).
-* **Ausgeben:** An andere Spieler schicken mit `/pay` – etwa als Bezahlung für Ware, die ihr untereinander tauscht. Shops für Spieler sind in Arbeit.
+* **Ausgeben:** An den [ChestShops](chestshop.md) anderer Spieler oder direkt mit `/pay` – etwa als Bezahlung für Ware, die ihr untereinander tauscht.
 * KI-Bewohner und Forestlinge nehmen **nie** Ruby.
 * Ruby gibt es nicht gegen Echtgeld, und Mana und Ruby lassen sich nicht tauschen.
 
@@ -143,3 +143,4 @@ Dein **Mana und Ruby bleiben** erhalten, ebenso Quest-Stand, Serie und Erfolge. 
 * [Skilltree & Biome](skilltree.md)
 * [Quests](quests.md)
 * [Voten](../ag/vote.md)
+* [ChestShops](chestshop.md)

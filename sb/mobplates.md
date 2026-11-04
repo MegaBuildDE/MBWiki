@@ -95,7 +95,7 @@ Passt beim Freisetzen kein Mob an die Stelle, bleibt die Plate bei dir. Einen Mo
 * **Keine Belohnung:** Freigesetzte Mobs zählen weder für [Mana](eco.md#was-kein-mana-gibt) noch für [Quests](quests.md).
 * **Babys** ergeben die normale Plate, heraus kommt immer ein Erwachsener.
 * **Fremde gezähmte Tiere** lassen sich nicht markieren. Auch [Bewohner](bewohner.md), [Forestlinge](forestlinge.md) und die Crew passen in keine Plate.
-* **Handel:** Mana-Äpfel, leere und gefüllte Plates und die Blasse Scherbe kannst du im ChestShop handeln. Mana-Kugeln und Mana-Ladungen bleiben dort gesperrt. In den Rucksack dürfen Plates und Mana-Äpfel nicht.
+* **Handel:** Mana-Äpfel, leere und gefüllte Plates und die Blasse Scherbe kannst du im [ChestShop](chestshop.md) handeln. Mana-Kugeln und Mana-Ladungen bleiben dort gesperrt. In den Rucksack dürfen Plates und Mana-Äpfel nicht.
 * **Stapel:** Mobplates und Blasse Scherben stapeln auf 64. Warpett-Plates stapeln nur bei gleicher Blume, alle Plates ohne Blume sind eine Sorte.
 
 ### Auf fremden Inseln
