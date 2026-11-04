@@ -163,7 +163,7 @@ Bis zu **25 Mitglieder**. Für jedes legst du fest, was es darf.
 
 <summary>Kann ich Mana an andere Spieler schicken?</summary>
 
-Nein, Mana lässt sich nicht übertragen. Ruby dagegen kannst du mit `/pay <Spieler> <Menge>` verschicken – jedes Konto startet mit 1.000 Ruby.
+Nein, Mana lässt sich nicht übertragen. Ruby dagegen kannst du mit `/pay <Spieler> <Menge>` verschicken – jedes Konto startet mit 1.000 Ruby. Neue Konten geben Ruby erst 24 Stunden nach dem ersten Login und nach 20 Minuten Spielzeit weiter – [mehr dazu](../sb/eco.md#ruby-verschicken).
 
 </details>
 

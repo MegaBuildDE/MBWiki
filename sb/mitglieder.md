@@ -45,7 +45,7 @@ Einladen dürfen der Besitzer und Mitglieder mit dem Recht **Mitglieder**.
 | **Tiere** | Tiere schlagen, füttern, züchten, anleinen, scheren, melken, reiten |
 | **Ernten** | Reife Pflanzen ernten und neu pflanzen |
 | **Warpetts** | [Warpett](warpetts.md)-Blumen und -Eier nutzen und setzen, Warpetts mit einer [Mobplate](mobplates.md) einsammeln und absetzen |
-| **Skilltree** | Biome kaufen, Lieblinge setzen, den Clan um Hilfe bitten |
+| **Skilltree** | Biome kaufen, Lieblinge setzen, den Clan um Hilfe bitten, [Shops](chestshop.md) eröffnen, [Shop-Bereiche](chestshop.md#shop-bereiche) verwalten |
 | **Mitglieder** | Mitglieder, Rechte und Zugang verwalten |
 | **Statistik** | Die Statistik der Insel ansehen |
 
@@ -55,6 +55,7 @@ Dazu kommt der Schalter **Betreten**: Ist er aus, kommt das Mitglied nur noch ü
 
 * Fehlt dir ein Recht, sagt dir die Anzeige über der Hotbar, welches – zum Beispiel „Hier darfst du nicht bauen.“
 * Eine Kiste, einen Ofen oder einen anderen Block mit Inhalt abbauen braucht **Bauen und Behälter**.
+* **Shop-Behälter** öffnen nur der Shop-Besitzer, der Inselbesitzer und das Team – das Recht Behälter reicht dafür nicht.
 * **Fliegen** mit dem `/fly` deines Rangs geht nur, wo du das Recht **Bauen** hast.
 * Als Besitzer hast du immer alle Rechte. Deine Insel **löschen** kannst nur du, in der Lobby.
 
@@ -71,7 +72,7 @@ Damit du nicht jedes Recht einzeln setzen musst, gibt es vier Vorlagen. Jede ent
 
 Stellst du ein einzelnes Recht um, zeigt das Menü **Eigen**.
 
-* **Neue Mitglieder** kommen als **Mitbauer**. Biome kaufen dürfen sie erst, wenn du ihnen das Recht **Skilltree** gibst.
+* **Neue Mitglieder** kommen als **Mitbauer**. Biome kaufen und Shops eröffnen dürfen sie erst, wenn du ihnen das Recht **Skilltree** gibst.
 * **Mitglieder von früher** haben weiter alle Handlungsrechte. Nur wer früher als **Besucher** eingetragen war, darf jetzt nur noch Türen und Schalter benutzen.
 
 ## Mitglieder bearbeiten

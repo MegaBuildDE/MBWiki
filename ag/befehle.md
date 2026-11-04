@@ -58,6 +58,20 @@ Nur auf den Inseln. Mehr dazu unter [KI-Bewohner](../sb/bewohner.md).
 
 Mana lässt sich nicht verschicken – nur Ruby.
 
+## ChestShops
+
+| Befehl | Was er macht |
+| ------ | ------------ |
+| `/shop` | Shop-Menü: suchen, Märkte, deine Shops. Auch `/shops`, `/sky shop` |
+| `/shop search [Begriff]` | Angebote aller Inseln suchen |
+| `/shop hand` | Wer handelt das Item in deiner Haupthand? |
+| `/shop markets` | Offene Märkte aller Inseln |
+| `/shop mine` | Deine Shops mit Vorrat und Platz |
+| `/shop areas` | Shop-Bereiche dieser Insel |
+| `/shop home` | Zurück auf deine eigene Insel |
+
+Nur auf den Inseln. Alle Befehle stehen unter [ChestShops](../sb/chestshop.md#befehle).
+
 ## Freunde & Nachrichten
 
 | Befehl | Was er macht |
@@ -93,4 +107,5 @@ Mana lässt sich nicht verschicken – nur Ruby.
 * [Clans](../sb/clans.md)
 * [Nachrichten & Post](nachrichten.md)
 * [Mana & Ruby](../sb/eco.md)
+* [ChestShops](../sb/chestshop.md)
 * [Discord](discord.md)

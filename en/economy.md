@@ -133,6 +133,7 @@ Ruby is the currency for **trading between players**. Every account starts with 
 * You can also send to players who are currently offline.
 * Amounts may use thousands separators: `1000`, `1.000` and `1,000` all work. Decimals don't.
 * Mana can't be sent – `/pay … mana` is rejected.
+* **New accounts** can only pass on Ruby **24 hours after their first login** and after **20 minutes of playtime**. Receiving always works, and the message tells you how long is left. This also applies to purchases in a [ChestShop](chestshop.md).
 
 ## Deleting your island
 

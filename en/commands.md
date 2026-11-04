@@ -58,6 +58,20 @@ Only on the islands. More under [AI residents](residents.md).
 
 Mana can't be sent – only Ruby.
 
+## ChestShops
+
+| Command | What it does |
+| ------- | ------------ |
+| `/shop` | Shop menu: search, markets, your shops. Also `/shops`, `/sky shop` |
+| `/shop search [term]` | Search offers on all islands |
+| `/shop hand` | Who trades the item in your main hand? |
+| `/shop markets` | Open markets of all islands |
+| `/shop mine` | Your shops with stock and space |
+| `/shop areas` | This island's shop areas |
+| `/shop home` | Back to your own island |
+
+Only on the islands. All commands are listed under [ChestShops](chestshop.md#commands).
+
 ## Friends & messages
 
 | Command | What it does |
@@ -92,4 +106,5 @@ Mana can't be sent – only Ruby.
 * [Friends](friends.md)
 * [Messages & Mail](messages.md)
 * [Mana & Ruby](economy.md)
+* [ChestShops](chestshop.md)
 * [Discord](discord.md)

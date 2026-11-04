@@ -45,7 +45,7 @@ The owner and members with the **Members** right can invite.
 | **Animals** | Hit, feed, breed, leash, shear, milk and ride animals |
 | **Harvest** | Harvest ripe crops and replant |
 | **Warpetts** | Use and place [Warpett](warpetts.md) flowers and eggs, collect and set down Warpetts with a [Mobplate](mobplates.md) |
-| **Skill tree** | Buy biomes, set favourites, ask the clan for help |
+| **Skill tree** | Buy biomes, set favourites, ask the clan for help, open [shops](chestshop.md), manage [shop areas](chestshop.md#shop-areas) |
 | **Members** | Manage members, rights and access |
 | **Statistics** | View the island statistics |
 
@@ -55,6 +55,7 @@ On top of that there's the **Join** switch: if it's off, the member only gets on
 
 * If you're missing a right, the display above the hotbar tells you which one – for example “You may not build here.”
 * Breaking a chest, furnace or any other block with contents needs **Build and Containers**.
+* **Shop containers** can only be opened by the shop owner, the island owner and the team – the Containers right isn't enough.
 * **Flying** with your rank's `/fly` only works where you have the **Build** right.
 * As the owner you always have all rights. Only you can **delete** your island, in the lobby.
 
@@ -71,7 +72,7 @@ So you don't have to set every right individually, there are four templates. Eac
 
 If you change a single right, the menu shows **Custom**.
 
-* **New members** come in as **Builders**. They can only buy biomes once you give them the **Skill tree** right.
+* **New members** come in as **Builders**. They can only buy biomes and open shops once you give them the **Skill tree** right.
 * **Members from before** keep all action rights. Only those who were set as **Visitor** before can now just use doors and switches.
 
 ## Editing members

@@ -133,6 +133,7 @@ Ruby ist die Währung für den **Handel zwischen Spielern**. Jedes Konto startet
 * Du kannst auch Spielern schicken, die gerade offline sind.
 * Beträge dürfen Tausenderpunkte haben: `1000`, `1.000` und `1,000` funktionieren. Kommazahlen gehen nicht.
 * Mana lässt sich nicht verschicken – `/pay … mana` wird abgelehnt.
+* **Neue Konten** geben Ruby erst **24 Stunden nach dem ersten Login** und nach **20 Minuten Spielzeit** weiter. Empfangen geht immer, und die Meldung sagt dir, wie lange es noch dauert. Das gilt auch für Käufe im [ChestShop](chestshop.md).
 
 ## Insel löschen
 

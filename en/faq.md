@@ -163,7 +163,7 @@ Up to **25 members**. For each one you decide what they may do.
 
 <summary>Can I send Mana to other players?</summary>
 
-No, Mana can't be transferred. Ruby, on the other hand, you can send with `/pay <player> <amount>` – every account starts with 1,000 Ruby.
+No, Mana can't be transferred. Ruby, on the other hand, you can send with `/pay <player> <amount>` – every account starts with 1,000 Ruby. New accounts can only pass it on 24 hours after their first login and after 20 minutes of playtime – [more on this](economy.md#sending-ruby).
 
 </details>
 
