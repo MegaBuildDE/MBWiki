@@ -44,6 +44,7 @@ Hast du noch keine Insel, steht hier **Skyblock erstellen** – siehe [Erste Sch
 | **Statistiken** | `/sky stats` | Deine Werte auf dieser Insel |
 | **Insel** | `/sky island` | Server, Startbiom und **Deine Rechte** – was du auf dieser Insel darfst |
 | **Freunde & Clan** | `/friend` | Freunde, [Clan](clans.md) und Post |
+| **Shops** | `/shop` | [ChestShops](chestshop.md) suchen, Märkte und deine eigenen Shops |
 | **Zur eigenen Insel** | `/clan home` | Zurück auf deine Insel, wenn du gerade woanders bist |
 
 Den Skilltree öffnet auch ein Klick auf den **Golem** auf deinem Luftschiff.

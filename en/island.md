@@ -44,6 +44,7 @@ If you don't have an island yet, you'll find **Create Skyblock** here instead â€
 | **Statistics** | `/sky stats` | Your stats on this island |
 | **Island** | `/sky island` | Server, starting biome and **Your rights** â€“ what you're allowed to do on this island |
 | **Friends & Clan** | `/friend` | Friends, [clan](clans.md) and mail |
+| **Shops** | `/shop` | Search [ChestShops](chestshop.md), markets and your own shops |
 | **To your own island** | `/clan home` | Back to your island when you're somewhere else |
 
 Clicking the **Golem** on your airship also opens the skill tree.
