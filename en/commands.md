@@ -80,6 +80,7 @@ Only on the islands. All commands are listed under [ChestShops](chestshop.md#com
 | `/friend <player>` | Send a friend request – or accept theirs |
 | `/friend add` | Players you can ask |
 | `/friend requests` | Pending requests |
+| `/g <text>` | One line to the [global chat](messages.md#global-chat) – to everyone on the network. Also `!` in front of a message |
 | `/msg <player> <text>` | Private message – if the player isn't online, it goes to their mailbox. Also `/tell`, `/w` |
 | `/r <text>` | Reply to the last private message. Also `/reply` |
 | `/mail` | Your mailbox. Also `/post` |

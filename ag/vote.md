@@ -57,6 +57,21 @@ Neben den 1.000 Ruby, mit denen jedes Konto startet, sind Votes der regelmäßig
 
 Jeder Vote schiebt MegaBuild.de in den Serverlisten nach oben und hilft dabei, neue Spieler zu erreichen.
 
+## Top-Voter des Monats
+
+Am **1. jedes Monats** kurz nach Mitternacht postet unser [Discord](discord.md)-Bot die Top-Voter des Vormonats im News-Kanal. Die Belohnung kommt **sofort** aufs Konto, dazu ein Danke als [Post](nachrichten.md) im Spiel.
+
+| Platz | Mana | Ruby |
+| ----- | ---: | ---: |
+| 🥇 1 | **750** | **150** |
+| 🥈 2 | **500** | **100** |
+| 🥉 3 | **300** | **50** |
+
+* **Gleichstand teilt den Platz.** Zwei Spieler mit je 12 Votes sind beide 🥇, der nächste ist 🥉 – und beide bekommen den Gewinn von Platz 1. Mehr als drei Top-Voter gibt es trotzdem nicht; reicht ein Gleichstand über die Grenze, liegt vorn, wer die Zahl zuerst erreicht hat.
+* Gezählt wird nur, was im Monat dazukommt – wer vorher schon viel gevotet hat, startet nicht im Vorteil.
+* **Nur Namen, die auf dem Server bekannt sind**, kommen in die Wertung. Hast du dich auf der Vote-Seite vertippt, zählt der Vote für die Wertung nicht.
+* Im Discord erinnert der Bot einmal am Tag ans Voten und zeigt dabei den aktuellen Monatsstand der Top 3.
+
 ## Häufige Fragen
 
 <details>

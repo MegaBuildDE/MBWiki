@@ -44,7 +44,7 @@ Schreib **ja** in den Chat – innerhalb von 30 Sekunden nach seiner Frage. Der 
 {% endstepper %}
 
 * Gekauft wird **nur** direkt auf seine Preisfrage hin. Ein „ok“ führt zu einer Rückfrage, „später“ oder „vielleicht“ kaufen nie.
-* Mit **erzähl** erzählt er dir eine Geschichte, mit **tschüss** beendest du das Gespräch. Mit `!` vorn schreibst du an alle.
+* Mit **erzähl** erzählt er dir eine Geschichte, mit **tschüss** beendest du das Gespräch. Mit `+` vorn schreibst du an alle auf dem Server, mit `!` vorn in den [Globalchat](../ag/nachrichten.md#globalchat).
 * Gehst du weg oder schreibst eine Weile nichts, endet das Gespräch.
 
 ## Alle Segen

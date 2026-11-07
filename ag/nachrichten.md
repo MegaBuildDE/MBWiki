@@ -1,9 +1,28 @@
 ---
-description: Private Nachrichten, das Postfach und der Chatfilter auf MegaBuild.de.
+description: >-
+  Der Globalchat, private Nachrichten, das Postfach und der Chatfilter auf
+  MegaBuild.de.
 icon: envelope
 ---
 
 # Nachrichten & Post
+
+## Globalchat
+
+```
+!<Text>
+/g <Text>
+```
+
+Eine Zeile mit **`!`** vorn – oder `/g <Text>` – geht an **alle Spieler im Netzwerk**, egal auf welchem Server sie gerade sind. Vor der Zeile steht `[Global]`, dein [Rang](rang.md) und dein Name; ein Klick auf den Namen schlägt dir `/msg` vor.
+
+* Nach dem `!` muss ein Buchstabe oder eine Ziffer kommen – ein einzelnes „!“ oder „!!!“ bleibt normaler Chat.
+* Zwischen zwei Zeilen liegen **3 Sekunden**, höchstens **256 Zeichen** je Zeile.
+* Chatfilter und Stummschaltung gelten wie im normalen Chat (siehe unten).
+
+{% hint style="info" %}
+**Auf den Inseln** gilt `!` auch im Gespräch mit [KI-Bewohnern](../sb/bewohner.md), im Inselchat und bei den [Forestlingen](../sb/forestlinge.md). Willst du dort nur an alle auf **diesem** Server schreiben, setze ein **`+`** an den Anfang. An deinen Clan schreibst du mit **`#`** vorn oder `/c` (siehe [Clans](../sb/clans.md)).
+{% endhint %}
 
 ## Private Nachrichten
 

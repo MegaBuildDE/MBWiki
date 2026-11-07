@@ -97,6 +97,12 @@ Für gemeldete Fehler und Inhalte über MegaBuild.de gibt es eine Belohnung. Das
 **Fehler ausnutzen statt melden** verstößt gegen die Regeln. Melde Bugs, besonders Dupes und Exploits, nur über ein Ticket – nicht öffentlich.
 {% endhint %}
 
+## Voten im Discord
+
+* Einmal am Tag erinnert der Bot ans [Voten](vote.md) und zeigt den Monatsstand der Top 3.
+* Am **1. jedes Monats** postet er die **Top-Voter des Vormonats** im News-Kanal: 750 / 500 / 300 Mana und 150 / 100 / 50 Ruby für die Plätze 1 bis 3, bei Gleichstand teilen sich mehrere denselben Platz und Gewinn.
+* Diese Belohnung kommt auch ohne verbundenen Account – dein Minecraft-Name steht ja im Vote. Alle Regeln dazu stehen unter [Voten](vote.md#top-voter-des-monats).
+
 ## Private Talks
 
 Betrittst du den Sprachkanal zum Erstellen, bekommst du deinen **eigenen Sprachkanal**. Darin steuerst du ihn mit:

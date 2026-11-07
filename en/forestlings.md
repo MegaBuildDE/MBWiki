@@ -44,7 +44,7 @@ Type **yes** in chat – within 30 seconds of its question. The blessing takes e
 {% endstepper %}
 
 * You **only** buy as a direct answer to its price question. An “ok” makes it ask again; “later” or “maybe” never buy.
-* Say **tell me** and it tells you a story; **bye** ends the conversation. Put `!` at the start to write to everyone.
+* Say **tell me** and it tells you a story; **bye** ends the conversation. Put `+` at the start to write to everyone on the server, or `!` to write to the [global chat](messages.md#global-chat).
 * If you walk away or don't write anything for a while, the conversation ends.
 
 ## All blessings

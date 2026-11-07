@@ -97,6 +97,12 @@ Reported bugs and content about MegaBuild.de earn you a reward. The team rates i
 **Exploiting bugs instead of reporting them** breaks the rules. Report bugs, especially dupes and exploits, only through a ticket – not in public.
 {% endhint %}
 
+## Voting on Discord
+
+* Once a day the bot reminds you to [vote](vote.md) and shows the monthly standing of the top 3.
+* On the **1st of every month** it posts the **top voters of the previous month** in the news channel: 750 / 500 / 300 Mana and 150 / 100 / 50 Ruby for places 1 to 3; on a tie, several players share the same place and prize.
+* This reward arrives even without a linked account – your Minecraft name is in the vote. All the rules are under [Voting](vote.md#top-voters-of-the-month).
+
 ## Private Talks
 
 When you join the voice channel for creating one, you get your **own voice channel**. You control it with:

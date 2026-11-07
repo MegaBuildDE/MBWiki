@@ -1,9 +1,28 @@
 ---
-description: Private messages, the mailbox and the chat filter on MegaBuild.de.
+description: >-
+  The global chat, private messages, the mailbox and the chat filter on
+  MegaBuild.de.
 icon: envelope
 ---
 
 # Messages & Mail
+
+## Global chat
+
+```
+!<text>
+/g <text>
+```
+
+A line with **`!`** in front – or `/g <text>` – goes to **every player on the network**, no matter which server they're on. The line starts with `[Global]`, your [rank](ranks.md) and your name; clicking the name suggests `/msg`.
+
+* A letter or digit has to follow the `!` – a lone “!” or “!!!” stays normal chat.
+* There are **3 seconds** between two lines, and at most **256 characters** per line.
+* The chat filter and mutes apply just like in normal chat (see below).
+
+{% hint style="info" %}
+**On the islands**, `!` also works while talking to [AI residents](residents.md), in the island chat and with the [Forestlings](forestlings.md). If you only want to write to everyone on **this** server, put a **`+`** at the start. To write to your clan, put **`#`** in front or use `/c` (see [Clans](clans.md)).
+{% endhint %}
 
 ## Private messages
 

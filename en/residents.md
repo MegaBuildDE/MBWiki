@@ -49,13 +49,13 @@ During the conversation, your chat lines only go to the resident. You see them i
 {% step %}
 #### Write to everyone
 
-If you still want to write something in the normal chat, put a **`!`** at the start.
+If you still want to write something in the normal chat, put a **`+`** at the start – the line then goes to everyone on this server. With **`!`** in front it goes to the [global chat](messages.md#global-chat), so to everyone on the network.
 {% endstep %}
 {% endstepper %}
 
 ### Island chat
 
-When you're standing on the island of residents you already know, you can write to them **without clicking and without a name** – your chat then goes to them, not to other players. A line in chat lets you know when you arrive and when you leave. Put `!` at the start to write to everyone.
+When you're standing on the island of residents you already know, you can write to them **without clicking and without a name** – your chat then goes to them, not to other players. A line in chat lets you know when you arrive and when you leave. Put `+` at the start to write to everyone on the server, or `!` to write to the [global chat](messages.md#global-chat).
 
 ### What they understand
 
@@ -72,7 +72,7 @@ The more often you visit a resident, the better they know you. A level you've re
 | Level | What's added |
 | ----- | ------------ |
 | **Stranger** | The resident talks to you |
-| **Acquainted** | Chat, look at their stock |
+| **Acquainted** | Chat, look at their stock, **buy provisions** – food for Mana |
 | **Trade partner** | Buy and sell |
 | **Open** | The whole stock, swapping, tasks, orders, trading from afar via `/residents` |
 | **Trusted** | Personal offers, swap a quest |
@@ -86,6 +86,8 @@ The more often you visit a resident, the better they know you. A level you've re
 Open trading by typing “trade” in chat or via the **stock chest** at the house or market stall – clicking it opens the trade menu.
 
 * You pay with **Mana or goods** – **never with Ruby or real money**.
+* **Provisions right from the first meeting:** Food – carrots, potatoes, melon slices, sweet berries, cod and salmon – can be bought from every resident you know, right away, for Mana. Until *Open*, at most **64 pieces** per food, resident and day. Buying only: selling comes with *Trade partner*, swapping with *Open*.
+* Which provisions a resident has depends on their biome – **there's always fish**, even with residents who don't make any food themselves. They catch cod on the side. Bread only comes through **orders**.
 * **Selling** gives you Mana up to a daily limit: 30–40 Mana per resident, at most 100 Mana a day in total. **Swapping** still works after that.
 * **Tasks** (from Open): For Mana, a resident will for example show you the way to a biome, repair your tool or bring 30 minutes of sunshine or rain to your island.
 * **Orders** (from Open): You order goods from a resident – say *bake 16 bread* – and pay Mana. They make it in the time they tell you.
@@ -131,7 +133,7 @@ Below the players, the tab list shows a section **“Residents (KI)”** with up
 
 <summary>Why can't I buy anything yet?</summary>
 
-Trading only opens up after a few visits. A visit counts at most every 20 minutes, and the whole stock is available at the earliest on the second day you drop by.
+**You can buy food right away** as soon as you know a resident. Everything else only opens up after a few visits. A visit counts at most every 20 minutes, and the whole stock is available at the earliest on the second day you drop by.
 
 </details>
 
@@ -139,7 +141,7 @@ Trading only opens up after a few visits. A visit counts at most every 20 minute
 
 <summary>Can other players read what I write on the island?</summary>
 
-No. On the island of residents you know, your chat only goes to them. Put `!` at the start to write to everyone.
+No. On the island of residents you know, your chat only goes to them. Put `+` at the start to write to everyone on the server, or `!` to write to the [global chat](messages.md#global-chat).
 
 </details>
 

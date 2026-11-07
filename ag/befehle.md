@@ -80,6 +80,7 @@ Nur auf den Inseln. Alle Befehle stehen unter [ChestShops](../sb/chestshop.md#be
 | `/friend <Spieler>` | Freundschaftsanfrage senden – oder seine annehmen |
 | `/friend add` | Spieler, die du fragen kannst |
 | `/friend requests` | Offene Anfragen |
+| `/g <Text>` | Eine Zeile in den [Globalchat](nachrichten.md#globalchat) – an alle im Netzwerk. Auch `!` vor der Nachricht |
 | `/msg <Spieler> <Text>` | Private Nachricht – ist der Spieler nicht da, landet sie in seiner Post. Auch `/tell`, `/w` |
 | `/r <Text>` | Auf die letzte private Nachricht antworten. Auch `/reply` |
 | `/mail` | Dein Postfach. Auch `/post` |

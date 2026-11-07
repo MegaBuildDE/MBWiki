@@ -49,13 +49,13 @@ Während des Gesprächs geht deine Chatzeile nur an den Bewohner. Du siehst sie 
 {% step %}
 #### An alle schreiben
 
-Willst du trotzdem etwas in den normalen Chat schreiben, setze ein **`!`** an den Anfang.
+Willst du trotzdem etwas in den normalen Chat schreiben, setze ein **`+`** an den Anfang – die Zeile geht dann an alle auf diesem Server. Mit **`!`** vorn landet sie im [Globalchat](../ag/nachrichten.md#globalchat), also bei allen im Netzwerk.
 {% endstep %}
 {% endstepper %}
 
 ### Inselchat
 
-Stehst du auf der Insel von Bewohnern, die du schon kennst, schreibst du ihnen **ohne Klick und ohne Namen** – dein Chat geht dann an sie, nicht an andere Spieler. Beim Betreten und Verlassen sagt dir eine Zeile im Chat Bescheid. Mit `!` vorn schreibst du an alle.
+Stehst du auf der Insel von Bewohnern, die du schon kennst, schreibst du ihnen **ohne Klick und ohne Namen** – dein Chat geht dann an sie, nicht an andere Spieler. Beim Betreten und Verlassen sagt dir eine Zeile im Chat Bescheid. Mit `+` vorn schreibst du an alle auf dem Server, mit `!` vorn in den [Globalchat](../ag/nachrichten.md#globalchat).
 
 ### Was sie verstehen
 
@@ -72,7 +72,7 @@ Je öfter du einen Bewohner besuchst, desto besser kennt er dich. Eine erreichte
 | Stufe | Was dazukommt |
 | ----- | ------------- |
 | **Fremd** | Der Bewohner spricht dich an |
-| **Bekannt** | Reden, sein Lager ansehen |
+| **Bekannt** | Reden, sein Lager ansehen, **Proviant kaufen** – Essbares gegen Mana |
 | **Handelspartner** | Kaufen und verkaufen |
 | **Offen** | Das ganze Lager, Tauschen, Aufgaben, Aufträge, Handel aus der Ferne über `/bewohner` |
 | **Vertraut** | Persönliche Angebote, Quest tauschen |
@@ -86,6 +86,8 @@ Je öfter du einen Bewohner besuchst, desto besser kennt er dich. Eine erreichte
 Öffne den Handel mit „handeln“ im Chat oder über die **Lagerkiste** am Haus oder Marktstand – ein Klick darauf öffnet das Handelsmenü.
 
 * Bezahlt wird mit **Mana oder Ware** – **nie mit Ruby oder Echtgeld**.
+* **Proviant schon beim ersten Treffen:** Essbares – Karotten, Kartoffeln, Melonenscheiben, Süßbeeren, Kabeljau und Lachs – kaufst du bei jedem Bewohner, den du kennst, sofort gegen Mana. Bis *Offen* höchstens **64 Stück** je Essbarem, Bewohner und Tag. Nur kaufen: Verkaufen gibt es ab *Handelspartner*, Tauschen ab *Offen*.
+* Was ein Bewohner an Proviant hat, hängt von seinem Biom ab – **Fisch gibt es immer**, auch bei Bewohnern, die selbst nichts Essbares herstellen. Sie fangen nebenbei Kabeljau. Brot kommt nur über **Aufträge**.
 * **Verkaufen** bringt Mana bis zu einem Tageslimit: 30–40 Mana je Bewohner, zusammen höchstens 100 Mana am Tag. **Tauschen** geht auch danach weiter.
 * **Aufgaben** (ab Offen): Gegen Mana zeigt dir ein Bewohner zum Beispiel den Weg zu einem Biom, repariert dein Werkzeug oder sorgt 30 Minuten lang für Sonne oder Regen auf deiner Insel.
 * **Aufträge** (ab Offen): Du bestellst Ware bei einem Bewohner – etwa *16 Brot backen* – und zahlst Mana. Er stellt sie in der Zeit her, die er dir nennt.
@@ -131,7 +133,7 @@ Unter den Spielern zeigt die Tablist einen Abschnitt **„Bewohner (KI)“** mit
 
 <summary>Warum kann ich noch nichts kaufen?</summary>
 
-Handeln geht erst nach ein paar Besuchen. Ein Besuch zählt höchstens alle 20 Minuten, und das ganze Lager gibt es frühestens am zweiten Tag, an dem du vorbeischaust.
+**Essbares kaufst du sofort**, sobald du einen Bewohner kennst. Alles andere geht erst nach ein paar Besuchen. Ein Besuch zählt höchstens alle 20 Minuten, und das ganze Lager gibt es frühestens am zweiten Tag, an dem du vorbeischaust.
 
 </details>
 
@@ -139,7 +141,7 @@ Handeln geht erst nach ein paar Besuchen. Ein Besuch zählt höchstens alle 20 M
 
 <summary>Lesen andere Spieler mit, was ich auf der Insel schreibe?</summary>
 
-Nein. Auf der Insel von Bewohnern, die du kennst, geht dein Chat nur an sie. Mit `!` vorn schreibst du an alle.
+Nein. Auf der Insel von Bewohnern, die du kennst, geht dein Chat nur an sie. Mit `+` vorn schreibst du an alle auf dem Server, mit `!` vorn in den [Globalchat](../ag/nachrichten.md#globalchat).
 
 </details>
 

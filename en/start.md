@@ -122,7 +122,7 @@ On a small neighbouring island, about 100 blocks away, someone has moved in. Thr
 * a **beacon** on the resident's island
 * an **allay**, a helper spirit that flies ahead of you
 
-A **vine staircase** made of leaves leads across. **Mala** is waiting there with your first **AI resident** and introduces them to you – along with a shy **Forestling**. After that, the resident chats with you.
+A **vine staircase** made of leaves leads across. **Mala** is waiting there with your first **AI resident** and introduces them to you – along with a shy **Forestling**. After that, the resident chats with you – and already sells you **provisions**, meaning food for Mana.
 
 {% content-ref url="residents.md" %}
 [residents.md](residents.md)
