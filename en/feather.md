@@ -81,7 +81,16 @@ An island holds at most **8 spawners from Mobplates**, no matter who they belong
 
 ### Mobs from the spawner
 
-* Defeating mobs from the spawner gives **no Mana** and **doesn't count for quests**. That stays true when they transform – for example a zombie that turns into a Drowned in water.
+Mobs from the spawner give you **no Mana** and **no quest progress**, not even in biome and clan quests. That applies to:
+
+* **Defeating** them – even if they transform first, for example a zombie that turns into a Drowned in water.
+* **Shearing** sheep, Mooshrooms and Bogged from the spawner. Wool and mushrooms still drop as usual, though.
+* **Breeding**, as soon as one parent comes from the spawner. The offspring then counts as a spawner animal itself, across any number of generations.
+
+Chicks from thrown eggs count as normal, even if the egg came from a chicken from the spawner.
+
+Also:
+
 * If lightning strikes a pig from the spawner, it turns into a Zombified Piglin. That one **drops nothing**, though.
 * Silverfish from the spawner **don't crawl into stone**.
 

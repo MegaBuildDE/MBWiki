@@ -82,7 +82,16 @@ Auf einer Insel stehen höchstens **8 Spawner aus Mobplates**, egal wem sie geh�
 
 ### Mobs aus dem Spawner
 
-* Besiegst du Mobs aus dem Spawner, gibt das **kein Mana** und zählt **nicht für Quests**. Das bleibt so, wenn sie sich verwandeln – etwa ein Zombie, der im Wasser zum Ertrunkenen wird.
+Mit Mobs aus dem Spawner bekommst du **kein Mana** und **keinen Quest-Fortschritt**, auch nicht in Biom- und Clan-Quests. Das gilt für:
+
+* **Besiegen** – auch wenn sie sich vorher verwandeln, etwa ein Zombie, der im Wasser zum Ertrunkenen wird.
+* **Scheren** von Schafen, Mooshrooms und Sumpfskeletten aus dem Spawner. Wolle und Pilze fallen aber wie gewohnt.
+* **Züchten**, sobald ein Elternteil aus dem Spawner stammt. Der Nachwuchs zählt dann selbst als Spawner-Tier, auch über viele Generationen.
+
+Küken aus geworfenen Eiern zählen ganz normal, auch wenn das Ei von einem Huhn aus dem Spawner stammt.
+
+Außerdem:
+
 * Trifft der Blitz ein Schwein aus dem Spawner, wird es zum Zombifizierten Piglin. Der lässt aber **nichts fallen**.
 * Silberfischchen aus dem Spawner **kriechen nicht in Steine**.
 
