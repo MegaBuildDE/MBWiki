@@ -20,7 +20,7 @@ Schreibst du einfach in den Chat, geht deine Zeile an **alle Spieler im Netzwerk
 | So schreibst du | Wer liest mit |
 | --------------- | ------------- |
 | Normal in den Chat | Alle im Netzwerk |
-| `/g <Text>` | Alle im Netzwerk – auch dort, wo der normale Chat nicht hinausgeht |
+| `/g <Text>` | Alle im Netzwerk – auch beim Forestling und im Vorspann. Nur auf einer Bewohnerinsel nicht (siehe unten) |
 | **`!`** vorn, etwa `!Hallo zusammen` | Nur die Spieler auf **deinem** Server, das `!` fällt weg |
 | **`#`** vorn oder `/c` | Dein [Clan](../sb/clans.md) |
 
@@ -30,7 +30,7 @@ Schreibst du einfach in den Chat, geht deine Zeile an **alle Spieler im Netzwerk
 * **Im Vorspann** auf dem Intro-Server bleibt deine Zeile dort, und vom Globalchat kommt nichts an – sonst liefe der Chat des ganzen Netzwerks durch Malas Erzählung. Mit `/g` erreichst du trotzdem alle.
 
 {% hint style="info" %}
-**Bei den Bewohnern und Forestlingen** geht deine Zeile nur an sie – im Gespräch mit [KI-Bewohnern](../sb/bewohner.md), im Inselchat und bei den [Forestlingen](../sb/forestlinge.md). Mit **`!`** vorn schreibst du dort an alle auf dem Server, mit `/g` ins ganze Netzwerk.
+**Bei den Bewohnern und Forestlingen** geht deine Zeile nur an sie – im Gespräch mit [KI-Bewohnern](../sb/bewohner.md), im Inselchat und bei den [Forestlingen](../sb/forestlinge.md). Mit **`!`** vorn schreibst du dort an alle auf dem Server. Beim Forestling kommst du mit `/g` ins ganze Netzwerk; **auf einer Bewohnerinsel** redest du nur mit den Bewohnern, dort geht auch `/g` nicht hinaus, bis du die Insel verlässt.
 {% endhint %}
 
 ## Private Nachrichten

@@ -49,13 +49,15 @@ Während des Gesprächs geht deine Chatzeile nur an den Bewohner. Du siehst sie 
 {% step %}
 #### An alle schreiben
 
-Willst du trotzdem etwas in den normalen Chat schreiben, setze ein **`!`** an den Anfang – die Zeile geht dann an alle auf diesem Server, ohne das `!`. Mit **`/g <Text>`** landet sie im [Globalchat](../ag/nachrichten.md#globalchat), also bei allen im Netzwerk.
+Willst du trotzdem etwas in den normalen Chat schreiben, setze ein **`!`** an den Anfang – die Zeile geht dann an alle auf diesem Server, ohne das `!`. Ins ganze Netzwerk geht von ihrer Insel aus nichts, auch nicht mit `/g` – den [Globalchat](../ag/nachrichten.md#globalchat) erreichst du erst wieder, wenn du die Insel verlassen hast.
 {% endstep %}
 {% endstepper %}
 
 ### Inselchat
 
-Stehst du auf der Insel von Bewohnern, die du schon kennst, schreibst du ihnen **ohne Klick und ohne Namen** – dein Chat geht dann an sie, nicht an andere Spieler. Beim Betreten und Verlassen sagt dir eine Zeile im Chat Bescheid. Mit `!` vorn schreibst du an alle auf dem Server, mit `/g` in den [Globalchat](../ag/nachrichten.md#globalchat). Verlässt du die Insel, geht dein Chat wieder ins ganze Netzwerk.
+Stehst du auf der Insel von Bewohnern, die du schon kennst, schreibst du ihnen **ohne Klick und ohne Namen** – dein Chat geht dann an sie, nicht an andere Spieler. Beim Betreten und Verlassen sagt dir eine Zeile im Chat Bescheid. Mit `!` vorn schreibst du an alle auf dem Server. In den [Globalchat](../ag/nachrichten.md#globalchat) geht von hier nichts, auch `/g` nicht – was andere im Netzwerk schreiben, siehst du aber weiter. Verlässt du die Insel, geht dein Chat wieder ins ganze Netzwerk.
+
+Hast du den Inselchat in `/ki` ausgeschaltet oder kennst die Bewohner noch nicht, schreibst du dort wie überall, auch mit `/g`. Clan-Chat und `/msg` gehen immer.
 
 ### Was sie verstehen
 
@@ -141,7 +143,7 @@ Unter den Spielern zeigt die Tablist einen Abschnitt **„Bewohner (KI)“** mit
 
 <summary>Lesen andere Spieler mit, was ich auf der Insel schreibe?</summary>
 
-Nein. Auf der Insel von Bewohnern, die du kennst, geht dein Chat nur an sie. Mit `!` vorn schreibst du an alle auf dem Server, mit `/g` in den [Globalchat](../ag/nachrichten.md#globalchat).
+Nein. Auf der Insel von Bewohnern, die du kennst, geht dein Chat nur an sie. Mit `!` vorn schreibst du an alle auf dem Server. In den [Globalchat](../ag/nachrichten.md#globalchat) kommst du erst wieder, wenn du die Insel verlassen hast.
 
 </details>
 

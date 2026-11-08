@@ -20,7 +20,7 @@ Just type in chat and your line goes to **every player on the network**, no matt
 | How you write | Who reads it |
 | ------------- | ------------ |
 | Normally in chat | Everyone on the network |
-| `/g <text>` | Everyone on the network – even where normal chat doesn't go out |
+| `/g <text>` | Everyone on the network – also with a Forestling and during the intro. Just not on a residents' island (see below) |
 | **`!`** in front, e.g. `!Hello everyone` | Only the players on **your** server; the `!` is dropped |
 | **`#`** in front or `/c` | Your [clan](clans.md) |
 
@@ -30,7 +30,7 @@ Just type in chat and your line goes to **every player on the network**, no matt
 * **During the intro** on the intro server, your line stays there and nothing from the global chat arrives – otherwise the whole network's chat would run through Mala's story. `/g` still reaches everyone.
 
 {% hint style="info" %}
-**With residents and Forestlings**, your line only goes to them – while talking to [AI residents](residents.md), in the island chat and with the [Forestlings](forestlings.md). Put **`!`** in front to write to everyone on the server there, or use `/g` for the whole network.
+**With residents and Forestlings**, your line only goes to them – while talking to [AI residents](residents.md), in the island chat and with the [Forestlings](forestlings.md). Put **`!`** in front to write to everyone on the server there. With a Forestling, `/g` reaches the whole network; **on a residents' island** you only talk to the residents, and even `/g` doesn't go out until you leave the island.
 {% endhint %}
 
 ## Private messages

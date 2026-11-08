@@ -80,7 +80,7 @@ Only on the islands. All commands are listed under [ChestShops](chestshop.md#com
 | `/friend <player>` | Send a friend request – or accept theirs |
 | `/friend add` | Players you can ask |
 | `/friend requests` | Pending requests |
-| `/g <text>` | One line to the [global chat](messages.md#global-chat) – to everyone on the network, even while talking to residents. A normal chat line goes to the network too; with `!` in front it stays on your server |
+| `/g <text>` | One line to the [global chat](messages.md#global-chat) – to everyone on the network, also with a Forestling. It doesn't work on a residents' island. A normal chat line goes to the network too; with `!` in front it stays on your server |
 | `/msg <player> <text>` | Private message – if the player isn't online, it goes to their mailbox. Also `/tell`, `/w` |
 | `/r <text>` | Reply to the last private message. Also `/reply` |
 | `/mail` | Your mailbox. Also `/post` |
