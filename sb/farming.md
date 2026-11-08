@@ -66,7 +66,7 @@ Truhen, Fässer, Töpfe und Regale in Bauwerken sind beim ersten Öffnen **einma
 ## Handel
 
 * **Dorfbewohner** in Dörfern handeln wie gewohnt.
-* **KI-Bewohner** kaufen und verkaufen Ware gegen Mana – siehe [KI-Bewohner](bewohner.md#handeln).
+* **KI-Bewohner** kaufen und verkaufen Ware gegen Ruby – siehe [KI-Bewohner](bewohner.md#handeln).
 
 ## Farmen und Automatisierung
 

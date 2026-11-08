@@ -47,7 +47,7 @@ Bestätige deinen Vote auf den verlinkten Serverlisten. Meist ist pro Liste **ei
 * **Warst du offline?** Dann bekommst du die Belohnung trotzdem – mit einer Nachricht von *MegaBuild.de* in deiner [Post](nachrichten.md).
 * **Noch nie auf dem Server gewesen?** Votes der letzten 7 Tage vor deinem ersten Join werden beim ersten Betreten nachgetragen.
 
-Neben den 1.000 Ruby, mit denen jedes Konto startet, sind Votes der regelmäßige Weg zu mehr **Ruby** – der Währung für den Handel zwischen Spielern.
+Neben den 500 Ruby, mit denen jedes neue Konto startet, sind Votes der regelmäßige Weg zu mehr **Ruby** – der Währung für den Handel zwischen Spielern und mit den [KI-Bewohnern](../sb/bewohner.md#handeln).
 
 ### Im Spiel
 

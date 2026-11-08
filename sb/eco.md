@@ -11,8 +11,8 @@ Auf MegaBuild.de gibt es zwei Währungen. Beide gelten auf allen Servern und ste
 
 | | Mana | Ruby |
 | --- | --- | --- |
-| **Wofür** | Biome im Skilltree, Quests überspringen, Handel mit Bewohnern, Segen der Forestlinge | Handel zwischen Spielern |
-| **Startguthaben** | 1.000 | 1.000 |
+| **Wofür** | Biome im Skilltree, Quests überspringen, Segen der Forestlinge | Handel zwischen Spielern und mit KI-Bewohnern |
+| **Startguthaben** | 1.000 | 500 |
 | **Verschicken** | Nicht möglich | Mit `/pay` |
 
 {% content-ref url="skilltree.md" %}
@@ -30,7 +30,6 @@ Auf MegaBuild.de gibt es zwei Währungen. Beide gelten auf allen Servern und ste
 | [Voten](../ag/vote.md) | 50 + 5 Ruby | keine – jeder Vote zählt |
 | Aktionen (siehe unten) | meist 1–8 | **150 am Tag** |
 | [Mana-Erz](#mana-erz) | 3–5 Mana-Kugeln | **200 am Tag** |
-| Ware an [Bewohner](bewohner.md) verkaufen | je nach Ware | 30–40 je Bewohner, höchstens 100 am Tag |
 
 ### Durch Aktionen
 
@@ -102,8 +101,7 @@ Rezepte und alle Einzelheiten stehen unter [Mana-Items](mana-items.md).
 ## Mana ausgeben
 
 * **Biome** im [Skilltree](skilltree.md) – ab 100 Mana, das nächste Biom deines Startpfads kostet 125
-* **Quests überspringen** – siehe [Quests](quests.md)
-* **Handel mit Bewohnern** – Ware, Aufgaben und Aufträge, siehe [KI-Bewohner](bewohner.md)
+* **Quests überspringen** – siehe [Quests](quests.md), auch als *Quest tauschen* bei vertrauten [KI-Bewohnern](bewohner.md)
 * **Segen der Forestlinge** – 20 bis 40 Mana, siehe [Forestlinge](forestlinge.md)
 
 ## Sterben
@@ -114,11 +112,12 @@ Unterhalb von Höhe 0 bist du sofort tot. Du wachst in deinem Bett auf – oder 
 
 ## Ruby
 
-Ruby ist die Währung für den **Handel zwischen Spielern**. Jedes Konto startet mit **1.000 Ruby** – sie sind gleich beim ersten Login da.
+Ruby ist die Währung für den **Handel** – zwischen Spielern und mit den [KI-Bewohnern](bewohner.md#handeln). Jedes neue Konto startet mit **500 Ruby** – sie sind gleich beim ersten Login da. Wer schon vor dem 08.11.2026 gespielt hat, als es noch 1.000 waren, behält seine Ruby.
 
-* **Dazuverdienen:** 5 Ruby pro [Vote](../ag/vote.md) und Belohnungen für [Bug-Meldungen und Clips](../ag/discord.md#bug-bounty-und-clipcoin).
-* **Ausgeben:** An den [ChestShops](chestshop.md) anderer Spieler oder direkt mit `/pay` – etwa als Bezahlung für Ware, die ihr untereinander tauscht.
-* KI-Bewohner und Forestlinge nehmen **nie** Ruby.
+* **Dazuverdienen:** 5 Ruby pro [Vote](../ag/vote.md), Ware an [KI-Bewohner](bewohner.md#die-marktkasse) verkaufen (meist bis zu 10 Ruby am Tag) und Belohnungen für [Bug-Meldungen und Clips](../ag/discord.md#bug-bounty-und-clipcoin).
+* **Ausgeben:** An den [ChestShops](chestshop.md) anderer Spieler, direkt mit `/pay` – etwa als Bezahlung für Ware, die ihr untereinander tauscht – und bei KI-Bewohnern für Ware, Aufträge und Aufgaben (bis zu 40 Ruby am Tag).
+* **Marktkasse:** Was du bei Bewohnern ausgibst, geht in eine gemeinsame Kasse für das ganze Netzwerk, und aus ihr bezahlen die Bewohner, was sie dir abkaufen. So entstehen keine Ruby aus dem Nichts – [mehr dazu](bewohner.md#die-marktkasse).
+* [Forestlinge](forestlinge.md) nehmen **nie** Ruby, ihre Segen kosten weiter Mana.
 * Ruby gibt es nicht gegen Echtgeld, und Mana und Ruby lassen sich nicht tauschen.
 
 ## Befehle
@@ -135,7 +134,7 @@ Ruby ist die Währung für den **Handel zwischen Spielern**. Jedes Konto startet
 * Du kannst auch Spielern schicken, die gerade offline sind.
 * Beträge dürfen Tausenderpunkte haben: `1000`, `1.000` und `1,000` funktionieren. Kommazahlen gehen nicht.
 * Mana lässt sich nicht verschicken – `/pay … mana` wird abgelehnt.
-* **Neue Konten** geben Ruby erst **24 Stunden nach dem ersten Login** und nach **20 Minuten Spielzeit** weiter. Empfangen geht immer, und die Meldung sagt dir, wie lange es noch dauert. Das gilt auch für Käufe im [ChestShop](chestshop.md).
+* **Neue Konten** geben Ruby erst **24 Stunden nach dem ersten Login** und nach **20 Minuten Spielzeit** weiter. Empfangen geht immer, und die Meldung sagt dir, wie lange es noch dauert. Das gilt auch für Käufe im [ChestShop](chestshop.md). Bei [KI-Bewohnern](bewohner.md#preise-und-lose) kaufst du in dieser Zeit für bis zu 20 Ruby mehr ein, als du ihnen verkauft hast.
 
 ## Insel löschen
 
@@ -148,3 +147,4 @@ Dein **Mana und Ruby bleiben** erhalten, ebenso Quest-Stand, Serie und Erfolge. 
 * [Quests](quests.md)
 * [Voten](../ag/vote.md)
 * [ChestShops](chestshop.md)
+* [KI-Bewohner](bewohner.md)

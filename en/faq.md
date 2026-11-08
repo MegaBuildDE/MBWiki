@@ -113,7 +113,7 @@ No. But you can unlock all other biomes with Mana in the skill tree.
 
 <summary>How do I earn Mana?</summary>
 
-Through quests, biome quests, votes, trading with AI residents, Mana ore and lots of normal actions like mining ore, taming animals or enchanting. Actions give up to 150 Mana a day, Mana ore up to 200 – quests have no limit.
+Through quests, biome quests, votes, Mana ore and lots of normal actions like mining ore, taming animals or enchanting. Actions give up to 150 Mana a day, Mana ore up to 200 – quests have no limit.
 
 {% content-ref url="economy.md" %}
 [economy.md](economy.md)
@@ -163,7 +163,7 @@ Up to **25 members**. For each one you decide what they may do.
 
 <summary>Can I send Mana to other players?</summary>
 
-No, Mana can't be transferred. Ruby, on the other hand, you can send with `/pay <player> <amount>` – every account starts with 1,000 Ruby. New accounts can only pass it on 24 hours after their first login and after 20 minutes of playtime – [more on this](economy.md#sending-ruby).
+No, Mana can't be transferred. Ruby, on the other hand, you can send with `/pay <player> <amount>` – every new account starts with 500 Ruby. New accounts can only pass it on 24 hours after their first login and after 20 minutes of playtime – [more on this](economy.md#sending-ruby).
 
 </details>
 
@@ -191,7 +191,7 @@ New biomes only appear in areas nobody has explored yet. A freshly bought biome 
 
 <summary>Are the residents with "(KI)" real players?</summary>
 
-No. Goblins and Shroomlings with "(KI)" in their name – German for "AI" – are AI residents. They chat with you, work and trade for Mana. With `/ki` you set what they may do around you.
+No. Goblins and Shroomlings with "(KI)" in their name – German for "AI" – are AI residents. They chat with you, work and trade for Ruby. With `/ki` you set what they may do around you.
 
 {% content-ref url="residents.md" %}
 [residents.md](residents.md)

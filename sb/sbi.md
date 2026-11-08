@@ -27,7 +27,7 @@ Entdecke neue Inseln, baue Erze ab, farme, kämpfe und triff Bewohner.
 {% step %}
 #### Mana verdienen
 
-Quests, Mana-Erz, Handel mit Bewohnern und viele Aktionen bringen Mana.
+Quests, Mana-Erz und viele Aktionen bringen Mana.
 {% endstep %}
 
 {% step %}

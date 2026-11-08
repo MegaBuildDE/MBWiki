@@ -27,7 +27,7 @@ Discover new islands, mine ores, farm, fight and meet residents.
 {% step %}
 #### Earn Mana
 
-Quests, Mana ore, trading with residents and many actions earn you Mana.
+Quests, Mana ore and many actions earn you Mana.
 {% endstep %}
 
 {% step %}

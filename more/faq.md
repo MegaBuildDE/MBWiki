@@ -113,7 +113,7 @@ Nein. Alle anderen Biome kannst du aber im Skilltree mit Mana freischalten.
 
 <summary>Wie verdiene ich Mana?</summary>
 
-Über Quests, Biomquests, Votes, Handel mit KI-Bewohnern, Mana-Erz und viele normale Aktionen wie Erz abbauen, Tiere zähmen oder Verzaubern. Aus Aktionen gibt es bis zu 150 Mana am Tag, aus Mana-Erz bis zu 200 – Quests haben kein Limit.
+Über Quests, Biomquests, Votes, Mana-Erz und viele normale Aktionen wie Erz abbauen, Tiere zähmen oder Verzaubern. Aus Aktionen gibt es bis zu 150 Mana am Tag, aus Mana-Erz bis zu 200 – Quests haben kein Limit.
 
 {% content-ref url="../sb/eco.md" %}
 [eco.md](../sb/eco.md)
@@ -163,7 +163,7 @@ Bis zu **25 Mitglieder**. Für jedes legst du fest, was es darf.
 
 <summary>Kann ich Mana an andere Spieler schicken?</summary>
 
-Nein, Mana lässt sich nicht übertragen. Ruby dagegen kannst du mit `/pay <Spieler> <Menge>` verschicken – jedes Konto startet mit 1.000 Ruby. Neue Konten geben Ruby erst 24 Stunden nach dem ersten Login und nach 20 Minuten Spielzeit weiter – [mehr dazu](../sb/eco.md#ruby-verschicken).
+Nein, Mana lässt sich nicht übertragen. Ruby dagegen kannst du mit `/pay <Spieler> <Menge>` verschicken – jedes neue Konto startet mit 500 Ruby. Neue Konten geben Ruby erst 24 Stunden nach dem ersten Login und nach 20 Minuten Spielzeit weiter – [mehr dazu](../sb/eco.md#ruby-verschicken).
 
 </details>
 
@@ -191,7 +191,7 @@ Neue Biome entstehen nur in Gegenden, die noch niemand erkundet hat. Ein frisch 
 
 <summary>Sind die Bewohner mit „(KI)“ echte Spieler?</summary>
 
-Nein. Goblins und Shroomlinge mit „(KI)“ im Namen sind KI-Bewohner. Sie reden mit dir im Chat, arbeiten und handeln gegen Mana. Mit `/ki` stellst du ein, was sie bei dir dürfen.
+Nein. Goblins und Shroomlinge mit „(KI)“ im Namen sind KI-Bewohner. Sie reden mit dir im Chat, arbeiten und handeln gegen Ruby. Mit `/ki` stellst du ein, was sie bei dir dürfen.
 
 {% content-ref url="../sb/bewohner.md" %}
 [bewohner.md](../sb/bewohner.md)

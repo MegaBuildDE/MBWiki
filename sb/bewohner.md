@@ -13,6 +13,10 @@ icon: house-user
 **Video: Deine Insel lebt** (1:22, mit Ton) – KI-Bewohner und Forestlinge, vorgestellt von Mala.
 {% endfile %}
 
+{% hint style="info" %}
+Das Video zeigt noch Preise in Mana. Seit dem 08.11.2026 handeln die Bewohner mit **Ruby** – wie, steht unter [Handeln](#handeln).
+{% endhint %}
+
 Auf den Inseln um dich herum wohnen **Goblins** und **Shroomlinge**. Sie bauen, ernten, schmieden, machen Pause, schlafen nachts – und reden mit dir im Chat.
 
 Über ihrem Kopf steht ein kurzer Name mit **„(KI)“**, zum Beispiel *Pip (KI)*. Bewohner sind keine Spieler. Fragst du sie, ob sie echt sind, sagen sie dir ehrlich, dass sie KI-Bewohner sind.
@@ -74,7 +78,7 @@ Je öfter du einen Bewohner besuchst, desto besser kennt er dich. Eine erreichte
 | Stufe | Was dazukommt |
 | ----- | ------------- |
 | **Fremd** | Der Bewohner spricht dich an |
-| **Bekannt** | Reden, sein Lager ansehen, **Proviant kaufen** – Essbares gegen Mana |
+| **Bekannt** | Reden, sein Lager ansehen, **Proviant kaufen** – Essbares gegen Ruby |
 | **Handelspartner** | Kaufen und verkaufen |
 | **Offen** | Das ganze Lager, Tauschen, Aufgaben, Aufträge, Handel aus der Ferne über `/bewohner` |
 | **Vertraut** | Persönliche Angebote, Quest tauschen |
@@ -87,15 +91,60 @@ Je öfter du einen Bewohner besuchst, desto besser kennt er dich. Eine erreichte
 
 Öffne den Handel mit „handeln“ im Chat oder über die **Lagerkiste** am Haus oder Marktstand – ein Klick darauf öffnet das Handelsmenü.
 
-* Bezahlt wird mit **Mana oder Ware** – **nie mit Ruby oder Echtgeld**.
-* **Proviant schon beim ersten Treffen:** Essbares – Karotten, Kartoffeln, Melonenscheiben, Süßbeeren, Kabeljau und Lachs – kaufst du bei jedem Bewohner, den du kennst, sofort gegen Mana. Bis *Offen* höchstens **64 Stück** je Essbarem, Bewohner und Tag. Nur kaufen: Verkaufen gibt es ab *Handelspartner*, Tauschen ab *Offen*.
+* Bewohner handeln mit **[Ruby](eco.md#ruby)** – beim Tauschen auch Ware gegen Ware, nie gegen Echtgeld. Was du bei Bewohnern kaufst, geht in die [Marktkasse](#die-marktkasse), und was du ihnen verkaufst, bezahlt dir diese Kasse.
+* **Proviant schon beim ersten Treffen:** Essbares – Karotten, Kartoffeln, Melonenscheiben, Süßbeeren, Kabeljau und Lachs – kaufst du bei jedem Bewohner, den du kennst, sofort gegen Ruby. Bis *Offen* höchstens **64 Stück** je Essbarem, Bewohner und Tag. Nur kaufen: Verkaufen gibt es ab *Handelspartner*, Tauschen ab *Offen*.
 * Was ein Bewohner an Proviant hat, hängt von seinem Biom ab – **Fisch gibt es immer**, auch bei Bewohnern, die selbst nichts Essbares herstellen. Sie fangen nebenbei Kabeljau. Brot kommt nur über **Aufträge**.
-* **Verkaufen** bringt Mana bis zu einem Tageslimit: 30–40 Mana je Bewohner, zusammen höchstens 100 Mana am Tag. **Tauschen** geht auch danach weiter.
-* **Aufgaben** (ab Offen): Gegen Mana zeigt dir ein Bewohner zum Beispiel den Weg zu einem Biom, repariert dein Werkzeug oder sorgt 30 Minuten lang für Sonne oder Regen auf deiner Insel.
-* **Aufträge** (ab Offen): Du bestellst Ware bei einem Bewohner – etwa *16 Brot backen* – und zahlst Mana. Er stellt sie in der Zeit her, die er dir nennt.
+* **Verkaufen** bringt Ruby aus der Marktkasse bis zu einem Tageslimit: 3–4 Ruby je Bewohner, zusammen höchstens 10 Ruby am Tag. **Tauschen** geht auch danach weiter.
+* **Aufgaben** (ab Offen): Gegen Ruby zeigt dir ein Bewohner zum Beispiel den Weg zu einem Biom, repariert dein Werkzeug oder sorgt 30 Minuten lang für Sonne oder Regen auf deiner Insel – höchstens 3 Aufgaben am Tag. Die Preise stehen weiter unten.
+* **Aufträge** (ab Offen): Du bestellst Ware bei einem Bewohner – etwa *16 Brot backen* – und zahlst Ruby. Er stellt sie in der Zeit her, die er dir nennt. Verfällt ein Auftrag, bekommst du deine Ruby zurück.
 * **Tauschgesuche:** Braucht ein Bewohner Ware, etwa 64 Bruchstein für den Brunnen, fragt er dich – und gibt dir dafür andere Ware.
+* **Quest tauschen** (ab Vertraut) ist ein zweiter Weg zum [Überspringen](quests.md) einer Tagesquest und kostet dasselbe Mana.
 * Deine Aufträge, Tauschgesuche und Lieferungen findest du unter `/auftraege`.
 * Gehandelt wird nur im Überlebensmodus und nur in deiner eigenen Inselwelt.
+
+### Die Marktkasse
+
+Alle Ruby, die Spieler bei Bewohnern ausgeben, landen in der **Marktkasse** – einer einzigen Kasse für das ganze Netzwerk. Verkaufst du einem Bewohner Ware, zahlt dir diese Kasse Ruby aus. Bewohner geben also nur weiter, was Spieler vorher bei ihnen gelassen haben: Ruby entstehen beim Handel mit Bewohnern nicht aus dem Nichts.
+
+| Grenze | Ruby am Tag |
+| ------ | ----------: |
+| Einkaufen – Ware, Aufträge und Aufgaben zusammen | höchstens 40 |
+| Verkaufen an einen Bewohner | 3–4 |
+| Verkaufen insgesamt | 10 |
+| Alle Bewohner einer Insel kaufen zusammen an für | 10 |
+| Die Kasse zahlt im ganzen Netzwerk aus | 10 % ihres Bestands |
+
+* Die Kasse geht nie ins Minus. Am Tag zahlt sie höchstens 10 % dessen aus, was um 04:00 Uhr in ihr lag. Ruby für bezahlte, noch offene Aufträge zählen dabei nicht mit, weil sie vielleicht erstattet werden müssen.
+* **Volle Kasse:** Liegt in der Kasse mehr, als Spieler im Schnitt in 14 Tagen einzahlen, steigen die drei Verkaufsgrenzen (je Bewohner, insgesamt und je Insel) mit – bis aufs Dreifache. Leert sie sich, sinken sie wieder.
+* Hat die Kasse für heute alles ausgezahlt oder ist die Grenze erreicht, sagt dir der Bewohner Bescheid. **Tauschen** geht weiter, und am nächsten Tag gibt es wieder Ruby.
+* Kann die Kasse gerade nicht zahlen, bekommst du deine Ware zurück. Was nicht ins Inventar passt, holst du unter `/auftraege` ab.
+* Ist Ruby gerade nicht erreichbar, ruht der Handel, und es wird nichts gebucht.
+
+### Preise und Lose
+
+* **Kaufen:** Preise werden auf ganze Ruby **aufgerundet**, mindestens 1 Ruby. Damit nichts zu teuer wird, gibt es Ware in **Losen**, die etwa 1 Ruby kosten – höchstens einen Stapel.
+* **Verkaufen:** Es gibt nur **ganze Ruby**. Der Bewohner nimmt so viele Stück, wie ganze Ruby bezahlen – den Rest behältst du. Reicht die Menge nicht für einen Ruby, sagt er dir, dass du mehr nehmen sollst. Bei sehr billiger Ware brauchst du dafür mehr als einen Stapel.
+
+{% hint style="info" %}
+**Neue Konten** können Ruby erst nach einer kurzen Wartezeit ausgeben – 24 Stunden nach dem ersten Login und nach 20 Minuten Spielzeit (siehe [Ruby verschicken](eco.md#ruby-verschicken)). Bei Bewohnern darfst du in dieser Zeit trotzdem für bis zu **20 Ruby** mehr einkaufen, als du ihnen verkauft hast – genug für Proviant am ersten Tag.
+{% endhint %}
+
+### Preise für Aufgaben und Aufträge
+
+| Was | Wer | Ruby |
+| --- | --- | ---: |
+| **Wegweiser** – eine Spur zur nächsten Insel eines Bioms, 10 Minuten nur für dich sichtbar | Kundige | 3 |
+| **Biom-Kunde** – was ein Biom bietet, das deine Insel noch nicht hat | Kundige | 2 |
+| **Spürnase** – findet ungeplünderte Truhen und Töpfe bis 96 Blöcke um dich, einmal am Tag | Kundige | 5 |
+| **Wetter** – 30 Minuten klar oder Regen auf deiner Insel, nie Gewitter | Kundige | 4 |
+| **Reparatur** – schlichtes Werkzeug ohne Verzauberung und Namen, je abgenutzter, desto teurer | Schmied | 3–8 |
+| Zeitauftrag: 16 Brot | Bauer | 1 |
+| Zeitauftrag: Angel | Bauer | 1 |
+| Zeitauftrag: Eisenspitzhacke | Schmied | 2 |
+| Zeitauftrag: Eimer | Schmied | 2 |
+| Eigener Auftrag | | höchstens 40 |
+
+Bei den Shroomlingen heißen Bauer, Schmied und Kundige Pilzgärtner, Töpfer und Sporenkundige.
 
 ## Befehle
 
@@ -136,6 +185,8 @@ Unter den Spielern zeigt die Tablist einen Abschnitt **„Bewohner (KI)“** mit
 <summary>Warum kann ich noch nichts kaufen?</summary>
 
 **Essbares kaufst du sofort**, sobald du einen Bewohner kennst. Alles andere geht erst nach ein paar Besuchen. Ein Besuch zählt höchstens alle 20 Minuten, und das ganze Lager gibt es frühestens am zweiten Tag, an dem du vorbeischaust.
+
+Ist dein Konto neu, kaufst du in der Wartezeit für höchstens 20 Ruby mehr ein, als du verkauft hast. Und am Tag gibst du bei Bewohnern höchstens 40 Ruby aus.
 
 </details>
 

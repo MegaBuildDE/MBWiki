@@ -122,7 +122,7 @@ Auf einer kleinen Nachbarinsel, rund 100 Blöcke entfernt, ist jemand eingezogen
 * ein **Leuchtfeuer** auf der Insel des Bewohners
 * ein **Hilfsgeist**, der vorausfliegt
 
-Eine **Rankentreppe** aus Blättern führt hinüber. Dort wartet **Mala** mit deinem ersten **KI-Bewohner** und stellt ihn dir vor – und einen scheuen **Forestling** gleich dazu. Danach redet der Bewohner im Chat mit dir – und verkauft dir schon **Proviant**, also Essbares gegen Mana.
+Eine **Rankentreppe** aus Blättern führt hinüber. Dort wartet **Mala** mit deinem ersten **KI-Bewohner** und stellt ihn dir vor – und einen scheuen **Forestling** gleich dazu. Danach redet der Bewohner im Chat mit dir – und verkauft dir schon **Proviant**, also Essbares gegen Ruby.
 
 {% content-ref url="bewohner.md" %}
 [bewohner.md](bewohner.md)

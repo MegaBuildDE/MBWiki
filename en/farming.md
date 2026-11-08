@@ -66,7 +66,7 @@ Chests, barrels, pots and shelves in structures are **filled once**, when they'r
 ## Trading
 
 * **Villagers** in villages trade as usual.
-* **AI residents** buy and sell goods for Mana – see [AI residents](residents.md#trading).
+* **AI residents** buy and sell goods for Ruby – see [AI residents](residents.md#trading).
 
 ## Farms and automation
 

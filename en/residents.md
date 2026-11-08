@@ -13,6 +13,10 @@ icon: house-user
 **Video: Your island is alive** (1:22, with sound) – AI residents and Forestlings, introduced by Mala.
 {% endfile %}
 
+{% hint style="info" %}
+The video still shows prices in Mana. Since 08.11.2026, residents trade for **Ruby** – see [Trading](#trading) for how it works.
+{% endhint %}
+
 **Goblins** and **Shroomlings** live on the islands around you. They build, harvest, forge, take breaks, sleep at night – and talk to you in chat.
 
 Above their heads is a short name with **“(KI)”** (German for AI), for example *Pip (KI)*. Residents aren't players. If you ask them whether they're real, they'll honestly tell you they're AI residents.
@@ -74,7 +78,7 @@ The more often you visit a resident, the better they know you. A level you've re
 | Level | What's added |
 | ----- | ------------ |
 | **Stranger** | The resident talks to you |
-| **Acquainted** | Chat, look at their stock, **buy provisions** – food for Mana |
+| **Acquainted** | Chat, look at their stock, **buy provisions** – food for Ruby |
 | **Trade partner** | Buy and sell |
 | **Open** | The whole stock, swapping, tasks, orders, trading from afar via `/residents` |
 | **Trusted** | Personal offers, swap a quest |
@@ -87,15 +91,60 @@ The more often you visit a resident, the better they know you. A level you've re
 
 Open trading by typing “trade” in chat or via the **stock chest** at the house or market stall – clicking it opens the trade menu.
 
-* You pay with **Mana or goods** – **never with Ruby or real money**.
-* **Provisions right from the first meeting:** Food – carrots, potatoes, melon slices, sweet berries, cod and salmon – can be bought from every resident you know, right away, for Mana. Until *Open*, at most **64 pieces** per food, resident and day. Buying only: selling comes with *Trade partner*, swapping with *Open*.
+* Residents trade for **[Ruby](economy.md#ruby)** – when swapping, also goods for goods, never for real money. What you buy from residents goes into the [market fund](#the-market-fund), and what you sell to them, that fund pays you for.
+* **Provisions right from the first meeting:** Food – carrots, potatoes, melon slices, sweet berries, cod and salmon – can be bought from every resident you know, right away, for Ruby. Until *Open*, at most **64 pieces** per food, resident and day. Buying only: selling comes with *Trade partner*, swapping with *Open*.
 * Which provisions a resident has depends on their biome – **there's always fish**, even with residents who don't make any food themselves. They catch cod on the side. Bread only comes through **orders**.
-* **Selling** gives you Mana up to a daily limit: 30–40 Mana per resident, at most 100 Mana a day in total. **Swapping** still works after that.
-* **Tasks** (from Open): For Mana, a resident will for example show you the way to a biome, repair your tool or bring 30 minutes of sunshine or rain to your island.
-* **Orders** (from Open): You order goods from a resident – say *bake 16 bread* – and pay Mana. They make it in the time they tell you.
+* **Selling** gives you Ruby from the market fund up to a daily limit: 3–4 Ruby per resident, at most 10 Ruby a day in total. **Swapping** still works after that.
+* **Tasks** (from Open): For Ruby, a resident will for example show you the way to a biome, repair your tool or bring 30 minutes of sunshine or rain to your island – at most 3 tasks a day. The prices are further down.
+* **Orders** (from Open): You order goods from a resident – say *bake 16 bread* – and pay Ruby. They make it in the time they tell you. If an order expires, you get your Ruby back.
 * **Swap requests:** When a resident needs goods, say 64 cobblestone for the well, they ask you – and give you other goods in return.
+* **Swap a quest** (from Trusted) is a second way to [skip](quests.md#skipping) a daily quest and costs the same Mana.
 * You'll find your orders, swap requests and deliveries under `/orders`.
 * Trading only works in survival mode and only in your own island world.
+
+### The market fund
+
+All the Ruby players spend with residents goes into the **market fund** – a single fund for the whole network. When you sell goods to a resident, this fund pays you in Ruby. So residents only pass on what players left with them before: trading with residents never creates Ruby out of thin air.
+
+| Limit | Ruby per day |
+| ----- | -----------: |
+| Buying – goods, orders and tasks together | at most 40 |
+| Selling to one resident | 3–4 |
+| Selling in total | 10 |
+| All residents of one island together buy for | 10 |
+| The fund pays out across the whole network | 10 % of its balance |
+
+* The fund never goes below zero. Each day it pays out at most 10 % of what was in it at 04:00. Ruby for paid orders that are still open don't count, because they may have to be refunded.
+* **Full fund:** If the fund holds more than players pay in over 14 days on average, the three selling limits (per resident, in total and per island) go up with it – up to three times as much. When it empties, they go back down.
+* When the fund has paid out everything for today or you've hit a limit, the resident tells you. **Swapping** still works, and the next day there's Ruby again.
+* If the fund can't pay right now, you get your goods back. Whatever doesn't fit in your inventory, you pick up under `/orders`.
+* If Ruby can't be reached right now, trading pauses and nothing is booked.
+
+### Prices and lots
+
+* **Buying:** Prices are **rounded up** to whole Ruby, at least 1 Ruby. So that nothing gets too expensive, goods come in **lots** that cost about 1 Ruby – at most one stack.
+* **Selling:** There are only **whole Ruby**. The resident takes as many pieces as whole Ruby pay for – you keep the rest. If the amount isn't worth a whole Ruby, they tell you to take more. For very cheap goods, that takes more than one stack.
+
+{% hint style="info" %}
+**New accounts** can only spend Ruby after a short wait – 24 hours after their first login and after 20 minutes of playtime (see [Sending Ruby](economy.md#sending-ruby)). With residents, you can still buy for up to **20 Ruby** more than you've sold to them during that time – enough for provisions on your first day.
+{% endhint %}
+
+### Prices for tasks and orders
+
+| What | Who | Ruby |
+| ---- | --- | ---: |
+| **Guide** – a trail to the nearest island of a biome, visible only to you for 10 minutes | Sages | 3 |
+| **Biome lore** – what a biome offers that your island doesn't have yet | Sages | 2 |
+| **Sniffer** – finds unlooted chests and pots up to 96 blocks around you, once a day | Sages | 5 |
+| **Weather** – 30 minutes of clear skies or rain on your island, never thunderstorms | Sages | 4 |
+| **Repair** – a plain tool without enchantments or a name; the more worn, the more expensive | Smith | 3–8 |
+| Timed order: 16 bread | Farmer | 1 |
+| Timed order: fishing rod | Farmer | 1 |
+| Timed order: iron pickaxe | Smith | 2 |
+| Timed order: bucket | Smith | 2 |
+| Your own order | | at most 40 |
+
+Among the Shroomlings, farmers, smiths and sages are called mushroom gardeners, potters and spore sages.
 
 ## Commands
 
@@ -136,6 +185,8 @@ Below the players, the tab list shows a section **“Residents (KI)”** with up
 <summary>Why can't I buy anything yet?</summary>
 
 **You can buy food right away** as soon as you know a resident. Everything else only opens up after a few visits. A visit counts at most every 20 minutes, and the whole stock is available at the earliest on the second day you drop by.
+
+If your account is new, during the waiting time you can buy for at most 20 Ruby more than you've sold. And you spend at most 40 Ruby a day with residents.
 
 </details>
 

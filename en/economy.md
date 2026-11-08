@@ -11,8 +11,8 @@ MegaBuild.de has two currencies. Both work on all servers and are shown at the b
 
 | | Mana | Ruby |
 | --- | --- | --- |
-| **Used for** | Biomes in the skill tree, skipping quests, trading with residents, Forestling blessings | Trading between players |
-| **Starting balance** | 1,000 | 1,000 |
+| **Used for** | Biomes in the skill tree, skipping quests, Forestling blessings | Trading between players and with AI residents |
+| **Starting balance** | 1,000 | 500 |
 | **Sending** | Not possible | With `/pay` |
 
 {% content-ref url="skilltree.md" %}
@@ -30,7 +30,6 @@ MegaBuild.de has two currencies. Both work on all servers and are shown at the b
 | [Voting](vote.md) | 50 + 5 Ruby | none – every vote counts |
 | Actions (see below) | mostly 1–8 | **150 a day** |
 | [Mana ore](#mana-ore) | 3–5 Mana orbs | **200 a day** |
-| Selling goods to [residents](residents.md) | depends on the goods | 30–40 per resident, at most 100 a day |
 
 ### From actions
 
@@ -102,8 +101,7 @@ Recipes and all the details are under [Mana Items](mana-items.md).
 ## Spending Mana
 
 * **Biomes** in the [skill tree](skilltree.md) – from 100 Mana; the next biome on your starting path costs 125
-* **Skipping quests** – see [Quests](quests.md#skipping)
-* **Trading with residents** – goods, tasks and orders, see [AI residents](residents.md)
+* **Skipping quests** – see [Quests](quests.md#skipping), also as *Swap a quest* with trusted [AI residents](residents.md)
 * **Forestling blessings** – 20 to 40 Mana, see [Forestlings](forestlings.md)
 
 ## Dying
@@ -114,11 +112,12 @@ Below height 0 you die instantly. You wake up in your bed – or on the deck of 
 
 ## Ruby
 
-Ruby is the currency for **trading between players**. Every account starts with **1,000 Ruby** – they're there from your very first login.
+Ruby is the currency for **trading** – between players and with the [AI residents](residents.md#trading). Every new account starts with **500 Ruby** – they're there from your very first login. If you played before 08.11.2026, when it was still 1,000, you keep your Ruby.
 
-* **Earning more:** 5 Ruby per [vote](vote.md) and rewards for [bug reports and clips](discord.md#bug-bounty-and-clipcoin).
-* **Spending:** At other players' [ChestShops](chestshop.md) or directly with `/pay` – for example as payment for goods you trade among yourselves.
-* AI residents and Forestlings **never** take Ruby.
+* **Earning more:** 5 Ruby per [vote](vote.md), selling goods to [AI residents](residents.md#the-market-fund) (usually up to 10 Ruby a day) and rewards for [bug reports and clips](discord.md#bug-bounty-and-clipcoin).
+* **Spending:** At other players' [ChestShops](chestshop.md), directly with `/pay` – for example as payment for goods you trade among yourselves – and with AI residents for goods, orders and tasks (up to 40 Ruby a day).
+* **Market fund:** What you spend with residents goes into one shared fund for the whole network, and that fund pays for what residents buy from you. So no Ruby is created out of thin air – [more on this](residents.md#the-market-fund).
+* [Forestlings](forestlings.md) **never** take Ruby; their blessings still cost Mana.
 * Ruby can't be bought with real money, and Mana and Ruby can't be exchanged for each other.
 
 ## Commands
@@ -135,7 +134,7 @@ Ruby is the currency for **trading between players**. Every account starts with 
 * You can also send to players who are currently offline.
 * Amounts may use thousands separators: `1000`, `1.000` and `1,000` all work. Decimals don't.
 * Mana can't be sent – `/pay … mana` is rejected.
-* **New accounts** can only pass on Ruby **24 hours after their first login** and after **20 minutes of playtime**. Receiving always works, and the message tells you how long is left. This also applies to purchases in a [ChestShop](chestshop.md).
+* **New accounts** can only pass on Ruby **24 hours after their first login** and after **20 minutes of playtime**. Receiving always works, and the message tells you how long is left. This also applies to purchases in a [ChestShop](chestshop.md). With [AI residents](residents.md#prices-and-lots), you can buy for up to 20 Ruby more than you've sold to them during that time.
 
 ## Deleting your island
 
@@ -148,3 +147,4 @@ Your **Mana and Ruby stay**, and so do your quest progress, streak and achieveme
 * [Quests](quests.md)
 * [Voting](vote.md)
 * [ChestShops](chestshop.md)
+* [AI residents](residents.md)

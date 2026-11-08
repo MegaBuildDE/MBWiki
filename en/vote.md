@@ -47,7 +47,7 @@ Confirm your vote on the linked server lists. Usually you can vote **once every 
 * **Were you offline?** You still get the reward – with a message from *MegaBuild.de* in your [mailbox](messages.md).
 * **Never been on the server?** Votes from the 7 days before your first join are credited when you join for the first time.
 
-Apart from the 1,000 Ruby every account starts with, votes are the regular way to get more **Ruby** – the currency for trading between players.
+Apart from the 500 Ruby every new account starts with, votes are the regular way to get more **Ruby** – the currency for trading between players and with the [AI residents](residents.md#trading).
 
 ### In-game
 
