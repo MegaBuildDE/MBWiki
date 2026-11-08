@@ -10,7 +10,7 @@ icon: rocket
 <figure><img src="../.gitbook/assets/videos/start-en.jpg" alt="Mala and an AI resident on the meeting island"><figcaption><p>From the video "Your start"</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/start-en.mp4" %}
-**Video: Your start** (1:34, with sound) – Mala takes you from the lobby to your first resident.
+**Video: Your start** (1:35, with sound) – Mala takes you from the lobby to your first resident.
 {% endfile %}
 
 ## Creating your island
