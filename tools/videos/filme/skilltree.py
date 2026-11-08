@@ -237,44 +237,44 @@ def szene_outro(e, t, d):
         sprite_boden(e, "golem_idle", t, W / 2 - 200, 820, 240 * u)
         skaliert(e, mc.icon16("mana_orb"), W / 2 + 200, 720 + 8 * math.sin(t * 2), 140 * u)
     a3 = aus_kubisch(phase(t, 1.4, 2.0))
-    skaliert(e, WORTMARKE, W / 2, 900, WORTMARKE.width * 2, WORTMARKE.height * 2, alpha=a3)
+    mb_logo(e, W / 2, 900, 200, a3)
 
 
 SZENEN = [
-    dict(dauer=5.0, zeichne=szene_intro, ton=[(.2, "sfx:chime"), (1.4, "sfx:funkeln", .7)]),
+    dict(dauer=5.0, zeichne=szene_intro, ton=[(.2, "sfx:chime"), (1.4, "sfx:funkeln", .7)] + erzaehlt(.8, "skilltree-intro")),
     dict(dauer=9.0, nr="01", kicker="Mana", titel=L("Mana ist deine Magie", "Mana is your magic"),
          text=L("Damit schaltest du neue Biome frei. Du startest mit 1 000 Mana – unten rechts siehst du deinen Stand.",
                 "It unlocks new biomes. You start with 1,000 Mana – your balance sits at the bottom right."),
-         zeichne=szene_mana, ton=[(t0 + .5, "sfx:pop", .45) for t0, *_ in EREIGNISSE]),
+         zeichne=szene_mana, ton=[(t0 + .5, "sfx:pop", .45) for t0, *_ in EREIGNISSE] + erzaehlt(.5, "skilltree-mana")),
     dict(dauer=10.0, nr="02", kicker=L("Mana verdienen", "Earning Mana"), titel=L("Quests, Votes und Abenteuer",
                                                                                 "Quests, votes and adventures"),
          text=L("Quests bringen am meisten. Dazu kommen Votes, Biomquests und viele kleine Aktionen – aus Aktionen bis 150 "
                 "Mana am Tag.",
                 "Quests earn the most. Add votes, biome quests and lots of small actions – up to 150 Mana a day from actions."),
-         zeichne=szene_verdienen, ton=[(.2 + i * .3, "sfx:klick", .6) for i in range(6)]),
-    dict(dauer=8.5, nr="03", kicker=L("Mana-Erz", "Mana ore"), titel=L("Leuchtende Adern", "Glowing veins"),
+         zeichne=szene_verdienen, ton=[(.2 + i * .3, "sfx:klick", .6) for i in range(6)] + erzaehlt(.4, "skilltree-verdienen")),
+    dict(dauer=9.0, nr="03", kicker=L("Mana-Erz", "Mana ore"), titel=L("Leuchtende Adern", "Glowing veins"),
          text=L("Tief in den Höhlen der Hauptinseln: Mana-Erz lässt Mana-Kugeln fallen. Die Startinsel hat keins.",
                 "Deep in the caves of main islands: Mana ore drops Mana orbs. Your starting island has none."),
          zeichne=szene_erz, ton=[(2.9, "sfx:klick"), (3.3, "sfx:klick"), (3.7, "sfx:klick"), (4.0, "sfx:funkeln"),
-                                 (4.05, "sfx:pop", .6)]),
-    dict(dauer=11.0, nr="04", kicker="Skilltree", titel=L("Acht Kristalle, acht Pfade", "Eight crystals, eight paths"),
+                                 (4.05, "sfx:pop", .6)] + erzaehlt(.4, "skilltree-erz")),
+    dict(dauer=12.2, nr="04", kicker="Skilltree", titel=L("Acht Kristalle, acht Pfade", "Eight crystals, eight paths"),
          text=L("Jeder Pfad führt von links nach rechts durch seine Biome. Öffne ihn mit /sky skills auf deiner Insel.",
                 "Each path leads left to right through its biomes. Open it with /sky skills on your island."),
-         zeichne=szene_baum, ton=[(.6, "mala:golem"), (1.0, "pool:command_golem/beep_1", .6)]),
+         zeichne=szene_baum, ton=[(.6, "mala:golem"), (1.0, "pool:command_golem/beep_1", .6)] + erzaehlt(6.0, "skilltree-pfade")),
     dict(dauer=10.0, nr="05", kicker="Biomquest", titel=L("Erst die Quest, dann das Biom", "First the quest, then the biome"),
          text=L("Alle auf der Insel helfen mit. Ist die Biomquest geschafft, wird das nächste Biom des Pfads kaufbar.",
                 "Everyone on the island helps. Once the biome quest is done, the next biome of the path can be bought."),
-         zeichne=szene_biomquest, ton=[(5.0, "sfx:erfolg"), (6.2, "sfx:pop", .5)]),
+         zeichne=szene_biomquest, ton=[(5.0, "sfx:erfolg"), (6.2, "sfx:pop", .5)] + erzaehlt(.4, "skilltree-biomquest")),
     dict(dauer=9.0, nr="06", kicker=L("Neue Gegenden", "New regions"), titel=L("Dein Biom taucht auf", "Your biome appears"),
          text=L("Ein frisch gekauftes Biom erscheint sicher in der nächsten neuen Gegend, die du erkundest.",
                 "A freshly bought biome is sure to appear in the next new region you explore."),
-         zeichne=szene_gegenden, ton=[(2.3, "sfx:funkeln"), (4.8, "sfx:pop", .5), (5.1, "sfx:pop", .5)]),
+         zeichne=szene_gegenden, ton=[(2.3, "sfx:funkeln"), (4.8, "sfx:pop", .5), (5.1, "sfx:pop", .5)] + erzaehlt(.4, "skilltree-gegenden")),
     dict(dauer=8.0, nr="07", kicker=L("Preise", "Prices"), titel=L("Fair gestaffelt", "Fairly staged"),
          text=L("Das erste Biom kostet 100 Mana. Jeder Kauf macht die nächsten ein wenig teurer.",
                 "Your first biome costs 100 Mana. Each purchase makes the next ones a little pricier."),
-         zeichne=szene_preise),
-    dict(dauer=5.5, zeichne=szene_outro, ton=[(.3, "sfx:chime", .8)]),
+         zeichne=szene_preise, ton=erzaehlt(.4, "skilltree-preise")),
+    dict(dauer=5.5, zeichne=szene_outro, ton=[(.3, "sfx:chime", .8)] + erzaehlt(.5, "skilltree-outro")),
 ]
 
 FILM = Film("skilltree", SZENEN, musik=dict(tonart="G", tempo=92, stimmung="hell"))
-FILM.poster = 5.0 + 9.0 + 10.0 + 8.5 + 6.5
+FILM.poster = 5.0 + 9.0 + 10.0 + 9.0 + 6.5

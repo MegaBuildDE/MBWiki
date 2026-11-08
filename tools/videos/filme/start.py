@@ -261,22 +261,22 @@ def szene_outro(e, t, d):
         sprite_boden(e, "mala_hello", max(0, t - 1.0), W / 2 - 220, 800, 300 * u, schleife=False)
         sprite_boden(e, "warpett_idle", t, W / 2 + 200, 800, 210 * u)
     a3 = aus_kubisch(phase(t, 1.4, 2.0))
-    skaliert(e, WORTMARKE, W / 2, 862, WORTMARKE.width * 2, WORTMARKE.height * 2, alpha=a3)
+    mb_logo(e, W / 2, 862, 200, a3)
 
 
 TIPP = [(t, "sfx:tippen", .8) for t in (1.75, 1.95, 2.15, 2.35)]
 
 SZENEN = [
     dict(dauer=5.0, zeichne=szene_intro, ton=[(.2, "sfx:chime"), (1.3, "sfx:funkeln", .7)]),
-    dict(dauer=6.5, nr="01", kicker=L("Verbinden", "Connect"), titel=L("Ab auf den Server", "Join the server"),
+    dict(dauer=7.5, nr="01", kicker=L("Verbinden", "Connect"), titel=L("Ab auf den Server", "Join the server"),
          text=L("Java und Bedrock spielen zusammen. In der Lobby öffnet /sky das Skyblock-Menü.",
                 "Java and Bedrock play together. In the lobby, /sky opens the Skyblock menu."),
-         zeichne=szene_verbinden, ton=TIPP + [(2.8, "sfx:klick"), (2.95, "sfx:pop", .6), (5.3, "sfx:klick")]),
+         zeichne=szene_verbinden, ton=TIPP + [(2.8, "sfx:klick"), (2.95, "sfx:pop", .6), (5.3, "sfx:klick")] + erzaehlt(.3, "start-verbinden")),
     dict(dauer=9.0, nr="02", kicker=L("Startbiom", "Start biome"), titel=L("Wähle deinen Kristall", "Pick your crystal"),
          text=L("Sieben Kristalle bestimmen, womit deine Insel beginnt. Weitere Biome schaltest du später frei – "
                 "Gewässer kommt bald.",
                 "Seven crystals decide how your island begins. You unlock more biomes later – Water is coming soon."),
-         zeichne=szene_startbiom, ton=[(7.0, "sfx:klick"), (7.1, "sfx:chime", .7)]),
+         zeichne=szene_startbiom, ton=[(7.0, "sfx:klick"), (7.1, "sfx:chime", .7)] + erzaehlt(.4, "start-startbiom")),
     dict(dauer=11.0, nr="03", kicker=L("Der Vorspann", "The intro"), titel=L("Mala nimmt dich mit", "Mala takes you along"),
          text=L("Während deine Insel entsteht, fliegst du mit Kapitänin Mala im Luftschiff los – mit Stimme und Untertiteln.",
                 "While your island is being built, Captain Mala flies you there in her airship – with voice and subtitles."),
@@ -297,7 +297,7 @@ SZENEN = [
                 "zur Nachbarinsel.",
                 "An arrow in the quest box, a beacon and a helper spirit lead you across a vine staircase to the "
                 "neighbouring island."),
-         zeichne=szene_sonderquest, ton=[(.5, "sfx:pop", .5), (1.3, "sfx:funkeln", .6), (6.8, "sfx:funkeln", .6)]),
+         zeichne=szene_sonderquest, ton=[(.5, "sfx:pop", .5), (1.3, "sfx:funkeln", .6), (6.8, "sfx:funkeln", .6)] + erzaehlt(.4, "start-sonderquest")),
     dict(dauer=12.5, nr="07", kicker=L("Begegnung", "Meeting"), titel=L("Mala stellt dir die Bewohner vor",
                                                                       "Mala introduces the residents"),
          text=L("Auf der Nachbarinsel wartet sie mit deinem ersten Bewohner. Mit ihm schreibst du ganz normal im Chat.",

@@ -8,6 +8,8 @@ Kurze Feature-Filme fürs Wiki, gebaut aus echten Spielinhalten: Minecraft-Schri
 | Deine Insel lebt | `filme/bewohner.py` | `sb/bewohner.md`, `en/residents.md` |
 | Mana & Biome | `filme/skilltree.py` | `sb/skilltree.md`, `en/skilltree.md` |
 | Clans – ein erster Blick | `filme/clans.py` | `sb/clans.md`, `en/clans.md` (nur DE) |
+| Mobplates | `filme/mobplates.py` | `sb/mobplates.md`, `en/mobplates.md` (nur DE) |
+| Forestlinge | `filme/forestlinge.py` | `sb/forestlinge.md`, `en/forestlings.md` (nur DE) |
 
 Ergebnis liegt in `.gitbook/assets/videos/<film>.mp4` (DE) bzw. `<film>-en.mp4`, daneben das Standbild `<film>.jpg` für die Seite.
 
@@ -19,6 +21,7 @@ python3 bauen.py start --sprache en     # englischer Film
 python3 bauen.py start --standbild 3 12.5   # einzelne Bilder nach test/
 python3 bauen.py start --kontakt        # Kontaktbogen aller Szenen nach test/
 python3 bauen.py start --poster         # nur das Standbild für die Wiki-Seite
+python3 bauen.py clans --hoch build/discord   # zusätzlich scharfe Fassung (crf 16), z. B. für Discord
 ```
 
 Ein Film braucht auf einem M-Mac rund eine Minute (`--teile` Worker parallel, Vorgabe: Kerne minus eins).
@@ -59,6 +62,10 @@ python3 modelle.py mala_hello goblin_talk
 | `modelle.py`, `modelle.html` | 3D-Modelle als Sprites |
 | `clan_icons.py` | Entwürfe der Clan-Icons für den Clan-Film |
 | `filme/*.py` | Ein Film je Datei: Szenen mit Länge und Zeichenfunktion, Texte über `L(de, en)` |
+
+## Malas Erklärzeilen
+
+Neben den Spielzeilen aus `voice-lines.yml` erklärt Mala die Filme mit eigenen Zeilen, die nur fürs Wiki aufgenommen sind: Text und Regie in `stimmen/texte.json` (Präfix = Film, z. B. `clans-chat`), aufgenommen mit `python3 trailer_stimme.py` (ElevenLabs, Schlüssel aus dem Schlüsselbund). In der Szene stehen sie als `erzaehlt(t, "clans-chat")`. Sie gibt es nur auf Deutsch, im englischen Film fallen sie weg. Die Szene muss so lang sein, dass die Zeile mit etwa einer Sekunde Luft hineinpasst.
 
 ## Einen Film ändern
 

@@ -50,6 +50,16 @@ AUFTRAEGE = {
     "forest_cherry": ("forestlinge/forestling_cherry.bbmodel", "idle", -25, 1.0),
     "forest_birch": ("forestlinge/forestling_birch.bbmodel", "idle", 25, 1.0),
     "forest_mangrove": ("forestlinge/forestling_mangrove.bbmodel", "idle", -25, 1.0),
+    # Forestling-Film: der Apfel in der Hand (Knochen apple, im Modell verborgen) und die Arten
+    "forest_oak_apfel": ("forestlinge/forestling_oak.bbmodel", "idle", -25, 1.0),
+    "forest_oak_apfel_happy": ("forestlinge/forestling_oak.bbmodel", "happy2", -25, 1.0),
+    "forest_spruce": ("forestlinge/forestling_spruce.bbmodel", "idle", 25, 1.0),
+    "forest_jungle": ("forestlinge/forestling_jungle.bbmodel", "idle", -25, 1.0),
+    "forest_acacia": ("forestlinge/forestling_acacia.bbmodel", "idle", 25, 1.0),
+    "forest_darkoak": ("forestlinge/forestling_darkoak.bbmodel", "idle", -25, 1.0),
+    "forest_paleoak": ("forestlinge/forestling_paleoak.bbmodel", "idle", 25, 1.0),
+    "forest_bamboo": ("forestlinge/forestling_bamboo.bbmodel", "idle", -25, 1.0),
+    "forest_cover": ("forestlinge/forestling_oak.bbmodel", "happy2", -20, 1.0),
     "warpett_idle": ("warper/Warpett_dandelion.bbmodel", "idle", -30, 1.0),
     "warpett_eat": ("warper/Warpett_dandelion.bbmodel", "eat", -30, 0.5, 2.0),
     "warpett_poppy": ("warper/Warpett_poppy.bbmodel", "idle", 30, 1.0),
@@ -57,7 +67,17 @@ AUFTRAEGE = {
     # Bloecke (assets/custom_blocks): langsam gedreht, 'drehen' Bilder fuer eine Umdrehung
     "mana_erz": ("blocks:mana_ore/mana_ore.bbmodel", None, 35, 0.8, 1.0, 120),
     "warpett_ei": ("blocks:warpett_egg/warpett_egg.bbmodel", None, -30, 0.9),
+    # Fuer die Cover (cover.py), gross gerendert: python3 modelle.py --groesse 1536 goblin_cover …
+    "goblin_cover": ("goblins/goblin-standart-1.bbmodel", "hello", -20, 1.0),
+    "shroom_cover": ("shroomling/Shroomling_red.bbmodel", "hello", 25, 1.0),
+    "golem_cover": ("command_golem/command_golem_1.bbmodel", None, -25, 1.0),
+    "mala_cover": ("crew/mala_mage.bbmodel", "hello.model.new", -22, 1.0),
+    "warpett_cover": ("warper/Warpett_dandelion.bbmodel", "idle", 30, 1.0),
 }
+
+
+# Teile, die im Modell verborgen sind und im Spiel erst der Code einblendet
+ZEIGEN = {name: ["apple", "apple_stem"] for name in ("forest_oak_apfel", "forest_oak_apfel_happy", "forest_cover")}
 
 
 class Server(http.server.SimpleHTTPRequestHandler):
@@ -108,6 +128,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("namen", nargs="*")
     p.add_argument("--neu", action="store_true")
+    p.add_argument("--groesse", type=int, default=512, help="Kantenlaenge der Bilder (Cover: 1536)")
     a = p.parse_args()
     namen = a.namen or list(AUFTRAEGE)
     jobs = []
@@ -118,14 +139,15 @@ def main():
         modell, anim, yaw, zoom, *rest = AUFTRAEGE[name]
         url = "/blocks/" + modell[7:] if modell.startswith("blocks:") else "/pool/" + modell
         jobs.append(dict(name=name, url=url, anim=anim, yaw=yaw, zoom=zoom, fps=FPS,
-                         tempo=rest[0] if rest else 1.0, drehen=rest[1] if len(rest) > 1 else 0))
+                         tempo=rest[0] if rest else 1.0, drehen=rest[1] if len(rest) > 1 else 0,
+                         zeigen=ZEIGEN.get(name, [])))
     if not jobs:
         print("Alle Sprites vorhanden (--neu baut sie neu).")
         return
     Server.auftraege = jobs
     srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Server)
     threading.Thread(target=srv.serve_forever, daemon=True).start()
-    url = f"http://127.0.0.1:{srv.server_address[1]}/modelle.html"
+    url = f"http://127.0.0.1:{srv.server_address[1]}/modelle.html?size={a.groesse}"
     profil = os.path.join(HIER, ".cache", "chrome")
     chrome = subprocess.Popen([CHROME, "--headless=new", "--use-angle=swiftshader", "--enable-unsafe-swiftshader",
                                "--ignore-gpu-blocklist", f"--user-data-dir={profil}", "--no-first-run",

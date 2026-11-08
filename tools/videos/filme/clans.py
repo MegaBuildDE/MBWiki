@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Clans auf MegaBuild Skyblock - Vorschau des geplanten Clansystems.
+"""Clans auf MegaBuild Skyblock.
 
-Inhalt nach MBSkyManager/docs/CLANS.md (Stand 12.10.2026). Alles daran ist
-Konzept, deshalb steht durchgehend "Vorschau · noch in Planung" im Bild.
+Inhalt nach MBSkyManager/docs/CLANS.md, Stand nach dem Bau (29.10.2026): Das
+Clansystem ist gebaut, nur Clan-Insel (samt Projekten) und Kasse sind gesperrt,
+bis die Clan-Insel einen eigenen Server bekommt - deshalb "bald" an diesen Stellen.
 Menues, Icons, Schrift und Wappen sind dieselben wie auf der Entscheidungsseite
-(echte Pack-Grafiken, clan_icons.py). Erste Fassung: 13.10.2026 fuer die
-Beta-Tester; fuers Wiki mit oeffentlichem Untertitel und Discord-Hinweis.
+(echte Pack-Grafiken, clan_icons.py). Mala erklaert jede Szene (nur Deutsch).
 
     python3 bauen.py clans
 """
@@ -40,7 +40,7 @@ def szene_intro(e, t, d):
     a2 = aus_kubisch(phase(t, .2, .8))
     av(e, "auf MegaBuild Skyblock", W / 2, 455 + (1 - a2) * 22, 66, "heavy", (255, 255, 255), a2, anker="m")
     a3 = aus_kubisch(phase(t, .5, 1.1))
-    av(e, "Ein erster Blick auf das, was kommt", W / 2, 552 + (1 - a3) * 16, 36, "medium",
+    av(e, "Gemeinsam mehr erreichen", W / 2, 552 + (1 - a3) * 16, 36, "medium",
        (196, 220, 248), a3, anker="m", schatten=.4)
     n, g, gap = len(INTRO_WAPPEN), 104, 22
     x0 = (W - (n * g + (n - 1) * gap)) / 2
@@ -99,7 +99,7 @@ def szene_gruenden(e, t, d):
     # Vorschau Tablist
     if t > 2.5:
         u = aus_kubisch(phase(t, 2.5, 2.9))
-        zeile = "§f" + mc.wappen_char(farbe, motiv) + "§" + code + "NBW §fLena"
+        zeile = "§" + code + "NBW §fLena"
         bw = (mc.breite(zeile) + 4) * 4
         mct(e, 1330, 506, "§7In Tabliste und Chat", 3, u)
         mc.einfuegen(e, Image.new("RGBA", (bw, 40), (0, 0, 0, 120)), 1330, 538, u)
@@ -108,7 +108,7 @@ def szene_gruenden(e, t, d):
     gr, gap = 52, 12
     x0 = CX - (12 * gr + 11 * gap) / 2
     u = aus_kubisch(phase(t, .3, .8))
-    mct(e, x0, 628, "§724 Wappen", 3, u)
+    mct(e, x0, 628, "§724 Wappen §8· 12 zum Start, mehr mit den Stufen", 3, u)
     for i, m in enumerate(ALLE_MOTIVE):
         x = x0 + (i % 12) * (gr + gap)
         y = 664 + (i // 12) * (gr + gap)
@@ -132,9 +132,9 @@ TIPPS_CLAN = {
     4: ["§a§lNebelwald", "§7Kürzel §aNBW §7· Stufe §f5", "§7Erfahrung: §f2 610 §7/ §f3 500", "§7Online: §f5 §7von §f12"],
     10: ["§dMitglieder", "§7Anführer, Offiziere, Mitglieder", "§7und Neulinge, jeder mit Rechten", "§7Plätze: §f12 §7von §f20",
          "§8Klick zum Öffnen"],
-    12: ["§6Clan-Quests", "§7Wochenauftrag: §fSilber geschafft", "§7Hilferufe offen: §f1", "§7Projekt Hain: §f62 %",
+    12: ["§6Clan-Quests", "§7Wochenauftrag: §fSilber geschafft", "§7Hilferufe offen: §f1", "§7Meilensteine & Chronik",
          "§8Klick zum Öffnen"],
-    14: ["§aClan-Insel", "§7Eure gemeinsame Insel", "§7Projekte: §f2 §7fertig, §f1 §7läuft", "§8Klick zum Hinreisen"],
+    14: ["§aClan-Insel", "§7Eure gemeinsame Insel", "§eKommt mit eigenem Server"],
     16: ["§bClan-Chat", "§7Schreib §f#Text §7in den Chat", "§7oder schalte mit §f/c §7um", "§8Klick zum Umschalten"],
 }
 MX, MY, MS = 880, 340, 4
@@ -167,7 +167,7 @@ def szene_chat(e, t, d):
         (2.3, NBW + " §fLena§7: §bWer kommt mit in die Wüste?"),
         (3.3, NBW + " §fTom§7: §bBin dabei, komme aus dem Citybuild!"),
         (4.2, NBW + " §fMia§7: §bIch bringe Fackeln mit."),
-        (5.3, "§f" + mc.ALARM["blau"] + " §bLena lädt ein: §fAuf der Insel von Lena §a[Hinreisen]"),
+        (5.3, "§f" + mc.ALARM["blau"] + " §bLena ruft zum Treffpunkt: §fInsel von Lena §a[Hinkommen]"),
     ]
     eingabe = ("§f" + getippt + blink) if not gesendet else ("§f" + blink)
     chat(e, 880, 860, zeilen, t, S, ein, eingabe)
@@ -257,7 +257,7 @@ def szene_auftrag(e, t, d):
 def szene_hilferuf(e, t, d):
     ein = aus_kubisch(phase(t, 0, .4))
     S = 3
-    ruf = "§f" + mc.ALARM["gelb"] + " §eLena bittet um Hilfe: §fWüste – 128 Sand §7(40/128) "
+    ruf = "§f" + mc.ALARM["gelb"] + " §eLena ruft um Hilfe: §fWüste – 128 Sand §7(40/128) "
     knopf = "§a[Besuchen]"
     zeilen = [
         (-1, "§fEmma§7: §fGleich Event am Spawn!"),
@@ -314,7 +314,7 @@ STUFEN = [
     (0, "chat", "Clan-Chat, Kürzel, 12 Wappen"),
     (300, "mail_broadcast", "Clan-Nachricht und Rundbrief"),
     (800, "banner", "15 Plätze und Clan-Banner"),
-    (1500, "clan_island", "Clan-Insel"),
+    (1500, "clan_island", "Clan-Insel §8(bald)"),
     (2400, "tag", "20 Plätze, Wappen in der Tabliste"),
     (3500, "mana_orb", "Clan-Segen am Wochenende"),
     (5000, "member", "25 Plätze, 8 Wappen mehr"),
@@ -373,7 +373,7 @@ def szene_insel(e, t, d):
     ein = aus_kubisch(phase(t, 0, .4))
     icon_bei(e, "clan_island", 900, 196, 80, ein)
     mct(e, 1000, 208, "§a§lClan-Projekte", 5, ein)
-    mct(e, 1000, 260, "§7Baustoffe und Mana zusammentragen", 3, ein)
+    mct(e, 1000, 260, "§7Baustoffe und Mana zusammentragen §8· §ebald", 3, ein)
     kw, kh, gap = 274, 214, 22
     x0, y0 = 900, 318
     for i, (ic, name, stufe) in enumerate(PROJEKTE):
@@ -432,10 +432,10 @@ def szene_fair(e, t, d):
 
 def szene_outro(e, t, d):
     a1 = aus_kubisch(phase(t, .1, .6))
-    av(e, "Was meint ihr?", W / 2, 250 + (1 - a1) * 30, 112, "heavy", (255, 255, 255), a1, anker="m")
+    av(e, "Gründet euren Clan!", W / 2, 250 + (1 - a1) * 30, 112, "heavy", (255, 255, 255), a1, anker="m")
     a2 = aus_kubisch(phase(t, .45, .95))
-    av(e, "Das Clansystem ist noch in Planung.", W / 2, 420, 40, "medium", (214, 228, 248), a2, anker="m", schatten=.4)
-    av(e, "Sagt uns im Discord, was ihr davon haltet.", W / 2, 474, 40, "medium", (140, 236, 255), a2,
+    av(e, "Mit /clan geht es los.", W / 2, 420, 40, "medium", (214, 228, 248), a2, anker="m", schatten=.4)
+    av(e, "Sagt uns im Discord, wie es euch gefällt.", W / 2, 474, 40, "medium", (140, 236, 255), a2,
        anker="m", schatten=.4)
     n, g, gap = 8, 84, 24
     xs = (W - (n * g + (n - 1) * gap)) / 2
@@ -446,35 +446,36 @@ def szene_outro(e, t, d):
             wip = 5 * math.sin(2 * math.pi * (t * .42 + i * .11))
             wappen_bei(e, farbe, motiv, xs + i * (g + gap) + g / 2, 640 + wip, g * s)
     a3 = aus_kubisch(phase(t, 1.3, 1.9))
-    skaliert(e, WORTMARKE, W / 2, 820, WORTMARKE.width * 2, WORTMARKE.height * 2, alpha=a3)
+    mb_logo(e, W / 2, 830, 200, a3)
 
 
 SZENEN = [
-    dict(dauer=5.0, zeichne=szene_intro),
+    dict(dauer=7.0, zeichne=szene_intro, ton=erzaehlt(.6, "clans-intro")),
     dict(dauer=7.0, nr="01", kicker="Clan gründen", titel="Dein Clan, dein Wappen",
-         text="Name, Kürzel, Farbe und Wappen suchst du selbst aus. Mit /clan geht es los.", zeichne=szene_gruenden),
+         text="Name, Kürzel, Farbe und Wappen suchst du selbst aus. Mit /clan geht es los.", zeichne=szene_gruenden, ton=erzaehlt(.4, "clans-gruenden")),
     dict(dauer=9.0, nr="02", kicker="Das Clan-Menü", titel="Alles an einem Ort",
-         text="Mitglieder, Clan-Quests, Clan-Insel, Chat und Einstellungen – übersichtlich in einem Menü.",
-         zeichne=szene_menue),
+         text="Mitglieder, Clan-Quests, Chat und Einstellungen in einem Menü – und ein Klick bringt dich auf die "
+              "Insel eines Mitglieds.",
+         zeichne=szene_menue, ton=erzaehlt(.4, "clans-menue")),
     dict(dauer=7.5, nr="03", kicker="Clan-Chat", titel="Schreib mit # an deinen Clan",
          text="Der Clan-Chat erreicht euch auf jedem Server: in der Lobby, auf den Inseln und im Citybuild.",
-         zeichne=szene_chat),
-    dict(dauer=8.5, nr="04", kicker="Clan-Quests", titel="Der Wochenauftrag",
+         zeichne=szene_chat, ton=erzaehlt(.4, "clans-chat")),
+    dict(dauer=9.0, nr="04", kicker="Clan-Quests", titel="Der Wochenauftrag",
          text="Jede Woche drei Aufgaben und ein gemeinsamer Punkte-Topf. Jeder hilft dort, wo er gerade spielt.",
-         zeichne=szene_auftrag),
+         zeichne=szene_auftrag, ton=erzaehlt(.4, "clans-auftrag")),
     dict(dauer=7.5, nr="05", kicker="Clan-Quests", titel="Hilferuf",
          text="Hängst du an einer Biomquest fest? Ruf deinen Clan. Wer mit anpackt, bekommt Mana wie ein Inselmitglied.",
-         zeichne=szene_hilferuf),
-    dict(dauer=7.0, nr="06", kicker="Clan-Stufen", titel="Zusammen aufsteigen",
+         zeichne=szene_hilferuf, ton=erzaehlt(.4, "clans-hilferuf")),
+    dict(dauer=8.0, nr="06", kicker="Clan-Stufen", titel="Zusammen aufsteigen",
          text="Jeder Wochenauftrag bringt Erfahrung. Zehn Stufen schalten Plätze, Wappen, das Clan-Banner und mehr frei.",
-         zeichne=szene_stufen),
-    dict(dauer=7.5, nr="07", kicker="Clan-Insel · geplant", titel="Eine Insel für euren Clan",
-         text="Ab Stufe 4 baut ihr gemeinsam an eurer Clan-Insel – Projekt für Projekt, ganz ohne Zeitdruck.",
-         zeichne=szene_insel),
+         zeichne=szene_stufen, ton=erzaehlt(.4, "clans-stufen")),
+    dict(dauer=9.0, nr="07", kicker="Clan-Insel · bald", titel="Eine Insel für euren Clan",
+         text="Ab Stufe 4 baut ihr gemeinsam an eurer Clan-Insel. Sie ist fertig und öffnet, sobald sie ihren eigenen "
+              "Server hat.",
+         zeichne=szene_insel, ton=erzaehlt(.4, "clans-insel")),
     dict(dauer=6.5, nr="08", kicker="Fair für alle", titel="Gemeinschaft statt Vorsprung",
          text="Clans bringen gemeinsame Ziele, Kosmetik und Komfort – aber keine Rabatte und nichts zu kaufen.",
-         zeichne=szene_fair),
-    dict(dauer=5.5, zeichne=szene_outro),
+         zeichne=szene_fair, ton=erzaehlt(.4, "clans-fair")),
+    dict(dauer=6.0, zeichne=szene_outro, ton=erzaehlt(.3, "clans-outro")),
 ]
-FILM = Film("clans", SZENEN, abzeichen_text="VORSCHAU  ·  noch in Planung",
-            musik=dict(tonart="D", tempo=84, stimmung="hell"))
+FILM = Film("clans", SZENEN, musik=dict(tonart="D", tempo=84, stimmung="hell"))

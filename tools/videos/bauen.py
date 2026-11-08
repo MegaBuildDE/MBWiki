@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Baut ein Wiki-Video: Bilder (parallel), Ton, MP4 und Vorschaubild.
 
-    python3 bauen.py <film> [--sprache de|en] [--teile 8] [--crf 23]
+    python3 bauen.py <film> [--sprache de|en] [--teile 8] [--crf 23] [--hoch ORDNER]
     python3 bauen.py <film> --standbild 3.0 12.5 …     PNGs nach test/
     python3 bauen.py <film> --kontakt [zeiten …]        Kontaktbogen nach test/
     python3 bauen.py <film> --poster                    nur das Vorschaubild
@@ -43,6 +43,7 @@ def worker(name, sprache, von, bis, ausgabe):
     film = lade_film(name, sprache)
     ton.untertitel(film, sprache)
     from basis import W, H, FPS
+    W, H = getattr(film, "groesse", (W, H))
     ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgra", "-s", f"{W}x{H}",
                            "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "10",
                            "-pix_fmt", "yuv420p", ausgabe], stdin=subprocess.PIPE)
@@ -53,12 +54,32 @@ def worker(name, sprache, von, bis, ausgabe):
         raise SystemExit("ffmpeg (Teil) fehlgeschlagen")
 
 
+def lineare_lautheit(mischung, arbeit):
+    """Zwei Durchgaenge loudnorm: erst messen, dann linear auf -16 LUFS bringen.
+
+    Der einfache Durchgang regelt dynamisch nach (wie eine Automatik) und zieht leise
+    gestellte Musik wieder hoch. Linear bleibt das Verhaeltnis von Musik und Stimme so,
+    wie es im Film eingestellt ist (film.lautheit_linear = True)."""
+    import json
+    # Eingang 0 ist im echten Lauf das Video - hier ein stummer Platzhalter, damit [1:a]/[2:a] passen
+    mess = subprocess.run(["ffmpeg", "-hide_banner", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo:d=1",
+                           "-i", os.path.join(arbeit, "musik.wav"),
+                           "-i", os.path.join(arbeit, "rest.wav"), "-filter_complex",
+                           mischung + ",loudnorm=I=-16:TP=-1.5:LRA=50:print_format=json", "-f", "null", "-"],
+                          capture_output=True, text=True, check=True).stderr
+    m = json.loads(mess[mess.rindex("{"):mess.rindex("}") + 1])
+    return ("loudnorm=I=-16:TP=-1.5:LRA=50:linear=true"
+            f":measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
+            f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}")
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("film")
     p.add_argument("--sprache", default="de")
     p.add_argument("--teile", type=int, default=max(2, (os.cpu_count() or 4) - 1))
     p.add_argument("--crf", type=int, default=23)
+    p.add_argument("--hoch", help="zusaetzlich eine scharfe Fassung (crf 16, 192k Ton) in diesen Ordner, z. B. fuer Discord")
     p.add_argument("--standbild", nargs="*", type=float)
     p.add_argument("--kontakt", nargs="*", type=float)
     p.add_argument("--poster", action="store_true", help="nur das Vorschaubild neu")
@@ -75,6 +96,7 @@ def main():
     film = lade_film(a.film, a.sprache)
     from basis import W, H, FPS
     from PIL import Image
+    W, H = getattr(film, "groesse", (W, H))  # ein Film kann groesser als 1080p sein (Trailer: WQHD)
     test = os.path.join(HIER, "test")
 
     if a.poster:
@@ -126,17 +148,28 @@ def main():
     os.makedirs(ZIEL, exist_ok=True)
     name = a.film + ("" if a.sprache == "de" else "-" + a.sprache)
     mp4 = os.path.join(ZIEL, name + ".mp4")
-    filter_ton = ("[1:a]aecho=0.8:0.5:110|230:0.2|0.1,highpass=f=35[m];"
-                  "[m][2:a]amix=inputs=2:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=44100[a]")
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", liste,
-                    "-i", os.path.join(arbeit, "musik.wav"), "-i", os.path.join(arbeit, "rest.wav"),
-                    "-filter_complex", filter_ton, "-map", "0:v", "-map", "[a]",
-                    "-c:v", "libx264", "-preset", "slow", "-tune", "animation", "-crf", str(a.crf),
-                    "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-t", f"{film.gesamt:.3f}",
-                    "-movflags", "+faststart", mp4], check=True)
+    hall = "aecho=0.8:0.5:110|230:0.2|0.1," if getattr(film, "musik_hall", True) else ""  # fertige Musik: ohne
+    mischung = f"[1:a]{hall}highpass=f=35[m];[m][2:a]amix=inputs=2:normalize=0"
+    norm = "loudnorm=I=-16:TP=-1.5:LRA=11"
+    if getattr(film, "lautheit_linear", False):
+        norm = lineare_lautheit(mischung, arbeit)
+    filter_ton = f"{mischung},{norm},aresample=44100[a]"
+    ausgaben = [(mp4, a.crf, "128k")]
+    if a.hoch:  # gleiche Teile, nur weniger stark komprimiert
+        os.makedirs(a.hoch, exist_ok=True)
+        ausgaben.append((os.path.join(a.hoch, name + ".mp4"), 16, "192k"))
+    for ziel, crf, ton_rate in ausgaben:
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", liste,
+                        "-i", os.path.join(arbeit, "musik.wav"), "-i", os.path.join(arbeit, "rest.wav"),
+                        "-filter_complex", filter_ton, "-map", "0:v", "-map", "[a]",
+                        "-c:v", "libx264", "-preset", "slow", "-tune", "animation", "-crf", str(crf),
+                        "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", ton_rate, "-t", f"{film.gesamt:.3f}",
+                        "-movflags", "+faststart", ziel], check=True)
     speichere_poster(film, a.film, a.sprache)
     groesse = os.path.getsize(mp4) / 1e6
     print(f"fertig: {mp4} ({groesse:.1f} MB, {film.gesamt:.1f} s) in {time.time() - start:.0f} s")
+    for ziel, _, _ in ausgaben[1:]:
+        print(f"scharf: {ziel} ({os.path.getsize(ziel) / 1e6:.1f} MB)")
 
 
 if __name__ == "__main__":

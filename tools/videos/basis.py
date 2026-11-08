@@ -21,7 +21,6 @@ import mc
 W, H, FPS = 1920, 1080, 30
 HIER = os.path.dirname(os.path.abspath(__file__))
 WIKI = os.path.dirname(os.path.dirname(HIER))
-LOGO = "/Users/kay/IdeaProjects/Datapacks/MBDefault/assets/megabuild/textures/font/logo"
 CX = 1330  # Mitte der rechten Bildhaelfte
 SPRACHE = os.environ.get("SPRACHE", "de")
 
@@ -29,6 +28,12 @@ SPRACHE = os.environ.get("SPRACHE", "de")
 def L(de, en=None):
     """Text in der Sprache des Films."""
     return en if SPRACHE == "en" and en is not None else de
+
+
+def erzaehlt(t, name, laut=1.0):
+    """Malas Erklaer-Zeile aus stimmen/texte.json. Die gibt es nur auf Deutsch,
+    im englischen Film faellt sie weg."""
+    return [(t, "mala:" + name, laut)] if SPRACHE == "de" else []
 
 
 # ── Zeit ────────────────────────────────────────────────────────────────────
@@ -441,7 +446,19 @@ def abzeichen(text, farbe=(255, 210, 90), text_farbe=(255, 222, 130)):
     return img
 
 
-WORTMARKE = Image.open(os.path.join(LOGO, "sblogo.png")).convert("RGBA")
+# Das MB-Logo (nur die beiden Buchstaben, mit Schein) aus dem Logo-Repo, auf den sichtbaren Teil beschnitten
+MB_LOGO = Image.open(os.path.join(os.environ.get("MBLOGO", os.path.expanduser("~/Coding/MBLogo")),
+                                  "mblogo-wortmarke-1024.png")).convert("RGBA")
+MB_LOGO = MB_LOGO.crop(MB_LOGO.getbbox())
+
+
+def mb_logo(ziel, cx, cy, hoehe, alpha=1.0):
+    """MB-Logo mittig bei (cx, cy), hoehe in Pixeln samt Schein."""
+    skaliert(ziel, MB_LOGO, cx, cy, hoehe * MB_LOGO.width / MB_LOGO.height, hoehe, alpha=alpha, glatt=True)
+
+
+ECKE_H = 104  # Hoehe des Logos oben links
+WORTMARKE = MB_LOGO.resize((round(ECKE_H * MB_LOGO.width / MB_LOGO.height), ECKE_H), Image.LANCZOS)
 
 
 @functools.lru_cache(maxsize=8)
@@ -708,7 +725,7 @@ class Film:
                 u = aus_kubisch(phase(t, t0 - .2, t0)) * (1 - phase(t, t1, t1 + .3))
                 untertitel(f, text, u)
         if not letzte and self.wortmarke:
-            mc.einfuegen(f, WORTMARKE, 60, 46, .9)
+            mc.einfuegen(f, WORTMARKE, 40, 22, .95)
         if self.abzeichen is not None:
             mc.einfuegen(f, self.abzeichen, W - 60 - self.abzeichen.width, 40)
         balken = Image.new("RGBA", (max(1, int(W * t / self.gesamt)), 5), (85, 255, 255, 150))

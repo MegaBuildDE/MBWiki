@@ -1,0 +1,253 @@
+{
+  "_hinweis": "Malas Zeilen nur fuer die Wiki-Filme (nicht im Spiel), nur Deutsch: trailer-* fuer den Trailer, die uebrigen erklaeren die Feature-Filme (Praefix = Film). Aufnehmen mit: python3 trailer_stimme.py. Regie in eckigen Klammern wird nicht gesprochen. Trailer-Feature-Zeilen muessen in 3 s passen (eine Einblendung). Befehle wie /sky nicht in den Text schreiben - die Stimme liest ihn woertlich.",
+  "zeilen": {
+    "trailer-nichts": {
+      "regie": "[quietly, tense]",
+      "de": "Man hat uns gesagt, hier oben gibt es nichts mehr."
+    },
+    "trailer-geirrt": {
+      "regie": "[with a confident smirk]",
+      "de": "Man hat sich geirrt."
+    },
+    "trailer-inseln": {
+      "regie": "[in awe, warmly]",
+      "de": "Inseln, so weit das Auge reicht – und jede wartet nur auf dich."
+    },
+    "trailer-server": {
+      "regie": "[excited]",
+      "de": "Deine Insel – auf deinem eigenen Server."
+    },
+    "trailer-waechst": {
+      "regie": "[excited]",
+      "de": "Und mit jedem Schritt wächst deine Welt."
+    },
+    "trailer-biome": {
+      "regie": "[excited]",
+      "de": "Sammle Mana. Schalte neue Biome frei."
+    },
+    "trailer-doerfer": {
+      "regie": "[mysteriously]",
+      "de": "Dörfer, Ruinen, tiefe Höhlen – entdecke sie alle."
+    },
+    "trailer-zusammen": {
+      "regie": "[cheerfully]",
+      "de": "Java oder Bedrock? Egal – wir spielen zusammen."
+    },
+    "trailer-handeln": {
+      "regie": "[warmly, impressed]",
+      "de": "Sie reden mit dir, handeln und nehmen Aufträge an."
+    },
+    "trailer-allein": {
+      "regie": "[playfully]",
+      "de": "Und glaub mir: Allein bist du hier oben nie."
+    },
+    "trailer-bereit": {
+      "regie": "[intense whisper]",
+      "de": "Mach dich bereit. Es geht bald los."
+    },
+    "trailer-beta": {
+      "regie": "[warmly, inviting]",
+      "de": "Melde dich jetzt für die Beta an. Wir sehen uns über den Wolken."
+    },
+    "skilltree-intro": {
+      "regie": "[warmly]",
+      "de": "Lass mich dir zeigen, wie deine Welt wächst."
+    },
+    "skilltree-mana": {
+      "regie": "[warmly, explaining]",
+      "de": "Mana ist unsere Magie. Du startest mit tausend – und unten rechts siehst du immer, wie viel du hast."
+    },
+    "skilltree-verdienen": {
+      "regie": "[explaining]",
+      "de": "Am meisten bringen Quests. Dazu kommen Votes, Biomquests und viele kleine Taten: Erz abbauen, kämpfen, angeln."
+    },
+    "skilltree-erz": {
+      "regie": "[mysteriously]",
+      "de": "Tief in den Höhlen der Hauptinseln leuchten Mana-Adern. Bau sie mit der Spitzhacke ab – sie lassen Mana-Kugeln fallen."
+    },
+    "skilltree-pfade": {
+      "regie": "[explaining]",
+      "de": "Acht Kristalle, acht Pfade – und jeder führt Biom für Biom weiter."
+    },
+    "skilltree-biomquest": {
+      "regie": "[encouraging]",
+      "de": "Jedes Biom hat seine Biomquest. Alle auf deiner Insel helfen mit – ist sie geschafft, kannst du das nächste Biom kaufen."
+    },
+    "skilltree-gegenden": {
+      "regie": "[excited]",
+      "de": "Hast du ein neues Biom gekauft, taucht es in der nächsten Gegend auf, die du erkundest."
+    },
+    "skilltree-preise": {
+      "regie": "[reassuring]",
+      "de": "Das erste Biom kostet hundert Mana. Jeder weitere Kauf wird ein kleines bisschen teurer."
+    },
+    "skilltree-outro": {
+      "regie": "[cheerfully]",
+      "de": "Viel Spaß beim Wachsen!"
+    },
+    "bewohner-vertrauen": {
+      "regie": "[warmly]",
+      "de": "Mit jedem Besuch kennen sie dich besser. Erst plaudert ihr, dann handelt ihr – und später vertrauen sie dir Aufgaben an."
+    },
+    "bewohner-handel": {
+      "regie": "[explaining]",
+      "de": "Bezahlt wird mit Ruby oder mit Ware – an ihrer Lagerkiste oder einfach mit „handeln“ im Chat."
+    },
+    "bewohner-ehrlich": {
+      "regie": "[reassuring]",
+      "de": "Und keine Sorge: Bewohner sind keine Spieler – und das sagen sie dir auch ehrlich."
+    },
+    "start-verbinden": {
+      "regie": "[warmly]",
+      "de": "Ob Java oder Bedrock – hier spielt ihr alle zusammen. In der Lobby beginnt deine Reise."
+    },
+    "start-startbiom": {
+      "regie": "[explaining]",
+      "de": "Wähle deinen Kristall. Er bestimmt, mit welchem Biom deine Insel beginnt – die anderen schaltest du später frei."
+    },
+    "start-sonderquest": {
+      "regie": "[curious]",
+      "de": "Auf der Nachbarinsel ist jemand eingezogen. Folge dem Leuchtfeuer und dem Hilfsgeist über die Rankentreppe."
+    },
+    "clans-intro": {
+      "regie": "[warmly, inviting]",
+      "de": "Allein ist schön – zusammen ist besser. Willkommen bei den Clans!"
+    },
+    "clans-gruenden": {
+      "regie": "[excited]",
+      "de": "Name, Kürzel, Farbe und Wappen – deinen Clan gestaltest du ganz selbst."
+    },
+    "clans-menue": {
+      "regie": "[explaining]",
+      "de": "Im Clan-Menü findest du alles: Mitglieder, Clan-Quests und Chat. Und mit einem Klick besuchst du ihre Inseln."
+    },
+    "clans-chat": {
+      "regie": "[explaining]",
+      "de": "Setz eine Raute vor deine Nachricht, und dein ganzer Clan liest mit – egal, auf welchem Server."
+    },
+    "clans-auftrag": {
+      "regie": "[encouraging]",
+      "de": "Jede Woche wartet ein Wochenauftrag. Jeder hilft dort, wo er gerade spielt – und zusammen zählt es noch mehr."
+    },
+    "clans-hilferuf": {
+      "regie": "[warmly]",
+      "de": "Hängst du an einer Biomquest fest? Ruf deinen Clan – wer mit anpackt, bekommt Mana."
+    },
+    "clans-stufen": {
+      "regie": "[excited]",
+      "de": "Mit jedem Wochenauftrag steigt euer Clan auf: zehn Stufen voller Plätze, Wappen und Belohnungen."
+    },
+    "clans-insel": {
+      "regie": "[mysteriously, then excited]",
+      "de": "Und das große Ziel: eine eigene Clan-Insel. Sie ist schon gebaut – und öffnet, sobald sie ihren eigenen Server hat."
+    },
+    "clans-fair": {
+      "regie": "[firmly, warmly]",
+      "de": "Ein Clan bringt Gemeinschaft – keinen gekauften Vorsprung."
+    },
+    "clans-outro": {
+      "regie": "[cheerfully]",
+      "de": "Also: Sucht euch Mitstreiter – und gründet euren Clan!"
+    },
+    "mobplates-intro": {
+      "regie": "[warmly, playfully]",
+      "de": "Stell dir vor, du packst einen Mob einfach ein und nimmst ihn mit. Genau dafür gibt es Mobplates."
+    },
+    "mobplates-scherbe": {
+      "regie": "[explaining]",
+      "de": "Zuerst die Blasse Scherbe: eine beliebige Töpferscherbe in die Mitte, rundum acht Ziegel."
+    },
+    "mobplates-plate": {
+      "regie": "[explaining]",
+      "de": "Dann kommt die Magie dazu: die Blasse Scherbe in die Mitte, rundum acht Mana-Kugeln. Fertig ist deine leere Mobplate."
+    },
+    "mobplates-markieren": {
+      "regie": "[explaining]",
+      "de": "Klick damit auf einen Mob. Pinke Funken zeigen dir: Er ist markiert, und du hast zehn Minuten Zeit."
+    },
+    "mobplates-apfel": {
+      "regie": "[conspiratorially]",
+      "de": "Ist er dir zu stark? Ein Mana-Apfel nimmt ihm die Hälfte seiner Herzen. Aus zwanzig werden zehn."
+    },
+    "mobplates-fangen": {
+      "regie": "[excited]",
+      "de": "Jetzt musst du ihn nur noch besiegen. Die gefüllte Plate liegt direkt in deinem Inventar, die Beute fällt wie immer."
+    },
+    "mobplates-freisetzen": {
+      "regie": "[warmly]",
+      "de": "Ein Klick auf einen Block oder aufs Wasser, und er ist wieder da – wie mit einem Spawn-Ei. Nur Mana und Quests bringt er nicht mehr."
+    },
+    "mobplates-dorf": {
+      "regie": "[amused]",
+      "de": "Dorfbewohner machen es dir leicht: Der erste Klick, und sie sind drin. Zombie-Dorfbewohner musst du aber besiegen."
+    },
+    "mobplates-warpett": {
+      "regie": "[warmly]",
+      "de": "Auch Warpetts passen hinein, ganz ohne Kampf, und ihre Blume reist mit. Setzt du sie wieder ab, verbinden sie sich von selbst."
+    },
+    "mobplates-schief": {
+      "regie": "[reassuring]",
+      "de": "Und wenn etwas schiefgeht? Läuft die Zeit ab oder entwischt dir der Mob, bekommst du die leere Plate zurück."
+    },
+    "mobplates-vielfalt": {
+      "regie": "[excited]",
+      "de": "Hundertsiebenundzwanzig Plates gibt es: elf Katzen, neun Wölfe, sieben Pferde. Nur Bosse und ein paar andere passen in keine."
+    },
+    "mobplates-regeln": {
+      "regie": "[explaining]",
+      "de": "Auf fremden Inseln brauchst du zum Fangen das Recht Tiere, zum Freisetzen das Recht Bauen. Mobplates und Blasse Scherben kannst du im ChestShop handeln."
+    },
+    "mobplates-outro": {
+      "regie": "[cheerfully]",
+      "de": "Viel Spaß beim Einfangen!"
+    },
+    "forestlinge-intro": {
+      "regie": "[warmly, softly]",
+      "de": "Das sind Forestlinge – kleine, scheue Waldelfen. Sie ziehen von Insel zu Insel, dorthin, wo Bäume wachsen."
+    },
+    "forestlinge-finden": {
+      "regie": "[explaining]",
+      "de": "Auf vielen Inseln in deiner Nähe wohnt einer. Welche Art, verrät dir das Biom."
+    },
+    "forestlinge-ansprechen": {
+      "regie": "[warmly]",
+      "de": "Klick ihn an, und er erzählt dir von seinem Segen – und was er kostet."
+    },
+    "forestlinge-apfel": {
+      "regie": "[explaining]",
+      "de": "Für den Segen brauchst du Mana und einen Mana-Apfel: einen Apfel, rundherum vier Mana-Kugeln."
+    },
+    "forestlinge-geben": {
+      "regie": "[conspiratorially]",
+      "de": "Nimm den Apfel in die Hand und klick ihn an. Du musst nicht mal warten, bis er ausgeredet hat."
+    },
+    "forestlinge-hand": {
+      "regie": "[delighted]",
+      "de": "Schau – jetzt hält er deinen Apfel. Und dein Segen wirkt sofort."
+    },
+    "forestlinge-spruenge": {
+      "regie": "[excited]",
+      "de": "Himmelsprung, Windlauf, Luftsprung – damit fliegst du über die Lücke zur nächsten Insel."
+    },
+    "forestlinge-inselsprung": {
+      "regie": "[excited]",
+      "de": "Kirsche und Schwarzeiche bringen dich sogar direkt zu einer fernen Insel."
+    },
+    "forestlinge-regeln": {
+      "regie": "[reassuring]",
+      "de": "Immer nur ein Segen zur Zeit. Und klappt der Kauf nicht, behältst du deinen Apfel."
+    },
+    "forestlinge-mobplate": {
+      "regie": "[playfully]",
+      "de": "Du willst ihn behalten? Klick ihn mit einer leeren Mobplate an – schon steckt er drin."
+    },
+    "forestlinge-absetzen": {
+      "regie": "[warmly]",
+      "de": "Setz ihn auf deiner Insel ab. Wo er landet, ist sein neues Zuhause."
+    },
+    "forestlinge-outro": {
+      "regie": "[cheerfully]",
+      "de": "Halt die Augen offen – irgendwo wartet schon der nächste."
+    }
+  }
+}

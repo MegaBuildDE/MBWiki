@@ -37,7 +37,8 @@ function sampleChannel(kfs, t) {
   return vb.map((v, ax) => v + (va[ax] - v) * alpha);
 }
 
-async function buildModel(d) {
+async function buildModel(d, zeigen) {
+  zeigen = zeigen || [];
   const res = d.resolution || {width: 16, height: 16};
   const loader = new THREE.TextureLoader();
   const textures = await Promise.all((d.textures || []).map(t => new Promise(ok => {
@@ -53,7 +54,7 @@ async function buildModel(d) {
   const bones = {};
   const dirs = ['east', 'west', 'up', 'down', 'south', 'north'];
   function addCube(e, parent, pOrigin) {
-    if (!e || e.visibility === false || (e.type && e.type !== 'cube')) return;
+    if (!e || (e.visibility === false && !zeigen.includes(e.name)) || (e.type && e.type !== 'cube')) return;
     const inf = e.inflate || 0, o = e.origin || [0, 0, 0];
     const s = [0, 1, 2].map(i => Math.max(e.to[i] - e.from[i] + 2 * inf, 0.0001));
     const geo = new THREE.BoxGeometry(s[0], s[1], s[2]);
@@ -64,7 +65,11 @@ async function buildModel(d) {
       const ti = f && (typeof f.texture === 'number' ? f.texture : (f.texture === null ? -1 : 0));
       const t = textures[ti];
       if (!f || !t || !f.uv) { mats.push(invisible); return; }
-      const [u1, v1, u2, v2] = f.uv;
+      // Etwas nach innen ruecken: genau auf der Texelgrenze greift die Kante sonst
+      // den Nachbarpixel ab (helle Striche an den Wuerfelkanten, z. B. Malas Hut).
+      const E = 0.3;
+      const ein = (a, b) => a < b ? [a + E, b - E] : (a > b ? [a - E, b + E] : [a, b]);
+      const [u1, u2] = ein(f.uv[0], f.uv[2]), [v1, v2] = ein(f.uv[1], f.uv[3]);
       const ring = [[u1, v1], [u2, v1], [u2, v2], [u1, v2]];
       const k = ((f.rotation || 0) / 90) % 4;
       const at = (i) => ring[(i - k + 4) % 4];
@@ -86,7 +91,7 @@ async function buildModel(d) {
     obj.position.set(o[0] - pOrigin[0], o[1] - pOrigin[1], o[2] - pOrigin[2]);
     const r = g.rotation || [0, 0, 0];
     obj.rotation.set(deg(r[0]), deg(r[1]), deg(r[2]));
-    if (g.visibility === false || /^hit/i.test(g.name || '')) obj.visible = false;
+    if ((g.visibility === false && !zeigen.includes(g.name)) || /^hit/i.test(g.name || '')) obj.visible = false;
     parent.add(obj);
     bones[node.uuid] = {obj, name: g.name, basePos: obj.position.clone(), baseRot: obj.rotation.clone()};
     for (const c of node.children || []) typeof c === 'string' ? addCube(els[c], obj, o) : addGroup(c, obj, o);
@@ -122,7 +127,7 @@ async function main() {
   renderer.setClearColor(0x000000, 0);
   for (const job of jobs) {
     const d = await (await fetch(job.url)).json();
-    const model = await buildModel(d);
+    const model = await buildModel(d, job.zeigen);
     const scene = new THREE.Scene();
     scene.add(new THREE.AmbientLight(0xffffff, 0.78));
     const sun = new THREE.DirectionalLight(0xffffff, 0.5); sun.position.set(14, 30, -24); scene.add(sun);

@@ -1,0 +1,1439 @@
+{
+  "trailer-nichts": {
+    "de": {
+      "ms": 3010,
+      "text": "Man hat uns gesagt, hier oben gibt es nichts mehr.",
+      "words": [
+        50,
+        290,
+        450,
+        610,
+        1330,
+        1570,
+        1810,
+        2050,
+        2210,
+        2530
+      ],
+      "hash": "b9d64df1a525abf3"
+    }
+  },
+  "trailer-geirrt": {
+    "de": {
+      "ms": 2030,
+      "text": "Man hat sich geirrt.",
+      "words": [
+        370,
+        730,
+        930,
+        1210
+      ],
+      "hash": "5707168f41dfed9c"
+    }
+  },
+  "trailer-allein": {
+    "de": {
+      "ms": 3580,
+      "text": "Und glaub mir: Allein bist du hier oben nie.",
+      "words": [
+        160,
+        480,
+        880,
+        1520,
+        2080,
+        2320,
+        2453,
+        2640,
+        3040
+      ],
+      "hash": "f063df1d6236650b"
+    }
+  },
+  "trailer-bereit": {
+    "de": {
+      "ms": 2850,
+      "text": "Mach dich bereit. Es geht bald los.",
+      "words": [
+        50,
+        330,
+        690,
+        1410,
+        1650,
+        1850,
+        2130
+      ],
+      "hash": "6f2fb7a949ebbe19"
+    }
+  },
+  "trailer-inseln": {
+    "de": {
+      "ms": 5460,
+      "text": "Inseln, so weit das Auge reicht – und jede wartet nur auf dich.",
+      "words": [
+        20,
+        1140,
+        1460,
+        1900,
+        2100,
+        2500,
+        3300,
+        3460,
+        3620,
+        4020,
+        4500,
+        4740,
+        4980
+      ],
+      "hash": "0beeb860420043b2"
+    }
+  },
+  "trailer-server": {
+    "de": {
+      "ms": 3250,
+      "text": "Deine Insel – auf deinem eigenen Server.",
+      "words": [
+        80,
+        560,
+        1280,
+        1440,
+        1560,
+        2000,
+        2480
+      ],
+      "hash": "fcba490cebd20203"
+    }
+  },
+  "trailer-waechst": {
+    "de": {
+      "ms": 2940,
+      "text": "Und mit jedem Schritt wächst deine Welt.",
+      "words": [
+        137,
+        240,
+        560,
+        1040,
+        1520,
+        1880,
+        2240
+      ],
+      "hash": "1aeedd212d0a3404"
+    }
+  },
+  "trailer-biome": {
+    "de": {
+      "ms": 3160,
+      "text": "Sammle Mana. Schalte neue Biome frei.",
+      "words": [
+        200,
+        600,
+        1400,
+        1800,
+        2120,
+        2600
+      ],
+      "hash": "4402c1c4ddc2fbfd"
+    }
+  },
+  "trailer-doerfer": {
+    "de": {
+      "ms": 4950,
+      "text": "Dörfer, Ruinen, tiefe Höhlen – entdecke sie alle.",
+      "words": [
+        60,
+        1100,
+        2060,
+        2580,
+        3500,
+        3713,
+        4140,
+        4380
+      ],
+      "hash": "c570ad5fbfb46a50"
+    }
+  },
+  "trailer-zusammen": {
+    "de": {
+      "ms": 4040,
+      "text": "Java oder Bedrock? Egal – wir spielen zusammen.",
+      "words": [
+        120,
+        680,
+        1000,
+        1880,
+        2680,
+        2733,
+        2920,
+        3320
+      ],
+      "hash": "a618d3d2d4f332da"
+    }
+  },
+  "trailer-beta": {
+    "de": {
+      "ms": 4030,
+      "text": "Melde dich jetzt für die Beta an. Wir sehen uns über den Wolken.",
+      "words": [
+        80,
+        400,
+        640,
+        1000,
+        1120,
+        1360,
+        1600,
+        2240,
+        2480,
+        2720,
+        2960,
+        3200,
+        3320
+      ],
+      "hash": "3709b6b1f11007e8"
+    }
+  },
+  "trailer-handeln": {
+    "de": {
+      "ms": 3870,
+      "text": "Sie reden mit dir, handeln und nehmen Aufträge an.",
+      "words": [
+        120,
+        360,
+        760,
+        1040,
+        1560,
+        2200,
+        2600,
+        2840,
+        3400
+      ],
+      "hash": "48faf9d37f9afb85"
+    }
+  },
+  "skilltree-intro": {
+    "de": {
+      "ms": 3040,
+      "text": "Lass mich dir zeigen, wie deine Welt wächst.",
+      "words": [
+        90,
+        330,
+        570,
+        730,
+        1290,
+        1530,
+        2010,
+        2330
+      ],
+      "hash": "f42e37fd4e51c8d0"
+    }
+  },
+  "skilltree-mana": {
+    "de": {
+      "ms": 6580,
+      "text": "Mana ist unsere Magie. Du startest mit tausend – und unten rechts siehst du immer, wie viel du hast.",
+      "words": [
+        180,
+        660,
+        900,
+        1380,
+        2180,
+        2460,
+        2820,
+        2980,
+        3780,
+        3940,
+        4100,
+        4420,
+        4780,
+        5060,
+        5220,
+        5540,
+        5740,
+        5940,
+        6100
+      ],
+      "hash": "90188d0ec1127a21"
+    }
+  },
+  "skilltree-verdienen": {
+    "de": {
+      "ms": 8580,
+      "text": "Am meisten bringen Quests. Dazu kommen Votes, Biomquests und viele kleine Taten: Erz abbauen, kämpfen, angeln.",
+      "words": [
+        20,
+        260,
+        740,
+        1300,
+        2020,
+        2420,
+        2820,
+        3500,
+        4460,
+        4660,
+        5060,
+        5380,
+        6220,
+        6540,
+        7180,
+        8100
+      ],
+      "hash": "40175e7b4e632061"
+    }
+  },
+  "skilltree-erz": {
+    "de": {
+      "ms": 7740,
+      "text": "Tief in den Höhlen der Hauptinseln leuchten Mana-Adern. Bau sie mit der Spitzhacke ab – sie lassen Mana-Kugeln fallen.",
+      "words": [
+        60,
+        460,
+        660,
+        860,
+        1260,
+        1420,
+        2220,
+        2900,
+        4140,
+        4380,
+        4500,
+        4620,
+        4780,
+        5340,
+        5900,
+        6007,
+        6220,
+        6540,
+        7180
+      ],
+      "hash": "1474dfc0fb7c14a9"
+    }
+  },
+  "skilltree-pfade": {
+    "de": {
+      "ms": 5350,
+      "text": "Acht Kristalle, acht Pfade – und jeder führt Biom für Biom weiter.",
+      "words": [
+        40,
+        360,
+        1320,
+        1640,
+        2520,
+        2627,
+        2840,
+        3240,
+        3560,
+        4040,
+        4240,
+        4680
+      ],
+      "hash": "87959dce9a6afd98"
+    }
+  },
+  "skilltree-biomquest": {
+    "de": {
+      "ms": 7520,
+      "text": "Jedes Biom hat seine Biomquest. Alle auf deiner Insel helfen mit – ist sie geschafft, kannst du das nächste Biom kaufen.",
+      "words": [
+        160,
+        560,
+        960,
+        1160,
+        1480,
+        2800,
+        3040,
+        3160,
+        3440,
+        3840,
+        4160,
+        4640,
+        4747,
+        4880,
+        5080,
+        5640,
+        5880,
+        6040,
+        6240,
+        6667,
+        6960
+      ],
+      "hash": "a2c276ac9e3d7cef"
+    }
+  },
+  "skilltree-gegenden": {
+    "de": {
+      "ms": 4720,
+      "text": "Hast du ein neues Biom gekauft, taucht es in der nächsten Gegend auf, die du erkundest.",
+      "words": [
+        80,
+        280,
+        400,
+        600,
+        960,
+        1360,
+        2080,
+        2400,
+        2520,
+        2640,
+        2760,
+        3160,
+        3520,
+        3733,
+        3840,
+        4000
+      ],
+      "hash": "3513cfcc2bf9b5a4"
+    }
+  },
+  "skilltree-preise": {
+    "de": {
+      "ms": 6150,
+      "text": "Das erste Biom kostet hundert Mana. Jeder weitere Kauf wird ein kleines bisschen teurer.",
+      "words": [
+        30,
+        270,
+        670,
+        1070,
+        1550,
+        2030,
+        2910,
+        3310,
+        3710,
+        4110,
+        4390,
+        4630,
+        5070,
+        5470
+      ],
+      "hash": "81f2b88d96dd823b"
+    }
+  },
+  "skilltree-outro": {
+    "de": {
+      "ms": 1880,
+      "text": "Viel Spaß beim Wachsen!",
+      "words": [
+        130,
+        450,
+        850,
+        1090
+      ],
+      "hash": "b483c7ac9001d71e"
+    }
+  },
+  "bewohner-vertrauen": {
+    "de": {
+      "ms": 7760,
+      "text": "Mit jedem Besuch kennen sie dich besser. Erst plaudert ihr, dann handelt ihr – und später vertrauen sie dir Aufgaben an.",
+      "words": [
+        80,
+        320,
+        760,
+        1200,
+        1440,
+        1600,
+        1800,
+        2640,
+        2960,
+        3440,
+        3920,
+        4160,
+        4560,
+        5200,
+        5307,
+        5440,
+        6000,
+        6480,
+        6640,
+        6840,
+        7400
+      ],
+      "hash": "5a87ec008c754b53"
+    }
+  },
+  "bewohner-handel": {
+    "de": {
+      "ms": 6410,
+      "text": "Bezahlt wird mit Ruby oder mit Ware – an ihrer Lagerkiste oder einfach mit „handeln“ im Chat.",
+      "words": [
+        10,
+        543,
+        730,
+        890,
+        1530,
+        1770,
+        1930,
+        2650,
+        2757,
+        2850,
+        3090,
+        4010,
+        4410,
+        4730,
+        5050,
+        5690,
+        5850
+      ],
+      "hash": "1d7ffbd6dd33dbee"
+    }
+  },
+  "bewohner-ehrlich": {
+    "de": {
+      "ms": 5140,
+      "text": "Und keine Sorge: Bewohner sind keine Spieler – und das sagen sie dir auch ehrlich.",
+      "words": [
+        20,
+        260,
+        740,
+        1540,
+        1980,
+        2260,
+        2580,
+        3380,
+        3487,
+        3620,
+        3780,
+        4020,
+        4180,
+        4313,
+        4500
+      ],
+      "hash": "6d3c6927f0edf2d4"
+    }
+  },
+  "start-verbinden": {
+    "de": {
+      "ms": 6260,
+      "text": "Ob Java oder Bedrock – hier spielt ihr alle zusammen. In der Lobby beginnt deine Reise.",
+      "words": [
+        20,
+        340,
+        980,
+        1300,
+        2100,
+        2180,
+        2420,
+        2740,
+        3140,
+        3340,
+        4260,
+        4380,
+        4500,
+        4900,
+        5340,
+        5620
+      ],
+      "hash": "6cead041b7d23671"
+    }
+  },
+  "start-startbiom": {
+    "de": {
+      "ms": 6990,
+      "text": "Wähle deinen Kristall. Er bestimmt, mit welchem Biom deine Insel beginnt – die anderen schaltest du später frei.",
+      "words": [
+        110,
+        470,
+        910,
+        1790,
+        1950,
+        2590,
+        2750,
+        3150,
+        3510,
+        3790,
+        4150,
+        4830,
+        4937,
+        5150,
+        5550,
+        5950,
+        6070,
+        6430
+      ],
+      "hash": "c08a22476ab5c2b3"
+    }
+  },
+  "start-sonderquest": {
+    "de": {
+      "ms": 6600,
+      "text": "Auf der Nachbarinsel ist jemand eingezogen. Folge dem Leuchtfeuer und dem Hilfsgeist über die Rankentreppe.",
+      "words": [
+        40,
+        280,
+        440,
+        1160,
+        1320,
+        1640,
+        2920,
+        3320,
+        3480,
+        4280,
+        4440,
+        4600,
+        5320,
+        5520,
+        5640
+      ],
+      "hash": "386d3b26754825e9"
+    }
+  },
+  "clans-intro": {
+    "de": {
+      "ms": 5250,
+      "text": "Allein ist schön – zusammen ist besser. Willkommen bei den Clans!",
+      "words": [
+        364,
+        680,
+        880,
+        1680,
+        1760,
+        2400,
+        2680,
+        3520,
+        4080,
+        4280,
+        4480
+      ],
+      "hash": "dae862cfe38b46ba"
+    }
+  },
+  "clans-gruenden": {
+    "de": {
+      "ms": 5450,
+      "text": "Name, Kürzel, Farbe und Wappen – deinen Clan gestaltest du ganz selbst.",
+      "words": [
+        100,
+        820,
+        1460,
+        1940,
+        2100,
+        2740,
+        2820,
+        3220,
+        3620,
+        4220,
+        4447,
+        4780
+      ],
+      "hash": "6fc79c2789c5cd10"
+    }
+  },
+  "clans-menue": {
+    "de": {
+      "ms": 7360,
+      "text": "Im Clan-Menü findest du alles: Mitglieder, Clan-Quests und Chat. Und mit einem Klick besuchst du ihre Inseln.",
+      "words": [
+        137,
+        240,
+        880,
+        1240,
+        1440,
+        2160,
+        3000,
+        3920,
+        4080,
+        4880,
+        5080,
+        5280,
+        5600,
+        6040,
+        6360,
+        6480,
+        6720
+      ],
+      "hash": "8f367d35c270f9d4"
+    }
+  },
+  "clans-chat": {
+    "de": {
+      "ms": 5760,
+      "text": "Setz eine Raute vor deine Nachricht, und dein ganzer Clan liest mit – egal, auf welchem Server.",
+      "words": [
+        130,
+        410,
+        690,
+        1090,
+        1210,
+        1530,
+        2210,
+        2330,
+        2610,
+        3010,
+        3330,
+        3690,
+        4050,
+        4370,
+        4637,
+        4770,
+        5090
+      ],
+      "hash": "ba86d2cdeff4db1f"
+    }
+  },
+  "clans-auftrag": {
+    "de": {
+      "ms": 7200,
+      "text": "Jede Woche wartet ein Wochenauftrag. Jeder hilft dort, wo er gerade spielt – und zusammen zählt es noch mehr.",
+      "words": [
+        160,
+        480,
+        800,
+        1280,
+        1440,
+        2800,
+        3120,
+        3400,
+        3760,
+        3880,
+        4000,
+        4400,
+        5120,
+        5227,
+        5320,
+        5920,
+        6240,
+        6480,
+        6760
+      ],
+      "hash": "d849a8b9cf28dbbf"
+    }
+  },
+  "clans-hilferuf": {
+    "de": {
+      "ms": 5680,
+      "text": "Hängst du an einer Biomquest fest? Ruf deinen Clan – wer mit anpackt, bekommt Mana.",
+      "words": [
+        80,
+        360,
+        480,
+        600,
+        880,
+        1600,
+        2320,
+        2600,
+        2960,
+        3600,
+        3707,
+        3880,
+        4120,
+        4720,
+        5240
+      ],
+      "hash": "e4c4cca55f110342"
+    }
+  },
+  "clans-stufen": {
+    "de": {
+      "ms": 6860,
+      "text": "Mit jedem Wochenauftrag steigt euer Clan auf: zehn Stufen voller Plätze, Wappen und Belohnungen.",
+      "words": [
+        186,
+        300,
+        740,
+        1580,
+        1860,
+        2140,
+        2460,
+        3180,
+        3500,
+        4140,
+        4500,
+        5180,
+        5660,
+        5820
+      ],
+      "hash": "112faf6100cab8ef"
+    }
+  },
+  "clans-insel": {
+    "de": {
+      "ms": 7920,
+      "text": "Und das große Ziel: eine eigene Clan-Insel. Sie ist schon gebaut – und öffnet, sobald sie ihren eigenen Server hat.",
+      "words": [
+        80,
+        280,
+        480,
+        1040,
+        1840,
+        2320,
+        2840,
+        4000,
+        4160,
+        4373,
+        4560,
+        5180,
+        5300,
+        5440,
+        5920,
+        6360,
+        6480,
+        6800,
+        7200,
+        7640
+      ],
+      "hash": "d357fb5bb31cc3bb"
+    }
+  },
+  "clans-fair": {
+    "de": {
+      "ms": 4110,
+      "text": "Ein Clan bringt Gemeinschaft – keinen gekauften Vorsprung.",
+      "words": [
+        80,
+        320,
+        720,
+        1000,
+        2160,
+        2240,
+        2720,
+        3280
+      ],
+      "hash": "0ba3f7f0da0f703d"
+    }
+  },
+  "clans-outro": {
+    "de": {
+      "ms": 4290,
+      "text": "Also: Sucht euch Mitstreiter – und gründet euren Clan!",
+      "words": [
+        40,
+        1000,
+        1360,
+        1680,
+        2520,
+        2680,
+        2840,
+        3280,
+        3640
+      ],
+      "hash": "b9781be628ead850"
+    }
+  },
+  "mobplates-intro": {
+    "de": {
+      "ms": 6480,
+      "text": "Stell dir vor, du packst einen Mob einfach ein und nimmst ihn mit. Genau dafür gibt es Mobplates.",
+      "words": [
+        240,
+        600,
+        840,
+        1040,
+        1280,
+        1600,
+        1920,
+        2160,
+        2640,
+        2880,
+        3013,
+        3280,
+        3480,
+        4080,
+        4747,
+        5200,
+        5480,
+        5720
+      ],
+      "hash": "4f07ef4962fa80b9"
+    }
+  },
+  "mobplates-scherbe": {
+    "de": {
+      "ms": 6450,
+      "text": "Zuerst die Blasse Scherbe: eine beliebige Töpferscherbe in die Mitte, rundum acht Ziegel.",
+      "words": [
+        50,
+        690,
+        890,
+        1250,
+        2170,
+        2490,
+        2930,
+        3730,
+        3850,
+        3970,
+        4690,
+        5410,
+        5810
+      ],
+      "hash": "86959b1687893fc4"
+    }
+  },
+  "mobplates-plate": {
+    "de": {
+      "ms": 8040,
+      "text": "Dann kommt die Magie dazu: die Blasse Scherbe in die Mitte, rundum acht Mana-Kugeln. Fertig ist deine leere Mobplate.",
+      "words": [
+        40,
+        360,
+        600,
+        800,
+        1040,
+        1880,
+        2120,
+        2520,
+        2880,
+        3000,
+        3160,
+        3800,
+        4440,
+        4760,
+        5880,
+        6440,
+        6560,
+        6920,
+        7240
+      ],
+      "hash": "1f2da37abb6f5aac"
+    }
+  },
+  "mobplates-markieren": {
+    "de": {
+      "ms": 6080,
+      "text": "Klick damit auf einen Mob. Pinke Funken zeigen dir: Er ist markiert, und du hast zehn Minuten Zeit.",
+      "words": [
+        80,
+        320,
+        640,
+        800,
+        1040,
+        1680,
+        2000,
+        2400,
+        2840,
+        3360,
+        3520,
+        3680,
+        4360,
+        4480,
+        4640,
+        4880,
+        5120,
+        5520
+      ],
+      "hash": "608909ce907422c9"
+    }
+  },
+  "mobplates-apfel": {
+    "de": {
+      "ms": 6600,
+      "text": "Ist er dir zu stark? Ein Mana-Apfel nimmt ihm die Hälfte seiner Herzen. Aus zwanzig werden zehn.",
+      "words": [
+        40,
+        240,
+        360,
+        520,
+        680,
+        1560,
+        1800,
+        2600,
+        2800,
+        3000,
+        3160,
+        3560,
+        3920,
+        4680,
+        5000,
+        5640,
+        6040
+      ],
+      "hash": "d4c824e9682b3901"
+    }
+  },
+  "mobplates-fangen": {
+    "de": {
+      "ms": 7120,
+      "text": "Jetzt musst du ihn nur noch besiegen. Die gefüllte Plate liegt direkt in deinem Inventar, die Beute fällt wie immer.",
+      "words": [
+        160,
+        480,
+        680,
+        840,
+        1000,
+        1280,
+        1480,
+        2320,
+        2560,
+        3160,
+        3400,
+        3760,
+        4160,
+        4280,
+        4560,
+        5400,
+        5600,
+        6080,
+        6440,
+        6720
+      ],
+      "hash": "c72e4797e68993a7"
+    }
+  },
+  "mobplates-freisetzen": {
+    "de": {
+      "ms": 8130,
+      "text": "Ein Klick auf einen Block oder aufs Wasser, und er ist wieder da – wie mit einem Spawn-Ei. Nur Mana und Quests bringt er nicht mehr.",
+      "words": [
+        40,
+        280,
+        600,
+        760,
+        1000,
+        1400,
+        1640,
+        1880,
+        2440,
+        2640,
+        2760,
+        2920,
+        3200,
+        3640,
+        3720,
+        3960,
+        4080,
+        4360,
+        5600,
+        5880,
+        6360,
+        6520,
+        7080,
+        7320,
+        7453,
+        7640
+      ],
+      "hash": "c015c3cf36fcee7c"
+    }
+  },
+  "mobplates-dorf": {
+    "de": {
+      "ms": 7630,
+      "text": "Dorfbewohner machen es dir leicht: Der erste Klick, und sie sind drin. Zombie-Dorfbewohner musst du aber besiegen.",
+      "words": [
+        240,
+        1120,
+        1440,
+        1600,
+        1760,
+        2520,
+        2680,
+        3040,
+        3600,
+        3760,
+        3893,
+        4080,
+        4960,
+        6200,
+        6440,
+        6560,
+        6840
+      ],
+      "hash": "4ec997877f533411"
+    }
+  },
+  "mobplates-schief": {
+    "de": {
+      "ms": 6440,
+      "text": "Und wenn etwas schiefgeht? Läuft die Zeit ab oder entwischt dir der Mob, bekommst du die leere Plate zurück.",
+      "words": [
+        0,
+        200,
+        400,
+        720,
+        1760,
+        2080,
+        2240,
+        2560,
+        2920,
+        3120,
+        3520,
+        3640,
+        3760,
+        4400,
+        4760,
+        4880,
+        5040,
+        5360,
+        5760
+      ],
+      "hash": "0712825fda1c375a"
+    }
+  },
+  "mobplates-vielfalt": {
+    "de": {
+      "ms": 8800,
+      "text": "Hundertsiebenundzwanzig Plates gibt es: elf Katzen, neun Wölfe, sieben Pferde. Nur Bosse und ein paar andere passen in keine.",
+      "words": [
+        80,
+        1520,
+        1880,
+        2160,
+        2720,
+        2960,
+        3680,
+        4000,
+        4720,
+        5120,
+        6040,
+        6320,
+        6720,
+        6880,
+        7080,
+        7320,
+        7760,
+        8080,
+        8240
+      ],
+      "hash": "b0ed6a53ce2960bd"
+    }
+  },
+  "mobplates-regeln": {
+    "de": {
+      "ms": 9800,
+      "text": "Auf fremden Inseln brauchst du zum Fangen das Recht Tiere, zum Freisetzen das Recht Bauen. Mobplates und Blasse Scherben kannst du im ChestShop handeln.",
+      "words": [
+        40,
+        360,
+        760,
+        1320,
+        1640,
+        1800,
+        2000,
+        2360,
+        2600,
+        2960,
+        3760,
+        3960,
+        4760,
+        4960,
+        5240,
+        6200,
+        6920,
+        7080,
+        7440,
+        8040,
+        8320,
+        8440,
+        8560,
+        9160
+      ],
+      "hash": "a3a12334f8937011"
+    }
+  },
+  "mobplates-outro": {
+    "de": {
+      "ms": 1960,
+      "text": "Viel Spaß beim Einfangen!",
+      "words": [
+        130,
+        450,
+        810,
+        1050
+      ],
+      "hash": "ed0e8d34a67daceb"
+    }
+  },
+  "mobplates-warpett": {
+    "de": {
+      "ms": 7860,
+      "text": "Auch Warpetts passen hinein, ganz ohne Kampf, und ihre Blume reist mit. Setzt du sie wieder ab, verbinden sie sich von selbst.",
+      "words": [
+        20,
+        340,
+        900,
+        1140,
+        1860,
+        2260,
+        2580,
+        3220,
+        3340,
+        3580,
+        3900,
+        4300,
+        4980,
+        5260,
+        5380,
+        5540,
+        5820,
+        6260,
+        6740,
+        6873,
+        7100,
+        7300
+      ],
+      "hash": "96acf5d0fa517469"
+    }
+  },
+  "forestlinge-intro": {
+    "de": {
+      "ms": 8220,
+      "text": "Das sind Forestlinge – kleine, scheue Waldelfen. Sie ziehen von Insel zu Insel, dorthin, wo Bäume wachsen.",
+      "words": [
+        70,
+        310,
+        550,
+        1830,
+        1910,
+        2550,
+        2950,
+        4230,
+        4470,
+        4790,
+        5110,
+        5510,
+        5670,
+        6390,
+        6950,
+        7190,
+        7670
+      ],
+      "hash": "844f5938c7b65761"
+    }
+  },
+  "forestlinge-finden": {
+    "de": {
+      "ms": 5440,
+      "text": "Auf vielen Inseln in deiner Nähe wohnt einer. Welche Art, verrät dir das Biom.",
+      "words": [
+        206,
+        320,
+        720,
+        1280,
+        1400,
+        1680,
+        2000,
+        2320,
+        3120,
+        3600,
+        4160,
+        4520,
+        4680,
+        4840
+      ],
+      "hash": "a9db6c41653062ea"
+    }
+  },
+  "forestlinge-ansprechen": {
+    "de": {
+      "ms": 4640,
+      "text": "Klick ihn an, und er erzählt dir von seinem Segen – und was er kostet.",
+      "words": [
+        80,
+        320,
+        560,
+        1040,
+        1240,
+        1400,
+        1840,
+        2000,
+        2160,
+        2520,
+        3147,
+        3200,
+        3680,
+        3840,
+        3960
+      ],
+      "hash": "7a3388d1e4b61e9d"
+    }
+  },
+  "forestlinge-apfel": {
+    "de": {
+      "ms": 7010,
+      "text": "Für den Segen brauchst du Mana und einen Mana-Apfel: einen Apfel, rundherum vier Mana-Kugeln.",
+      "words": [
+        70,
+        230,
+        510,
+        790,
+        1190,
+        1510,
+        1910,
+        2230,
+        2550,
+        3750,
+        4070,
+        4790,
+        5590,
+        5910
+      ],
+      "hash": "829836a356336bac"
+    }
+  },
+  "forestlinge-geben": {
+    "de": {
+      "ms": 5550,
+      "text": "Nimm den Apfel in die Hand und klick ihn an. Du musst nicht mal warten, bis er ausgeredet hat.",
+      "words": [
+        110,
+        350,
+        590,
+        950,
+        1070,
+        1230,
+        1550,
+        1790,
+        2110,
+        2270,
+        2910,
+        3110,
+        3350,
+        3670,
+        3830,
+        4190,
+        4350,
+        4550,
+        5190
+      ],
+      "hash": "5b8759f7e8bdfeed"
+    }
+  },
+  "forestlinge-hand": {
+    "de": {
+      "ms": 5210,
+      "text": "Schau – jetzt hält er deinen Apfel. Und dein Segen wirkt sofort.",
+      "words": [
+        240,
+        960,
+        1040,
+        1440,
+        1680,
+        1800,
+        2160,
+        3040,
+        3160,
+        3440,
+        3920,
+        4360
+      ],
+      "hash": "c5d6a0e3480c269c"
+    }
+  },
+  "forestlinge-spruenge": {
+    "de": {
+      "ms": 5600,
+      "text": "Himmelsprung, Windlauf, Luftsprung – damit fliegst du über die Lücke zur nächsten Insel.",
+      "words": [
+        80,
+        1040,
+        1840,
+        2880,
+        3040,
+        3320,
+        3600,
+        3760,
+        3880,
+        4000,
+        4320,
+        4520,
+        4960
+      ],
+      "hash": "691a2fa2a56e8f84"
+    }
+  },
+  "forestlinge-inselsprung": {
+    "de": {
+      "ms": 4390,
+      "text": "Kirsche und Schwarzeiche bringen dich sogar direkt zu einer fernen Insel.",
+      "words": [
+        80,
+        480,
+        680,
+        1520,
+        1813,
+        1960,
+        2400,
+        2800,
+        2987,
+        3280,
+        3680
+      ],
+      "hash": "d0e75163c8c85494"
+    }
+  },
+  "forestlinge-regeln": {
+    "de": {
+      "ms": 4910,
+      "text": "Immer nur ein Segen zur Zeit. Und klappt der Kauf nicht, behältst du deinen Apfel.",
+      "words": [
+        40,
+        360,
+        600,
+        760,
+        1120,
+        1320,
+        2040,
+        2240,
+        2520,
+        2640,
+        2920,
+        3520,
+        3880,
+        4000,
+        4280
+      ],
+      "hash": "70b25535592ea8ce"
+    }
+  },
+  "forestlinge-mobplate": {
+    "de": {
+      "ms": 5200,
+      "text": "Du willst ihn behalten? Klick ihn mit einer leeren Mobplate an – schon steckt er drin.",
+      "words": [
+        130,
+        290,
+        690,
+        850,
+        1890,
+        2130,
+        2290,
+        2450,
+        2650,
+        3050,
+        3490,
+        3890,
+        3970,
+        4290,
+        4530,
+        4650
+      ],
+      "hash": "c159daab2b15f77c"
+    }
+  },
+  "forestlinge-absetzen": {
+    "de": {
+      "ms": 4570,
+      "text": "Setz ihn auf deiner Insel ab. Wo er landet, ist sein neues Zuhause.",
+      "words": [
+        90,
+        410,
+        570,
+        690,
+        970,
+        1370,
+        2010,
+        2170,
+        2370,
+        3010,
+        3250,
+        3410,
+        3770
+      ],
+      "hash": "3d574fe07d5bb086"
+    }
+  },
+  "forestlinge-outro": {
+    "de": {
+      "ms": 3510,
+      "text": "Halt die Augen offen – irgendwo wartet schon der nächste.",
+      "words": [
+        100,
+        340,
+        500,
+        820,
+        1460,
+        1567,
+        2100,
+        2460,
+        2660,
+        2820
+      ],
+      "hash": "5a2692c979dd425b"
+    }
+  }
+}

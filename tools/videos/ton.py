@@ -5,15 +5,17 @@ Alles wird hier erzeugt oder aus dem Pool gelesen - keine fremden Aufnahmen.
 - Musik: ruhiges Stueck aus Flaechen, Spieluhr-Arpeggio und Bass, je Film
   gleich gebaut, nur Tonart und Tempo wechseln (Film.musik). Unter Malas
   Stimme wird sie leiser.
-- Effekte 'sfx:<name>': whoosh, pop, chime, klick, funkeln, tippen - synthetisch.
+- Effekte 'sfx:<name>': whoosh, pop, chime, klick, funkeln, tippen, erfolg, boom, swell, herz - synthetisch.
 - Stimme 'mala:<name>': Malas Aufnahmen aus dem Pool (assets/sounds/mala/<sprache>/),
   Text und Wortzeiten aus MBSkyManager/src/main/resources/story/voice-lines.yml.
   Daraus entstehen auch die Untertitel im Bild (Film.untertitel).
 - Spielgeraeusche 'pool:<pfad>': assets/sounds/<pfad>.ogg im Pool, z. B. 'pool:warpett/eat_1'.
+- Fertige Geraeusche 'datei:<pfad>': Audiodatei relativ zu tools/videos, z. B. 'datei:musik/trailer-leere.mp3'.
 
 Ergebnis sind zwei WAV-Dateien (Musik, Rest); bauen.py mischt sie mit ffmpeg.
 """
 import array
+import functools
 import math
 import os
 import random
@@ -51,7 +53,27 @@ def stimmen(sprache):
                 woerter = [int(w) for w in feld["words"].strip("[]").split(",") if w.strip()]
                 out[schluessel] = (int(feld["ms"]), text, woerter)
                 feld = {}
+    # Zeilen nur fuer Wiki-Filme (z. B. den Trailer), aufgenommen mit trailer_stimme.py
+    for name, sprachen in _wiki_stimmen().items():
+        if sprache in sprachen:
+            e = sprachen[sprache]
+            out[name] = (int(e["ms"]), e["text"], [int(w) for w in e["words"]])
     return out
+
+
+WIKI_STIMMEN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stimmen")
+
+
+def _wiki_stimmen():
+    import json
+    pfad = os.path.join(WIKI_STIMMEN, "manifest.json")
+    return json.load(open(pfad, encoding="utf-8")) if os.path.isfile(pfad) else {}
+
+
+def stimm_pfad(sprache, name):
+    """OGG einer Mala-Zeile: erst die Wiki-eigenen Aufnahmen, sonst der Pool."""
+    eigen = os.path.join(WIKI_STIMMEN, sprache, name + ".ogg")
+    return eigen if os.path.isfile(eigen) else os.path.join(POOL, "assets", "sounds", "mala", sprache, name + ".ogg")
 
 
 def stuecke(text, woerter, ms, maxlen=58):
@@ -163,15 +185,190 @@ FOLGE = [
 MUSTER = [0, 1, 2, 3, 2, 1, 4, 2]  # Arpeggio-Reihenfolge durch die Akkordtoene (Achtel)
 
 
-def musik(dauer, tonart="D", tempo=84, stimmung="hell"):
+def kick():
+    """Tonaler Kick: kurzer, schnell fallender Sinus (kein Rauschen)."""
+    d = .45
+    out, ph = [], 0.0
+    for k in range(int(d * SR)):
+        t = k / SR
+        ph += 2 * math.pi * (46 + 110 * math.exp(-t / .035)) / SR
+        out.append(math.sin(ph) * math.exp(-t / .16) * min(1, t / .002))
+    return out
+
+
+# ── Feurig (Trailer) ────────────────────────────────────────────────────────
+# d-Moll, i - VI - III - VII (Dm, Bb, F, C), ein Akkord je Takt. Alles tonal,
+# kein Rauschen: Taiko und Toms sind fallende Sinus, Streicher und Blaeser
+# additive Saegezaehne.
+FOLGE_FEURIG = [(0, (0, 3, 7)), (-4, (0, 4, 7)), (3, (0, 4, 7)), (-2, (0, 4, 7))]
+# Ostinato in Sechzehnteln: Stufen relativ zum Akkordgrundton (12 = Oktave, 7 = Quinte)
+OSTINATO = [0, 0, 12, 0, 7, 0, 12, 0, 0, 0, 12, 0, 7, 12, 7, 0]
+# Taiko je Takt in Sechzehnteln (Position, Lautstaerke) - der typische Trailer-Galopp
+TAIKO = [(0, 1.0), (3, .55), (6, .7), (8, .9), (11, .55), (12, .75), (14, .6)]
+
+
+@functools.lru_cache(maxsize=None)
+def saege(midi, dauer, anschlag, abklang, obertoene=9, verstimmt=0.0):
+    """Saegezahn aus Obertoenen mit Huellkurve (Anschlag, exponentieller Abklang)."""
+    hz = midi_hz(midi)
+    n = int(dauer * SR)
+    ws = [2 * math.pi * hz * h / SR for h in range(1, obertoene + 1) if hz * h < 9000]
+    w2 = 2 * math.pi * hz * (1 + verstimmt) / SR
+    out = [0.0] * n
+    for k in range(n):
+        t = k / SR
+        e = min(1.0, t / anschlag) * math.exp(-t / abklang) * min(1.0, (dauer - t) / .01)
+        v = 0.0
+        for h, w in enumerate(ws, 1):
+            v += math.sin(w * k) / h
+        if verstimmt:
+            v = .65 * v + .35 * math.sin(w2 * k)
+        out[k] = e * v * .5
+    return tuple(out)
+
+
+@functools.lru_cache(maxsize=None)
+def trommel(hz_hoch, hz_tief, abklang, dauer=.9):
+    """Taiko/Tom: schnell fallender Sinus mit etwas Oberton fuer den Anschlag."""
+    out, ph = [], 0.0
+    for k in range(int(dauer * SR)):
+        t = k / SR
+        ph += 2 * math.pi * (hz_tief + (hz_hoch - hz_tief) * math.exp(-t / .025)) / SR
+        out.append((math.sin(ph) + .3 * math.sin(2.01 * ph) * math.exp(-t / .03))
+                   * math.exp(-t / abklang) * min(1, t / .002))
+    return tuple(out)
+
+
+def musik_feurig(dauer, tonart="D", tempo=120, ab=0.0, ende=None):
+    """Treibendes Trailer-Stueck: Taiko-Galopp, Streicher-Ostinato, Blaeser-Stoesse, Bass.
+
+    Steigerung: erste zwei Takte Trommeln und Streicher, dann Blaeser dazu,
+    in den letzten zwei Takten vor ende ein Tom-Wirbel."""
+    n = int((dauer + 3) * SR)
+    stereo = ([0.0] * n, [0.0] * n)
+    grund = TONARTEN.get(tonart, 50)
+    sech = 60 / tempo / 4
+    takt = 16 * sech
+    ende = dauer + 1 if ende is None else ende
+    takte = int(round((ende - ab) / takt))
+    for i in range(takte):
+        t0 = ab + i * takt
+        wurzel, drei = FOLGE_FEURIG[i % len(FOLGE_FEURIG)]
+        g = grund + wurzel
+        rest = takte - i
+        # Taiko-Galopp, im Wirbel zum Schluss alle Sechzehntel
+        if rest <= 2:
+            for k in range(16):
+                laut = .45 + .55 * (k / 15) if rest == 1 else .5
+                addiere(stereo, trommel(150, 70, .18), t0 + k * sech, .5 * laut, pan=(-.3 if k % 2 else .3))
+        for pos, laut in TAIKO:
+            addiere(stereo, trommel(110, 42, .32), t0 + pos * sech, .75 * laut)
+        addiere(stereo, trommel(170, 85, .16), t0 + 13 * sech, .35, pan=.4)
+        addiere(stereo, trommel(170, 85, .16), t0 + 15 * sech, .35, pan=-.4)
+        # Streicher-Ostinato, zwei Lagen links/rechts
+        for k, stufe in enumerate(OSTINATO):
+            akzent = 1.0 if k % 4 == 0 else .7
+            ton = g + stufe
+            addiere(stereo, saege(ton, sech * .95, .004, .09), t0 + k * sech, .11 * akzent, pan=-.45)
+            addiere(stereo, saege(ton + 12, sech * .95, .004, .07, 6), t0 + k * sech, .05 * akzent, pan=.45)
+        # Bass: Achtel, Grundton tief
+        for k in range(8):
+            addiere(stereo, saege(g - 12, 2 * sech * .9, .006, .2, 6), t0 + k * 2 * sech, .16)
+        # Blaeser-Stoesse ab dem dritten Takt: Akkord auf 1 und kurzer Nachschlag auf 3 und
+        if i >= 2:
+            for st in drei:
+                for pos, d, laut in ((0, 1.1, 1.0), (10, .35, .6)):
+                    addiere(stereo, saege(g + 12 + st, d, .03, .45, 9, .006), t0 + pos * sech, .07 * laut,
+                            pan=(st - 3) / 10)
+    # Auf den Pegel des ruhigen Musikbetts bringen (ca. -18 dB im Mittel), sonst geht die Stimme unter
+    for kanal in stereo:
+        for k in range(len(kanal)):
+            kanal[k] *= .56
+    return stereo
+
+
+def lade_audio_stereo(pfad):
+    """Beliebige Audiodatei (mp3, ogg, wav) -> Stereo-Floatlisten mit SR, ueber ffmpeg."""
+    roh = subprocess.run(["ffmpeg", "-v", "error", "-i", pfad, "-ac", "2", "-ar", str(SR), "-f", "s16le", "-"],
+                         capture_output=True, check=True).stdout
+    a = array.array("h")
+    a.frombytes(roh)
+    return [v / 32768 for v in a[0::2]], [v / 32768 for v in a[1::2]]
+
+
+@functools.lru_cache(maxsize=8)
+def _audio(pfad):
+    return lade_audio_stereo(pfad)
+
+
+def musik_dateien(dauer, stuecke, pegel=1.0):
+    """Fertige Musikstuecke ins Bett legen: [(start_s, pfad, lautstaerkekurve[, (von_s, bis_s)])].
+
+    Die Kurve ist [(t relativ zum Stueck, gain), ...], linear dazwischen; None = durchgehend 1.
+    Mit Ausschnitt wird nur dieser Teil gelegt (an den Kanten 40 ms weich) - so laesst sich ein
+    Stueck taktgenau verlaengern, indem ein Ausschnitt ein zweites Mal kommt."""
+    n = int((dauer + 3) * SR)
+    links, rechts = [0.0] * n, [0.0] * n
+    for eintrag in stuecke:
+        start, pfad, kurve = eintrag[:3]
+        if not os.path.isabs(pfad):
+            pfad = os.path.join(os.path.dirname(os.path.abspath(__file__)), pfad)
+        l, r = _audio(pfad)
+        if len(eintrag) > 3:
+            von, bis = int(eintrag[3][0] * SR), int(eintrag[3][1] * SR)
+            rand = int(.04 * SR)
+            l, r = list(l[von:bis]), list(r[von:bis])
+            for k in range(min(rand, len(l))):
+                f = k / rand
+                if von > 0:
+                    l[k] *= f
+                    r[k] *= f
+                l[-1 - k] *= f
+                r[-1 - k] *= f
+        i0 = int(start * SR)
+        for k in range(min(len(l), n - i0)):
+            g = pegel
+            if kurve:
+                t = k / SR
+                g *= kurve[-1][1]
+                for (ta, ga), (tb, gb) in zip(kurve, kurve[1:]):
+                    if ta <= t < tb:
+                        g = pegel * (ga + (gb - ga) * (t - ta) / (tb - ta))
+                        break
+                else:
+                    if t < kurve[0][0]:
+                        g = pegel * kurve[0][1]
+            links[i0 + k] += l[k] * g
+            rechts[i0 + k] += r[k] * g
+    return links, rechts
+
+
+def musik(dauer, tonart="D", tempo=84, stimmung="hell", ab=0.0, ende=None, beat=False, beat_ab=None, beat_bis=None,
+          art="ruhig", stuecke=None, pegel=1.0):
+    """Musikbett. ab/ende: wann die Musik einsetzt und aufhoert (Sekunden, auf Taktgrenzen legen).
+    beat=True legt Kick auf jede Zaehlzeit und pumpenden Achtel-Bass darunter (zwischen beat_ab und beat_bis).
+    art="feurig" nimmt stattdessen musik_feurig(), art="dateien" fertige Stuecke (siehe musik_dateien)."""
+    if art == "feurig":
+        return musik_feurig(dauer, tonart, tempo, ab, ende)
+    if art == "dateien":
+        return musik_dateien(dauer, stuecke, pegel)
     n = int((dauer + 3) * SR)
     stereo = ([0.0] * n, [0.0] * n)
     grund = TONARTEN.get(tonart, 50)
     schlag = 60 / tempo
     takt = 4 * schlag
     rnd = random.Random(7)
-    t, i = 0.0, 0
-    while t < dauer + 1:
+    ende = dauer + 1 if ende is None else ende
+    beat_ab = ab if beat_ab is None else beat_ab
+    beat_bis = ende if beat_bis is None else beat_bis
+    k_kick = kick() if beat else None
+    t, i = ab, 0
+    while t < ende - 1e-6:
+        if beat and beat_ab - 1e-6 <= t < beat_bis - 1e-6:
+            bass_off = FOLGE[i % len(FOLGE)][0]
+            for b in range(4):
+                addiere(stereo, k_kick, t + b * schlag, .42)
+                addiere(stereo, bass(midi_hz(grund + bass_off - 12), schlag * .3), t + (b + .5) * schlag, .1)
         bass_off, toene = FOLGE[i % len(FOLGE)]
         # Flaeche: drei obere Akkordtoene, leicht verteilt
         for j, ton in enumerate(toene[1:4]):
@@ -180,7 +377,7 @@ def musik(dauer, tonart="D", tempo=84, stimmung="hell"):
         for b in (0, 2):
             addiere(stereo, bass(midi_hz(grund + bass_off - 12), 2 * schlag * .95), t + b * schlag, .16)
         # Spieluhr ab dem zweiten Takt
-        if t >= takt:
+        if t >= ab + takt:
             for k, m in enumerate(MUSTER):
                 ton = toene[m] + 12 + (12 if stimmung == "hell" and k == 6 else 0)
                 laut = .07 if k % 2 == 0 else .05
@@ -259,6 +456,40 @@ def sfx(name, seed=0):
                 t = k / SR
                 out[i0 + k] += (math.sin(w * k) + .2 * math.sin(2 * w * k)) * math.exp(-t / .5) * min(1, t / .003) * .3
         return out
+    if name == "boom":
+        # Trailer-Schlag: tiefer, fallender Sinus mit Obertoenen und langem Ausklang (kein Rauschen)
+        d = 3.2
+        out, ph = [], 0.0
+        for k in range(int(d * SR)):
+            t = k / SR
+            hz = 41 + 60 * math.exp(-t / .1)
+            ph += 2 * math.pi * hz / SR
+            ton = math.sin(ph) + .3 * math.sin(2 * ph) + .12 * math.sin(3 * ph)
+            out.append(ton * .9 * math.exp(-t / 1.0) * min(1, t / .006))
+        return out
+    if name == "herz":
+        # Herzschlag: zwei tiefe, weiche Schlaege (lub-dub), rein tonal
+        d = .7
+        out = [0.0] * int(d * SR)
+        for start, hz0, g in ((0.0, 62, 1.0), (.2, 55, .7)):
+            ph, i0 = 0.0, int(start * SR)
+            for k in range(len(out) - i0):
+                t = k / SR
+                ph += 2 * math.pi * (hz0 + 30 * math.exp(-t / .03)) / SR
+                out[i0 + k] += g * math.sin(ph) * math.exp(-t / .09) * min(1, t / .004)
+        return out
+    if name == "swell":
+        # Anschwellender Akkord (Grundton, Quinte, Oktave), steigt leicht an und reisst vor dem Schnitt ab
+        d = 2.0
+        out = [0.0] * int(d * SR)
+        for j, (ton, g) in enumerate(((50, .5), (57, .35), (62, .3), (69, .15))):
+            ph = 0.0
+            for k in range(len(out)):
+                t = k / SR
+                u = t / d
+                ph += 2 * math.pi * midi_hz(ton + 1.5 * u) / SR
+                out[k] += g * math.sin(ph + .6 * math.sin(ph * .5)) * u ** 2.5 * min(1, (d - t) / .015)
+        return out
     raise KeyError("unbekannter Effekt: " + name)
 
 
@@ -291,7 +522,7 @@ def untertitel(film, sprache="de"):
     return sprechen
 
 
-def baue(film, ordner, sprache="de", szenen_whoosh=True):
+def baue(film, ordner, sprache="de", szenen_whoosh=None):
     """Schreibt musik.wav und rest.wav nach ordner und fuellt film.untertitel."""
     os.makedirs(ordner, exist_ok=True)
     dauer = film.gesamt
@@ -301,14 +532,19 @@ def baue(film, ordner, sprache="de", szenen_whoosh=True):
     for t, quelle, laut in film.cues():
         art, name = quelle.split(":", 1)
         if art == "mala":
-            pfad = os.path.join(POOL, "assets", "sounds", "mala", sprache, name + ".ogg")
-            addiere(rest, lade_ogg(pfad), t, 1.1 * laut)
+            addiere(rest, lade_ogg(stimm_pfad(sprache, name)), t, 1.1 * laut)
         elif art == "pool":
             addiere(rest, lade_ogg(os.path.join(POOL, "assets", "sounds", name + ".ogg")), t, .7 * laut)
+        elif art == "datei":  # fertiges Geraeusch, Pfad relativ zu tools/videos
+            pfad = name if os.path.isabs(name) else os.path.join(os.path.dirname(os.path.abspath(__file__)), name)
+            l, r = lade_audio_stereo(pfad)
+            addiere(rest, [(x + y) / 2 for x, y in zip(l, r)], t, laut)
         elif art == "sfx":
             addiere(rest, sfx(name, seed=int(t * 100)), t, .5 * laut)
         else:
             raise KeyError(quelle)
+    if szenen_whoosh is None:
+        szenen_whoosh = getattr(film, "whoosh", True)
     if szenen_whoosh:
         for i, t0 in enumerate(film.starts[1:], 1):
             addiere(rest, sfx("whoosh", seed=i), t0 - .45, .07, pan=(-.4 if i % 2 else .4))
@@ -316,14 +552,16 @@ def baue(film, ordner, sprache="de", szenen_whoosh=True):
     # Musik unter der Stimme absenken, am Anfang ein- und am Ende ausblenden
     links, rechts = m
     hulle = [1.0] * len(links)
+    ducken = getattr(film, "ducken", .55)  # wie stark die Musik unter der Stimme leiser wird (0..1)
     for t0, t1 in sprechen:
         for k in range(max(0, int((t0 - .35) * SR)), min(len(hulle), int((t1 + .6) * SR))):
             t = k / SR
             u = min(1.0, (t - (t0 - .35)) / .35, ((t1 + .6) - t) / .6)
-            hulle[k] = min(hulle[k], 1 - .55 * max(0.0, min(1.0, u)))
+            hulle[k] = min(hulle[k], 1 - ducken * max(0.0, min(1.0, u)))
     for k in range(len(links)):
         t = k / SR
-        g = hulle[k] * min(1.0, t / 1.5) * max(0.0, min(1.0, (dauer - t) / 3.0))
+        g = hulle[k] * (1.0 if film.musik.get("art") == "dateien" else min(1.0, t / 1.5)) \
+            * max(0.0, min(1.0, (dauer - t) / 3.0))
         links[k] *= g
         rechts[k] *= g
     schreibe_wav(os.path.join(ordner, "musik.wav"), (links[:n], rechts[:n]), .9)

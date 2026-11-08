@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Deine Insel lebt - KI-Bewohner und Forestlinge auf MegaBuild Skyblock.
 
-Stand: Release vom 12.10.2026 (MBSkyManager: ai/, forestling/). Zahlen sind
-Standardwerte aus ai.yml und config.yml. Malas Zeilen sind die echten Aufnahmen
+Stand: Release vom 12.10.2026 (MBSkyManager: ai/, forestling/), Handel in Ruby
+seit 08.11.2026 (a79a59f6, docs/RUBY_KASSE.md). Zahlen sind Standardwerte aus
+ai.yml und config.yml. Malas Zeilen sind die echten Aufnahmen
 von der Begegnungsinsel, Chatzeilen stammen aus lang/de.yml und ai/dialoge.
 Wichtig (KI_SPIELER.md): Siedlungen nie als Kaufanreiz fuer Biome zeigen.
 
@@ -129,24 +130,33 @@ def szene_vertrauen(e, t, d):
 
 
 def szene_handel(e, t, d):
+    # Seit 08.11.2026 in Ruby ueber die Marktkasse (MBSkyManager docs/RUBY_KASSE.md, Kap. 3-5 und 12).
+    # Preise nur aus dem Doc: Eisen 1 Ruby = 15 Stueck (Kap. 4, Kurs 0,1 ohne Knappheit),
+    # Zeitauftrag 16 Brot = 1 Ruby in 60 Minuten (Kap. 5, ai.yml zeitauftraege.bread).
+    # Ruby steht im Spiel rot (lang/de.yml ai.menu.ware.buy-ruby).
     ein = aus_kubisch(phase(t, 0, .4))
-    slots = {10: "mining", 11: "harvest", 12: "building", 13: "quest_fishing", 14: "potion_icon", 16: "coin",
+    slots = {10: "mining", 11: "harvest", 12: "building", 13: "quest_fishing", 14: "potion_icon", 16: "ruby",
              19: "craft_button", 21: "quest_trading", 23: "quests", 27: "back", 35: "close"}
     tipps = {
-        10: [L("§fEisenbarren §7×64", "§fIron ingots §7×64"), L("§7Preis: §d45 Mana", "§7Price: §d45 Mana"),
-             L("§7Vorrat: §fviel", "§7Stock: §fplenty"), L("§8Klick zum Kaufen", "§8Click to buy")],
-        11: [L("§fBrot §7×16", "§fBread §7×16"), L("§7Preis: §d14 Mana", "§7Price: §d14 Mana"),
+        10: [L("§fEisenbarren", "§fIron ingots"), L("§715 Stück: §c1 Ruby", "§715 pieces: §c1 Ruby"),
+             L("§7Die Ruby gehen in die Marktkasse.", "§7The Ruby go into the market fund."),
              L("§8Klick zum Kaufen", "§8Click to buy")],
-        16: [L("§eVerkaufen", "§eSell"), L("§7Bis zu §d30–40 Mana §7am Tag", "§7Up to §d30–40 Mana §7a day"),
-             L("§7je Bewohner", "§7per resident")],
-        21: [L("§aTauschen", "§aBarter"), L("§7Ware gegen Ware –", "§7Goods for goods –"),
+        16: [L("§eVerkaufen", "§eSell"), L("§7Ware gegen §cRuby §7aus der Marktkasse", "§7Goods for §cRuby §7from the market fund"),
+             L("§7je Bewohner §c3–4 Ruby §7am Tag,", "§7per resident §c3–4 Ruby §7a day,"),
+             L("§7zusammen höchstens §c10 Ruby", "§7at most §c10 Ruby §7in total")],
+        23: [L("§eAuftrag", "§eOrder"), L("§f16 Brot backen", "§fBake 16 bread"),
+             L("§7Preis: §c1 Ruby", "§7Price: §c1 Ruby"), L("§7fertig in 60 Minuten", "§7ready in 60 minutes")],
+        21: [L("§aTauschen", "§aBarter"), L("§7Ware gegen Ware, ohne Ruby –", "§7Goods for goods, no Ruby –"),
              L("§7auch nach dem Tageslimit", "§7even past the daily limit")],
     }
-    halte = [(.5, 1.0, 10), (2.0, 2.4, 11), (3.5, 3.9, 16), (5.0, 5.4, 21)]
+    halte = [(.5, 1.0, 10), (2.0, 2.4, 16), (3.5, 3.9, 23), (5.0, 5.4, 21)]
     menue_mit_zeiger(e, t, L("§6§lPips Lager", "§6§lPip's stock"), 4, slots, tipps, halte, 880, 300, 4, ein)
-    u = aus_kubisch(phase(t, 6.4, 6.9))
-    mct(e, 880, 760, L("§aMana §7oder §aWare §7– §cnie Ruby oder Echtgeld", "§aMana §7or §agoods §7– §cnever Ruby or real money"),
-        4, ein * u)
+    zeilen = [(6.4, L("§7Käufe gehen in die §fMarktkasse§7,", "§7Purchases go into the §fmarket fund§7,")),
+              (6.4, L("§7Verkäufe zahlt sie aus.", "§7and it pays for what you sell.")),
+              (7.2, L("§7Einkaufen: höchstens §c40 Ruby §7am Tag", "§7Buying: at most §c40 Ruby §7a day"))]
+    for i, (t0, text) in enumerate(zeilen):
+        u = aus_kubisch(phase(t, t0, t0 + .5))
+        mct(e, 880, 730 + i * 50 + (14 if i == 2 else 0), text, 4, ein * u)
 
 
 SEGEN = [("forest_oak", L("Himmelsprung", "Sky Leap"), 20), ("forest_birch", L("Luftsprung", "Air Jump"), 25),
@@ -213,7 +223,7 @@ def szene_outro(e, t, d):
         sprite_boden(e, "mala_hello", max(0, t - .9), W / 2 - 240, 800, 300 * u, schleife=False)
         sprite_boden(e, "goblin_hello", max(0, t - 1.2), W / 2 + 220, 800, 260 * u, schleife=False, spiegeln=True)
     a3 = aus_kubisch(phase(t, 1.4, 2.0))
-    skaliert(e, WORTMARKE, W / 2, 862, WORTMARKE.width * 2, WORTMARKE.height * 2, alpha=a3)
+    mb_logo(e, W / 2, 862, 200, a3)
 
 
 SZENEN = [
@@ -237,12 +247,14 @@ SZENEN = [
          text=L("Mit jedem Besuch kennen sie dich besser: erst reden, dann handeln, später Aufgaben und Aufträge.",
                 "With every visit they know you better: first chatting, then trading, later tasks and orders."),
          zeichne=szene_vertrauen, ton=[(2.5, "sfx:pop", .5), (4.0, "sfx:pop", .5), (5.4, "sfx:pop", .5),
-                                       (6.6, "pool:goblin/lachen_1", .6)]),
-    dict(dauer=8.5, nr="05", kicker=L("Handel", "Trading"), titel=L("Bezahlt wird mit Mana oder Ware",
-                                                                  "Pay with Mana or goods"),
-         text=L("In der Lagerkiste am Haus oder mit „handeln“ im Chat. Verkaufen bringt Mana bis zu einem Tageslimit.",
-                "Use the storage chest by the house or type “trade” in chat. Selling earns Mana up to a daily limit."),
-         zeichne=szene_handel, ton=[(.3, "sfx:pop", .5), (6.4, "sfx:klick")]),
+                                       (6.6, "pool:goblin/lachen_1", .6)] + erzaehlt(.4, "bewohner-vertrauen")),
+    dict(dauer=9.5, nr="05", kicker=L("Handel", "Trading"), titel=L("Bezahlt wird mit Ruby oder Ware",
+                                                                  "Pay with Ruby or goods"),
+         text=L("In der Lagerkiste am Haus oder mit „handeln“ im Chat. Verkaufen bringt Ruby aus der Marktkasse "
+                "bis zu einem Tageslimit.",
+                "Use the storage chest by the house or type “trade” in chat. Selling earns Ruby from the market fund "
+                "up to a daily limit."),
+         zeichne=szene_handel, ton=[(.3, "sfx:pop", .5), (6.4, "sfx:klick")] + erzaehlt(.4, "bewohner-handel")),
     dict(dauer=14.0, nr="06", kicker="Forestlinge", titel=L("Kleine Waldelfen mit Segen", "Little forest elves with blessings"),
          text=L("Forestlinge ziehen von Insel zu Insel. Für etwas Mana schenken sie dir einen Segen – sag einfach „ja“.",
                 "Forestlings move from island to island. For a little Mana they grant you a blessing – just say “yes”."),
@@ -252,7 +264,7 @@ SZENEN = [
     dict(dauer=8.5, nr="07", kicker=L("Ehrlich", "Honest"), titel=L("„(KI)“ steht dran", "“(KI)” says it all"),
          text=L("Bewohner sind keine Spieler und sagen das auch. Mit /ki stellst du ein, was sie bei dir dürfen.",
                 "Residents are not players and say so. Use /ki to set what they may do with you."),
-         zeichne=szene_ki, ton=[(.6, "sfx:pop", .5)]),
+         zeichne=szene_ki, ton=[(.6, "sfx:pop", .5)] + erzaehlt(.4, "bewohner-ehrlich")),
     dict(dauer=6.0, zeichne=szene_outro, ton=[(.3, "mala:resident-bye"), (1.2, "pool:goblin/tschuess_1", .6)]),
 ]
 
