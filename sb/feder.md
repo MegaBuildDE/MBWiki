@@ -39,7 +39,7 @@ Mit der Feder in der Hand ist ein Spawner **sofort** abgebaut.
 * Auf fremden Inseln brauchst du dafür das Recht **Bauen**. Wo du nicht abbauen darfst, kostet die Feder auch keinen Einsatz.
 
 {% hint style="info" %}
-**Später auch Mana-Amethyst:** Auf der Feder steht schon, dass sie den **Knospenden Mana-Amethyst** abbaut und daraus **kristallisiertes Mana** macht. Diesen Block gibt es aber noch nicht – siehe [Mana-Items](mana-items.md#in-planung). Mehr dazu, sobald er kommt.
+**Auch für den Mana-Amethyst:** Auf der Feder steht schon, dass sie den **Knospenden Mana-Amethyst** abbaut und daraus **kristallisiertes Mana** macht. Den Block findest du inzwischen am Boden der Höhlen auf den Hauptinseln – siehe [Furnace Golem & Mana-Geode](furnace-golem.md#die-mana-geode). Umsetzen kannst du ihn, sobald die Feder kommt; bis dahin bleibt er, wo er ist.
 {% endhint %}
 
 ## Spawner aus Mobplates

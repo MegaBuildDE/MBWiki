@@ -1,13 +1,14 @@
 ---
 description: >-
-  Alle Mana-Items auf MegaBuild.de – Mana-Kugel, Mana-Ladung und Mana-Apfel.
-  Woher du sie bekommst, Rezepte und wofür du sie brauchst.
+  Alle Mana-Items auf MegaBuild.de – Mana-Kugel, Mana-Ladung, Mana-Block,
+  Mana-Apfel und Mana-Scherbe. Woher du sie bekommst, Rezepte und wofür du sie
+  brauchst.
 icon: apple-whole
 ---
 
 # Mana-Items
 
-Aus [Mana-Erz](eco.md#mana-erz) bekommst du dein Mana nicht direkt aufs Konto, sondern als **Mana-Kugeln** ins Inventar. Aus den Kugeln craftest du an der Werkbank weitere Mana-Items.
+Aus [Mana-Erz](eco.md#mana-erz) bekommst du dein Mana nicht direkt aufs Konto, sondern als **Mana-Kugeln** ins Inventar. Aufs Konto bringst du sie beim [Furnace Golem](furnace-golem.md). Aus den Kugeln craftest du an der Werkbank weitere Mana-Items.
 
 <figure><img src="../.gitbook/assets/mana/items.png" alt="Mana-Kugel, Mana-Ladung und Mana-Apfel nebeneinander"><figcaption><p>Mana-Kugel, Mana-Ladung und Mana-Apfel</p></figcaption></figure>
 
@@ -15,21 +16,19 @@ Aus [Mana-Erz](eco.md#mana-erz) bekommst du dein Mana nicht direkt aufs Konto, s
 | ---- | ----- | ----- | ------------ |
 | [Mana-Kugel](#mana-kugel) | Mana-Erz abbauen | Aufs Konto einzahlen, Zutat für alles andere | gesperrt |
 | [Mana-Ladung](#mana-ladung) | 9 Kugeln | Kugeln platzsparend aufbewahren | gesperrt |
+| [Mana-Block](#mana-block) | 8 Kugeln um eine Mana-Ladung | Fuß des [Furnace Golem](furnace-golem.md), 17 Mana auf einmal einzahlen | gesperrt |
 | [Mana-Apfel](#mana-apfel) | 4 Kugeln um einen Apfel | Segen der [Forestlinge](forestlinge.md) kaufen, markierte Mobs für die [Mobplate](mobplates.md) schwächen | handelbar |
 | [Leere Mobplate](mobplates.md#leere-mobplate) | 8 Kugeln um eine Blasse Scherbe | Mobs einfangen | handelbar |
+| [Mana-Scherbe](#mana-scherbe) | Ausgewachsener Mana-Kristall in der [Mana-Geode](furnace-golem.md#die-mana-geode) | Beim Furnace Golem zu Mana verbacken | gesperrt |
 
 ## Mana-Kugel
 
 Eine **pinke, funkelnde Kugel**. Eine Kugel ist **ein Mana**, ein Stapel hält 64.
 
 * **Woher:** Beim Abbau von [Mana-Erz](eco.md#mana-erz) fallen **3–5 Kugeln**, mit Glück III bis zu 20. Für das Erz gilt ein Tageslimit von 200 Mana.
-* **Aufs Konto:** Eingezahlt werden die Kugeln beim **Ofen-Golem**. Dein Kontostand steigt erst dann.
+* **Aufs Konto:** Eingezahlt werden die Kugeln beim [Furnace Golem](furnace-golem.md#einzahlen). Dein Kontostand steigt erst dann. Dort hebst du Mana auch wieder als Kugeln ab.
 * **Weitergeben:** Du kannst Kugeln anderen Spielern geben, etwa per Hand oder in einer Truhe. Selbst abgebaute Kugeln zahlst du immer ganz ein, **fremde Kugeln nur bis 100 am Tag**.
-* Kugeln, Ladungen und der Mana-Apfel lassen sich nicht an [KI-Bewohner](bewohner.md) verkaufen.
-
-{% hint style="warning" %}
-**Den Ofen-Golem gibt es noch nicht.** Heb deine Mana-Kugeln bis dahin einfach auf – sie gehen nicht verloren.
-{% endhint %}
+* Kugeln, Ladungen, Mana-Blöcke, Mana-Scherben und der Mana-Apfel lassen sich nicht an [KI-Bewohner](bewohner.md) verkaufen.
 
 ## Mana-Ladung
 
@@ -40,6 +39,17 @@ Eine **pinke, funkelnde Kugel**. Eine Kugel ist **ein Mana**, ein Stapel hält 6
 Die Ladung lässt sich **jederzeit wieder zerlegen**: Leg sie allein ins Raster – das geht auch im Inventar – und du bekommst die 9 Kugeln zurück. Dabei geht kein Mana verloren und es entsteht auch keins.
 
 <figure><img src="../.gitbook/assets/mana/rezept-zerlegen.png" alt="Rezept: eine Mana-Ladung ergibt 9 Mana-Kugeln"><figcaption><p>Eine Mana-Ladung ergibt 9 Mana-Kugeln</p></figcaption></figure>
+
+## Mana-Block
+
+**8 Mana-Kugeln** um eine **Mana-Ladung** ergeben einen **Mana-Block** – das sind **17 Mana** in einem Block. Er ist der Fuß jedes [Furnace Golem](furnace-golem.md).
+
+<figure><img src="../.gitbook/assets/mana/rezept-block.png" alt="Rezept: Mana-Ladung in der Mitte, rundum 8 Mana-Kugeln, ergibt einen Mana-Block"><figcaption><p>8 Mana-Kugeln um eine Mana-Ladung ergeben einen Mana-Block</p></figcaption></figure>
+
+* **Zurückcraften geht nicht.** Einen Mana-Block zahlst du beim Furnace Golem ein – das bringt 17 Mana aufs Konto. Brauchst du Kugeln, hebst du sie dort ab.
+* **Setzen** per Rechtsklick wie einen normalen Block. Auf fremden Inseln brauchst du das Recht **Bauen**.
+* **Abbauen mit einer Spitzhacke** gibt dir den Block zurück. Mit der bloßen Hand ist er weg – und mit ihm 17 Mana.
+* Explosionen lassen ihn stehen, Kolben schieben ihn mit.
 
 ## Mana-Apfel
 
@@ -60,10 +70,18 @@ Mit dem Mana-Apfel in der Hand klickst du einen [Forestling](forestlinge.md) an 
 
 Hast du einen Mob mit einer leeren [Mobplate](mobplates.md) markiert, nimmt ihm ein Rechtsklick mit dem Mana-Apfel die **Hälfte seiner Herzen**. Das geht einmal je Mob und nur bei deinem eigenen markierten Mob. Bei einem unmarkierten Mob bekommst du nur einen Hinweis und behältst den Apfel.
 
+## Mana-Scherbe
+
+<figure><img src="../.gitbook/assets/mana/items-golem.png" alt="Mana-Block, Knospender Mana-Amethyst und Mana-Scherbe nebeneinander"><figcaption><p>Mana-Block, Knospender Mana-Amethyst und Mana-Scherbe</p></figcaption></figure>
+
+Mana-Scherben wachsen in der **Mana-Geode**: Auf dem **Knospenden Mana-Amethyst** am Boden der Höhlen wächst ein Mana-Kristall in vier Stufen. Nur der **ausgewachsene Kristall** gibt beim Abbauen eine Mana-Scherbe – das dauert im Schnitt etwa 40 Minuten.
+
+Leg die Scherben in eine Truhe oder ein Fass neben einen [Furnace Golem](furnace-golem.md#scherben-verbacken). Er macht aus jeder Scherbe in 2 Minuten **1 Mana** für seinen Erbauer, bis zu 20 Scherben am Tag. Wo die Geode liegt und worauf du achten musst, steht unter [Furnace Golem & Mana-Geode](furnace-golem.md#die-mana-geode).
+
 ## Handel
 
 * **Mana-Äpfel** kannst du im [ChestShop](chestshop.md) gegen Ruby kaufen und verkaufen.
-* **Mana-Kugeln und Mana-Ladungen** sind im ChestShop **gesperrt**, auch in einer Shulkerkiste oder einem Bündel.
+* **Mana-Kugeln, Mana-Ladungen, Mana-Blöcke und Mana-Scherben** sind im ChestShop **gesperrt**, auch in einer Shulkerkiste oder einem Bündel.
 * Dein Mana-**Konto** lässt sich nie verschicken – nur Ruby geht mit `/pay`.
 
 ## Erfolge
@@ -72,7 +90,7 @@ Hast du einen Mob mit einer leeren [Mobplate](mobplates.md) markiert, nimmt ihm 
 | ------ | --- |
 | **Verdichtet** | Eine Mana-Ladung craften |
 | **Magische Frucht** | Einen Mana-Apfel craften |
-| **Aufs Konto** | Mana-Kugeln beim Ofen-Golem einzahlen – *noch nicht erreichbar* |
+| **Aufs Konto** | Mana-Kugeln oder Mana-Blöcke beim [Furnace Golem](furnace-golem.md) einzahlen |
 
 Mehr dazu unter [Erfolge](erfolge.md).
 
@@ -80,20 +98,10 @@ Mehr dazu unter [Erfolge](erfolge.md).
 **Rezeptbuch:** Die Rezepte schalten sich frei, sobald du eine Mana-Kugel oder Ladung im Inventar hast. Craften kannst du sie auch ohne Freischaltung.
 {% endhint %}
 
-## In Planung
-
-{% hint style="warning" %}
-**Noch nicht im Spiel.** Diese Mana-Items werden gerade gebaut. Was hier steht, kann sich bis zum Start noch ändern.
-{% endhint %}
-
-* **Mana-Block** – 8 Mana-Kugeln um eine Mana-Ladung, also 17 Mana. Er lässt sich wieder in 17 Kugeln zerlegen.
-* **Knospender Mana-Amethyst** – selten in den Höhlen der Inseln. An ihm wachsen nach und nach **Mana-Kristalle**, ähnlich wie Amethystknospen.
-* **Mana-Scherbe** – fällt, wenn du einen ausgewachsenen Mana-Kristall abbaust.
-* **Ofen-Golem** – du baust ihn selbst aus einem Mana-Block, einem Ofen und einem geschnitzten Kürbis. Bei ihm zahlst du deine Kugeln ein, und er verwandelt Mana-Scherben aus einer Truhe oder einem Fass neben ihm in Mana für dein Konto.
-
 ## Verwandte Seiten
 
 * [Mana & Ruby](eco.md)
+* [Furnace Golem & Mana-Geode](furnace-golem.md)
 * [Forestlinge](forestlinge.md)
 * [Mobplates](mobplates.md)
 * [ChestShops](chestshop.md)

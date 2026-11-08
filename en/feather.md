@@ -38,7 +38,7 @@ With the feather in your hand, a spawner breaks **instantly**.
 * On other players' islands you need the **Build** right for it. Where you aren't allowed to break blocks, it doesn't cost a use either.
 
 {% hint style="info" %}
-**Mana amethyst later on:** The feather already says that it mines the **Budding Mana Amethyst** and turns it into **Crystallized Mana**. That block doesn't exist yet, though – see [Mana Items](mana-items.md#planned). More once it arrives.
+**For the Mana amethyst too:** The feather already says that it mines the **Budding Mana Amethyst** and turns it into **Crystallized Mana**. You can now find that block on the cave floor of the main islands – see [Furnace Golem & Mana Geode](furnace-golem.md#the-mana-geode). You'll be able to move it once the feather arrives; until then it stays where it is.
 {% endhint %}
 
 ## Spawners from Mobplates
