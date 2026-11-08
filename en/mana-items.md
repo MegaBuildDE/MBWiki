@@ -1,0 +1,99 @@
+---
+description: >-
+  All Mana items on MegaBuild.de – Mana orb, Mana Charge and Mana Apple.
+  Where to get them, recipes and what they are for.
+icon: apple-whole
+---
+
+# Mana Items
+
+[Mana ore](economy.md#mana-ore) doesn't put Mana straight into your account – it drops **Mana orbs** into your inventory. At the crafting table you turn those orbs into further Mana items.
+
+<figure><img src="../.gitbook/assets/mana/items.png" alt="Mana orb, Mana Charge and Mana Apple side by side"><figcaption><p>Mana orb, Mana Charge and Mana Apple</p></figcaption></figure>
+
+| Item | Where from | What for | In ChestShops |
+| ---- | ---------- | -------- | ------------- |
+| [Mana orb](#mana-orb) | Mining Mana ore | Paying into your account, ingredient for everything else | blocked |
+| [Mana Charge](#mana-charge) | 9 orbs | Storing orbs compactly | blocked |
+| [Mana Apple](#mana-apple) | 4 orbs around an apple | Buying [Forestling](forestlings.md) blessings, weakening marked mobs for a [Mobplate](mobplates.md) | tradable |
+| [Empty Mobplate](mobplates.md#empty-mobplate) | 8 orbs around a Pale Sherd | Catching mobs | tradable |
+
+## Mana orb
+
+A **sparkling pink orb**. One orb is **one Mana**, a stack holds 64.
+
+* **Where from:** Mining [Mana ore](economy.md#mana-ore) drops **3–5 orbs**, up to 20 with Fortune III. Mana ore has a daily limit of 200 Mana.
+* **Into your account:** Orbs are paid in at the **furnace golem**. Only then does your balance go up.
+* **Passing them on:** You can give orbs to other players, by hand or in a chest. Orbs you mined yourself always count in full, **other players' orbs only up to 100 a day**.
+* Orbs, Charges and Mana Apples can't be sold to [AI residents](residents.md).
+
+{% hint style="warning" %}
+**The furnace golem isn't in the game yet.** Just keep your Mana orbs until then – they won't get lost.
+{% endhint %}
+
+## Mana Charge
+
+**9 Mana orbs** filling the whole crafting grid make one **Mana Charge**. That way 576 Mana fit into one stack instead of 64.
+
+<figure><img src="../.gitbook/assets/mana/rezept-ladung.png" alt="Recipe: 9 Mana orbs fill the whole grid and make one Mana Charge"><figcaption><p>9 Mana orbs make one Mana Charge</p></figcaption></figure>
+
+You can **split a Charge back up at any time**: put it alone into the grid – your inventory grid works too – and you get the 9 orbs back. No Mana is lost and none is created.
+
+<figure><img src="../.gitbook/assets/mana/rezept-zerlegen.png" alt="Recipe: one Mana Charge gives 9 Mana orbs"><figcaption><p>One Mana Charge gives 9 Mana orbs</p></figcaption></figure>
+
+## Mana Apple
+
+**4 Mana orbs** around an ordinary **apple** make one **Mana Apple**. The corners stay empty.
+
+<figure><img src="../.gitbook/assets/mana/rezept-apfel.png" alt="Recipe: apple in the middle, one Mana orb above, below, left and right, makes the Mana Apple"><figcaption><p>Apple in the middle, 4 Mana orbs around it</p></figcaption></figure>
+
+You can't eat it. It has two jobs:
+
+### Buying a Forestling blessing
+
+Hold the Mana Apple and click a [Forestling](forestlings.md) – on Bedrock tap it or sneak in front of it. That's your **yes** to its blessing. It works at any time, even in the middle of a conversation. The Forestling takes the apple, holds it for a while and blesses you.
+
+* The blessing **still costs its Mana price** – the apple only confirms the purchase.
+* If the purchase can't go through, for example because you don't have enough Mana or the Forestling has no blessing, you keep the apple. If something goes wrong after that, you get it back – if you've already left, as a parcel the next time you join an island server.
+
+### Weakening mobs for a Mobplate
+
+Once you've marked a mob with an empty [Mobplate](mobplates.md), right-clicking it with a Mana Apple takes away **half of its hearts**. This works once per mob and only on your own marked mob. On an unmarked mob you only get a hint and keep the apple.
+
+## Trading
+
+* **Mana Apples** can be bought and sold for Ruby in [ChestShops](chestshop.md).
+* **Mana orbs and Mana Charges** are **blocked** in ChestShops, also inside a shulker box or a bundle.
+* Your Mana **balance** can never be sent – only Ruby works with `/pay`.
+
+## Achievements
+
+| Achievement | How |
+| ----------- | --- |
+| **Condensed** | Craft a Mana Charge |
+| **Magic Fruit** | Craft a Mana Apple |
+| **Banked** | Deposit Mana orbs with the furnace golem – *not reachable yet* |
+
+More under [Achievements](achievements.md).
+
+{% hint style="info" %}
+**Recipe book:** The recipes unlock as soon as a Mana orb or Charge is in your inventory. You can craft them without unlocking too.
+{% endhint %}
+
+## Planned
+
+{% hint style="warning" %}
+**Not in the game yet.** These Mana items are being built right now. Details may still change before they go live.
+{% endhint %}
+
+* **Mana Block** – 8 Mana orbs around a Mana Charge, so 17 Mana. It can be split back into 17 orbs.
+* **Budding Mana Amethyst** – rare, in the caves of the islands. **Mana crystals** slowly grow on it, much like amethyst buds.
+* **Mana Shard** – drops when you mine a fully grown Mana crystal.
+* **Furnace golem** – you build it yourself from a Mana Block, a furnace and a carved pumpkin. You pay your orbs in there, and it turns Mana Shards from a chest or barrel next to it into Mana for your account.
+
+## Related pages
+
+* [Mana & Ruby](economy.md)
+* [Forestlings](forestlings.md)
+* [Mobplates](mobplates.md)
+* [ChestShops](chestshop.md)

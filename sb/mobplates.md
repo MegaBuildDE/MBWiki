@@ -43,7 +43,7 @@ Die **Blasse Scherbe** in die Mitte, rundum **8 [Mana-Kugeln](eco.md#mana-kugeln
 {% step %}
 #### Schwächen (freiwillig)
 
-**Rechtsklick** mit einem [Mana-Apfel](eco.md#mana-kugeln) auf deinen markierten Mob. Er verliert die **Hälfte seiner Herzen** – aus 20 werden 10. Das geht einmal je Mob.
+**Rechtsklick** mit einem [Mana-Apfel](mana-items.md#mana-apfel) auf deinen markierten Mob. Er verliert die **Hälfte seiner Herzen** – aus 20 werden 10. Das geht einmal je Mob.
 {% endstep %}
 
 {% step %}

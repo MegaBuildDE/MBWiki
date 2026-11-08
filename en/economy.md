@@ -94,8 +94,10 @@ Mana ore gives you Mana as **orbs** in your inventory; one orb is one Mana. They
 You can also craft with orbs:
 
 * **Mana Charge** from 9 orbs – can be broken back down
-* **Mana Apple** from 4 orbs around an apple – it takes half the hearts of a mob you marked with a [Mobplate](mobplates.md)
+* **Mana Apple** from 4 orbs around an apple – it buys a [Forestling](forestlings.md) blessing and weakens mobs you marked with a [Mobplate](mobplates.md)
 * **Empty Mobplate** from 8 orbs around a Pale Sherd – see [Mobplates](mobplates.md)
+
+Recipes and all the details are under [Mana Items](mana-items.md).
 
 ## Spending Mana
 
@@ -142,6 +144,7 @@ Your **Mana and Ruby stay**, and so do your quest progress, streak and achieveme
 ## Related pages
 
 * [Skill tree & biomes](skilltree.md)
+* [Mana Items](mana-items.md)
 * [Quests](quests.md)
 * [Voting](vote.md)
 * [ChestShops](chestshop.md)

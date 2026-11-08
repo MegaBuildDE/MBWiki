@@ -94,8 +94,10 @@ Mana-Erz gibt dir Mana als **Kugeln** ins Inventar, eine Kugel ist ein Mana. Auf
 Aus Kugeln kannst du außerdem craften:
 
 * **Mana-Ladung** aus 9 Kugeln – lässt sich wieder zerlegen
-* **Mana-Apfel** aus 4 Kugeln um einen Apfel – er nimmt einem Mob, den du mit einer [Mobplate](mobplates.md) markiert hast, die Hälfte seiner Herzen
+* **Mana-Apfel** aus 4 Kugeln um einen Apfel – damit kaufst du den Segen eines [Forestlings](forestlinge.md) und schwächst Mobs, die du mit einer [Mobplate](mobplates.md) markiert hast
 * **Leere Mobplate** aus 8 Kugeln um eine Blasse Scherbe – siehe [Mobplates](mobplates.md)
+
+Rezepte und alle Einzelheiten stehen unter [Mana-Items](mana-items.md).
 
 ## Mana ausgeben
 
@@ -142,6 +144,7 @@ Dein **Mana und Ruby bleiben** erhalten, ebenso Quest-Stand, Serie und Erfolge. 
 ## Verwandte Seiten
 
 * [Skilltree & Biome](skilltree.md)
+* [Mana-Items](mana-items.md)
 * [Quests](quests.md)
 * [Voten](../ag/vote.md)
 * [ChestShops](chestshop.md)

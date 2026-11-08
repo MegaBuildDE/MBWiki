@@ -43,7 +43,7 @@ The **Pale Sherd** in the middle, surrounded by **8 [Mana orbs](economy.md#mana-
 {% step %}
 #### Weaken (optional)
 
-**Right-click** your marked mob with a [Mana Apple](economy.md#mana-orbs). It loses **half of its hearts** – 20 become 10. This works once per mob.
+**Right-click** your marked mob with a [Mana Apple](mana-items.md#mana-apple). It loses **half of its hearts** – 20 become 10. This works once per mob.
 {% endstep %}
 
 {% step %}
