@@ -1,7 +1,7 @@
 ---
 description: >-
-  Ores, Mana ore, cobblestone generator, animals, monsters and farms – where you
-  get your resources on MegaBuild.de.
+  Ores, Mana ore, Mana Geode, cobblestone generator, animals, monsters and farms –
+  where you get your resources on MegaBuild.de.
 icon: seedling
 ---
 
@@ -31,7 +31,15 @@ Need more? Keep exploring: every new main island brings new ores.
 | Yield | 3–5 Mana orbs, up to 20 with Fortune III, plus some XP |
 | Daily limit | 200 Mana from Mana ore |
 
-You can read more about Mana orbs under [Mana & Ruby](economy.md#mana-ore).
+You deposit the orbs into your account at a [Furnace Golem](furnace-golem.md). You can read more about Mana orbs under [Mana & Ruby](economy.md#mana-ore).
+
+## Mana Geode
+
+On the floor of some caves, most likely in an amethyst geode, lies a **Budding Mana Amethyst** – at most two per main island. A mana crystal grows on it in about 40 minutes while the island is loaded. Full-grown, it gives a **Mana Shard**, which a Furnace Golem turns into 1 Mana. Don't mine the Budding Mana Amethyst itself – it drops nothing.
+
+{% content-ref url="furnace-golem.md" %}
+[furnace-golem.md](furnace-golem.md)
+{% endcontent-ref %}
 
 ## Cobblestone generator
 

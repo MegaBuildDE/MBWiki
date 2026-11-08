@@ -113,7 +113,7 @@ No. But you can unlock all other biomes with Mana in the skill tree.
 
 <summary>How do I earn Mana?</summary>
 
-Through quests, biome quests, votes, Mana ore and lots of normal actions like mining ore, taming animals or enchanting. Actions give up to 150 Mana a day, Mana ore up to 200 – quests have no limit.
+Through quests, biome quests, votes, Mana ore, Mana Shards and lots of normal actions like mining ore, taming animals or enchanting. Actions give up to 150 Mana a day, Mana ore up to 200 – quests have no limit. Mana ore gives you Mana orbs, which you deposit into your account at a [Furnace Golem](furnace-golem.md). It also turns Mana Shards into Mana, 1 per shard and up to 20 shards a day.
 
 {% content-ref url="economy.md" %}
 [economy.md](economy.md)
@@ -132,6 +132,7 @@ The most common reasons:
 * You mined ore **without a pickaxe**.
 * You're not in **Survival mode**.
 * The monster came from a **spawner**.
+* Mana ore gives you **Mana orbs** instead of Mana – deposit them at a [Furnace Golem](furnace-golem.md#deposit).
 
 </details>
 
@@ -163,7 +164,7 @@ Up to **25 members**. For each one you decide what they may do.
 
 <summary>Can I send Mana to other players?</summary>
 
-No, Mana can't be transferred. Ruby, on the other hand, you can send with `/pay <player> <amount>` – every new account starts with 500 Ruby. New accounts can only pass it on 24 hours after their first login and after 20 minutes of playtime – [more on this](economy.md#sending-ruby).
+Not your Mana account. You can pass on Mana orbs, though – the receiver can deposit up to 100 foreign orbs a day at a [Furnace Golem](furnace-golem.md#deposit). Ruby, on the other hand, you can send with `/pay <player> <amount>` – every new account starts with 500 Ruby. New accounts can only pass it on 24 hours after their first login and after 20 minutes of playtime – [more on this](economy.md#sending-ruby).
 
 </details>
 

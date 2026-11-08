@@ -46,7 +46,7 @@ Inseln gleichen Bioms liegen in **Gegenden** von etwa 3 × 3 Feldern – rund 66
 
 ### Höhlen
 
-Jede **Hauptinsel** hat ein Höhlensystem mit ein bis drei Einstiegen von oben: Kammern auf bis zu zwei Stockwerken, Gänge mit Rundwegen, eine große Halle und manchmal ein Becken. Jede Kammer hat ihre Art – üppig bewachsen, Tropfstein, Eis, Pilze, Magma oder einfacher Fels. Selten findest du eine **Amethystgeode**.
+Jede **Hauptinsel** hat ein Höhlensystem mit ein bis drei Einstiegen von oben: Kammern auf bis zu zwei Stockwerken, Gänge mit Rundwegen, eine große Halle und manchmal ein Becken. Jede Kammer hat ihre Art – üppig bewachsen, Tropfstein, Eis, Pilze, Magma oder einfacher Fels. Selten findest du eine **Amethystgeode**. Am Höhlenboden, am ehesten in so einer Geode, liegt manchmal ein **Knospender Mana-Amethyst** – siehe [Furnace Golem & Mana-Geode](furnace-golem.md#die-mana-geode).
 
 Die Höhlen sind zum Teil beleuchtet. Nebeninseln, Trittinseln und die Startinsel haben keine Höhle.
 

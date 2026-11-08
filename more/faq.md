@@ -113,7 +113,7 @@ Nein. Alle anderen Biome kannst du aber im Skilltree mit Mana freischalten.
 
 <summary>Wie verdiene ich Mana?</summary>
 
-Über Quests, Biomquests, Votes, Mana-Erz und viele normale Aktionen wie Erz abbauen, Tiere zähmen oder Verzaubern. Aus Aktionen gibt es bis zu 150 Mana am Tag, aus Mana-Erz bis zu 200 – Quests haben kein Limit.
+Über Quests, Biomquests, Votes, Mana-Erz, Mana-Scherben und viele normale Aktionen wie Erz abbauen, Tiere zähmen oder Verzaubern. Aus Aktionen gibt es bis zu 150 Mana am Tag, aus Mana-Erz bis zu 200 – Quests haben kein Limit. Mana-Erz gibt dir Mana-Kugeln, die du bei einem [Furnace Golem](../sb/furnace-golem.md) aufs Konto einzahlst. Er macht auch aus Mana-Scherben Mana, 1 je Scherbe und bis zu 20 Scherben am Tag.
 
 {% content-ref url="../sb/eco.md" %}
 [eco.md](../sb/eco.md)
@@ -132,6 +132,7 @@ Die häufigsten Gründe:
 * Du hast Erz **ohne Spitzhacke** abgebaut.
 * Du bist nicht im **Überlebensmodus**.
 * Das Monster kam aus einem **Spawner**.
+* Mana-Erz gibt dir **Mana-Kugeln** statt Mana – zahl sie bei einem [Furnace Golem](../sb/furnace-golem.md#einzahlen) ein.
 
 </details>
 
@@ -163,7 +164,7 @@ Bis zu **25 Mitglieder**. Für jedes legst du fest, was es darf.
 
 <summary>Kann ich Mana an andere Spieler schicken?</summary>
 
-Nein, Mana lässt sich nicht übertragen. Ruby dagegen kannst du mit `/pay <Spieler> <Menge>` verschicken – jedes neue Konto startet mit 500 Ruby. Neue Konten geben Ruby erst 24 Stunden nach dem ersten Login und nach 20 Minuten Spielzeit weiter – [mehr dazu](../sb/eco.md#ruby-verschicken).
+Dein Mana-Konto nicht. Mana-Kugeln kannst du aber weitergeben – der Empfänger zahlt fremde Kugeln bis 100 am Tag bei einem [Furnace Golem](../sb/furnace-golem.md#einzahlen) ein. Ruby dagegen kannst du mit `/pay <Spieler> <Menge>` verschicken – jedes neue Konto startet mit 500 Ruby. Neue Konten geben Ruby erst 24 Stunden nach dem ersten Login und nach 20 Minuten Spielzeit weiter – [mehr dazu](../sb/eco.md#ruby-verschicken).
 
 </details>
 

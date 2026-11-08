@@ -158,7 +158,7 @@ Tragen mehrere Items denselben Namen, etwa „Netherziegel“ oder „Schallplat
 * **Menge:** 1 bis 2.304 je Handel. Sie muss einmal in den leeren Behälter und in ein Inventar passen.
 * **Preis:** 0 bis 1.000.000 Ruby.
 * **Anzahl:** 50 Shops je Spieler im ganzen Netzwerk, 200 je Insel.
-* **Gesperrte Ware:** [Mana-Kugeln](eco.md#mana-kugeln), Mana-Ladungen, Bedrock, Befehlsblöcke, Spawner und andere technische Blöcke – auch in einer Shulkerkiste oder einem Bündel. Mana-Äpfel und Plates gehen, siehe [Mobplates](mobplates.md#regeln).
+* **Gesperrte Ware:** [Mana-Kugeln](eco.md#mana-kugeln), Mana-Ladungen, [Mana-Blöcke und Mana-Scherben](furnace-golem.md#handel), Bedrock, Befehlsblöcke, Spawner und andere technische Blöcke – auch in einer Shulkerkiste oder einem Bündel. Mana-Äpfel und Plates gehen, siehe [Mobplates](mobplates.md#regeln).
 * **Kein Shop geht:** an einem Behälter, an dem ein anderer Spieler schon einen Shop hat, in einer Siedlung der Bewohner, nah am Weltspawn und an der Projektkiste eines Clans. Beutekisten öffnest du vorher einmal.
 
 ## Deinen Shop führen

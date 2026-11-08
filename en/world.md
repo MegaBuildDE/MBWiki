@@ -46,7 +46,7 @@ Islands of the same biome lie in **areas** of about 3 × 3 cells – around 660 
 
 ### Caves
 
-Every **main island** has a cave system with one to three entrances from above: chambers on up to two levels, passages with loops, a large hall and sometimes a pool. Each chamber has its own style – lush, dripstone, ice, mushrooms, magma or plain rock. Rarely you'll find an **amethyst geode**.
+Every **main island** has a cave system with one to three entrances from above: chambers on up to two levels, passages with loops, a large hall and sometimes a pool. Each chamber has its own style – lush, dripstone, ice, mushrooms, magma or plain rock. Rarely you'll find an **amethyst geode**. On the cave floor, most likely in such a geode, there's sometimes a **Budding Mana Amethyst** – see [Furnace Golem & Mana Geode](furnace-golem.md#the-mana-geode).
 
 The caves are partly lit. Side islands, stepping-stone islands and the starting island have no cave.
 

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Erze, Mana-Erz, Bruchstein-Generator, Tiere, Monster und Farmen – woher du
-  auf MegaBuild.de deine Ressourcen bekommst.
+  Erze, Mana-Erz, Mana-Geode, Bruchstein-Generator, Tiere, Monster und Farmen –
+  woher du auf MegaBuild.de deine Ressourcen bekommst.
 icon: seedling
 ---
 
@@ -31,7 +31,15 @@ Brauchst du mehr, erkunde weiter: Jede neue Hauptinsel bringt neue Erze.
 | Ertrag | 3–5 Mana-Kugeln, mit Glück III bis zu 20, dazu etwas XP |
 | Tageslimit | 200 Mana aus Mana-Erz |
 
-Mehr zu Mana-Kugeln steht unter [Mana & Ruby](eco.md#mana-erz).
+Die Kugeln zahlst du bei einem [Furnace Golem](furnace-golem.md) aufs Konto ein. Mehr zu Mana-Kugeln steht unter [Mana & Ruby](eco.md#mana-erz).
+
+## Mana-Geode
+
+Am Boden mancher Höhlen, am ehesten in einer Amethystgeode, liegt ein **Knospender Mana-Amethyst** – höchstens zwei je Hauptinsel. Auf ihm wächst in etwa 40 Minuten ein Mana-Kristall heran, solange die Insel geladen ist. Ausgewachsen gibt er eine **Mana-Scherbe**, die ein Furnace Golem zu 1 Mana verbackt. Den Knospenden Mana-Amethyst selbst nicht abbauen – er gibt nichts.
+
+{% content-ref url="furnace-golem.md" %}
+[furnace-golem.md](furnace-golem.md)
+{% endcontent-ref %}
 
 ## Bruchstein-Generator
 

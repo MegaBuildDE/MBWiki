@@ -162,7 +162,7 @@ If several items share a name, such as “nether bricks” or “music disc”, 
 * **Amount:** 1 to 2,304 per trade. It must fit into the empty container and into an inventory once.
 * **Price:** 0 to 1,000,000 Ruby.
 * **Number:** 50 shops per player across the network, 200 per island.
-* **Blocked items:** [Mana orbs](economy.md#mana-orbs), Mana Charges, bedrock, command blocks, spawners and other technical blocks – also inside a shulker box or bundle. Mana Apples and plates are fine, see [Mobplates](mobplates.md#rules).
+* **Blocked items:** [Mana orbs](economy.md#mana-orbs), Mana Charges, [Mana Blocks and Mana Shards](furnace-golem.md#trading), bedrock, command blocks, spawners and other technical blocks – also inside a shulker box or bundle. Mana Apples and plates are fine, see [Mobplates](mobplates.md#rules).
 * **No shop is possible:** on a container where another player already has a shop, in a residents' settlement, close to the world spawn and on a clan's project chest. Open loot chests once first.
 
 ## Running your shop
