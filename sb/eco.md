@@ -91,7 +91,7 @@ Aus Kugeln kannst du außerdem craften:
 
 * **Mana-Ladung** aus 9 Kugeln – lässt sich wieder zerlegen
 * **Mana-Block** aus 8 Kugeln um eine Mana-Ladung – 17 Mana, der Fuß des [Furnace Golem](furnace-golem.md); zurückcraften geht nicht
-* **Mana-Apfel** aus 4 Kugeln um einen Apfel – damit kaufst du den Segen eines [Forestlings](forestlinge.md) und schwächst Mobs, die du mit einer [Mobplate](mobplates.md) markiert hast
+* **Mana-Apfel** aus 4 Kugeln um einen Apfel – er bestätigt den Kauf eines Segens bei den [Forestlingen](forestlinge.md#einen-segen-bekommen) und nimmt einem Mob, den du mit einer [Mobplate](mobplates.md) markiert hast, die Hälfte seiner Herzen
 * **Leere Mobplate** aus 8 Kugeln um eine Blasse Scherbe – siehe [Mobplates](mobplates.md)
 
 Rezepte und alle Einzelheiten stehen unter [Mana-Items](mana-items.md).

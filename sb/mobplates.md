@@ -77,6 +77,17 @@ Auch ein aufgestelltes [Warpett](warpetts.md) kommt in die Plate, ohne Kampf und
 
 Das Warpett auf dem Luftschiff und das auf der Startinsel bleiben stehen.
 
+## Forestlinge einsammeln
+
+Auch einen [Forestling](forestlinge.md) nimmst du mit der Plate mit – ohne Kampf und ohne Markierung.
+
+* **Einsammeln:** Klick mit der leeren Plate in der Haupthand auf den Forestling. Auf Bedrock tippst du ihn an oder schleichst vor ihm. Hängt er an einer Leine, bekommst du die Leine zurück.
+* **Absetzen:** Rechtsklick auf einen Block, nicht auf Wasser. Er braucht festen Boden und zwei freie Blöcke darüber, und im Umkreis von 32 Blöcken dürfen höchstens 6 Forestlinge wohnen. **Wo du ihn absetzt, ist sein neues Zuhause.** Geht es nicht, bleibt die Plate bei dir.
+* **Art:** Welche drinsteckt, steht auf der Plate, etwa „Art: Eichen-Waldelf“. Gleiche Arten stapeln sich, verschiedene nicht.
+* **Im ChestShop:** Schild, Meldungen und Suche nennen die Art, zum Beispiel „Eichen-Waldelf“.
+
+Nicht in die Plate kommt ein Forestling, der gerade einen [Mana-Apfel](forestlinge.md#einen-segen-bekommen) für einen Kauf hält, und der feste Forestling im Hain einer Clan-Insel.
+
 ## Wenn es schiefgeht
 
 Du bekommst die **leere Plate zurück**, wenn
@@ -94,15 +105,16 @@ Passt beim Freisetzen kein Mob an die Stelle, bleibt die Plate bei dir. Einen Mo
 
 * **Keine Belohnung:** Freigesetzte Mobs zählen weder für [Mana](eco.md#was-kein-mana-gibt) noch für [Quests](quests.md).
 * **Babys** ergeben die normale Plate, heraus kommt immer ein Erwachsener.
-* **Fremde gezähmte Tiere** lassen sich nicht markieren. Auch [Bewohner](bewohner.md), [Forestlinge](forestlinge.md) und die Crew passen in keine Plate.
+* **Fremde gezähmte Tiere** lassen sich nicht markieren. Auch [Bewohner](bewohner.md) und die Crew passen in keine Plate.
 * **Handel:** Mana-Äpfel, leere und gefüllte Plates und die Blasse Scherbe kannst du im [ChestShop](chestshop.md) handeln. Mana-Kugeln und Mana-Ladungen bleiben dort gesperrt. In den Rucksack dürfen Plates und Mana-Äpfel nicht.
-* **Stapel:** Mobplates und Blasse Scherben stapeln auf 64. Warpett-Plates stapeln nur bei gleicher Blume, alle Plates ohne Blume sind eine Sorte.
+* **Stapel:** Mobplates und Blasse Scherben stapeln auf 64. Warpett-Plates stapeln nur bei gleicher Blume, alle Plates ohne Blume sind eine Sorte. Forestling-Plates stapeln nur bei gleicher Art.
 
 ### Auf fremden Inseln
 
 | Was du tust | Recht, das du brauchst |
 | ----------- | ---------------------- |
 | Markieren, Fangen, Mana-Apfel | **Tiere** – auch bei Monstern |
+| Forestling einsammeln und absetzen | **Tiere** |
 | Freisetzen | **Bauen** |
 | Warpett einsammeln und absetzen | **Warpetts** |
 
@@ -116,7 +128,7 @@ Mehr dazu unter [Mitglieder & Rechte](mitglieder.md#die-rechte).
 
 ## Erfolge
 
-Zwei [Erfolge](erfolge.md#mobplates) gehören zu den Mobplates: **Erster Fang** für deinen ersten Mob in einer Plate und **Neu eingezogen** für den ersten Mob, den du wieder platzierst. Beide gelten auch für Warpetts.
+Zwei [Erfolge](erfolge.md#mobplates) gehören zu den Mobplates: **Erster Fang** für deinen ersten Mob in einer Plate und **Neu eingezogen** für den ersten Mob, den du wieder platzierst. Beide gelten auch für Warpetts und Forestlinge.
 
 ## Welche Mobs es gibt
 
@@ -139,6 +151,7 @@ Einige Mobs haben bewusst nur eine Plate:
 * **Schaf:** Jede Farbe ergibt dieselbe Plate, heraus kommt immer ein weißes.
 * **Dorfbewohner:** ohne Berufe und Biome.
 * **Warpett:** ein Bild für alle Blumen, die Blume steht auf der Plate.
+* **Forestling:** eine eigene Plate für alle Arten, die Art steht auf der Plate.
 
 <details>
 
@@ -160,4 +173,5 @@ Biene, Böe, Creeper, Delfin, Diener, Dorfbewohner, Dromedar, Eisbär, Eisengole
 * [Erfolge](erfolge.md)
 * [Warpetts](warpetts.md)
 * [Feder der Sanftheit](feder.md)
+* [Forestlinge](forestlinge.md)
 * [Ressourcen & Farming](farming.md)

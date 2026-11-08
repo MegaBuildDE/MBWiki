@@ -77,6 +77,17 @@ A placed [Warpett](warpetts.md) goes into a plate too, with no fight and no mark
 
 The Warpett on the airship and the one on your starting island stay where they are.
 
+## Collecting Forestlings
+
+You can take a [Forestling](forestlings.md) along in a plate too – no fight and no mark.
+
+* **Collecting:** Click the Forestling with the empty plate in your main hand. On Bedrock, tap it or sneak in front of it. If it's on a lead, you get the lead back.
+* **Setting down:** Right-click a block, not water. It needs solid ground and two free blocks above, and at most 6 Forestlings may live within 32 blocks. **Where you set it down is its new home.** If that doesn't work, you keep the plate.
+* **Kind:** The plate says which one is inside, for example “Kind: Oak Forestling”. Same kinds stack, different ones don't.
+* **In a ChestShop:** The sign, messages and search name the kind.
+
+A Forestling that's holding a [Mana Apple](forestlings.md#getting-a-blessing) for a purchase doesn't go into a plate, and neither does the resident Forestling in a clan island's grove.
+
 ## If it goes wrong
 
 You get the **empty plate back** if
@@ -94,9 +105,9 @@ If no mob can appear at the spot when releasing, you keep the plate. Only one pl
 
 * **No reward:** Released mobs count neither for [Mana](economy.md#what-doesnt-give-mana) nor for [quests](quests.md).
 * **Babies** give the normal plate, and an adult always comes out.
-* **Other players' tamed animals** can't be marked. [Residents](residents.md), [Forestlings](forestlings.md) and the crew don't fit into a plate either.
+* **Other players' tamed animals** can't be marked. [Residents](residents.md) and the crew don't fit into a plate either.
 * **Trading:** You can trade Mana Apples, empty and filled plates and the Pale Sherd in a [ChestShop](chestshop.md). Mana orbs and Mana Charges stay blocked there. Plates and Mana Apples can't go into the backpack.
-* **Stacks:** Mobplates and Pale Sherds stack to 64. Warpett plates only stack with the same flower; all plates without a flower count as one kind.
+* **Stacks:** Mobplates and Pale Sherds stack to 64. Warpett plates only stack with the same flower; all plates without a flower count as one kind. Forestling plates only stack with the same kind.
 
 ### On other players' islands
 
@@ -105,6 +116,7 @@ If no mob can appear at the spot when releasing, you keep the plate. Only one pl
 | Mark, catch, Mana Apple | **Animals** – for monsters too |
 | Release | **Build** |
 | Collect and set down a Warpett | **Warpetts** |
+| Collect and set down a Forestling | **Animals** |
 
 More under [Members & rights](members.md#the-rights).
 
@@ -116,7 +128,7 @@ More under [Members & rights](members.md#the-rights).
 
 ## Achievements
 
-Two [achievements](achievements.md#mobplates) belong to the Mobplates: **First Catch** for your first mob in a plate and **Moved In** for the first mob you place again. Both count for Warpetts too.
+Two [achievements](achievements.md#mobplates) belong to the Mobplates: **First Catch** for your first mob in a plate and **Moved In** for the first mob you place again. Both count for Warpetts and Forestlings too.
 
 ## Which mobs there are
 
@@ -139,6 +151,7 @@ Some mobs deliberately have just one plate:
 * **Sheep:** Every colour gives the same plate, and a white one always comes out.
 * **Villager:** without professions and biomes.
 * **Warpett:** one image for all flowers; the plate says which flower it carries.
+* **Forestling:** one plate of its own for all kinds; the plate says which kind it carries.
 
 <details>
 
@@ -160,4 +173,5 @@ Allay, Armadillo, Bat, Bee, Blaze, Bogged, Breeze, Camel, Camel Husk, Cave Spide
 * [Achievements](achievements.md)
 * [Warpetts](warpetts.md)
 * [Feather of Softness](feather.md)
+* [Forestlings](forestlings.md)
 * [Resources & farming](farming.md)

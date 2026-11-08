@@ -91,7 +91,7 @@ You can also craft with orbs:
 
 * **Mana Charge** from 9 orbs – can be broken back down
 * **Mana Block** from 8 orbs around a Mana Charge – 17 Mana, the base of the [Furnace Golem](furnace-golem.md); it can't be crafted back
-* **Mana Apple** from 4 orbs around an apple – it buys a [Forestling](forestlings.md) blessing and weakens mobs you marked with a [Mobplate](mobplates.md)
+* **Mana Apple** from 4 orbs around an apple – it confirms buying a blessing from the [Forestlings](forestlings.md#getting-a-blessing) and takes half the hearts of a mob you marked with a [Mobplate](mobplates.md)
 * **Empty Mobplate** from 8 orbs around a Pale Sherd – see [Mobplates](mobplates.md)
 
 Recipes and all the details are under [Mana Items](mana-items.md).
