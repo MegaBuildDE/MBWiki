@@ -64,6 +64,17 @@ AUFTRAEGE = {
     "warpett_eat": ("warper/Warpett_dandelion.bbmodel", "eat", -30, 0.5, 2.0),
     "warpett_poppy": ("warper/Warpett_poppy.bbmodel", "idle", 30, 1.0),
     "warpett_blau": ("warper/Warpett_cornflower.bbmodel", "idle", -30, 1.0),
+    # Furnace Golem (Kuerbis, Ofen und Mana-Block): jede Animation, die der Golem-Dienst spielt
+    "fgolem_idle": ("golem/furnace_golem.bbmodel", "idle_normal", -30, 1.0),
+    "fgolem_play": ("golem/furnace_golem.bbmodel", "idle_play", -30, 1.0),
+    "fgolem_start": ("golem/furnace_golem.bbmodel", "start_end", -30, 1.0),
+    "fgolem_work": ("golem/furnace_golem.bbmodel", "working", -30, 1.0),
+    "fgolem_take": ("golem/furnace_golem.bbmodel", "take_shard", -30, 1.0),
+    "fgolem_done": ("golem/furnace_golem.bbmodel", "bake_done", -30, 1.0),
+    "fgolem_wait": ("golem/furnace_golem.bbmodel", "wait_empty", -30, 1.0),
+    "fgolem_rest": ("golem/furnace_golem.bbmodel", "rest_full", -30, 1.0),
+    "fgolem_greet": ("golem/furnace_golem.bbmodel", "greet", -30, 1.0),
+    "fgolem_happy": ("golem/furnace_golem.bbmodel", "deposit_happy", -30, 1.0),
     # Bloecke (assets/custom_blocks): langsam gedreht, 'drehen' Bilder fuer eine Umdrehung
     "mana_erz": ("blocks:mana_ore/mana_ore.bbmodel", None, 35, 0.8, 1.0, 120),
     "warpett_ei": ("blocks:warpett_egg/warpett_egg.bbmodel", None, -30, 0.9),
@@ -73,6 +84,7 @@ AUFTRAEGE = {
     "golem_cover": ("command_golem/command_golem_1.bbmodel", None, -25, 1.0),
     "mala_cover": ("crew/mala_mage.bbmodel", "hello.model.new", -22, 1.0),
     "warpett_cover": ("warper/Warpett_dandelion.bbmodel", "idle", 30, 1.0),
+    "fgolem_cover": ("golem/furnace_golem.bbmodel", "greet", -25, 1.0),
 }
 
 

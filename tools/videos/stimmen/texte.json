@@ -248,6 +248,54 @@
     "forestlinge-outro": {
       "regie": "[cheerfully]",
       "de": "Halt die Augen offen – irgendwo wartet schon der nächste."
+    },
+    "furnace_golem-intro": {
+      "regie": "[warmly, playfully]",
+      "de": "Das ist der Furnace Golem. Bei ihm landet dein Mana auf dem Konto – und aus Mana-Scherben backt er dir neues."
+    },
+    "furnace_golem-block": {
+      "regie": "[explaining]",
+      "de": "Für ihn brauchst du zuerst einen Mana-Block: acht Mana-Kugeln rund um eine Mana-Ladung."
+    },
+    "furnace_golem-bauen": {
+      "regie": "[warmly]",
+      "de": "Stell den Mana-Block hin, darauf einen Ofen und zum Schluss einen geschnitzten Kürbis. Schon steht er."
+    },
+    "furnace_golem-einzahlen": {
+      "regie": "[explaining]",
+      "de": "Klick ihn an, und er öffnet sein Menü. Hier zahlst du Kugeln und Blöcke auf dein Konto ein."
+    },
+    "furnace_golem-abheben": {
+      "regie": "[reassuring]",
+      "de": "Brauchst du Mana wieder in der Hand, hebst du es hier ab – als Kugeln oder als ganze Blöcke."
+    },
+    "furnace_golem-geode": {
+      "regie": "[softly, mysteriously]",
+      "de": "Tief in den Höhlen mancher Inseln liegt knospender Mana-Amethyst. Darauf wächst langsam ein Kristall."
+    },
+    "furnace_golem-scherbe": {
+      "regie": "[explaining]",
+      "de": "Bau ihn erst ab, wenn er ganz ausgewachsen ist. Dann bekommst du eine Mana-Scherbe."
+    },
+    "furnace_golem-truhe": {
+      "regie": "[playfully]",
+      "de": "Leg die Scherben in eine Truhe direkt neben ihn. Den Rest erledigt er selbst."
+    },
+    "furnace_golem-backen": {
+      "regie": "[delighted]",
+      "de": "Zwei Minuten backt er an jeder Scherbe. Dann bekommst du ein Mana – sogar, wenn du gar nicht online bist."
+    },
+    "furnace_golem-limit": {
+      "regie": "[amused]",
+      "de": "Zwanzig Scherben am Tag schafft er, für alle deine Golems zusammen. Danach macht er ein Nickerchen."
+    },
+    "furnace_golem-abbauen": {
+      "regie": "[warmly]",
+      "de": "Soll er umziehen? Bau ihn über sein Menü ab. Alle drei Blöcke bekommst du zurück."
+    },
+    "furnace_golem-outro": {
+      "regie": "[cheerfully]",
+      "de": "Viel Spaß beim Backen!"
     }
   }
 }

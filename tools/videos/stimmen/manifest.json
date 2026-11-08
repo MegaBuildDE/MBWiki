@@ -1435,5 +1435,297 @@
       ],
       "hash": "5a2692c979dd425b"
     }
+  },
+  "furnace_golem-intro": {
+    "de": {
+      "ms": 7010,
+      "text": "Das ist der Furnace Golem. Bei ihm landet dein Mana auf dem Konto – und aus Mana-Scherben backt er dir neues.",
+      "words": [
+        130,
+        450,
+        650,
+        850,
+        1330,
+        2130,
+        2370,
+        2690,
+        2970,
+        3330,
+        3570,
+        3730,
+        3850,
+        4477,
+        4530,
+        4810,
+        5090,
+        5890,
+        6090,
+        6210,
+        6410
+      ],
+      "hash": "a3482882519be059"
+    }
+  },
+  "furnace_golem-block": {
+    "de": {
+      "ms": 5890,
+      "text": "Für ihn brauchst du zuerst einen Mana-Block: acht Mana-Kugeln rund um eine Mana-Ladung.",
+      "words": [
+        110,
+        270,
+        510,
+        830,
+        950,
+        1510,
+        1790,
+        2910,
+        3230,
+        4110,
+        4430,
+        4670,
+        4990
+      ],
+      "hash": "1854804edac0b79e"
+    }
+  },
+  "furnace_golem-bauen": {
+    "de": {
+      "ms": 6690,
+      "text": "Stell den Mana-Block hin, darauf einen Ofen und zum Schluss einen geschnitzten Kürbis. Schon steht er.",
+      "words": [
+        80,
+        400,
+        560,
+        1240,
+        1680,
+        2080,
+        2400,
+        2960,
+        3200,
+        3400,
+        3840,
+        4080,
+        4760,
+        5600,
+        5920,
+        6240
+      ],
+      "hash": "85598d4bf18ec9a6"
+    }
+  },
+  "furnace_golem-einzahlen": {
+    "de": {
+      "ms": 5830,
+      "text": "Klick ihn an, und er öffnet sein Menü. Hier zahlst du Kugeln und Blöcke auf dein Konto ein.",
+      "words": [
+        80,
+        360,
+        600,
+        1040,
+        1200,
+        1360,
+        1680,
+        1840,
+        2640,
+        3000,
+        3280,
+        3440,
+        4000,
+        4160,
+        4560,
+        4760,
+        4960,
+        5280
+      ],
+      "hash": "448a6bd68a61b133"
+    }
+  },
+  "furnace_golem-abheben": {
+    "de": {
+      "ms": 5260,
+      "text": "Brauchst du Mana wieder in der Hand, hebst du es hier ab – als Kugeln oder als ganze Blöcke.",
+      "words": [
+        40,
+        400,
+        520,
+        840,
+        1080,
+        1200,
+        1320,
+        1800,
+        2080,
+        2200,
+        2333,
+        2520,
+        3000,
+        3160,
+        3320,
+        3880,
+        4120,
+        4360,
+        4600
+      ],
+      "hash": "d01756a0ced22f75"
+    }
+  },
+  "furnace_golem-geode": {
+    "de": {
+      "ms": 7580,
+      "text": "Tief in den Höhlen mancher Inseln liegt knospender Mana-Amethyst. Darauf wächst langsam ein Kristall.",
+      "words": [
+        40,
+        440,
+        600,
+        760,
+        1240,
+        1640,
+        2360,
+        2680,
+        3480,
+        5120,
+        5680,
+        6160,
+        6600,
+        6760
+      ],
+      "hash": "55da4ca327f36280"
+    }
+  },
+  "furnace_golem-scherbe": {
+    "de": {
+      "ms": 5380,
+      "text": "Bau ihn erst ab, wenn er ganz ausgewachsen ist. Dann bekommst du eine Mana-Scherbe.",
+      "words": [
+        60,
+        300,
+        540,
+        940,
+        1153,
+        1380,
+        1607,
+        1900,
+        2700,
+        3260,
+        3580,
+        3940,
+        4060,
+        4300
+      ],
+      "hash": "15d302a9058fb59d"
+    }
+  },
+  "furnace_golem-truhe": {
+    "de": {
+      "ms": 5330,
+      "text": "Leg die Scherben in eine Truhe direkt neben ihn. Den Rest erledigt er selbst.",
+      "words": [
+        180,
+        420,
+        660,
+        1140,
+        1300,
+        1540,
+        2020,
+        2500,
+        2820,
+        3540,
+        3700,
+        4100,
+        4500,
+        4700
+      ],
+      "hash": "e75ad21b087e3007"
+    }
+  },
+  "furnace_golem-backen": {
+    "de": {
+      "ms": 6930,
+      "text": "Zwei Minuten backt er an jeder Scherbe. Dann bekommst du ein Mana – sogar, wenn du gar nicht online bist.",
+      "words": [
+        210,
+        530,
+        1170,
+        1410,
+        1610,
+        1810,
+        2210,
+        3170,
+        3410,
+        3730,
+        3890,
+        4170,
+        4610,
+        4690,
+        5170,
+        5330,
+        5570,
+        5730,
+        5970,
+        6330
+      ],
+      "hash": "3eb57cadee06a8fa"
+    }
+  },
+  "furnace_golem-limit": {
+    "de": {
+      "ms": 6490,
+      "text": "Zwanzig Scherben am Tag schafft er, für alle deine Golems zusammen. Danach macht er ein Nickerchen.",
+      "words": [
+        210,
+        810,
+        1250,
+        1530,
+        1730,
+        2050,
+        2530,
+        2850,
+        3130,
+        3450,
+        3890,
+        4810,
+        5250,
+        5450,
+        5570,
+        5690
+      ],
+      "hash": "fc6174336bdee673"
+    }
+  },
+  "furnace_golem-abbauen": {
+    "de": {
+      "ms": 5200,
+      "text": "Soll er umziehen? Bau ihn über sein Menü ab. Alle drei Blöcke bekommst du zurück.",
+      "words": [
+        110,
+        350,
+        510,
+        1470,
+        1710,
+        1870,
+        2030,
+        2310,
+        2590,
+        3270,
+        3470,
+        3710,
+        4030,
+        4430,
+        4550
+      ],
+      "hash": "34615e55d4a996c4"
+    }
+  },
+  "furnace_golem-outro": {
+    "de": {
+      "ms": 1770,
+      "text": "Viel Spaß beim Backen!",
+      "words": [
+        110,
+        470,
+        830,
+        1070
+      ],
+      "hash": "3b34f540e5cb4616"
+    }
   }
 }
