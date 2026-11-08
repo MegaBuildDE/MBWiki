@@ -4,7 +4,8 @@
 Zahlen: Standardwerte aus MBSkyManager/src/main/resources/config.yml und
 skilltree/SKILLTREE.yml, MBEconomy (Startguthaben) und MBPM (Votes), Stand der
 Release vom 12.10.2026. Preis = 100 x 1,05^Kaeufe x (1 + 0,25 x (Stelle - 1)),
-auf 5 gerundet. Mana-Erz gibt Kugeln; den Ofen-Golem zum Einzahlen gibt es noch nicht.
+auf 5 gerundet. Mana-Erz gibt Kugeln; eingezahlt werden sie beim Furnace Golem
+(MBSkyManager 84861dbd, docs/MANA.md).
 
     python3 bauen.py skilltree [--sprache en]
 """
@@ -112,7 +113,7 @@ def szene_erz(e, t, d):
         mct(e, cx, cy - 250, "§d+5 " + L("Mana-Kugeln", "Mana orbs"), 5, ein * aus_kubisch(phase(t, 4.3, 4.7)), anker="m")
     for i, txt in enumerate((L("§7Nur mit §fSpitzhacke §7– jede ist gleich schnell", "§7Pickaxe only §7– every pickaxe is equally fast"),
                              L("§7Mit §fGlück §7mehr Kugeln, bis §f200 §7am Tag", "§7More orbs with §fFortune§7, up to §f200 §7a day"),
-                             L("§7Einzahlen beim §fOfen-Golem §7– folgt noch", "§7Deposit at the §fFurnace Golem §7– coming later"))):
+                             L("§7Aufs Konto beim §fFurnace Golem", "§7Deposit them at the §fFurnace Golem"))):
         u = aus_kubisch(phase(t, 1.0 + i * .5, 1.5 + i * .5))
         mct(e, 900, 700 + i * 46, txt, 4, ein * u)
     icon_bei(e, "mining", 1460, 300, 96, ein * (phase(t, 2.5, 2.8) - phase(t, 3.9, 4.1)))

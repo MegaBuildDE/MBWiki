@@ -10,7 +10,7 @@ icon: sitemap
 <figure><img src="../.gitbook/assets/videos/skilltree-en.jpg" alt="The skill tree with the Forests path"><figcaption><p>From the video “Mana & biomes”</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/skilltree-en.mp4" %}
-**Video: Mana & biomes** (1:16) – how you earn Mana and use it to grow your island world.
+**Video: Mana & biomes** (1:17) – how you earn Mana and use it to grow your island world.
 {% endfile %}
 
 In the skill tree you unlock **new biomes** for your island. New areas you explore only ever come from biomes your island owns.
