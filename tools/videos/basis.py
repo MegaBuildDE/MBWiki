@@ -654,6 +654,26 @@ def untertitel(e, text, alpha, y=1012, S=4):
         mct(e, W / 2, y0 + 3 * S + i * 11 * S + 2 * S, z, S, alpha, anker="m")
 
 
+def untertitel_fenster(stuecke, luecke=.5):
+    """(t0, t1, ein, aus, text) je Untertitel-Stueck, nie zwei zugleich im Bild.
+
+    Ein Stueck blendet .2 s vor t0 ein und .3 s nach t1 aus. Die Stuecke einer Mala-Zeile
+    folgen lueckenlos (t1 des einen = t0 des naechsten); mit beiden Blenden laegen dann
+    zwei Tafeln eine halbe Sekunde uebereinander ("Mala: Mala: ..."). Beginnt das naechste
+    Stueck weniger als luecke nach dem Ende, reicht dieses bis dorthin und wechselt hart,
+    ohne Aus- und ohne Einblende."""
+    reihe = sorted(stuecke, key=lambda s: s[0])
+    out = []
+    for i, (t0, t1, text) in enumerate(reihe):
+        ein = i == 0 or reihe[i - 1][1] < t0 - luecke
+        if i + 1 < len(reihe) and reihe[i + 1][0] < t1 + luecke:
+            t1, aus = reihe[i + 1][0], False
+        else:
+            aus = True
+        out.append((t0, t1, ein, aus, text))
+    return out
+
+
 # ── Film ────────────────────────────────────────────────────────────────────
 
 class Film:
@@ -723,9 +743,9 @@ class Film:
         mc.einfuegen(f, ebene, 0, 0, aus)
         if "titel" in sz:
             beschriftung(f, sz, lt, d)
-        for t0, t1, text in self.untertitel:
-            if t0 - .2 <= t < t1 + .3:
-                u = aus_kubisch(phase(t, t0 - .2, t0)) * (1 - phase(t, t1, t1 + .3))
+        for t0, t1, ein, aus, text in untertitel_fenster(self.untertitel):
+            if (t0 - .2 if ein else t0) <= t < (t1 + .3 if aus else t1):
+                u = (aus_kubisch(phase(t, t0 - .2, t0)) if ein else 1.0) * ((1 - phase(t, t1, t1 + .3)) if aus else 1.0)
                 untertitel(f, text, u)
         if not letzte and self.wortmarke:
             mc.einfuegen(f, WORTMARKE, 40, 22, .95)
