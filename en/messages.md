@@ -10,18 +10,27 @@ icon: envelope
 ## Global chat
 
 ```
-!<text>
+<text>
 /g <text>
+!<text>
 ```
 
-A line with **`!`** in front – or `/g <text>` – goes to **every player on the network**, no matter which server they're on. The line starts with `[Global]`, your [rank](ranks.md) and your name; clicking the name suggests `/msg`.
+Just type in chat and your line goes to **every player on the network**, no matter which server they're on – the same goes for `/g <text>`. The line starts with `[Global]`, your [rank](ranks.md), your [clan tag](clans.md) and your name; clicking the name suggests `/msg`.
 
-* A letter or digit has to follow the `!` – a lone “!” or “!!!” stays normal chat.
-* There are **3 seconds** between two lines, and at most **256 characters** per line.
+| How you write | Who reads it |
+| ------------- | ------------ |
+| Normally in chat | Everyone on the network |
+| `/g <text>` | Everyone on the network – even where normal chat doesn't go out |
+| **`!`** in front, e.g. `!Hello everyone` | Only the players on **your** server; the `!` is dropped |
+| **`#`** in front or `/c` | Your [clan](clans.md) |
+
+* A letter or digit has to follow the `!` – a lone “!” or “!!!” is a normal line.
+* At most **one line per second** and **256 characters** per line. If you were too fast, the line doesn't get through – chat shows it back to you with its text so you can send it again.
 * The chat filter and mutes apply just like in normal chat (see below).
+* **During the intro** on the intro server, your line stays there and nothing from the global chat arrives – otherwise the whole network's chat would run through Mala's story. `/g` still reaches everyone.
 
 {% hint style="info" %}
-**On the islands**, `!` also works while talking to [AI residents](residents.md), in the island chat and with the [Forestlings](forestlings.md). If you only want to write to everyone on **this** server, put a **`+`** at the start. To write to your clan, put **`#`** in front or use `/c` (see [Clans](clans.md)).
+**With residents and Forestlings**, your line only goes to them – while talking to [AI residents](residents.md), in the island chat and with the [Forestlings](forestlings.md). Put **`!`** in front to write to everyone on the server there, or use `/g` for the whole network.
 {% endhint %}
 
 ## Private messages

@@ -49,13 +49,13 @@ During the conversation, your chat lines only go to the resident. You see them i
 {% step %}
 #### Write to everyone
 
-If you still want to write something in the normal chat, put a **`+`** at the start – the line then goes to everyone on this server. With **`!`** in front it goes to the [global chat](messages.md#global-chat), so to everyone on the network.
+If you still want to write something in the normal chat, put a **`!`** at the start – the line then goes to everyone on this server, without the `!`. With **`/g <text>`** it goes to the [global chat](messages.md#global-chat), so to everyone on the network.
 {% endstep %}
 {% endstepper %}
 
 ### Island chat
 
-When you're standing on the island of residents you already know, you can write to them **without clicking and without a name** – your chat then goes to them, not to other players. A line in chat lets you know when you arrive and when you leave. Put `+` at the start to write to everyone on the server, or `!` to write to the [global chat](messages.md#global-chat).
+When you're standing on the island of residents you already know, you can write to them **without clicking and without a name** – your chat then goes to them, not to other players. A line in chat lets you know when you arrive and when you leave. Put `!` at the start to write to everyone on the server, or use `/g` to write to the [global chat](messages.md#global-chat). Once you leave the island, your chat goes to the whole network again.
 
 ### What they understand
 
@@ -141,7 +141,7 @@ Below the players, the tab list shows a section **“Residents (KI)”** with up
 
 <summary>Can other players read what I write on the island?</summary>
 
-No. On the island of residents you know, your chat only goes to them. Put `+` at the start to write to everyone on the server, or `!` to write to the [global chat](messages.md#global-chat).
+No. On the island of residents you know, your chat only goes to them. Put `!` at the start to write to everyone on the server, or use `/g` to write to the [global chat](messages.md#global-chat).
 
 </details>
 

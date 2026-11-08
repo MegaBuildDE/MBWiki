@@ -44,7 +44,7 @@ Schreib **ja** in den Chat – innerhalb von 30 Sekunden nach seiner Frage. Der 
 {% endstepper %}
 
 * Gekauft wird **nur** direkt auf seine Preisfrage hin. Ein „ok“ führt zu einer Rückfrage, „später“ oder „vielleicht“ kaufen nie.
-* Mit **erzähl** erzählt er dir eine Geschichte, mit **tschüss** beendest du das Gespräch. Mit `+` vorn schreibst du an alle auf dem Server, mit `!` vorn in den [Globalchat](../ag/nachrichten.md#globalchat).
+* Mit **erzähl** erzählt er dir eine Geschichte, mit **tschüss** beendest du das Gespräch. Was du sonst schreibst, geht nur an ihn. Mit `!` vorn schreibst du an alle auf dem Server, mit `/g` in den [Globalchat](../ag/nachrichten.md#globalchat).
 * Gehst du weg oder schreibst eine Weile nichts, endet das Gespräch.
 
 ## Alle Segen
@@ -56,16 +56,16 @@ Schreib **ja** in den Chat – innerhalb von 30 Sekunden nach seiner Frage. Der 
 | Birke | **Luftsprung** | In der Luft noch einmal springen | 25 Mana | 120 s |
 | Dschungel | **Rankenschwinger** | Gegen eine Wand laufen und an ihr hochlaufen | 25 Mana | 45 s |
 | Akazie | **Wüstenwind** | Zweimal kurz hintereinander hüpfen – ein Schub in Blickrichtung | 25 Mana | 120 s |
-| Mangrove | **Wurzelbrücke** | Beim Gehen wachsen Wurzeln unter dir und einen Schritt voraus | 30 Mana | 20 s |
+| Mangrove | **Wurzelbrücke** | Beim Gehen wachsen Wurzeln unter dir und einen Schritt voraus. Schau nach oben und spring, dann steigt sie mit – abwärts baut sie nicht | 30 Mana | 60 s |
 | Blasseiche | **Geisterschritt** | In der Luft noch einmal springen und kurz schweben | 30 Mana | einmal, 120 s bereit |
 | Bambus | **Bambuskatapult** | In der Luft noch einmal springen – weit nach vorn geschleudert, Landung ohne Fallschaden | 30 Mana | einmal, 120 s bereit |
-| Kirsche | **Kirschblütensprung** | Bringt dich sofort zu einer zufälligen Insel 100–300 Blöcke entfernt | 30 Mana | sofort |
-| Schwarzeiche | **Schattenportal** | Bringt dich sofort zu einer zufälligen Insel 300–500 Blöcke entfernt | 40 Mana | sofort |
+| Kirsche | **Kirschblütensprung** | Bringt dich sofort zu einer zufälligen Insel, meist 100–300 Blöcke entfernt | 30 Mana | sofort |
+| Schwarzeiche | **Schattenportal** | Bringt dich sofort zu einer zufälligen Insel, meist 300–500 Blöcke entfernt | 40 Mana | sofort |
 
 * **Immer nur ein Segen.** Ein neuer ersetzt den laufenden – der Forestling sagt dir das vorher.
 * Segen wirken nur im **Überlebensmodus**.
 * **Kein Rettungsschirm:** Luftsprung, Geisterschritt und Co. fangen nicht jeden Sturz ab, und die Wurzelbrücke wächst nur, solange du gehst.
-* Die Inselsprünge landen nur auf Inseln, die es schon gibt. Findet sich keine passende, wird nichts abgebucht.
+* Die Inselsprünge landen nur auf Inseln, die es schon gibt. Liegt in der Spanne keine, springen sie etwas näher oder weiter (die halbe bis anderthalbfache Weite). Findet sich gar keine passende, wird nichts abgebucht.
 
 ## Forestlinge umsiedeln
 

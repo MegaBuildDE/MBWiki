@@ -44,7 +44,7 @@ Type **yes** in chat – within 30 seconds of its question. The blessing takes e
 {% endstepper %}
 
 * You **only** buy as a direct answer to its price question. An “ok” makes it ask again; “later” or “maybe” never buy.
-* Say **tell me** and it tells you a story; **bye** ends the conversation. Put `+` at the start to write to everyone on the server, or `!` to write to the [global chat](messages.md#global-chat).
+* Say **tell me** and it tells you a story; **bye** ends the conversation. Anything else you write only goes to it. Put `!` at the start to write to everyone on the server, or use `/g` to write to the [global chat](messages.md#global-chat).
 * If you walk away or don't write anything for a while, the conversation ends.
 
 ## All blessings
@@ -56,16 +56,16 @@ Type **yes** in chat – within 30 seconds of its question. The blessing takes e
 | Birch | **Air Jump** | Jump once more in mid-air | 25 Mana | 120 s |
 | Jungle | **Vine Swinger** | Walk into a wall and run right up it | 25 Mana | 45 s |
 | Acacia | **Desert Wind** | Hop twice in quick succession – a push in the direction you're looking | 25 Mana | 120 s |
-| Mangrove | **Root Bridge** | As you walk, roots grow beneath you and one step ahead | 30 Mana | 20 s |
+| Mangrove | **Root Bridge** | As you walk, roots grow beneath you and one step ahead. Look up and jump to make it climb – it doesn't build downwards | 30 Mana | 60 s |
 | Pale Oak | **Ghost Step** | Jump once more in mid-air and float for a moment | 30 Mana | once, ready for 120 s |
 | Bamboo | **Bamboo Catapult** | Jump once more in mid-air – flung far forward, landing without fall damage | 30 Mana | once, ready for 120 s |
-| Cherry | **Blossom Leap** | Takes you instantly to a random island 100–300 blocks away | 30 Mana | instant |
-| Dark Oak | **Shadow Portal** | Takes you instantly to a random island 300–500 blocks away | 40 Mana | instant |
+| Cherry | **Blossom Leap** | Takes you instantly to a random island, usually 100–300 blocks away | 30 Mana | instant |
+| Dark Oak | **Shadow Portal** | Takes you instantly to a random island, usually 300–500 blocks away | 40 Mana | instant |
 
 * **Only one blessing at a time.** A new one replaces the one that's running – the Forestling tells you before.
 * Blessings only work in **survival mode**.
 * **No safety net:** Air Jump, Ghost Step and the like won't catch every fall, and the Root Bridge only grows while you're walking.
-* The island jumps only land on islands that already exist. If there's no suitable one, nothing is charged.
+* The island jumps only land on islands that already exist. If there's none in the range, they jump a bit closer or farther (half to one and a half times the distance). If there's no suitable island at all, nothing is charged.
 
 ## Moving Forestlings
 
