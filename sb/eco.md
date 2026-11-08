@@ -65,7 +65,7 @@ Fortschritte und Erfolge geben nur beim ersten Mal Mana – egal auf welcher Ins
 * Alles außerhalb des **Überlebensmodus** und während des Vorspanns
 * Blöcke, die du **selbst platziert** hast – etwa Erze, Stämme, Melonen oder Kürbisse
 * Erz, das du **ohne Spitzhacke** abbaust
-* Monster aus **Spawnern**, Spawn-Eiern, [Mobplates](mobplates.md) oder Befehlen
+* Monster aus **Spawnern** – auch aus [Spawnern aus Mobplates](feder.md#mobs-aus-dem-spawner) –, Spawn-Eiern, [Mobplates](mobplates.md) oder Befehlen, auch wenn sie sich danach verwandeln
 * **AFK-Angeln** oder Angeln außerhalb von offenem Wasser
 * Tiere aus eigener Zucht zähmen
 * Level, die du nach dem Tod wieder aufsammelst

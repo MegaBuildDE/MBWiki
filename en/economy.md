@@ -65,7 +65,7 @@ Advancements and achievements only give Mana the first time – no matter which 
 * Anything outside **Survival mode**, and anything during the intro
 * Blocks you **placed yourself** – such as ores, logs, melons or pumpkins
 * Ore you mine **without a pickaxe**
-* Monsters from **spawners**, spawn eggs, [Mobplates](mobplates.md) or commands
+* Monsters from **spawners** – including [spawners from Mobplates](feather.md#mobs-from-the-spawner) –, spawn eggs, [Mobplates](mobplates.md) or commands, even after they transform
 * **AFK fishing** or fishing outside of open water
 * Taming animals you bred yourself
 * Levels you pick up again after dying

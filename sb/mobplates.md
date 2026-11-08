@@ -108,6 +108,12 @@ Passt beim Freisetzen kein Mob an die Stelle, bleibt die Plate bei dir. Einen Mo
 
 Mehr dazu unter [Mitglieder & Rechte](mitglieder.md#die-rechte).
 
+## Spawner aus Mobplates
+
+{% hint style="warning" %}
+**Kommt bald:** Mit der [Feder der Sanftheit](feder.md) baust du normale Spawner ab und bekommst Spawner-Fragmente. Acht Fragmente um eine gefüllte Plate ergeben dann einen Spawner mit diesem Mob – das geht mit 28 Plates, etwa Kuh, Schaf, Zombie oder Spinne.
+{% endhint %}
+
 ## Erfolge
 
 Zwei [Erfolge](erfolge.md#mobplates) gehören zu den Mobplates: **Erster Fang** für deinen ersten Mob in einer Plate und **Neu eingezogen** für den ersten Mob, den du wieder platzierst. Beide gelten auch für Warpetts.
@@ -153,4 +159,5 @@ Biene, Böe, Creeper, Delfin, Diener, Dorfbewohner, Dromedar, Eisbär, Eisengole
 * [Mitglieder & Rechte](mitglieder.md)
 * [Erfolge](erfolge.md)
 * [Warpetts](warpetts.md)
+* [Feder der Sanftheit](feder.md)
 * [Ressourcen & Farming](farming.md)

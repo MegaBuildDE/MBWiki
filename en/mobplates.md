@@ -108,6 +108,12 @@ If no mob can appear at the spot when releasing, you keep the plate. Only one pl
 
 More under [Members & rights](members.md#the-rights).
 
+## Spawners from Mobplates
+
+{% hint style="warning" %}
+**Coming soon:** With the [Feather of Softness](feather.md) you mine normal spawners and get spawner fragments. Eight fragments around a filled plate then make a spawner with that mob – this works with 28 plates, such as cow, sheep, zombie or spider.
+{% endhint %}
+
 ## Achievements
 
 Two [achievements](achievements.md#mobplates) belong to the Mobplates: **First Catch** for your first mob in a plate and **Moved In** for the first mob you place again. Both count for Warpetts too.
@@ -153,4 +159,5 @@ Allay, Armadillo, Bat, Bee, Blaze, Bogged, Breeze, Camel, Camel Husk, Cave Spide
 * [Members & rights](members.md)
 * [Achievements](achievements.md)
 * [Warpetts](warpetts.md)
+* [Feather of Softness](feather.md)
 * [Resources & farming](farming.md)

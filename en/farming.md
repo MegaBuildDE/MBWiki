@@ -55,6 +55,10 @@ Monsters spawn in the dark as usual, but at most **15 at a time per player** –
 **Building a mob farm?** The farm shares the limit with everything around it. Light up the islands nearby so the monsters spawn in your farm. Monsters from spawners don't give Mana and don't count for quests.
 {% endhint %}
 
+## Spawners
+
+With the [Feather of Softness](feather.md) – coming soon – you mine normal spawners and get **spawner fragments**. Eight of them around a filled [Mobplate](mobplates.md) make your own spawner, for example for cows, sheep, zombies or spiders. It spawns much more slowly than a normal spawner, and an island holds at most **8**.
+
 ## Loot
 
 Chests, barrels, pots and shelves in structures are **filled once**, when they're first opened. A chest you place yourself stays empty. With a brush, you uncover suspicious sand and gravel. With a bit of luck, there's a [Warpett egg](warpetts.md#warpett-eggs) inside.
@@ -79,3 +83,4 @@ When it comes to Mana and quests, only this applies:
 * [The island world](world.md)
 * [Mana & Ruby](economy.md)
 * [Quests](quests.md)
+* [Feather of Softness](feather.md)

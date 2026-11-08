@@ -55,6 +55,10 @@ Monster spawnen im Dunkeln wie gewohnt, aber höchstens **15 gleichzeitig pro Sp
 **Monsterfarm bauen?** Die Farm teilt sich das Limit mit allem ringsum. Beleuchte die Inseln in der Nähe, damit die Monster in der Farm spawnen. Monster aus Spawnern geben kein Mana und zählen nicht für Quests.
 {% endhint %}
 
+## Spawner
+
+Mit der [Feder der Sanftheit](feder.md) – sie kommt bald – baust du normale Spawner ab und bekommst **Spawner-Fragmente**. Acht davon um eine gefüllte [Mobplate](mobplates.md) ergeben deinen eigenen Spawner, etwa für Kühe, Schafe, Zombies oder Spinnen. Er spawnt deutlich langsamer als ein normaler Spawner, und höchstens **8** stehen auf einer Insel.
+
 ## Beute
 
 Truhen, Fässer, Töpfe und Regale in Bauwerken sind beim ersten Öffnen **einmal gefüllt**. Eine Truhe, die du selbst platzierst, bleibt leer. Mit einem Pinsel legst du verdächtigen Sand und Kies frei. Mit Glück steckt ein [Warpett-Ei](warpetts.md#warpett-eier) darin.
@@ -79,3 +83,4 @@ Für Mana und Quests gilt nur:
 * [Die Inselwelt](welt.md)
 * [Mana & Ruby](eco.md)
 * [Quests](quests.md)
+* [Feder der Sanftheit](feder.md)
