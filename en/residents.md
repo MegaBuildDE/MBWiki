@@ -7,15 +7,11 @@ icon: house-user
 
 # AI Residents
 
-<figure><img src="../.gitbook/assets/videos/bewohner-en.jpg" alt="A Goblin resident in chat"><figcaption><p>From the video “Your island is alive”</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/videos/bewohner-en.jpg" alt="Residents chopping, harvesting, forging, resting and sleeping"><figcaption><p>From the video “Your island is alive”</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/bewohner-en.mp4" %}
-**Video: Your island is alive** (1:22, with sound) – AI residents and Forestlings, introduced by Mala.
+**Video: Your island is alive** (1:23, with sound) – AI residents and Forestlings, introduced by Mala.
 {% endfile %}
-
-{% hint style="info" %}
-The video still shows prices in Mana. Since 08.11.2026, residents trade for **Ruby** – see [Trading](#trading) for how it works.
-{% endhint %}
 
 **Goblins** and **Shroomlings** live on the islands around you. They build, harvest, forge, take breaks, sleep at night – and talk to you in chat.
 

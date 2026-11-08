@@ -10,12 +10,8 @@ icon: house-user
 <figure><img src="../.gitbook/assets/videos/bewohner.jpg" alt="Cover des Videos „Deine Insel lebt“ mit einem Goblin und einem Shroomling"><figcaption><p>Das Video „Deine Insel lebt“ – Mala erklärt, Ton an</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/bewohner.mp4" %}
-**Video: Deine Insel lebt** (1:22, mit Ton) – KI-Bewohner und Forestlinge, vorgestellt von Mala.
+**Video: Deine Insel lebt** (1:23, mit Ton) – KI-Bewohner und Forestlinge, vorgestellt von Mala.
 {% endfile %}
-
-{% hint style="info" %}
-Das Video zeigt noch Preise in Mana. Seit dem 08.11.2026 handeln die Bewohner mit **Ruby** – wie, steht unter [Handeln](#handeln).
-{% endhint %}
 
 Auf den Inseln um dich herum wohnen **Goblins** und **Shroomlinge**. Sie bauen, ernten, schmieden, machen Pause, schlafen nachts – und reden mit dir im Chat.
 
