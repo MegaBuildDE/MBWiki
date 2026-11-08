@@ -4,7 +4,8 @@ eine Figur aus dem Film, am unteren Bildrand angeschnitten. 1920 x 1080, z. B. f
 
 Die Figuren kommen gross gerendert aus modelle.py:
 
-    python3 modelle.py --groesse 1536 goblin_cover shroom_cover golem_cover mala_cover warpett_cover forest_cover
+    python3 modelle.py --groesse 1536 goblin_cover shroom_cover golem_cover mala_cover warpett_cover forest_cover \\
+        fgolem_cover
     python3 cover.py [film ...]          -> build/cover/<film>.jpg
     python3 cover.py --vorne ORDNER      Cover als erste Sekunde vor ORDNER/<film>.mp4 setzen
                                          (Discord zeigt das erste Bild als Vorschau)
@@ -149,8 +150,24 @@ def forestlinge():
     return abschluss(f)
 
 
+def furnace_golem():
+    f = rahmen()
+    licht(f, 1420, 600, 660, (255, 120, 200), 140)
+    licht(f, 1330, 760, 300, (255, 170, 80), 90)
+    figur(f, "fgolem_cover", 14, 1420, 250, 620)
+    scherbe, block, kugel = mc.icon16("mana_shard"), mc.icon16("mana_block"), mc.icon16("mana_orb")
+    for bild, cx, cy, g in ((scherbe, 1010, 330, 120), (block, 1820, 250, 120), (scherbe, 1830, 800, 104),
+                            (kugel, 1040, 820, 96)):
+        skaliert(f, bild, cx, cy, g)
+    for cx, cy, g in ((960, 210, 26), (1880, 520, 22), (1640, 130, 30), (1100, 600, 18)):
+        funkeln(f, cx, cy, g, 1.0)
+    text(f, "FURNACE GOLEM", ["Furnace", "Golem"], "Mana einzahlen, Scherben verbacken",
+         ["Mana ein- und abheben", "Mana-Scherben aus der Geode", "1 Mana je Scherbe, 20 am Tag"])
+    return abschluss(f)
+
+
 COVER = {"bewohner": bewohner, "skilltree": skilltree, "clans": clans, "start": start, "mobplates": mobplates,
-         "forestlinge": forestlinge}
+         "forestlinge": forestlinge, "furnace_golem": furnace_golem}
 
 
 VORNE_S = 1.2  # so lange steht das Cover vor dem Film, dann geht er mit einer kurzen Blende los

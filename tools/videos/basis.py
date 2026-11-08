@@ -642,6 +642,9 @@ def untertitel(e, text, alpha, y=1012, S=4):
     if alpha <= 0.003 or not text:
         return
     zeilen = mc_umbruch("§f" + text, 300)
+    if len(zeilen) > 1 and re.sub(r"§.", "", zeilen[-1]).strip() in ("–", "-"):
+        strich = re.sub(r"§.", "", zeilen.pop()).strip()
+        zeilen[-1] += " " + strich
     zeilen[0] = "§bMala§7: " + zeilen[0]
     hoehe = len(zeilen) * 11 * S + 6 * S
     breite_gui = max(mc.breite(z) for z in zeilen) + 8

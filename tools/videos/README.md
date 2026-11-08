@@ -10,6 +10,7 @@ Kurze Feature-Filme fürs Wiki, gebaut aus echten Spielinhalten: Minecraft-Schri
 | Clans – ein erster Blick | `filme/clans.py` | `sb/clans.md`, `en/clans.md` (nur DE) |
 | Mobplates | `filme/mobplates.py` | `sb/mobplates.md`, `en/mobplates.md` (nur DE) |
 | Forestlinge | `filme/forestlinge.py` | `sb/forestlinge.md`, `en/forestlings.md` (nur DE) |
+| Furnace Golem | `filme/furnace_golem.py` | `sb/furnace-golem.md`, `en/furnace-golem.md` (nur DE) |
 
 Ergebnis liegt in `.gitbook/assets/videos/<film>.mp4` (DE) bzw. `<film>-en.mp4`, daneben das Standbild `<film>.jpg` für die Seite.
 
