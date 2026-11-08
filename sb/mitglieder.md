@@ -40,7 +40,7 @@ Einladen dürfen der Besitzer und Mitglieder mit dem Recht **Mitglieder**.
 | Recht | Was es erlaubt |
 | ----- | -------------- |
 | **Bauen** | Blöcke setzen und abbauen, Eimer, Feuer, Rüstungsständer, Rahmen, Schilder |
-| **Behälter** | Kisten, Fässer, Öfen, Trichter, Braustände, Lesepulte, Mana-Ofen |
+| **Behälter** | Kisten, Fässer, Öfen, Trichter, Braustände, Lesepulte, das Menü des [Furnace Golem](furnace-golem.md) |
 | **Schalter** | Türen, Falltüren, Zauntore, Knöpfe, Hebel, Druckplatten |
 | **Tiere** | Tiere schlagen, füttern, züchten, anleinen, scheren, melken, reiten |
 | **Ernten** | Reife Pflanzen ernten und neu pflanzen |
@@ -55,6 +55,7 @@ Dazu kommt der Schalter **Betreten**: Ist er aus, kommt das Mitglied nur noch ü
 
 * Fehlt dir ein Recht, sagt dir die Anzeige über der Hotbar, welches – zum Beispiel „Hier darfst du nicht bauen.“
 * Eine Kiste, einen Ofen oder einen anderen Block mit Inhalt abbauen braucht **Bauen und Behälter**.
+* Einen [Furnace Golem](furnace-golem.md) bauen oder abbauen braucht **Bauen**, sein Menü öffnen **Behälter**.
 * **Shop-Behälter** öffnen nur der Shop-Besitzer, der Inselbesitzer und das Team – das Recht Behälter reicht dafür nicht.
 * **Fliegen** mit dem `/fly` deines Rangs geht nur, wo du das Recht **Bauen** hast.
 * Als Besitzer hast du immer alle Rechte. Deine Insel **löschen** kannst nur du, in der Lobby.

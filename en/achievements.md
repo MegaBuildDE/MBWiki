@@ -35,7 +35,7 @@ Besides the normal Minecraft advancements, there's a tab of its own called **“
 | Achievement | On Bedrock | What for |
 | ----------- | ---------- | -------- |
 | **Magic in the Rock** | *Magisches Gestein* | Mine [Mana ore](economy.md#mana-ore) |
-| **Banked** | *Aufs Konto* | Deposit Mana orbs with the furnace golem – *not reachable yet, the furnace golem doesn't exist yet* |
+| **Banked** | *Aufs Konto* | Deposit Mana orbs or Mana Blocks at the [Furnace Golem](furnace-golem.md) |
 | **Condensed** | *Verdichtet* | Craft a Mana Charge |
 | **Magic Fruit** | *Magische Frucht* | Craft a Mana Apple |
 

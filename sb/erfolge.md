@@ -34,7 +34,7 @@ Neben den normalen Minecraft-Fortschritten gibt es einen eigenen Tab **„MegaBu
 | Erfolg | Wofür |
 | ------ | ----- |
 | **Magisches Gestein** | [Mana-Erz](eco.md#mana-erz) abbauen |
-| **Aufs Konto** | Mana-Kugeln beim Ofen-Golem einzahlen – *noch nicht erreichbar, den Ofen-Golem gibt es noch nicht* |
+| **Aufs Konto** | Mana-Kugeln oder Mana-Blöcke beim [Furnace Golem](furnace-golem.md) einzahlen |
 | **Verdichtet** | Eine Mana-Ladung craften |
 | **Magische Frucht** | Einen Mana-Apfel craften |
 

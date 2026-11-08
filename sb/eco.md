@@ -13,7 +13,7 @@ Auf MegaBuild.de gibt es zwei Währungen. Beide gelten auf allen Servern und ste
 | --- | --- | --- |
 | **Wofür** | Biome im Skilltree, Quests überspringen, Segen der Forestlinge | Handel zwischen Spielern und mit KI-Bewohnern |
 | **Startguthaben** | 1.000 | 500 |
-| **Verschicken** | Nicht möglich | Mit `/pay` |
+| **Verschicken** | Vom Konto nicht – [Mana-Kugeln](#mana-kugeln) kannst du weitergeben | Mit `/pay` |
 
 {% content-ref url="skilltree.md" %}
 [skilltree.md](skilltree.md)
@@ -30,6 +30,7 @@ Auf MegaBuild.de gibt es zwei Währungen. Beide gelten auf allen Servern und ste
 | [Voten](../ag/vote.md) | 50 + 5 Ruby | keine – jeder Vote zählt |
 | Aktionen (siehe unten) | meist 1–8 | **150 am Tag** |
 | [Mana-Erz](#mana-erz) | 3–5 Mana-Kugeln | **200 am Tag** |
+| [Mana-Scherben](furnace-golem.md#scherben-verbacken) beim Furnace Golem | 1 je Scherbe | **20 Scherben am Tag** |
 
 ### Durch Aktionen
 
@@ -84,15 +85,12 @@ Mana-Erz übersteht Explosionen und lässt sich mit Kolben verschieben.
 
 ### Mana-Kugeln
 
-Mana-Erz gibt dir Mana als **Kugeln** ins Inventar, eine Kugel ist ein Mana. Aufs Konto kommen sie, wenn du sie beim **Ofen-Golem** einzahlst.
-
-{% hint style="warning" %}
-**Den Ofen-Golem gibt es noch nicht.** Heb deine Mana-Kugeln bis dahin einfach auf – sie gehen nicht verloren.
-{% endhint %}
+Mana-Erz gibt dir Mana als **Kugeln** ins Inventar, eine Kugel ist ein Mana. Aufs Konto kommen sie, wenn du sie bei einem [Furnace Golem](furnace-golem.md) einzahlst – den baust du dir selbst aus einem Mana-Block, einem Ofen und einem geschnitzten Kürbis. Selbst abgebaute Kugeln zahlst du immer ganz ein, Kugeln von anderen Spielern bis 100 am Tag.
 
 Aus Kugeln kannst du außerdem craften:
 
 * **Mana-Ladung** aus 9 Kugeln – lässt sich wieder zerlegen
+* **Mana-Block** aus 8 Kugeln um eine Mana-Ladung – 17 Mana, der Fuß des [Furnace Golem](furnace-golem.md); zurückcraften geht nicht
 * **Mana-Apfel** aus 4 Kugeln um einen Apfel – damit kaufst du den Segen eines [Forestlings](forestlinge.md) und schwächst Mobs, die du mit einer [Mobplate](mobplates.md) markiert hast
 * **Leere Mobplate** aus 8 Kugeln um eine Blasse Scherbe – siehe [Mobplates](mobplates.md)
 
@@ -144,6 +142,7 @@ Dein **Mana und Ruby bleiben** erhalten, ebenso Quest-Stand, Serie und Erfolge. 
 
 * [Skilltree & Biome](skilltree.md)
 * [Mana-Items](mana-items.md)
+* [Furnace Golem & Mana-Geode](furnace-golem.md)
 * [Quests](quests.md)
 * [Voten](../ag/vote.md)
 * [ChestShops](chestshop.md)

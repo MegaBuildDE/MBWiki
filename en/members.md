@@ -40,7 +40,7 @@ The owner and members with the **Members** right can invite.
 | Right | What it allows |
 | ----- | -------------- |
 | **Build** | Place and break blocks, buckets, fire, armour stands, frames, signs |
-| **Containers** | Chests, barrels, furnaces, hoppers, brewing stands, lecterns, Mana furnace |
+| **Containers** | Chests, barrels, furnaces, hoppers, brewing stands, lecterns, the [Furnace Golem](furnace-golem.md) menu |
 | **Switches** | Doors, trapdoors, fence gates, buttons, levers, pressure plates |
 | **Animals** | Hit, feed, breed, leash, shear, milk and ride animals |
 | **Harvest** | Harvest ripe crops and replant |
@@ -55,6 +55,7 @@ On top of that there's the **Join** switch: if it's off, the member only gets on
 
 * If you're missing a right, the display above the hotbar tells you which one – for example “You may not build here.”
 * Breaking a chest, furnace or any other block with contents needs **Build and Containers**.
+* Building or dismantling a [Furnace Golem](furnace-golem.md) needs **Build**, opening its menu needs **Containers**.
 * **Shop containers** can only be opened by the shop owner, the island owner and the team – the Containers right isn't enough.
 * **Flying** with your rank's `/fly` only works where you have the **Build** right.
 * As the owner you always have all rights. Only you can **delete** your island, in the lobby.

@@ -151,6 +151,5 @@ Noch offen:
 * Rang-Vorteile im Skyblock (liegen in LuckPerms, nicht im Code)
 * Events und Community-Ziele (`MBSkyManager/docs/EREIGNISSE.md` ist ein Vorschlag)
 * Clan-Insel, Clan-Projekte und Clan-Kasse – gebaut, aber gesperrt bis zum eigenen Server (`MBSkyManager/docs/CLANS.md`, Kap. 7–8); im Wiki unter „Kommt bald“
-* Der Ofen-Golem zum Einzahlen der Mana-Kugeln
 * ChestShops für den Handel mit Ruby
 * Unterstützte Java-Version zum Start

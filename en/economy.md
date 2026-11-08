@@ -13,7 +13,7 @@ MegaBuild.de has two currencies. Both work on all servers and are shown at the b
 | --- | --- | --- |
 | **Used for** | Biomes in the skill tree, skipping quests, Forestling blessings | Trading between players and with AI residents |
 | **Starting balance** | 1,000 | 500 |
-| **Sending** | Not possible | With `/pay` |
+| **Sending** | Not from your account – you can pass on [Mana orbs](#mana-orbs) | With `/pay` |
 
 {% content-ref url="skilltree.md" %}
 [skilltree.md](skilltree.md)
@@ -30,6 +30,7 @@ MegaBuild.de has two currencies. Both work on all servers and are shown at the b
 | [Voting](vote.md) | 50 + 5 Ruby | none – every vote counts |
 | Actions (see below) | mostly 1–8 | **150 a day** |
 | [Mana ore](#mana-ore) | 3–5 Mana orbs | **200 a day** |
+| [Mana Shards](furnace-golem.md#turning-shards-into-mana) at the Furnace Golem | 1 per shard | **20 shards a day** |
 
 ### From actions
 
@@ -84,15 +85,12 @@ Mana ore survives explosions and can be pushed with pistons.
 
 ### Mana orbs
 
-Mana ore gives you Mana as **orbs** in your inventory; one orb is one Mana. They go into your account once you deposit them with the **furnace golem**.
-
-{% hint style="warning" %}
-**The furnace golem doesn't exist yet.** Until then, just keep your Mana orbs – they won't get lost.
-{% endhint %}
+Mana ore gives you Mana as **orbs** in your inventory; one orb is one Mana. They go into your account once you deposit them at a [Furnace Golem](furnace-golem.md) – you build one yourself from a Mana Block, a furnace and a carved pumpkin. Orbs you mined yourself always go in completely, orbs from other players up to 100 a day.
 
 You can also craft with orbs:
 
 * **Mana Charge** from 9 orbs – can be broken back down
+* **Mana Block** from 8 orbs around a Mana Charge – 17 Mana, the base of the [Furnace Golem](furnace-golem.md); it can't be crafted back
 * **Mana Apple** from 4 orbs around an apple – it buys a [Forestling](forestlings.md) blessing and weakens mobs you marked with a [Mobplate](mobplates.md)
 * **Empty Mobplate** from 8 orbs around a Pale Sherd – see [Mobplates](mobplates.md)
 
@@ -144,6 +142,7 @@ Your **Mana and Ruby stay**, and so do your quest progress, streak and achieveme
 
 * [Skill tree & biomes](skilltree.md)
 * [Mana Items](mana-items.md)
+* [Furnace Golem & Mana Geode](furnace-golem.md)
 * [Quests](quests.md)
 * [Voting](vote.md)
 * [ChestShops](chestshop.md)
