@@ -87,7 +87,7 @@ Mana von deinem Konto bekommst du hier als **Mana-Kugeln** (1, 16 oder 64) oder 
 
 Die **Mana-Scherben** für den Golem wachsen in den Höhlen der Hauptinseln – auf dem **Knospenden Mana-Amethyst**, ähnlich wie Amethyst auf Knospendem Amethyst.
 
-* **Wo:** auf dem Boden der [Inselhöhlen](welt.md#hoehlen), am ehesten in einer Amethystgeode. Höchstens zwei je Hauptinsel, im Schnitt etwa zwei auf drei Hauptinseln. Die Startinsel, Nebeninseln, Siedlungen und Trittinseln haben keinen.
+* **Wo:** auf dem Boden der [Inselhöhlen](welt.md#was-auf-den-inseln-liegt), am ehesten in einer Amethystgeode. Höchstens zwei je Hauptinsel, im Schnitt etwa zwei auf drei Hauptinseln. Die Startinsel, Nebeninseln, Siedlungen und Trittinseln haben keinen.
 * **Wachsen:** Auf ihm wächst nach oben ein **Mana-Kristall** in vier Stufen – klein, mittel, groß, ausgewachsen. Jede Stufe dauert im Schnitt **rund 10 Minuten**, eine Scherbe also etwa 40 Minuten. Er wächst nur, **solange die Insel geladen ist**, und nur, wenn der Block darüber frei ist.
 * **Ernten:** Den Kristall baust du mit jedem Werkzeug oder der Hand gleich schnell ab. **Nur der ausgewachsene Kristall gibt eine Mana-Scherbe** – eine Knospe gibt nichts, lass sie wachsen. Danach wächst eine neue.
 * Scherben gibt es nur im Überlebensmodus. Auf fremden Inseln brauchst du das Recht **Bauen**.
