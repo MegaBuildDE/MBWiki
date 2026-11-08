@@ -9,6 +9,12 @@ icon: leaf
 
 Forestlinge sind kleine, scheue **Waldelfen**. Sie ziehen von Insel zu Insel, dorthin, wo Bäume wachsen. Für etwas Mana schenken sie dir einen **Segen** – zum Beispiel einen gewaltigen Sprung über die Lücke zur nächsten Insel.
 
+<figure><img src="../.gitbook/assets/videos/forestlinge.jpg" alt="Cover des Videos „Forestlinge“ mit einem Eichen-Forestling, der einen Mana-Apfel hält"><figcaption><p>Das Video „Forestlinge“ – Mala erklärt, Ton an</p></figcaption></figure>
+
+{% file src="../.gitbook/assets/videos/forestlinge.mp4" %}
+**Video: Forestlinge** (1:34, mit Ton) – Mala zeigt dir, wie du mit dem Mana-Apfel einen Segen bekommst und einen Forestling mit der Mobplate mitnimmst.
+{% endfile %}
+
 Forestlinge sind keine [KI-Bewohner](bewohner.md): Sie tragen kein „(KI)“ und reagieren auf feste Stichworte.
 
 {% hint style="info" %}

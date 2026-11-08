@@ -9,6 +9,12 @@ icon: leaf
 
 Forestlings are small, shy **forest elves**. They travel from island to island, to wherever trees grow. For a bit of Mana they grant you a **blessing** – for example a huge leap across the gap to the next island.
 
+<figure><img src="../.gitbook/assets/videos/forestlinge.jpg" alt="Cover of the video “Forestlings” with an oak Forestling holding a Mana Apple"><figcaption><p>The video “Forestlings” – Mala explains, in German</p></figcaption></figure>
+
+{% file src="../.gitbook/assets/videos/forestlinge.mp4" %}
+**Video: Forestlings** (1:34, in German, with sound) – Mala shows how to get a blessing with a Mana Apple and take a Forestling along in a Mobplate.
+{% endfile %}
+
 Forestlings aren't [AI residents](residents.md): they don't carry “(KI)” and they respond to fixed keywords.
 
 {% hint style="info" %}
