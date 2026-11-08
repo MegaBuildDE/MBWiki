@@ -52,13 +52,19 @@ Die Höhlen sind zum Teil beleuchtet. Nebeninseln, Trittinseln und die Startinse
 
 ### Erze
 
-Erz liegt in kleinen **Nestern** von ein bis vier Blöcken im ganzen Fels und einzeln an den Höhlenwänden. **Je tiefer, desto mehr.** Die meisten Nester siehst du nicht – du musst graben.
+Erz liegt in kleinen **Nestern** von ein bis vier Blöcken im ganzen Fels und einzeln an den Höhlenwänden – dort berühren sich zwei Erze höchstens über Eck. **Je tiefer, desto mehr.** Die Nester im Fels siehst du nicht – du musst graben. Von außen siehst du an keiner Insel Erz.
 
 | Insel | Erz ungefähr |
 | ----- | ------------ |
-| Hauptinsel | rund 170 Erzblöcke, davon etwa 6 Diamanten |
-| Nebeninsel | rund 11 Erzblöcke |
+| Hauptinsel | rund 330 Erzblöcke, davon etwa 11 Diamanten und 90 Eisenerz; rund 200 davon sitzen sichtbar an den Höhlenwänden |
+| Nebeninsel | rund 16 Erzblöcke |
 | Startinsel | keins |
+
+**Eisen ist so häufig wie Kohle** – in jedem Biom.
+
+{% hint style="info" %}
+**Mehr Erz seit November 2026.** Diese Mengen haben nur Inseln, die seitdem entstanden sind. Ältere Inseln behalten ihr Erz.
+{% endhint %}
 
 Dazu kommt das **Mana-Erz** mit seinen pinken Adern – 4 bis 14 Stück in den Höhlen jeder Hauptinsel.
 

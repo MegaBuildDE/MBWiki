@@ -52,13 +52,19 @@ The caves are partly lit. Side islands, stepping-stone islands and the starting 
 
 ### Ores
 
-Ore lies in small **clusters** of one to four blocks throughout the rock, and on its own along the cave walls. **The deeper, the more.** You can't see most clusters – you have to dig.
+Ore lies in small **clusters** of one to four blocks throughout the rock, and on its own along the cave walls – where two ores touch at most diagonally. **The deeper, the more.** You can't see the clusters in the rock – you have to dig. No island shows any ore from the outside.
 
 | Island | Ore, roughly |
 | ------ | ------------ |
-| Main island | around 170 ore blocks, about 6 of them diamonds |
-| Side island | around 11 ore blocks |
+| Main island | around 330 ore blocks, about 11 of them diamonds and 90 iron ore; around 200 of them sit visibly on the cave walls |
+| Side island | around 16 ore blocks |
 | Starting island | none |
+
+**Iron is as common as coal** – in every biome.
+
+{% hint style="info" %}
+**More ore since November 2026.** Only islands created since then have these amounts. Older islands keep their ore.
+{% endhint %}
 
 On top of that there's **Mana ore** with its pink veins – 4 to 14 blocks in the caves of every main island.
 
