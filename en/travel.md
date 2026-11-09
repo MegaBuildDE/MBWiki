@@ -62,6 +62,8 @@ If you travel to a market through the shop search, you still come [as a customer
 
 When you arrive, a line in the chat tells you once that you're only looking around. You stay in Survival mode.
 
+**The world doesn't grow for you.** Otherwise new islands appear when someone comes close to them (see [The Island World](world.md)). As a spectator you don't make any appear, not even while gliding – you only see what's already there.
+
 **Allowed:**
 
 * Looking around and walking about, gliding with elytra and firing rockets while you do.
@@ -72,7 +74,7 @@ When you arrive, a line in the chat tells you once that you're only looking arou
 **Not allowed:**
 
 * Breaking, building, opening chests and other containers.
-* Using doors, switches and pressure plates, harvesting, using animals and [Warpetts](warpetts.md), catching mobs with a [Mobplate](mobplates.md).
+* Using doors, switches and pressure plates, harvesting, using animals and [Warpetts](warpetts.md), putting [Forestlings on a lead](forestlings.md#on-a-lead), catching mobs with a [Mobplate](mobplates.md).
 * Fighting – monsters and players too –, shooting and fishing.
 * Picking up items, arrows and experience included. You only pick up what belongs to you, for example the rest of a shop purchase.
 * Dropping items.
@@ -80,6 +82,8 @@ When you arrive, a line in the chat tells you once that you're only looking arou
 * Flying with `/fly` – that needs the **Build** right.
 
 If you try one of these, the display above the hotbar shows “You cannot do that here as a spectator.”
+
+**Trading with residents** doesn't work as a spectator: buying – provisions too –, selling, swapping, tasks, orders and timed orders, swap requests and personal offers. The chat then shows “As a spectator you can't trade with the residents here.” You can still talk to them, and you still pick up delivery notes – goods a resident has already delivered to you.
 
 ### Staying safe
 
@@ -104,6 +108,7 @@ As a guest on another island:
 * No arrow, beacon or helper spirit shows you the way to the island's first resident. If a special quest was already running for you there, it disappears. The special quest on your own island isn't affected.
 * Mala doesn't introduce anyone to you – no resident, not even if you click them, and no [Forestling](forestlings.md).
 * With other islands' [residents](residents.md), you only have a short first conversation. The long one, which everyone has only once, only happens on an island you belong to.
+* You can trade with them if you play there – not as a spectator (see above).
 * When you come close, only one resident per settlement talks to you on their own. You can talk to all of them – by clicking them or typing their name in chat.
 
 ## Your own island

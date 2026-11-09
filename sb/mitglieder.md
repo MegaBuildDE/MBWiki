@@ -42,7 +42,7 @@ Einladen dürfen der Besitzer und Mitglieder mit dem Recht **Mitglieder**.
 | **Bauen** | Blöcke setzen und abbauen, Eimer, Feuer, Rüstungsständer, Rahmen, Schilder |
 | **Behälter** | Kisten, Fässer, Öfen, Trichter, Braustände, Lesepulte, das Menü des [Furnace Golem](furnace-golem.md) |
 | **Schalter** | Türen, Falltüren, Zauntore, Knöpfe, Hebel, Druckplatten |
-| **Tiere** | Tiere schlagen, füttern, züchten, anleinen, scheren, melken, reiten |
+| **Tiere** | Tiere schlagen, füttern, züchten, anleinen, scheren, melken, reiten, [Forestlinge](forestlinge.md#an-der-leine) an die Leine nehmen und losbinden |
 | **Ernten** | Reife Pflanzen ernten und neu pflanzen |
 | **Warpetts** | [Warpett](warpetts.md)-Blumen und -Eier nutzen und setzen, Warpetts mit einer [Mobplate](mobplates.md) einsammeln und absetzen |
 | **Skilltree** | Biome kaufen, Lieblinge setzen, den Clan um Hilfe bitten, [Shops](chestshop.md) eröffnen, [Shop-Bereiche](chestshop.md#shop-bereiche) verwalten |

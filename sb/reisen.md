@@ -62,6 +62,8 @@ Reist du über die Shopsuche zu einem Markt, kommst du wie bisher [als Kunde](ch
 
 Beim Ankommen sagt dir einmal eine Zeile im Chat, dass du dir die Insel nur ansiehst. Du bleibst dabei im Überlebensmodus.
 
+**Die Welt wächst bei dir nicht.** Sonst entstehen neue Inseln, wenn jemand in ihre Nähe kommt (siehe [Die Inselwelt](welt.md)). Als Zuschauer lässt du keine entstehen, auch nicht im Gleitflug – du siehst nur, was es dort schon gibt.
+
 **Erlaubt:**
 
 * Umsehen und herumlaufen, mit Elytren gleiten und dabei Raketen zünden.
@@ -72,7 +74,7 @@ Beim Ankommen sagt dir einmal eine Zeile im Chat, dass du dir die Insel nur ansi
 **Nicht erlaubt:**
 
 * Abbauen, bauen, Kisten und andere Behälter öffnen.
-* Türen, Schalter und Druckplatten benutzen, ernten, Tiere und [Warpetts](warpetts.md) nutzen, Mobs mit einer [Mobplate](mobplates.md) einfangen.
+* Türen, Schalter und Druckplatten benutzen, ernten, Tiere und [Warpetts](warpetts.md) nutzen, [Forestlinge an die Leine](forestlinge.md#an-der-leine) nehmen, Mobs mit einer [Mobplate](mobplates.md) einfangen.
 * Kämpfen – auch gegen Monster und Spieler –, schießen und angeln.
 * Items aufheben, auch Pfeile und Erfahrung. Nur was dir selbst gehört, zum Beispiel den Rest eines Shop-Kaufs, hebst du auf.
 * Wegwerfen.
@@ -80,6 +82,8 @@ Beim Ankommen sagt dir einmal eine Zeile im Chat, dass du dir die Insel nur ansi
 * Fliegen mit `/fly` – das braucht das Recht **Bauen**.
 
 Versuchst du etwas davon, steht in der Anzeige über der Hotbar „Als Zuschauer geht das hier nicht.“
+
+**Handeln mit Bewohnern** geht als Zuschauer nicht: kaufen – auch Proviant –, verkaufen, tauschen, Aufgaben, Aufträge und Zeitaufträge, Tauschgesuche und persönliche Angebote. Im Chat steht dann „Als Zuschauer kannst du mit den Bewohnern hier nicht handeln.“ Reden kannst du mit ihnen weiter, und Lieferscheine – Ware, die dir ein Bewohner schon geliefert hat – holst du weiter ab.
 
 ### Sicher unterwegs
 
@@ -104,6 +108,7 @@ Als Gast auf einer fremden Insel:
 * Kein Pfeil, kein Leuchtfeuer und kein Hilfsgeist zeigen dir den Weg zum ersten Bewohner der Insel. Lief dort schon eine Sonderquest für dich, verschwindet sie. Die Sonderquest deiner eigenen Insel bleibt davon unberührt.
 * Mala stellt dir niemanden vor – keinen Bewohner, auch nicht, wenn du ihn anklickst, und keinen [Forestling](forestlinge.md).
 * Mit fremden [Bewohnern](bewohner.md) führst du nur ein kurzes erstes Gespräch. Das lange, das jeder nur einmal führt, gibt es nur auf einer Insel, zu der du gehörst.
+* Handeln kannst du mit ihnen, wenn du dort mitspielst – als Zuschauer nicht (siehe oben).
 * Kommst du ihnen nahe, spricht dich je Siedlung nur einer von selbst an. Reden kannst du mit allen – per Klick oder mit ihrem Namen im Chat.
 
 ## Deine eigene Insel

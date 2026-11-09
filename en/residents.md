@@ -98,7 +98,7 @@ Open trading by typing “trade” in chat or via the **stock chest** at the hou
 * **Swap requests:** When a resident needs goods, say 64 cobblestone for the well, they ask you – and give you other goods in return.
 * **Swap a quest** (from Trusted) is a second way to [skip](quests.md#skipping) a daily quest and costs the same Mana.
 * You'll find your orders, swap requests and deliveries under `/orders`.
-* Trading only works in survival mode and only in your own island world.
+* Trading only works in survival mode. On someone else's island you trade with the residents if you play there – as a [spectator](travel.md) you can only talk to them.
 
 ### The market fund
 

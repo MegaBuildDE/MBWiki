@@ -98,7 +98,7 @@ Je öfter du einen Bewohner besuchst, desto besser kennt er dich. Eine erreichte
 * **Tauschgesuche:** Braucht ein Bewohner Ware, etwa 64 Bruchstein für den Brunnen, fragt er dich – und gibt dir dafür andere Ware.
 * **Quest tauschen** (ab Vertraut) ist ein zweiter Weg zum [Überspringen](quests.md) einer Tagesquest und kostet dasselbe Mana.
 * Deine Aufträge, Tauschgesuche und Lieferungen findest du unter `/auftraege`.
-* Gehandelt wird nur im Überlebensmodus und nur in deiner eigenen Inselwelt.
+* Gehandelt wird nur im Überlebensmodus. Auf einer fremden Insel handelst du mit den Bewohnern, wenn du dort mitspielst – als [Zuschauer](reisen.md) kannst du nur mit ihnen reden.
 
 ### Die Marktkasse
 

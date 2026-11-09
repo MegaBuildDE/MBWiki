@@ -24,7 +24,7 @@ Deine Insel hat keine festen Ausbaustufen. Stattdessen **wächst die Welt, währ
 | **Schiffe im Leeren** | Zwischen den Gruppen hängen Luftschiffe, Ballons und Flugzeuge |
 | **Startinsel** | In der Mitte, mit vier Nebeninseln in rund 100 Blöcken Abstand. Auf einer davon wohnt dein [erster Bewohner](bewohner.md) |
 
-Neue Inseln entstehen, **wenn du in ihre Nähe kommst** – in Blickrichtung zuerst. Was einmal entstanden ist, bleibt.
+Neue Inseln entstehen, **wenn du in ihre Nähe kommst** – in Blickrichtung zuerst. Was einmal entstanden ist, bleibt. Wer auf einer fremden Insel nur [zuschaut](reisen.md) oder als [Kunde](chestshop.md#als-kunde-auf-fremden-inseln) einkauft, lässt dort keine neuen Inseln entstehen.
 
 <figure><img src="../.gitbook/assets/screenshots/mbsky-ballon-abendrot.webp" alt="Ein Ballon im Abendrot über einer Tafelberg-Insel"><figcaption><p>Zwischen den Inseln hängen Ballons und Luftschiffe</p></figcaption></figure>
 

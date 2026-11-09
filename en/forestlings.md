@@ -98,6 +98,9 @@ Click the Forestling with an **empty [Mobplate](mobplates.md)** – no fight, no
 
 Hold a **lead** and click the Forestling. It follows you. **Where you take the lead off is its new home.**
 
+* On other players' islands you need the **Animals** right for this – to put it on a lead and to untie it, whether by hand, at a fence post or with shears.
+* Nobody can put the resident Forestling in a clan island's grove on a lead.
+
 ## Related pages
 
 * [AI Residents](residents.md)

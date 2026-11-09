@@ -42,7 +42,7 @@ The owner and members with the **Members** right can invite.
 | **Build** | Place and break blocks, buckets, fire, armour stands, frames, signs |
 | **Containers** | Chests, barrels, furnaces, hoppers, brewing stands, lecterns, the [Furnace Golem](furnace-golem.md) menu |
 | **Switches** | Doors, trapdoors, fence gates, buttons, levers, pressure plates |
-| **Animals** | Hit, feed, breed, leash, shear, milk and ride animals |
+| **Animals** | Hit, feed, breed, leash, shear, milk and ride animals, put [Forestlings](forestlings.md#on-a-lead) on a lead and untie them |
 | **Harvest** | Harvest ripe crops and replant |
 | **Warpetts** | Use and place [Warpett](warpetts.md) flowers and eggs, collect and set down Warpetts with a [Mobplate](mobplates.md) |
 | **Skill tree** | Buy biomes, set favourites, ask the clan for help, open [shops](chestshop.md), manage [shop areas](chestshop.md#shop-areas) |

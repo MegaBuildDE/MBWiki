@@ -24,7 +24,7 @@ Your island has no fixed upgrade levels. Instead, **the world grows as you explo
 | **Ships in the void** | Airships, balloons and planes hang between the groups |
 | **Starting island** | In the middle, with four side islands about 100 blocks away. Your [first resident](residents.md) lives on one of them |
 
-New islands appear **when you get close to them** – the ones in the direction you're looking first. Once something has been generated, it stays.
+New islands appear **when you get close to them** – the ones in the direction you're looking first. Once something has been generated, it stays. Anyone who only [watches](travel.md) on someone else's island or shops there as a [customer](chestshop.md#as-a-customer-on-other-islands) doesn't make new islands appear there.
 
 <figure><img src="../.gitbook/assets/screenshots/mbsky-ballon-abendrot.webp" alt="A balloon at sunset over a badlands island"><figcaption><p>Balloons and airships hang between the islands</p></figcaption></figure>
 

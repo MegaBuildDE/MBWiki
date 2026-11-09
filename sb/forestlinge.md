@@ -98,6 +98,9 @@ Klicke den Forestling mit einer **leeren [Mobplate](mobplates.md)** an – ohne 
 
 Nimm eine **Leine** in die Hand und klicke den Forestling an. Er folgt dir. **Wo du die Leine abnimmst, ist sein neues Zuhause.**
 
+* Auf fremden Inseln brauchst du dafür das Recht **Tiere** – zum Anleinen wie zum Losbinden, ob per Hand, am Zaunpfahl oder mit der Schere.
+* Den festen Forestling im Hain einer Clan-Insel nimmt niemand an die Leine.
+
 ## Verwandte Seiten
 
 * [KI-Bewohner](bewohner.md)
