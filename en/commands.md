@@ -18,9 +18,10 @@ You reach most features through menus. These commands take you there directly. S
 | `/sky island` | Info about your island |
 | `/sky stats` | Your statistics |
 | `/sky global` | Statistics for the whole server |
-| `/sky visit <player>` | To a friend's or clan member's island, if they give you access – from the lobby too |
+| `/sky visit <player>` | To a player's island – with access as a fellow player, otherwise as a [spectator](travel.md) if the island allows it. From the lobby too |
+| `/sky visit` | The travel menu: open islands and your friends' islands |
 
-The `/sky …` commands and `/quest` only exist **on the islands**, except `/sky visit`. Otherwise, in the lobby `/sky` always opens the Skyblock menu. On other players' islands, `/sky stats` and `/sky global` require the **Statistics** right.
+The `/sky …` commands and `/quest` only exist **on the islands**, except `/sky visit <player>`. Otherwise, in the lobby `/sky` always opens the Skyblock menu. On other players' islands, `/sky stats` and `/sky global` require the **Statistics** right.
 
 ## Clans
 

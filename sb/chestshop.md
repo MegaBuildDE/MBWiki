@@ -78,7 +78,7 @@ Ein Klick auf ein Angebot öffnet **Hinreisen?** – mit einem weiteren Klick au
 
 ## Als Kunde auf fremden Inseln
 
-Hast du auf der Insel keinen Zugang, kommst du als **Kunde**. Mit Zugang – als Mitglied, über Clan oder Freunde – bist du kein Kunde und hast dort deine normalen [Rechte](mitglieder.md#die-rechte).
+Hast du auf der Insel keinen Zugang, kommst du als **Kunde** – auch wenn du dort sonst [zuschauen](reisen.md) dürftest. Mit Zugang – als Mitglied, über Clan oder Freunde – bist du kein Kunde und hast dort deine normalen [Rechte](mitglieder.md#die-rechte).
 
 | Als Kunde darfst du | Als Kunde darfst du nicht |
 | ------------------- | ------------------------- |
@@ -217,7 +217,7 @@ Klicke im Menü auf den Schalter **Zu**, dann steht er auf **Offen**. Das geht e
 | **Kunden reisen hin** | Ja | Nein |
 | **Wer handeln darf** | Alle | Inselbesitzer, Mitglieder, Team und wer auf der Insel selbst einen Shop hat |
 
-Ein Freund, der nur zu Besuch ist, handelt in einem geschlossenen Bereich also nicht. **Schließt du einen Markt,** reisen alle Kunden darin sofort nach Hause.
+Ein Freund, der nur zu Besuch ist, oder ein [Zuschauer](reisen.md) handelt in einem geschlossenen Bereich also nicht. **Schließt du einen Markt,** reisen alle Kunden darin sofort nach Hause.
 
 ### Regeln für Bereiche
 

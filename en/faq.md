@@ -220,6 +220,18 @@ Yes. With `/clan` you found a clan or join one – with clan chat across every s
 
 </details>
 
+<details>
+
+<summary>Can I look around other players' islands?</summary>
+
+Yes. On an island, `/sky` → **Travel** or `/sky visit` opens the travel menu with the open islands and your friends' islands. If you have no access there, you only watch: looking around yes, breaking, building and opening no. You set who may watch on your island under `/sky` → **Members** → **Watching**.
+
+{% content-ref url="travel.md" %}
+[travel.md](travel.md)
+{% endcontent-ref %}
+
+</details>
+
 ## Shop, ranks and voting
 
 <details>

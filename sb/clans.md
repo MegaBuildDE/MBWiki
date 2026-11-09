@@ -119,11 +119,11 @@ Im öffentlichen Chat steht nur das farbige Kürzel.
 
 * **Besuchen:** In der Mitgliederliste des Clans ein Linksklick, oder `/clan visit <Name>` bzw. `/sky visit <Name>` – auch aus der Lobby.
 * **Zurück:** `/clan home` oder `/sky` → **Zur eigenen Insel**.
-* **Was du dort darfst,** stellt der Besitzer mit dem [Clan-Zugang](mitglieder.md#clan-und-freunde) ein: niemand, Besucher, Helfer oder Mitbauer. Neulinge kommen höchstens als Besucher.
+* **Was du dort darfst,** stellt der Besitzer mit dem [Clan-Zugang](mitglieder.md#clan-und-freunde) ein: niemand, Besucher, Helfer oder Mitbauer. Neulinge kommen höchstens als Besucher. Steht er auf niemand, kommst du ohne anderen Zugang nur als [Zuschauer](reisen.md) hinein, wenn die Insel das erlaubt.
 * **Dein Inventar reist mit.** Was du auf einer anderen Insel findest, nimmst du mit nach Hause. Endertruhe und Level bleiben auf jeder Insel für sich.
 * **Treffpunkt:** `/clan meet` lädt deinen Clan mit einem Klick auf die Insel, auf der du gerade stehst. Hinein kommt nur, wer dort Zugang hat.
 
-Wer den Clan verlässt, verliert den Clan-Zugang sofort und wechselt in die Lobby.
+Wer den Clan verlässt, verliert den Clan-Zugang sofort und wechselt in die Lobby – oder bleibt als [Zuschauer](reisen.md), wenn die Insel das erlaubt.
 
 ## Der Wochenauftrag
 
@@ -239,7 +239,7 @@ Im Erfolgs-Tab gibt es eigene [Erfolge](erfolge.md#clan) für Clans – zum Beis
 **Clan-Insel und Clan-Kasse sind schon eingebaut** und kommen, sobald sie einen eigenen Server haben. Bis dahin tragen sie im Menü ein Schloss.
 {% endhint %}
 
-* **Clan-Insel:** eine ganze Sky-Welt, die eurem Clan gehört – mit eigenem Skilltree, Biomquests und Bewohnern. Ab Stufe 4 mit 5 aktiven Mitgliedern. Dort baut ihr gemeinsam **sechs Clan-Projekte**: Ankunftsplatz, Hain, Clanhaus, Blumentor, Herberge und Ehrenhalle.
+* **Clan-Insel:** eine ganze Sky-Welt, die eurem Clan gehört – mit eigenem Skilltree, Biomquests und Bewohnern. Ab Stufe 4 mit 5 aktiven Mitgliedern. Dort baut ihr gemeinsam **sechs Clan-Projekte**: Ankunftsplatz, Hain, Clanhaus, Blumentor, Herberge und Ehrenhalle. Zum Zuschauen ist sie nie offen.
 * **Clan-Kasse:** ein gemeinsames **Ruby**-Konto mit Protokoll. Mana kommt nie hinein.
 
 ## Fair für alle

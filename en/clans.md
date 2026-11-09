@@ -119,11 +119,11 @@ In the public chat, only the coloured tag shows.
 
 * **Visiting:** Left-click in the clan's member list, or `/clan visit <name>` or `/sky visit <name>` – from the lobby too.
 * **Back:** `/clan home` or `/sky` → **To your own island**.
-* **What you may do there** is set by the owner with the [clan access](members.md#clan-and-friends): nobody, Visitor, Helper or Builder. Recruits come in as visitors at most.
+* **What you may do there** is set by the owner with the [clan access](members.md#clan-and-friends): nobody, Visitor, Helper or Builder. Recruits come in as visitors at most. If it's set to nobody and you have no other access, you only get in as a [spectator](travel.md), if the island allows it.
 * **Your inventory travels with you.** What you find on another island, you take home. Ender chest and levels stay on each island.
 * **Meeting point:** `/clan meet` invites your clan with one click to the island you're standing on. Only those with access there can come in.
 
-Anyone who leaves the clan loses clan access immediately and switches to the lobby.
+Anyone who leaves the clan loses clan access immediately and switches to the lobby – or stays as a [spectator](travel.md), if the island allows it.
 
 ## The weekly task
 
@@ -239,7 +239,7 @@ The achievements tab has [achievements](achievements.md#clan) of its own for cla
 **The clan island and the clan treasury are already built in** and will come once they have a server of their own. Until then they carry a lock in the menu.
 {% endhint %}
 
-* **Clan island:** a whole Sky world that belongs to your clan – with its own skill tree, biome quests and residents. From level 4 with 5 active members. There you build **six clan projects** together: Arrival square, Grove, Clan house, Flower gate, Hostel and Hall of honour.
+* **Clan island:** a whole Sky world that belongs to your clan – with its own skill tree, biome quests and residents. From level 4 with 5 active members. There you build **six clan projects** together: Arrival square, Grove, Clan house, Flower gate, Hostel and Hall of honour. It's never open for watching.
 * **Clan treasury:** a shared **Ruby** account with a log. Mana never goes in.
 
 ## Fair for everyone

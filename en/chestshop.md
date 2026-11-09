@@ -82,7 +82,7 @@ One click on an offer opens **Travel there?** – one more click on **Travel the
 
 ## As a customer on other islands
 
-If you have no access to the island, you arrive as a **customer**. With access – as a member, through your clan or friends – you're not a customer and have your usual [rights](members.md#the-rights) there.
+If you have no access to the island, you arrive as a **customer** – even if you could otherwise [watch](travel.md) there. With access – as a member, through your clan or friends – you're not a customer and have your usual [rights](members.md#the-rights) there.
 
 | As a customer you may | As a customer you may not |
 | --------------------- | ------------------------- |
@@ -221,7 +221,7 @@ Click the **Closed** switch in the menu so it reads **Open**. This needs an arri
 | **Customers travel there** | Yes | No |
 | **Who may trade** | Everyone | Island owner, members, team and anyone who has a shop on the island |
 
-A friend who's only visiting can't trade in a closed area. **If you close a market,** all customers in it travel home right away.
+A friend who's only visiting, or a [spectator](travel.md), can't trade in a closed area. **If you close a market,** all customers in it travel home right away.
 
 ### Rules for areas
 

@@ -1,13 +1,13 @@
 ---
 description: >-
-  Invite players to your island, decide what they're allowed to do there, and
-  give your clan and your friends access.
+  Invite players to your island, decide what they're allowed to do there, give
+  your clan and your friends access and choose who may watch.
 icon: users-gear
 ---
 
 # Members & Rights
 
-You can invite up to **25 members** to your island and decide for each of them what they're allowed to do. Your [clan](clans.md) and your friends can get access without an invitation too – see [Clan and friends](#clan-and-friends).
+You can invite up to **25 members** to your island and decide for each of them what they're allowed to do. Your [clan](clans.md) and your friends can get access without an invitation too – see [Clan and friends](#clan-and-friends). You decide who may only look around your island under [Watching](#watching).
 
 ## Inviting a member
 
@@ -49,9 +49,9 @@ The owner and members with the **Members** right can invite.
 | **Members** | Manage members, rights and access |
 | **Statistics** | View the island statistics |
 
-On top of that there's the **Join** switch: if it's off, the member only gets onto the island through clan or friend access.
+On top of that there's the **Join** switch: if it's off, the member only gets onto the island through clan or friend access – or as a [spectator](travel.md) without rights, if you allow [watching](#watching).
 
-**Without any special right**, everyone on the island may fight monsters, pick up items, fish, talk and trade with residents and Forestlings, click signs and use workstations without storage – crafting table, stonecutter, loom, cartography table, smithing table, grindstone, enchanting table and anvil.
+**Without any special right**, everyone playing on the island may fight monsters, pick up items, fish, talk and trade with residents and Forestlings, click signs, use the ender chest and workstations without storage – crafting table, stonecutter, loom, cartography table, smithing table, grindstone, enchanting table and anvil. Stricter rules apply to [spectators](travel.md).
 
 * If you're missing a right, the display above the hotbar tells you which one – for example “You may not build here.”
 * Breaking a chest, furnace or any other block with contents needs **Build and Containers**.
@@ -91,7 +91,7 @@ If you change a single right, the menu shows **Custom**.
 
 ## Clan and friends
 
-At the very top of the members menu on the island there are two cards: **Clan access** for your [clan](clans.md) and **Friend access** for your [friends](friends.md). With them, they can come onto your island without you inviting each of them.
+At the very top of the members menu on the island there are three cards: **Watching** (see [below](#watching)), **Clan access** for your [clan](clans.md) and **Friend access** for your [friends](friends.md). With the two access cards, they can come onto your island without you inviting each of them.
 
 | Level | What they may do |
 | ----- | ---------------- |
@@ -104,9 +104,28 @@ At the very top of the members menu on the island there are two cards: **Clan ac
 * Anyone with the **Members** right may change it. You can also set the friend access of your own island in your friends under **Settings**.
 * If someone is a member and also in the clan or a friend, the higher level applies.
 * **Clan recruits** (the first 72 hours) come in as visitors at most.
-* If someone leaves your clan or you set the access to Nobody, they switch to the lobby immediately.
+* If someone leaves your clan or you set the access to Nobody, they lose their rights immediately. If they may watch on your island, they stay as a spectator; otherwise they switch to the lobby.
 
-**Visiting** works with `/sky visit <name>` – from the lobby too –, from the clan's member list or from the friends list. Your inventory travels with you.
+**Visiting** works with `/sky visit <name>` – from the lobby too –, through the [travel menu](travel.md), from the clan's member list or from the friends list. Your inventory travels with you.
+
+## Watching
+
+Anyone who is neither a member of your island nor gets in through clan or friend access may look around it as a **spectator** – come in and look around, but not change anything. What spectators may do is under [Travel & Watching](travel.md).
+
+You set who may watch on the island under `/sky` → **Members** → **Watching**. The selected level has a glint.
+
+| Level | Who may watch |
+| ----- | ------------- |
+| **Everyone** | Anyone |
+| **Friends only** | Only your [friends](friends.md) – even if friend access is set to Nobody |
+| **Members only** | Nobody. Only those with access to the island come in |
+
+* **At the start**, watching is set to **Everyone**. As long as your island is running, it then appears in the [travel menu](travel.md) under **Open islands**.
+* Anyone with the **Members** right may change it.
+* If you make it stricter, spectators who may no longer watch switch to the lobby right away.
+* Anyone who comes in as a member with **Join**, through clan access, a call for help or friend access plays with their rights as before. Only those who get in through this level alone are spectators.
+* Spectators don't wake your island: if it's asleep, nobody can watch.
+* **Clan islands** are never open for watching.
 
 ## What members get out of it
 
@@ -124,5 +143,6 @@ To see which rights you have on an island, go to `/sky` → **Island** → **You
 
 * [Clans](clans.md)
 * [Friends](friends.md)
+* [Travel & watching](travel.md)
 * [Your island](island.md)
 * [Skill tree & biomes](skilltree.md)

@@ -9,7 +9,7 @@ coverY: 0
 
 # Deine Insel
 
-Jede Insel ist ein **eigener Server** mit einer eigenen Welt. Betreten können sie nur du, deine [Mitglieder](mitglieder.md) und – wenn du es erlaubst – dein [Clan](clans.md) und deine Freunde. Du kannst eine eigene Insel besitzen und zusätzlich Mitglied auf den Inseln anderer sein.
+Jede Insel ist ein **eigener Server** mit einer eigenen Welt. Mitspielen können dort nur du, deine [Mitglieder](mitglieder.md) und – wenn du es erlaubst – dein [Clan](clans.md) und deine Freunde. Alle anderen dürfen sich deine Insel als [Zuschauer](reisen.md) ansehen, solange du das [Zuschauen](mitglieder.md#zuschauen) nicht einschränkst. Du kannst eine eigene Insel besitzen und zusätzlich Mitglied auf den Inseln anderer sein.
 
 Um deine Startinsel herum wächst beim Erkunden eine ganze Inselwelt:
 
@@ -44,6 +44,7 @@ Hast du noch keine Insel, steht hier **Skyblock erstellen** – siehe [Erste Sch
 | **Statistiken** | `/sky stats` | Deine Werte auf dieser Insel |
 | **Insel** | `/sky island` | Server, Startbiom und **Deine Rechte** – was du auf dieser Insel darfst |
 | **Freunde & Clan** | `/friend` | Freunde, [Clan](clans.md) und Post |
+| **Reisen** | `/sky visit` | Offene Inseln und die Inseln deiner Freunde besuchen – siehe [Reisen & Zuschauen](reisen.md) |
 | **Shops** | `/shop` | [ChestShops](chestshop.md) suchen, Märkte und deine eigenen Shops |
 | **Zur eigenen Insel** | `/clan home` | Zurück auf deine Insel, wenn du gerade woanders bist |
 
@@ -54,7 +55,7 @@ Den Skilltree öffnet auch ein Klick auf den **Golem** auf deinem Luftschiff.
 ## Hin und her
 
 * **Zur Insel:** In der Lobby `/sky` → **Insel betreten**. Zu Inseln, auf denen du Mitglied bist: `/sky` → **Geteilte Server**.
-* **Besuchen:** Auf die Insel eines Freundes oder Clanmitglieds mit `/sky visit <Name>`, wenn er dir Zugang gibt. **Dein Inventar reist mit** – Endertruhe und Level bleiben auf jeder Insel für sich.
+* **Besuchen:** Mit `/sky visit <Name>` auf die Insel eines anderen Spielers, auf einer Insel auch über `/sky` → **Reisen**. Hast du dort keinen Zugang, schaust du zu, wenn die Insel das erlaubt – siehe [Reisen & Zuschauen](reisen.md). **Dein Inventar reist mit** – Endertruhe und Level bleiben auf jeder Insel für sich.
 * **Zurück in die Lobby:** `/hub` (auch `/lobby`).
 * **Wiederkommen:** Beim nächsten Einloggen landest du direkt auf deiner Insel, wenn sie gerade läuft. Sonst kommst du in die Lobby.
 * **Auf der Insel unterwegs:** Mit den [Warpetts](warpetts.md) – dein erstes Paar verbindet Startinsel und Luftschiff.
@@ -89,11 +90,12 @@ Ausgegebenes Mana bekommst du nicht zurück. Danach kannst du eine neue Insel er
 
 * **Eine eigene Insel pro Spieler.** Hast du schon eine, öffnet „Skyblock erstellen“ direkt die Verwaltung.
 * **Der Kristall bleibt.** Dein Startbiom wird beim Erstellen festgelegt und lässt sich nicht ändern – nur mit einer neuen Insel.
-* **Deine Insel, deine Welt.** Andere Spieler siehst du auf deiner Insel nur, wenn sie Mitglied sind oder über den Clan- oder Freunde-Zugang kommen. Getroffen wird sich in der Lobby – oder mit `/clan meet` auf einer Insel.
+* **Deine Insel, deine Welt.** Andere Spieler siehst du auf deiner Insel nur, wenn du sie hereinlässt – als Mitglieder, über den Clan- oder Freunde-Zugang oder als [Zuschauer](reisen.md). Getroffen wird sich in der Lobby – oder mit `/clan meet` auf einer Insel.
 
 ## Verwandte Seiten
 
 * [Die Inselwelt](welt.md)
 * [Mitglieder & Rechte](mitglieder.md)
+* [Reisen & Zuschauen](reisen.md)
 * [Skilltree & Biome](skilltree.md)
 * [Warpetts](warpetts.md)

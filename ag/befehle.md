@@ -18,9 +18,10 @@ Die meisten Funktionen erreichst du über Menüs. Diese Befehle bringen dich dir
 | `/sky island` | Infos zu deiner Insel |
 | `/sky stats` | Deine Statistiken |
 | `/sky global` | Statistiken des ganzen Servers |
-| `/sky visit <Spieler>` | Auf die Insel eines Freundes oder Clanmitglieds, wenn er dir Zugang gibt – auch aus der Lobby |
+| `/sky visit <Spieler>` | Auf die Insel eines Spielers – mit Zugang als Mitspieler, sonst als [Zuschauer](../sb/reisen.md), wenn die Insel es erlaubt. Auch aus der Lobby |
+| `/sky visit` | Das Reisemenü: offene Inseln und die Inseln deiner Freunde |
 
-Die Befehle mit `/sky …` und `/quest` gibt es nur **auf den Inseln**, außer `/sky visit`. In der Lobby öffnet `/sky` sonst immer das Skyblock-Menü. `/sky stats` und `/sky global` brauchen auf fremden Inseln das Recht **Statistik**.
+Die Befehle mit `/sky …` und `/quest` gibt es nur **auf den Inseln**, außer `/sky visit <Spieler>`. In der Lobby öffnet `/sky` sonst immer das Skyblock-Menü. `/sky stats` und `/sky global` brauchen auf fremden Inseln das Recht **Statistik**.
 
 ## Clans
 

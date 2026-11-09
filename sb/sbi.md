@@ -51,6 +51,7 @@ Das neue Biom erscheint in der nächsten Gegend, die du erkundest – mit neuen 
 | [Deine Insel](insel.md) | Eigener Server, Menüs, Sterben, Löschen |
 | [Die Inselwelt](welt.md) | Wie neue Inseln entstehen – Gegenden, Höhlen, Erze, Bauwerke |
 | [Mitglieder & Rechte](mitglieder.md) | Bis zu 25 Mitspieler, Rechte, Zugang für Clan und Freunde |
+| [Reisen & Zuschauen](reisen.md) | Andere Inseln besuchen, das Reisemenü und was Zuschauer dürfen |
 | [Mana & Ruby](eco.md) | Mana zum Freischalten, Ruby zum Handeln |
 | [ChestShops](chestshop.md) | Mit Schild und Kiste gegen Ruby handeln, Märkte im ganzen Netzwerk finden |
 | [Quests](quests.md) | Tages-, Wochen- und Bonusquests für Mana |

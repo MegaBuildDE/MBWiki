@@ -41,7 +41,7 @@ Ein Klick auf einen Freund öffnet seine Karte:
 
 | Knopf | Was er tut |
 | ----- | ---------- |
-| **Insel besuchen** | Auf seine Insel, wenn er Freunden Zugang gibt |
+| **Insel besuchen** | Auf seine Insel – mit dem Freunde-Zugang als Mitspieler, sonst als [Zuschauer](../sb/reisen.md), wenn seine Insel das erlaubt |
 | **Brief schreiben** | Ein Brief in seine [Post](nachrichten.md) |
 | **In den Clan einladen** | Lädt ihn in deinen Clan ein. Ist er schon in einem, siehst du dessen Profil |
 | **Als Favorit markieren** | Er steht oben in deiner Liste |
@@ -59,6 +59,8 @@ Unter **Einstellungen** in `/friend` legst du fest:
 ## Freunde auf deine Insel holen
 
 Mit dem **Inselzugang für Freunde** kommen alle deine Freunde auf deine Insel, ohne dass du sie einzeln einlädst: als Besucher, Helfer oder Mitbauer. Von Anfang an steht er auf „niemand“. Einzelne Freunde lädst du als Mitglied ein – dabei wird dir zuerst deine Freundesliste angezeigt.
+
+Stellst du das [Zuschauen](../sb/mitglieder.md#zuschauen) auf **Nur Freunde**, dürfen sich nur deine Freunde deine Insel ansehen – auch wenn der Inselzugang für Freunde auf „niemand“ steht. Umgekehrt findest du die Inseln deiner Freunde auf jeder Insel im [Reisemenü](../sb/reisen.md) unter **Freunde**.
 
 {% content-ref url="../sb/mitglieder.md" %}
 [mitglieder.md](../sb/mitglieder.md)

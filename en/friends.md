@@ -41,7 +41,7 @@ Clicking a friend opens their card:
 
 | Button | What it does |
 | ------ | ------------ |
-| **Visit their island** | To their island, if they give friends access |
+| **Visit their island** | To their island – with friend access as a fellow player, otherwise as a [spectator](travel.md) if their island allows it |
 | **Write a letter** | A letter to their [mailbox](messages.md) |
 | **Invite to the clan** | Invites them to your clan. If they're already in one, you see its profile |
 | **Mark as favourite** | They're at the top of your list |
@@ -59,6 +59,8 @@ Under **Settings** in `/friend` you decide:
 ## Bringing friends to your island
 
 With **Island access for friends**, all your friends can come onto your island without you inviting each of them: as visitors, helpers or builders. At the start it's set to nobody. You invite individual friends as members – your friends list is shown first.
+
+If you set [watching](members.md#watching) to **Friends only**, only your friends may look around your island – even if island access for friends is set to nobody. The other way round, you find your friends' islands on any island in the [travel menu](travel.md) under **Friends**.
 
 {% content-ref url="members.md" %}
 [members.md](members.md)

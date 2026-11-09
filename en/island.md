@@ -9,7 +9,7 @@ coverY: 0
 
 # Your Island
 
-Every island is **its own server** with its own world. Only you, your [members](members.md) and – if you allow it – your [clan](clans.md) and your friends can enter it. You can own an island yourself and also be a member on other players' islands.
+Every island is **its own server** with its own world. Only you, your [members](members.md) and – if you allow it – your [clan](clans.md) and your friends can play on it. Everyone else may look around your island as a [spectator](travel.md), unless you restrict [watching](members.md#watching). You can own an island yourself and also be a member on other players' islands.
 
 As you explore, a whole island world grows around your starting island:
 
@@ -44,6 +44,7 @@ If you don't have an island yet, you'll find **Create Skyblock** here instead �
 | **Statistics** | `/sky stats` | Your stats on this island |
 | **Island** | `/sky island` | Server, starting biome and **Your rights** – what you're allowed to do on this island |
 | **Friends & Clan** | `/friend` | Friends, [clan](clans.md) and mail |
+| **Travel** | `/sky visit` | Visit open islands and your friends' islands – see [Travel & Watching](travel.md) |
 | **Shops** | `/shop` | Search [ChestShops](chestshop.md), markets and your own shops |
 | **To your own island** | `/clan home` | Back to your island when you're somewhere else |
 
@@ -54,7 +55,7 @@ Clicking the **Golem** on your airship also opens the skill tree.
 ## Getting around
 
 * **To your island:** In the lobby, `/sky` → **Join Island**. To islands you're a member of: `/sky` → **Shared Servers**.
-* **Visiting:** To a friend's or clan member's island with `/sky visit <name>`, if they give you access. **Your inventory travels with you** – ender chest and levels stay on each island.
+* **Visiting:** With `/sky visit <name>` to another player's island, on an island also through `/sky` → **Travel**. If you have no access there, you watch if the island allows it – see [Travel & Watching](travel.md). **Your inventory travels with you** – ender chest and levels stay on each island.
 * **Back to the lobby:** `/hub` (or `/lobby`).
 * **Coming back:** The next time you log in, you land straight on your island if it's running. Otherwise you arrive in the lobby.
 * **Getting around on the island:** With the [Warpetts](warpetts.md) – your first pair connects your starting island and the airship.
@@ -89,11 +90,12 @@ You don't get spent Mana back. Afterwards you can create a new island and choose
 
 * **One island of your own per player.** If you already have one, "Create Skyblock" opens the management menu directly.
 * **The crystal stays.** Your starting biome is set when you create the island and can't be changed – only with a new island.
-* **Your island, your world.** On your island you only see other players if they're members or come in through clan or friend access. The lobby is where everyone meets – or on an island with `/clan meet`.
+* **Your island, your world.** On your island you only see other players you let in – as members, through clan or friend access or as [spectators](travel.md). The lobby is where everyone meets – or on an island with `/clan meet`.
 
 ## Related pages
 
 * [The island world](world.md)
 * [Members & rights](members.md)
+* [Travel & watching](travel.md)
 * [Skill tree & biomes](skilltree.md)
 * [Warpetts](warpetts.md)

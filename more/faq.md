@@ -220,6 +220,18 @@ Ja. Mit `/clan` gründest du einen Clan oder trittst einem bei – mit Clan-Chat
 
 </details>
 
+<details>
+
+<summary>Kann ich mir die Inseln anderer Spieler ansehen?</summary>
+
+Ja. Auf einer Insel öffnest du mit `/sky` → **Reisen** oder `/sky visit` das Reisemenü mit den offenen Inseln und den Inseln deiner Freunde. Hast du dort keinen Zugang, schaust du nur zu: umsehen ja, abbauen, bauen und öffnen nein. Wer bei dir zuschauen darf, stellst du auf deiner Insel unter `/sky` → **Mitglieder** → **Zuschauen** ein.
+
+{% content-ref url="../sb/reisen.md" %}
+[reisen.md](../sb/reisen.md)
+{% endcontent-ref %}
+
+</details>
+
 ## Shop, Ränge und Voten
 
 <details>

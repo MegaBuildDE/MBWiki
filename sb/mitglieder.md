@@ -1,13 +1,13 @@
 ---
 description: >-
-  Spieler auf deine Insel einladen, festlegen, was sie dort dürfen, und deinem
-  Clan und deinen Freunden Zugang geben.
+  Spieler auf deine Insel einladen, festlegen, was sie dort dürfen, deinem Clan
+  und deinen Freunden Zugang geben und bestimmen, wer zuschauen darf.
 icon: users-gear
 ---
 
 # Mitglieder & Rechte
 
-Du kannst bis zu **25 Mitglieder** auf deine Insel einladen und für jedes einzeln festlegen, was es darf. Deinem [Clan](clans.md) und deinen Freunden gibst du Zugang auch ohne Einladung – siehe [Clan und Freunde](#clan-und-freunde).
+Du kannst bis zu **25 Mitglieder** auf deine Insel einladen und für jedes einzeln festlegen, was es darf. Deinem [Clan](clans.md) und deinen Freunden gibst du Zugang auch ohne Einladung – siehe [Clan und Freunde](#clan-und-freunde). Wer sich deine Insel nur ansehen darf, legst du unter [Zuschauen](#zuschauen) fest.
 
 ## Mitglied einladen
 
@@ -49,9 +49,9 @@ Einladen dürfen der Besitzer und Mitglieder mit dem Recht **Mitglieder**.
 | **Mitglieder** | Mitglieder, Rechte und Zugang verwalten |
 | **Statistik** | Die Statistik der Insel ansehen |
 
-Dazu kommt der Schalter **Betreten**: Ist er aus, kommt das Mitglied nur noch über den Clan- oder Freunde-Zugang auf die Insel.
+Dazu kommt der Schalter **Betreten**: Ist er aus, kommt das Mitglied nur noch über den Clan- oder Freunde-Zugang auf die Insel – oder als [Zuschauer](reisen.md) ohne Rechte, wenn du das [Zuschauen](#zuschauen) erlaubst.
 
-**Ohne besonderes Recht** darf jeder auf der Insel Monster bekämpfen, Gegenstände aufheben, angeln, mit Bewohnern und Forestlingen sprechen und handeln, Schilder anklicken und Werkbänke ohne Speicher benutzen – Werkbank, Steinsäge, Webstuhl, Kartentisch, Schmiedetisch, Schleifstein, Zaubertisch und Amboss.
+**Ohne besonderes Recht** darf jeder, der auf der Insel mitspielt, Monster bekämpfen, Gegenstände aufheben, angeln, mit Bewohnern und Forestlingen sprechen und handeln, Schilder anklicken, die Endertruhe und Werkbänke ohne Speicher benutzen – Werkbank, Steinsäge, Webstuhl, Kartentisch, Schmiedetisch, Schleifstein, Zaubertisch und Amboss. Für [Zuschauer](reisen.md) gelten engere Regeln.
 
 * Fehlt dir ein Recht, sagt dir die Anzeige über der Hotbar, welches – zum Beispiel „Hier darfst du nicht bauen.“
 * Eine Kiste, einen Ofen oder einen anderen Block mit Inhalt abbauen braucht **Bauen und Behälter**.
@@ -91,7 +91,7 @@ Stellst du ein einzelnes Recht um, zeigt das Menü **Eigen**.
 
 ## Clan und Freunde
 
-Ganz oben in den Mitgliedern auf der Insel stehen zwei Karten: **Clan-Zugang** für deinen [Clan](clans.md) und **Freunde-Zugang** für deine [Freunde](../ag/freunde.md). Damit kommen sie auf deine Insel, ohne dass du sie einzeln einlädst.
+Ganz oben in den Mitgliedern auf der Insel stehen drei Karten: **Zuschauen** (siehe [unten](#zuschauen)), **Clan-Zugang** für deinen [Clan](clans.md) und **Freunde-Zugang** für deine [Freunde](../ag/freunde.md). Mit den beiden Zugängen kommen sie auf deine Insel, ohne dass du sie einzeln einlädst.
 
 | Stufe | Was sie dürfen |
 | ----- | -------------- |
@@ -104,9 +104,28 @@ Ganz oben in den Mitgliedern auf der Insel stehen zwei Karten: **Clan-Zugang** f
 * Umstellen darf, wer das Recht **Mitglieder** hat. Den Freunde-Zugang deiner eigenen Insel stellst du auch in den Freunden unter **Einstellungen** ein.
 * Ist jemand Mitglied und zugleich im Clan oder ein Freund, gilt die höhere Stufe.
 * **Neulinge im Clan** (die ersten 72 Stunden) kommen höchstens als Besucher.
-* Verlässt jemand deinen Clan oder stellst du den Zugang auf Niemand, wechselt er sofort in die Lobby.
+* Verlässt jemand deinen Clan oder stellst du den Zugang auf Niemand, verliert er seine Rechte sofort. Darf er auf deiner Insel zuschauen, bleibt er als Zuschauer, sonst wechselt er in die Lobby.
 
-**Besuchen** geht mit `/sky visit <Name>` – auch aus der Lobby –, aus der Mitgliederliste des Clans oder aus der Freundesliste. Das Inventar reist mit.
+**Besuchen** geht mit `/sky visit <Name>` – auch aus der Lobby –, über das [Reisemenü](reisen.md), aus der Mitgliederliste des Clans oder aus der Freundesliste. Das Inventar reist mit.
+
+## Zuschauen
+
+Wer auf deiner Insel weder Mitglied ist noch über Clan oder Freunde Zugang hat, darf sie sich als **Zuschauer** ansehen – herein und umsehen, aber nichts verändern. Was Zuschauer dürfen, steht unter [Reisen & Zuschauen](reisen.md).
+
+Wer zuschauen darf, stellst du auf der Insel unter `/sky` → **Mitglieder** → **Zuschauen** ein. Die gewählte Stufe glänzt.
+
+| Stufe | Wer zuschauen darf |
+| ----- | ------------------ |
+| **Alle** | Jeder |
+| **Nur Freunde** | Nur deine [Freunde](../ag/freunde.md) – auch wenn der Freunde-Zugang auf Niemand steht |
+| **Nur Mitglieder** | Niemand. Herein kommt nur, wer Zugang zur Insel hat |
+
+* **Von Anfang an** steht Zuschauen auf **Alle**. Solange deine Insel läuft, steht sie dann im [Reisemenü](reisen.md) unter **Offene Inseln**.
+* Umstellen darf, wer das Recht **Mitglieder** hat.
+* Stellst du strenger, wechseln Zuschauer, die nicht mehr zuschauen dürfen, sofort in die Lobby.
+* Wer als Mitglied mit **Betreten**, über Clan-Zugang, Hilferuf oder Freunde-Zugang kommt, spielt wie bisher mit seinen Rechten mit. Zuschauer ist nur, wer allein über diese Stufe hereinkommt.
+* Zuschauer wecken deine Insel nicht: Schläft sie, kann niemand zuschauen.
+* **Clan-Inseln** sind nie zum Zuschauen offen.
 
 ## Was Mitglieder davon haben
 
@@ -124,5 +143,6 @@ Welche Rechte du auf einer Insel hast, siehst du dort unter `/sky` → **Insel**
 
 * [Clans](clans.md)
 * [Freunde](../ag/freunde.md)
+* [Reisen & Zuschauen](reisen.md)
 * [Deine Insel](insel.md)
 * [Skilltree & Biome](skilltree.md)

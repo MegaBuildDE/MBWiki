@@ -51,6 +51,7 @@ The new biome appears in the next area you explore – with new resources, anima
 | [Your island](island.md) | Your own server, menus, dying, deleting |
 | [The island world](world.md) | How new islands appear – areas, caves, ores, structures |
 | [Members & rights](members.md) | Up to 25 fellow players, rights, access for clan and friends |
+| [Travel & watching](travel.md) | Visit other islands, the travel menu and what spectators may do |
 | [Mana & Ruby](economy.md) | Mana for unlocking, Ruby for trading |
 | [ChestShops](chestshop.md) | Trade for Ruby with a sign and a chest, find markets across the network |
 | [Quests](quests.md) | Daily, weekly and bonus quests for Mana |
