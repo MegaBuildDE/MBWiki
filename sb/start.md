@@ -124,6 +124,8 @@ Auf einer kleinen Nachbarinsel, rund 100 Blöcke entfernt, ist jemand eingezogen
 
 Eine **Rankentreppe** aus Blättern führt hinüber. Dort wartet **Mala** mit deinem ersten **KI-Bewohner** und stellt ihn dir vor – und einen scheuen **Forestling** gleich dazu. Danach redet der Bewohner im Chat mit dir – und verkauft dir schon **Proviant**, also Essbares gegen Ruby.
 
+Die Sonderquest und Malas Vorstellung gibt es nur auf Inseln, zu denen du gehörst: auf deiner eigenen, auf Inseln, auf denen du Mitglied mit **Betreten** bist, und auf der Clan-Insel deines Clans. Auf anderen Inseln bist du Gast – siehe [Reisen & Zuschauen](reisen.md#bewohner-auf-fremden-inseln).
+
 {% content-ref url="bewohner.md" %}
 [bewohner.md](bewohner.md)
 {% endcontent-ref %}

@@ -124,6 +124,8 @@ On a small neighbouring island, about 100 blocks away, someone has moved in. Thr
 
 A **vine staircase** made of leaves leads across. **Mala** is waiting there with your first **AI resident** and introduces them to you – along with a shy **Forestling**. After that, the resident chats with you – and already sells you **provisions**, meaning food for Ruby.
 
+The special quest and Mala's introduction only happen on islands you belong to: your own, islands where you're a member with **Join**, and your clan's clan island. On other islands you're a guest – see [Travel & Watching](travel.md#residents-on-other-islands).
+
 {% content-ref url="residents.md" %}
 [residents.md](residents.md)
 {% endcontent-ref %}

@@ -95,6 +95,17 @@ If you try one of these, the display above the hotbar shows “You cannot do tha
 * If you log out while watching, you land in the lobby the next time you log in – not back on the island.
 * With `/hub` you can go back yourself at any time.
 
+## Residents on other islands
+
+The [special quest](start.md#the-special-quest-find-the-first-resident) “Find the first resident” and Mala's introduction are only for the island's own players: the owner, members with **Join** and, on a clan island, the clan. Everyone else is a guest there – spectators as well as fellow players who come in through clan access, a call for help or friend access, and members whose **Join** switch is off.
+
+As a guest on another island:
+
+* No arrow, beacon or helper spirit shows you the way to the island's first resident. If a special quest was already running for you there, it disappears. The special quest on your own island isn't affected.
+* Mala doesn't introduce anyone to you – no resident, not even if you click them, and no [Forestling](forestlings.md).
+* With other islands' [residents](residents.md), you only have a short first conversation. The long one, which everyone has only once, only happens on an island you belong to.
+* When you come close, only one resident per settlement talks to you on their own. You can talk to all of them – by clicking them or typing their name in chat.
+
 ## Your own island
 
 Whether and who may watch on your island is set on the island under `/sky` → **Members** → **Watching**: **Everyone**, **Friends only** or **Members only**. At the start it's set to **Everyone**.

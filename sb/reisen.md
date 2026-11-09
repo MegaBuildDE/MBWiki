@@ -95,6 +95,17 @@ Versuchst du etwas davon, steht in der Anzeige über der Hotbar „Als Zuschauer
 * Loggst du aus, während du zuschaust, landest du beim nächsten Einloggen in der Lobby – nicht wieder auf der Insel.
 * Mit `/hub` gehst du jederzeit selbst zurück.
 
+## Bewohner auf fremden Inseln
+
+Die [Sonderquest](start.md#die-sonderquest-finde-den-ersten-bewohner) „Finde den ersten Bewohner“ und Malas Vorstellung gibt es nur für die Spieler der Insel selbst: den Besitzer, Mitglieder mit **Betreten** und auf einer Clan-Insel den Clan. Alle anderen sind dort Gäste – Zuschauer genauso wie Mitspieler, die über Clan-Zugang, Hilferuf oder Freunde-Zugang kommen, und Mitglieder, bei denen **Betreten** aus ist.
+
+Als Gast auf einer fremden Insel:
+
+* Kein Pfeil, kein Leuchtfeuer und kein Hilfsgeist zeigen dir den Weg zum ersten Bewohner der Insel. Lief dort schon eine Sonderquest für dich, verschwindet sie. Die Sonderquest deiner eigenen Insel bleibt davon unberührt.
+* Mala stellt dir niemanden vor – keinen Bewohner, auch nicht, wenn du ihn anklickst, und keinen [Forestling](forestlinge.md).
+* Mit fremden [Bewohnern](bewohner.md) führst du nur ein kurzes erstes Gespräch. Das lange, das jeder nur einmal führt, gibt es nur auf einer Insel, zu der du gehörst.
+* Kommst du ihnen nahe, spricht dich je Siedlung nur einer von selbst an. Reden kannst du mit allen – per Klick oder mit ihrem Namen im Chat.
+
 ## Deine eigene Insel
 
 Ob und wer auf deiner Insel zuschauen darf, stellst du auf der Insel unter `/sky` → **Mitglieder** → **Zuschauen** ein: **Alle**, **Nur Freunde** oder **Nur Mitglieder**. Von Anfang an steht es auf **Alle**.

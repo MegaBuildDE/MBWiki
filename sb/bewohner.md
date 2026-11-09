@@ -37,7 +37,9 @@ Jeder Bewohner hat einen Beruf – Bauer, Grubenarbeiter, Schmied, Händler oder
 {% step %}
 #### Ansprechen
 
-Ein Bewohner, den du noch nicht kennst, spricht dich von selbst an, wenn du ihm nahe kommst. Sonst klickst du ihn an (Bedrock: davor schleichen) oder schreibst seinen Namen in den Chat, etwa *„Pip, was machst du?“*.
+Kommst du einem Bewohner nahe, den du noch nicht kennst, spricht er dich von selbst an – in jeder Siedlung aber nur einer, die anderen dort nur, wenn sie gerade reden wollen. Sonst klickst du einen Bewohner an (Bedrock: davor schleichen) oder schreibst seinen Namen in den Chat, etwa *„Pip, was machst du?“*.
+
+Auf einer fremden Insel, auf der du nur Gast bist, ist das erste Gespräch mit einem Bewohner kurz, und Mala stellt dir dort niemanden vor – siehe [Reisen & Zuschauen](reisen.md#bewohner-auf-fremden-inseln).
 {% endstep %}
 
 {% step %}

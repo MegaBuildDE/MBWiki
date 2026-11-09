@@ -37,7 +37,9 @@ Every resident has a job – farmer, miner, smith, trader or sage (among the Shr
 {% step %}
 #### Start a conversation
 
-A resident you don't know yet talks to you on their own when you come close. Otherwise, click them (Bedrock: sneak in front of them) or type their name in chat, for example *“Pip, what are you doing?”*.
+When you come close to a resident you don't know yet, they talk to you on their own – but only one per settlement; the others there only do so when they feel like talking. Otherwise, click a resident (Bedrock: sneak in front of them) or type their name in chat, for example *“Pip, what are you doing?”*.
+
+On another island where you're only a guest, your first conversation with a resident is short, and Mala doesn't introduce anyone to you there – see [Travel & Watching](travel.md#residents-on-other-islands).
 {% endstep %}
 
 {% step %}
