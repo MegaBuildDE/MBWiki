@@ -8,19 +8,19 @@ icon: fire
 
 # Furnace Golem & Mana Geode
 
-The **Furnace Golem** puts your Mana into your account. At the golem you deposit your **Mana orbs** and **Mana Blocks**, withdraw Mana as orbs or blocks, and it turns **Mana Shards** from the **Mana Geode** into Mana – even while you're offline. You build it yourself, as many as you like.
+The **Furnace Golem** puts your Mana into your account. At the golem you deposit your **Mana orbs** and **Mana Blocks**, withdraw Mana as orbs, and it turns **Mana Shards** from the **Mana Geode** into Mana – even while you're offline. You build it yourself, as many as you like.
 
 <figure><img src="../.gitbook/assets/videos/furnace_golem.jpg" alt="Cover of the video “Furnace Golem” with the golem, a Mana Shard, a Mana Block and a Mana orb"><figcaption><p>The video “Furnace Golem” – Mala explains, in German</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/furnace_golem.mp4" %}
-**Video: Furnace Golem** (1:41, in German, with sound) – Mala shows you how to build the golem, deposit and withdraw Mana and turn Mana Shards into Mana.
+**Video: Furnace Golem** (1:40, in German, with sound) – Mala shows you how to build the golem, deposit and withdraw Mana and turn Mana Shards into Mana.
 {% endfile %}
 
 | | |
 | --- | --- |
 | **Building** | A Mana Block, a furnace on top, then a carved pumpkin or a jack o'lantern |
 | **Deposit** | Mana orbs (1 Mana) and Mana Blocks (17 Mana) |
-| **Withdraw** | As Mana orbs or Mana Blocks, as much as fits into your inventory |
+| **Withdraw** | Only as Mana orbs, as much as fits into your inventory |
 | **Shards** | **1 Mana** per Mana Shard, 2 minutes of work per shard |
 | **Daily limit** | **20 shards a day** for all your golems together – new limit at 04:00 |
 
@@ -56,8 +56,8 @@ The **golem on your airship** is a different one: it opens the [skill tree](skil
 A **right-click** on the golem opens its menu, and it greets you. On other islands you need the **Containers** right; visitors can't use it.
 
 * **Top:** your Mana account, how many Mana orbs and Mana Blocks you carry, how many orbs you mined yourself and haven't deposited yet, and how many foreign orbs you can still deposit today.
-* **Second row – Deposit:** one orb, a stack, all orbs, one Mana Block or all Mana Blocks.
-* **Third row – Withdraw:** 1, 16 or 64 orbs, 1 or 8 Mana Blocks.
+* **Second row – Deposit** (green buttons): one orb, a stack, all orbs, one Mana Block or all Mana Blocks. The number on the button shows how many one click deposits right now.
+* **Third row – Withdraw** (gold buttons): 1, 16 or 64 orbs.
 * **Bottom:** the **Mana shards** in the chests next to it, its **Work** – who built it, how far the shard is and why it's taking a break – and the **Daily limit**. Plus **Dismantle** and **Close**.
 
 ### Deposit
@@ -75,11 +75,11 @@ A Mana orb is **1 Mana**, a Mana Block **17 Mana**. The Mana goes into your acco
 
 ### Withdraw
 
-Here you get Mana from your account back as **Mana orbs** (1, 16 or 64) or **Mana Blocks** (1 or 8, 17 Mana each) – for example for a new golem or to craft a [Mobplate](mobplates.md).
+Here you get Mana from your account back as **Mana orbs** (1, 16 or 64) – for example for a new golem or to craft a [Mobplate](mobplates.md). **You can't withdraw Mana Blocks** – if you need one, craft it from 8 orbs and a Mana Charge.
 
 * **Survival mode only**, and only as much as fits into your inventory and your account covers.
 * Withdrawing has **no daily limit**.
-* Orbs and blocks you withdraw count as **mined by you**: if you deposit them again, they don't count towards the limit for foreign orbs. If you give them away, they're foreign orbs for the receiver.
+* Orbs you withdraw count as **mined by you**: if you deposit them again, they don't count towards the limit for foreign orbs. If you give them away, they're foreign orbs for the receiver.
 
 ## The Mana Geode
 
@@ -101,7 +101,7 @@ The **Mana Shards** for the golem grow in the caves of the main islands – on *
 Put a **chest**, a **trapped chest** or a **barrel** horizontally **right next to the golem** and put Mana Shards into it.
 
 1. The golem takes **one shard** from the chest.
-2. It works on it for **2 minutes** – with flames at the furnace mouth, smoke from the chimney and pink mana dust.
+2. It works on it for **2 minutes** with its arms raised over its head – pink Mana glows at the furnace mouth, a bright strand rises between its arms, and pink mana dust swirls around it, with a soft amethyst chime.
 3. Then the **builder gets 1 Mana** in their account, even while offline. After that the golem takes the next shard.
 
 * **Daily limit: 20 shards** per builder and day, across all their golems and islands. When it's full, the golem dozes until the daily reset at **04:00**. This doesn't touch the daily limit for actions.

@@ -1542,15 +1542,15 @@
   },
   "furnace_golem-abheben": {
     "de": {
-      "ms": 5260,
-      "text": "Brauchst du Mana wieder in der Hand, hebst du es hier ab – als Kugeln oder als ganze Blöcke.",
+      "ms": 5880,
+      "text": "Brauchst du Mana wieder in der Hand, hebst du es hier ab – als Mana-Kugeln, so viele du tragen kannst.",
       "words": [
         40,
-        400,
-        520,
-        840,
-        1080,
-        1200,
+        360,
+        600,
+        800,
+        1040,
+        1160,
         1320,
         1800,
         2080,
@@ -1559,13 +1559,14 @@
         2520,
         3000,
         3160,
-        3320,
-        3880,
-        4120,
-        4360,
-        4600
+        3400,
+        4200,
+        4440,
+        4760,
+        4920,
+        5320
       ],
-      "hash": "d01756a0ced22f75"
+      "hash": "569e748636bd6e74"
     }
   },
   "furnace_golem-geode": {

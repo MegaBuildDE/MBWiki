@@ -2,10 +2,11 @@
 """Furnace Golem auf MegaBuild Skyblock: Mana-Block, Golem bauen, ein- und abheben, Mana-Geode,
 Scherben verbacken, Tageslimit, Abbauen.
 
-Inhalt nach MBSkyManager/docs/MANA.md (Stand 08.11.2026, Commit 84861dbd: Kapitel Mana-Block,
+Inhalt nach MBSkyManager/docs/MANA.md (Stand 09.11.2026, Commit 54ab82ec: Kapitel Mana-Block,
 Mana-Geode und Der Furnace Golem) und config.yml mana.golem / mana.budding: 1 Mana je Scherbe
 in 120 s, 20 Scherben je Erbauer und Tag, Block = 17 Mana ohne Rueckrezept, Kristall in vier
-Stufen zu je rund 10 Minuten. Menue und Chat aus lang/de.yml (menu.furnace-golem.*,
+Stufen zu je rund 10 Minuten. Seit 09.11.: Arme ueber dem Kopf (Pool 75f3f3c5), nur rosa
+Effekte (nichts Brennendes), Abheben nur als Kugeln, Plaketten statt Items im Menue. Menue und Chat aus lang/de.yml (menu.furnace-golem.*,
 furnace-golem.*), Tageswechsel aus quests.reset (4 Uhr). Die Figur kommt aus modelle.py
 (fgolem_*), die Bloecke als eigene Iso-Wuerfel aus den Texturen des Manager-Packs und des
 Client-Jars. Mala erklaert jede Szene (nur Deutsch).
@@ -145,30 +146,40 @@ def maul(cx, boden, g):
     return cx + (220 - 256) / 512 * g, golem_mitte(boden, g) + (305 - 256) / 512 * g
 
 
-def schornstein(cx, boden, g):
-    return cx + (280 - 256) / 512 * g, golem_mitte(boden, g) + (172 - 256) / 512 * g
+def ofen(cx, boden, g):
+    """Ofenoeffnung im Sprite (512er Bild: um 205/378) - dort glimmt das Mana."""
+    return cx + (205 - 256) / 512 * g, golem_mitte(boden, g) + (378 - 256) / 512 * g
 
 
-def flammen(e, x, y, t, alpha, n=7, breite=60, seed=3):
-    """Flammen am Ofenmaul, dazu selten ein Lavafunke."""
-    flamme, lava = jar("particle/flame"), jar("particle/lava")
+def kopf(cx, boden, g):
+    """Ueber dem Kopf zwischen den erhobenen Armen (512er Bild: um 262/140)."""
+    return cx + (262 - 256) / 512 * g, golem_mitte(boden, g) + (140 - 256) / 512 * g
+
+
+# Die drei Rosatoene der Partikel im Spiel (FurnaceGolemService MANA_DUST, MANA_GLOW, MANA_DIM)
+MANA_DUST, MANA_GLOW, MANA_DIM = (253, 68, 190), (255, 165, 225), (196, 116, 170)
+
+
+def glimmen(e, x, y, t, alpha, n=7, breite=60, seed=3, farben=(MANA_DUST, MANA_GLOW)):
+    """Rosa Glimmen an der Ofenoeffnung: Koernchen leuchten auf und steigen ein Stueck.
+    Seit 09.11.2026 statt Flammen und Lavafunken (Kay: nichts Brennendes mehr)."""
     rnd = random.Random(seed)
     for i in range(n):
-        tempo, versatz, dx = rnd.uniform(1.1, 1.7), rnd.random(), rnd.uniform(-breite / 2, breite / 2)
+        tempo, versatz = rnd.uniform(.8, 1.3), rnd.random()
+        dx, dy = rnd.uniform(-breite / 2, breite / 2), rnd.uniform(-10, 10)
+        farbe, g = rnd.choice(farben), rnd.choice((8, 10, 12))
         u = (t * tempo + versatz) % 1
-        skaliert(e, flamme, x + dx, y - u * 46, 30 * (1 - .5 * u), alpha=alpha * math.sin(math.pi * u))
-    u = (t * .7) % 1
-    if u < .5:
-        p = u / .5
-        skaliert(e, lava, x + 40 * p, y - 70 * math.sin(math.pi * p), 22, alpha=alpha * (1 - p))
+        mc.einfuegen(e, Image.new("RGBA", (g, g), farbe + (255,)), x + dx - g / 2, y + dy - u * 34 - g / 2,
+                     alpha * math.sin(math.pi * u))
 
 
-def rauch(e, x, y, t, alpha, n=4, hoehe=170):
-    """Rauchfaden aus dem Schornstein."""
+def faden(e, x, y, t, alpha, n=6, hoehe=150):
+    """Heller Mana-Faden, der zwischen den erhobenen Armen aufsteigt (statt Rauch aus dem Schornstein)."""
     for i in range(n):
-        u = (t * .32 + i / n) % 1
-        bild = jar("particle/big_smoke_%d" % min(11, int(u * 12)))
-        skaliert(e, bild, x + 22 * math.sin(u * 4 + i), y - u * hoehe, 34 + 46 * u, alpha=alpha * .75 * (1 - u))
+        u = (t * .5 + i / n) % 1
+        g = 10 if u < .5 else 8
+        mc.einfuegen(e, Image.new("RGBA", (g, g), MANA_GLOW + (255,)), x + 8 * math.sin(u * 5 + t * 1.5) - g / 2,
+                     y - u * hoehe - g / 2, alpha * .9 * (1 - u))
 
 
 def staub(e, cx, unten, t, alpha, n=10, radius=120, hoehe=240, seed=5):
@@ -270,9 +281,15 @@ def kristall(e, stufe, s, alpha, riss=-1):
 # ── Menue ───────────────────────────────────────────────────────────────────
 
 MX, MY, MS = 870, 250, 4
-MENUE = {4: "mana", 10: "golem_deposit", 11: "mana_orb", 12: "mana_orb", 13: "mana_orb", 15: "mana_block",
-         16: "mana_block", 19: "golem_withdraw", 20: "mana_orb", 21: "mana_orb", 22: "mana_orb", 24: "mana_block",
-         25: "mana_block", 29: "mana_shard", 31: "golem_work", 33: "golem_daily", 40: "golem_dismantle", 44: "close"}
+def menue(kugeln, bloecke):
+    """Slots wie im Spiel seit 09.11.2026: gruene Plaketten zum Einzahlen, goldene zum Abheben, die
+    Menge als Stapelzahl (hoechstens 64, ohne Items 1). Abheben nur noch als Kugeln."""
+    def n(x):
+        return max(1, min(64, x))
+    return {4: "mana", 10: "golem_deposit", 11: "golem_in_one", 12: ("golem_in_stack", n(kugeln)),
+            13: ("golem_in_all", n(kugeln)), 15: "golem_in_block", 16: ("golem_in_blocks", n(bloecke)),
+            19: "golem_withdraw", 20: "golem_out_one", 21: ("golem_out_some", 16), 22: ("golem_out_stack", 64),
+            29: "mana_shard", 31: "golem_work", 33: "golem_daily", 40: "golem_dismantle", 44: "close"}
 
 
 def konto(stand, kugeln, bloecke):
@@ -297,10 +314,8 @@ def szene_intro(e, t, d):
         g = 500 * s
         golem(e, "fgolem_work", t, W / 2 - 50, 790, g, a)
         if t > 1.2:
-            mx, my = maul(W / 2 - 50, 790, g)
-            flammen(e, mx, my, t, a, breite=80)
-            sx, sy = schornstein(W / 2 - 50, 790, g)
-            rauch(e, sx, sy, t, a)
+            glimmen(e, *ofen(W / 2 - 50, 790, g), t, a, n=9, breite=90)
+            faden(e, *kopf(W / 2 - 50, 790, g), t, a)
             staub(e, W / 2 - 50, 790, t, a * aus_kubisch(phase(t, 1.4, 2.4)), radius=170, hoehe=300)
 
 
@@ -370,12 +385,12 @@ def szene_einzahlen(e, t, d):
     else:
         stand, kugeln, bloecke = 195, 0, 0
     tipps = {4: konto(stand, kugeln, bloecke),
-             13: ("§dAlle Kugeln einzahlen", "§7Alle Kugeln aus deinem Inventar", "§7+§f87§7 Mana aufs Konto",
+             13: ("§aAlle Kugeln einzahlen", "§7Alle Kugeln aus deinem Inventar", "§7+§f87§7 Mana aufs Konto",
                   "§8Klick zum Einzahlen") if t < EIN_1 else
-             ("§dAlle Kugeln einzahlen", "§7Du hast keine Mana-Kugeln dabei.", "§8Mana-Erz lässt sie fallen."),
-             16: ("§dAlle Mana-Blöcke einzahlen", "§7Alle Blöcke aus deinem Inventar", "§7+§f51§7 Mana aufs Konto",
+             ("§aAlle Kugeln einzahlen", "§7Du hast keine Mana-Kugeln dabei.", "§8Mana-Erz lässt sie fallen."),
+             16: ("§aAlle Mana-Blöcke einzahlen", "§7Alle Blöcke aus deinem Inventar", "§7+§f51§7 Mana aufs Konto",
                   "§8Klick zum Einzahlen") if t < EIN_2 else
-             ("§dAlle Mana-Blöcke einzahlen", "§7Du hast keine Mana-Blöcke dabei.", "§88 Kugeln um eine Mana-Ladung",
+             ("§aAlle Mana-Blöcke einzahlen", "§7Du hast keine Mana-Blöcke dabei.", "§88 Kugeln um eine Mana-Ladung",
               "§8ergeben einen Block.")}
     halte = [(.3, 1.0, 4), (2.5, 3.1, 13), (4.5, 5.0, 16)]
     buehne(e, GX, GB, ein, seed=33, breite=7)
@@ -390,7 +405,7 @@ def szene_einzahlen(e, t, d):
     for t0 in (EIN_1, EIN_2):
         if t >= t0:
             funkenkranz(e, *maul(GX, GB, GG), t, t0 + .1, radius=40, n=6, farbe=ROSA, groesse=14)
-    menue_mit_zeiger(e, t, TITEL, 5, MENUE, tipps, halte, MX, MY, MS, ein)
+    menue_mit_zeiger(e, t, TITEL, 5, menue(kugeln, bloecke), tipps, halte, MX, MY, MS, ein)
     slot_klick(e, t, EIN_1, 13, ein)
     slot_klick(e, t, EIN_2, 16, ein)
     chat(e, 110, 905, chatzeilen([(EIN_1 + .1, "§d87 Mana §7eingezahlt. Konto: §d144 Mana"),
@@ -402,22 +417,22 @@ AB_1, AB_2 = 3.6, 5.4
 
 def szene_abheben(e, t, d):
     ein = aus_kubisch(phase(t, 0, .4))
-    stand = 195 if t < AB_1 else 131 if t < AB_2 else 114
-    tipps = {19: ("§6Abheben", "§7Mana vom Konto zurück", "§7als Kugeln oder Blöcke", "§8Nur so viel, wie ins Inventar passt"),
-             22: ("§d64 Kugeln abheben", "§7Du bekommst §f64× Mana-Kugel", "§7-§f64§7 Mana vom Konto", "§8Klick zum Abheben"),
-             24: ("§d1 Mana-Block abheben", "§7Du bekommst §f1× Mana-Block", "§7-§f17§7 Mana vom Konto",
+    stand = 195 if t < AB_1 else 131 if t < AB_2 else 115
+    tipps = {19: ("§6Abheben", "§7Mana vom Konto zurück", "§7als Mana-Kugeln", "§8Nur so viel, wie ins Inventar passt"),
+             22: ("§664 Kugeln abheben", "§7Du bekommst §f64× Mana-Kugel", "§7-§f64§7 Mana vom Konto", "§8Klick zum Abheben"),
+             21: ("§616 Kugeln abheben", "§7Du bekommst §f16× Mana-Kugel", "§7-§f16§7 Mana vom Konto",
                   "§8Klick zum Abheben"),
              4: konto(stand, 0, 0)}
-    halte = [(.3, .9, 19), (2.4, 3.0, 22), (4.4, 4.9, 24)]
+    halte = [(.3, .9, 19), (2.4, 3.0, 22), (4.4, 4.9, 21)]
     buehne(e, GX, GB, ein, seed=33, breite=7)
     golem(e, "fgolem_idle", t, GX, GB, GG, ein)
     hotbar(e, ({1: mc.icon16("mana_orb")} if t >= AB_1 + .2 else {}) |
-           ({2: mc.icon16("mana_block")} if t >= AB_2 + .2 else {}), ein * aus_kubisch(phase(t, .6, 1.0)))
-    menue_mit_zeiger(e, t, TITEL, 5, MENUE, tipps, halte, MX, MY, MS, ein)
+           ({2: mc.icon16("mana_orb")} if t >= AB_2 + .2 else {}), ein * aus_kubisch(phase(t, .6, 1.0)))
+    menue_mit_zeiger(e, t, TITEL, 5, menue(0, 0), tipps, halte, MX, MY, MS, ein)
     slot_klick(e, t, AB_1, 22, ein)
-    slot_klick(e, t, AB_2, 24, ein)
+    slot_klick(e, t, AB_2, 21, ein)
     chat(e, 110, 905, chatzeilen([(AB_1 + .1, "§f64× Mana-Kugel §7abgehoben (§d-64 Mana§7). Konto: §d131 Mana"),
-                                  (AB_2 + .1, "§f1× Mana-Block §7abgehoben (§d-17 Mana§7). Konto: §d114 Mana")]),
+                                  (AB_2 + .1, "§f16× Mana-Kugel §7abgehoben (§d-16 Mana§7). Konto: §d115 Mana")]),
          t, 3, ein)
 
 
@@ -510,8 +525,7 @@ def szene_truhe(e, t, d):
         golem(e, "fgolem_take", t - NIMMT, GOL_X, GOL_B, GOL_G, ein, schleife=False)
     else:
         golem(e, "fgolem_work", t, GOL_X, GOL_B, GOL_G, ein)
-        mx, my = maul(GOL_X, GOL_B, GOL_G)
-        flammen(e, mx, my, t, ein * aus_kubisch(phase(t, NIMMT + 1.0, NIMMT + 1.4)))
+        glimmen(e, *ofen(GOL_X, GOL_B, GOL_G), t, ein * aus_kubisch(phase(t, NIMMT + 1.0, NIMMT + 1.4)))
     scherbe = mc.icon16("mana_shard")
     deckel = (TRUHE_X, TRUHE_U - 100)
     x, y = zeigerweg(t, [(.3, 1720, 760), (REIN - .1, deckel[0] + 10, deckel[1]), (REIN + .8, 1720, 760)])
@@ -535,11 +549,10 @@ def szene_backen(e, t, d):
     buehne(e, 1340, GOL_B, ein, breite=15)
     setze_block(e, "kiste", 80, TRUHE_X, TRUHE_U, ein)
     fortschritt = phase(t, .4, FERTIG_B - .3)
-    mx, my = maul(GOL_X, GOL_B, GOL_G)
     if t < FERTIG_B:
         golem(e, "fgolem_work", t, GOL_X, GOL_B, GOL_G, ein)
-        flammen(e, mx, my, t, ein)
-        rauch(e, *schornstein(GOL_X, GOL_B, GOL_G), t, ein)
+        glimmen(e, *ofen(GOL_X, GOL_B, GOL_G), t, ein)
+        faden(e, *kopf(GOL_X, GOL_B, GOL_G), t, ein)
         staub(e, GOL_X, GOL_B, t, ein * (.3 + .7 * fortschritt), n=int(5 + 9 * fortschritt))
     else:
         golem(e, "fgolem_done", t - FERTIG_B, GOL_X, GOL_B, GOL_G, ein, schleife=False) if t < FERTIG_B + .9 \
@@ -547,7 +560,7 @@ def szene_backen(e, t, d):
         funkenkranz(e, GOL_X, golem_mitte(GOL_B, GOL_G) - 20, t, FERTIG_B, radius=120, n=8, farbe=(255, 255, 255))
         regen(e, GOL_X, golem_mitte(GOL_B, GOL_G) - 160, t, FERTIG_B, ein)
     zeit_tafel(e, 120 * (1 - fortschritt), ein * aus_kubisch(phase(t, .3, .7)), x=1580, y=170)
-    mana_ruby(e, 1860, 800, 114 if t < FERTIG_B + .1 else 115, 500, 4, ein)
+    mana_ruby(e, 1860, 800, 115 if t < FERTIG_B + .1 else 116, 500, 4, ein)
     u = phase(t, FERTIG_B + .1, FERTIG_B + 1.6)
     if 0 < u < 1:
         mct(e, 1700, 846 - 60 * u, "§d+1 Mana", 5, ein * math.sin(math.pi * min(1, u * 1.4)), anker="r")
@@ -566,16 +579,17 @@ def szene_limit(e, t, d):
         buehne(e, cx, boden, ein, seed=35 + i, breite=10)
         if t < t0:
             golem(e, "fgolem_work", t, cx, boden, 280, ein)
-            flammen(e, *maul(cx, boden, 280), t, ein, n=5, seed=3 + i)
+            glimmen(e, *ofen(cx, boden, 280), t, ein, n=5, breite=40, seed=3 + i)
         elif t < RUHE:
             golem(e, "fgolem_done", t - t0, cx, boden, 280, ein, schleife=False)
             funkenkranz(e, cx, golem_mitte(boden, 280) - 20, t, t0, radius=100, n=7, farbe=(255, 255, 255))
         else:
             golem(e, "fgolem_rest", t - RUHE, cx, boden, 280, ein)
-            sx, sy = schornstein(cx, boden, 280)
-            if t < RUHE + 1.4:
-                rauch(e, sx, sy, t - RUHE, ein * (1 - phase(t, RUHE + .8, RUHE + 1.4)), n=3, hoehe=120)
-            zzz(e, sx + 40, sy - 10, t, ein * aus_kubisch(phase(t, RUHE + .6, RUHE + 1.0)))
+            if t < RUHE + 1.4:  # der rosa Seufzer am Limit, matter als beim Backen
+                glimmen(e, *ofen(cx, boden, 280), t - RUHE, ein * (1 - phase(t, RUHE + .8, RUHE + 1.4)), n=5,
+                        breite=40, seed=7 + i, farben=(MANA_DIM,))
+            sx, sy = kopf(cx, boden, 280)
+            zzz(e, sx + 50, sy + 7, t, ein * aus_kubisch(phase(t, RUHE + .6, RUHE + 1.0)))
     tip = ("§bTageslimit", f"§7Heute: §f{heute}§7/§f20 §7Scherben", f"§8Gilt für alle Golems von {ERBAUER}.",
            "§8Neues Limit um 04:00 Uhr.")
     mc.einfuegen(e, mc.tooltip_bild(tip, 3), 1120, 160, ein * aus_kubisch(phase(t, .3, .7)))
@@ -641,7 +655,7 @@ SZENEN = [
          zeichne=szene_einzahlen, ton=[(EIN_1, "sfx:klick"), (EIN_1 + .1, "sfx:funkeln", .6), (EIN_2, "sfx:klick"),
                                        (EIN_2 + .1, "sfx:funkeln", .6)] + erzaehlt(.4, "furnace_golem-einzahlen")),
     dict(dauer=7.6, nr="04", kicker="Abheben", titel="Mana zurück in die Hand",
-         text="Als Kugeln oder als Mana-Blöcke, so viel ins Inventar passt. Abheben ist nicht begrenzt.",
+         text="Nur als Mana-Kugeln, so viel ins Inventar passt. Abheben ist nicht begrenzt.",
          zeichne=szene_abheben, ton=[(AB_1, "sfx:klick"), (AB_1 + .2, "sfx:pop", .5), (AB_2, "sfx:klick"),
                                      (AB_2 + .2, "sfx:pop", .5)] + erzaehlt(.4, "furnace_golem-abheben")),
     dict(dauer=9.8, nr="05", kicker="Mana-Geode", titel="Ein Kristall in der Höhle",

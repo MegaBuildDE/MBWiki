@@ -8,19 +8,19 @@ icon: fire
 
 # Furnace Golem & Mana-Geode
 
-Der **Furnace Golem** bringt dein Mana aufs Konto. Bei ihm zahlst du deine **Mana-Kugeln** und **Mana-Blöcke** ein, hebst Mana als Kugeln oder Blöcke wieder ab, und er verbackt **Mana-Scherben** aus der **Mana-Geode** zu Mana – auch wenn du offline bist. Du baust ihn dir selbst, so viele du willst.
+Der **Furnace Golem** bringt dein Mana aufs Konto. Bei ihm zahlst du deine **Mana-Kugeln** und **Mana-Blöcke** ein, hebst Mana als Kugeln wieder ab, und er verbackt **Mana-Scherben** aus der **Mana-Geode** zu Mana – auch wenn du offline bist. Du baust ihn dir selbst, so viele du willst.
 
 <figure><img src="../.gitbook/assets/videos/furnace_golem.jpg" alt="Cover des Videos „Furnace Golem“ mit dem Golem, Mana-Scherbe, Mana-Block und Mana-Kugel"><figcaption><p>Das Video „Furnace Golem“ – Mala erklärt, Ton an</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/furnace_golem.mp4" %}
-**Video: Furnace Golem** (1:41, mit Ton) – Mala zeigt dir, wie du den Golem baust, Mana ein- und abhebst und Mana-Scherben verbackst.
+**Video: Furnace Golem** (1:40, mit Ton) – Mala zeigt dir, wie du den Golem baust, Mana ein- und abhebst und Mana-Scherben verbackst.
 {% endfile %}
 
 | | |
 | --- | --- |
 | **Bauen** | Mana-Block, darauf ein Ofen, obendrauf ein geschnitzter Kürbis oder eine Kürbislaterne |
 | **Einzahlen** | Mana-Kugeln (1 Mana) und Mana-Blöcke (17 Mana) |
-| **Abheben** | Als Mana-Kugeln oder Mana-Blöcke, so viel ins Inventar passt |
+| **Abheben** | Nur als Mana-Kugeln, so viel ins Inventar passt |
 | **Scherben** | **1 Mana** je Mana-Scherbe, 2 Minuten Arbeit je Scherbe |
 | **Tageslimit** | **20 Scherben am Tag**, für alle deine Golems zusammen – neues Limit um 04:00 Uhr |
 
@@ -56,8 +56,8 @@ Der **Golem auf deinem Luftschiff** ist ein anderer: Er öffnet den [Skilltree](
 Ein **Rechtsklick** auf den Golem öffnet sein Menü, und er grüßt dich. Auf fremden Inseln brauchst du dafür das Recht **Behälter**, Besucher dürfen ihn nicht benutzen.
 
 * **Oben:** dein Mana-Konto, wie viele Mana-Kugeln und Mana-Blöcke du dabeihast, wie viele Kugeln du selbst abgebaut und noch nicht eingezahlt hast und wie viele fremde Kugeln heute noch gehen.
-* **Zweite Reihe – Einzahlen:** eine Kugel, einen Stapel, alle Kugeln, einen Mana-Block oder alle Mana-Blöcke.
-* **Dritte Reihe – Abheben:** 1, 16 oder 64 Kugeln, 1 oder 8 Mana-Blöcke.
+* **Zweite Reihe – Einzahlen** (grüne Knöpfe): eine Kugel, einen Stapel, alle Kugeln, einen Mana-Block oder alle Mana-Blöcke. Die Zahl auf dem Knopf zeigt, wie viele ein Klick gerade einzahlt.
+* **Dritte Reihe – Abheben** (goldene Knöpfe): 1, 16 oder 64 Kugeln.
 * **Unten:** die **Mana-Scherben** in den Truhen neben ihm, seine **Arbeit** – wer ihn gebaut hat, wie weit die Scherbe ist und warum er gerade Pause macht – und das **Tageslimit**. Dazu **Abbauen** und **Schließen**.
 
 ### Einzahlen
@@ -75,11 +75,11 @@ Eine Mana-Kugel ist **1 Mana**, ein Mana-Block **17 Mana**. Das Mana kommt sofor
 
 ### Abheben
 
-Mana von deinem Konto bekommst du hier als **Mana-Kugeln** (1, 16 oder 64) oder **Mana-Blöcke** (1 oder 8, je 17 Mana) zurück – zum Beispiel für einen neuen Golem oder um eine [Mobplate](mobplates.md) zu craften.
+Mana von deinem Konto bekommst du hier als **Mana-Kugeln** (1, 16 oder 64) zurück – zum Beispiel für einen neuen Golem oder um eine [Mobplate](mobplates.md) zu craften. **Mana-Blöcke gibt es beim Abheben nicht** – brauchst du einen, craftest du ihn aus 8 Kugeln und einer Mana-Ladung.
 
 * **Nur im Überlebensmodus**, und nur so viel, wie in dein Inventar passt und dein Konto hergibt.
 * Abheben hat **kein Tageslimit**.
-* Abgehobene Kugeln und Blöcke zählen bei dir als **selbst abgebaut**: Zahlst du sie wieder ein, landen sie nicht im Limit für fremde Kugeln. Gibst du sie weiter, sind sie für den Empfänger fremde Kugeln.
+* Abgehobene Kugeln zählen bei dir als **selbst abgebaut**: Zahlst du sie wieder ein, landen sie nicht im Limit für fremde Kugeln. Gibst du sie weiter, sind sie für den Empfänger fremde Kugeln.
 
 ## Die Mana-Geode
 
@@ -101,7 +101,7 @@ Die **Mana-Scherben** für den Golem wachsen in den Höhlen der Hauptinseln – 
 Stell eine **Truhe**, eine **Redstone-Truhe** oder ein **Fass** waagerecht **direkt neben den Golem** und leg Mana-Scherben hinein.
 
 1. Der Golem nimmt sich **eine Scherbe** aus der Truhe.
-2. Er arbeitet **2 Minuten** daran – mit Flammen am Ofenmaul, Rauch aus dem Schornstein und rosa Mana-Staub.
+2. Er arbeitet **2 Minuten** daran, die Arme über dem Kopf – rosa Mana glimmt am Ofenmaul, ein heller Faden steigt zwischen seinen Armen auf, und rosa Mana-Staub kreist um ihn. Dazu klingt es leise wie Amethyst.
 3. Dann bekommt der **Erbauer 1 Mana** aufs Konto, auch wenn er gerade offline ist. Danach nimmt der Golem die nächste Scherbe.
 
 * **Tageslimit: 20 Scherben** je Erbauer und Tag, über alle seine Golems und Inseln zusammen. Ist es voll, döst der Golem bis zum Tageswechsel um **04:00 Uhr**. Das Limit für Aktionen berührt das nicht.

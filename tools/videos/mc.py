@@ -326,12 +326,17 @@ def slot_xy(slot):
 
 
 def menue_bild(titel, reihen, slots, S):
-    """slots: {platz: iconname}. Gibt das Menue als Bild zurueck."""
+    """slots: {platz: iconname} oder {platz: (iconname, anzahl)}. Gibt das Menue als Bild zurueck.
+    Eine Anzahl ueber 1 steht wie im Spiel als Stapelzahl unten rechts im Slot."""
     bild = menue_hintergrund(reihen, S).copy()
     zeichne_text(bild, 8 * S, 6 * S, titel, S, schatten=False)
     for platz, name in slots.items():
+        name, anzahl = name if isinstance(name, tuple) else (name, 1)
         x, y = slot_xy(platz)
         einfuegen(bild, icon(name, 16 * S), x * S, y * S)
+        if anzahl > 1:
+            zahl = str(anzahl)
+            zeichne_text(bild, (x + 17 - breite(zahl)) * S, (y + 9) * S, zahl, S)
     return bild
 
 
