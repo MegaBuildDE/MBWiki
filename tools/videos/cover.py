@@ -154,12 +154,12 @@ def furnace_golem():
     f = rahmen()
     licht(f, 1420, 600, 660, (255, 120, 200), 140)
     licht(f, 1330, 760, 300, (255, 170, 80), 90)
-    figur(f, "fgolem_cover", 14, 1420, 250, 620)
+    figur(f, "fgolem_cover", 1, 1400, 265, 590)
     scherbe, block, kugel = mc.icon16("mana_shard"), mc.icon16("mana_block"), mc.icon16("mana_orb")
-    for bild, cx, cy, g in ((scherbe, 1010, 330, 120), (block, 1820, 250, 120), (scherbe, 1830, 800, 104),
+    for bild, cx, cy, g in ((scherbe, 1010, 270, 120), (block, 1820, 250, 120), (scherbe, 1830, 800, 104),
                             (kugel, 1040, 820, 96)):
         skaliert(f, bild, cx, cy, g)
-    for cx, cy, g in ((960, 210, 26), (1880, 520, 22), (1640, 130, 30), (1100, 600, 18)):
+    for cx, cy, g in ((960, 210, 26), (1885, 660, 22), (1640, 130, 30), (1100, 600, 18)):
         funkeln(f, cx, cy, g, 1.0)
     text(f, "FURNACE GOLEM", ["Furnace", "Golem"], "Mana einzahlen, Scherben verbacken",
          ["Mana ein- und abheben", "Mana-Scherben aus der Geode", "1 Mana je Scherbe, 20 am Tag"])

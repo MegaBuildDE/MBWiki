@@ -1,15 +1,15 @@
 ---
 description: >-
   Der Furnace Golem auf MegaBuild.de – Mana-Kugeln und Mana-Blöcke einzahlen,
-  Mana abheben und Mana-Scherben aus der Mana-Geode in der Truhe auf seinem
-  Kopf zu Mana verbacken. Bauen, Menü, Tageslimit, Malas Sonderquest und wo die
-  Scherben wachsen.
+  Mana abheben und Mana-Scherben aus der Mana-Geode zu Mana verbacken. Bauen,
+  Menü, die Truhe zwei Blöcke neben ihm, Tageslimit, Malas Sonderquest und wo
+  die Scherben wachsen.
 icon: fire
 ---
 
 # Furnace Golem & Mana-Geode
 
-Der **Furnace Golem** bringt dein Mana aufs Konto. Bei ihm zahlst du deine **Mana-Kugeln** und **Mana-Blöcke** ein, hebst Mana als Kugeln wieder ab, und er verbackt **Mana-Scherben** aus der **Mana-Geode** zu Mana – auch wenn du offline bist. Die Scherben legst du ihm einfach in die **Truhe auf seinem Kopf**. Du baust ihn dir selbst, so viele du willst.
+Der **Furnace Golem** bringt dein Mana aufs Konto. Bei ihm zahlst du deine **Mana-Kugeln** und **Mana-Blöcke** ein, hebst Mana als Kugeln wieder ab, und er verbackt **Mana-Scherben** aus der **Mana-Geode** zu Mana – auch wenn du offline bist. Die Scherben legst du in eine **Truhe zwei Blöcke neben ihm** – er läuft hin und holt sie sich selbst. Du baust ihn dir selbst, so viele du willst.
 
 <figure><img src="../.gitbook/assets/videos/furnace_golem.jpg" alt="Cover des Videos „Furnace Golem“ mit dem Golem, Mana-Scherbe, Mana-Block und Mana-Kugel"><figcaption><p>Das Video „Furnace Golem“ – Mala erklärt, Ton an</p></figcaption></figure>
 
@@ -18,7 +18,7 @@ Der **Furnace Golem** bringt dein Mana aufs Konto. Bei ihm zahlst du deine **Man
 {% endfile %}
 
 {% hint style="info" %}
-**Das Video zeigt noch den früheren Golem:** mit den Armen über dem Kopf und ohne Truhe darauf. Die Scherben kommen dort nur in eine Truhe neben ihm. Heute trägt er eine **Truhe auf dem Kopf**, in die du die Scherben direkt legst – siehe [Scherben verbacken](#scherben-verbacken).
+**Das Video zeigt noch den früheren Golem:** mit den Armen über dem Kopf und mit der Truhe direkt neben ihm. Heute stehen seine Arme seitlich ab, direkt um ihn herum bleibt ein Block frei, und die Truhe steht **zwei Blöcke** neben ihm – siehe [Scherben verbacken](#scherben-verbacken).
 {% endhint %}
 
 | | |
@@ -26,7 +26,7 @@ Der **Furnace Golem** bringt dein Mana aufs Konto. Bei ihm zahlst du deine **Man
 | **Bauen** | Mana-Block, darauf ein Ofen, obendrauf ein geschnitzter Kürbis oder eine Kürbislaterne |
 | **Einzahlen** | Mana-Kugeln (1 Mana) und Mana-Blöcke (17 Mana) |
 | **Abheben** | Nur als Mana-Kugeln, so viel ins Inventar passt |
-| **Scherben** | **1 Mana** je Mana-Scherbe, 2 Minuten Arbeit je Scherbe – in die Truhe auf seinem Kopf (27 Plätze) oder in eine Truhe neben ihm |
+| **Scherben** | **1 Mana** je Mana-Scherbe, 2 Minuten Arbeit je Scherbe – aus einer Truhe oder einem Fass zwei Blöcke neben ihm |
 | **Tageslimit** | **20 Scherben am Tag**, für alle deine Golems zusammen – neues Limit um 04:00 Uhr |
 
 ## Der Mana-Block
@@ -44,11 +44,13 @@ Der **Mana-Block** ist verdichtetes Mana und der Fuß jedes Furnace Golem. **8 M
 
 Setz den **Mana-Block**, darauf einen **Ofen** und zum Schluss einen **geschnitzten Kürbis** oder eine **Kürbislaterne** als Kopf. Erst der Kopf baut den Golem: Die drei Blöcke zerfallen, und an ihrer Stelle steht der Furnace Golem. Er schaut dorthin, wohin das Kürbisgesicht geschaut hat.
 
-So sieht er aus: ein grauer Ofenkörper mit Augen und dunkler Nase, oben in der Mitte eine kleine **Holztruhe mit rosa Riegel**, links und rechts davon zwei kurze Armstummel, die nach oben zeigen.
+So sieht er aus: ein grauer Ofenkörper mit Augen, dunkler Nase und rosa-blauem Maul, links und rechts zwei kurze dunkle Arme, die seitlich abstehen.
 
-<figure><img src="../.gitbook/assets/mana/bauplan-golem.png" alt="Mana-Block, Ofen und geschnitzter Kürbis übereinander, daneben der fertige Furnace Golem mit einer kleinen Holztruhe auf dem Kopf"><figcaption><p>Mana-Block, Ofen, Kürbis – und fertig ist der Furnace Golem mit der Truhe auf dem Kopf</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/mana/bauplan-golem.png" alt="Mana-Block, Ofen und geschnitzter Kürbis übereinander, daneben der fertige Furnace Golem mit seitlich abstehenden Armen"><figcaption><p>Mana-Block, Ofen, Kürbis – und fertig ist der Furnace Golem</p></figcaption></figure>
 
 * **Nur im Überlebensmodus.** Auf fremden Inseln brauchst du das Recht **Bauen**, als Besucher geht es nicht.
+* **Rundherum ein Block Platz:** Direkt neben Mana-Block und Ofen – auch schräg an den Ecken – darf nichts stehen, Gras und Ähnliches ausgenommen. Sonst bleiben die drei Blöcke stehen, und eine Chatzeile sagt dir: „Um einen Furnace Golem muss ringsum ein Block Platz frei sein. Räum die Blöcke direkt neben Mana-Block und Ofen weg und setz den Kürbis neu.“
+* **Der Platz bleibt frei:** Steht der Golem, kannst du direkt neben ihn nichts mehr setzen und keinen Eimer ausgießen. Auch ein Spender setzt dort keinen Block, und ein Kolben schiebt nichts hinein. Er braucht den Platz für seinen Weg zur Truhe. Abbauen, was dort steht, geht weiter.
 * **Wer den Kopf setzt, ist der Erbauer.** Ihm gehört das Mana aus den Scherben.
 * Was im Ofen lag, fällt heraus.
 * **So viele Golems, wie du willst** – das Tageslimit für Scherben gilt für alle zusammen.
@@ -60,12 +62,12 @@ Der **Golem auf deinem Luftschiff** ist ein anderer: Er öffnet den [Skilltree](
 
 ## Das Menü
 
-Ein **Rechtsklick** auf seinen Ofenkörper öffnet sein Menü, und er grüßt dich. Klickst du weiter oben auf die Truhe auf seinem Kopf, öffnet sich stattdessen die Truhe – siehe [Scherben verbacken](#scherben-verbacken). Auf fremden Inseln brauchst du für beides das Recht **Behälter**, Besucher dürfen ihn nicht benutzen.
+Ein **Rechtsklick** irgendwo auf den Golem öffnet sein Menü, und er grüßt dich. Auf fremden Inseln brauchst du dafür das Recht **Behälter**, Besucher dürfen ihn nicht benutzen.
 
 * **Oben:** dein Mana-Konto, wie viele Mana-Kugeln und Mana-Blöcke du dabeihast, wie viele Kugeln du selbst abgebaut und noch nicht eingezahlt hast und wie viele fremde Kugeln heute noch gehen.
 * **Zweite Reihe – Einzahlen** (grüne Knöpfe): eine Kugel, einen Stapel, alle Kugeln, einen Mana-Block oder alle Mana-Blöcke. Die Zahl auf dem Knopf zeigt, wie viele ein Klick gerade einzahlt.
 * **Dritte Reihe – Abheben** (goldene Knöpfe): 1, 16 oder 64 Kugeln.
-* **Unten:** die **Mana-Scherben** in der Truhe auf seinem Kopf und in den Truhen neben ihm – ein Klick darauf öffnet die Kopf-Truhe –, seine **Arbeit** – wer ihn gebaut hat, wie weit die Scherbe ist und warum er gerade Pause macht – und das **Tageslimit**. Dazu **Abbauen** und **Schließen**.
+* **Unten:** die **Mana-Scherben** in den Truhen in seiner Reichweite – steht keine da, sagt dir die Karte, wohin eine gehört –, seine **Arbeit** – wer ihn gebaut hat, wie weit die Scherbe ist und warum er gerade Pause macht – und das **Tageslimit**. Dazu **Abbauen** und **Schließen**.
 
 ### Einzahlen
 
@@ -105,27 +107,42 @@ Die **Mana-Scherben** für den Golem wachsen in den Höhlen der Hauptinseln – 
 
 ## Scherben verbacken
 
-### Die Truhe auf seinem Kopf
+### Die Truhe zwei Blöcke neben ihm
 
-Mach einen **Rechtsklick oben auf den Golem**, auf die **Truhe auf seinem Kopf**. Sie öffnet sich direkt als Truhe mit **27 Plätzen**. Leg deine Mana-Scherben hinein – den Rest macht der Golem.
+Stell eine **Truhe**, eine **Redstone-Truhe** oder ein **Fass** genau **zwei Blöcke** neben den Golem und leg deine Mana-Scherben hinein – den Rest macht er selbst.
 
-* **Hinein passen nur Mana-Scherben.** Herausnehmen geht immer.
-* Klickst du weiter unten, auf den Ofen, öffnet sich wie bisher sein Menü (siehe oben).
-* Öffnen darfst du sie, wenn du kein Besucher bist und auf der Insel das Recht **Behälter** hast.
+* **Gerade zur Seite:** vor, hinter, links oder rechts von ihm, nicht schräg.
+* **Auf seiner Höhe:** auf derselben Ebene wie seine Füße, nicht einen Block höher oder tiefer.
+* **Der Platz dazwischen ist frei** – zwei Blöcke hoch –, und darunter ist fester Boden. Dort läuft er hin.
 
-### Eine Truhe daneben geht auch
+```
+ .  .  T  .  .
+ .  ○  ○  ○  .      G  der Furnace Golem
+ T  ○  G  ○  T      ○  bleibt frei, hier läuft er
+ .  ○  ○  ○  .      T  hier darf die Truhe stehen
+ .  .  T  .  .
+```
 
-Du kannst auch eine **Truhe**, eine **Redstone-Truhe** oder ein **Fass** waagerecht **direkt neben den Golem** stellen und die Scherben dort hineinlegen. Nicht als Scherbenkiste zählen Shop-Behälter, Clan-Projektkisten und eine Doppeltruhe, deren andere Hälfte nicht geladen oder gesperrt ist.
+* **Direkt neben ihm zählt keine Truhe** – dort bleibt der Platz ohnehin frei.
+* Nicht als Scherbentruhe zählen Shop-Behälter, Clan-Projektkisten und eine Doppeltruhe, deren andere Hälfte nicht geladen oder gesperrt ist.
+* Du kannst auf allen vier Seiten eine Truhe aufstellen – ist eine leer, holt er sich die Scherben aus der nächsten.
+* Fällt Sand oder Kies zwischen ihn und die Truhe, räum ihn weg – sonst kommt er nicht hin.
+
+Steht keine Truhe richtig, zeigt sein Menü bei den Scherben: „Keine Truhe und kein Fass in Reichweite. Stell eine zwei Blöcke neben ihn, auf seine Höhe, den Platz dazwischen frei.“
 
 ### So backt er
 
-1. Der Golem nimmt sich **eine Scherbe** – zuerst aus der Truhe auf seinem Kopf: Der Deckel geht auf, und er greift mit beiden Armstummeln hinein. Ist sie leer, nimmt er die Scherbe aus einer Truhe neben sich. Hast du die Kopf-Truhe gerade offen, siehst du die Scherbe darin verschwinden.
-2. Er arbeitet **2 Minuten** daran – rosa Mana glimmt an seinem Ofenmaul, über der Truhe steigt ein heller Faden auf, und rosa Mana-Staub windet sich um ihn nach oben. Dazu klingt es leise wie Amethyst.
-3. Dann bekommt der **Erbauer 1 Mana** aufs Konto, auch wenn er gerade offline ist. Danach nimmt der Golem die nächste Scherbe.
+1. Der Golem holt sich **eine Scherbe**: Er läuft zur Truhe, dreht sich zur Seite, öffnet den Deckel und greift hinein. Dann geht er zurück an seinen Platz.
+2. Er arbeitet **2 Minuten** daran – sein Ofenmaul glimmt rosa, über seinem Kopf steigt ein heller Faden auf, und rosa Mana-Staub windet sich um ihn nach oben. Dazu klingt es leise wie Amethyst.
+3. Dann bekommt der **Erbauer 1 Mana** aufs Konto, auch wenn er gerade offline ist. Danach holt der Golem die nächste Scherbe.
 
 * **Tageslimit: 20 Scherben** je Erbauer und Tag, über alle seine Golems und Inseln zusammen. Ist es voll, döst der Golem bis zum Tageswechsel um **04:00 Uhr**. Das Limit für Aktionen berührt das nicht.
-* **Er arbeitet nur, solange die Insel geladen ist.** Ohne Scherbe wartet er und schaut sich um.
+* **Er arbeitet nur, solange die Insel geladen ist.** Ohne Truhe in Reichweite oder ohne Scherbe wartet er und schaut sich um.
 * Scherben hineinlegen darf jeder, der an die Truhe darf – das Mana geht immer an den Erbauer.
+
+{% hint style="warning" %}
+**Golem von vor dem Update?** Eine Truhe direkt neben ihm zählt nicht mehr – stell sie zwei Blöcke weiter, sonst macht er Pause. Was schon direkt neben ihm steht, darf dort bleiben – nur zwischen ihm und seiner Truhe muss der Platz frei sein. Hattest du Scherben in der Truhe auf seinem Kopf, liegen sie nach dem Update oben auf ihm und verschwinden nicht – heb sie auf und leg sie in die Truhe.
+{% endhint %}
 
 ## Abbauen
 
@@ -133,7 +150,8 @@ Im Menü auf **Abbauen** klicken und bestätigen.
 
 * Nur mit dem Recht **Bauen**, nicht als Besucher, und im Überlebens- oder Kreativmodus.
 * Im Überlebensmodus bekommst du **Kopf, Ofen und Mana-Block** zurück.
-* **Die Scherben aus seiner Truhe** und eine Scherbe, an der er gerade arbeitet, fallen immer auf den Boden – auch im Kreativmodus. Sie landen genau am Golem und fliegen nicht herum, damit am Inselrand nichts in die Leere fällt. Liegen Scherben in seiner Truhe, sagen dir Knopf und Rückfrage das vorher.
+* **Eine Scherbe, an der er gerade arbeitet,** fällt immer auf den Boden – auch im Kreativmodus. Sie landet genau am Golem und fliegt nicht herum, damit am Inselrand nichts in die Leere fällt.
+* Die Truhe zwei Blöcke neben ihm bleibt stehen, wie sie ist.
 * Rechnet er gerade eine Scherbe ab, versuch es einen Moment später noch einmal.
 * An deinem Konto ändert das Abbauen nichts.
 
@@ -145,20 +163,20 @@ Einmal führt dir **Mala** einen Furnace Golem vor – mit Stimme und Untertitel
 * **Für wen:** einmal je Spieler und nur für die Spieler der Insel – den Besitzer, Mitglieder mit **Betreten** und auf einer Clan-Insel den Clan. Gäste und Zuschauer bekommen sie nicht, siehe [Reisen & Zuschauen](reisen.md#bewohner-auf-fremden-inseln).
 * **Wo:** auf der Startinsel, 5 bis 12 Blöcke vom Spawn. Eine Chatzeile nennt dir Richtung und Koordinaten, und der Pfeil im Questkasten zeigt dir den Weg.
 
-Mala wartet dort mit einem **geliehenen Golem**, der die Truhe schon auf dem Kopf trägt. Kommst du auf 6 Blöcke heran, erklärt sie dir in sieben Zeilen:
+Mala wartet dort mit einem **geliehenen Golem** und einer Truhe zwei Blöcke neben ihm. Kommst du auf 6 Blöcke heran, erklärt sie dir in sieben Zeilen:
 
 1. Sie stellt dir den Furnace Golem vor.
-2. Mana-Scherben legst du in die Truhe auf seinem Kopf – eine Scherbe schwebt von Mala hinein, und der Deckel geht auf.
+2. Mana-Scherben legst du in eine Truhe zwei Blöcke neben ihm – eine Scherbe schwebt von Mala in die Truhe, und der Golem läuft hin und holt sie sich.
 3. Er backt jede Scherbe eine Weile und schreibt dir dafür Mana gut.
 4. Bei ihm zahlst du deine Mana-Kugeln aufs Konto ein.
 5. So baust du dir einen eigenen: Auf einem kleinen **Schrein** erscheinen **Mana-Block, Ofen und geschnitzter Kürbis** übereinander, jeder genau dann, wenn Mala ihn nennt.
 6. Den Mana-Block craftest du aus acht Mana-Kugeln rund um eine Mana-Ladung.
 7. Der Golem war nur geliehen und verschwindet in rosa Funken.
 
-Danach ist die Quest geschafft, und eine Chatzeile fasst noch einmal zusammen, wie du deinen eigenen Golem baust und befüllst.
+Danach ist die Quest geschafft, und eine Chatzeile fasst noch einmal zusammen, wie du deinen eigenen Golem baust und wohin seine Truhe gehört.
 
 * Gehst du mittendrin **weiter als 24 Blöcke** weg, bricht die Quest ab. Kommst du wieder heran, beginnt sie von vorn.
-* **Das alles siehst nur du:** Mala, den Golem, den Schrein und die Scherbe. An der Insel ändert sich nichts.
+* **Das alles siehst nur du:** Mala, den Golem, die Truhe, den Schrein und die Scherbe. Die Truhe verschwindet mit dem Golem, an der Insel ändert sich nichts.
 
 ## Handel
 

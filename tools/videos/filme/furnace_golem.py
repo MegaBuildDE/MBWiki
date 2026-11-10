@@ -11,6 +11,13 @@ furnace-golem.*), Tageswechsel aus quests.reset (4 Uhr). Die Figur kommt aus mod
 (fgolem_*), die Bloecke als eigene Iso-Wuerfel aus den Texturen des Manager-Packs und des
 Client-Jars. Mala erklaert jede Szene (nur Deutsch).
 
+OFFEN (seit MBSkyManager cc6cbf99, 10.11.2026): Der Film ist veraltet. Die Arme stehen wieder
+seitlich ab, direkt um den Golem bleibt ein Ring frei, und die Truhe steht zwei Bloecke weiter;
+der Golem laeuft hin (walk, take_shard) und zurueck. Zu aendern: Effekte "zwischen den erhobenen
+Armen" (Maul, Faden), Szene 07 (Bild "direkt neben ihm", Tafeltext, Chatzeile built-reach) und
+die Stimme furnace_golem-truhe ("direkt neben ihn" -> neue Aufnahme noetig). Das Cover
+(cover.py) zeigt schon das neue Modell.
+
     python3 modelle.py fgolem_idle fgolem_play fgolem_start fgolem_work fgolem_take fgolem_done \\
         fgolem_wait fgolem_rest fgolem_greet fgolem_happy
     python3 bauen.py furnace_golem
