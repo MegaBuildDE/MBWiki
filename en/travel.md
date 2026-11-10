@@ -101,7 +101,7 @@ If you try one of these, the display above the hotbar shows “You cannot do tha
 
 ## Residents on other islands
 
-The [special quest](start.md#the-special-quest-find-the-first-resident) “Find the first resident” and Mala's introduction are only for the island's own players: the owner, members with **Join** and, on a clan island, the clan. Everyone else is a guest there – spectators as well as fellow players who come in through clan access, a call for help or friend access, and members whose **Join** switch is off.
+The [special quest](start.md#the-special-quest-find-the-first-resident) “Find the first resident”, Mala's introduction and her [special quest with the Furnace Golem](furnace-golem.md#the-special-quest-with-mala) are only for the island's own players: the owner, members with **Join** and, on a clan island, the clan. Everyone else is a guest there – spectators as well as fellow players who come in through clan access, a call for help or friend access, and members whose **Join** switch is off.
 
 As a guest on another island:
 

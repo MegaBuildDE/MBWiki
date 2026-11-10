@@ -76,7 +76,7 @@ Hast du einen Mob mit einer leeren [Mobplate](mobplates.md) markiert, nimmt ihm 
 
 Mana-Scherben wachsen in der **Mana-Geode**: Auf dem **Knospenden Mana-Amethyst** am Boden der Höhlen wächst ein Mana-Kristall in vier Stufen. Nur der **ausgewachsene Kristall** gibt beim Abbauen eine Mana-Scherbe – das dauert im Schnitt etwa 40 Minuten.
 
-Leg die Scherben in eine Truhe oder ein Fass neben einen [Furnace Golem](furnace-golem.md#scherben-verbacken). Er macht aus jeder Scherbe in 2 Minuten **1 Mana** für seinen Erbauer, bis zu 20 Scherben am Tag. Wo die Geode liegt und worauf du achten musst, steht unter [Furnace Golem & Mana-Geode](furnace-golem.md#die-mana-geode).
+Leg die Scherben in die Truhe auf dem Kopf eines [Furnace Golem](furnace-golem.md#scherben-verbacken) – oder in eine Truhe oder ein Fass neben ihm. Er macht aus jeder Scherbe in 2 Minuten **1 Mana** für seinen Erbauer, bis zu 20 Scherben am Tag. Wo die Geode liegt und worauf du achten musst, steht unter [Furnace Golem & Mana-Geode](furnace-golem.md#die-mana-geode).
 
 ## Handel
 

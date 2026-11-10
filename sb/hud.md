@@ -26,7 +26,7 @@ Jeder Kasten im HUD zeigt nur **Symbol und Zahl**. Das Symbol sagt, was gezählt
 Das gilt auch für die [Biomquest](skilltree.md#biomquests) deiner Insel – dann siehst du den Stand der ganzen Insel. Nach einem Abschluss steht kurz ein Haken da. Hast du keine offene Quest, zählt der Kasten die Blöcke, die du seit dem Betreten des Servers abgebaut hast.
 
 {% hint style="info" %}
-**Sonderquest:** Solange du deinen ersten Bewohner suchst, zeigt Kasten 2 einen **Pfeil**, der sich mit deinem Blick dreht, und die Entfernung in Metern.
+**Sonderquest:** Solange du deinen ersten Bewohner suchst, zeigt Kasten 2 einen **Pfeil**, der sich mit deinem Blick dreht, und die Entfernung in Metern. Genauso führt er dich danach zu Mala und ihrem [Furnace Golem](furnace-golem.md#die-sonderquest-mit-mala).
 {% endhint %}
 
 ## Unten rechts: Mana & Ruby

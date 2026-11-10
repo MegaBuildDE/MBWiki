@@ -75,7 +75,7 @@ Once you've marked a mob with an empty [Mobplate](mobplates.md), right-clicking 
 
 Mana Shards grow in the **Mana Geode**: a mana crystal grows in four stages on **Budding Mana Amethyst** on the cave floor. Only the **full-grown crystal** gives a Mana Shard when you mine it – that takes about 40 minutes on average.
 
-Put the shards into a chest or barrel next to a [Furnace Golem](furnace-golem.md#turning-shards-into-mana). It turns each shard into **1 Mana** for its builder in 2 minutes, up to 20 shards a day. Where the geode is and what to watch out for is under [Furnace Golem & Mana Geode](furnace-golem.md#the-mana-geode).
+Put the shards into the chest on a [Furnace Golem](furnace-golem.md#turning-shards-into-mana)'s head – or into a chest or barrel next to it. It turns each shard into **1 Mana** for its builder in 2 minutes, up to 20 shards a day. Where the geode is and what to watch out for is under [Furnace Golem & Mana Geode](furnace-golem.md#the-mana-geode).
 
 ## Trading
 

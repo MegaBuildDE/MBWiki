@@ -1,6 +1,6 @@
 ---
 description: >-
-  Daily, weekly and bonus quests, biome quests and the special quest on
+  Daily, weekly and bonus quests, biome quests and the special quests on
   MegaBuild.de – what there is, what they give you and how skipping works.
 icon: scroll
 ---
@@ -18,6 +18,7 @@ Quests are your most reliable source of Mana. Open them **on your island** with 
 | **Bonus quest** | For everyone who finishes the weekly quest quickly | below |
 | **Biome and crystal quests** | Fixed tasks of your island that open new biomes in the skill tree | [Skill Tree & Biomes](skilltree.md#biome-quests) |
 | **Special quest** | “Find the first resident” – once, right after you arrive | [Getting Started](start.md#the-special-quest-find-the-first-resident) |
+| **Special quest Furnace Golem** | Mala shows you a Furnace Golem – once, after the first resident | [Furnace Golem](furnace-golem.md#the-special-quest-with-mala) |
 
 ## Daily, weekly and bonus quests
 

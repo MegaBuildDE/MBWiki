@@ -1,6 +1,6 @@
 ---
 description: >-
-  Tages-, Wochen- und Bonusquests, Biomquests und die Sonderquest auf
+  Tages-, Wochen- und Bonusquests, Biomquests und die Sonderquests auf
   MegaBuild.de – was es gibt, was sie bringen und wie das Überspringen geht.
 icon: scroll
 ---
@@ -18,6 +18,7 @@ Quests sind deine verlässlichste Mana-Quelle. Öffne sie **auf deiner Insel** m
 | **Bonusquest** | Für alle, die die Wochenquest schnell schaffen | unten |
 | **Biom- und Kristallquests** | Feste Aufgaben der Insel, die neue Biome im Skilltree öffnen | [Skilltree & Biome](skilltree.md#biomquests) |
 | **Sonderquest** | „Finde den ersten Bewohner“ – einmal, gleich nach der Ankunft | [Erste Schritte](start.md#die-sonderquest-finde-den-ersten-bewohner) |
+| **Sonderquest Furnace Golem** | Mala führt dir einen Furnace Golem vor – einmal, nach dem ersten Bewohner | [Furnace Golem](furnace-golem.md#die-sonderquest-mit-mala) |
 
 ## Tages-, Wochen- und Bonusquest
 

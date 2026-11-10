@@ -26,7 +26,7 @@ Each box in the HUD shows only an **icon and a number**. The icon tells you what
 This also applies to your island's [biome quest](skilltree.md#biome-quests) – then you see the progress of the whole island. After you complete a quest, a checkmark shows briefly. If you have no open quest, the box counts the blocks you've mined since joining the server.
 
 {% hint style="info" %}
-**Special quest:** While you're looking for your first resident, box 2 shows an **arrow** that turns as you look around, along with the distance in meters.
+**Special quest:** While you're looking for your first resident, box 2 shows an **arrow** that turns as you look around, along with the distance in meters. It leads you to Mala and her [Furnace Golem](furnace-golem.md#the-special-quest-with-mala) the same way afterwards.
 {% endhint %}
 
 ## Bottom right: Mana & Ruby

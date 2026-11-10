@@ -124,7 +124,9 @@ Auf einer kleinen Nachbarinsel, rund 100 Blöcke entfernt, ist jemand eingezogen
 
 Eine **Rankentreppe** aus Blättern führt hinüber. Dort wartet **Mala** mit deinem ersten **KI-Bewohner** und stellt ihn dir vor – und einen scheuen **Forestling** gleich dazu. Danach redet der Bewohner im Chat mit dir – und verkauft dir schon **Proviant**, also Essbares gegen Ruby.
 
-Die Sonderquest und Malas Vorstellung gibt es nur auf Inseln, zu denen du gehörst: auf deiner eigenen, auf Inseln, auf denen du Mitglied mit **Betreten** bist, und auf der Clan-Insel deines Clans. Auf anderen Inseln bist du Gast – siehe [Reisen & Zuschauen](reisen.md#bewohner-auf-fremden-inseln).
+**Danach wartet Mala noch einmal auf dich:** Auf der Startinsel, ein paar Blöcke vom Spawn, führt sie dir in einer zweiten Sonderquest einen geliehenen **Furnace Golem** vor und zeigt dir auf einem kleinen Schrein, aus welchen Blöcken du dir selbst einen baust. Der Pfeil im Questkasten bringt dich hin – mehr unter [Furnace Golem](furnace-golem.md#die-sonderquest-mit-mala).
+
+Die Sonderquests und Malas Vorstellung gibt es nur auf Inseln, zu denen du gehörst: auf deiner eigenen, auf Inseln, auf denen du Mitglied mit **Betreten** bist, und auf der Clan-Insel deines Clans. Auf anderen Inseln bist du Gast – siehe [Reisen & Zuschauen](reisen.md#bewohner-auf-fremden-inseln).
 
 {% content-ref url="bewohner.md" %}
 [bewohner.md](bewohner.md)

@@ -101,7 +101,7 @@ Versuchst du etwas davon, steht in der Anzeige über der Hotbar „Als Zuschauer
 
 ## Bewohner auf fremden Inseln
 
-Die [Sonderquest](start.md#die-sonderquest-finde-den-ersten-bewohner) „Finde den ersten Bewohner“ und Malas Vorstellung gibt es nur für die Spieler der Insel selbst: den Besitzer, Mitglieder mit **Betreten** und auf einer Clan-Insel den Clan. Alle anderen sind dort Gäste – Zuschauer genauso wie Mitspieler, die über Clan-Zugang, Hilferuf oder Freunde-Zugang kommen, und Mitglieder, bei denen **Betreten** aus ist.
+Die [Sonderquest](start.md#die-sonderquest-finde-den-ersten-bewohner) „Finde den ersten Bewohner“, Malas Vorstellung und ihre [Sonderquest mit dem Furnace Golem](furnace-golem.md#die-sonderquest-mit-mala) gibt es nur für die Spieler der Insel selbst: den Besitzer, Mitglieder mit **Betreten** und auf einer Clan-Insel den Clan. Alle anderen sind dort Gäste – Zuschauer genauso wie Mitspieler, die über Clan-Zugang, Hilferuf oder Freunde-Zugang kommen, und Mitglieder, bei denen **Betreten** aus ist.
 
 Als Gast auf einer fremden Insel:
 
