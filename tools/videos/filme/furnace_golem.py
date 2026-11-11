@@ -2,24 +2,20 @@
 """Furnace Golem auf MegaBuild Skyblock: Mana-Block, Golem bauen, ein- und abheben, Mana-Geode,
 Scherben verbacken, Tageslimit, Abbauen.
 
-Inhalt nach MBSkyManager/docs/MANA.md (Stand 09.11.2026, Commit 54ab82ec: Kapitel Mana-Block,
+Inhalt nach MBSkyManager/docs/MANA.md (Stand 10.11.2026, Commit cc6cbf99: Kapitel Mana-Block,
 Mana-Geode und Der Furnace Golem) und config.yml mana.golem / mana.budding: 1 Mana je Scherbe
 in 120 s, 20 Scherben je Erbauer und Tag, Block = 17 Mana ohne Rueckrezept, Kristall in vier
-Stufen zu je rund 10 Minuten. Seit 09.11.: Arme ueber dem Kopf (Pool 75f3f3c5), nur rosa
-Effekte (nichts Brennendes), Abheben nur als Kugeln, Plaketten statt Items im Menue. Menue und Chat aus lang/de.yml (menu.furnace-golem.*,
+Stufen zu je rund 10 Minuten. Seit 10.11.: Arme wieder seitlich (Pool 52240277), ringsum bleibt
+ein Block frei, und die Truhe steht zwei Bloecke neben ihm; er geht mit walk drei Viertel eines
+Blocks hin, greift mit take_shard hinein (Deckel auf und zu, rosa Staub) und geht zurueck
+(Zeitplan GolemRules.TRIP_*, 60 Ticks). Nur rosa Effekte (nichts Brennendes), Abheben nur als
+Kugeln, Plaketten statt Items im Menue. Menue und Chat aus lang/de.yml (menu.furnace-golem.*,
 furnace-golem.*), Tageswechsel aus quests.reset (4 Uhr). Die Figur kommt aus modelle.py
 (fgolem_*), die Bloecke als eigene Iso-Wuerfel aus den Texturen des Manager-Packs und des
 Client-Jars. Mala erklaert jede Szene (nur Deutsch).
 
-OFFEN (seit MBSkyManager cc6cbf99, 10.11.2026): Der Film ist veraltet. Die Arme stehen wieder
-seitlich ab, direkt um den Golem bleibt ein Ring frei, und die Truhe steht zwei Bloecke weiter;
-der Golem laeuft hin (walk, take_shard) und zurueck. Zu aendern: Effekte "zwischen den erhobenen
-Armen" (Maul, Faden), Szene 07 (Bild "direkt neben ihm", Tafeltext, Chatzeile built-reach) und
-die Stimme furnace_golem-truhe ("direkt neben ihn" -> neue Aufnahme noetig). Das Cover
-(cover.py) zeigt schon das neue Modell.
-
     python3 modelle.py fgolem_idle fgolem_play fgolem_start fgolem_work fgolem_take fgolem_done \\
-        fgolem_wait fgolem_rest fgolem_greet fgolem_happy
+        fgolem_wait fgolem_rest fgolem_greet fgolem_happy fgolem_walk_l fgolem_walk_r
     python3 bauen.py furnace_golem
 """
 import functools
@@ -126,6 +122,59 @@ def setze_block(e, name, kante, cx, unten, alpha=1.0, s=1.0):
     mc.einfuegen(e, bild, cx - bild.width / 2, unten - bild.height, alpha)
 
 
+def _quader(oben, links, rechts, kante, hoehe):
+    """Wie _wuerfel, aber nur hoehe hoch (fuer Unterteil und Deckel der Truhe)."""
+    w, h = kante * math.cos(math.radians(30)), kante / 2
+    groesse = (math.ceil(2 * w) + 1, math.ceil(2 * h + hoehe) + 1)
+    bild = Image.new("RGBA", groesse, (0, 0, 0, 0))
+    for tex, O, U, V, hell in ((oben, (0, h), (w, -h), (w, h), 1.0),
+                               (links, (0, h), (w, h), (0, hoehe), .8),
+                               (rechts, (w, 2 * h), (w, -h), (0, hoehe), .62)):
+        bild.alpha_composite(_flaeche(tex, O, U, V, groesse, hell))
+    return bild
+
+
+@functools.lru_cache(maxsize=None)
+def _kiste_teile(kante):
+    """Truhe in zwei Teilen: Unterteil (innen dunkel) und Deckel mit Schloss."""
+    oben, vorne, seite = _kiste_flaechen()
+    k = round(kante * 14 / 16)
+    innen = Image.new("RGBA", (14, 14), (46, 32, 20, 255))
+    unterteil = _quader(innen, vorne.crop((0, 5, 14, 14)), seite.crop((0, 5, 14, 14)), k, k * 9 / 14)
+    deckel = _quader(oben, vorne.crop((0, 0, 14, 5)), seite.crop((0, 0, 14, 5)), k, k * 5 / 14)
+    return k, unterteil, deckel
+
+
+def kiste(e, kante, cx, unten, auf=0.0, alpha=1.0):
+    """Truhe wie setze_block(..., "kiste"), mit auf > 0 hebt sich der Deckel nach hinten oben."""
+    if auf <= 0:
+        setze_block(e, "kiste", kante, cx, unten, alpha)
+        return
+    k, unterteil, deckel = _kiste_teile(kante)
+    mc.einfuegen(e, unterteil, cx - unterteil.width / 2, unten - unterteil.height, alpha)
+    w, h = k * math.cos(math.radians(30)), k / 2
+    dx, dy = .12 * w * auf, -.3 * k * auf
+    mc.einfuegen(e, deckel, cx - deckel.width / 2 + dx, unten - k * 9 / 14 - deckel.height + dy, alpha)
+
+
+def frei_feld(e, cx, boden, kante, alpha):
+    """Gestrichelter Rahmen fuer den freien Block zwischen Golem und Truhe."""
+    if alpha <= .003:
+        return
+    b = Image.new("RGBA", (kante + 8, kante + 8), (0, 0, 0, 0))
+    d = ImageDraw.Draw(b)
+    d.rectangle((4, 4, kante + 4, kante + 4), fill=(255, 255, 255, 34))
+    for a, z in (((4, 4), (kante + 4, 4)), ((kante + 4, 4), (kante + 4, kante + 4)),
+                 ((kante + 4, kante + 4), (4, kante + 4)), ((4, kante + 4), (4, 4))):
+        laenge = math.dist(a, z)
+        for s in range(0, int(laenge), 22):
+            u0, u1 = s / laenge, min(1, (s + 12) / laenge)
+            d.line((a[0] + (z[0] - a[0]) * u0, a[1] + (z[1] - a[1]) * u0,
+                    a[0] + (z[0] - a[0]) * u1, a[1] + (z[1] - a[1]) * u1), fill=(255, 255, 255, 230), width=4)
+    mc.einfuegen(e, b, cx - b.width / 2, boden - kante - 4, alpha)
+    mct(e, cx, boden - kante / 2 - 14, "§ffrei", 3, alpha, anker="m")
+
+
 def oben_mitte(kante, unten):
     """Mitte der Oberseite eines Wuerfels, dessen vordere untere Ecke auf unten steht."""
     return unten - 1.5 * kante
@@ -149,17 +198,17 @@ def golem(e, name, t, cx, boden, g, alpha=1.0, schleife=True):
 
 
 def maul(cx, boden, g):
-    """Ofenmaul im Sprite (512er Bild: um 220/305)."""
-    return cx + (220 - 256) / 512 * g, golem_mitte(boden, g) + (305 - 256) / 512 * g
+    """Ofenmaul unter der Nase (512er Bild fgolem_idle: um 222/298)."""
+    return cx + (222 - 256) / 512 * g, golem_mitte(boden, g) + (298 - 256) / 512 * g
 
 
 def ofen(cx, boden, g):
-    """Ofenoeffnung im Sprite (512er Bild: um 205/378) - dort glimmt das Mana."""
-    return cx + (205 - 256) / 512 * g, golem_mitte(boden, g) + (378 - 256) / 512 * g
+    """Unterkante des Ofenmauls (512er Bild: um 222/314) - dort glimmt das Mana."""
+    return cx + (222 - 256) / 512 * g, golem_mitte(boden, g) + (314 - 256) / 512 * g
 
 
 def kopf(cx, boden, g):
-    """Ueber dem Kopf zwischen den erhobenen Armen (512er Bild: um 262/140)."""
+    """Mitte der Oberseite des Kopfes (512er Bild: um 262/140)."""
     return cx + (262 - 256) / 512 * g, golem_mitte(boden, g) + (140 - 256) / 512 * g
 
 
@@ -181,7 +230,7 @@ def glimmen(e, x, y, t, alpha, n=7, breite=60, seed=3, farben=(MANA_DUST, MANA_G
 
 
 def faden(e, x, y, t, alpha, n=6, hoehe=150):
-    """Heller Mana-Faden, der zwischen den erhobenen Armen aufsteigt (statt Rauch aus dem Schornstein)."""
+    """Heller Mana-Faden, der ueber seinem Kopf aufsteigt (statt Rauch aus dem Schornstein)."""
     for i in range(n):
         u = (t * .5 + i / n) % 1
         g = 10 if u < .5 else 8
@@ -315,15 +364,16 @@ def szene_intro(e, t, d):
     titelkarte(e, t, "Furnace Golem", "Mana einzahlen – und aus Scherben neues backen", y=110)
     s = rueckschwung(phase(t, .6, 1.2))
     a = aus_kubisch(phase(t, .4, 1.0))
-    buehne(e, W / 2, 790, a, breite=17)
-    setze_block(e, "kiste", 96, W / 2 + 250, 812, a, s)
+    buehne(e, W / 2 - 10, 790, a, breite=24)
+    gx = W / 2 - 200
+    setze_block(e, "kiste", 120, gx + 2 * BLOCK * 500 / GOL_G, 818, a, s)  # zwei Bloecke neben ihm
     if s > 0:
         g = 500 * s
-        golem(e, "fgolem_work", t, W / 2 - 50, 790, g, a)
+        golem(e, "fgolem_work", t, gx, 790, g, a)
         if t > 1.2:
-            glimmen(e, *ofen(W / 2 - 50, 790, g), t, a, n=9, breite=90)
-            faden(e, *kopf(W / 2 - 50, 790, g), t, a)
-            staub(e, W / 2 - 50, 790, t, a * aus_kubisch(phase(t, 1.4, 2.4)), radius=170, hoehe=300)
+            glimmen(e, *ofen(gx, 790, g), t, a, n=9, breite=90)
+            faden(e, *kopf(gx, 790, g), t, a)
+            staub(e, gx, 790, t, a * aus_kubisch(phase(t, 1.4, 2.4)), radius=170, hoehe=300)
 
 
 ZEITEN_BLOCK = (5.2, 3.3, 6.0)
@@ -372,10 +422,12 @@ def szene_bauen(e, t, d):
     for i, (t0, _) in enumerate(BAU):
         klick(e, t, t0, BAU_X + 10, unten - i * KB2 - KB2 * .9, ein)
     chat(e, 880, 880, chatzeilen([(FERTIG + .5, "§aDein Furnace Golem steht! Stell eine Truhe oder ein Fass mit "
-                                                "Mana-Scherben direkt neben ihn – er macht daraus Mana für dich.")]),
+                                                "Mana-Scherben zwei Blöcke neben ihn, auf seine Höhe – er geht hin, "
+                                                "holt sich je eine Scherbe und macht daraus Mana für dich.")]),
          t, 3, ein)
     mct(e, 900, 170, "§7Der Kopf §fzuletzt§7, auch eine Kürbislaterne", 4, ein * aus_kubisch(phase(t, 4.4, 4.8)))
-    mct(e, 900, 220, "§7Nur im §fÜberlebensmodus §7und mit dem Recht §fBauen", 4,
+    mct(e, 900, 220, "§7Ringsum bleibt §fein Block frei", 4, ein * aus_kubisch(phase(t, 6.2, 6.6)))
+    mct(e, 900, 270, "§7Nur im §fÜberlebensmodus §7und mit dem Recht §fBauen", 4,
         ein * aus_kubisch(phase(t, 7.0, 7.4)))
 
 
@@ -517,35 +569,58 @@ def szene_scherbe(e, t, d):
     mct(e, 900, HY + HH + 140, "§7Eine Knospe gibt §fnichts §7– lass sie wachsen", 4, ein * aus_kubisch(phase(t, 5.4, 5.8)))
 
 
-TRUHE_X, TRUHE_U = 1470, 666
-GOL_X, GOL_B, GOL_G = 1255, 640, 330
-REIN, NIMMT = 2.0, 3.9
+GOL_X, GOL_B, GOL_G = 1470, 640, 330
+BLOCK = 150                                  # ein Block in Szene 07/08 (so breit wie sein Koerper)
+TRUHE_X, TRUHE_U = GOL_X - 2 * BLOCK, 666    # zwei Bloecke links von ihm, auf seiner Hoehe
+WEG_X = GOL_X - .75 * BLOCK                  # Wegzelle: drei Viertel eines Blocks Richtung Truhe
+BUEHNE_X, BUEHNE_B = 1335, 19
+REIN, LOS = 1.6, 3.4
+# Gang wie im Spiel (GolemRules.TRIP_*, Ticks / 20 ab LOS): drehen, hin bis 0.8, take_shard ab 1.0,
+# Deckel auf 1.1, Griff 1.35, Deckel zu 1.55, umdrehen 2.0, zurueck 2.2-2.7, wieder in seiner Richtung 3.0
+HIN, GRIFF, AUF, NIMMT, ZU, KEHRT, HEIM, DA = (LOS + s for s in (.3, 1.0, 1.1, 1.35, 1.55, 2.0, 2.2, 3.0))
+
+
+def gang(t):
+    """(x, Sprite, Sprite-Zeit, Schleife) des Golems auf dem Gang zur Truhe."""
+    if t < LOS:
+        return GOL_X, "fgolem_wait", t + 1.0, True
+    if t < GRIFF:
+        u = ein_aus(phase(t, HIN, HIN + .5))
+        return GOL_X + (WEG_X - GOL_X) * u, "fgolem_walk_l", t - HIN if HIN <= t < HIN + .5 else 0, True
+    if t < KEHRT:
+        return WEG_X, "fgolem_take", t - GRIFF, False
+    if t < DA:
+        u = ein_aus(phase(t, HEIM, HEIM + .5))
+        return WEG_X + (GOL_X - WEG_X) * u, "fgolem_walk_r", t - HEIM if HEIM <= t < HEIM + .5 else 0, True
+    return GOL_X, "fgolem_work", t, True
+
+
+def deckel_auf(t):
+    return aus_kubisch(phase(t, AUF, AUF + .15)) * (1 - ein_kubisch(phase(t, ZU, ZU + .15)))
 
 
 def szene_truhe(e, t, d):
     ein = aus_kubisch(phase(t, 0, .4))
-    buehne(e, 1340, GOL_B, ein, breite=15)
-    setze_block(e, "kiste", 80, TRUHE_X, TRUHE_U, ein)
-    if t < NIMMT:
-        golem(e, "fgolem_wait", t + 1.0, GOL_X, GOL_B, GOL_G, ein)
-    elif t < NIMMT + 1.0:
-        golem(e, "fgolem_take", t - NIMMT, GOL_X, GOL_B, GOL_G, ein, schleife=False)
-    else:
-        golem(e, "fgolem_work", t, GOL_X, GOL_B, GOL_G, ein)
-        glimmen(e, *ofen(GOL_X, GOL_B, GOL_G), t, ein * aus_kubisch(phase(t, NIMMT + 1.0, NIMMT + 1.4)))
+    buehne(e, BUEHNE_X, GOL_B, ein, breite=BUEHNE_B)
+    kiste(e, 80, TRUHE_X, TRUHE_U, deckel_auf(t), ein)
+    frei_feld(e, GOL_X - BLOCK, GOL_B, BLOCK - 16, ein * aus_kubisch(phase(t, 2.4, 2.8)) * (1 - phase(t, HIN, HIN + .3)))
+    x_g, name, ts, schleife = gang(t)
+    golem(e, name, ts, x_g, GOL_B, GOL_G, ein, schleife=schleife)
+    if t >= DA:
+        glimmen(e, *ofen(GOL_X, GOL_B, GOL_G), t, ein * aus_kubisch(phase(t, DA, DA + .4)))
     scherbe = mc.icon16("mana_shard")
     deckel = (TRUHE_X, TRUHE_U - 100)
     x, y = zeigerweg(t, [(.3, 1720, 760), (REIN - .1, deckel[0] + 10, deckel[1]), (REIN + .8, 1720, 760)])
     hand(e, x, y, scherbe if t < REIN else None, ein * (1 - phase(t, REIN + .5, REIN + .9)))
     klick(e, t, REIN, deckel[0] + 10, deckel[1], ein)
-    flug(e, scherbe, deckel, maul(GOL_X, GOL_B, GOL_G), phase(t, NIMMT, NIMMT + .7), ein, 60)
-    if t >= NIMMT:
-        staub(e, TRUHE_X, TRUHE_U - 60, t, ein * (1 - phase(t, NIMMT + .6, NIMMT + 1.4)), n=6, radius=40, hoehe=120)
+    flug(e, scherbe, deckel, maul(WEG_X, GOL_B, GOL_G), phase(t, NIMMT, NIMMT + .5), ein, 60)
+    if t >= AUF:
+        staub(e, TRUHE_X, TRUHE_U - 60, t, ein * (1 - phase(t, KEHRT - .2, KEHRT + .6)), n=6, radius=40, hoehe=120)
     mct(e, 900, 170, "§7Keine Scherbe? §fEr wartet §7und schaut sich um", 4,
-        ein * aus_kubisch(phase(t, .5, .9)) * (1 - phase(t, NIMMT - .2, NIMMT + .2)))
-    mct(e, 900, 170, "§7Er nimmt sich §fje eine Scherbe", 4, ein * aus_kubisch(phase(t, NIMMT + .4, NIMMT + .8)))
-    mct(e, 900, 820, "§7Truhe, Redstone-Truhe oder Fass", 4, ein * aus_kubisch(phase(t, 2.6, 3.0)))
-    mct(e, 900, 870, "§7waagerecht §fdirekt neben §7ihm", 4, ein * aus_kubisch(phase(t, 2.6, 3.0)))
+        ein * aus_kubisch(phase(t, .5, .9)) * (1 - phase(t, LOS - .2, LOS + .2)))
+    mct(e, 900, 170, "§7Er geht hin und holt sich §fje eine Scherbe", 4, ein * aus_kubisch(phase(t, LOS + .4, LOS + .8)))
+    mct(e, 900, 820, "§7Truhe, Redstone-Truhe oder Fass", 4, ein * aus_kubisch(phase(t, 2.4, 2.8)))
+    mct(e, 900, 870, "§fzwei Blöcke §7neben ihm, auf seiner Höhe", 4, ein * aus_kubisch(phase(t, 2.4, 2.8)))
 
 
 FERTIG_B = 4.1
@@ -553,8 +628,8 @@ FERTIG_B = 4.1
 
 def szene_backen(e, t, d):
     ein = aus_kubisch(phase(t, 0, .4))
-    buehne(e, 1340, GOL_B, ein, breite=15)
-    setze_block(e, "kiste", 80, TRUHE_X, TRUHE_U, ein)
+    buehne(e, BUEHNE_X, GOL_B, ein, breite=BUEHNE_B)
+    kiste(e, 80, TRUHE_X, TRUHE_U, 0, ein)
     fortschritt = phase(t, .4, FERTIG_B - .3)
     if t < FERTIG_B:
         golem(e, "fgolem_work", t, GOL_X, GOL_B, GOL_G, ein)
@@ -672,9 +747,10 @@ SZENEN = [
          text="Nur der ausgewachsene Kristall gibt eine Mana-Scherbe. Danach wächst eine neue Knospe.",
          zeichne=szene_scherbe, ton=[(SCHLAG + i * .2, "sfx:klick", .3) for i in range(4)]
          + [(BRUCH, "sfx:funkeln"), (BRUCH + .9, "sfx:pop", .6)] + erzaehlt(.4, "furnace_golem-scherbe")),
-    dict(dauer=8.0, nr="07", kicker="Truhe", titel="Scherben neben den Golem",
-         text="Leg die Scherben in eine Truhe oder ein Fass direkt neben ihm. Er holt sie sich selbst.",
-         zeichne=szene_truhe, ton=[(REIN, "sfx:klick"), (NIMMT, "sfx:funkeln", .7)] + erzaehlt(.4, "furnace_golem-truhe")),
+    dict(dauer=8.6, nr="07", kicker="Truhe", titel="Die Truhe zwei Blöcke weiter",
+         text="Stell eine Truhe oder ein Fass zwei Blöcke neben ihn, auf seine Höhe. Er geht hin und holt sich die Scherben selbst.",
+         zeichne=szene_truhe, ton=[(REIN, "sfx:klick"), (AUF, "sfx:klick", .5), (AUF + .05, "sfx:funkeln", .7),
+                                   (ZU, "sfx:klick", .4), (NIMMT + .5, "sfx:pop", .4)] + erzaehlt(.4, "furnace_golem-truhe")),
     dict(dauer=8.8, nr="08", kicker="Backen", titel="Aus einer Scherbe wird Mana",
          text="Jede Scherbe backt er 120 Sekunden lang. Das Mana bekommt, wer ihn gebaut hat, auch wenn er gerade offline ist.",
          zeichne=szene_backen, ton=[(FERTIG_B, "sfx:funkeln"), (FERTIG_B + .1, "sfx:erfolg", .6)]

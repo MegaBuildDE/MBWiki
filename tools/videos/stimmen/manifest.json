@@ -1617,25 +1617,31 @@
   },
   "furnace_golem-truhe": {
     "de": {
-      "ms": 5330,
-      "text": "Leg die Scherben in eine Truhe direkt neben ihn. Den Rest erledigt er selbst.",
+      "ms": 6540,
+      "text": "Stell eine Truhe zwei Blöcke neben ihn und leg die Scherben hinein. Er läuft hin und holt sie sich selbst.",
       "words": [
-        180,
-        420,
-        660,
-        1140,
-        1300,
-        1540,
-        2020,
-        2500,
-        2820,
-        3540,
-        3700,
-        4100,
-        4500,
-        4700
+        200,
+        520,
+        840,
+        1240,
+        1560,
+        1960,
+        2280,
+        2600,
+        2840,
+        3000,
+        3120,
+        3560,
+        4280,
+        4600,
+        4920,
+        5160,
+        5280,
+        5520,
+        5640,
+        5920
       ],
-      "hash": "e75ad21b087e3007"
+      "hash": "f21ba6769f102e02"
     }
   },
   "furnace_golem-backen": {

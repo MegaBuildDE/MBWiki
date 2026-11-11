@@ -14,12 +14,8 @@ Der **Furnace Golem** bringt dein Mana aufs Konto. Bei ihm zahlst du deine **Man
 <figure><img src="../.gitbook/assets/videos/furnace_golem.jpg" alt="Cover des Videos „Furnace Golem“ mit dem Golem, Mana-Scherbe, Mana-Block und Mana-Kugel"><figcaption><p>Das Video „Furnace Golem“ – Mala erklärt, Ton an</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/furnace_golem.mp4" %}
-**Video: Furnace Golem** (1:40, mit Ton) – Mala zeigt dir, wie du den Golem baust, Mana ein- und abhebst und Mana-Scherben verbackst.
+**Video: Furnace Golem** (1:41, mit Ton) – Mala zeigt dir, wie du den Golem baust, Mana ein- und abhebst und Mana-Scherben verbackst.
 {% endfile %}
-
-{% hint style="info" %}
-**Das Video zeigt noch den früheren Golem:** mit den Armen über dem Kopf und mit der Truhe direkt neben ihm. Heute stehen seine Arme seitlich ab, direkt um ihn herum bleibt ein Block frei, und die Truhe steht **zwei Blöcke** neben ihm – siehe [Scherben verbacken](#scherben-verbacken).
-{% endhint %}
 
 | | |
 | --- | --- |

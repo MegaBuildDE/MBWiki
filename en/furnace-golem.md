@@ -14,12 +14,8 @@ The **Furnace Golem** puts your Mana into your account. At the golem you deposit
 <figure><img src="../.gitbook/assets/videos/furnace_golem.jpg" alt="Cover of the video “Furnace Golem” with the golem, a Mana Shard, a Mana Block and a Mana orb"><figcaption><p>The video “Furnace Golem” – Mala explains, in German</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/furnace_golem.mp4" %}
-**Video: Furnace Golem** (1:40, in German, with sound) – Mala shows you how to build the golem, deposit and withdraw Mana and turn Mana Shards into Mana.
+**Video: Furnace Golem** (1:41, in German, with sound) – Mala shows you how to build the golem, deposit and withdraw Mana and turn Mana Shards into Mana.
 {% endfile %}
-
-{% hint style="info" %}
-**The video still shows the earlier golem:** with its arms raised over its head and the chest right next to it. Today its arms stick out sideways, one block of space stays free all around it, and the chest stands **two blocks** away from it – see [Turning shards into Mana](#turning-shards-into-mana).
-{% endhint %}
 
 | | |
 | --- | --- |

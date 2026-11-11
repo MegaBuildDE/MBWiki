@@ -75,6 +75,8 @@ AUFTRAEGE = {
     "fgolem_rest": ("golem/furnace_golem.bbmodel", "rest_full", -30, 1.0),
     "fgolem_greet": ("golem/furnace_golem.bbmodel", "greet", -30, 1.0),
     "fgolem_happy": ("golem/furnace_golem.bbmodel", "deposit_happy", -30, 1.0),
+    "fgolem_walk_l": ("golem/furnace_golem.bbmodel", "walk", -60, 1.0),  # Gang zur Truhe (links)
+    "fgolem_walk_r": ("golem/furnace_golem.bbmodel", "walk", 60, 1.0),   # und zurueck
     # Bloecke (assets/custom_blocks): langsam gedreht, 'drehen' Bilder fuer eine Umdrehung
     "mana_erz": ("blocks:mana_ore/mana_ore.bbmodel", None, 35, 0.8, 1.0, 120),
     "warpett_ei": ("blocks:warpett_egg/warpett_egg.bbmodel", None, -30, 0.9),
