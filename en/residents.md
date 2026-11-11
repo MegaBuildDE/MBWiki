@@ -64,8 +64,10 @@ If you've turned the island chat off in `/ki` or don't know the residents yet, y
 ### What they understand
 
 * **Keywords:** “trade”, “tasks”, “order”, “what's new” and “bye” open the matching menu or end the conversation.
-* **Questions:** Residents answer with real game data – what an item costs and where to find it, when you can trade, how far along your order is, where other settlements are, what the weather will be like. They also tell you about themselves.
-* If they don't understand you, they say so and suggest two questions.
+* **Questions:** Residents answer with real game data – what an item costs and where to find it, when you can trade, how far along your order is, where other settlements are, what the weather will be like. They also tell you about themselves: whether they sleep, have a pet or can fly, why they look the way they do, and whether they'll play with you. If you ask them to come along, they say no – they stay on their island. They don't want to fight either, they're peaceful.
+* **Follow-up questions:** After an answer, type “why?”, “tell me more”, “what do you mean?” or “really?” – the resident then replies to what they just said. “another one” after a joke gets you a new joke, “tell me more” after a tip gets you another tip. If you ask again after that, they're out of answers: “I really don't know more.”
+* **How you feel:** Tell a resident how you're doing – “I'm fine”, “I'm tired”, “so so” or “I'm bored”. They respond to it, even if they didn't ask. If you're bored, they suggest a joke, for example, or “tasks”. If you ask them “How are you?”, they sometimes ask back: “Good! And you?”
+* **What they don't know:** If you ask a question a resident doesn't know, they honestly say they don't know and suggest what you can ask them instead. If they don't understand something that isn't a question, they say so and suggest two questions.
 
 A conversation ends when you walk away, don't write anything for a while, or say goodbye.
 
@@ -209,6 +211,14 @@ Turn it off with `/ki` – for everyone or only for individual residents. `/ki o
 <summary>The residents don't answer</summary>
 
 When the residents are taking a break, it says so in chat. The team can switch the residents off for a short time, for example for maintenance.
+
+</details>
+
+<details>
+
+<summary>A resident doesn't understand me</summary>
+
+Residents have prepared lines and mostly understand simple questions. Keep it short and ask one thing at a time, for example “What are you doing?” or “Got a tip?”. If a resident doesn't know something, they suggest what you can ask them. After an answer, you can follow up with “why?” or “tell me more”.
 
 </details>
 

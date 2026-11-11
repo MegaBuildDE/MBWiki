@@ -64,8 +64,10 @@ Hast du den Inselchat in `/ki` ausgeschaltet oder kennst die Bewohner noch nicht
 ### Was sie verstehen
 
 * **Stichworte:** „handeln“, „aufgaben“, „auftrag“, „was gibt's“ und „tschüss“ öffnen das passende Menü oder beenden das Gespräch.
-* **Fragen:** Bewohner antworten mit echten Spieldaten – was eine Ware kostet und wo es sie gibt, wann ihr handeln könnt, wie weit dein Auftrag ist, wo andere Siedlungen liegen, wie das Wetter wird. Sie erzählen auch von sich.
-* Verstehen sie dich nicht, sagen sie es und schlagen dir zwei Fragen vor.
+* **Fragen:** Bewohner antworten mit echten Spieldaten – was eine Ware kostet und wo es sie gibt, wann ihr handeln könnt, wie weit dein Auftrag ist, wo andere Siedlungen liegen, wie das Wetter wird. Sie erzählen auch von sich: ob sie schlafen, ein Haustier haben oder fliegen können, warum sie so aussehen und ob sie mit dir spielen. Fragst du, ob sie mitkommen, sagen sie Nein – sie bleiben auf ihrer Insel. Kämpfen wollen sie auch nicht, sie sind friedlich.
+* **Nachfragen:** Schreib nach einer Antwort „wieso?“, „erzähl mehr“, „was meinst du?“ oder „echt?“ – dann antwortet der Bewohner auf das, was er gerade gesagt hat. „noch einen“ nach einem Witz bringt einen neuen Witz, „erzähl mehr“ nach einem Tipp einen weiteren Tipp. Fragst du dann noch einmal nach, ist er überfragt: „Mehr weiß ich wirklich nicht.“
+* **Wie es dir geht:** Erzähl einem Bewohner, wie es dir geht – „mir geht's gut“, „bin müde“, „geht so“ oder „mir ist langweilig“. Er geht darauf ein, auch wenn er gar nicht gefragt hat. Ist dir langweilig, schlägt er dir zum Beispiel einen Witz vor oder „aufgaben“. Fragst du ihn „Wie geht's?“, fragt er manchmal zurück: „Gut! Und dir?“
+* **Was sie nicht wissen:** Stellst du eine Frage, die ein Bewohner nicht kennt, sagt er ehrlich, dass er das nicht weiß, und schlägt dir vor, was du ihn fragen kannst. Verstehen sie etwas nicht, das keine Frage ist, sagen sie es und schlagen dir zwei Fragen vor.
 
 Ein Gespräch endet, wenn du weggehst, eine Weile nichts schreibst oder dich verabschiedest.
 
@@ -209,6 +211,14 @@ Stell es mit `/ki` ab – für alle oder nur für einzelne Bewohner. `/ki aus` s
 <summary>Die Bewohner antworten nicht</summary>
 
 Wenn die Bewohner gerade Pause machen, steht das im Chat. Das Team kann die Bewohner kurzzeitig abschalten, etwa für Wartungen.
+
+</details>
+
+<details>
+
+<summary>Ein Bewohner versteht mich nicht</summary>
+
+Bewohner haben vorbereitete Sätze und verstehen vor allem einfache Fragen. Frag kurz und eine Sache auf einmal, etwa „Was machst du?“ oder „Hast du einen Tipp?“. Weiß ein Bewohner etwas nicht, schlägt er dir vor, was du ihn fragen kannst. Nach einer Antwort kannst du mit „wieso?“ oder „erzähl mehr“ nachfragen.
 
 </details>
 
