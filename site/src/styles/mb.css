@@ -334,11 +334,34 @@ header.header {
 
 /* ---------- Seitentitel ohne harte Trennlinie ---------- */
 
+/* Titel und Text gehören zusammen: keine Linie, weniger Luft */
 .content-panel + .content-panel {
+	padding-top: 0.5rem;
 	border-top-color: transparent;
 }
 
 /* ---------- Text ---------- */
+
+/* Starlights Überschriften sind sehr groß (h1 42px, h2 35px) – etwas ruhiger */
+:root {
+	--sl-text-h1: 2rem;
+	--sl-text-h2: 1.45rem;
+	--sl-text-h3: 1.2rem;
+	--sl-text-h4: 1.05rem;
+}
+
+@media (min-width: 50rem) {
+	:root {
+		--sl-text-h1: 2.4rem;
+		--sl-text-h2: 1.7rem;
+		--sl-text-h3: 1.3rem;
+		--sl-text-h4: 1.125rem;
+	}
+}
+
+.sl-markdown-content :is(h2, h3) {
+	line-height: 1.25;
+}
 
 .sl-markdown-content :is(h2, h3, h4) {
 	color: var(--sl-color-white);
@@ -581,53 +604,93 @@ header.header {
 
 /* ---------- Tabs (GitBook tabs, siehe public/mb.js) ---------- */
 
+/* Schlanke Reiter mit Unterstrich wie bei GitBook, statt großer Pillen */
 .sl-markdown-content .mb-tabs {
 	margin-block: 1.5rem;
-	border: 1px solid var(--mb-color-border);
-	border-radius: 1rem;
-	background: rgba(34, 21, 58, 0.6);
+	border: 1px solid var(--sl-color-hairline-light);
+	border-radius: 0.9rem;
+	background: rgba(255, 255, 255, 0.025);
 	overflow: hidden;
 }
 
 .mb-tabs__list {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 0.35rem;
-	padding: 0.4rem;
-	border-bottom: 1px solid var(--mb-color-border);
-	background: rgba(23, 13, 41, 0.5);
+	gap: 0.25rem;
+	padding-inline: 0.6rem;
+	border-bottom: 1px solid var(--sl-color-hairline-light);
+	background: rgba(255, 255, 255, 0.03);
+	overflow-x: auto;
+	scrollbar-width: none;
+}
+
+/* Starlight setzt zwischen Geschwistern im Text einen Abstand oben – hier nicht */
+.sl-markdown-content .mb-tabs__list > * {
+	margin: 0;
 }
 
 .mb-tabs__button {
+	position: relative;
+	flex: none;
 	appearance: none;
 	border: 0;
-	border-radius: 999px;
-	padding: 0.45rem 1rem;
-	background: transparent;
-	color: var(--mb-color-text-soft);
+	border-radius: 0;
+	padding: 0.7rem 0.7rem 0.65rem;
+	background: none;
+	color: var(--mb-color-text-muted);
 	font: inherit;
 	font-size: var(--sl-text-sm);
 	font-weight: 600;
+	line-height: 1.2;
+	white-space: nowrap;
 	cursor: pointer;
-	transition:
-		background 0.2s ease,
-		color 0.2s ease;
+	transition: color 0.15s ease;
+}
+
+.mb-tabs__button::after {
+	content: '';
+	position: absolute;
+	inset-inline: 0.45rem;
+	bottom: -1px;
+	height: 2px;
+	border-radius: 2px 2px 0 0;
+	background: transparent;
+	transition: background-color 0.15s ease;
 }
 
 .mb-tabs__button:hover {
 	color: var(--sl-color-white);
-	background: rgba(169, 88, 255, 0.15);
+}
+
+.mb-tabs__button:hover::after {
+	background: rgba(201, 133, 255, 0.35);
 }
 
 .mb-tabs__button[aria-selected='true'] {
-	background: var(--mb-gradient);
 	color: #fff;
-	box-shadow: 0 8px 20px rgba(177, 77, 255, 0.25);
+}
+
+.mb-tabs__button[aria-selected='true']::after {
+	background: var(--mb-color-primary);
+	box-shadow: 0 0 10px rgba(201, 133, 255, 0.6);
+}
+
+.mb-tabs__button:focus {
+	outline: none;
+}
+
+.mb-tabs__button:focus-visible {
+	outline: 2px solid var(--mb-color-primary);
+	outline-offset: -0.35rem;
+	border-radius: 0.5rem;
 }
 
 .sl-markdown-content .mb-tab {
-	padding: 0.25rem 1.25rem 1rem;
 	margin: 0;
+	padding: 1rem 1.15rem 1.1rem;
+}
+
+.sl-markdown-content .mb-tab > :first-child {
+	margin-top: 0;
 }
 
 .mb-tabs.is-ready .mb-tab[hidden] {

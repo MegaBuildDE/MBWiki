@@ -9,7 +9,7 @@
   "scripts": {
     "convert": "node scripts/convert.mjs",
     "dev": "node scripts/convert.mjs && astro dev",
-    "build": "node scripts/convert.mjs && astro build",
+    "build": "node scripts/convert.mjs && astro build --force",
     "preview": "astro preview"
   },
   "dependencies": {

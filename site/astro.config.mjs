@@ -42,6 +42,27 @@ export default defineConfig({
 				MobileTableOfContents: './src/components/MobileTableOfContents.astro',
 			},
 			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
+			// Codeblöcke: abgerundet, dunkler Grund mit feinem Rand, passend zu Karten und Tabellen.
+			expressiveCode: {
+				styleOverrides: {
+					borderRadius: '0.75rem',
+					borderColor: 'rgba(211, 176, 255, 0.18)',
+					codePaddingBlock: '0.85rem',
+					codePaddingInline: '1.1rem',
+				},
+				customizeTheme: (theme) => {
+					const bg = 'rgba(10, 5, 22, 0.55)';
+					theme.styleOverrides.frames = {
+						...theme.styleOverrides.frames,
+						editorBackground: bg,
+						terminalBackground: bg,
+						editorActiveTabBackground: bg,
+						tooltipSuccessBackground: '#a958ff',
+						tooltipSuccessForeground: '#fff',
+					};
+					return theme;
+				},
+			},
 			credits: false,
 		}),
 	],
