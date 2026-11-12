@@ -102,11 +102,14 @@ install -m 755 /opt/mbwiki/repo/site/deploy/build-wiki.sh /usr/local/bin/mbwiki-
 install -m 644 /opt/mbwiki/repo/site/deploy/mbwiki-build.{service,timer} /etc/systemd/system/
 ```
 
-Solange die Seite noch nicht auf `main` ist, den Branch festlegen:
+Solange die Seite noch nicht auf `main` ist, den Branch und die Test-Adresse festlegen
+(`SITE_URL` landet in Sitemap, `canonical` und Vorschaubildern):
 
 ```bash
-echo 'BRANCH=feat/starlight-wiki' > /etc/default/mbwiki-build
+printf 'BRANCH=feat/starlight-wiki\nSITE_URL=https://wiki-neu.megabuild.de\n' > /etc/default/mbwiki-build
 ```
+
+Das Skript liest die Datei selbst, sie gilt also auch beim Aufruf von Hand.
 
 Erster Build (dauert beim ersten Mal wegen `docker pull` und `npm ci` etwas länger):
 
@@ -116,7 +119,8 @@ mbwiki-build && mbwiki-build --status
 
 nginx: Vorlage nach `sites-available` kopieren (bzw. dorthin, wo die anderen Seiten auf mbs
 liegen) und `server_name` zuerst auf eine **Test-Subdomain** setzen, z. B. `wiki-neu.megabuild.de`.
-Für die Subdomain einen DNS-Eintrag auf den Server anlegen, dann:
+Der `location = /robots.txt`-Block darin sperrt die Test-Subdomain für Suchmaschinen, damit das Wiki
+nicht doppelt bei Google steht. Für die Subdomain einen DNS-Eintrag auf den Server anlegen, dann:
 
 ```bash
 nginx -t && systemctl reload nginx
@@ -127,8 +131,9 @@ systemctl daemon-reload && systemctl enable --now mbwiki-build.timer
 ### Umzug von GitBook
 
 1. Auf der Test-Subdomain alles prüfen.
-2. Den Branch nach `main` mergen und `BRANCH=main` setzen (oder `/etc/default/mbwiki-build` löschen).
-3. In nginx `server_name wiki.megabuild.de` eintragen.
+2. Den Branch nach `main` mergen und `/etc/default/mbwiki-build` löschen (dann gelten `main` und
+   `https://wiki.megabuild.de`), danach `mbwiki-build --force`.
+3. In nginx `server_name wiki.megabuild.de` eintragen und den `robots.txt`-Block löschen.
 4. Den DNS-Eintrag `wiki.megabuild.de` vom GitBook-CNAME auf den Server umstellen, dann `certbot --nginx -d wiki.megabuild.de`.
 5. In GitBook die eigene Domain lösen.
 
@@ -144,5 +149,5 @@ ln -sfn releases/<ordner> /var/www/wiki/current   # auf einen älteren Stand zur
 ```
 
 Ändert sich `deploy/build-wiki.sh` im Repo, die Kopie in `/usr/local/bin` neu installieren.
-Einstellungen (Branch, Pfade, Docker-Grenzen `--cpus=4 --memory=2g`) stehen oben im Skript
+Einstellungen (Branch, Adresse, Pfade, Docker-Grenzen `--cpus=4 --memory=2g`) stehen oben im Skript
 und lassen sich in `/etc/default/mbwiki-build` überschreiben.

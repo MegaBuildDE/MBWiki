@@ -13,7 +13,8 @@ const readGenerated = (name, fallback) => {
 };
 
 export default defineConfig({
-	site: 'https://wiki.megabuild.de',
+	// Auf der Test-Subdomain setzt der Server SITE_URL (siehe deploy/build-wiki.sh).
+	site: process.env.SITE_URL || 'https://wiki.megabuild.de',
 	redirects: readGenerated('redirects.json', {}),
 	integrations: [
 		starlight({

@@ -15,10 +15,22 @@
 
 set -euo pipefail
 
+# Dauerhafte Einstellungen gelten auch beim Aufruf von Hand (systemd lädt sie zusätzlich als EnvironmentFile)
+CONFIG_FILE="${MBWIKI_CONFIG:-/etc/default/mbwiki-build}"
+if [[ -r "$CONFIG_FILE" ]]; then
+	set -a
+	# shellcheck source=/dev/null
+	. "$CONFIG_FILE"
+	set +a
+fi
+
 REPO_URL="${REPO_URL:-https://github.com/MegaBuildDE/MBWiki.git}"
 REPO_DIR="${REPO_DIR:-/opt/mbwiki/repo}"
 WEB_ROOT="${WEB_ROOT:-/var/www/wiki}"
 BRANCH="${BRANCH:-main}"
+# Adresse, unter der die Seite läuft (Links in Sitemap, Vorschaubildern, canonical).
+# Leer = https://wiki.megabuild.de. Auf der Test-Subdomain z. B. https://wiki-neu.megabuild.de.
+SITE_URL="${SITE_URL:-}"
 NODE_IMAGE="${NODE_IMAGE:-node:24-bookworm}"
 NPM_CACHE_VOLUME="${NPM_CACHE_VOLUME:-mbwiki-npm-cache}"
 # Der Server teilt sich die Maschine mit dem MB-Core: Build klein halten.
@@ -48,6 +60,7 @@ status() {
 	failed="$(read_file "$WEB_ROOT/.failed-commit")"
 	current="$(readlink "$WEB_ROOT/current" 2>/dev/null || true)"
 	echo "Branch:       $BRANCH"
+	echo "Adresse:      ${SITE_URL:-https://wiki.megabuild.de}"
 	echo "Live-Commit:  ${live:-–}"
 	echo "Live-Ordner:  ${current:-–}"
 	echo "Fehlgeschlagen (wird übersprungen bis zum nächsten Commit): ${failed:-–}"
@@ -66,9 +79,10 @@ ensure_repo() {
 }
 
 build() {
-	local -a limits
+	local -a limits env=()
 	read -ra limits <<<"$DOCKER_LIMITS"
-	docker run --rm --pull=missing "${limits[@]}" \
+	[[ -n "$SITE_URL" ]] && env=(-e "SITE_URL=$SITE_URL")
+	docker run --rm --pull=missing "${limits[@]}" "${env[@]}" \
 		-v "$REPO_DIR":/repo \
 		-v "$NPM_CACHE_VOLUME":/root/.npm \
 		-w /repo/site \

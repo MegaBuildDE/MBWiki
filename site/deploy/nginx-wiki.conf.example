@@ -1,7 +1,7 @@
 # nginx-Vorlage für das selbst gehostete Wiki (statische Dateien aus mbwiki-build).
 # Anonymisiert: keine IPs, Zertifikatszeilen ergänzt certbot --nginx selbst.
 # Zum Testen zuerst eine eigene Subdomain eintragen (z. B. wiki-neu.megabuild.de),
-# erst nach dem Umzug wiki.megabuild.de.
+# erst nach dem Umzug wiki.megabuild.de (dann den robots.txt-Block unten löschen).
 
 server {
 	listen 80;
@@ -20,9 +20,25 @@ server {
 
 	error_page 404 /404.html;
 
+	# Nur auf der Test-Subdomain: Suchmaschinen fernhalten, sonst steht das Wiki doppelt bei Google.
+	# Nach dem Umzug auf wiki.megabuild.de diesen Block löschen – dann gilt die robots.txt des Builds.
+	location = /robots.txt {
+		default_type text/plain;
+		return 200 "User-agent: *\nDisallow: /\n";
+	}
+
 	# Seiten: immer beim Server nachfragen (ETag), damit ein neuer Build sofort sichtbar ist
 	location / {
 		try_files $uri $uri/ $uri.html =404;
+		add_header Cache-Control "no-cache" always;
+		add_header X-Content-Type-Options "nosniff" always;
+		add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+	}
+
+	# Englische Seiten bekommen die englische Fehlerseite
+	location /en/ {
+		try_files $uri $uri/ $uri.html =404;
+		error_page 404 /en/404/index.html;
 		add_header Cache-Control "no-cache" always;
 		add_header X-Content-Type-Options "nosniff" always;
 		add_header Referrer-Policy "strict-origin-when-cross-origin" always;

@@ -25,6 +25,12 @@ const OUT_ASSETS = path.join(SITE, 'public/assets');
 
 const localeMap = JSON.parse(fs.readFileSync(path.join(SITE, 'locale-map.json'), 'utf8'));
 
+// Adresse der fertigen Seite (wie `site` in astro.config.mjs). Auf der Test-Subdomain setzt
+// der Server SITE_URL, damit Vorschaubilder dort auf die Test-Subdomain zeigen.
+const SITE_URL = (process.env.SITE_URL || 'https://wiki.megabuild.de').replace(/\/+$/, '');
+// Vorschaubild für Discord & Co., wenn eine Seite weder Titelbild noch eigenes Bild hat
+const SHARE_DEFAULT = '/share.jpg';
+
 // Startseite: Schaltflächen im Kopfbereich (Hero), Ziel als Quelldatei. Rest kommt aus README.md / en/welcome.md.
 const HOME_ACTIONS = {
 	de: [
@@ -636,6 +642,13 @@ function writePage(page, pages, dates) {
 	if (data.icon) fm.icon = data.icon;
 	if (data.cover) fm.cover = assetUrl(data.cover);
 	if (data.hidden) fm.pagefind = false;
+	// Vorschaubild beim Teilen: Titelbild, sonst erstes Bild der Seite, sonst das allgemeine
+	const firstImage = body.match(/(?:\.\.\/|\.\/)*\.gitbook\/assets\/[^\s"')>]+?\.(?:webp|png|jpe?g)(?=[\s"')>])/i)?.[0];
+	const share = SITE_URL + encodeURI(decodeURI(data.cover ? assetUrl(data.cover) : firstImage ? assetUrl(firstImage) : SHARE_DEFAULT));
+	fm.head = [
+		{ tag: 'meta', attrs: { property: 'og:image', content: share } },
+		{ tag: 'meta', attrs: { name: 'twitter:image', content: share } },
+	];
 	const updated = dates.get(page.src);
 	if (updated) fm.lastUpdated = updated.slice(0, 10);
 	fm.source = page.src;
