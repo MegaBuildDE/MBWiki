@@ -1,0 +1,10 @@
+[Unit]
+Description=MegaBuild.de Wiki jede Minute auf neue Commits prüfen
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=1min
+AccuracySec=10s
+
+[Install]
+WantedBy=timers.target

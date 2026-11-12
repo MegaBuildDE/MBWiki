@@ -1,0 +1,15 @@
+[Unit]
+Description=MegaBuild.de Wiki bauen (neuer Commit -> Astro-Build in Docker -> /var/www/wiki/current)
+Documentation=https://github.com/MegaBuildDE/MBWiki/blob/main/site/README.md
+Wants=network-online.target
+After=network-online.target docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/default/mbwiki-build
+ExecStart=/usr/local/bin/mbwiki-build
+# Nur das Skript selbst; die Grenzen für den Build-Container setzt DOCKER_LIMITS.
+Nice=10
+IOSchedulingClass=idle
+TimeoutStartSec=15min

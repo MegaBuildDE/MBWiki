@@ -1,0 +1,48 @@
+# nginx-Vorlage für das selbst gehostete Wiki (statische Dateien aus mbwiki-build).
+# Anonymisiert: keine IPs, Zertifikatszeilen ergänzt certbot --nginx selbst.
+# Zum Testen zuerst eine eigene Subdomain eintragen (z. B. wiki-neu.megabuild.de),
+# erst nach dem Umzug wiki.megabuild.de.
+
+server {
+	listen 80;
+	listen [::]:80;
+	server_name wiki.megabuild.de;
+
+	root /var/www/wiki/current;
+	index index.html;
+
+	access_log /var/log/nginx/wiki.access.log;
+	error_log /var/log/nginx/wiki.error.log warn;
+
+	gzip on;
+	gzip_min_length 1024;
+	gzip_types text/css application/javascript application/json image/svg+xml text/plain application/xml;
+
+	error_page 404 /404.html;
+
+	# Seiten: immer beim Server nachfragen (ETag), damit ein neuer Build sofort sichtbar ist
+	location / {
+		try_files $uri $uri/ $uri.html =404;
+		add_header Cache-Control "no-cache" always;
+		add_header X-Content-Type-Options "nosniff" always;
+		add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+	}
+
+	# CSS/JS von Astro tragen einen Hash im Namen und ändern sich nie
+	location /_astro/ {
+		try_files $uri =404;
+		add_header Cache-Control "public, max-age=31536000, immutable" always;
+	}
+
+	# Bilder und Videos aus .gitbook/assets (Namen ohne Hash)
+	location /assets/ {
+		try_files $uri =404;
+		add_header Cache-Control "public, max-age=86400" always;
+	}
+
+	# Suchindex: muss zum gerade ausgelieferten Build passen
+	location /pagefind/ {
+		try_files $uri =404;
+		add_header Cache-Control "no-cache" always;
+	}
+}
