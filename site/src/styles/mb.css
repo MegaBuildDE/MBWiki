@@ -68,6 +68,11 @@
 	--sl-sidebar-width: 19rem;
 }
 
+/* Startseite (Seiten mit Hero): Inhalt und Titelbild füllen die ganze Breite neben der Seitenleiste. */
+[data-has-sidebar][data-has-hero] .content-panel .sl-container {
+	max-width: none;
+}
+
 /* ---------- Hintergrund wie megabuild.de ---------- */
 
 html {
@@ -83,10 +88,9 @@ body {
 	background-attachment: fixed;
 }
 
-.header {
-	backdrop-filter: blur(14px);
-	-webkit-backdrop-filter: blur(14px);
-	border-bottom-color: var(--mb-color-border);
+header.header {
+	backdrop-filter: blur(14px) saturate(1.2);
+	-webkit-backdrop-filter: blur(14px) saturate(1.2);
 }
 
 .sidebar-pane {
@@ -146,23 +150,192 @@ body {
 	color: var(--sl-color-white);
 }
 
-/* ---------- Seitenleiste ---------- */
+/* ---------- Kopfzeile ---------- */
 
-.sidebar-content a[aria-current='page'],
-.sidebar-content a[aria-current='page']:hover {
-	background: var(--mb-gradient);
-	color: #fff;
-	border-radius: 0.6rem;
-	box-shadow: 0 8px 20px rgba(177, 77, 255, 0.25);
+header.header {
+	background: rgba(23, 13, 41, 0.72);
+	border-bottom-color: var(--sl-color-hairline);
+}
+
+/* Suche als ruhige Pille, Kürzel klein daneben */
+@media (min-width: 50rem) {
+	site-search button[data-open-modal] {
+		height: 2.35rem;
+		border: 1px solid var(--sl-color-hairline-light);
+		border-radius: 999px;
+		padding-inline: 0.9rem 0.45rem;
+		background: rgba(255, 255, 255, 0.04);
+		color: var(--mb-color-text-muted);
+		transition:
+			border-color 0.15s ease,
+			background-color 0.15s ease;
+	}
+
+	site-search button[data-open-modal]:hover {
+		border-color: rgba(201, 133, 255, 0.5);
+		background: rgba(255, 255, 255, 0.07);
+		color: var(--sl-color-white);
+	}
+
+	site-search button[data-open-modal] > kbd {
+		border: 1px solid var(--sl-color-hairline-light);
+		border-radius: 999px;
+		padding: 0.1rem 0.5rem;
+		background: transparent;
+		color: var(--mb-color-text-muted);
+	}
+}
+
+.header .social-icons::after {
+	border-inline-end-color: var(--sl-color-hairline-light);
+	height: 1.5rem;
+}
+
+/* ---------- Seitenleiste links ---------- */
+
+.sidebar-pane {
+	--sl-sidebar-item-padding-inline: 0.75rem;
+}
+
+.sidebar-content {
+	padding-top: 1.25rem;
+}
+
+/* Gruppen: kleine Überschrift statt großer Fettschrift */
+.sidebar-content .top-level > li + li {
+	margin-top: 1.4rem;
+}
+
+.sidebar-content .top-level > li > details > summary {
+	padding: 0.25rem 0.5rem 0.4rem 0.75rem;
+	border-radius: 0.5rem;
+}
+
+.sidebar-content .top-level > li > details > summary .large {
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-xs);
+	font-weight: 700;
+	letter-spacing: 0.07em;
+	word-spacing: 0.3em;
+	text-transform: uppercase;
+}
+
+.sidebar-content .top-level > li > details > summary:hover .large {
+	color: var(--sl-color-white);
+}
+
+.sidebar-content summary .caret {
+	width: 1rem;
+	height: 1rem;
+	color: var(--mb-color-text-muted);
+	opacity: 0.7;
+}
+
+/* Einträge: ganze Zeile, keine Baumlinie */
+.sidebar-content ul ul li {
+	margin-inline-start: 0;
+	padding-inline-start: 0;
+	border-inline-start: 0;
+}
+
+.sidebar-content ul ul ul {
+	margin-inline-start: 0.75rem;
+	padding-inline-start: 0.25rem;
+	border-inline-start: 1px solid var(--sl-color-hairline);
 }
 
 .sidebar-content a {
-	border-radius: 0.6rem;
+	position: relative;
+	margin-block: 1px;
+	padding: 0.38rem 0.75rem;
+	border-radius: 0.55rem;
+	color: var(--mb-color-text-soft);
+	font-size: var(--sl-text-sm);
+	line-height: 1.35;
+	transition:
+		background-color 0.15s ease,
+		color 0.15s ease;
 }
 
-.sidebar-content .group-label .large {
+.sidebar-content a:hover,
+.sidebar-content a:focus-visible {
+	background: rgba(255, 255, 255, 0.05);
 	color: var(--sl-color-white);
+}
+
+/* Aktive Seite: leicht getönt mit Leuchtbalken statt knalliger Pille */
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover,
+.sidebar-content a[aria-current='page']:focus {
+	background: linear-gradient(90deg, rgba(169, 88, 255, 0.26), rgba(169, 88, 255, 0.1));
+	color: #fff;
+	font-weight: 600;
+}
+
+.sidebar-content a[aria-current='page']::before {
+	content: '';
+	position: absolute;
+	inset-inline-start: 0;
+	inset-block: 0.4rem;
+	width: 3px;
+	border-radius: 3px;
+	background: var(--mb-gradient);
+	box-shadow: 0 0 10px rgba(201, 133, 255, 0.7);
+}
+
+/* ---------- Rechts: „Auf dieser Seite“ ---------- */
+
+.right-sidebar {
+	border-inline-start-color: var(--sl-color-hairline);
+}
+
+.right-sidebar-panel {
+	padding-top: 1.75rem;
+}
+
+.right-sidebar-panel h2 {
+	margin-bottom: 0.85rem;
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-xs);
 	font-weight: 700;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+}
+
+/* Eine Linie als Schiene, der aktive Abschnitt leuchtet darauf */
+.right-sidebar-panel starlight-toc nav > ul {
+	border-inline-start: 1px solid var(--sl-color-hairline-light);
+}
+
+.right-sidebar-panel starlight-toc a {
+	margin-inline-start: -1px;
+	padding-block: 0.3rem;
+	padding-inline: calc(0.85rem + 0.75rem * var(--depth, 0)) 0.5rem;
+	border-inline-start: 2px solid transparent;
+	border-radius: 0;
+	color: var(--mb-color-text-muted);
+	font-size: 0.8125rem;
+	line-height: 1.35;
+	transition:
+		color 0.15s ease,
+		border-color 0.15s ease;
+}
+
+.right-sidebar-panel starlight-toc a:hover {
+	color: var(--sl-color-white);
+	border-inline-start-color: rgba(201, 133, 255, 0.35);
+}
+
+.right-sidebar-panel starlight-toc a[aria-current='true'] {
+	color: #fff;
+	font-weight: 600;
+	border-inline-start-color: var(--mb-color-primary);
+}
+
+/* ---------- Seitentitel ohne harte Trennlinie ---------- */
+
+.content-panel + .content-panel {
+	border-top-color: transparent;
 }
 
 /* ---------- Text ---------- */
@@ -539,6 +712,13 @@ body {
 
 /* ---------- Schaltflächen ---------- */
 
+/* Starlight macht sie ab Tablet-Breite sehr groß; überall die kompakte Größe. */
+.sl-link-button {
+	padding: 0.55rem 1.1rem;
+	font-size: var(--sl-text-sm);
+	font-weight: 600;
+}
+
 .sl-link-button.primary {
 	background: var(--mb-gradient);
 	border-color: transparent;
@@ -554,11 +734,43 @@ body {
 
 /* ---------- Seitenende ---------- */
 
+/* Kompakt wie bei GitBook: zwei Spalten, „Weiter“ immer rechts, kleiner Titel. */
+.pagination-links {
+	gap: 0.75rem;
+}
+
+@media (min-width: 40rem) {
+	.pagination-links {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.pagination-links a[rel='next'] {
+		grid-column: 2;
+	}
+}
+
 .pagination-links a {
-	border-radius: 1rem;
+	gap: 0.6rem;
+	padding: 0.65rem 0.9rem;
+	border-radius: 0.8rem;
 	background: var(--mb-color-surface);
 	border-color: var(--mb-color-border);
 	box-shadow: none;
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-xs);
+	line-height: 1.4;
+}
+
+.pagination-links a svg {
+	width: 1.1rem;
+	height: 1.1rem;
+	color: var(--mb-color-primary);
+}
+
+.pagination-links .link-title {
+	font-size: var(--sl-text-sm);
+	font-weight: 600;
+	line-height: 1.35;
 }
 
 .pagination-links a:hover {
