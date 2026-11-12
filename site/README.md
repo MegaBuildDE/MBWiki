@@ -98,6 +98,8 @@ Bei einem fehlgeschlagenen Build bleibt der alte Stand live, und derselbe Commit
 
 ```bash
 git clone https://github.com/MegaBuildDE/MBWiki.git /opt/mbwiki/repo
+# solange die Seite noch nicht auf main ist (dort fehlt site/ noch):
+git -C /opt/mbwiki/repo checkout feat/starlight-wiki
 install -m 755 /opt/mbwiki/repo/site/deploy/build-wiki.sh /usr/local/bin/mbwiki-build
 install -m 644 /opt/mbwiki/repo/site/deploy/mbwiki-build.{service,timer} /etc/systemd/system/
 ```
