@@ -1,0 +1,24 @@
+{
+	"$hinweis": "Von Hand: welche Seiten den Skilltree-Baum bekommen, die Kristallbilder aus dem Pool und Ausnahmen für die Biom-Symbole. Pfade, Biome, Quests, Preise und Namen liest tools/site_skilltree.py aus MBSkyManager.",
+	"pages": ["sb/skilltree.md", "en/skilltree.md"],
+	"crystals": {
+		"plains_open": "pool:biome/Plains.png",
+		"forests_temperate": "pool:biome/Forest.png",
+		"snow_cold": "pool:biome/Snow and cold .png",
+		"mountains_rocky": "pool:biome/Mountains.png",
+		"swamp_rare": "pool:biome/Swamp.png",
+		"jungle_tropical": "pool:biome/Jungle.png",
+		"hot_dry": "pool:biome/Hot and dry biomes.png",
+		"water": "pool:biome/Water.png"
+	},
+	"icons": {
+		"SNOW_BLOCK": "jar:block/snow",
+		"GRASS_BLOCK": "jar:block/grass_block_side",
+		"PODZOL": "jar:block/podzol_top",
+		"BEE_NEST": "jar:block/bee_nest_front",
+		"SUNFLOWER": "jar:block/sunflower_front",
+		"FERN": { "tex": "jar:block/fern", "tint": "#79c05a" },
+		"TALL_GRASS": { "tex": "jar:block/tall_grass_top", "tint": "#79c05a" },
+		"VINE": { "tex": "jar:block/vine", "tint": "#48b518" }
+	}
+}

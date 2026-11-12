@@ -62,10 +62,6 @@ Erz liegt in kleinen **Nestern** von ein bis vier Blöcken im ganzen Fels und ei
 
 **Eisen ist so häufig wie Kohle** – in jedem Biom.
 
-{% hint style="info" %}
-**Mehr Erz seit November 2026.** Diese Mengen haben nur Inseln, die seitdem entstanden sind. Ältere Inseln behalten ihr Erz.
-{% endhint %}
-
 Dazu kommt das **Mana-Erz** mit seinen pinken Adern – 4 bis 14 Stück in den Höhlen jeder Hauptinsel.
 
 {% content-ref url="eco.md" %}

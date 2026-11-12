@@ -9,8 +9,8 @@ icon: plug
 
 MegaBuild.de ist **crossplay-fähig**: Java- und Bedrock-Spieler spielen auf demselben Server zusammen.
 
-{% hint style="warning" %}
-Der Server ist aktuell im **Wartungsmodus**. Ein Verbindungsversuch zeigt dir dann eine Wartungsmeldung statt der Server-Liste. Das ist kein Fehler auf deiner Seite – aktuelle Infos gibt es auf [status.megabuild.de](https://status.megabuild.de/) und im [Discord](https://megabuild.de/dc/).
+{% hint style="info" %}
+Der Server ist in der **Open Beta**. Zur Beta meldest du dich in unserem [Discord](https://megabuild.de/dc/) im Kanal **#🧪┃beta-anmeldung** an: Klick auf **Anmelden** und gib deinen Minecraft-Namen und deine Edition an. Danach siehst du die Beta-Infos und den Beta-Chat. Aktuelle Infos gibt es auf [status.megabuild.de](https://status.megabuild.de/).
 {% endhint %}
 
 ## Server-Adresse

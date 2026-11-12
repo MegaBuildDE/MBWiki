@@ -1,0 +1,137 @@
+{
+	"$hinweis": [
+		"Items und Rezepte für die eigenen Bausteine der neuen Wiki-Seite (scripts/convert.mjs).",
+		"figures: Bilder aus .gitbook/assets, die auf der neuen Seite als Rezept, Item-Reihe oder Galerie erscheinen. GitBook zeigt weiter das PNG.",
+		"Rezepte wie im Plugin (MBSkyManager: SkyRecipes.java, FeatherService.java): shape + keys.",
+		"tex: pool:<Pfad unter assets/items> oder jar:<item|block>/<name>; ein * ergibt mehrere Texturen, die im Rezept wechseln.",
+		"Neue Textur oder neues Item: python3 tools/site_items.py (schreibt site/public/items und site/data/mobplates.json)."
+	],
+	"items": {
+		"mana": {
+			"name": { "de": "Mana-Kugel", "en": "Mana orb" },
+			"color": "light_purple",
+			"tex": "pool:mana/mana.png",
+			"link": { "de": "sb/mana-items.md#mana-kugel", "en": "en/mana-items.md#mana-orb" }
+		},
+		"mana_charge": {
+			"name": { "de": "Mana-Ladung", "en": "Mana Charge" },
+			"color": "light_purple",
+			"tex": "pool:mana/mana_charge.png",
+			"link": { "de": "sb/mana-items.md#mana-ladung", "en": "en/mana-items.md#mana-charge" }
+		},
+		"mana_apple": {
+			"name": { "de": "Mana-Apfel", "en": "Mana Apple" },
+			"color": "light_purple",
+			"tex": "pool:mana/mana_apple.png",
+			"link": { "de": "sb/mana-items.md#mana-apfel", "en": "en/mana-items.md#mana-apple" }
+		},
+		"mana_block": {
+			"name": { "de": "Mana-Block", "en": "Mana Block" },
+			"color": "light_purple",
+			"tex": "pool:mana/mana_block.png",
+			"link": { "de": "sb/mana-items.md#mana-block", "en": "en/mana-items.md#mana-block" }
+		},
+		"mana_budding": {
+			"name": { "de": "Knospender Mana-Amethyst", "en": "Budding Mana Amethyst" },
+			"color": "light_purple",
+			"tex": "pool:mana/mana_budding.png",
+			"link": { "de": "sb/furnace-golem.md#die-mana-geode", "en": "en/furnace-golem.md#the-mana-geode" }
+		},
+		"mana_shard": {
+			"name": { "de": "Mana-Scherbe", "en": "Mana Shard" },
+			"color": "light_purple",
+			"tex": "pool:mana/mana_shard.png",
+			"link": { "de": "sb/mana-items.md#mana-scherbe", "en": "en/mana-items.md#mana-shard" }
+		},
+		"blasse_scherbe": {
+			"name": { "de": "Blasse Scherbe", "en": "Pale Sherd" },
+			"color": "light_purple",
+			"tex": "pool:mobplates/vorlagen/mob_pre_template.png",
+			"link": { "de": "sb/mobplates.md#blasse-scherbe", "en": "en/mobplates.md#pale-sherd" }
+		},
+		"mobplate": {
+			"name": { "de": "Mobplate", "en": "Mobplate" },
+			"lore": { "de": ["Leer"], "en": ["Empty"] },
+			"color": "light_purple",
+			"tex": "pool:mobplates/vorlagen/mob_template.png",
+			"link": { "de": "sb/mobplates.md#leere-mobplate", "en": "en/mobplates.md#empty-mobplate" }
+		},
+		"feather_of_softness": {
+			"name": { "de": "Feder der Sanftheit", "en": "Feather of Softness" },
+			"color": "aqua",
+			"tex": "pool:sonstige/feather_of_softness.png",
+			"link": { "de": "sb/feder.md#die-feder", "en": "en/feather.md#the-feather" }
+		},
+		"spawner_fragment": {
+			"name": { "de": "Spawner-Fragment", "en": "Spawner Fragment" },
+			"color": "gray",
+			"tex": "pool:sonstige/spawner_fragment.png",
+			"link": { "de": "sb/feder.md#was-die-feder-abbaut", "en": "en/feather.md#what-the-feather-mines" }
+		},
+		"spawner": {
+			"name": { "de": "Mob-Spawner", "en": "Mob Spawner" },
+			"tex": "jar:block/spawner",
+			"link": { "de": "sb/feder.md#spawner-aus-mobplates", "en": "en/feather.md#spawners-from-mobplates" }
+		},
+		"apple": {
+			"name": { "de": "Apfel", "en": "Apple" },
+			"vanilla": true,
+			"tex": "jar:item/apple"
+		},
+		"brick": {
+			"name": { "de": "Ziegel", "en": "Brick" },
+			"vanilla": true,
+			"tex": "jar:item/brick"
+		},
+		"pottery_sherd": {
+			"name": { "de": "Töpferscherbe", "en": "Pottery Sherd" },
+			"lore": { "de": ["Jede Sorte"], "en": ["Any kind"] },
+			"vanilla": true,
+			"tex": "jar:item/*_pottery_sherd"
+		}
+	},
+	"figures": {
+		"mana/items.png": { "items": ["mana", "mana_charge", "mana_apple"] },
+		"mana/items-golem.png": { "items": ["mana_block", "mana_budding", "mana_shard"] },
+		"feder/items.png": { "items": ["feather_of_softness", "spawner_fragment", "spawner"] },
+		"mana/rezept-ladung.png": {
+			"shape": ["MMM", "MMM", "MMM"],
+			"keys": { "M": "mana" },
+			"result": "mana_charge"
+		},
+		"mana/rezept-zerlegen.png": {
+			"shape": ["   ", " C ", "   "],
+			"keys": { "C": "mana_charge" },
+			"shapeless": true,
+			"result": "mana",
+			"count": 9
+		},
+		"mana/rezept-block.png": {
+			"shape": ["MMM", "MCM", "MMM"],
+			"keys": { "M": "mana", "C": "mana_charge" },
+			"result": "mana_block"
+		},
+		"mana/rezept-apfel.png": {
+			"shape": [" M ", "MAM", " M "],
+			"keys": { "M": "mana", "A": "apple" },
+			"result": "mana_apple"
+		},
+		"mobplates/rezept-scherbe.png": {
+			"shape": ["ZZZ", "ZKZ", "ZZZ"],
+			"keys": { "Z": "brick", "K": "pottery_sherd" },
+			"result": "blasse_scherbe"
+		},
+		"mobplates/rezept-plate.png": {
+			"shape": ["MMM", "MBM", "MMM"],
+			"keys": { "M": "mana", "B": "blasse_scherbe" },
+			"result": "mobplate"
+		},
+		"feder/rezept-spawner.png": {
+			"shape": ["FFF", "FPF", "FFF"],
+			"keys": { "F": "spawner_fragment", "P": "@spawner-plates" },
+			"result": "spawner"
+		},
+		"mobplates/alle.png": { "gallery": "mobplates" }
+	},
+	"pixelated": ["mana/", "feder/", "mobplates/"]
+}

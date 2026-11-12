@@ -110,7 +110,7 @@ Copyright-Text: `© 2026 MegaBuild.de – nicht verbunden mit Mojang oder Micros
 * **Seiten-Icons** über `icon:` im Frontmatter (Font Awesome), passend zum Thema jeder Seite
 * **Zwei-Spalten-Layouts** (`{% columns %}`) analog zu den Feature-Karten der Website
 * **Stepper-Blöcke** für alle Anleitungen
-* **Hint-Blöcke** in der Farblogik der Website (Warnung für den Wartungsmodus, Erfolg für Tipps)
+* **Hint-Blöcke** in der Farblogik der Website (Info für die Open Beta, Warnung für Störungen, Erfolg für Tipps)
 * **Tabs** für Java-/Bedrock-Anleitungen
 * **Emoji-Gruppen** in `SUMMARY.md`, angelehnt an die Navigation der Website
 

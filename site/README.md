@@ -37,6 +37,30 @@ Alle drei sind gitignored. GitBook-Blöcke werden dabei umgewandelt:
 
 Bleibt ein `{%`-Block übrig, meldet der Build das als Hinweis.
 
+### Items, Rezepte und Skilltree
+
+Rezepte, Item-Symbole, die Mobplate-Galerie und der klickbare Skilltree-Baum brauchen
+Texturen und Daten aus dem Pool, dem Minecraft-Client-Jar und MBSkyManager. Der Server hat
+die nicht, darum erzeugen zwei Skripte die Ergebnisse lokal, und sie liegen eingecheckt
+in `site/`:
+
+| Skript | Liest | Schreibt |
+| --- | --- | --- |
+| `tools/site_items.py` | `data/items.json` | `public/items/`, `data/items.generated.json` |
+| `tools/site_skilltree.py` | `data/skilltree.json`, `SKILLTREE.yml`, `config.yml`, `lang/*.yml` | `public/skilltree/`, `data/skilltree.generated.json` |
+
+Ändert sich ein Item, eine Textur oder der Skilltree im Plugin, das passende Skript noch
+einmal laufen lassen und die Ergebnisse mit committen:
+
+```bash
+python3 tools/site_items.py
+python3 tools/site_skilltree.py
+```
+
+Den Baum baut `convert.mjs` aus den Tabs der Skilltree-Seite (`sb/skilltree.md`,
+`en/skilltree.md`): Pfade, Biome, Quests und Preise kommen aus den erzeugten Daten, die
+Bilder aus den Tabs. Gesperrte Pfade (`skilltree.locked-groups`) fehlen wie im Spiel.
+
 ## Adressen: kurz und englisch
 
 Jede Seite hat eine kurze englische Adresse:

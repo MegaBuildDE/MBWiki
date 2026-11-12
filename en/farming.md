@@ -13,8 +13,6 @@ Your starting island has neither a cave nor ore. You get resources on the island
 
 Every main island has around **330 ore blocks**, including about **11 diamonds** and **90 iron ore** – iron is as common as coal. They sit in small clusters all through the rock and individually on the cave walls – **the deeper, the more**. Around 200 of them are right there on the cave walls, the rest is hidden in the rock. Side islands only have around 16, the starting island has none.
 
-These amounts apply to islands created since the ore update in November 2026. Older islands keep their ore.
-
 Need more? Keep exploring: every new main island brings new ores.
 
 {% content-ref url="world.md" %}

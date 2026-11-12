@@ -1,6 +1,6 @@
 ---
 description: >-
-  Der Skilltree auf MegaBuild.de – acht Kristall-Pfade voller Custom-Biome,
+  Der Skilltree auf MegaBuild.de – sieben Kristall-Pfade voller Custom-Biome,
   Biomquests, Kristallquests, Preise und Lieblinge.
 icon: sitemap
 ---
@@ -17,9 +17,9 @@ Im Skilltree schaltest du **neue Biome** für deine Insel frei. Neue Gegenden en
 
 Öffne ihn **auf deiner Insel** mit `/sky skills` oder über `/sky` → **Skilltree**. Genauso öffnet ein Klick auf den **Golem** auf deinem Luftschiff den Skilltree (Bedrock: daneben schleichen).
 
-## Acht Kristalle, acht Pfade
+## Sieben Kristalle, sieben Pfade
 
-Der Skilltree besteht aus **acht Pfaden** – jeder Pfad ist ein **Kristall**. Ein Pfad führt von links nach rechts durch seine Biome. Das erste Biom eines Pfads ist zugleich das Startbiom, das du bei der Startwahl bekommst.
+Der Skilltree besteht aus **sieben Pfaden** – jeder Pfad ist ein **Kristall**. Ein Pfad führt von links nach rechts durch seine Biome. Das erste Biom eines Pfads ist zugleich das Startbiom, das du bei der Startwahl bekommst.
 
 {% tabs %}
 {% tab title="Ebenen" %}
@@ -61,17 +61,13 @@ Wüste → Savanne → Tafelberge → Zerzauste Savanne → Bewaldete Tafelberge
 
 <figure><img src="../.gitbook/assets/screenshots/mbsky-ballon-abendrot.webp" alt="Eine Tafelberg-Insel im Abendrot"><figcaption><p>Tafelberge und Savanne</p></figcaption></figure>
 {% endtab %}
-
-{% tab title="Gewässer" %}
-Fluss → Strand → Steinküste → Lauwarmer Ozean → Kalter Ozean → Warmer Ozean → Tiefsee
-
-{% hint style="info" %}
-Der Kristall **Gewässer** kommt bald. Bis dahin ist er gesperrt.
-{% endhint %}
-{% endtab %}
 {% endtabs %}
 
 Jeder Pfad bringt seine eigenen **Custom-Biome** mit, und mit neuen Kristallen kommen weitere dazu.
+
+{% hint style="info" %}
+**Bald: Gewässer.** Flüsse, Strände und Ozeane kommen als **eigene Dimension** – nicht als Pfad im Skilltree der Oberwelt.
+{% endhint %}
 
 ## So schaltest du ein Biom frei
 
@@ -174,9 +170,9 @@ Bis zu **drei** deiner Biome kannst du als **Liebling** markieren. Lieblinge ers
 | Preis | Kaufbar – oder es steht dabei, wie viel Mana dir fehlt |
 | Schloss | Erst das Biom davor kaufen |
 | Schriftrolle | Wartet auf eine Biom- oder Kristallquest – mit Aufgabe, Fortschritt und Helfern |
-| Uhr | Gesperrt (Gewässer) |
+| Uhr | Kommt bald – noch gesperrt |
 
-Mit den Pfeilen unten blätterst du durch die acht Kristalle.
+Mit den Pfeilen unten blätterst du durch die sieben Kristalle.
 
 ## Verwandte Seiten
 

@@ -80,23 +80,39 @@ html {
 	color-scheme: dark;
 }
 
+/* Der Verlauf liegt auf einer eigenen festen Ebene: background-attachment: fixed würde die
+   ganze Seite bei jedem Scroll-Schritt neu malen lassen (ruckelt). */
 body {
+	background: transparent;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
 	background:
 		radial-gradient(circle at 12% 8%, rgba(201, 133, 255, 0.22), transparent 28%),
 		radial-gradient(circle at 86% 12%, rgba(255, 145, 233, 0.14), transparent 20%),
 		linear-gradient(180deg, #1a1030 0%, #24153f 48%, #170d29 100%);
-	background-attachment: fixed;
 }
 
+/* Nur die Kopfzeile ist aus Glas – sparsam, weil der Weichzeichner beim Scrollen jedes Bild neu rechnet */
 header.header {
-	backdrop-filter: blur(14px) saturate(1.2);
-	-webkit-backdrop-filter: blur(14px) saturate(1.2);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
 }
 
 .sidebar-pane {
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
 	border-inline-end-color: var(--mb-color-border) !important;
+}
+
+/* Das Burger-Menü liegt über dem Text: deckend statt weichgezeichnet */
+@media (max-width: 49.99rem) {
+	.sidebar-pane {
+		background-color: rgba(23, 13, 41, 0.97);
+	}
 }
 
 .site-title img {
@@ -376,7 +392,7 @@ header.header {
 }
 
 /* Links hell mit lila Unterstrich – lila Schrift wäre auf den lila Flächen kaum lesbar */
-.sl-markdown-content a:not(.mb-card, .sl-link-button) {
+.sl-markdown-content a:not(.mb-card, .sl-link-button, .mb-slot, .mb-itemcard) {
 	color: var(--mb-color-text);
 	font-weight: 500;
 	text-decoration-color: var(--mb-color-primary-strong);
@@ -385,7 +401,7 @@ header.header {
 	transition: text-decoration-color 0.15s ease;
 }
 
-.sl-markdown-content a:not(.mb-card, .sl-link-button):hover {
+.sl-markdown-content a:not(.mb-card, .sl-link-button, .mb-slot, .mb-itemcard):hover {
 	color: #fff;
 	text-decoration-color: var(--mb-color-pink);
 }
@@ -448,6 +464,564 @@ header.header {
 
 .sl-markdown-content figcaption p {
 	margin: 0;
+}
+
+/* ---------- Rezepte, Items und Galerie im Minecraft-Stil (data/items.json, public/mb.js) ---------- */
+
+/* Pixelbilder vergrößern ohne Weichzeichnen */
+.sl-markdown-content .mb-pixel,
+.mb-slot img,
+.mb-itemcard__icon img,
+.mb-gallery__chip img {
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+}
+
+/* Ein Inventarplatz: dunkel, mit Pixelkante wie im Spiel */
+.mb-slot {
+	--mb-slot-size: var(--mb-slot, 3rem);
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: var(--mb-slot-size);
+	aspect-ratio: 1;
+	margin: 0;
+	background: #1b102f;
+	box-shadow:
+		inset 2px 2px 0 rgba(0, 0, 0, 0.6),
+		inset -2px -2px 0 rgba(255, 255, 255, 0.1);
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.mb-slot::before {
+	content: '';
+	position: absolute;
+	inset: 2px;
+	background: transparent;
+	transition: background-color 0.12s ease;
+	pointer-events: none;
+}
+
+.mb-slot[data-item]:hover::before,
+.mb-slot[data-item]:focus-visible::before,
+.mb-slot.is-active::before {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.mb-slot.is-match::before {
+	background: rgba(201, 133, 255, 0.22);
+	box-shadow: inset 0 0 0 1px rgba(201, 133, 255, 0.55);
+}
+
+.mb-slot:focus-visible {
+	outline: 2px solid var(--mb-color-primary);
+	outline-offset: 1px;
+}
+
+.sl-markdown-content .mb-slot img {
+	width: 78%;
+	height: 78%;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	pointer-events: none;
+	user-select: none;
+}
+
+/* Stapelzahl unten rechts wie im Inventar */
+.mb-slot__count {
+	position: absolute;
+	right: 7%;
+	bottom: 3%;
+	margin: 0;
+	color: #fff;
+	font-size: calc(var(--mb-slot-size) * 0.3);
+	font-weight: 700;
+	line-height: 1;
+	text-shadow: 0.12em 0.12em 0 #3f3f3f;
+	pointer-events: none;
+}
+
+/* Werkbank: 3×3-Raster, Pfeil, Ergebnis */
+.sl-markdown-content .mb-craft {
+	margin-block: 1.75rem;
+}
+
+.mb-craft__table {
+	--mb-slot: clamp(2.45rem, 10.5vw, 3.25rem);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: clamp(0.7rem, 3vw, 1.4rem);
+	width: fit-content;
+	max-width: 100%;
+	margin-inline: auto;
+	padding: clamp(1.1rem, 3vw, 1.6rem) clamp(1rem, 4vw, 2.2rem);
+	border: 1px solid var(--mb-color-border);
+	border-radius: 1rem;
+	background:
+		radial-gradient(circle at 85% 50%, rgba(169, 88, 255, 0.2), transparent 45%),
+		linear-gradient(160deg, rgba(66, 43, 108, 0.55), rgba(30, 18, 52, 0.8));
+	box-shadow:
+		var(--mb-shadow-soft),
+		inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.mb-craft__table > * {
+	margin: 0;
+}
+
+.mb-craft__grid {
+	display: grid;
+	grid-template-columns: repeat(3, var(--mb-slot));
+	gap: 2px;
+	margin: 0;
+	padding: 2px;
+	background: rgba(0, 0, 0, 0.28);
+}
+
+/* Pfeil in Pixelform; der lila Teil füllt sich beim Abspielen von links */
+.mb-craft__arrow {
+	position: relative;
+	flex: none;
+	width: calc(var(--mb-slot) * 0.8);
+	aspect-ratio: 21 / 15;
+	background: rgba(255, 255, 255, 0.16);
+	--mb-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 15'%3E%3Cpath d='M0 6h14V0h1v1h1v1h1v1h1v1h1v1h1v1h1v2h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1V9H0z'/%3E%3C/svg%3E");
+	-webkit-mask: var(--mb-arrow) center / contain no-repeat;
+	mask: var(--mb-arrow) center / contain no-repeat;
+}
+
+.mb-craft__arrow::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(90deg, var(--mb-color-primary-strong), var(--mb-color-pink));
+	transform-origin: left center;
+}
+
+/* Leuchten beim fertigen Ergebnis (nur Deckkraft und Größe: läuft auf der Grafikkarte) */
+.mb-slot--result::after {
+	content: '';
+	position: absolute;
+	inset: -45%;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(255, 99, 223, 0.55), rgba(169, 88, 255, 0.25) 40%, transparent 68%);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.mb-slot--result {
+	--mb-slot-size: calc(var(--mb-slot) * 1.35);
+	box-shadow:
+		inset 2px 2px 0 rgba(0, 0, 0, 0.6),
+		inset -2px -2px 0 rgba(255, 255, 255, 0.1),
+		0 0 0 1px rgba(201, 133, 255, 0.35),
+		0 0 28px rgba(169, 88, 255, 0.28);
+}
+
+.mb-craft__badge {
+	position: absolute;
+	top: 0.55rem;
+	right: 0.7rem;
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-xs);
+	font-weight: 600;
+}
+
+/* Nochmal abspielen (setzt mb.js unter die Werkbank) */
+.sl-markdown-content .mb-craft__again {
+	display: flex;
+	justify-content: center;
+	margin: 0.6rem 0 0;
+}
+
+.mb-craft__replay {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.35rem 0.85rem 0.35rem 0.7rem;
+	border: 1px solid var(--sl-color-hairline-light);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.04);
+	color: var(--mb-color-text-muted);
+	font: inherit;
+	font-size: var(--sl-text-xs);
+	font-weight: 600;
+	cursor: pointer;
+	transition:
+		color 0.15s ease,
+		border-color 0.15s ease,
+		background-color 0.15s ease;
+}
+
+.mb-craft__replay:hover {
+	color: #fff;
+	border-color: rgba(201, 133, 255, 0.5);
+	background: rgba(169, 88, 255, 0.14);
+}
+
+.mb-craft__replay:focus-visible {
+	outline: 2px solid var(--sl-color-text-accent);
+	outline-offset: 2px;
+}
+
+.mb-craft__replay svg {
+	width: 0.95rem;
+	height: 0.95rem;
+	transition: transform 0.45s ease;
+}
+
+.mb-craft__replay:hover svg {
+	transform: rotate(-150deg);
+}
+
+.mb-craft.is-play .mb-craft__replay svg {
+	animation: mb-spin 1.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes mb-spin {
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+/* Animation: erst die Zutaten, dann der Pfeil, dann das Ergebnis. mb.js setzt die Klassen. */
+.mb-craft--anim .mb-slot img,
+.mb-craft--anim .mb-slot__count {
+	opacity: 0;
+}
+
+.mb-craft--anim .mb-craft__arrow::after {
+	transform: scaleX(0);
+}
+
+.mb-craft--anim.is-play .mb-craft__grid .mb-slot img {
+	animation: mb-pop 0.32s cubic-bezier(0.2, 1.5, 0.4, 1) both;
+	animation-delay: calc(var(--i, 0) * 65ms);
+}
+
+.mb-craft--anim.is-play .mb-craft__arrow::after {
+	animation: mb-fill 0.65s ease-in-out 0.8s both;
+}
+
+.mb-craft--anim.is-play .mb-slot--result img,
+.mb-craft--anim.is-play .mb-slot--result .mb-slot__count {
+	animation: mb-pop 0.4s cubic-bezier(0.2, 1.6, 0.4, 1) 1.45s both;
+}
+
+.mb-craft--anim.is-play .mb-slot--result::after {
+	animation: mb-flash 0.9s ease-out 1.45s both;
+}
+
+@keyframes mb-pop {
+	from {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes mb-fill {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+
+@keyframes mb-flash {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	25% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.15);
+	}
+}
+
+/* Wechselnde Zutat (z. B. verschiedene Mobplates) blendet sanft über */
+.mb-slot[data-cycle] img,
+.mb-slot[data-follow] img {
+	transition: opacity 0.18s ease;
+}
+
+.mb-slot.is-swap img {
+	opacity: 0.15;
+}
+
+/* Item-Reihe statt Sammelbild: Karten mit schwebendem Item wie auf dem Boden */
+.sl-markdown-content .mb-itemrow {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(6.5rem, 100%), 1fr));
+	gap: 0.75rem;
+	margin-block: 1.5rem;
+}
+
+.mb-itemrow > * {
+	margin: 0;
+}
+
+.sl-markdown-content .mb-itemcard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.35rem;
+	padding: 1rem 0.6rem 0.9rem;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 1rem;
+	background: linear-gradient(160deg, rgba(66, 43, 108, 0.5), rgba(30, 18, 52, 0.75));
+	text-align: center;
+	text-decoration: none;
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.mb-itemcard > * {
+	margin: 0;
+}
+
+a.mb-itemcard:hover {
+	transform: translateY(-3px);
+	border-color: rgba(201, 133, 255, 0.5);
+	box-shadow:
+		0 14px 40px rgba(0, 0, 0, 0.35),
+		0 0 0 1px rgba(201, 133, 255, 0.2);
+}
+
+.mb-itemcard__icon {
+	display: grid;
+	place-items: center;
+	width: 4.5rem;
+	aspect-ratio: 1;
+	background: radial-gradient(circle at 50% 50%, rgba(201, 133, 255, 0.3), transparent 68%);
+}
+
+.sl-markdown-content .mb-itemcard__icon img {
+	width: 3.25rem;
+	height: 3.25rem;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.45));
+	animation: mb-bob 3.2s ease-in-out infinite;
+}
+
+.mb-itemcard:nth-child(2) .mb-itemcard__icon img {
+	animation-delay: -1.1s;
+}
+
+.mb-itemcard:nth-child(3) .mb-itemcard__icon img {
+	animation-delay: -2.2s;
+}
+
+a.mb-itemcard:hover .mb-itemcard__icon img {
+	animation-duration: 1.2s;
+}
+
+@keyframes mb-bob {
+	0%,
+	100% {
+		transform: translateY(2px);
+	}
+	50% {
+		transform: translateY(-4px);
+	}
+}
+
+.mb-itemcard__name {
+	color: var(--mb-mc, #fff);
+	font-size: var(--sl-text-sm);
+	font-weight: 700;
+	line-height: 1.25;
+	text-shadow: 0.08em 0.08em 0 color-mix(in srgb, var(--mb-mc, #fff) 22%, #000);
+}
+
+.mb-itemcard__src {
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-xs);
+}
+
+/* Galerie aller Mobplates mit Suche und Spawner-Filter */
+.sl-markdown-content .mb-gallery {
+	margin-block: 1.5rem;
+	padding: 0.9rem;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 1rem;
+	background: linear-gradient(160deg, rgba(66, 43, 108, 0.45), rgba(30, 18, 52, 0.75));
+}
+
+.mb-gallery > *,
+.mb-gallery__bar > * {
+	margin: 0;
+}
+
+.mb-gallery__bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.85rem;
+}
+
+.mb-gallery__bar[hidden],
+.mb-gallery__empty[hidden],
+.mb-gallery .mb-slot[hidden] {
+	display: none;
+}
+
+.mb-gallery__search {
+	flex: 1 1 11rem;
+	min-width: 0;
+	padding: 0.45rem 0.9rem;
+	border: 1px solid var(--sl-color-hairline-light);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.05);
+	color: var(--mb-color-text);
+	font: inherit;
+	font-size: var(--sl-text-sm);
+}
+
+.mb-gallery__search:focus {
+	outline: none;
+	border-color: var(--mb-color-primary);
+	box-shadow: 0 0 0 3px rgba(169, 88, 255, 0.25);
+}
+
+.mb-gallery__chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.4rem 0.8rem 0.4rem 0.55rem;
+	border: 1px solid var(--sl-color-hairline-light);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.04);
+	color: var(--mb-color-text-soft);
+	font: inherit;
+	font-size: var(--sl-text-sm);
+	font-weight: 600;
+	cursor: pointer;
+	transition:
+		background-color 0.15s ease,
+		border-color 0.15s ease;
+}
+
+.mb-gallery__chip img {
+	width: 1.1rem;
+	height: 1.1rem;
+}
+
+.mb-gallery__chip b {
+	color: var(--mb-color-text-muted);
+	font-weight: 600;
+}
+
+.mb-gallery__chip[aria-pressed='true'] {
+	border-color: var(--mb-color-primary);
+	background: rgba(169, 88, 255, 0.24);
+	color: #fff;
+}
+
+.mb-gallery__count {
+	margin-left: auto;
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-xs);
+	white-space: nowrap;
+}
+
+.mb-gallery__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(2.85rem, 1fr));
+	gap: 2px;
+	margin: 0;
+}
+
+.mb-gallery__grid .mb-slot {
+	width: 100%;
+}
+
+/* Kleiner Spawner in der Ecke: diese Plate ergibt einen Spawner */
+.mb-slot--spawner::after {
+	content: '';
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+	width: 34%;
+	aspect-ratio: 1;
+	background: var(--mb-spawner-icon) center / contain no-repeat;
+	image-rendering: pixelated;
+	filter: drop-shadow(0 0 1px #000);
+	pointer-events: none;
+}
+
+.mb-gallery__empty {
+	padding: 1rem 0 0.4rem;
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-sm);
+	text-align: center;
+}
+
+/* Tooltip wie im Spiel: dunkel, lila Rahmen, farbiger Name */
+.mb-tooltip {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	max-width: min(18rem, calc(100vw - 1.5rem));
+	padding: 0.3rem 0.55rem 0.35rem;
+	border: 2px solid;
+	border-image: linear-gradient(180deg, rgba(80, 0, 255, 0.65), rgba(40, 0, 127, 0.65)) 1;
+	background: rgba(16, 0, 16, 0.95);
+	box-shadow:
+		0 0 0 2px rgba(16, 0, 16, 0.95),
+		0 12px 32px rgba(0, 0, 0, 0.5);
+	color: #aaa;
+	font-size: 0.8125rem;
+	line-height: 1.35;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.1s ease;
+}
+
+.mb-tooltip.is-visible {
+	opacity: 1;
+}
+
+.mb-tooltip p {
+	margin: 0;
+	text-shadow: 0.1em 0.1em 0 color-mix(in srgb, currentColor 25%, #000);
+}
+
+.mb-tooltip__name {
+	font-size: 0.875rem;
+	font-weight: 600;
+}
+
+.mb-tooltip__src {
+	margin-top: 0.15rem !important;
+	color: #5555ff;
+	font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-markdown-content .mb-itemcard__icon img {
+		animation: none;
+	}
 }
 
 /* ---------- Hinweise (GitBook hint → Starlight aside) ---------- */
@@ -838,4 +1412,525 @@ header.header {
 
 .pagination-links a:hover {
 	border-color: rgba(201, 133, 255, 0.55);
+}
+
+/* ---------------------------------------------------------------------------
+   Skilltree als Baum (scripts/convert.mjs -> .mb-tree, Interaktion in mb.js)
+   Breit: Insel oben, darunter ein Kristall je Spalte und seine Biome von oben nach unten.
+   Schmal: Kristalle als Raster, darunter die Biome des gewählten Kristalls.
+   --------------------------------------------------------------------------- */
+
+.mb-tree {
+	--tile: rgba(255, 255, 255, 0.035);
+	--line: rgba(211, 176, 255, 0.22);
+	--gap: 0.45rem;
+	container-type: inline-size;
+	margin-block: 1.75rem;
+	font-size: var(--sl-text-sm);
+}
+
+.mb-tree ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mb-tree button {
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+
+.mb-tree img {
+	image-rendering: pixelated;
+}
+
+/* Wurzel: die Insel */
+.mb-tree__root {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.65rem;
+	width: max-content;
+	max-width: 100%;
+	margin: 0 auto 1.4rem;
+	padding: 0.45rem 1.1rem 0.45rem 0.5rem;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 999px;
+	background: var(--mb-color-surface);
+	line-height: 1.25;
+}
+
+.mb-tree__root::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 2px;
+	height: 1.4rem;
+	background: var(--line);
+	transform: translateX(-50%);
+}
+
+.mb-tree__root b {
+	display: block;
+	color: var(--mb-color-text);
+}
+
+.mb-tree__root small {
+	display: block;
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-xs);
+}
+
+.mb-tree__island {
+	display: grid;
+	place-items: center;
+	width: 2.4rem;
+	height: 2.4rem;
+	border-radius: 50%;
+	background: radial-gradient(circle at 50% 35%, rgba(169, 88, 255, 0.45), rgba(23, 13, 41, 0.8));
+}
+
+.mb-tree__island img {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+/* Spalten mit dem Querbalken von der Insel zu den Kristallen */
+.mb-tree__paths {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+	gap: var(--gap);
+	padding-top: 1rem;
+}
+
+.mb-tree__paths::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: calc((100% - (var(--n) - 1) * var(--gap)) / var(--n) / 2);
+	right: calc((100% - (var(--n) - 1) * var(--gap)) / var(--n) / 2);
+	height: 2px;
+	background: var(--line);
+}
+
+.mb-tree__path {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	transition: opacity 0.2s ease;
+}
+
+/* Kacheln */
+.mb-tree__node {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.3rem;
+	width: 100%;
+	margin: 0;
+	padding: 0.55rem 0.3rem 0.45rem;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 0.7rem;
+	background: var(--tile);
+	text-align: center;
+	transition:
+		transform 0.15s ease,
+		border-color 0.15s ease,
+		background-color 0.15s ease;
+}
+
+.mb-tree__node img {
+	width: 2rem;
+	height: 2rem;
+}
+
+.mb-tree__name {
+	color: var(--mb-color-text-soft);
+	font-size: 0.72rem;
+	line-height: 1.2;
+	hyphens: auto;
+	overflow-wrap: anywhere;
+}
+
+/* gleiche Höhen, damit die Stellen über alle Spalten auf einer Linie liegen */
+.mb-tree__biome {
+	justify-content: center;
+	min-height: 5.4rem;
+}
+
+.mb-tree__crystal {
+	justify-content: center;
+	min-height: 6.9rem;
+	padding-block: 0.65rem 0.55rem;
+	border-color: color-mix(in srgb, var(--c) 45%, transparent);
+	background: linear-gradient(180deg, color-mix(in srgb, var(--c) 18%, transparent), var(--tile));
+}
+
+.mb-tree__crystal::before {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	width: 2px;
+	height: calc(1rem + 1px);
+	background: var(--line);
+	transform: translateX(-50%);
+}
+
+.mb-tree__crystal img {
+	filter: drop-shadow(0 0 0.45rem color-mix(in srgb, var(--c) 60%, transparent));
+}
+
+.mb-tree__crystal .mb-tree__name {
+	color: var(--mb-color-text);
+	font-size: 0.78rem;
+	font-weight: 700;
+}
+
+.mb-tree__meta {
+	color: var(--mb-color-text-muted);
+	font-size: 0.66rem;
+}
+
+.mb-tree__chain {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	margin-top: 0.6rem;
+}
+
+.mb-tree__chain li {
+	position: relative;
+}
+
+/* Verbindung zur Kachel darüber */
+.mb-tree__chain li::before {
+	content: '';
+	position: absolute;
+	bottom: calc(100% + 1px);
+	left: 50%;
+	width: 2px;
+	height: 0.6rem;
+	background: var(--line);
+	transform: translateX(-50%);
+}
+
+.mb-tree__step {
+	position: absolute;
+	top: 0.25rem;
+	left: 0.4rem;
+	color: var(--mb-color-text-muted);
+	font-size: 0.62rem;
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+}
+
+.mb-tree__node:hover {
+	border-color: color-mix(in srgb, var(--c) 70%, transparent);
+	transform: translateY(-2px);
+}
+
+.mb-tree__node:focus-visible {
+	outline: 2px solid var(--c);
+	outline-offset: 2px;
+}
+
+/* Gewählt und der Weg dorthin */
+.mb-tree__node.is-trail {
+	border-color: color-mix(in srgb, var(--c) 60%, transparent);
+	background: color-mix(in srgb, var(--c) 12%, transparent);
+}
+
+.mb-tree__node.is-active {
+	border-color: var(--c);
+	background: color-mix(in srgb, var(--c) 24%, rgba(23, 13, 41, 0.6));
+	box-shadow:
+		0 0 0 1px var(--c),
+		0 0 1.1rem color-mix(in srgb, var(--c) 40%, transparent);
+}
+
+.mb-tree__node.is-active .mb-tree__name,
+.mb-tree__node.is-trail .mb-tree__name,
+.mb-tree__node.is-active .mb-tree__step {
+	color: var(--mb-color-text);
+}
+
+.mb-tree__path.is-focus .mb-tree__crystal::before,
+.mb-tree__chain li:has(.is-trail, .is-active)::before {
+	background: var(--c);
+}
+
+.mb-tree.has-active .mb-tree__path:not(.is-focus) {
+	opacity: 0.45;
+}
+
+.mb-tree.has-active .mb-tree__path:not(.is-focus):hover {
+	opacity: 0.85;
+}
+
+/* Details unter dem Baum */
+.mb-tree__detail {
+	margin-top: 1.25rem;
+	padding: 1rem 1.1rem;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 1rem;
+	background: var(--mb-color-surface);
+	color: var(--mb-color-text-soft);
+	line-height: 1.45;
+}
+
+.mb-tree__detail.is-in {
+	animation: mb-tree-in 0.25s ease-out;
+}
+
+@keyframes mb-tree-in {
+	from {
+		opacity: 0;
+		transform: translateY(6px);
+	}
+}
+
+.mb-tree__pick {
+	margin: 0;
+	color: var(--mb-color-text-muted);
+	text-align: center;
+}
+
+.mb-tree__head {
+	display: flex;
+	align-items: center;
+	gap: 0.85rem;
+}
+
+.mb-tree__big {
+	display: grid;
+	flex: none;
+	place-items: center;
+	width: 3.75rem;
+	height: 3.75rem;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 0.8rem;
+	background: rgba(10, 5, 22, 0.45);
+}
+
+.mb-tree__big img {
+	width: 3rem;
+	height: 3rem;
+}
+
+.mb-tree__title {
+	margin: 0;
+	color: var(--mb-color-text);
+	font-size: var(--sl-text-lg);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.mb-tree__sub {
+	margin: 0.15rem 0 0;
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-xs);
+}
+
+.mb-tree__close {
+	display: grid;
+	flex: none;
+	place-items: center;
+	align-self: flex-start;
+	width: 2rem;
+	height: 2rem;
+	margin-left: auto;
+	padding: 0;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 50%;
+	background: transparent;
+	color: var(--mb-color-text-muted);
+	font-size: 1.2rem;
+	line-height: 1;
+}
+
+.mb-tree__close:hover,
+.mb-tree__close:focus-visible {
+	border-color: var(--mb-color-primary);
+	color: var(--mb-color-text);
+}
+
+.mb-tree__facts {
+	display: grid;
+	gap: 0.7rem;
+	margin-top: 0.95rem;
+}
+
+.mb-tree__facts:empty {
+	display: none;
+}
+
+.mb-tree__fact {
+	display: grid;
+	grid-template-columns: 7.5rem minmax(0, 1fr);
+	gap: 0.75rem;
+	align-items: baseline;
+}
+
+.mb-tree__label {
+	color: var(--mb-color-primary);
+	font-size: var(--sl-text-xs);
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.mb-tree__fact b {
+	color: var(--mb-color-text);
+}
+
+.mb-tree__fact small {
+	display: block;
+	margin-top: 0.15rem;
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-xs);
+}
+
+.mb-tree__opens,
+.mb-tree__at {
+	color: var(--mb-color-text-muted);
+}
+
+.mb-tree__fact b.mb-tree__price {
+	color: #ff8cff;
+}
+
+.mb-tree__range {
+	display: block;
+	width: 100%;
+	max-width: 18rem;
+	margin: 0.45rem 0 0;
+	accent-color: var(--mb-color-primary-strong);
+}
+
+.mb-tree__shots {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	gap: 0.6rem;
+	margin-top: 1rem;
+}
+
+.mb-tree__shots figure {
+	margin: 0;
+}
+
+.mb-tree__shots img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border-radius: 0.6rem;
+	image-rendering: auto;
+}
+
+.mb-tree__shots figcaption {
+	margin-top: 0.3rem;
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-xs);
+}
+
+/* Schmal: Kristalle als Raster, darunter die Biome des gewählten Kristalls */
+@container (max-width: 39.99rem) {
+	.mb-tree__root {
+		margin-bottom: 0.9rem;
+	}
+
+	.mb-tree__root::after,
+	.mb-tree__paths::before,
+	.mb-tree__crystal::before {
+		display: none;
+	}
+
+	.mb-tree__paths {
+		grid-template-columns: repeat(auto-fill, minmax(4.6rem, 1fr));
+		padding-top: 0;
+	}
+
+	.mb-tree__path {
+		display: contents;
+	}
+
+	.mb-tree__crystal .mb-tree__name {
+		font-size: 0.72rem;
+	}
+
+	.mb-tree__chain {
+		display: none;
+		grid-column: 1 / -1;
+		order: 1;
+		gap: 0.45rem;
+		margin-top: 0.45rem;
+	}
+
+	.mb-tree__path.is-open .mb-tree__chain,
+	.mb-tree:not(.is-ready) .mb-tree__chain {
+		display: flex;
+	}
+
+	.mb-tree__path.is-open .mb-tree__crystal {
+		border-color: var(--c);
+		background: linear-gradient(180deg, color-mix(in srgb, var(--c) 30%, transparent), var(--tile));
+	}
+
+	.mb-tree.has-active .mb-tree__path:not(.is-focus) {
+		opacity: 1;
+	}
+
+	.mb-tree__chain li::before {
+		left: 3.1rem;
+		height: 0.45rem;
+	}
+
+	.mb-tree__crystal {
+		min-height: 0;
+	}
+
+	.mb-tree__biome {
+		flex-direction: row;
+		justify-content: flex-start;
+		min-height: 0;
+		gap: 0.7rem;
+		padding: 0.4rem 0.75rem 0.4rem 2.1rem;
+		text-align: left;
+	}
+
+	.mb-tree__biome .mb-tree__step {
+		top: 50%;
+		left: 0.8rem;
+		font-size: 0.72rem;
+		transform: translateY(-50%);
+	}
+
+	.mb-tree__biome .mb-tree__name {
+		font-size: var(--sl-text-sm);
+	}
+
+	.mb-tree__node:hover {
+		transform: none;
+	}
+
+	.mb-tree__fact {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 0.15rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.mb-tree__node,
+	.mb-tree__path {
+		transition: none;
+	}
+
+	.mb-tree__node:hover {
+		transform: none;
+	}
 }

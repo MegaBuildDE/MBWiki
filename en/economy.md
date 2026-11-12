@@ -110,7 +110,7 @@ Below height 0 you die instantly. You wake up in your bed – or on the deck of 
 
 ## Ruby
 
-Ruby is the currency for **trading** – between players and with the [AI residents](residents.md#trading). Every new account starts with **500 Ruby** – they're there from your very first login. If you played before 08.11.2026, when it was still 1,000, you keep your Ruby.
+Ruby is the currency for **trading** – between players and with the [AI residents](residents.md#trading). Every new account starts with **500 Ruby** – they're there from your very first login.
 
 * **Earning more:** 5 Ruby per [vote](vote.md), selling goods to [AI residents](residents.md#the-market-fund) (usually up to 10 Ruby a day) and rewards for [bug reports and clips](discord.md#bug-bounty-and-clipcoin).
 * **Spending:** At other players' [ChestShops](chestshop.md), directly with `/pay` – for example as payment for goods you trade among yourselves – and with AI residents for goods, orders and tasks (up to 40 Ruby a day).

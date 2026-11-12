@@ -11,7 +11,7 @@ Auf MegaBuild.de kannst du dir einen Rang holen und damit gleichzeitig den Serve
 {% hint style="warning" %}
 **Die Rang-Vorteile für den Custom Skyblock stehen noch nicht fest.**
 
-Die früheren Rang-Perks bezogen sich auf den alten CityBuild (Grundstücke, `/p merge`, Plot-Flags usw.) und gelten für den neuen Skyblock **nicht** mehr. Die neuen Vorteile werden zum Skyblock-Start bekannt gegeben und hier eingetragen.
+Sie werden zum Skyblock-Start bekannt gegeben und hier eingetragen.
 {% endhint %}
 
 ## Verfügbare Ränge

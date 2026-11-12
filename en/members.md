@@ -74,8 +74,6 @@ So you don't have to set every right individually, there are four templates. Eac
 If you change a single right, the menu shows **Custom**.
 
 * **New members** come in as **Builders**. They can only buy biomes and open shops once you give them the **Skill tree** right.
-* **Members from before** keep all action rights. Only those who were set as **Visitor** before can now just use doors and switches.
-
 ## Editing members
 
 **On the island** (`/sky friends`) you see your members' heads:

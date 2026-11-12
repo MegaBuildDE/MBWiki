@@ -74,10 +74,6 @@ Eine Mana-Kugel ist **1 Mana**, ein Mana-Block **17 Mana**. Das Mana kommt sofor
 * **Fremde Kugeln** – von anderen Spielern – gehen bis **100 am Tag**. Ein Mana-Block zählt dabei 17. Was darüber liegt, bleibt in deinem Inventar, und eine Chatzeile sagt dir, wie viel und warum.
 * Einen Befehl zum Einzahlen gibt es nicht – dafür gehst du zum Golem.
 
-{% hint style="info" %}
-**Kugeln von früher:** Kugeln, die du vor dem 28.09.2026 abgebaut hast, zählen als fremde – davon gehen 100 am Tag. Alles, was du seitdem abgebaut hast, zahlst du ganz ein.
-{% endhint %}
-
 ### Abheben
 
 Mana von deinem Konto bekommst du hier als **Mana-Kugeln** (1, 16 oder 64) zurück – zum Beispiel für einen neuen Golem oder um eine [Mobplate](mobplates.md) zu craften. **Mana-Blöcke gibt es beim Abheben nicht** – brauchst du einen, craftest du ihn aus 8 Kugeln und einer Mana-Ladung.
@@ -135,11 +131,6 @@ Steht keine Truhe richtig, zeigt sein Menü bei den Scherben: „Keine Truhe und
 * **Tageslimit: 20 Scherben** je Erbauer und Tag, über alle seine Golems und Inseln zusammen. Ist es voll, döst der Golem bis zum Tageswechsel um **04:00 Uhr**. Das Limit für Aktionen berührt das nicht.
 * **Er arbeitet nur, solange die Insel geladen ist.** Ohne Truhe in Reichweite oder ohne Scherbe wartet er und schaut sich um.
 * Scherben hineinlegen darf jeder, der an die Truhe darf – das Mana geht immer an den Erbauer.
-
-{% hint style="warning" %}
-**Golem von vor dem Update?** Eine Truhe direkt neben ihm zählt nicht mehr – stell sie zwei Blöcke weiter, sonst macht er Pause. Was schon direkt neben ihm steht, darf dort bleiben – nur zwischen ihm und seiner Truhe muss der Platz frei sein. Hattest du Scherben in der Truhe auf seinem Kopf, liegen sie nach dem Update oben auf ihm und verschwinden nicht – heb sie auf und leg sie in die Truhe.
-{% endhint %}
-
 ## Abbauen
 
 Im Menü auf **Abbauen** klicken und bestätigen.

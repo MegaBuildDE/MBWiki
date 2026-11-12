@@ -74,10 +74,6 @@ A Mana orb is **1 Mana**, a Mana Block **17 Mana**. The Mana goes into your acco
 * **Foreign orbs** – from other players – go in up to **100 a day**. A Mana Block counts as 17. Anything above that stays in your inventory, and a chat line tells you how much and why.
 * There's no command for depositing – you go to the golem for that.
 
-{% hint style="info" %}
-**Older orbs:** orbs you mined before 28.09.2026 count as foreign – 100 of them go in per day. Everything you've mined since then goes in completely.
-{% endhint %}
-
 ### Withdraw
 
 Here you get Mana from your account back as **Mana orbs** (1, 16 or 64) – for example for a new golem or to craft a [Mobplate](mobplates.md). **You can't withdraw Mana Blocks** – if you need one, craft it from 8 orbs and a Mana Charge.
@@ -135,11 +131,6 @@ If no chest stands in the right place, its menu says at the shards: “No chest 
 * **Daily limit: 20 shards** per builder and day, across all their golems and islands. When it's full, the golem dozes until the daily reset at **04:00**. This doesn't touch the daily limit for actions.
 * **It only works while the island is loaded.** Without a chest in reach or without a shard it waits and looks around.
 * Anyone who may open the chest may put shards into it – the Mana always goes to the builder.
-
-{% hint style="warning" %}
-**Golem from before the update?** A chest right next to it doesn't count any more – move it two blocks out, or it takes a break. Whatever already stands right next to it may stay – only the space between it and its chest has to be free. If you had shards in the chest on its head, they lie on top of it after the update and don't despawn – pick them up and put them into the chest.
-{% endhint %}
-
 ## Dismantling
 
 Click **Dismantle** in the menu and confirm.

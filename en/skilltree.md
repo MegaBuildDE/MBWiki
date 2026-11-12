@@ -1,6 +1,6 @@
 ---
 description: >-
-  The skill tree on MegaBuild.de – eight crystal paths full of custom biomes, biome
+  The skill tree on MegaBuild.de – seven crystal paths full of custom biomes, biome
   quests, crystal quests, prices and favourites.
 icon: sitemap
 ---
@@ -17,9 +17,9 @@ In the skill tree you unlock **new biomes** for your island. New areas you explo
 
 Open it **on your island** with `/sky skills` or via `/sky` → **Skill tree**. Clicking the **golem** on your airship opens the skill tree too (Bedrock: sneak next to it).
 
-## Eight crystals, eight paths
+## Seven crystals, seven paths
 
-The skill tree is made of **eight paths** – each path is a **crystal**. A path leads from left to right through its biomes. The first biome of a path is also the starting biome you get when you choose that path at the start.
+The skill tree is made of **seven paths** – each path is a **crystal**. A path leads from left to right through its biomes. The first biome of a path is also the starting biome you get when you choose that path at the start.
 
 {% tabs %}
 {% tab title="Plains" %}
@@ -61,17 +61,13 @@ Desert → Savanna → Badlands → Windswept Savanna → Wooded Badlands → Er
 
 <figure><img src="../.gitbook/assets/screenshots/mbsky-ballon-abendrot.webp" alt="A badlands island at sunset"><figcaption><p>Badlands and savanna</p></figcaption></figure>
 {% endtab %}
-
-{% tab title="Water" %}
-River → Beach → Stony Shore → Lukewarm Ocean → Cold Ocean → Warm Ocean → Deep Ocean
-
-{% hint style="info" %}
-The **Water** crystal is coming soon. Until then it's locked.
-{% endhint %}
-{% endtab %}
 {% endtabs %}
 
 Every path brings its own **custom biomes**, and new crystals add more.
+
+{% hint style="info" %}
+**Coming soon: Water.** Rivers, beaches and oceans are coming as their **own dimension** – not as a path in the Overworld skill tree.
+{% endhint %}
 
 ## How to unlock a biome
 
@@ -174,9 +170,9 @@ You can mark up to **three** of your biomes as a **favourite**. Favourites appea
 | Price | Can be bought – or it says how much Mana you're missing |
 | Lock | Buy the biome before it first |
 | Scroll | Waiting for a biome or crystal quest – with task, progress and helpers |
-| Clock | Locked (Water) |
+| Clock | Coming soon – still locked |
 
-Use the arrows at the bottom to flip through the eight crystals.
+Use the arrows at the bottom to flip through the seven crystals.
 
 ## Related pages
 

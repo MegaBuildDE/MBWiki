@@ -37,6 +37,14 @@ const HOME_ACTIONS = {
 	],
 };
 
+// Eigene Bausteine (Rezepte, Item-Reihen, Mobplate-Galerie): Daten in data/items.json,
+// Texturen und Plugin-Daten aus tools/site_items.py (data/items.generated.json).
+const ITEMS = JSON.parse(fs.readFileSync(path.join(SITE, 'data/items.json'), 'utf8'));
+const ITEMS_GEN = JSON.parse(fs.readFileSync(path.join(SITE, 'data/items.generated.json'), 'utf8'));
+// Skilltree-Baum: data/skilltree.json von Hand, der Rest aus MBSkyManager (tools/site_skilltree.py).
+const TREE = JSON.parse(fs.readFileSync(path.join(SITE, 'data/skilltree.json'), 'utf8'));
+const TREE_GEN = JSON.parse(fs.readFileSync(path.join(SITE, 'data/skilltree.generated.json'), 'utf8'));
+
 const HINT_TYPES = { info: 'note', success: 'tip', warning: 'caution', danger: 'danger' };
 const VIDEO_EXT = /\.(mp4|webm|mov)$/i;
 
@@ -210,6 +218,316 @@ function videoBlock(src, caption, poster) {
 		.join('\n');
 }
 
+// ---------------------------------------------------------------------------
+// Eigene Bausteine: Rezepte, Item-Reihen, Mobplate-Galerie
+// ---------------------------------------------------------------------------
+
+const MC_COLORS = { light_purple: '#ff55ff', aqua: '#55ffff', gray: '#aaaaaa', green: '#55ff55', gold: '#ffaa00', white: '#ffffff' };
+const UI = {
+	de: { anySlot: 'Platz egal', search: 'Mob suchen …', searchLabel: 'Mobplates durchsuchen', spawner: 'Ergibt Spawner', spawnerLore: '§aErgibt einen Spawner', plates: 'Plates', none: 'Keine Plate gefunden.', plate: 'Mobplate' },
+	en: { anySlot: 'Any slot', search: 'Search mob …', searchLabel: 'Search Mobplates', spawner: 'Makes a spawner', spawnerLore: '§aMakes a spawner', plates: 'plates', none: 'No plate found.', plate: 'Mobplate' },
+};
+
+function itemLink(pages, spec) {
+	if (!spec) return null;
+	const [target, anchor = ''] = spec.split('#');
+	return linkFor(pages, 'items.json', target, anchor ? `#${anchor}` : '');
+}
+
+function itemInfo(id, locale, pages) {
+	const it = ITEMS.items[id];
+	if (!it) {
+		warn(`data/items.json: Item „${id}“ fehlt`);
+		return null;
+	}
+	const tex = ITEMS_GEN.textures[id];
+	if (!tex) warn(`data/items.generated.json: keine Textur für „${id}“ – python3 tools/site_items.py laufen lassen`);
+	return {
+		id,
+		name: it.name[locale] ?? it.name.de,
+		color: MC_COLORS[it.color] ?? MC_COLORS.white,
+		lore: it.lore?.[locale] ?? [],
+		vanilla: Boolean(it.vanilla),
+		tex: tex ?? [],
+		href: itemLink(pages, it.link?.[locale] ?? it.link?.de),
+	};
+}
+
+// Gefüllte Plates, die einen Spawner ergeben (aus der Plugin-Config), die Kuh zuerst wie im alten Bild.
+function spawnerPlates(locale, pages) {
+	const list = Object.entries(ITEMS_GEN.mobplates)
+		.filter(([, p]) => p.spawner)
+		.map(([id, p]) => ({ id, name: `${UI[locale].plate}: ${p[locale]}`, tex: p.tex }));
+	const cow = list.findIndex((p) => p.id === 'mobplate_cow');
+	if (cow > 0) list.unshift(...list.splice(cow, 1));
+	return {
+		id: 'mobplate_filled',
+		name: list[0]?.name ?? UI[locale].plate,
+		color: MC_COLORS.light_purple,
+		lore: [],
+		vanilla: false,
+		tex: [list[0]?.tex].filter(Boolean),
+		cycle: list.map((p) => [p.tex, p.name]),
+		href: itemLink(pages, locale === 'en' ? 'en/mobplates.md' : 'sb/mobplates.md'),
+	};
+}
+
+// Ein Platz im Raster. Tooltip-Daten stehen in data-*, mb.js zeichnet daraus den Minecraft-Tooltip.
+function slotHtml(info, { cls = '', count = 0, style = '', follow = false, extra = '', lazy = true } = {}) {
+	if (!info) return `<span class="mb-slot${cls ? ' ' + cls : ''}"${style ? ` style="${style}"` : ''} aria-hidden="true"></span>`;
+	const tag = info.href ? 'a' : 'span';
+	const attrs = [
+		`class="mb-slot${cls ? ' ' + cls : ''}"`,
+		info.href ? `href="${esc(info.href)}"` : '',
+		style ? `style="${style}"` : '',
+		`data-item="${esc(info.id)}"`,
+		`data-name="${esc(info.name)}"`,
+		`data-color="${info.color}"`,
+		info.lore.length ? `data-lore="${esc(JSON.stringify(info.lore))}"` : '',
+		info.vanilla ? 'data-vanilla' : '',
+		info.cycle ? `data-cycle="${esc(JSON.stringify(info.cycle))}"` : info.tex.length > 1 ? `data-cycle="${esc(JSON.stringify(info.tex.map((t) => [t])))}"` : '',
+		follow ? 'data-follow' : '',
+		extra,
+		`aria-label="${esc(info.name)}"`,
+	].filter(Boolean);
+	const img = info.tex[0] ? `<img src="${esc(info.tex[0])}" alt="" width="16" height="16"${lazy ? ' loading="lazy"' : ''} decoding="async" draggable="false">` : '';
+	return `<${tag} ${attrs.join(' ')}>${img}${count > 1 ? `<span class="mb-slot__count">${count}</span>` : ''}</${tag}>`;
+}
+
+function recipeHtml(fig, alt, caption, locale, pages) {
+	const rows = fig.shape.map((r) => r.padEnd(3, ' ').slice(0, 3));
+	while (rows.length < 3) rows.push('   ');
+	const cells = rows.join('').split('');
+	let followCycle = false;
+	const slots = cells.map((ch, i) => {
+		const id = ch === ' ' ? null : fig.keys[ch];
+		if (ch !== ' ' && !id) warn(`data/items.json: Rezept ohne Zutat für „${ch}“`);
+		const info = !id ? null : id === '@spawner-plates' ? spawnerPlates(locale, pages) : itemInfo(id, locale, pages);
+		if (info?.cycle && id === '@spawner-plates') followCycle = true;
+		// Rezeptbilder sofort laden (16×16, winzig), damit die Animation nicht auf sie wartet
+		return slotHtml(info, { style: `--i:${i}`, lazy: false });
+	});
+	const result = itemInfo(fig.result, locale, pages);
+	const badge = fig.shapeless ? `<span class="mb-craft__badge" title="${esc(UI[locale].anySlot)}">⇄ ${esc(UI[locale].anySlot)}</span>` : '';
+	return (
+		`\n<figure class="mb-craft"><div class="mb-craft__table">` +
+		`<div class="mb-craft__grid">${slots.join('')}</div>` +
+		`<span class="mb-craft__arrow" aria-hidden="true"></span>` +
+		slotHtml(result, { cls: 'mb-slot--result', count: fig.count ?? 1, follow: followCycle, lazy: false }) +
+		badge +
+		`</div><span class="sr-only">${alt}</span>` +
+		(caption ? `<figcaption>${caption}</figcaption>` : '') +
+		`</figure>\n`
+	);
+}
+
+function itemRowHtml(fig, locale, pages) {
+	const cards = fig.items.map((id) => {
+		const info = itemInfo(id, locale, pages);
+		if (!info) return '';
+		const tag = info.href ? 'a' : 'div';
+		return (
+			`<${tag} class="mb-itemcard"${info.href ? ` href="${esc(info.href)}"` : ''}>` +
+			`<span class="mb-itemcard__icon">${info.tex[0] ? `<img src="${esc(info.tex[0])}" alt="" width="16" height="16" decoding="async" draggable="false">` : ''}</span>` +
+			`<span class="mb-itemcard__name" style="--mb-mc:${info.color}">${esc(info.name)}</span>` +
+			`<span class="mb-itemcard__src">${info.vanilla ? 'Minecraft' : 'MegaBuild.de'}</span>` +
+			`</${tag}>`
+		);
+	});
+	return `\n<div class="mb-itemrow">${cards.join('')}</div>\n`;
+}
+
+function galleryHtml(fig, alt, locale) {
+	if (fig.gallery !== 'mobplates') {
+		warn(`data/items.json: unbekannte Galerie „${fig.gallery}“`);
+		return null;
+	}
+	const ui = UI[locale];
+	const plates = Object.entries(ITEMS_GEN.mobplates)
+		.map(([id, p]) => ({ id, ...p, name: p[locale] ?? p.de }))
+		.sort((a, b) => a.name.localeCompare(b.name, locale));
+	const nSpawner = plates.filter((p) => p.spawner).length;
+	const slots = plates.map((p) =>
+		slotHtml(
+			{ id: p.id, name: `${ui.plate}: ${p.name}`, color: MC_COLORS.light_purple, lore: p.spawner ? [ui.spawnerLore] : [], vanilla: false, tex: [p.tex] },
+			{ cls: p.spawner ? 'mb-slot--spawner' : '', extra: `data-search="${esc(`${p.de} ${p.en}`.toLowerCase())}"` },
+		),
+	);
+	const spawnerTex = ITEMS_GEN.textures.spawner?.[0] ?? '';
+	return (
+		`\n<div class="mb-gallery" style="--mb-spawner-icon:url('${spawnerTex}')">` +
+		`<div class="mb-gallery__bar" hidden>` +
+		`<input class="mb-gallery__search" type="search" placeholder="${esc(ui.search)}" aria-label="${esc(ui.searchLabel)}" autocomplete="off">` +
+		`<button class="mb-gallery__chip" type="button" aria-pressed="false"><img src="${spawnerTex}" alt="" width="16" height="16">${esc(ui.spawner)} <b>${nSpawner}</b></button>` +
+		`<span class="mb-gallery__count" aria-live="polite" data-total="${plates.length}" data-unit="${esc(ui.plates)}">${plates.length} ${esc(ui.plates)}</span>` +
+		`</div>` +
+		`<div class="mb-gallery__grid">${slots.join('')}</div>` +
+		`<p class="mb-gallery__empty" hidden>${esc(ui.none)}</p>` +
+		`<span class="sr-only">${alt}</span>` +
+		`</div>\n`
+	);
+}
+
+// ---------------------------------------------------------------------------
+// Skilltree als Baum: ersetzt auf den Skilltree-Seiten den ersten Tab-Block (ein Tab je Pfad).
+// GitBook zeigt weiter die Tabs; hier stehen Kristalle und Biome als Kacheln, ein Klick zeigt
+// Quest, Voraussetzung, Preis und die Bilder aus dem Tab. mb.js baut daraus die Details.
+// ---------------------------------------------------------------------------
+
+const TREE_UI = {
+	de: {
+		root: 'Deine Insel',
+		rootNote: 'Kristall wählen, dann Biom für Biom freischalten',
+		pick: 'Tippe auf einen Kristall oder ein Biom.',
+		biomes: 'Biome',
+		place: '{path} · {n}. Biom',
+		unlock: 'Freischalten',
+		unlockStart: 'Startest du mit diesem Pfad, ist es dein **Startbiom**. Sonst kaufst du es nach der Kristallquest: **{q}**.',
+		unlockNext: 'Das Biom davor – **{prev}** – gehört deiner Insel, und seine Biomquest ist geschafft: **{q}**.',
+		quest: 'Biomquest',
+		opens: 'öffnet {next}',
+		last: 'letzte Stelle – öffnet noch nichts',
+		reward: '+{n} Mana für jeden, der mithilft',
+		price: 'Preis',
+		priceAt: 'als {n}. Kauf',
+		priceLabel: 'Wievielter Kauf deiner Insel?',
+		crystalQuest: 'Kristallquest',
+		crystalNote: 'Zählt auf allen deinen Inseln. Dein Startpfad braucht keine.',
+		close: 'Schließen',
+		label: 'Skilltree als Baum',
+	},
+	en: {
+		root: 'Your island',
+		rootNote: 'Pick a crystal, then unlock biome by biome',
+		pick: 'Tap a crystal or a biome.',
+		biomes: 'biomes',
+		place: '{path} · biome {n}',
+		unlock: 'Unlock',
+		unlockStart: 'If you start with this path, it’s your **starting biome**. Otherwise you buy it after the crystal quest: **{q}**.',
+		unlockNext: 'The biome before – **{prev}** – belongs to your island and its biome quest is done: **{q}**.',
+		quest: 'Biome quest',
+		opens: 'unlocks {next}',
+		last: 'last spot – doesn’t unlock anything yet',
+		reward: '+{n} Mana for everyone who helps',
+		price: 'Price',
+		priceAt: 'as purchase no. {n}',
+		priceLabel: 'Which purchase of your island?',
+		crystalQuest: 'Crystal quest',
+		crystalNote: 'Counts on all your islands. Your starting path doesn’t need one.',
+		close: 'Close',
+		label: 'Skill tree as a tree',
+	},
+};
+
+const stripTags = (s) => s.replace(/<[^>]+>/g, '').trim();
+
+function skilltreeTree(src, t) {
+	if (!TREE.pages.includes(src)) return t;
+	const locale = src.startsWith('en/') ? 'en' : 'de';
+	const ui = TREE_UI[locale];
+	const block = t.match(/\{% tabs %\}([\s\S]*?)\{% endtabs %\}/);
+	if (!block) {
+		warn(`${src}: kein Tab-Block für den Skilltree-Baum`);
+		return t;
+	}
+	// Bilder je Tab einsammeln; der Tab-Titel ist der Pfadname aus der Sprachdatei.
+	const byName = new Map(TREE_GEN.paths.map((p) => [p.name[locale].toLowerCase(), p]));
+	const shots = new Map();
+	const order = [];
+	for (const [, title, body] of block[1].matchAll(/\{% tab title="([^"]*)" %\}([\s\S]*?)\{% endtab %\}/g)) {
+		const p = byName.get(title.toLowerCase());
+		if (!p) {
+			warn(`${src}: Tab „${title}“ passt zu keinem Pfad im Skilltree (gesperrt oder umbenannt?)`);
+			continue;
+		}
+		order.push(p);
+		shots.set(
+			p.id,
+			[...body.matchAll(/<img src="([^"]+)"[^>]*?alt="([^"]*)"[^>]*>(?:<figcaption>([\s\S]*?)<\/figcaption>)?/g)].map(([, img, alt, cap = '']) => ({
+				src: img,
+				alt,
+				cap: stripTags(cap),
+			})),
+		);
+	}
+	const paths = [...order, ...TREE_GEN.paths.filter((p) => !order.includes(p))];
+
+	const data = {
+		ui,
+		price: TREE_GEN.price,
+		reward: TREE_GEN.reward,
+		paths: paths.map((p) => {
+			const own = shots.get(p.id) ?? [];
+			// Ein Bild gehört zu dem Biom, mit dessen Namen seine Unterschrift beginnt (längster Name zuerst).
+			const named = [...p.biomes.keys()].sort((a, b) => p.biomes[b].name[locale].length - p.biomes[a].name[locale].length);
+			const biomeShots = p.biomes.map(() => []);
+			for (const s of own) {
+				const text = (s.cap || s.alt).toLowerCase();
+				const i = named.find((j) => text.startsWith(p.biomes[j].name[locale].toLowerCase()));
+				if (i !== undefined) biomeShots[i].push(s);
+			}
+			return {
+				name: p.name[locale],
+				desc: p.description[locale],
+				quest: p.crystalQuest?.[locale] ?? '',
+				crystal: p.crystal,
+				shots: own,
+				biomes: p.biomes.map((b, i) => ({ name: b.name[locale], icon: b.icon, quest: b.quest?.[locale] ?? '', shots: biomeShots[i] })),
+			};
+		}),
+	};
+
+	const cols = paths.map((p, pi) => {
+		const chain = p.biomes
+			.map(
+				(b, bi) =>
+					`<li><button type="button" class="mb-tree__node mb-tree__biome" data-p="${pi}" data-b="${bi}" aria-pressed="false">` +
+					`<span class="mb-tree__step">${bi + 1}</span>` +
+					`<img src="${esc(b.icon)}" alt="" width="16" height="16" decoding="async" draggable="false">` +
+					`<span class="mb-tree__name">${esc(b.name[locale])}</span></button></li>`,
+			)
+			.join('');
+		return (
+			`<div class="mb-tree__path" style="--c:${p.color ?? '#a958ff'}">` +
+			`<button type="button" class="mb-tree__node mb-tree__crystal" data-p="${pi}" aria-pressed="false" aria-expanded="${pi === 0}">` +
+			`<img src="${esc(p.crystal)}" alt="" width="16" height="16" decoding="async" draggable="false">` +
+			`<span class="mb-tree__name">${esc(p.name[locale])}</span>` +
+			`<span class="mb-tree__meta">${p.biomes.length} ${esc(ui.biomes)}</span></button>` +
+			`<ol class="mb-tree__chain" aria-label="${esc(p.name[locale])}">${chain}</ol></div>`
+		);
+	});
+
+	const island = TREE_GEN.paths.flatMap((p) => p.biomes).find((b) => b.icon.endsWith('/grass_block.png'))?.icon;
+	const html =
+		`\n<div class="mb-tree not-content" role="group" aria-label="${esc(ui.label)}" data-tree="${esc(JSON.stringify(data))}" style="--n:${paths.length}">` +
+		`<div class="mb-tree__root"><span class="mb-tree__island" aria-hidden="true">${island ? `<img src="${esc(island)}" alt="" width="16" height="16">` : ''}</span><span><b>${esc(ui.root)}</b><small>${esc(ui.rootNote)}</small></span></div>` +
+		`<div class="mb-tree__paths">${cols.join('')}</div>` +
+		`<div class="mb-tree__detail" aria-live="polite" hidden><p class="mb-tree__pick">${esc(ui.pick)}</p></div>` +
+		`</div>\n`;
+	return t.replace(block[0], () => html);
+}
+
+const PIXEL_ASSET = new RegExp(`^(?:${ITEMS.pixelated.map((p) => p.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')).join('|')})`);
+
+function customBlocks(src, t, pages) {
+	const locale = pages.get(src)?.locale ?? 'de';
+	t = t.replace(
+		/<figure><img src="\/assets\/([^"]+)"([^>]*)>(?:<figcaption>([\s\S]*?)<\/figcaption>)?<\/figure>/g,
+		(m, asset, attrs, caption = '') => {
+			const fig = ITEMS.figures[asset];
+			if (!fig) return m;
+			const alt = attrs.match(/alt="([^"]*)"/)?.[1] ?? '';
+			const cap = caption.trim();
+			if (fig.shape) return recipeHtml(fig, alt, cap, locale, pages);
+			if (fig.items) return itemRowHtml(fig, locale, pages);
+			if (fig.gallery) return galleryHtml(fig, alt, locale) ?? m;
+			return m;
+		},
+	);
+	// Übrige Pixelbilder (z. B. Bauplan) ohne Weichzeichnen vergrößern.
+	return t.replace(/<img src="\/assets\/([^"]+)"/g, (m, asset) => (PIXEL_ASSET.test(asset) ? `<img class="mb-pixel" src="/assets/${asset}"` : m));
+}
+
 function convertBody(src, body, pages) {
 	// Code-Blöcke und Inline-Code schützen, damit dort nichts umgeschrieben wird.
 	const stash = [];
@@ -224,6 +542,10 @@ function convertBody(src, body, pages) {
 		/<figure><img src="([^"]+\.(?:jpe?g|png|webp))"[^>]*>(?:<figcaption>[\s\S]*?<\/figcaption>)?<\/figure>\s*\{% file src="([^"]+)" %\}([\s\S]*?)\{% endfile %\}/g,
 		(m, poster, file, caption) => (VIDEO_EXT.test(file) ? videoBlock(file, caption, poster) : m),
 	);
+
+	// Skilltree-Baum statt der Pfad-Tabs, dann Rezepte, Item-Reihen und Galerie statt der Bilder
+	t = skilltreeTree(src, t);
+	t = customBlocks(src, t, pages);
 
 	// Datei-Blöcke
 	t = t.replace(/\{% file src="([^"]+)"[^%]*%\}([\s\S]*?)\{% endfile %\}/g, (m, file, caption) => {

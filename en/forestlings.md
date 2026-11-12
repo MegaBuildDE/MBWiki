@@ -29,7 +29,7 @@ Forestlings aren't [AI residents](residents.md): they don't carry “(KI)” and
 
 ## Getting a blessing
 
-For a blessing you need **Mana** and a **[Mana Apple](economy.md#mana-orbs)**. You craft the apple from an apple in the middle of the crafting table with **4 Mana orbs** around it. The apple confirms the purchase – typing “yes” in chat is no longer enough.
+For a blessing you need **Mana** and a **[Mana Apple](economy.md#mana-orbs)**. You craft the apple from an apple in the middle of the crafting table with **4 Mana orbs** around it. The apple confirms the purchase.
 
 {% stepper %}
 {% step %}

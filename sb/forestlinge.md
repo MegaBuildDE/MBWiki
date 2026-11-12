@@ -29,7 +29,7 @@ Deinen ersten Forestling zeigt dir **Mala** auf der Begegnungsinsel. Er fliegt g
 
 ## Einen Segen bekommen
 
-Für einen Segen brauchst du **Mana** und einen **[Mana-Apfel](eco.md#mana-kugeln)**. Den Apfel craftest du aus einem Apfel in der Mitte der Werkbank und **4 Mana-Kugeln** darum. Er bestätigt den Kauf – ein „ja“ im Chat reicht nicht mehr.
+Für einen Segen brauchst du **Mana** und einen **[Mana-Apfel](eco.md#mana-kugeln)**. Den Apfel craftest du aus einem Apfel in der Mitte der Werkbank und **4 Mana-Kugeln** darum. Er bestätigt den Kauf.
 
 {% stepper %}
 {% step %}

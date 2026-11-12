@@ -1,0 +1,629 @@
+{
+	"$hinweis": "Erzeugt von tools/site_skilltree.py - nicht von Hand ändern.",
+	"jar": "26.1.1.jar",
+	"price": {
+		"base": 100,
+		"growth": 0.05,
+		"perStep": 0.25,
+		"roundTo": 5
+	},
+	"reward": 25,
+	"locked": [
+		"water"
+	],
+	"paths": [
+		{
+			"id": "snow_cold",
+			"crystal": "/skilltree/crystal-snow_cold.png",
+			"color": "#32a1e6",
+			"name": {
+				"de": "Schnee & Eis",
+				"en": "Snow & Ice"
+			},
+			"description": {
+				"de": "Frostige Ebenen und Gletscher.",
+				"en": "Frosty plains and glaciers."
+			},
+			"crystalQuest": {
+				"de": "Angle 32 Fische",
+				"en": "Catch 32 fish"
+			},
+			"biomes": [
+				{
+					"id": "snowy_plains",
+					"icon": "/skilltree/snow_block.png",
+					"name": {
+						"de": "Verschneite Ebene",
+						"en": "Snowy Plains"
+					},
+					"quest": {
+						"de": "Schaufle 96 Schneeblöcke",
+						"en": "Shovel 96 snow blocks"
+					}
+				},
+				{
+					"id": "snowy_beach",
+					"icon": "/skilltree/snowball.png",
+					"name": {
+						"de": "Verschneiter Strand",
+						"en": "Snowy Beach"
+					},
+					"quest": {
+						"de": "Angle 32 Fische",
+						"en": "Catch 32 fish"
+					}
+				},
+				{
+					"id": "snowy_taiga",
+					"icon": "/skilltree/spruce_log.png",
+					"name": {
+						"de": "Verschneite Taiga",
+						"en": "Snowy Taiga"
+					},
+					"quest": {
+						"de": "Zähme 2 Wölfe",
+						"en": "Tame 2 wolves"
+					}
+				},
+				{
+					"id": "river_frozen",
+					"icon": "/skilltree/blue_ice.png",
+					"name": {
+						"de": "Vereister Fluss",
+						"en": "Frozen River"
+					},
+					"quest": {
+						"de": "Hacke 192 Eisblöcke",
+						"en": "Mine 192 ice"
+					}
+				},
+				{
+					"id": "ocean_frozen",
+					"icon": "/skilltree/packed_ice.png",
+					"name": {
+						"de": "Vereister Ozean",
+						"en": "Frozen Ocean"
+					},
+					"quest": {
+						"de": "Brich 256 Pack- oder Blaueis",
+						"en": "Break 256 packed or blue ice"
+					}
+				},
+				{
+					"id": "ice_spikes",
+					"icon": "/skilltree/ice.png",
+					"name": {
+						"de": "Eiszapfentundra",
+						"en": "Ice Spikes"
+					},
+					"quest": {
+						"de": "Besiege 16 Eiswanderer",
+						"en": "Defeat 16 strays"
+					}
+				}
+			]
+		},
+		{
+			"id": "mountains_rocky",
+			"crystal": "/skilltree/crystal-mountains_rocky.png",
+			"color": "#36e5d5",
+			"name": {
+				"de": "Gebirge",
+				"en": "Mountains"
+			},
+			"description": {
+				"de": "Schroffe Gipfel und Geröll.",
+				"en": "Rugged peaks and scree."
+			},
+			"crystalQuest": {
+				"de": "Baue 384 Gestein ab",
+				"en": "Mine 384 stone"
+			},
+			"biomes": [
+				{
+					"id": "mountains_windswept_hills",
+					"icon": "/skilltree/cobblestone.png",
+					"name": {
+						"de": "Windschliff-Hügel",
+						"en": "Windswept Hills"
+					},
+					"quest": {
+						"de": "Baue 12 Erze ab",
+						"en": "Mine 12 ores"
+					}
+				},
+				{
+					"id": "mountains_windswept_forest",
+					"icon": "/skilltree/stone_axe.png",
+					"name": {
+						"de": "Windschliff-Wald",
+						"en": "Windswept Forest"
+					},
+					"quest": {
+						"de": "Fälle 160 Baumstämme",
+						"en": "Chop 160 logs"
+					}
+				},
+				{
+					"id": "mountains_windswept_gravelly_hills",
+					"icon": "/skilltree/gravel.png",
+					"name": {
+						"de": "Windschliff-Kieshügel",
+						"en": "Windswept Gravelly Hills"
+					},
+					"quest": {
+						"de": "Grabe 384 Kies",
+						"en": "Dig 384 gravel"
+					}
+				},
+				{
+					"id": "mountains_snowy_slopes",
+					"icon": "/skilltree/goat_horn.png",
+					"name": {
+						"de": "Verschneite Hänge",
+						"en": "Snowy Slopes"
+					},
+					"quest": {
+						"de": "Züchte 6 Ziegen",
+						"en": "Breed 6 goats"
+					}
+				},
+				{
+					"id": "mountains_frozen_peaks",
+					"icon": "/skilltree/powder_snow_bucket.png",
+					"name": {
+						"de": "Vereiste Gipfel",
+						"en": "Frozen Peaks"
+					},
+					"quest": {
+						"de": "Besiege 40 Monster",
+						"en": "Defeat 40 monsters"
+					}
+				},
+				{
+					"id": "mountains_jagged_peaks",
+					"icon": "/skilltree/pointed_dripstone.png",
+					"name": {
+						"de": "Zerklüftete Gipfel",
+						"en": "Jagged Peaks"
+					},
+					"quest": {
+						"de": "Baue 640 Gestein ab",
+						"en": "Mine 640 stone"
+					}
+				}
+			]
+		},
+		{
+			"id": "forests_temperate",
+			"crystal": "/skilltree/crystal-forests_temperate.png",
+			"color": "#50e6a1",
+			"name": {
+				"de": "Wälder",
+				"en": "Forests"
+			},
+			"description": {
+				"de": "Dichte Laub- und Nadelwälder.",
+				"en": "Dense broadleaf and conifer forests."
+			},
+			"crystalQuest": {
+				"de": "Fälle 128 Baumstämme",
+				"en": "Chop 128 logs"
+			},
+			"biomes": [
+				{
+					"id": "forest",
+					"icon": "/skilltree/oak_sapling.png",
+					"name": {
+						"de": "Wald",
+						"en": "Forest"
+					},
+					"quest": {
+						"de": "Fälle 48 Eichenstämme",
+						"en": "Chop 48 oak logs"
+					}
+				},
+				{
+					"id": "forest_wooded_hills",
+					"icon": "/skilltree/moss_block.png",
+					"name": {
+						"de": "Bewaldete Hügel",
+						"en": "Wooded Hills"
+					},
+					"quest": {
+						"de": "Plündere 5 Truhen, Fässer oder Vasen",
+						"en": "Loot 5 chests, barrels or pots"
+					}
+				},
+				{
+					"id": "taiga",
+					"icon": "/skilltree/spruce_sapling.png",
+					"name": {
+						"de": "Taiga",
+						"en": "Taiga"
+					},
+					"quest": {
+						"de": "Pflücke 96 Süßbeeren",
+						"en": "Pick 96 sweet berries"
+					}
+				},
+				{
+					"id": "mountains_grove",
+					"icon": "/skilltree/fern.png",
+					"name": {
+						"de": "Hain",
+						"en": "Grove"
+					},
+					"quest": {
+						"de": "Züchte 3 Füchse",
+						"en": "Breed 3 foxes"
+					}
+				},
+				{
+					"id": "taiga_old_growth_spruce",
+					"icon": "/skilltree/sweet_berries.png",
+					"name": {
+						"de": "Fichten-Urtaiga",
+						"en": "Old Growth Spruce Taiga"
+					},
+					"quest": {
+						"de": "Fälle 384 Fichtenstämme",
+						"en": "Chop 384 spruce logs"
+					}
+				},
+				{
+					"id": "taiga_old_growth_pine",
+					"icon": "/skilltree/podzol.png",
+					"name": {
+						"de": "Kiefern-Urtaiga",
+						"en": "Old Growth Pine Taiga"
+					},
+					"quest": {
+						"de": "Zähme 3 Wölfe",
+						"en": "Tame 3 wolves"
+					}
+				}
+			]
+		},
+		{
+			"id": "plains_open",
+			"crystal": "/skilltree/crystal-plains_open.png",
+			"color": "#44e54d",
+			"name": {
+				"de": "Ebenen",
+				"en": "Plains"
+			},
+			"description": {
+				"de": "Weite Wiesen und Sonnenblumen.",
+				"en": "Wide meadows and sunflowers."
+			},
+			"crystalQuest": {
+				"de": "Ernte 128 Weizen",
+				"en": "Harvest 128 wheat"
+			},
+			"biomes": [
+				{
+					"id": "plains",
+					"icon": "/skilltree/grass_block.png",
+					"name": {
+						"de": "Ebene",
+						"en": "Plains"
+					},
+					"quest": {
+						"de": "Schere 8 Schafe",
+						"en": "Shear 8 sheep"
+					}
+				},
+				{
+					"id": "plains_sunflower",
+					"icon": "/skilltree/sunflower.png",
+					"name": {
+						"de": "Sonnenblumenebene",
+						"en": "Sunflower Plains"
+					},
+					"quest": {
+						"de": "Pflücke 48 Sonnenblumen",
+						"en": "Pick 48 sunflowers"
+					}
+				},
+				{
+					"id": "meadow",
+					"icon": "/skilltree/allium.png",
+					"name": {
+						"de": "Wiese",
+						"en": "Meadow"
+					},
+					"quest": {
+						"de": "Züchte 5 Kaninchen",
+						"en": "Breed 5 rabbits"
+					}
+				},
+				{
+					"id": "forest_flower",
+					"icon": "/skilltree/pink_tulip.png",
+					"name": {
+						"de": "Blumenwald",
+						"en": "Flower Forest"
+					},
+					"quest": {
+						"de": "Pflücke 160 Blumen",
+						"en": "Pick 160 flowers"
+					}
+				},
+				{
+					"id": "forest_birch",
+					"icon": "/skilltree/birch_sapling.png",
+					"name": {
+						"de": "Birkenwald",
+						"en": "Birch Forest"
+					},
+					"quest": {
+						"de": "Fälle 288 Birkenstämme",
+						"en": "Chop 288 birch logs"
+					}
+				},
+				{
+					"id": "cherry_grove",
+					"icon": "/skilltree/cherry_sapling.png",
+					"name": {
+						"de": "Kirschhain",
+						"en": "Cherry Grove"
+					},
+					"quest": {
+						"de": "Sammle 192 Blütenblätter",
+						"en": "Collect 192 pink petals"
+					}
+				}
+			]
+		},
+		{
+			"id": "swamp_rare",
+			"crystal": "/skilltree/crystal-swamp_rare.png",
+			"color": "#e6d741",
+			"name": {
+				"de": "Sumpf & Selten",
+				"en": "Swamp & Rare"
+			},
+			"description": {
+				"de": "Moorige und ungewöhnliche Biome.",
+				"en": "Boggy and unusual biomes."
+			},
+			"crystalQuest": {
+				"de": "Plündere 6 Truhen, Fässer oder Vasen",
+				"en": "Loot 6 chests, barrels or pots"
+			},
+			"biomes": [
+				{
+					"id": "swamp",
+					"icon": "/skilltree/vine.png",
+					"name": {
+						"de": "Sumpf",
+						"en": "Swamp"
+					},
+					"quest": {
+						"de": "Pflücke 24 Blaue Orchideen",
+						"en": "Pick 24 blue orchids"
+					}
+				},
+				{
+					"id": "swamp_mangrove",
+					"icon": "/skilltree/mangrove_propagule.png",
+					"name": {
+						"de": "Mangrovensumpf",
+						"en": "Mangrove Swamp"
+					},
+					"quest": {
+						"de": "Angle 32 Fische",
+						"en": "Catch 32 fish"
+					}
+				},
+				{
+					"id": "forest_dark",
+					"icon": "/skilltree/dark_oak_sapling.png",
+					"name": {
+						"de": "Dunkler Wald",
+						"en": "Dark Forest"
+					},
+					"quest": {
+						"de": "Sammle 64 Pilze",
+						"en": "Collect 64 mushrooms"
+					}
+				},
+				{
+					"id": "forest_birch_old_growth",
+					"icon": "/skilltree/bee_nest.png",
+					"name": {
+						"de": "Birkenurwald",
+						"en": "Old Growth Birch Forest"
+					},
+					"quest": {
+						"de": "Fälle 320 Birkenstämme",
+						"en": "Chop 320 birch logs"
+					}
+				},
+				{
+					"id": "mushroom_fields",
+					"icon": "/skilltree/red_mushroom.png",
+					"name": {
+						"de": "Pilzland",
+						"en": "Mushroom Fields"
+					},
+					"quest": {
+						"de": "Züchte 8 Pilzkühe",
+						"en": "Breed 8 mooshrooms"
+					}
+				},
+				{
+					"id": "pale_garden",
+					"icon": "/skilltree/pale_oak_sapling.png",
+					"name": {
+						"de": "Blasser Garten",
+						"en": "Pale Garden"
+					},
+					"quest": {
+						"de": "Pflücke 48 Augenblüten",
+						"en": "Pick 48 eyeblossoms"
+					}
+				}
+			]
+		},
+		{
+			"id": "jungle_tropical",
+			"crystal": "/skilltree/crystal-jungle_tropical.png",
+			"color": "#19e672",
+			"name": {
+				"de": "Dschungel",
+				"en": "Jungle"
+			},
+			"description": {
+				"de": "Tropisch, grün und voller Leben.",
+				"en": "Tropical, green and full of life."
+			},
+			"crystalQuest": {
+				"de": "Züchte 16 Tiere",
+				"en": "Breed 16 animals"
+			},
+			"biomes": [
+				{
+					"id": "jungle_sparse",
+					"icon": "/skilltree/jungle_sapling.png",
+					"name": {
+						"de": "Lichter Dschungel",
+						"en": "Sparse Jungle"
+					},
+					"quest": {
+						"de": "Fälle 48 Tropenbaumstämme",
+						"en": "Chop 48 jungle logs"
+					}
+				},
+				{
+					"id": "jungle",
+					"icon": "/skilltree/melon_slice.png",
+					"name": {
+						"de": "Dschungel",
+						"en": "Jungle"
+					},
+					"quest": {
+						"de": "Zähme 3 Papageien",
+						"en": "Tame 3 parrots"
+					}
+				},
+				{
+					"id": "mountains_stony_peaks",
+					"icon": "/skilltree/stone.png",
+					"name": {
+						"de": "Steinige Gipfel",
+						"en": "Stony Peaks"
+					},
+					"quest": {
+						"de": "Baue 32 Erze ab",
+						"en": "Mine 32 ores"
+					}
+				},
+				{
+					"id": "jungle_bamboo",
+					"icon": "/skilltree/bamboo.png",
+					"name": {
+						"de": "Bambusdschungel",
+						"en": "Bamboo Jungle"
+					},
+					"quest": {
+						"de": "Züchte 3 Pandas",
+						"en": "Breed 3 pandas"
+					}
+				}
+			]
+		},
+		{
+			"id": "hot_dry",
+			"crystal": "/skilltree/crystal-hot_dry.png",
+			"color": "#e6b46d",
+			"name": {
+				"de": "Wüste & Steppe",
+				"en": "Desert & Steppe"
+			},
+			"description": {
+				"de": "Sand, Hitze und Badlands.",
+				"en": "Sand, heat and badlands."
+			},
+			"crystalQuest": {
+				"de": "Besiege 40 Monster",
+				"en": "Defeat 40 monsters"
+			},
+			"biomes": [
+				{
+					"id": "desert",
+					"icon": "/skilltree/sand.png",
+					"name": {
+						"de": "Wüste",
+						"en": "Desert"
+					},
+					"quest": {
+						"de": "Grabe 128 Sand",
+						"en": "Dig 128 sand"
+					}
+				},
+				{
+					"id": "savanna",
+					"icon": "/skilltree/acacia_sapling.png",
+					"name": {
+						"de": "Savanne",
+						"en": "Savanna"
+					},
+					"quest": {
+						"de": "Zähme 3 Pferde",
+						"en": "Tame 3 horses"
+					}
+				},
+				{
+					"id": "badlands",
+					"icon": "/skilltree/red_sand.png",
+					"name": {
+						"de": "Tafelberge",
+						"en": "Badlands"
+					},
+					"quest": {
+						"de": "Züchte 5 Gürteltiere",
+						"en": "Breed 5 armadillos"
+					}
+				},
+				{
+					"id": "savanna_windswept",
+					"icon": "/skilltree/tall_grass.png",
+					"name": {
+						"de": "Zerzauste Savanne",
+						"en": "Windswept Savanna"
+					},
+					"quest": {
+						"de": "Fälle 256 Akazienstämme",
+						"en": "Chop 256 acacia logs"
+					}
+				},
+				{
+					"id": "badlands_wooded",
+					"icon": "/skilltree/dead_bush.png",
+					"name": {
+						"de": "Bewaldete Tafelberge",
+						"en": "Wooded Badlands"
+					},
+					"quest": {
+						"de": "Baue 384 Terrakotta ab",
+						"en": "Mine 384 terracotta"
+					}
+				},
+				{
+					"id": "badlands_eroded",
+					"icon": "/skilltree/terracotta.png",
+					"name": {
+						"de": "Abgetragene Tafelberge",
+						"en": "Eroded Badlands"
+					},
+					"quest": {
+						"de": "Besiege 64 Monster",
+						"en": "Defeat 64 monsters"
+					}
+				}
+			]
+		}
+	]
+}

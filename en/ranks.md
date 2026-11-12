@@ -11,7 +11,7 @@ You can get a rank on MegaBuild.de and support the server at the same time.
 {% hint style="warning" %}
 **Rank perks for Custom Skyblock have not been decided yet.**
 
-The previous rank perks applied to the old CityBuild (plots, `/p merge`, plot flags and so on) and **no longer apply** to the new Skyblock. The new perks will be announced at the Skyblock launch and added here.
+They will be announced at the Skyblock launch and added here.
 {% endhint %}
 
 ## Available ranks

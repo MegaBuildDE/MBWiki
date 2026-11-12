@@ -37,6 +37,8 @@ export default defineConfig({
 				ThemeProvider: './src/components/ThemeProvider.astro',
 				ThemeSelect: './src/components/ThemeSelect.astro',
 				SocialIcons: './src/components/SocialIcons.astro',
+				Header: './src/components/Header.astro',
+				LanguageSelect: './src/components/LanguageSelect.astro',
 				Hero: './src/components/Hero.astro',
 				PageTitle: './src/components/PageTitle.astro',
 				MobileTableOfContents: './src/components/MobileTableOfContents.astro',

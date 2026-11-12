@@ -11,10 +11,10 @@ coverY: 0
 
 MegaBuild.de is a **Custom Skyblock**: every island runs as its own server, the world around your island is created as you explore, AI residents talk and trade with you, and with Mana you unlock new biomes step by step.
 
-{% hint style="warning" %}
-**The server is currently in maintenance mode.**
+{% hint style="info" %}
+**The open beta is live!**
 
-No launch date for Custom Skyblock has been announced yet. For updates, see [status.megabuild.de](https://status.megabuild.de/) and our [Discord](https://megabuild.de/dc/).
+Sign up on our [Discord](https://megabuild.de/dc/) in the **#🧪┃beta-anmeldung** channel: click **Sign up** and enter your Minecraft name and edition. You then get access to the beta info and the beta chat. For updates, see [status.megabuild.de](https://status.megabuild.de/).
 {% endhint %}
 
 ## Server address

@@ -1,0 +1,740 @@
+{
+	"$hinweis": "Erzeugt von tools/site_items.py - nicht von Hand ändern.",
+	"jar": "26.1.1.jar",
+	"textures": {
+		"mana": [
+			"/items/mana.png"
+		],
+		"mana_charge": [
+			"/items/mana_charge.png"
+		],
+		"mana_apple": [
+			"/items/mana_apple.png"
+		],
+		"mana_block": [
+			"/items/mana_block.png"
+		],
+		"mana_budding": [
+			"/items/mana_budding.png"
+		],
+		"mana_shard": [
+			"/items/mana_shard.png"
+		],
+		"blasse_scherbe": [
+			"/items/blasse_scherbe.png"
+		],
+		"mobplate": [
+			"/items/mobplate.png"
+		],
+		"feather_of_softness": [
+			"/items/feather_of_softness.png"
+		],
+		"spawner_fragment": [
+			"/items/spawner_fragment.png"
+		],
+		"spawner": [
+			"/items/spawner.png"
+		],
+		"apple": [
+			"/items/apple.png"
+		],
+		"brick": [
+			"/items/brick.png"
+		],
+		"pottery_sherd": [
+			"/items/pottery_sherd/angler_pottery_sherd.png",
+			"/items/pottery_sherd/archer_pottery_sherd.png",
+			"/items/pottery_sherd/arms_up_pottery_sherd.png",
+			"/items/pottery_sherd/blade_pottery_sherd.png",
+			"/items/pottery_sherd/brewer_pottery_sherd.png",
+			"/items/pottery_sherd/burn_pottery_sherd.png",
+			"/items/pottery_sherd/danger_pottery_sherd.png",
+			"/items/pottery_sherd/explorer_pottery_sherd.png",
+			"/items/pottery_sherd/flow_pottery_sherd.png",
+			"/items/pottery_sherd/friend_pottery_sherd.png",
+			"/items/pottery_sherd/guster_pottery_sherd.png",
+			"/items/pottery_sherd/heart_pottery_sherd.png",
+			"/items/pottery_sherd/heartbreak_pottery_sherd.png",
+			"/items/pottery_sherd/howl_pottery_sherd.png",
+			"/items/pottery_sherd/miner_pottery_sherd.png",
+			"/items/pottery_sherd/mourner_pottery_sherd.png",
+			"/items/pottery_sherd/plenty_pottery_sherd.png",
+			"/items/pottery_sherd/prize_pottery_sherd.png",
+			"/items/pottery_sherd/scrape_pottery_sherd.png",
+			"/items/pottery_sherd/sheaf_pottery_sherd.png",
+			"/items/pottery_sherd/shelter_pottery_sherd.png",
+			"/items/pottery_sherd/skull_pottery_sherd.png",
+			"/items/pottery_sherd/snort_pottery_sherd.png"
+		]
+	},
+	"mobplates": {
+		"mobplate_allay": {
+			"de": "Hilfsgeist",
+			"en": "Allay",
+			"tex": "/items/mobplates/allay.png"
+		},
+		"mobplate_armadillo": {
+			"de": "Gürteltier",
+			"en": "Armadillo",
+			"tex": "/items/mobplates/armadillo.png",
+			"spawner": true
+		},
+		"mobplate_axolotl": {
+			"de": "Axolotl",
+			"en": "Axolotl",
+			"tex": "/items/mobplates/axolotl.png"
+		},
+		"mobplate_axolotl_blue": {
+			"de": "Axolotl (Blau)",
+			"en": "Axolotl (Blue)",
+			"tex": "/items/mobplates/axolotl_blue.png"
+		},
+		"mobplate_axolotl_cyan": {
+			"de": "Axolotl (Türkis)",
+			"en": "Axolotl (Cyan)",
+			"tex": "/items/mobplates/axolotl_cyan.png"
+		},
+		"mobplate_axolotl_gold": {
+			"de": "Axolotl (Gold)",
+			"en": "Axolotl (Gold)",
+			"tex": "/items/mobplates/axolotl_gold.png"
+		},
+		"mobplate_axolotl_wild": {
+			"de": "Axolotl (Wild)",
+			"en": "Axolotl (Wild)",
+			"tex": "/items/mobplates/axolotl_wild.png"
+		},
+		"mobplate_bat": {
+			"de": "Fledermaus",
+			"en": "Bat",
+			"tex": "/items/mobplates/bat.png"
+		},
+		"mobplate_bee": {
+			"de": "Biene",
+			"en": "Bee",
+			"tex": "/items/mobplates/bee.png"
+		},
+		"mobplate_blaze": {
+			"de": "Lohe",
+			"en": "Blaze",
+			"tex": "/items/mobplates/blaze.png"
+		},
+		"mobplate_bogged": {
+			"de": "Sumpfskelett",
+			"en": "Bogged",
+			"tex": "/items/mobplates/bogged.png",
+			"spawner": true
+		},
+		"mobplate_breeze": {
+			"de": "Böe",
+			"en": "Breeze",
+			"tex": "/items/mobplates/breeze.png"
+		},
+		"mobplate_camel": {
+			"de": "Dromedar",
+			"en": "Camel",
+			"tex": "/items/mobplates/camel.png"
+		},
+		"mobplate_camel_husk": {
+			"de": "Zombiedromedar",
+			"en": "Camel Husk",
+			"tex": "/items/mobplates/camel_husk.png"
+		},
+		"mobplate_cat": {
+			"de": "Katze",
+			"en": "Cat",
+			"tex": "/items/mobplates/cat.png"
+		},
+		"mobplate_cat_all_black": {
+			"de": "Katze (Ganz schwarz)",
+			"en": "Cat (All Black)",
+			"tex": "/items/mobplates/cat_all_black.png"
+		},
+		"mobplate_cat_black": {
+			"de": "Katze (Schwarz-weiß)",
+			"en": "Cat (Tuxedo)",
+			"tex": "/items/mobplates/cat_black.png"
+		},
+		"mobplate_cat_british_shorthair": {
+			"de": "Katze (Britisch Kurzhaar)",
+			"en": "Cat (British Shorthair)",
+			"tex": "/items/mobplates/cat_british_shorthair.png"
+		},
+		"mobplate_cat_calico": {
+			"de": "Katze (Dreifarbig)",
+			"en": "Cat (Calico)",
+			"tex": "/items/mobplates/cat_calico.png"
+		},
+		"mobplate_cat_jellie": {
+			"de": "Katze (Jellie)",
+			"en": "Cat (Jellie)",
+			"tex": "/items/mobplates/cat_jellie.png"
+		},
+		"mobplate_cat_persian": {
+			"de": "Katze (Perser)",
+			"en": "Cat (Persian)",
+			"tex": "/items/mobplates/cat_persian.png"
+		},
+		"mobplate_cat_ragdoll": {
+			"de": "Katze (Ragdoll)",
+			"en": "Cat (Ragdoll)",
+			"tex": "/items/mobplates/cat_ragdoll.png"
+		},
+		"mobplate_cat_siamese": {
+			"de": "Katze (Siam)",
+			"en": "Cat (Siamese)",
+			"tex": "/items/mobplates/cat_siamese.png"
+		},
+		"mobplate_cat_tabby": {
+			"de": "Katze (Getigert)",
+			"en": "Cat (Tabby)",
+			"tex": "/items/mobplates/cat_tabby.png"
+		},
+		"mobplate_cat_white": {
+			"de": "Katze (Weiß)",
+			"en": "Cat (White)",
+			"tex": "/items/mobplates/cat_white.png"
+		},
+		"mobplate_cave_spider": {
+			"de": "Höhlenspinne",
+			"en": "Cave Spider",
+			"tex": "/items/mobplates/cave_spider.png",
+			"spawner": true
+		},
+		"mobplate_chicken": {
+			"de": "Huhn",
+			"en": "Chicken",
+			"tex": "/items/mobplates/chicken.png",
+			"spawner": true
+		},
+		"mobplate_chicken_cold": {
+			"de": "Huhn (Kalt)",
+			"en": "Chicken (Cold)",
+			"tex": "/items/mobplates/chicken_cold.png",
+			"spawner": true
+		},
+		"mobplate_chicken_warm": {
+			"de": "Huhn (Warm)",
+			"en": "Chicken (Warm)",
+			"tex": "/items/mobplates/chicken_warm.png",
+			"spawner": true
+		},
+		"mobplate_copper_golem": {
+			"de": "Kupfergolem",
+			"en": "Copper Golem",
+			"tex": "/items/mobplates/copper_golem.png"
+		},
+		"mobplate_copper_golem_exposed": {
+			"de": "Kupfergolem (Angelaufen)",
+			"en": "Copper Golem (Exposed)",
+			"tex": "/items/mobplates/copper_golem_exposed.png"
+		},
+		"mobplate_copper_golem_oxidized": {
+			"de": "Kupfergolem (Oxidiert)",
+			"en": "Copper Golem (Oxidized)",
+			"tex": "/items/mobplates/copper_golem_oxidized.png"
+		},
+		"mobplate_copper_golem_weathered": {
+			"de": "Kupfergolem (Verwittert)",
+			"en": "Copper Golem (Weathered)",
+			"tex": "/items/mobplates/copper_golem_weathered.png"
+		},
+		"mobplate_cow": {
+			"de": "Kuh",
+			"en": "Cow",
+			"tex": "/items/mobplates/cow.png",
+			"spawner": true
+		},
+		"mobplate_cow_cold": {
+			"de": "Kuh (Kalt)",
+			"en": "Cow (Cold)",
+			"tex": "/items/mobplates/cow_cold.png",
+			"spawner": true
+		},
+		"mobplate_cow_warm": {
+			"de": "Kuh (Warm)",
+			"en": "Cow (Warm)",
+			"tex": "/items/mobplates/cow_warm.png",
+			"spawner": true
+		},
+		"mobplate_creaking": {
+			"de": "Knarz",
+			"en": "Creaking",
+			"tex": "/items/mobplates/creaking.png"
+		},
+		"mobplate_creeper": {
+			"de": "Creeper",
+			"en": "Creeper",
+			"tex": "/items/mobplates/creeper.png"
+		},
+		"mobplate_dolphin": {
+			"de": "Delfin",
+			"en": "Dolphin",
+			"tex": "/items/mobplates/dolphin.png"
+		},
+		"mobplate_donkey": {
+			"de": "Esel",
+			"en": "Donkey",
+			"tex": "/items/mobplates/donkey.png"
+		},
+		"mobplate_drowned": {
+			"de": "Ertrunkener",
+			"en": "Drowned",
+			"tex": "/items/mobplates/drowned.png"
+		},
+		"mobplate_enderman": {
+			"de": "Enderman",
+			"en": "Enderman",
+			"tex": "/items/mobplates/enderman.png"
+		},
+		"mobplate_evoker": {
+			"de": "Magier",
+			"en": "Evoker",
+			"tex": "/items/mobplates/evoker.png"
+		},
+		"mobplate_forestling": {
+			"de": "Forestling",
+			"en": "Forestling",
+			"tex": "/items/mobplates/forestling.png"
+		},
+		"mobplate_fox": {
+			"de": "Fuchs",
+			"en": "Fox",
+			"tex": "/items/mobplates/fox.png"
+		},
+		"mobplate_frog": {
+			"de": "Frosch",
+			"en": "Frog",
+			"tex": "/items/mobplates/frog.png"
+		},
+		"mobplate_frog_cold": {
+			"de": "Frosch (Kalt)",
+			"en": "Frog (Cold)",
+			"tex": "/items/mobplates/frog_cold.png"
+		},
+		"mobplate_frog_warm": {
+			"de": "Frosch (Warm)",
+			"en": "Frog (Warm)",
+			"tex": "/items/mobplates/frog_warm.png"
+		},
+		"mobplate_ghast": {
+			"de": "Ghast",
+			"en": "Ghast",
+			"tex": "/items/mobplates/ghast.png"
+		},
+		"mobplate_glow_squid": {
+			"de": "Leuchttintenfisch",
+			"en": "Glow Squid",
+			"tex": "/items/mobplates/glow_squid.png"
+		},
+		"mobplate_goat": {
+			"de": "Ziege",
+			"en": "Goat",
+			"tex": "/items/mobplates/goat.png"
+		},
+		"mobplate_happy_ghast": {
+			"de": "Glücklicher Ghast",
+			"en": "Happy Ghast",
+			"tex": "/items/mobplates/happy_ghast.png"
+		},
+		"mobplate_hoglin": {
+			"de": "Hoglin",
+			"en": "Hoglin",
+			"tex": "/items/mobplates/hoglin.png"
+		},
+		"mobplate_horse": {
+			"de": "Pferd",
+			"en": "Horse",
+			"tex": "/items/mobplates/horse.png"
+		},
+		"mobplate_horse_black": {
+			"de": "Pferd (Schwarz)",
+			"en": "Horse (Black)",
+			"tex": "/items/mobplates/horse_black.png"
+		},
+		"mobplate_horse_brown": {
+			"de": "Pferd (Braun)",
+			"en": "Horse (Brown)",
+			"tex": "/items/mobplates/horse_brown.png"
+		},
+		"mobplate_horse_chestnut": {
+			"de": "Pferd (Kastanie)",
+			"en": "Horse (Chestnut)",
+			"tex": "/items/mobplates/horse_chestnut.png"
+		},
+		"mobplate_horse_darkbrown": {
+			"de": "Pferd (Dunkelbraun)",
+			"en": "Horse (Dark Brown)",
+			"tex": "/items/mobplates/horse_darkbrown.png"
+		},
+		"mobplate_horse_gray": {
+			"de": "Pferd (Grau)",
+			"en": "Horse (Gray)",
+			"tex": "/items/mobplates/horse_gray.png"
+		},
+		"mobplate_horse_white": {
+			"de": "Pferd (Weiß)",
+			"en": "Horse (White)",
+			"tex": "/items/mobplates/horse_white.png"
+		},
+		"mobplate_husk": {
+			"de": "Wüstenzombie",
+			"en": "Husk",
+			"tex": "/items/mobplates/husk.png",
+			"spawner": true
+		},
+		"mobplate_iron_golem": {
+			"de": "Eisengolem",
+			"en": "Iron Golem",
+			"tex": "/items/mobplates/iron_golem.png"
+		},
+		"mobplate_llama": {
+			"de": "Lama",
+			"en": "Llama",
+			"tex": "/items/mobplates/llama.png"
+		},
+		"mobplate_llama_brown": {
+			"de": "Lama (Braun)",
+			"en": "Llama (Brown)",
+			"tex": "/items/mobplates/llama_brown.png"
+		},
+		"mobplate_llama_gray": {
+			"de": "Lama (Grau)",
+			"en": "Llama (Gray)",
+			"tex": "/items/mobplates/llama_gray.png"
+		},
+		"mobplate_llama_white": {
+			"de": "Lama (Weiß)",
+			"en": "Llama (White)",
+			"tex": "/items/mobplates/llama_white.png"
+		},
+		"mobplate_mooshroom": {
+			"de": "Mooshroom",
+			"en": "Mooshroom",
+			"tex": "/items/mobplates/mooshroom.png",
+			"spawner": true
+		},
+		"mobplate_mooshroom_brown": {
+			"de": "Mooshroom (Braun)",
+			"en": "Mooshroom (Brown)",
+			"tex": "/items/mobplates/mooshroom_brown.png",
+			"spawner": true
+		},
+		"mobplate_mule": {
+			"de": "Maultier",
+			"en": "Mule",
+			"tex": "/items/mobplates/mule.png"
+		},
+		"mobplate_nautilus": {
+			"de": "Nautilus",
+			"en": "Nautilus",
+			"tex": "/items/mobplates/nautilus.png"
+		},
+		"mobplate_ocelot": {
+			"de": "Ozelot",
+			"en": "Ocelot",
+			"tex": "/items/mobplates/ocelot.png"
+		},
+		"mobplate_panda": {
+			"de": "Panda",
+			"en": "Panda",
+			"tex": "/items/mobplates/panda.png"
+		},
+		"mobplate_panda_brown": {
+			"de": "Panda (Braun)",
+			"en": "Panda (Brown)",
+			"tex": "/items/mobplates/panda_brown.png"
+		},
+		"mobplate_parched": {
+			"de": "Vertrockneter",
+			"en": "Parched",
+			"tex": "/items/mobplates/parched.png",
+			"spawner": true
+		},
+		"mobplate_parrot": {
+			"de": "Papagei",
+			"en": "Parrot",
+			"tex": "/items/mobplates/parrot.png"
+		},
+		"mobplate_parrot_blue": {
+			"de": "Papagei (Blau)",
+			"en": "Parrot (Blue)",
+			"tex": "/items/mobplates/parrot_blue.png"
+		},
+		"mobplate_parrot_cyan": {
+			"de": "Papagei (Türkis)",
+			"en": "Parrot (Cyan)",
+			"tex": "/items/mobplates/parrot_cyan.png"
+		},
+		"mobplate_parrot_gray": {
+			"de": "Papagei (Grau)",
+			"en": "Parrot (Gray)",
+			"tex": "/items/mobplates/parrot_gray.png"
+		},
+		"mobplate_parrot_green": {
+			"de": "Papagei (Grün)",
+			"en": "Parrot (Green)",
+			"tex": "/items/mobplates/parrot_green.png"
+		},
+		"mobplate_pig": {
+			"de": "Schwein",
+			"en": "Pig",
+			"tex": "/items/mobplates/pig.png",
+			"spawner": true
+		},
+		"mobplate_pig_cold": {
+			"de": "Schwein (Kalt)",
+			"en": "Pig (Cold)",
+			"tex": "/items/mobplates/pig_cold.png",
+			"spawner": true
+		},
+		"mobplate_pig_warm": {
+			"de": "Schwein (Warm)",
+			"en": "Pig (Warm)",
+			"tex": "/items/mobplates/pig_warm.png",
+			"spawner": true
+		},
+		"mobplate_piglin": {
+			"de": "Piglin",
+			"en": "Piglin",
+			"tex": "/items/mobplates/piglin.png"
+		},
+		"mobplate_piglin_brute": {
+			"de": "Piglin-Barbar",
+			"en": "Piglin Brute",
+			"tex": "/items/mobplates/piglin_brute.png"
+		},
+		"mobplate_pillager": {
+			"de": "Plünderer",
+			"en": "Pillager",
+			"tex": "/items/mobplates/pillager.png"
+		},
+		"mobplate_polar_bear": {
+			"de": "Eisbär",
+			"en": "Polar Bear",
+			"tex": "/items/mobplates/polar_bear.png"
+		},
+		"mobplate_rabbit": {
+			"de": "Kaninchen",
+			"en": "Rabbit",
+			"tex": "/items/mobplates/rabbit.png",
+			"spawner": true
+		},
+		"mobplate_rabbit_black": {
+			"de": "Kaninchen (Schwarz)",
+			"en": "Rabbit (Black)",
+			"tex": "/items/mobplates/rabbit_black.png",
+			"spawner": true
+		},
+		"mobplate_rabbit_gold": {
+			"de": "Kaninchen (Gold)",
+			"en": "Rabbit (Gold)",
+			"tex": "/items/mobplates/rabbit_gold.png",
+			"spawner": true
+		},
+		"mobplate_rabbit_killer": {
+			"de": "Kaninchen (Killerkaninchen)",
+			"en": "Rabbit (Killer Bunny)",
+			"tex": "/items/mobplates/rabbit_killer.png"
+		},
+		"mobplate_rabbit_salt": {
+			"de": "Kaninchen (Salz und Pfeffer)",
+			"en": "Rabbit (Salt and Pepper)",
+			"tex": "/items/mobplates/rabbit_salt.png",
+			"spawner": true
+		},
+		"mobplate_rabbit_splotched": {
+			"de": "Kaninchen (Gefleckt)",
+			"en": "Rabbit (Splotched)",
+			"tex": "/items/mobplates/rabbit_splotched.png",
+			"spawner": true
+		},
+		"mobplate_rabbit_white": {
+			"de": "Kaninchen (Weiß)",
+			"en": "Rabbit (White)",
+			"tex": "/items/mobplates/rabbit_white.png",
+			"spawner": true
+		},
+		"mobplate_sheep": {
+			"de": "Schaf",
+			"en": "Sheep",
+			"tex": "/items/mobplates/sheep.png",
+			"spawner": true
+		},
+		"mobplate_silverfish": {
+			"de": "Silberfischchen",
+			"en": "Silverfish",
+			"tex": "/items/mobplates/silverfish.png",
+			"spawner": true
+		},
+		"mobplate_skeleton": {
+			"de": "Skelett",
+			"en": "Skeleton",
+			"tex": "/items/mobplates/skeleton.png",
+			"spawner": true
+		},
+		"mobplate_skeleton_horse": {
+			"de": "Skelettpferd",
+			"en": "Skeleton Horse",
+			"tex": "/items/mobplates/skeleton_horse.png"
+		},
+		"mobplate_slime": {
+			"de": "Schleim",
+			"en": "Slime",
+			"tex": "/items/mobplates/slime.png"
+		},
+		"mobplate_sniffer": {
+			"de": "Schnüffler",
+			"en": "Sniffer",
+			"tex": "/items/mobplates/sniffer.png"
+		},
+		"mobplate_snow_fox": {
+			"de": "Schneefuchs",
+			"en": "Snow Fox",
+			"tex": "/items/mobplates/snow_fox.png"
+		},
+		"mobplate_snow_golem": {
+			"de": "Schneegolem",
+			"en": "Snow Golem",
+			"tex": "/items/mobplates/snow_golem.png"
+		},
+		"mobplate_spider": {
+			"de": "Spinne",
+			"en": "Spider",
+			"tex": "/items/mobplates/spider.png",
+			"spawner": true
+		},
+		"mobplate_squid": {
+			"de": "Tintenfisch",
+			"en": "Squid",
+			"tex": "/items/mobplates/squid.png"
+		},
+		"mobplate_stray": {
+			"de": "Eiswanderer",
+			"en": "Stray",
+			"tex": "/items/mobplates/stray.png",
+			"spawner": true
+		},
+		"mobplate_strider": {
+			"de": "Schreiter",
+			"en": "Strider",
+			"tex": "/items/mobplates/strider.png"
+		},
+		"mobplate_sulfur_cube": {
+			"de": "Schwefelwürfel",
+			"en": "Sulfur Cube",
+			"tex": "/items/mobplates/sulfur_cube.png"
+		},
+		"mobplate_turtle": {
+			"de": "Schildkröte",
+			"en": "Turtle",
+			"tex": "/items/mobplates/turtle.png"
+		},
+		"mobplate_vex": {
+			"de": "Plagegeist",
+			"en": "Vex",
+			"tex": "/items/mobplates/vex.png"
+		},
+		"mobplate_villager": {
+			"de": "Dorfbewohner",
+			"en": "Villager",
+			"tex": "/items/mobplates/villager.png"
+		},
+		"mobplate_vindicator": {
+			"de": "Diener",
+			"en": "Vindicator",
+			"tex": "/items/mobplates/vindicator.png"
+		},
+		"mobplate_warpett": {
+			"de": "Warpett",
+			"en": "Warpett",
+			"tex": "/items/mobplates/warpett.png"
+		},
+		"mobplate_witch": {
+			"de": "Hexe",
+			"en": "Witch",
+			"tex": "/items/mobplates/witch.png"
+		},
+		"mobplate_wither_skeleton": {
+			"de": "Wither-Skelett",
+			"en": "Wither Skeleton",
+			"tex": "/items/mobplates/wither_skeleton.png"
+		},
+		"mobplate_wolf": {
+			"de": "Wolf",
+			"en": "Wolf",
+			"tex": "/items/mobplates/wolf.png"
+		},
+		"mobplate_wolf_ashen": {
+			"de": "Wolf (Aschgrau)",
+			"en": "Wolf (Ashen)",
+			"tex": "/items/mobplates/wolf_ashen.png"
+		},
+		"mobplate_wolf_black": {
+			"de": "Wolf (Schwarz)",
+			"en": "Wolf (Black)",
+			"tex": "/items/mobplates/wolf_black.png"
+		},
+		"mobplate_wolf_chestnut": {
+			"de": "Wolf (Kastanie)",
+			"en": "Wolf (Chestnut)",
+			"tex": "/items/mobplates/wolf_chestnut.png"
+		},
+		"mobplate_wolf_rusty": {
+			"de": "Wolf (Rostrot)",
+			"en": "Wolf (Rusty)",
+			"tex": "/items/mobplates/wolf_rusty.png"
+		},
+		"mobplate_wolf_snowy": {
+			"de": "Wolf (Schneeweiß)",
+			"en": "Wolf (Snowy)",
+			"tex": "/items/mobplates/wolf_snowy.png"
+		},
+		"mobplate_wolf_spotted": {
+			"de": "Wolf (Gefleckt)",
+			"en": "Wolf (Spotted)",
+			"tex": "/items/mobplates/wolf_spotted.png"
+		},
+		"mobplate_wolf_striped": {
+			"de": "Wolf (Gestreift)",
+			"en": "Wolf (Striped)",
+			"tex": "/items/mobplates/wolf_striped.png"
+		},
+		"mobplate_wolf_woods": {
+			"de": "Wolf (Wald)",
+			"en": "Wolf (Woods)",
+			"tex": "/items/mobplates/wolf_woods.png"
+		},
+		"mobplate_zoglin": {
+			"de": "Zoglin",
+			"en": "Zoglin",
+			"tex": "/items/mobplates/zoglin.png"
+		},
+		"mobplate_zombie": {
+			"de": "Zombie",
+			"en": "Zombie",
+			"tex": "/items/mobplates/zombie.png",
+			"spawner": true
+		},
+		"mobplate_zombie_horse": {
+			"de": "Zombiepferd",
+			"en": "Zombie Horse",
+			"tex": "/items/mobplates/zombie_horse.png"
+		},
+		"mobplate_zombie_nautilus": {
+			"de": "Zombienautilus",
+			"en": "Zombie Nautilus",
+			"tex": "/items/mobplates/zombie_nautilus.png"
+		},
+		"mobplate_zombie_villager": {
+			"de": "Zombiedorfbewohner",
+			"en": "Zombie Villager",
+			"tex": "/items/mobplates/zombie_villager.png"
+		},
+		"mobplate_zombified_piglin": {
+			"de": "Zombifizierter Piglin",
+			"en": "Zombified Piglin",
+			"tex": "/items/mobplates/zombified_piglin.png"
+		}
+	}
+}

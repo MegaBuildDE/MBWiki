@@ -62,10 +62,6 @@ Ore lies in small **clusters** of one to four blocks throughout the rock, and on
 
 **Iron is as common as coal** – in every biome.
 
-{% hint style="info" %}
-**More ore since November 2026.** Only islands created since then have these amounts. Older islands keep their ore.
-{% endhint %}
-
 On top of that there's **Mana ore** with its pink veins – 4 to 14 blocks in the caves of every main island.
 
 {% content-ref url="economy.md" %}

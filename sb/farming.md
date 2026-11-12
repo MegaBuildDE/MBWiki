@@ -13,8 +13,6 @@ Deine Startinsel hat weder Höhle noch Erz. Ressourcen holst du dir auf den Inse
 
 Jede Hauptinsel hat rund **330 Erzblöcke**, darunter etwa **11 Diamanten** und **90 Eisenerz** – Eisen ist so häufig wie Kohle. Sie liegen in kleinen Nestern im ganzen Fels und einzeln an den Höhlenwänden – **je tiefer, desto mehr**. Rund 200 davon siehst du direkt an den Höhlenwänden, der Rest steckt im Fels. Nebeninseln haben nur rund 16, die Startinsel keins.
 
-Diese Mengen gelten für Inseln, die seit dem Erz-Update im November 2026 entstanden sind. Ältere Inseln behalten ihr Erz.
-
 Brauchst du mehr, erkunde weiter: Jede neue Hauptinsel bringt neue Erze.
 
 {% content-ref url="welt.md" %}

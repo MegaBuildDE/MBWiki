@@ -1,0 +1,75 @@
+---
+// Sprachwahl als kleiner Schalter „DE | EN“ statt der Auswahlliste von Starlight.
+// Die Kopfzeile (Header.astro) zeigt ihn auf jeder Breite, damit er auch am Handy sichtbar ist.
+// Beide Sprachen haben dieselben kurzen Adressen, Englisch nur mit /en davor.
+const locale = Astro.locals.starlightRoute.locale;
+const path = Astro.url.pathname;
+const isEn = locale === 'en';
+// Die Fehlerseite hat kein Gegenstück: dort führt der Schalter zur Startseite der anderen Sprache
+const isError = /^\/(en\/)?404(\.html|\/)?$/.test(path);
+const rest = isError ? '/' : isEn ? path.replace(/^\/en(?=\/|$)/, '') || '/' : path;
+const langs = [
+	{ code: 'DE', lang: 'de', label: 'Deutsch', href: rest, current: !isEn },
+	{ code: 'EN', lang: 'en', label: 'English', href: rest === '/' ? '/en/' : '/en' + rest, current: isEn },
+];
+---
+
+<nav class="mb-lang" aria-label={isEn ? 'Language' : 'Sprache'}>
+	{
+		langs.map(({ code, lang, label, href, current }) => (
+			<a
+				href={href}
+				hreflang={lang}
+				lang={lang}
+				title={label}
+				aria-label={label}
+				aria-current={current ? 'page' : undefined}
+			>
+				{code}
+			</a>
+		))
+	}
+</nav>
+
+<style>
+	.mb-lang {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		gap: 2px;
+		padding: 2px;
+		border: 1px solid var(--sl-color-hairline-light);
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.04);
+		font-size: var(--sl-text-xs);
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		line-height: 1;
+	}
+	.mb-lang a {
+		padding: 0.4rem 0.6rem;
+		border-radius: 999px;
+		color: var(--mb-color-text-muted);
+		text-decoration: none;
+		transition:
+			color 0.15s ease,
+			background-color 0.15s ease;
+	}
+	.mb-lang a:hover {
+		color: var(--sl-color-white);
+		background: rgba(255, 255, 255, 0.08);
+	}
+	.mb-lang a[aria-current] {
+		color: #fff;
+		background: linear-gradient(135deg, var(--mb-color-primary), #c252ff);
+		box-shadow: 0 2px 10px rgba(169, 88, 255, 0.35);
+	}
+	.mb-lang a:focus-visible {
+		outline: 2px solid var(--sl-color-text-accent);
+		outline-offset: 1px;
+	}
+	/* Im Burger-Menü nicht doppelt: oben in der Kopfzeile steht er schon */
+	:global(.mobile-preferences) .mb-lang {
+		display: none;
+	}
+</style>

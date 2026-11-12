@@ -74,8 +74,6 @@ Damit du nicht jedes Recht einzeln setzen musst, gibt es vier Vorlagen. Jede ent
 Stellst du ein einzelnes Recht um, zeigt das Menü **Eigen**.
 
 * **Neue Mitglieder** kommen als **Mitbauer**. Biome kaufen und Shops eröffnen dürfen sie erst, wenn du ihnen das Recht **Skilltree** gibst.
-* **Mitglieder von früher** haben weiter alle Handlungsrechte. Nur wer früher als **Besucher** eingetragen war, darf jetzt nur noch Türen und Schalter benutzen.
-
 ## Mitglieder bearbeiten
 
 **Auf der Insel** (`/sky friends`) siehst du die Köpfe deiner Mitglieder:

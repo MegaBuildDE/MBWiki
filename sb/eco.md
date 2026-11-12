@@ -110,7 +110,7 @@ Unterhalb von Höhe 0 bist du sofort tot. Du wachst in deinem Bett auf – oder 
 
 ## Ruby
 
-Ruby ist die Währung für den **Handel** – zwischen Spielern und mit den [KI-Bewohnern](bewohner.md#handeln). Jedes neue Konto startet mit **500 Ruby** – sie sind gleich beim ersten Login da. Wer schon vor dem 08.11.2026 gespielt hat, als es noch 1.000 waren, behält seine Ruby.
+Ruby ist die Währung für den **Handel** – zwischen Spielern und mit den [KI-Bewohnern](bewohner.md#handeln). Jedes neue Konto startet mit **500 Ruby** – sie sind gleich beim ersten Login da.
 
 * **Dazuverdienen:** 5 Ruby pro [Vote](../ag/vote.md), Ware an [KI-Bewohner](bewohner.md#die-marktkasse) verkaufen (meist bis zu 10 Ruby am Tag) und Belohnungen für [Bug-Meldungen und Clips](../ag/discord.md#bug-bounty-und-clipcoin).
 * **Ausgeben:** An den [ChestShops](chestshop.md) anderer Spieler, direkt mit `/pay` – etwa als Bezahlung für Ware, die ihr untereinander tauscht – und bei KI-Bewohnern für Ware, Aufträge und Aufgaben (bis zu 40 Ruby am Tag).
