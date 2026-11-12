@@ -25,15 +25,15 @@ const OUT_ASSETS = path.join(SITE, 'public/assets');
 
 const localeMap = JSON.parse(fs.readFileSync(path.join(SITE, 'locale-map.json'), 'utf8'));
 
-// Startseite: Schaltflächen im Kopfbereich (Hero). Rest kommt aus README.md / en/welcome.md.
+// Startseite: Schaltflächen im Kopfbereich (Hero), Ziel als Quelldatei. Rest kommt aus README.md / en/welcome.md.
 const HOME_ACTIONS = {
 	de: [
-		{ text: 'Erste Schritte', link: '/sb/start/', icon: 'right-arrow' },
-		{ text: 'Verbinden', link: '/ag/join/', variant: 'secondary' },
+		{ text: 'Erste Schritte', src: 'sb/start.md', icon: 'right-arrow' },
+		{ text: 'Verbinden', src: 'ag/join.md', variant: 'secondary' },
 	],
 	en: [
-		{ text: 'Getting started', link: '/en/sb/start/', icon: 'right-arrow' },
-		{ text: 'How to join', link: '/en/ag/join/', variant: 'secondary' },
+		{ text: 'Getting started', src: 'en/start.md', icon: 'right-arrow' },
+		{ text: 'How to join', src: 'en/join.md', variant: 'secondary' },
 	],
 };
 
@@ -111,42 +111,51 @@ function gitDates() {
 	return dates;
 }
 
+// Adressen sind kurz und englisch: Deutsch unter /<key>/, Englisch unter /en/<key>/.
+// key = Dateiname der englischen Seite (en/island.md -> island), sonst locale-map.json → slugs.
 function buildIndex(groups) {
 	const pages = new Map(); // src -> page
-	const enToDe = localeMap.pages ?? {};
-	const deSources = new Set();
-	for (const g of groups) for (const it of flatten(g.items)) if (!it.src.startsWith('en/')) deSources.add(it.src);
+	const all = groups.flatMap((g) => flatten(g.items)).map((it) => it.src);
+	const isEn = (src) => src.startsWith('en/');
+	const enToDe = { ...(localeMap.pages ?? {}) };
+	for (const en of all.filter(isEn)) {
+		if (enToDe[en]) continue;
+		const guess = all.find((d) => !isEn(d) && path.basename(d) === path.basename(en));
+		if (guess) enToDe[en] = guess;
+		warn(
+			guess
+				? `${en}: nicht in locale-map.json, per Dateiname ${guess} zugeordnet`
+				: `${en}: keine deutsche Seite zugeordnet (locale-map.json) – kein Sprachwechsel möglich`,
+		);
+	}
+	const deToEn = Object.fromEntries(Object.entries(enToDe).map(([en, de]) => [de, en]));
 
+	const keyOf = (deSrc) => {
+		if (deSrc === 'README.md') return 'index';
+		if (deToEn[deSrc]) return deSlug(path.basename(deToEn[deSrc]));
+		if (localeMap.slugs?.[deSrc]) return localeMap.slugs[deSrc];
+		warn(`${deSrc}: keine englische Seite und kein Eintrag unter "slugs" in locale-map.json – Adresse aus dem Dateipfad`);
+		return deSlug(deSrc);
+	};
+
+	const seen = new Map(); // slug -> src
 	const add = (src, locale) => {
 		const file = path.join(REPO, src);
 		if (!fs.existsSync(file)) {
 			warn(`SUMMARY.md verweist auf fehlende Datei ${src}`);
 			return;
 		}
-		let slug;
-		if (locale === 'en') {
-			let de = enToDe[src];
-			if (!de) {
-				const guess = [...deSources].find((d) => path.basename(d) === path.basename(src));
-				if (guess) de = guess;
-				warn(
-					de
-						? `${src}: nicht in locale-map.json, per Dateiname ${de} zugeordnet`
-						: `${src}: keine deutsche Seite zugeordnet (locale-map.json) – kein Sprachwechsel möglich`,
-				);
-			}
-			slug = de ? `en/${deSlug(de)}` : src.replace(/\.md$/, '');
-		} else {
-			slug = deSlug(src);
-		}
+		const de = locale === 'en' ? enToDe[src] : src;
+		const key = de ? keyOf(de) : deSlug(path.basename(src));
+		const slug = locale === 'en' ? `en/${key}` : key;
+		if (seen.has(slug)) warn(`${src} und ${seen.get(slug)} bekommen beide die Adresse ${urlOf(slug)}`);
+		seen.set(slug, src);
 		const { data, body } = splitFrontmatter(fs.readFileSync(file, 'utf8'));
 		const { title } = extractTitle(body, path.basename(src, '.md'));
 		pages.set(src, { src, slug, url: urlOf(slug), locale, title, description: data.description ?? '' });
 	};
 
-	for (const g of groups) {
-		for (const it of flatten(g.items)) add(it.src, it.src.startsWith('en/') ? 'en' : 'de');
-	}
+	for (const src of all) add(src, isEn(src) ? 'en' : 'de');
 	return pages;
 }
 
@@ -310,11 +319,11 @@ function writePage(page, pages, dates) {
 	fm.source = page.src;
 
 	if (page.slug === 'index' || page.slug === 'en/index') {
-		fm.template = 'splash';
+		// Kein Splash-Layout: wie bei GitBook bleibt die Navigation (bzw. das Burger-Menü) auch hier.
 		fm.hero = {
 			title: page.title,
 			tagline: fm.description,
-			actions: HOME_ACTIONS[page.locale],
+			actions: HOME_ACTIONS[page.locale].map(({ src, ...a }) => ({ ...a, link: pages.get(src)?.url ?? '/' })),
 		};
 		fm.tableOfContents = false;
 	}
@@ -362,10 +371,11 @@ function isHidden(src) {
 
 function buildRedirects(pages) {
 	const redirects = {};
-	// Alte englische Adressen (GitBook: /en/island) -> neue (/en/sb/insel/)
+	const norm = (u) => u.replace(/\/+$/, '') || '/';
+	// Alte GitBook-Adressen (Dateipfade wie /sb/insel, /en/welcome) -> neue (/island/, /en/)
 	for (const p of pages.values()) {
-		const old = '/' + p.src.replace(/\.md$/, '');
-		if (p.locale === 'en' && old !== p.url.replace(/\/$/, '')) redirects[old] = p.url;
+		const old = norm('/' + p.src.replace(/\.md$/, '').replace(/(^|\/)README$/, ''));
+		if (old !== norm(p.url)) redirects[old] = p.url;
 	}
 	// Weiterleitungen aus .gitbook.yaml
 	const gb = fs.existsSync(path.join(REPO, '.gitbook.yaml'))

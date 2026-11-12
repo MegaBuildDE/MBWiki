@@ -1,5 +1,5 @@
 {
-  "_hinweis": "Ordnet jeder englischen Seite ihre deutsche Seite zu. Die englische Seite erscheint unter /en/<deutscher Pfad>, ihre alte Adresse leitet weiter. Neue Seite im Wiki? Hier ein Paar ergänzen.",
+  "_hinweis": "Adressen sind immer kurz und englisch. pages ordnet jeder englischen Seite ihre deutsche zu: beide bekommen den englischen Dateinamen als Adresse (en/island.md + sb/insel.md -> /island/ und /en/island/). slugs gibt deutschen Seiten ohne englisches Gegenstück ihre Adresse. Neue Seite im Wiki? Hier ein Paar oder einen Slug ergänzen. Alte GitBook-Adressen leiten automatisch weiter.",
   "groups": {
     "📊 Allgemein": "📊 General",
     "🏝️ Custom Skyblock": "🏝️ Custom Skyblock",
@@ -41,5 +41,27 @@
     "en/clans.md": "sb/clans.md",
     "en/faq.md": "more/faq.md",
     "en/legal.md": "more/contact.md"
+  },
+  "slugs": {
+    "cb/cbi.md": "citybuild",
+    "cb/artefacts.md": "citybuild/artefacts",
+    "cb/cs.md": "citybuild/chestshop",
+    "cb/clan.md": "citybuild/clan",
+    "cb/eco.md": "citybuild/economy",
+    "cb/head.md": "citybuild/heads",
+    "cb/helper-cbspawn.md": "citybuild/helper",
+    "cb/tp.md": "citybuild/teleport",
+    "cb/mana.md": "citybuild/mana",
+    "cb/mobs.md": "citybuild/mobplates",
+    "cb/plot.md": "citybuild/plots",
+    "cb/redstone.md": "citybuild/redstone",
+    "cb/reward-daily-and-weekly.md": "citybuild/rewards",
+    "cb/vote.md": "citybuild/vote",
+    "cb/worlds.md": "citybuild/worlds",
+    "mg/mgi.md": "minigames",
+    "mg/cakewars.md": "minigames/cakewars",
+    "mg/ffa.md": "minigames/ffa",
+    "mg/mlgrush.md": "minigames/mlgrush",
+    "mg/pixelpaint.md": "minigames/pixelpaint"
   }
 }

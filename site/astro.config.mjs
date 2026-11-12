@@ -38,7 +38,7 @@ export default defineConfig({
 				ThemeSelect: './src/components/ThemeSelect.astro',
 				SocialIcons: './src/components/SocialIcons.astro',
 				Hero: './src/components/Hero.astro',
-				PageTitle: './src/components/PageTitle.astro',
+				PageTitle: './src/components/PageTitle.astro', MobileTableOfContents: './src/components/MobileTableOfContents.astro',
 			},
 			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
 			credits: false,

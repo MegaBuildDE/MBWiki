@@ -100,6 +100,46 @@ body {
 	width: auto;
 }
 
+/* ---------- Schmale Bildschirme: Burger links wie bei GitBook ---------- */
+
+/* Keine eigene Leiste „Auf dieser Seite“ – alles steckt im Menü */
+:root {
+	--sl-mobile-toc-height: 0rem;
+}
+
+@media (max-width: 49.99rem) {
+	[data-has-sidebar] header.header {
+		padding-inline-start: calc(var(--sl-nav-pad-x) + var(--sl-menu-button-size) + 0.5rem);
+		padding-inline-end: var(--sl-nav-pad-x);
+	}
+
+	.sl-menu-button {
+		inset-inline-start: calc(var(--sl-nav-pad-x) - 0.35rem);
+		inset-inline-end: auto;
+		padding: 0.3rem;
+		border-radius: 0.6rem;
+		background: transparent;
+		color: var(--sl-color-white);
+		box-shadow: none;
+	}
+
+	.sl-menu-button svg {
+		width: 100%;
+		height: 100%;
+	}
+
+	.sl-menu-button:hover,
+	.sl-menu-button:has(~ :popover-open) {
+		background: rgba(255, 255, 255, 0.1);
+		box-shadow: none;
+	}
+
+	/* Menü: Links und Sprache unten gut sichtbar */
+	.mobile-preferences {
+		border-top-color: var(--mb-color-border);
+	}
+}
+
 .site-title {
 	font-weight: 700;
 	letter-spacing: -0.01em;
@@ -139,14 +179,18 @@ body {
 	border-bottom: 1px solid var(--mb-color-border);
 }
 
+/* Links hell mit lila Unterstrich – lila Schrift wäre auf den lila Flächen kaum lesbar */
 .sl-markdown-content a:not(.mb-card, .sl-link-button) {
-	color: var(--mb-color-primary);
-	text-decoration-color: rgba(201, 133, 255, 0.4);
-	text-underline-offset: 0.2em;
+	color: var(--mb-color-text);
+	font-weight: 500;
+	text-decoration-color: var(--mb-color-primary-strong);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.25em;
+	transition: text-decoration-color 0.15s ease;
 }
 
 .sl-markdown-content a:not(.mb-card, .sl-link-button):hover {
-	color: var(--mb-color-text);
+	color: #fff;
 	text-decoration-color: var(--mb-color-pink);
 }
 
@@ -169,7 +213,7 @@ body {
 	border: 1px solid var(--mb-color-border);
 	border-radius: 0.9rem;
 	overflow: hidden;
-	background: var(--mb-color-surface);
+	background: rgba(255, 255, 255, 0.025);
 }
 
 .sl-markdown-content :is(th, td) {
@@ -182,7 +226,7 @@ body {
 }
 
 .sl-markdown-content th {
-	background: rgba(169, 88, 255, 0.18);
+	background: rgba(255, 255, 255, 0.06);
 	color: var(--sl-color-white);
 	font-weight: 600;
 }
