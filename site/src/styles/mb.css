@@ -1,0 +1,522 @@
+/*
+ * MegaBuild.de-Design für das Wiki.
+ * Farben und Schriften wie auf megabuild.de (css/global.css), siehe BRANDING.md im Repo-Root.
+ */
+
+@font-face {
+	font-family: 'Geist';
+	src: url('../fonts/geist-regular.woff2') format('woff2');
+	font-weight: 400 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Geist Mono';
+	src: url('../fonts/geist-mono.woff2') format('woff2');
+	font-weight: 400 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ---------- Tokens ---------- */
+
+:root,
+:root[data-theme='dark'] {
+	--mb-color-bg: #170d29;
+	--mb-color-bg-soft: #22153a;
+	--mb-color-surface: rgba(66, 43, 108, 0.55);
+	--mb-color-surface-strong: rgba(81, 55, 132, 0.85);
+	--mb-color-primary: #c985ff;
+	--mb-color-primary-strong: #a958ff;
+	--mb-color-pink: #ff63df;
+	--mb-color-text: #fffaff;
+	--mb-color-text-soft: #ddd2ee;
+	--mb-color-text-muted: #ab9dc0;
+	--mb-color-border: rgba(211, 176, 255, 0.18);
+	--mb-color-success: #8cffb8;
+	--mb-color-danger: #ff9292;
+	--mb-gradient: linear-gradient(135deg, rgba(177, 77, 255, 0.94), rgba(132, 39, 218, 0.94));
+	--mb-shadow-soft: 0 26px 80px rgba(0, 0, 0, 0.45);
+
+	--sl-font: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--sl-font-mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+	--sl-color-accent-low: #3a1f66;
+	--sl-color-accent: #a958ff;
+	--sl-color-accent-high: #e2c4ff;
+
+	--sl-color-white: #fffaff;
+	--sl-color-gray-1: #ede6f7;
+	--sl-color-gray-2: #ddd2ee;
+	--sl-color-gray-3: #ab9dc0;
+	--sl-color-gray-4: #6f5f8c;
+	--sl-color-gray-5: #3b2b5c;
+	--sl-color-gray-6: #25173f;
+	--sl-color-black: #170d29;
+
+	--sl-color-bg: var(--mb-color-bg);
+	--sl-color-bg-nav: rgba(23, 13, 41, 0.78);
+	--sl-color-bg-sidebar: rgba(23, 13, 41, 0.55);
+	--sl-color-bg-inline-code: rgba(169, 88, 255, 0.16);
+	--sl-color-hairline-light: rgba(211, 176, 255, 0.18);
+	--sl-color-hairline: rgba(211, 176, 255, 0.12);
+	--sl-color-hairline-shade: rgba(0, 0, 0, 0.4);
+	--sl-color-text-accent: var(--mb-color-primary);
+
+	--sl-content-width: 48rem;
+	--sl-sidebar-width: 19rem;
+}
+
+/* ---------- Hintergrund wie megabuild.de ---------- */
+
+html {
+	background-color: var(--mb-color-bg);
+	color-scheme: dark;
+}
+
+body {
+	background:
+		radial-gradient(circle at 12% 8%, rgba(201, 133, 255, 0.22), transparent 28%),
+		radial-gradient(circle at 86% 12%, rgba(255, 145, 233, 0.14), transparent 20%),
+		linear-gradient(180deg, #1a1030 0%, #24153f 48%, #170d29 100%);
+	background-attachment: fixed;
+}
+
+.header {
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+	border-bottom-color: var(--mb-color-border);
+}
+
+.sidebar-pane {
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-inline-end-color: var(--mb-color-border) !important;
+}
+
+.site-title img {
+	height: 2.25rem;
+	width: auto;
+}
+
+.site-title {
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: var(--sl-color-white);
+}
+
+/* ---------- Seitenleiste ---------- */
+
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover {
+	background: var(--mb-gradient);
+	color: #fff;
+	border-radius: 0.6rem;
+	box-shadow: 0 8px 20px rgba(177, 77, 255, 0.25);
+}
+
+.sidebar-content a {
+	border-radius: 0.6rem;
+}
+
+.sidebar-content .group-label .large {
+	color: var(--sl-color-white);
+	font-weight: 700;
+}
+
+/* ---------- Text ---------- */
+
+.sl-markdown-content :is(h2, h3, h4) {
+	color: var(--sl-color-white);
+	font-weight: 700;
+	letter-spacing: -0.01em;
+}
+
+/* Überschrift ist inline (für den Anker-Link), daher die Linie am Wrapper */
+.sl-markdown-content .sl-heading-wrapper.level-h2 {
+	padding-bottom: 0.35rem;
+	border-bottom: 1px solid var(--mb-color-border);
+}
+
+.sl-markdown-content a:not(.mb-card, .sl-link-button) {
+	color: var(--mb-color-primary);
+	text-decoration-color: rgba(201, 133, 255, 0.4);
+	text-underline-offset: 0.2em;
+}
+
+.sl-markdown-content a:not(.mb-card, .sl-link-button):hover {
+	color: var(--mb-color-text);
+	text-decoration-color: var(--mb-color-pink);
+}
+
+.sl-markdown-content code:not(pre code) {
+	border-radius: 0.35rem;
+	padding: 0.1em 0.35em;
+	color: var(--mb-color-text);
+}
+
+.sl-markdown-content hr {
+	border-color: var(--mb-color-border);
+}
+
+/* Tabellen als Karte */
+.sl-markdown-content table {
+	display: table;
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 0.9rem;
+	overflow: hidden;
+	background: var(--mb-color-surface);
+}
+
+.sl-markdown-content :is(th, td) {
+	border-bottom: 1px solid var(--sl-color-hairline);
+	padding: 0.6rem 0.9rem;
+}
+
+.sl-markdown-content tr:last-child td {
+	border-bottom: 0;
+}
+
+.sl-markdown-content th {
+	background: rgba(169, 88, 255, 0.18);
+	color: var(--sl-color-white);
+	font-weight: 600;
+}
+
+/* Bilder mit Bildunterschrift (GitBook <figure>) */
+.sl-markdown-content figure {
+	margin-block: 1.5rem;
+}
+
+.sl-markdown-content figure img {
+	width: 100%;
+	border-radius: 1rem;
+	border: 1px solid var(--mb-color-border);
+	box-shadow: var(--mb-shadow-soft);
+}
+
+.sl-markdown-content figcaption {
+	margin-top: 0.6rem;
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-sm);
+	text-align: center;
+}
+
+.sl-markdown-content figcaption p {
+	margin: 0;
+}
+
+/* ---------- Hinweise (GitBook hint → Starlight aside) ---------- */
+
+.starlight-aside {
+	border-radius: 0.9rem;
+	border: 1px solid var(--sl-color-asides-border);
+	border-inline-start-width: 4px;
+}
+
+.starlight-aside--note {
+	--sl-color-asides-text-accent: #e2c4ff;
+	--sl-color-asides-border: #a958ff;
+	background-color: rgba(169, 88, 255, 0.12);
+}
+
+.starlight-aside--tip {
+	--sl-color-asides-text-accent: var(--mb-color-success);
+	--sl-color-asides-border: #3fd98a;
+	background-color: rgba(140, 255, 184, 0.08);
+}
+
+.starlight-aside--caution {
+	--sl-color-asides-text-accent: #ffd27a;
+	--sl-color-asides-border: #f5a524;
+	background-color: rgba(245, 165, 36, 0.1);
+}
+
+.starlight-aside--danger {
+	--sl-color-asides-text-accent: var(--mb-color-danger);
+	--sl-color-asides-border: #ff5c7a;
+	background-color: rgba(255, 92, 122, 0.1);
+}
+
+/* ---------- Schritte (GitBook stepper) ---------- */
+
+.sl-markdown-content ol.mb-steps {
+	counter-reset: mb-step;
+	list-style: none;
+	padding-inline-start: 0;
+	margin-block: 1.5rem;
+}
+
+.sl-markdown-content ol.mb-steps > li {
+	counter-increment: mb-step;
+	position: relative;
+	padding-inline-start: 3.25rem;
+	padding-bottom: 1.5rem;
+	margin: 0;
+}
+
+.sl-markdown-content ol.mb-steps > li::before {
+	content: counter(mb-step);
+	position: absolute;
+	inset-inline-start: 0;
+	top: 0;
+	width: 2.1rem;
+	height: 2.1rem;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	background: var(--mb-gradient);
+	color: #fff;
+	font-weight: 700;
+	font-size: var(--sl-text-sm);
+	box-shadow: 0 8px 20px rgba(177, 77, 255, 0.3);
+}
+
+.sl-markdown-content ol.mb-steps > li::after {
+	content: '';
+	position: absolute;
+	inset-inline-start: calc(1.05rem - 1px);
+	top: 2.5rem;
+	bottom: 0.4rem;
+	width: 2px;
+	border-radius: 2px;
+	background: linear-gradient(180deg, rgba(201, 133, 255, 0.55), rgba(201, 133, 255, 0.05));
+}
+
+.sl-markdown-content ol.mb-steps > li:last-child::after {
+	display: none;
+}
+
+.sl-markdown-content ol.mb-steps > li > :first-child {
+	margin-top: 0;
+	padding-top: 0.25rem;
+	border: 0;
+}
+
+/* ---------- Karten (content-ref, embed, Datei) ---------- */
+
+.sl-markdown-content .mb-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+	gap: 0.85rem;
+	margin-block: 1.25rem;
+}
+
+.sl-markdown-content .mb-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	padding: 1rem 2.6rem 1rem 1.1rem;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 1rem;
+	background: var(--mb-color-surface);
+	text-decoration: none;
+	transition:
+		transform 0.18s ease,
+		border-color 0.18s ease,
+		box-shadow 0.18s ease;
+}
+
+.sl-markdown-content .mb-card::after {
+	content: '→';
+	position: absolute;
+	inset-inline-end: 1rem;
+	top: 50%;
+	translate: 0 -50%;
+	color: var(--mb-color-primary);
+	font-size: 1.15rem;
+	transition: translate 0.18s ease;
+}
+
+.sl-markdown-content .mb-card--external::after {
+	content: '↗';
+}
+
+.sl-markdown-content .mb-card--file::after {
+	content: '↓';
+}
+
+.sl-markdown-content .mb-card:hover {
+	transform: translateY(-2px);
+	border-color: rgba(201, 133, 255, 0.55);
+	box-shadow: 0 14px 34px rgba(132, 39, 218, 0.28);
+}
+
+.sl-markdown-content .mb-card:hover::after {
+	translate: 3px -50%;
+}
+
+.mb-card__title {
+	color: var(--sl-color-white);
+	font-weight: 600;
+}
+
+.mb-card__desc {
+	color: var(--mb-color-text-muted);
+	font-size: var(--sl-text-sm);
+	line-height: 1.45;
+}
+
+/* ---------- Tabs (GitBook tabs, siehe public/mb.js) ---------- */
+
+.sl-markdown-content .mb-tabs {
+	margin-block: 1.5rem;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 1rem;
+	background: rgba(34, 21, 58, 0.6);
+	overflow: hidden;
+}
+
+.mb-tabs__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	padding: 0.4rem;
+	border-bottom: 1px solid var(--mb-color-border);
+	background: rgba(23, 13, 41, 0.5);
+}
+
+.mb-tabs__button {
+	appearance: none;
+	border: 0;
+	border-radius: 999px;
+	padding: 0.45rem 1rem;
+	background: transparent;
+	color: var(--mb-color-text-soft);
+	font: inherit;
+	font-size: var(--sl-text-sm);
+	font-weight: 600;
+	cursor: pointer;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease;
+}
+
+.mb-tabs__button:hover {
+	color: var(--sl-color-white);
+	background: rgba(169, 88, 255, 0.15);
+}
+
+.mb-tabs__button[aria-selected='true'] {
+	background: var(--mb-gradient);
+	color: #fff;
+	box-shadow: 0 8px 20px rgba(177, 77, 255, 0.25);
+}
+
+.sl-markdown-content .mb-tab {
+	padding: 0.25rem 1.25rem 1rem;
+	margin: 0;
+}
+
+.mb-tabs.is-ready .mb-tab[hidden] {
+	display: none;
+}
+
+/* ohne JavaScript: alle Tabs untereinander mit Überschrift */
+.mb-tabs:not(.is-ready) .mb-tab::before {
+	content: attr(data-label);
+	display: block;
+	margin-top: 1rem;
+	color: var(--mb-color-primary);
+	font-weight: 700;
+}
+
+/* ---------- Spalten (GitBook columns) ---------- */
+
+.sl-markdown-content .mb-columns {
+	display: grid;
+	gap: 1.25rem;
+	margin-block: 1.5rem;
+}
+
+@media (min-width: 50rem) {
+	.sl-markdown-content .mb-columns {
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	}
+}
+
+.sl-markdown-content .mb-column {
+	margin: 0;
+	padding: 0.25rem 1.25rem 1rem;
+	border: 1px solid var(--mb-color-border);
+	border-radius: 1rem;
+	background: var(--mb-color-surface);
+}
+
+/* ---------- Videos ---------- */
+
+.sl-markdown-content figure.mb-video video {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border-radius: 1rem;
+	border: 1px solid var(--mb-color-border);
+	background: #000;
+	box-shadow: var(--mb-shadow-soft);
+}
+
+.sl-markdown-content .mb-embed iframe {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border: 0;
+	border-radius: 1rem;
+}
+
+/* ---------- Aufklappbare Abschnitte (GitBook expandable) ---------- */
+
+.sl-markdown-content details {
+	border: 1px solid var(--mb-color-border);
+	border-radius: 0.9rem;
+	background: var(--mb-color-surface);
+	padding: 0 1.1rem;
+	border-inline-start-width: 1px;
+}
+
+.sl-markdown-content details summary {
+	padding-block: 0.8rem;
+	color: var(--sl-color-white);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.sl-markdown-content details[open] summary {
+	border-bottom: 1px solid var(--sl-color-hairline);
+	margin-bottom: 0.75rem;
+}
+
+.sl-markdown-content details[open] {
+	padding-bottom: 0.75rem;
+}
+
+/* ---------- Schaltflächen ---------- */
+
+.sl-link-button.primary {
+	background: var(--mb-gradient);
+	border-color: transparent;
+	color: #fff;
+	box-shadow: 0 12px 24px rgba(177, 77, 255, 0.28);
+}
+
+.sl-link-button.secondary {
+	border-color: var(--mb-color-border);
+	background: rgba(23, 13, 41, 0.45);
+	color: var(--mb-color-text);
+}
+
+/* ---------- Seitenende ---------- */
+
+.pagination-links a {
+	border-radius: 1rem;
+	background: var(--mb-color-surface);
+	border-color: var(--mb-color-border);
+	box-shadow: none;
+}
+
+.pagination-links a:hover {
+	border-color: rgba(201, 133, 255, 0.55);
+}

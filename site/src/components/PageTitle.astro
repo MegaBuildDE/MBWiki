@@ -1,0 +1,25 @@
+---
+// Seitentitel; hat die Seite ein Titelbild (cover aus GitBook), steht es wie bei GitBook darüber.
+const { data } = Astro.locals.starlightRoute.entry;
+---
+
+{data.cover && <img class="mb-cover" src={data.cover} alt="" loading="eager" decoding="async" />}
+<h1 id="_top">{data.title}</h1>
+
+<style>
+	.mb-cover {
+		width: 100%;
+		aspect-ratio: 4 / 1;
+		object-fit: cover;
+		border-radius: 1rem;
+		border: 1px solid var(--mb-color-border);
+		margin-bottom: 1.5rem;
+	}
+	h1 {
+		margin-top: 1rem;
+		font-size: var(--sl-text-h1);
+		line-height: var(--sl-line-height-headings);
+		font-weight: 700;
+		color: var(--sl-color-white);
+	}
+</style>

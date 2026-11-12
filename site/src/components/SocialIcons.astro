@@ -1,0 +1,64 @@
+---
+// Kopfzeile rechts: Links zu den anderen MB-Seiten wie auf megabuild.de, dazu Discord.
+import { Icon } from '@astrojs/starlight/components';
+
+const links = [
+	{ label: 'Website', href: 'https://megabuild.de/' },
+	{ label: 'Shop', href: 'https://shop.megabuild.de/' },
+	{ label: 'Status', href: 'https://status.megabuild.de/' },
+];
+---
+
+<nav class="mb-nav" aria-label="MegaBuild.de">
+	{links.map(({ label, href }) => <a class="mb-nav__link" href={href}>{label}</a>)}
+</nav>
+<a class="mb-discord" href="https://megabuild.de/dc/" rel="me">
+	<span class="sr-only">Discord</span>
+	<Icon name="discord" />
+</a>
+
+<style>
+	.mb-nav {
+		display: none;
+		gap: 1.25rem;
+		margin-inline-end: 0.5rem;
+	}
+	.mb-nav__link {
+		position: relative;
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+		font-size: var(--sl-text-sm);
+		font-weight: 500;
+	}
+	.mb-nav__link::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -6px;
+		width: 0;
+		height: 2px;
+		border-radius: 999px;
+		background: linear-gradient(135deg, var(--mb-color-primary), #ff63df);
+		transition: width 0.2s ease;
+	}
+	.mb-nav__link:hover {
+		color: var(--sl-color-white);
+	}
+	.mb-nav__link:hover::after {
+		width: 100%;
+	}
+	.mb-discord {
+		display: flex;
+		color: var(--sl-color-text-accent);
+		padding: 0.5em;
+		margin: -0.5em;
+	}
+	.mb-discord:hover {
+		color: var(--sl-color-white);
+	}
+	@media (min-width: 72rem) {
+		.mb-nav {
+			display: flex;
+		}
+	}
+</style>

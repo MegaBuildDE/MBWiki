@@ -1,0 +1,20 @@
+{
+  "name": "mbwiki-site",
+  "private": true,
+  "type": "module",
+  "description": "MegaBuild.de Wiki als Astro-Starlight-Seite, gebaut aus den GitBook-Markdown-Dateien des Repos",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "convert": "node scripts/convert.mjs",
+    "dev": "node scripts/convert.mjs && astro dev",
+    "build": "node scripts/convert.mjs && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.42.11",
+    "astro": "^7.4.11",
+    "yaml": "^2.9.1"
+  }
+}
