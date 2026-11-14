@@ -1,9 +1,11 @@
 # MegaBuild.de Wiki – selbst gehostet (Astro Starlight)
 
-Dieser Ordner baut das Wiki als statische Seite im MegaBuild-Design. Die Inhalte bleiben
-die GitBook-Markdown-Dateien im Repo-Root (`SUMMARY.md`, `README.md`, `ag/`, `sb/`, `en/` …).
-GitBook und die neue Seite laufen so während der Umstellung parallel, ohne dass eine Seite
-doppelt gepflegt wird.
+Dieser Ordner baut das Wiki unter https://wiki.megabuild.de als statische Seite im
+MegaBuild-Design. Die Inhalte bleiben die GitBook-Markdown-Dateien im Repo-Root (`SUMMARY.md`,
+`README.md`, `ag/`, `sb/`, `en/` …), damit GitBook als Ausweich-Kopie weiterlaufen kann.
+Jeder Commit auf `main` ist innerhalb einer Minute live (siehe „Auf dem Server“).
+
+Der letzte reine GitBook-Stand vor der Umstellung liegt im Branch `old`.
 
 ## Lokal ansehen
 
@@ -98,21 +100,14 @@ Bei einem fehlgeschlagenen Build bleibt der alte Stand live, und derselbe Commit
 
 ```bash
 git clone https://github.com/MegaBuildDE/MBWiki.git /opt/mbwiki/repo
-# solange die Seite noch nicht auf main ist (dort fehlt site/ noch):
-git -C /opt/mbwiki/repo checkout feat/starlight-wiki
 install -m 755 /opt/mbwiki/repo/site/deploy/build-wiki.sh /usr/local/bin/mbwiki-build
 install -m 644 /opt/mbwiki/repo/site/deploy/mbwiki-build.{service,timer} /etc/systemd/system/
 ```
 
-Solange die Seite noch nicht auf `main` ist, den Branch festlegen:
-
-```bash
-echo 'BRANCH=feat/starlight-wiki' > /etc/default/mbwiki-build
-```
-
-Das Skript liest die Datei selbst, sie gilt also auch beim Aufruf von Hand. Läuft die Seite unter
-einer anderen Adresse als `https://wiki.megabuild.de` (z. B. einer Test-Subdomain), gehört dort auch
-`SITE_URL=https://…` hinein – die Adresse landet in Sitemap, `canonical` und Vorschaubildern.
+Gebaut wird `main` für `https://wiki.megabuild.de`. Abweichungen gehören nach
+`/etc/default/mbwiki-build` (das Skript liest die Datei selbst, sie gilt also auch beim Aufruf von
+Hand), z. B. `BRANCH=…` oder für eine Test-Subdomain `SITE_URL=https://…` – die Adresse landet in
+Sitemap, `canonical` und Vorschaubildern.
 
 Erster Build (dauert beim ersten Mal wegen `docker pull` und `npm ci` etwas länger):
 
@@ -128,11 +123,6 @@ nginx -t && systemctl reload nginx
 certbot --nginx -d wiki.megabuild.de
 systemctl daemon-reload && systemctl enable --now mbwiki-build.timer
 ```
-
-### Wenn die Seite auf `main` ist
-
-Ist der Branch nach `main` gemergt, `/etc/default/mbwiki-build` löschen (dann gilt `main`) und
-`mbwiki-build --force`. Ab dann geht jeder Commit auf `main` innerhalb einer Minute live.
 
 Die nginx-Datei gehört anonymisiert auch ins MBWeb-Repo.
 

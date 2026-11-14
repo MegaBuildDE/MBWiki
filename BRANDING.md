@@ -4,6 +4,11 @@ Diese Datei ist **interne Doku** und steht bewusst nicht in `SUMMARY.md` – sie
 
 Sie hält fest, wie das Wiki an den Style von [megabuild.de](https://megabuild.de/) angeglichen wird.
 
+> **Seit 14.11.2026** läuft https://wiki.megabuild.de nicht mehr auf GitBook, sondern selbst gehostet
+> auf dem MB-Server: Ordner [`site/`](site/README.md) baut aus denselben Markdown-Dateien eine eigene
+> Seite, jeder Commit auf `main` ist nach etwa einer Minute live. Aussehen, Videos im Text, Skilltree
+> usw. kommen von dort. Die GitBook-Hinweise unten gelten nur noch für die Ausweich-Kopie auf GitBook.
+
 ---
 
 ## Wichtig: Was geht aus dem Repo, was nicht
@@ -138,7 +143,7 @@ Sauberer wäre GitBooks **Variants**-Feature (echter Sprachumschalter wie der DE
 
 Die Feature-Videos in `.gitbook/assets/videos/` (DE, dazu `-en` für den englischen Teil) entstehen mit dem Werkzeug in [`tools/videos/`](tools/videos/README.md): Szenen in Python, echte 3D-Modelle aus dem Pool, Malas aufgenommene Stimme mit Untertiteln, synthetische Musik. Neu rendern mit `python3 tools/videos/bauen.py <film> [--sprache en]`.
 
-GitBook spielt hochgeladene MP4 nicht im Text ab. Jede Seite zeigt deshalb das Standbild (`<film>.jpg`) und darunter den Film als Datei-Block. Für einen Player im Text müsste der Film auf YouTube liegen und per `{% embed %}` eingebunden werden.
+GitBook spielt hochgeladene MP4 nicht im Text ab. Jede Seite zeigt deshalb das Standbild (`<film>.jpg`) und darunter den Film als Datei-Block. Die selbst gehostete Seite macht aus genau diesem Paar einen Player im Text (Standbild als Vorschau) – das Muster also beibehalten.
 
 ---
 
