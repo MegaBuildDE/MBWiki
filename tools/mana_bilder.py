@@ -4,8 +4,18 @@
 Die Texturen kommen frisch aus dem Pool (MBSKY_POOLS, assets/items/mana), der Apfel aus dem
 neuesten Client-Jar. Ein neues Bild im Pool heisst: dieses Skript noch einmal laufen lassen.
 
+Mana-Block und Knospender Mana-Amethyst sind Bloecke. Die zeichnet das Skript aus ihren
+Blockbench-Projekten im Pool (assets/custom_blocks), in der Inventar-Ansicht, wie Java sie zeigt.
+Das Item-Bild in assets/items/mana ist nur das Bedrock-Icon und hinkt hinterher, wenn der Modeler
+den Block in Blockbench aendert (so beim Budding am 11.11.2026). Den Zeichner liefert
+MBSkyManager (MBSKY_REPO, tools/gen_mana_geode.py).
+
     python3 tools/mana_bilder.py
 """
+import base64
+import glob
+import io
+import json
 import os
 import sys
 
@@ -15,6 +25,37 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from mobplate_bilder import FLAECHE, SLOT, jar_bild, pfeil, pool_bild, slot  # noqa: E402
 
 AUS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".gitbook", "assets", "mana")
+BLOECKE = os.path.join(os.environ.get("MBSKY_POOLS", os.path.expanduser("~/Coding/pools")), "assets", "custom_blocks")
+MANAGER_TOOLS = os.path.join(os.environ.get("MBSKY_REPO") or "/Users/kay/IdeaProjects/MBSkyManager", "tools")
+
+
+def block_bild(name, px):
+    """Der Block aus custom_blocks/**/<name>.bbmodel in der Inventar-Ansicht, px x px.
+
+    Gezeichnet werden die Flaechen der ersten Textur; die Leucht-Ebene des Budding liegt
+    deckungsgleich darueber und steht schon in der Grundtextur.
+    """
+    treffer = glob.glob(os.path.join(BLOECKE, "**", name + ".bbmodel"), recursive=True)
+    if len(treffer) != 1:
+        raise SystemExit(f"FEHLER: {name}.bbmodel {len(treffer)}-mal unter {BLOECKE}")
+    sys.path.insert(0, MANAGER_TOOLS)
+    from gen_mana_geode import BLOCK_GUI  # noqa: E402
+    from gen_rucksack_modell import rendere  # noqa: E402
+
+    projekt = json.load(open(treffer[0], encoding="utf-8"))
+    aufloesung = projekt["resolution"]["width"]
+    texturen = projekt["textures"]
+    textur = Image.open(io.BytesIO(base64.b64decode(texturen[0]["source"].split(",", 1)[1]))).convert("RGBA")
+    erste = {0, "0", texturen[0].get("id")}
+    elemente = []
+    for e in projekt["elements"]:
+        flaechen = {s: {"uv": [v * 16 / aufloesung for v in f["uv"]], "texture": 0}
+                    for s, f in e["faces"].items() if f.get("texture") in erste}
+        if any(e.get("rotation") or [0]):
+            raise SystemExit(f"FEHLER: {name}: gedrehte Wuerfel kann dieses Skript nicht zeichnen")
+        if flaechen:
+            elemente.append({"from": e["from"], "to": e["to"], "faces": flaechen})
+    return rendere({"elements": elemente}, textur, BLOCK_GUI, px)
 
 
 def anzahl(ziel, x, y, n, groesse):
@@ -50,11 +91,12 @@ def rezept(raster, ergebnis, name, menge=1, px=72):
 
 
 def reihe(namen=("mana.png", "mana_charge.png", "mana_apple.png"), datei="items.png"):
-    """Items nebeneinander, fuer den Kopf der Seite."""
+    """Items nebeneinander, fuer den Kopf der Seite. Ein Name ohne .png ist ein Block (block_bild)."""
     zelle = 112
     b = Image.new("RGBA", (len(namen) * zelle + 16, zelle + 16), (22, 30, 58, 255))
     for i, f in enumerate(namen):
-        b.alpha_composite(pool_bild("mana/" + f, 96), (16 + i * zelle, 16))
+        bild = pool_bild("mana/" + f, 96) if f.endswith(".png") else block_bild(f, 96)
+        b.alpha_composite(bild, (16 + i * zelle, 16))
     b.save(os.path.join(AUS, datei))
 
 
@@ -104,9 +146,9 @@ def main():
     rezept([None, None, None, None, ladung, None, None, None, None], kugel, "rezept-zerlegen.png", 9)
     rezept([None, kugel, None, kugel, apfel, kugel, None, kugel, None], apfel_mana, "rezept-apfel.png")
     # Mana-Block: nur das Rezept hin. Ein Rueckrezept gibt es seit dem 08.11.2026 nicht mehr.
-    rezept([kugel] * 4 + [ladung] + [kugel] * 4, pool_bild("mana/mana_block.png", 64), "rezept-block.png", px=64)
+    rezept([kugel] * 4 + [ladung] + [kugel] * 4, block_bild("mana_block", 64), "rezept-block.png", px=64)
     reihe()
-    reihe(("mana_block.png", "mana_budding.png", "mana_shard.png"), "items-golem.png")
+    reihe(("mana_block", "mana_budding", "mana_shard.png"), "items-golem.png")
     bauplan()
     print("Bilder in", AUS)
 

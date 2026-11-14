@@ -27,6 +27,8 @@ python3 bauen.py clans --hoch build/discord   # zusätzlich scharfe Fassung (crf
 
 Ein Film braucht auf einem M-Mac rund eine Minute (`--teile` Worker parallel, Vorgabe: Kerne minus eins).
 
+**Achtung beim Neubauen:** `bauen.py` schreibt immer auch `<film>.jpg` neu, als Standbild aus dem Film. Bei Filmen, deren Seite ein Cover aus `cover.py` zeigt (z. B. Furnace Golem), ist das Cover danach weg. Danach `git restore .gitbook/assets/videos/<film>.jpg`, wenn das Cover bleiben soll.
+
 ## Was gebraucht wird
 
 * Python 3 mit **Pillow**, dazu **ffmpeg** (Homebrew).
