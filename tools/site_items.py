@@ -9,8 +9,10 @@ Liest site/data/items.json und schreibt:
   site/data/items.generated.json         Texturpfade, Mobplate-Namen (DE/EN) und welche
                                          Plates einen Spawner ergeben
 
-Quellen: der Pool (MBSKY_POOLS, assets/items), das neueste Client-Jar fuer Vanilla-Texturen
-und MBSkyManager (MBSKY_MANAGER) fuer die Mobplate-Namen (SkyItem.java) und die
+Quellen: der Pool (MBSKY_POOLS, assets/items), das neueste Client-Jar fuer Vanilla-Texturen,
+fuer eigene Bloecke ihr Blockbench-Projekt (tex block:<name>, assets/custom_blocks, gezeichnet
+wie im Java-Inventar von tools/mana_bilder.py, 64x64 - das Item-Bild im Pool ist dort nur das
+Bedrock-Icon und hinkt hinterher, wenn der Modeler den Block aendert) und MBSkyManager (MBSKY_MANAGER) fuer die Mobplate-Namen (SkyItem.java) und die
 Spawner-Plates (config.yml: feather.spawner.plates). Der Server baut nur aus dem Repo,
 darum liegen die Ergebnisse eingecheckt in site/. Neues Bild im Pool oder neues Item in
 items.json heisst: dieses Skript noch einmal laufen lassen.
@@ -69,8 +71,13 @@ def texturen(item_id, spec, jar):
         treffer = sorted(n for n in alle if fnmatch.fnmatch(n, muster))
         laden = lambda t: erstes_bild(io.BytesIO(jar.read(t)))  # noqa: E731
         name = lambda t: os.path.splitext(os.path.basename(t))[0]  # noqa: E731
+    elif quelle == "block":
+        from mana_bilder import block_bild
+        treffer = [pfad]
+        laden = lambda t: block_bild(t, 64)  # noqa: E731
+        name = lambda t: t  # noqa: E731
     else:
-        sys.exit(f"{item_id}: unbekannte Quelle in tex '{spec}' (pool: oder jar:)")
+        sys.exit(f"{item_id}: unbekannte Quelle in tex '{spec}' (pool:, jar: oder block:)")
     if not treffer:
         sys.exit(f"{item_id}: keine Textur für '{spec}' gefunden")
     if "*" not in pfad:
