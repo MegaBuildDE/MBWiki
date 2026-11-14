@@ -3,6 +3,11 @@
 # Für eine Test-Subdomain zusätzlich Suchmaschinen fernhalten (sonst steht das Wiki doppelt bei Google):
 #   location = /robots.txt { default_type text/plain; return 200 "User-agent: *\nDisallow: /\n"; }
 
+# Eigenes Anfrage-Limit fürs Wiki. Ein limit_req auf http-Ebene (für Shop & Co.) gilt sonst auch hier,
+# und das ist für statische Seiten zu knapp: die Mob-Plates-Seite lädt allein ~150 Bilder.
+# Ein limit_req im server-Block ersetzt das geerbte nur für diese Seite.
+limit_req_zone $binary_remote_addr zone=mbwiki:10m rate=20r/s;
+
 server {
 	listen 80;
 	listen [::]:80;
@@ -19,6 +24,9 @@ server {
 	gzip_types text/css application/javascript application/json image/svg+xml text/plain application/xml;
 
 	error_page 404 /404.html;
+
+	limit_req zone=mbwiki burst=300 nodelay;
+	limit_req_status 429;
 
 	# Seiten: immer beim Server nachfragen (ETag), damit ein neuer Build sofort sichtbar ist
 	location / {

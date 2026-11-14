@@ -741,28 +741,49 @@ const dates = gitDates();
 fs.rmSync(OUT_DOCS, { recursive: true, force: true });
 for (const page of pages.values()) writePage(page, pages, dates);
 
-// Eine 404-Seite für die ganze Seite (Starlight sucht den Eintrag „404“), zweisprachig.
-fs.writeFileSync(
-	path.join(OUT_DOCS, '404.md'),
-	`---\n${YAML.stringify(
-		{
-			title: 'Seite nicht gefunden',
-			template: 'splash',
-			editUrl: false,
-			pagefind: false,
-			tableOfContents: false,
-			hero: {
-				title: 'Seite nicht gefunden',
-				tagline: 'Diese Seite gibt es nicht (mehr). Über die Suche oben oder die Startseite findest du weiter.<br />This page does not exist (anymore).',
-				actions: [
-					{ text: 'Zur Startseite', link: '/', icon: 'right-arrow' },
-					{ text: 'English', link: '/en/', variant: 'secondary' },
-				],
+// Fehlerseiten. Die deutsche (Eintrag „404“) rendert Starlights eigene Route nach 404.html, für alle
+// Adressen außerhalb von /en/. `draft` hält sie aus den normalen Seiten heraus: sonst meldet Astro
+// einen Konflikt mit /404, und Starlight legt unter /en/404/ eine deutsche Kopie an.
+// Die englische ist eine normale Seite unter /en/404/ (nginx: error_page in location /en/).
+const errorPage = (file, data) =>
+	fs.writeFileSync(
+		path.join(OUT_DOCS, file),
+		`---\n${YAML.stringify(
+			{
+				template: 'splash',
+				editUrl: false,
+				pagefind: false,
+				tableOfContents: false,
+				head: [{ tag: 'meta', attrs: { name: 'robots', content: 'noindex' } }],
+				...data,
 			},
-		},
-		{ lineWidth: 0 },
-	)}---\n`,
-);
+			{ lineWidth: 0 },
+		)}---\n`,
+	);
+errorPage('404.md', {
+	title: 'Seite nicht gefunden',
+	draft: true,
+	hero: {
+		title: 'Seite nicht gefunden',
+		tagline: 'Diese Seite gibt es nicht (mehr). Über die Suche oben oder die Startseite findest du weiter.<br />This page does not exist (anymore).',
+		actions: [
+			{ text: 'Zur Startseite', link: '/', icon: 'right-arrow' },
+			{ text: 'English', link: '/en/', variant: 'secondary' },
+		],
+	},
+});
+fs.mkdirSync(path.join(OUT_DOCS, 'en'), { recursive: true });
+errorPage('en/404.md', {
+	title: 'Page not found',
+	hero: {
+		title: 'Page not found',
+		tagline: 'This page does not exist (anymore). Use the search above or the home page to find your way.',
+		actions: [
+			{ text: 'Go to the home page', link: '/en/', icon: 'right-arrow' },
+			{ text: 'Deutsch', link: '/', variant: 'secondary' },
+		],
+	},
+});
 
 fs.mkdirSync(OUT_GEN, { recursive: true });
 fs.writeFileSync(path.join(OUT_GEN, 'sidebar.json'), JSON.stringify(buildSidebar(groups, pages), null, 2));
