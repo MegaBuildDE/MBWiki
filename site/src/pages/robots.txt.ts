@@ -1,5 +1,5 @@
 // robots.txt mit der Sitemap der gerade gebauten Adresse (site in astro.config.mjs).
-// Auf der Test-Subdomain liefert nginx stattdessen eine sperrende robots.txt aus (deploy/nginx-wiki.conf.example).
+// Für eine Test-Subdomain steht in deploy/nginx-wiki.conf.example, wie nginx sie stattdessen sperrt.
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = ({ site }) =>

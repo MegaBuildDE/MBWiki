@@ -104,14 +104,15 @@ install -m 755 /opt/mbwiki/repo/site/deploy/build-wiki.sh /usr/local/bin/mbwiki-
 install -m 644 /opt/mbwiki/repo/site/deploy/mbwiki-build.{service,timer} /etc/systemd/system/
 ```
 
-Solange die Seite noch nicht auf `main` ist, den Branch und die Test-Adresse festlegen
-(`SITE_URL` landet in Sitemap, `canonical` und Vorschaubildern):
+Solange die Seite noch nicht auf `main` ist, den Branch festlegen:
 
 ```bash
-printf 'BRANCH=feat/starlight-wiki\nSITE_URL=https://wiki-neu.megabuild.de\n' > /etc/default/mbwiki-build
+echo 'BRANCH=feat/starlight-wiki' > /etc/default/mbwiki-build
 ```
 
-Das Skript liest die Datei selbst, sie gilt also auch beim Aufruf von Hand.
+Das Skript liest die Datei selbst, sie gilt also auch beim Aufruf von Hand. Läuft die Seite unter
+einer anderen Adresse als `https://wiki.megabuild.de` (z. B. einer Test-Subdomain), gehört dort auch
+`SITE_URL=https://…` hinein – die Adresse landet in Sitemap, `canonical` und Vorschaubildern.
 
 Erster Build (dauert beim ersten Mal wegen `docker pull` und `npm ci` etwas länger):
 
@@ -120,24 +121,18 @@ mbwiki-build && mbwiki-build --status
 ```
 
 nginx: Vorlage nach `sites-available` kopieren (bzw. dorthin, wo die anderen Seiten auf mbs
-liegen) und `server_name` zuerst auf eine **Test-Subdomain** setzen, z. B. `wiki-neu.megabuild.de`.
-Der `location = /robots.txt`-Block darin sperrt die Test-Subdomain für Suchmaschinen, damit das Wiki
-nicht doppelt bei Google steht. Für die Subdomain einen DNS-Eintrag auf den Server anlegen, dann:
+liegen) und aktivieren. Der DNS-Eintrag `wiki.megabuild.de` muss schon auf den Server zeigen, dann:
 
 ```bash
 nginx -t && systemctl reload nginx
-certbot --nginx -d wiki-neu.megabuild.de
+certbot --nginx -d wiki.megabuild.de
 systemctl daemon-reload && systemctl enable --now mbwiki-build.timer
 ```
 
-### Umzug von GitBook
+### Wenn die Seite auf `main` ist
 
-1. Auf der Test-Subdomain alles prüfen.
-2. Den Branch nach `main` mergen und `/etc/default/mbwiki-build` löschen (dann gelten `main` und
-   `https://wiki.megabuild.de`), danach `mbwiki-build --force`.
-3. In nginx `server_name wiki.megabuild.de` eintragen und den `robots.txt`-Block löschen.
-4. Den DNS-Eintrag `wiki.megabuild.de` vom GitBook-CNAME auf den Server umstellen, dann `certbot --nginx -d wiki.megabuild.de`.
-5. In GitBook die eigene Domain lösen.
+Ist der Branch nach `main` gemergt, `/etc/default/mbwiki-build` löschen (dann gilt `main`) und
+`mbwiki-build --force`. Ab dann geht jeder Commit auf `main` innerhalb einer Minute live.
 
 Die nginx-Datei gehört anonymisiert auch ins MBWeb-Repo.
 
