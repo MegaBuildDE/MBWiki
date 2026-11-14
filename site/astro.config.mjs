@@ -33,6 +33,8 @@ export default defineConfig({
 			head: [
 				{ tag: 'script', attrs: { src: '/mb.js', defer: true } },
 				{ tag: 'meta', attrs: { name: 'theme-color', content: '#170d29' } },
+				// Symbol, wenn jemand das Wiki auf dem Handy zum Home-Bildschirm hinzufügt (512 px)
+				{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/favicon.png' } },
 			],
 			components: {
 				ThemeProvider: './src/components/ThemeProvider.astro',
