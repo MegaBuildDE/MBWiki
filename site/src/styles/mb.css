@@ -78,6 +78,8 @@
 html {
 	background-color: var(--mb-color-bg);
 	color-scheme: dark;
+	/* Die Seite scrollt nie zur Seite; clip (nicht hidden) lässt position: sticky heil. */
+	overflow-x: clip;
 }
 
 /* Der Verlauf liegt auf einer eigenen festen Ebene: background-attachment: fixed würde die
@@ -426,6 +428,17 @@ header.header {
 	border-radius: 0.9rem;
 	overflow: hidden;
 	background: rgba(255, 255, 255, 0.025);
+}
+
+/* Handy: breite Tabellen scrollen in ihrer Karte, nicht die ganze Seite zur Seite. */
+@media (max-width: 50rem) {
+	.sl-markdown-content table {
+		display: block;
+		width: max-content;
+		max-width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
 .sl-markdown-content :is(th, td) {
