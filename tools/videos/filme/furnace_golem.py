@@ -9,8 +9,8 @@ Stufen zu je rund 10 Minuten. Seit 10.11.: Arme wieder seitlich (Pool 52240277),
 ein Block frei, und die Truhe steht zwei Bloecke neben ihm; er geht mit walk drei Viertel eines
 Blocks hin, greift mit take_shard hinein (Deckel auf und zu, rosa Staub) und geht zurueck
 (Zeitplan GolemRules.TRIP_*, 60 Ticks). Nur rosa Effekte (nichts Brennendes), Abheben nur als
-Kugeln, Plaketten statt Items im Menue. Seit 15.11.2026 (MBSkyManager 5373a172) hat das Menue drei
-Reihen: Alles einzahlen, 1/16/64 Kugeln abheben, Stand des Golems. Menue und Chat aus lang/de.yml (menu.furnace-golem.*,
+Kugeln, Plaketten statt Items im Menue. Seit 15.11.2026 (MBSkyManager 6b907b34) hat das Menue vier
+Reihen: Alles einzahlen ueber dem Konto, 1/16/64 Kugeln abheben darunter, rechts der Stand. Menue und Chat aus lang/de.yml (menu.furnace-golem.*,
 furnace-golem.*), Tageswechsel aus quests.reset (4 Uhr). Die Figur kommt aus modelle.py
 (fgolem_*), die Bloecke als eigene Iso-Wuerfel aus den Texturen des Manager-Packs und des
 Client-Jars. Mala erklaert jede Szene (nur Deutsch).
@@ -338,11 +338,12 @@ def kristall(e, stufe, s, alpha, riss=-1):
 # ── Menue ───────────────────────────────────────────────────────────────────
 
 MX, MY, MS = 870, 250, 4
-MENUE = {4: "mana", 10: "golem_deposit", 12: "golem_withdraw", 13: ("golem_withdraw", 16),
-         14: ("golem_withdraw", 64), 16: "golem_work", 25: "golem_dismantle", 26: "close"}
-"""Slots wie im Spiel seit 15.11.2026 (gui/FurnaceGolemMenu): oben das Konto, in der Mitte Alles
-einzahlen (10), drei goldene Pfeile zum Abheben mit der Menge als Stapelzahl (12-14) und der Stand
-(16), unten Abbauen (25, mit Baurecht) und Schliessen (26)."""
+MENUE_REIHEN = 4
+MENUE = {4: "golem_deposit", 13: "mana", 16: "golem_work", 21: "golem_withdraw", 22: ("golem_withdraw", 16),
+         23: ("golem_withdraw", 64), 34: "golem_dismantle", 35: "close"}
+"""Slots wie im Spiel seit 15.11.2026 (gui/FurnaceGolemMenu, MBSkyManager 6b907b34): oben Alles
+einzahlen (4), darunter das Konto (13) und rechts der Stand (16), darunter drei goldene Pfeile zum
+Abheben mit der Menge als Stapelzahl (21-23), unten Abbauen (34, mit Baurecht) und Schliessen (35)."""
 
 
 def einzahlen_tipp(kugeln, bloecke):
@@ -451,8 +452,8 @@ def szene_einzahlen(e, t, d):
         stand, kugeln, bloecke = 57, 87, 3
     else:
         stand, kugeln, bloecke = 195, 0, 0
-    tipps = {4: konto(stand, kugeln, bloecke), 10: einzahlen_tipp(kugeln, bloecke)}
-    halte = [(.3, 1.0, 4), (2.4, 3.1, 10), (4.8, 5.8, 4)]
+    tipps = {13: konto(stand, kugeln, bloecke), 4: einzahlen_tipp(kugeln, bloecke)}
+    halte = [(.3, 1.0, 13), (2.4, 3.1, 4), (4.8, 5.8, 13)]
     buehne(e, GX, GB, ein, seed=33, breite=7)
     if t < 1.3:
         golem(e, "fgolem_greet", t, GX, GB, GG, ein, schleife=False)
@@ -462,8 +463,8 @@ def szene_einzahlen(e, t, d):
         golem(e, "fgolem_idle", t, GX, GB, GG, ein)
     if t >= EIN_1:
         funkenkranz(e, *maul(GX, GB, GG), t, EIN_1 + .1, radius=40, n=6, farbe=ROSA, groesse=14)
-    menue_mit_zeiger(e, t, TITEL, 3, MENUE, tipps, halte, MX, MY, MS, ein)
-    slot_klick(e, t, EIN_1, 10, ein)
+    menue_mit_zeiger(e, t, TITEL, MENUE_REIHEN, MENUE, tipps, halte, MX, MY, MS, ein)
+    slot_klick(e, t, EIN_1, 4, ein)
     chat(e, 110, 905, chatzeilen([(EIN_1 + .1, "§d138 Mana §7eingezahlt. Konto: §d195 Mana")]), t, 3, ein)
 
 
@@ -473,15 +474,15 @@ AB_1, AB_2 = 3.6, 5.4
 def szene_abheben(e, t, d):
     ein = aus_kubisch(phase(t, 0, .4))
     stand = 195 if t < AB_1 else 131 if t < AB_2 else 115
-    tipps = {12: abheben_tipp(1), 13: abheben_tipp(16), 14: abheben_tipp(64), 4: konto(stand, 0, 0)}
-    halte = [(.3, .9, 12), (2.4, 3.0, 14), (4.4, 4.9, 13)]
+    tipps = {21: abheben_tipp(1), 22: abheben_tipp(16), 23: abheben_tipp(64), 13: konto(stand, 0, 0)}
+    halte = [(.3, .9, 21), (2.4, 3.0, 23), (4.4, 4.9, 22)]
     buehne(e, GX, GB, ein, seed=33, breite=7)
     golem(e, "fgolem_idle", t, GX, GB, GG, ein)
     hotbar(e, ({1: mc.icon16("mana_orb")} if t >= AB_1 + .2 else {}) |
            ({2: mc.icon16("mana_orb")} if t >= AB_2 + .2 else {}), ein * aus_kubisch(phase(t, .6, 1.0)))
-    menue_mit_zeiger(e, t, TITEL, 3, MENUE, tipps, halte, MX, MY, MS, ein)
-    slot_klick(e, t, AB_1, 14, ein)
-    slot_klick(e, t, AB_2, 13, ein)
+    menue_mit_zeiger(e, t, TITEL, MENUE_REIHEN, MENUE, tipps, halte, MX, MY, MS, ein)
+    slot_klick(e, t, AB_1, 23, ein)
+    slot_klick(e, t, AB_2, 22, ein)
     chat(e, 110, 905, chatzeilen([(AB_1 + .1, "§f64× Mana-Kugel §7abgehoben (§d-64 Mana§7). Konto: §d131 Mana"),
                                   (AB_2 + .1, "§f16× Mana-Kugel §7abgehoben (§d-16 Mana§7). Konto: §d115 Mana")]),
          t, 3, ein)

@@ -60,16 +60,18 @@ Der **Golem auf deinem Luftschiff** ist ein anderer: Er öffnet den [Skilltree](
 
 Ein **Rechtsklick** irgendwo auf den Golem öffnet sein Menü, und er grüßt dich. Auf fremden Inseln brauchst du dafür das Recht **Behälter**, Besucher dürfen ihn nicht benutzen.
 
-Das Menü hat drei Reihen:
+Das Menü hat vier Reihen. In der Mitte steht dein Konto: Von oben zahlst du ein, unten hebst du ab.
 
 ```
- .  .  .  .  K  .  .  .  .      K  dein Mana
- .  E  .  1 16 64  .  G  .      E  Alles einzahlen   1 16 64  Kugeln abheben   G  Stand des Golems
+ .  .  .  .  E  .  .  .  .      E  Alles einzahlen
+ .  .  .  .  K  .  .  G  .      K  dein Mana   G  Stand des Golems
+ .  .  .  1 16 64  .  .  .      1 16 64  Kugeln abheben
  .  .  .  .  .  .  .  A  S      A  Abbauen   S  Schließen
 ```
 
-* **Oben – dein Mana** (die rosa Kugel): dein Kontostand, wie viele Mana-Kugeln und Mana-Blöcke du dabeihast, wie viele Kugeln du selbst abgebaut und noch nicht eingezahlt hast und wie viele fremde Kugeln heute noch gehen.
-* **Mitte:** links **Alles einzahlen** (grüner Pfeil), daneben **1, 16 oder 64 Kugeln abheben** (goldene Pfeile) und rechts der **Stand** des Golems (Zahnrad).
+* **Oben – Alles einzahlen:** der grüne Pfeil, der nach unten in dein Konto zeigt.
+* **Zweite Reihe – dein Mana** (die rosa Kugel): dein Kontostand, wie viele Mana-Kugeln und Mana-Blöcke du dabeihast, wie viele Kugeln du selbst abgebaut und noch nicht eingezahlt hast und wie viele fremde Kugeln heute noch gehen. Rechts daneben der **Stand** des Golems (Zahnrad).
+* **Dritte Reihe – Abheben:** drei goldene Pfeile für **1, 16 oder 64 Kugeln**.
 * **Unten:** **Abbauen** – nur mit dem Recht **Bauen** – und **Schließen**.
 
 Solange das Menü offen ist, zeigt es alles live. Gehst du weiter als 8 Blöcke weg, schließt es sich.

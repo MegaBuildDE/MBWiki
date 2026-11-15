@@ -60,16 +60,18 @@ The **golem on your airship** is a different one: it opens the [skill tree](skil
 
 A **right-click** anywhere on the golem opens its menu, and it greets you. On other islands you need the **Containers** right for that; visitors can't use it.
 
-The menu has three rows:
+The menu has four rows. Your account sits in the middle: you deposit from above and withdraw below.
 
 ```
- .  .  .  .  M  .  .  .  .      M  your Mana
- .  D  .  1 16 64  .  G  .      D  Deposit everything   1 16 64  withdraw orbs   G  golem status
+ .  .  .  .  D  .  .  .  .      D  Deposit everything
+ .  .  .  .  M  .  .  G  .      M  your Mana   G  golem status
+ .  .  .  1 16 64  .  .  .      1 16 64  withdraw orbs
  .  .  .  .  .  .  .  X  C      X  Dismantle   C  Close
 ```
 
-* **Top – your Mana** (the pink orb): your balance, how many Mana orbs and Mana Blocks you carry, how many orbs you mined yourself and haven't deposited yet, and how many foreign orbs you can still deposit today.
-* **Middle:** on the left **Deposit everything** (green arrow), next to it **withdraw 1, 16 or 64 orbs** (gold arrows) and on the right the golem's **status** (cogwheel).
+* **Top – Deposit everything:** the green arrow pointing down into your account.
+* **Second row – your Mana** (the pink orb): your balance, how many Mana orbs and Mana Blocks you carry, how many orbs you mined yourself and haven't deposited yet, and how many foreign orbs you can still deposit today. To the right, the golem's **status** (cogwheel).
+* **Third row – Withdraw:** three gold arrows for **1, 16 or 64 orbs**.
 * **Bottom:** **Dismantle** – only with the **Build** right – and **Close**.
 
 While the menu is open, everything in it updates live. If you walk more than 8 blocks away, it closes.
