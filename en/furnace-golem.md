@@ -60,27 +60,46 @@ The **golem on your airship** is a different one: it opens the [skill tree](skil
 
 A **right-click** anywhere on the golem opens its menu, and it greets you. On other islands you need the **Containers** right for that; visitors can't use it.
 
-* **Top:** your Mana account, how many Mana orbs and Mana Blocks you carry, how many orbs you mined yourself and haven't deposited yet, and how many foreign orbs you can still deposit today.
-* **Second row – Deposit** (green buttons): one orb, a stack, all orbs, one Mana Block or all Mana Blocks. The number on the button shows how many one click deposits right now.
-* **Third row – Withdraw** (gold buttons): 1, 16 or 64 orbs.
-* **Bottom:** the **Mana shards** in the chests within its reach – if there's none, the card tells you where one goes –, its **Work** – who built it, how far the shard is and why it's taking a break – and the **Daily limit**. Plus **Dismantle** and **Close**.
+The menu has three rows:
+
+```
+ .  .  .  .  M  .  .  .  .      M  your Mana
+ .  D  .  1 16 64  .  G  .      D  Deposit everything   1 16 64  withdraw orbs   G  golem status
+ .  .  .  .  .  .  .  X  C      X  Dismantle   C  Close
+```
+
+* **Top – your Mana** (the pink orb): your balance, how many Mana orbs and Mana Blocks you carry, how many orbs you mined yourself and haven't deposited yet, and how many foreign orbs you can still deposit today.
+* **Middle:** on the left **Deposit everything** (green arrow), next to it **withdraw 1, 16 or 64 orbs** (gold arrows) and on the right the golem's **status** (cogwheel).
+* **Bottom:** **Dismantle** – only with the **Build** right – and **Close**.
+
+While the menu is open, everything in it updates live. If you walk more than 8 blocks away, it closes.
 
 ### Deposit
 
-A Mana orb is **1 Mana**, a Mana Block **17 Mana**. The Mana goes into your account right away, and the golem is happy for you.
+One click on **Deposit everything** takes all **Mana orbs** and then all **Mana Blocks** out of your inventory and puts them into your account. A Mana orb is **1 Mana**, a Mana Block **17 Mana**. Before you click, the button already shows how many orbs and blocks you carry and how much Mana that makes. The Mana goes into your account right away, and the golem is happy for you.
 
 * **Survival mode only.**
 * **Orbs you mined yourself** always go in completely, even if you only drop by every few days.
-* **Foreign orbs** – from other players – go in up to **100 a day**. A Mana Block counts as 17. Anything above that stays in your inventory, and a chat line tells you how much and why.
+* **Foreign orbs** – from other players – go in up to **100 a day**. A Mana Block counts as 17, and the golem only takes whole blocks. Anything above that stays in your inventory, and a chat line tells you how much and why.
 * There's no command for depositing – you go to the golem for that.
 
 ### Withdraw
 
-Here you get Mana from your account back as **Mana orbs** (1, 16 or 64) – for example for a new golem or to craft a [Mobplate](mobplates.md). **You can't withdraw Mana Blocks** – if you need one, craft it from 8 orbs and a Mana Charge.
+The three gold arrows bring **1, 16 or 64 Mana orbs** from your account into your inventory – for example for a new golem or to craft a [Mobplate](mobplates.md). The number on the arrow shows how many orbs one click gives you right now. **You can't withdraw Mana Blocks** – if you need one, craft it from 8 orbs and a Mana Charge.
 
-* **Survival mode only**, and only as much as fits into your inventory and your account covers.
+* **Survival mode only**, and only as much as fits into your inventory and your account covers. If your inventory is full or your Mana isn't enough, the arrow tells you.
 * Withdrawing has **no daily limit**.
 * Orbs you withdraw count as **mined by you**: if you deposit them again, they don't count towards the limit for foreign orbs. If you give them away, they're foreign orbs for the receiver.
+
+### The golem's status
+
+The **cogwheel** on the right shows you at a glance what the golem is doing:
+
+* **At the top** it says “Golem is working”, “Golem is ready” or “Golem is paused”.
+* **While it works,** a bar shows how far the shard is and how long it still takes. **When it's paused,** you see why: no chest within reach, no shard in the chests, or the daily limit is reached – then also at what time it carries on.
+* How many **shards are in the chests** next to it. If no chest stands in the right place, the button tells you where one goes.
+* How many shards were baked **today**, for example “Today: 7/20 shards” – the [daily limit](#how-it-bakes) counts for all of the builder's golems together.
+* Plus what it makes – **1 Mana per shard in 2:00** –, that the Mana goes to the **builder**, even while offline, and that the golem only works **while the island is loaded**.
 
 ## The Mana Geode
 
@@ -120,7 +139,7 @@ Put a **chest**, a **trapped chest** or a **barrel** exactly **two blocks** away
 * You can put a chest on all four sides – if one is empty, it fetches the shards from the next.
 * If sand or gravel falls between it and the chest, clear it away – otherwise it can't get there.
 
-If no chest stands in the right place, its menu says at the shards: “No chest and no barrel within reach. Put one two blocks from him, at his height, with the space in between free.”
+If no chest stands in the right place, it takes a break, and the [status in its menu](#the-golems-status) tells you: “No chest within reach.” – and below: “Put a chest two blocks from him, at his height, with the space in between free.”
 
 ### How it bakes
 
@@ -133,7 +152,7 @@ If no chest stands in the right place, its menu says at the shards: “No chest 
 * Anyone who may open the chest may put shards into it – the Mana always goes to the builder.
 ## Dismantling
 
-Click **Dismantle** in the menu and confirm.
+Click **Dismantle** at the bottom of the menu and confirm.
 
 * Only with the **Build** right, not as a visitor, and in survival or creative mode.
 * In survival mode you get the **head, furnace and Mana Block** back.

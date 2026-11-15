@@ -60,27 +60,46 @@ Der **Golem auf deinem Luftschiff** ist ein anderer: Er öffnet den [Skilltree](
 
 Ein **Rechtsklick** irgendwo auf den Golem öffnet sein Menü, und er grüßt dich. Auf fremden Inseln brauchst du dafür das Recht **Behälter**, Besucher dürfen ihn nicht benutzen.
 
-* **Oben:** dein Mana-Konto, wie viele Mana-Kugeln und Mana-Blöcke du dabeihast, wie viele Kugeln du selbst abgebaut und noch nicht eingezahlt hast und wie viele fremde Kugeln heute noch gehen.
-* **Zweite Reihe – Einzahlen** (grüne Knöpfe): eine Kugel, einen Stapel, alle Kugeln, einen Mana-Block oder alle Mana-Blöcke. Die Zahl auf dem Knopf zeigt, wie viele ein Klick gerade einzahlt.
-* **Dritte Reihe – Abheben** (goldene Knöpfe): 1, 16 oder 64 Kugeln.
-* **Unten:** die **Mana-Scherben** in den Truhen in seiner Reichweite – steht keine da, sagt dir die Karte, wohin eine gehört –, seine **Arbeit** – wer ihn gebaut hat, wie weit die Scherbe ist und warum er gerade Pause macht – und das **Tageslimit**. Dazu **Abbauen** und **Schließen**.
+Das Menü hat drei Reihen:
+
+```
+ .  .  .  .  K  .  .  .  .      K  dein Mana
+ .  E  .  1 16 64  .  G  .      E  Alles einzahlen   1 16 64  Kugeln abheben   G  Stand des Golems
+ .  .  .  .  .  .  .  A  S      A  Abbauen   S  Schließen
+```
+
+* **Oben – dein Mana** (die rosa Kugel): dein Kontostand, wie viele Mana-Kugeln und Mana-Blöcke du dabeihast, wie viele Kugeln du selbst abgebaut und noch nicht eingezahlt hast und wie viele fremde Kugeln heute noch gehen.
+* **Mitte:** links **Alles einzahlen** (grüner Pfeil), daneben **1, 16 oder 64 Kugeln abheben** (goldene Pfeile) und rechts der **Stand** des Golems (Zahnrad).
+* **Unten:** **Abbauen** – nur mit dem Recht **Bauen** – und **Schließen**.
+
+Solange das Menü offen ist, zeigt es alles live. Gehst du weiter als 8 Blöcke weg, schließt es sich.
 
 ### Einzahlen
 
-Eine Mana-Kugel ist **1 Mana**, ein Mana-Block **17 Mana**. Das Mana kommt sofort auf dein Konto, und der Golem freut sich mit dir.
+Ein Klick auf **Alles einzahlen** nimmt alle **Mana-Kugeln** und danach alle **Mana-Blöcke** aus deinem Inventar und schreibt sie dir aufs Konto. Eine Mana-Kugel ist **1 Mana**, ein Mana-Block **17 Mana**. Schon vor dem Klick zeigt dir der Knopf, wie viele Kugeln und Blöcke du dabeihast und wie viel Mana das bringt. Das Mana kommt sofort auf dein Konto, und der Golem freut sich mit dir.
 
 * **Nur im Überlebensmodus.**
 * **Selbst abgebaute Kugeln** zahlst du immer ganz ein, auch wenn du nur alle paar Tage vorbeikommst.
-* **Fremde Kugeln** – von anderen Spielern – gehen bis **100 am Tag**. Ein Mana-Block zählt dabei 17. Was darüber liegt, bleibt in deinem Inventar, und eine Chatzeile sagt dir, wie viel und warum.
+* **Fremde Kugeln** – von anderen Spielern – gehen bis **100 am Tag**. Ein Mana-Block zählt dabei 17, und der Golem nimmt nur ganze Blöcke. Was darüber liegt, bleibt in deinem Inventar, und eine Chatzeile sagt dir, wie viel und warum.
 * Einen Befehl zum Einzahlen gibt es nicht – dafür gehst du zum Golem.
 
 ### Abheben
 
-Mana von deinem Konto bekommst du hier als **Mana-Kugeln** (1, 16 oder 64) zurück – zum Beispiel für einen neuen Golem oder um eine [Mobplate](mobplates.md) zu craften. **Mana-Blöcke gibt es beim Abheben nicht** – brauchst du einen, craftest du ihn aus 8 Kugeln und einer Mana-Ladung.
+Mit den drei goldenen Pfeilen holst du **1, 16 oder 64 Mana-Kugeln** von deinem Konto ins Inventar – zum Beispiel für einen neuen Golem oder um eine [Mobplate](mobplates.md) zu craften. Die Zahl auf dem Pfeil zeigt, wie viele Kugeln ein Klick gerade bringt. **Mana-Blöcke gibt es beim Abheben nicht** – brauchst du einen, craftest du ihn aus 8 Kugeln und einer Mana-Ladung.
 
-* **Nur im Überlebensmodus**, und nur so viel, wie in dein Inventar passt und dein Konto hergibt.
+* **Nur im Überlebensmodus**, und nur so viel, wie in dein Inventar passt und dein Konto hergibt. Ist dein Inventar voll oder reicht dein Mana nicht, sagt es dir der Pfeil.
 * Abheben hat **kein Tageslimit**.
 * Abgehobene Kugeln zählen bei dir als **selbst abgebaut**: Zahlst du sie wieder ein, landen sie nicht im Limit für fremde Kugeln. Gibst du sie weiter, sind sie für den Empfänger fremde Kugeln.
+
+### Der Stand des Golems
+
+Das **Zahnrad** rechts zeigt dir auf einen Blick, was der Golem gerade macht:
+
+* **Oben** steht „Golem arbeitet“, „Golem ist bereit“ oder „Golem macht Pause“.
+* **Arbeitet er,** siehst du einen Balken, wie weit die Scherbe ist, und wie lange es noch dauert. **Macht er Pause,** steht der Grund da: keine Truhe in Reichweite, keine Scherbe in den Truhen oder das Tageslimit ist erreicht – dann auch, um wie viel Uhr er weitermacht.
+* Wie viele **Scherben in den Truhen** neben ihm liegen. Steht keine Truhe richtig, sagt dir der Knopf, wohin eine gehört.
+* Wie viele Scherben **heute** verbacken sind, zum Beispiel „Heute: 7/20 Scherben“ – das [Tageslimit](#so-backt-er) gilt für alle Golems des Erbauers zusammen.
+* Dazu, was er bringt – **1 Mana je Scherbe in 2:00** –, dass das Mana an den **Erbauer** geht, auch wenn er offline ist, und dass der Golem nur arbeitet, **solange die Insel geladen ist**.
 
 ## Die Mana-Geode
 
@@ -120,7 +139,7 @@ Stell eine **Truhe**, eine **Redstone-Truhe** oder ein **Fass** genau **zwei Bl�
 * Du kannst auf allen vier Seiten eine Truhe aufstellen – ist eine leer, holt er sich die Scherben aus der nächsten.
 * Fällt Sand oder Kies zwischen ihn und die Truhe, räum ihn weg – sonst kommt er nicht hin.
 
-Steht keine Truhe richtig, zeigt sein Menü bei den Scherben: „Keine Truhe und kein Fass in Reichweite. Stell eine zwei Blöcke neben ihn, auf seine Höhe, den Platz dazwischen frei.“
+Steht keine Truhe richtig, macht er Pause, und der [Stand in seinem Menü](#der-stand-des-golems) sagt dir: „Keine Truhe in Reichweite.“ – darunter: „Stell eine Truhe zwei Blöcke neben ihn, auf seine Höhe, den Platz dazwischen frei.“
 
 ### So backt er
 
@@ -133,7 +152,7 @@ Steht keine Truhe richtig, zeigt sein Menü bei den Scherben: „Keine Truhe und
 * Scherben hineinlegen darf jeder, der an die Truhe darf – das Mana geht immer an den Erbauer.
 ## Abbauen
 
-Im Menü auf **Abbauen** klicken und bestätigen.
+Im Menü unten auf **Abbauen** klicken und bestätigen.
 
 * Nur mit dem Recht **Bauen**, nicht als Besucher, und im Überlebens- oder Kreativmodus.
 * Im Überlebensmodus bekommst du **Kopf, Ofen und Mana-Block** zurück.
