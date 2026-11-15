@@ -156,7 +156,7 @@ The special quests and Mala's introduction only happen on islands you belong to:
 
 ## Coming back later
 
-The next time you log in, you land straight on your island if it's running. Otherwise you arrive in the lobby and enter your island via `/sky` → **Join Island**.
+The next time you log in, you land straight on your island if it's running. If it's asleep, you arrive in the lobby, and the lobby wakes it right away. Once it's ready, click **[To your island]** in the chat to go there. If you were on your island last time and haven't chosen anything else in the lobby, you're even sent back automatically. More under [Waking up your island](island.md#waking-up-your-island).
 
 ## Next
 

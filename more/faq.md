@@ -103,6 +103,14 @@ Gib in der Lobby `/sky` ein, wähle **Skyblock erstellen** und such dir einen **
 
 <details>
 
+<summary>Warum lande ich beim Einloggen in der Lobby statt auf meiner Insel?</summary>
+
+Deine Insel schläft, wenn eine Weile niemand auf ihr war. Die Lobby weckt sie, sobald du ankommst – in der ActionBar steht dann „Deine Insel wird geweckt“. Ist sie bereit, bringt dich ein Klick auf **[Zur Insel]** im Chat hin. Warst du zuletzt auf deiner Insel und hast in der Lobby nichts anderes gewählt, geht es sogar von selbst zurück – [mehr dazu](../sb/insel.md#deine-insel-wird-geweckt).
+
+</details>
+
+<details>
+
 <summary>Kann ich mein Startbiom später ändern?</summary>
 
 Nein. Alle anderen Biome kannst du aber im Skilltree mit Mana freischalten.

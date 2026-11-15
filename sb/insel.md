@@ -25,7 +25,7 @@ Um deine Startinsel herum wächst beim Erkunden eine ganze Inselwelt:
 {% tab title="In der Lobby" %}
 | Menüpunkt | Was du dort machst |
 | --------- | ------------------ |
-| **Insel betreten** | Zu deiner Insel reisen. Läuft sie gerade nicht, wird sie gestartet |
+| **Insel betreten** | Zu deiner Insel reisen. Schläft sie gerade, wird sie geweckt |
 | **Verwaltung** | Inselname ändern (3–20 Zeichen), Server-Info, Statistiken, **Server löschen** |
 | **Mitglieder** | Spieler einladen und Rechte vergeben |
 | **Statistiken** | Deine Werte, Toplisten und das ganze Netzwerk |
@@ -57,8 +57,20 @@ Den Skilltree öffnet auch ein Klick auf den **Golem** auf deinem Luftschiff.
 * **Zur Insel:** In der Lobby `/sky` → **Insel betreten**. Zu Inseln, auf denen du Mitglied bist: `/sky` → **Geteilte Server**.
 * **Besuchen:** Mit `/sky visit <Name>` auf die Insel eines anderen Spielers, auf einer Insel auch über `/sky` → **Reisen**. Hast du dort keinen Zugang, schaust du zu, wenn die Insel das erlaubt – siehe [Reisen & Zuschauen](reisen.md). **Dein Inventar reist mit** – Endertruhe und Level bleiben auf jeder Insel für sich.
 * **Zurück in die Lobby:** `/hub` (auch `/lobby`).
-* **Wiederkommen:** Beim nächsten Einloggen landest du direkt auf deiner Insel, wenn sie gerade läuft. Sonst kommst du in die Lobby.
+* **Wiederkommen:** Läuft deine Insel gerade, landest du beim Einloggen direkt auf ihr. Sonst kommst du in die Lobby, und die Lobby [weckt deine Insel](#deine-insel-wird-geweckt) sofort.
 * **Auf der Insel unterwegs:** Mit den [Warpetts](warpetts.md) – dein erstes Paar verbindet Startinsel und Luftschiff.
+
+## Deine Insel wird geweckt
+
+Ist eine Weile niemand auf deiner Insel, schläft sie. Kommst du dann in die Lobby, weckt die Lobby sie sofort – du musst dafür nichts tun.
+
+* **Während sie aufwacht,** steht in der ActionBar „Deine Insel wird geweckt“, dazu wechselnde Zeilen wie „Mala weckt die Crew“ oder „Wind füllt die Segel“. Du kannst dich in der Lobby frei bewegen.
+* **Ist sie bereit,** schreibt dir der Chat „Deine Insel ist bereit – **[Zur Insel]**“. Ein Klick auf **[Zur Insel]** bringt dich hin, der Knopf funktioniert 15 Minuten lang. Auf **Bedrock** gibt es keinen Knopf – gib dann `/sky` ein und wähle **Insel betreten**.
+* **Von selbst zurück:** Warst du beim letzten Mal auf deiner eigenen Insel und hast in der Lobby seitdem nichts anderes gewählt – kein Menü geöffnet, keinen Befehl getippt, keine Figur angeklickt –, schickt dich die Lobby zurück, sobald die Insel bereit ist.
+* **Selbst klicken geht auch:** Wählst du währenddessen `/sky` → **Insel betreten**, bringt dich das hin, sobald die Insel bereit ist.
+* **Alle Plätze belegt?** Dann heißt es „Gerade sind alle Plätze belegt. Versuch es in einer Minute noch einmal.“
+
+Geweckt wird nur deine **eigene** Insel. Zu Inseln, auf denen du Mitglied bist, kommst du wie bisher über `/sky` → **Geteilte Server**. Archivierte Clan-Inseln und Inseln, deren Aufbau zuletzt gescheitert ist, weckt die Lobby nicht von selbst.
 
 ## Sterben
 

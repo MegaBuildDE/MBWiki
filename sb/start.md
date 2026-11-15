@@ -156,7 +156,7 @@ Die Sonderquests und Malas Vorstellung gibt es nur auf Inseln, zu denen du gehö
 
 ## Später wiederkommen
 
-Beim nächsten Einloggen landest du direkt auf deiner Insel, wenn sie gerade läuft. Sonst kommst du in die Lobby und betrittst deine Insel über `/sky` → **Insel betreten**.
+Läuft deine Insel gerade, landest du beim nächsten Einloggen direkt auf ihr. Schläft sie, kommst du in die Lobby, und die Lobby weckt sie sofort. Ist sie bereit, bringt dich ein Klick auf **[Zur Insel]** im Chat hin. Warst du zuletzt auf deiner Insel und hast in der Lobby nichts anderes gewählt, geht es sogar von selbst zurück. Mehr dazu unter [Deine Insel wird geweckt](insel.md#deine-insel-wird-geweckt).
 
 ## Weiter
 

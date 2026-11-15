@@ -25,7 +25,7 @@ As you explore, a whole island world grows around your starting island:
 {% tab title="In the lobby" %}
 | Menu item | What you do there |
 | --------- | ----------------- |
-| **Join Island** | Travel to your island. If it isn't running, it gets started |
+| **Join Island** | Travel to your island. If it's asleep, it gets woken up |
 | **Management** | Rename your island (3–20 characters), server info, statistics, **Delete the server** |
 | **Members** | Invite players and assign rights |
 | **Statistics** | Your stats, leaderboards and the whole network |
@@ -57,8 +57,20 @@ Clicking the **Golem** on your airship also opens the skill tree.
 * **To your island:** In the lobby, `/sky` → **Join Island**. To islands you're a member of: `/sky` → **Shared Servers**.
 * **Visiting:** With `/sky visit <name>` to another player's island, on an island also through `/sky` → **Travel**. If you have no access there, you watch if the island allows it – see [Travel & Watching](travel.md). **Your inventory travels with you** – ender chest and levels stay on each island.
 * **Back to the lobby:** `/hub` (or `/lobby`).
-* **Coming back:** The next time you log in, you land straight on your island if it's running. Otherwise you arrive in the lobby.
+* **Coming back:** If your island is running, you land straight on it when you log in. Otherwise you arrive in the lobby, and the lobby [wakes your island](#waking-up-your-island) right away.
 * **Getting around on the island:** With the [Warpetts](warpetts.md) – your first pair connects your starting island and the airship.
+
+## Waking up your island
+
+If nobody has been on your island for a while, it falls asleep. When you then arrive in the lobby, the lobby wakes it right away – you don't have to do anything.
+
+* **While it wakes up,** your action bar shows “Waking up your island”, followed by changing lines like “Mala wakes the crew” or “Wind fills the sails”. You can move around the lobby freely.
+* **Once it's ready,** the chat says “Your island is ready – **[To your island]**”. Click **[To your island]** to go there – the button works for 15 minutes. **Bedrock** has no button – type `/sky` and choose **Join Island** instead.
+* **Back by itself:** If you were on your own island last time and haven't chosen anything else in the lobby since – no menu opened, no command typed, no character clicked – the lobby sends you back as soon as your island is ready.
+* **Clicking yourself works too:** If you choose `/sky` → **Join Island** in the meantime, that takes you there as soon as your island is ready.
+* **All places taken?** Then you'll read “All places are taken right now. Please try again in a minute.”
+
+Only your **own** island is woken up. To islands you're a member of, you go as before via `/sky` → **Shared Servers**. Archived clan islands and islands whose last build failed aren't woken up by the lobby on its own.
 
 ## Dying
 

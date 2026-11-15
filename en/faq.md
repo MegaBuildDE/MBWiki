@@ -103,6 +103,14 @@ Type `/sky` in the lobby, select **Create Skyblock** and pick a **crystal** – 
 
 <details>
 
+<summary>Why do I land in the lobby instead of on my island when I log in?</summary>
+
+Your island falls asleep when nobody has been on it for a while. The lobby wakes it as soon as you arrive – your action bar then shows “Waking up your island”. Once it's ready, click **[To your island]** in the chat to go there. If you were on your island last time and haven't chosen anything else in the lobby, you're even sent back automatically – [more about it](island.md#waking-up-your-island).
+
+</details>
+
+<details>
+
 <summary>Can I change my starting biome later?</summary>
 
 No. But you can unlock all other biomes with Mana in the skill tree.
