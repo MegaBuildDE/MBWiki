@@ -204,6 +204,14 @@ header.header {
 	}
 }
 
+/* Handy: Starlight lässt neben dem Suchfeld nur 5rem für „Cancel“.
+   „Abbrechen“ ist breiter und lag sonst auf dem Rand des Feldes. */
+@media (max-width: 49.99rem) {
+	#starlight__search {
+		--sl-search-cancel-space: 6.5rem;
+	}
+}
+
 .header .social-icons::after {
 	border-inline-end-color: var(--sl-color-hairline-light);
 	height: 1.5rem;
