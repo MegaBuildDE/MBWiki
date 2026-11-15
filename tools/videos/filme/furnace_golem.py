@@ -9,7 +9,8 @@ Stufen zu je rund 10 Minuten. Seit 10.11.: Arme wieder seitlich (Pool 52240277),
 ein Block frei, und die Truhe steht zwei Bloecke neben ihm; er geht mit walk drei Viertel eines
 Blocks hin, greift mit take_shard hinein (Deckel auf und zu, rosa Staub) und geht zurueck
 (Zeitplan GolemRules.TRIP_*, 60 Ticks). Nur rosa Effekte (nichts Brennendes), Abheben nur als
-Kugeln, Plaketten statt Items im Menue. Menue und Chat aus lang/de.yml (menu.furnace-golem.*,
+Kugeln, Plaketten statt Items im Menue. Seit 15.11.2026 (MBSkyManager 5373a172) hat das Menue drei
+Reihen: Alles einzahlen, 1/16/64 Kugeln abheben, Stand des Golems. Menue und Chat aus lang/de.yml (menu.furnace-golem.*,
 furnace-golem.*), Tageswechsel aus quests.reset (4 Uhr). Die Figur kommt aus modelle.py
 (fgolem_*), die Bloecke als eigene Iso-Wuerfel aus den Texturen des Manager-Packs und des
 Client-Jars. Mala erklaert jede Szene (nur Deutsch).
@@ -35,7 +36,7 @@ from mobplates import Z, flug, hand, hotbar, hotbar_mitte, jar, werkbank, werkba
 PINK = (255, 105, 200)
 ROSA = (255, 190, 235)
 ERBAUER = "Alex"
-TITEL = "§d§lFurnace Golem"
+TITEL = "§b§lFurnace Golem"  # seit 15.11.2026 aqua wie die anderen Menues
 
 
 # ── Bloecke als Iso-Wuerfel ─────────────────────────────────────────────────
@@ -337,15 +338,24 @@ def kristall(e, stufe, s, alpha, riss=-1):
 # ── Menue ───────────────────────────────────────────────────────────────────
 
 MX, MY, MS = 870, 250, 4
-def menue(kugeln, bloecke):
-    """Slots wie im Spiel seit 09.11.2026: gruene Plaketten zum Einzahlen, goldene zum Abheben, die
-    Menge als Stapelzahl (hoechstens 64, ohne Items 1). Abheben nur noch als Kugeln."""
-    def n(x):
-        return max(1, min(64, x))
-    return {4: "mana", 10: "golem_deposit", 11: "golem_in_one", 12: ("golem_in_stack", n(kugeln)),
-            13: ("golem_in_all", n(kugeln)), 15: "golem_in_block", 16: ("golem_in_blocks", n(bloecke)),
-            19: "golem_withdraw", 20: "golem_out_one", 21: ("golem_out_some", 16), 22: ("golem_out_stack", 64),
-            29: "mana_shard", 31: "golem_work", 33: "golem_daily", 40: "golem_dismantle", 44: "close"}
+MENUE = {4: "mana", 10: "golem_deposit", 12: "golem_withdraw", 13: ("golem_withdraw", 16),
+         14: ("golem_withdraw", 64), 16: "golem_work", 25: "golem_dismantle", 26: "close"}
+"""Slots wie im Spiel seit 15.11.2026 (gui/FurnaceGolemMenu): oben das Konto, in der Mitte Alles
+einzahlen (10), drei goldene Pfeile zum Abheben mit der Menge als Stapelzahl (12-14) und der Stand
+(16), unten Abbauen (25, mit Baurecht) und Schliessen (26)."""
+
+
+def einzahlen_tipp(kugeln, bloecke):
+    if kugeln or bloecke:
+        return ("§aAlles einzahlen", f"§7Mana-Kugeln: §f{kugeln}", f"§7Mana-Blöcke: §f{bloecke}",
+                f"§7+§f{kugeln + 17 * bloecke}§7 Mana aufs Konto", "§8Klick zum Einzahlen")
+    return ("§aAlles einzahlen", "§7Keine Mana-Kugeln und keine", "§7Mana-Blöcke im Inventar.",
+            "§8Mana-Erz lässt Kugeln fallen.")
+
+
+def abheben_tipp(n):
+    return (f"§6{n} Kugel{'n' if n > 1 else ''} abheben", f"§7Du bekommst §f{n}× Mana-Kugel",
+            f"§7-§f{n}§7 Mana vom Konto", "§8Klick zum Abheben")
 
 
 def konto(stand, kugeln, bloecke):
@@ -431,7 +441,7 @@ def szene_bauen(e, t, d):
         ein * aus_kubisch(phase(t, 7.0, 7.4)))
 
 
-EIN_1, EIN_2 = 3.7, 5.6
+EIN_1 = 3.7
 GX, GB, GG = 1810, 850, 250  # Golem unten rechts, unter den Tooltips
 
 
@@ -439,36 +449,22 @@ def szene_einzahlen(e, t, d):
     ein = aus_kubisch(phase(t, 0, .4))
     if t < EIN_1:
         stand, kugeln, bloecke = 57, 87, 3
-    elif t < EIN_2:
-        stand, kugeln, bloecke = 144, 0, 3
     else:
         stand, kugeln, bloecke = 195, 0, 0
-    tipps = {4: konto(stand, kugeln, bloecke),
-             13: ("§aAlle Kugeln einzahlen", "§7Alle Kugeln aus deinem Inventar", "§7+§f87§7 Mana aufs Konto",
-                  "§8Klick zum Einzahlen") if t < EIN_1 else
-             ("§aAlle Kugeln einzahlen", "§7Du hast keine Mana-Kugeln dabei.", "§8Mana-Erz lässt sie fallen."),
-             16: ("§aAlle Mana-Blöcke einzahlen", "§7Alle Blöcke aus deinem Inventar", "§7+§f51§7 Mana aufs Konto",
-                  "§8Klick zum Einzahlen") if t < EIN_2 else
-             ("§aAlle Mana-Blöcke einzahlen", "§7Du hast keine Mana-Blöcke dabei.", "§88 Kugeln um eine Mana-Ladung",
-              "§8ergeben einen Block.")}
-    halte = [(.3, 1.0, 4), (2.5, 3.1, 13), (4.5, 5.0, 16)]
+    tipps = {4: konto(stand, kugeln, bloecke), 10: einzahlen_tipp(kugeln, bloecke)}
+    halte = [(.3, 1.0, 4), (2.4, 3.1, 10), (4.8, 5.8, 4)]
     buehne(e, GX, GB, ein, seed=33, breite=7)
     if t < 1.3:
         golem(e, "fgolem_greet", t, GX, GB, GG, ein, schleife=False)
     elif EIN_1 <= t < EIN_1 + 1.0:
         golem(e, "fgolem_happy", t - EIN_1, GX, GB, GG, ein, schleife=False)
-    elif EIN_2 <= t < EIN_2 + 1.0:
-        golem(e, "fgolem_happy", t - EIN_2, GX, GB, GG, ein, schleife=False)
     else:
         golem(e, "fgolem_idle", t, GX, GB, GG, ein)
-    for t0 in (EIN_1, EIN_2):
-        if t >= t0:
-            funkenkranz(e, *maul(GX, GB, GG), t, t0 + .1, radius=40, n=6, farbe=ROSA, groesse=14)
-    menue_mit_zeiger(e, t, TITEL, 5, menue(kugeln, bloecke), tipps, halte, MX, MY, MS, ein)
-    slot_klick(e, t, EIN_1, 13, ein)
-    slot_klick(e, t, EIN_2, 16, ein)
-    chat(e, 110, 905, chatzeilen([(EIN_1 + .1, "§d87 Mana §7eingezahlt. Konto: §d144 Mana"),
-                                  (EIN_2 + .1, "§d51 Mana §7eingezahlt. Konto: §d195 Mana")]), t, 3, ein)
+    if t >= EIN_1:
+        funkenkranz(e, *maul(GX, GB, GG), t, EIN_1 + .1, radius=40, n=6, farbe=ROSA, groesse=14)
+    menue_mit_zeiger(e, t, TITEL, 3, MENUE, tipps, halte, MX, MY, MS, ein)
+    slot_klick(e, t, EIN_1, 10, ein)
+    chat(e, 110, 905, chatzeilen([(EIN_1 + .1, "§d138 Mana §7eingezahlt. Konto: §d195 Mana")]), t, 3, ein)
 
 
 AB_1, AB_2 = 3.6, 5.4
@@ -477,19 +473,15 @@ AB_1, AB_2 = 3.6, 5.4
 def szene_abheben(e, t, d):
     ein = aus_kubisch(phase(t, 0, .4))
     stand = 195 if t < AB_1 else 131 if t < AB_2 else 115
-    tipps = {19: ("§6Abheben", "§7Mana vom Konto zurück", "§7als Mana-Kugeln", "§8Nur so viel, wie ins Inventar passt"),
-             22: ("§664 Kugeln abheben", "§7Du bekommst §f64× Mana-Kugel", "§7-§f64§7 Mana vom Konto", "§8Klick zum Abheben"),
-             21: ("§616 Kugeln abheben", "§7Du bekommst §f16× Mana-Kugel", "§7-§f16§7 Mana vom Konto",
-                  "§8Klick zum Abheben"),
-             4: konto(stand, 0, 0)}
-    halte = [(.3, .9, 19), (2.4, 3.0, 22), (4.4, 4.9, 21)]
+    tipps = {12: abheben_tipp(1), 13: abheben_tipp(16), 14: abheben_tipp(64), 4: konto(stand, 0, 0)}
+    halte = [(.3, .9, 12), (2.4, 3.0, 14), (4.4, 4.9, 13)]
     buehne(e, GX, GB, ein, seed=33, breite=7)
     golem(e, "fgolem_idle", t, GX, GB, GG, ein)
     hotbar(e, ({1: mc.icon16("mana_orb")} if t >= AB_1 + .2 else {}) |
            ({2: mc.icon16("mana_orb")} if t >= AB_2 + .2 else {}), ein * aus_kubisch(phase(t, .6, 1.0)))
-    menue_mit_zeiger(e, t, TITEL, 5, menue(0, 0), tipps, halte, MX, MY, MS, ein)
-    slot_klick(e, t, AB_1, 22, ein)
-    slot_klick(e, t, AB_2, 21, ein)
+    menue_mit_zeiger(e, t, TITEL, 3, MENUE, tipps, halte, MX, MY, MS, ein)
+    slot_klick(e, t, AB_1, 14, ein)
+    slot_klick(e, t, AB_2, 13, ein)
     chat(e, 110, 905, chatzeilen([(AB_1 + .1, "§f64× Mana-Kugel §7abgehoben (§d-64 Mana§7). Konto: §d131 Mana"),
                                   (AB_2 + .1, "§f16× Mana-Kugel §7abgehoben (§d-16 Mana§7). Konto: §d115 Mana")]),
          t, 3, ein)
@@ -672,8 +664,10 @@ def szene_limit(e, t, d):
                         breite=40, seed=7 + i, farben=(MANA_DIM,))
             sx, sy = kopf(cx, boden, 280)
             zzz(e, sx + 50, sy + 7, t, ein * aus_kubisch(phase(t, RUHE + .6, RUHE + 1.0)))
-    tip = ("§bTageslimit", f"§7Heute: §f{heute}§7/§f20 §7Scherben", f"§8Gilt für alle Golems von {ERBAUER}.",
-           "§8Neues Limit um 04:00 Uhr.")
+    # Der Stand-Knopf des Menues (seit 15.11.2026 statt der Karte Tageslimit)
+    stand_ = ("§aGolem arbeitet",) if heute < 20 else \
+        ("§eGolem macht Pause", "§7Tageslimit erreicht,", "§7weiter um §f04:00§7 Uhr.")
+    tip = stand_ + (f"§7Heute: §f{heute}§7/§f20 §7Scherben", f"§8Limit für alle Golems von {ERBAUER}")
     mc.einfuegen(e, mc.tooltip_bild(tip, 3), 1120, 160, ein * aus_kubisch(phase(t, .3, .7)))
     mct(e, 900, 870, "§7Ruhe bis zum §fTageswechsel", 4, ein * aus_kubisch(phase(t, RUHE + 1.6, RUHE + 2.0)))
 
@@ -733,9 +727,9 @@ SZENEN = [
          zeichne=szene_bauen, ton=[(t0, "sfx:pop", .8) for t0, _ in BAU] + [(FERTIG, "sfx:funkeln"), (FERTIG + .5, "sfx:erfolg", .6)]
          + erzaehlt(.4, "furnace_golem-bauen")),
     dict(dauer=8.6, nr="03", kicker="Menü", titel="Mana aufs Konto",
-         text="Rechtsklick öffnet sein Menü. Kugeln und Mana-Blöcke zahlst du dort ein, ein Block zählt 17 Mana.",
-         zeichne=szene_einzahlen, ton=[(EIN_1, "sfx:klick"), (EIN_1 + .1, "sfx:funkeln", .6), (EIN_2, "sfx:klick"),
-                                       (EIN_2 + .1, "sfx:funkeln", .6)] + erzaehlt(.4, "furnace_golem-einzahlen")),
+         text="Rechtsklick öffnet sein Menü. Ein Klick zahlt alle Kugeln und Mana-Blöcke ein, ein Block zählt 17 Mana.",
+         zeichne=szene_einzahlen, ton=[(EIN_1, "sfx:klick"), (EIN_1 + .1, "sfx:funkeln", .6)]
+         + erzaehlt(.4, "furnace_golem-einzahlen")),
     dict(dauer=7.6, nr="04", kicker="Abheben", titel="Mana zurück in die Hand",
          text="Nur als Mana-Kugeln, so viel ins Inventar passt. Abheben ist nicht begrenzt.",
          zeichne=szene_abheben, ton=[(AB_1, "sfx:klick"), (AB_1 + .2, "sfx:pop", .5), (AB_2, "sfx:klick"),
