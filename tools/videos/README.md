@@ -27,6 +27,16 @@ python3 bauen.py clans --hoch build/discord   # zusätzlich scharfe Fassung (crf
 
 Ein Film braucht auf einem M-Mac rund eine Minute (`--teile` Worker parallel, Vorgabe: Kerne minus eins).
 
+**Titelbild vorn:** Jeder Film im Wiki beginnt mit seinem Cover (1,2 s, dann Blende), das zugleich das Bild auf der Seite ist – auf Deutsch wie auf Englisch:
+
+```bash
+python3 bauen.py start --sprache en --hoch build/hoch    # scharfe Fassung nach build/hoch/start-en.mp4
+python3 cover.py --sprache en start                      # build/cover/start-en.jpg
+python3 cover.py --sprache en --vorne build/hoch start   # Cover vor build/hoch/start-en.mp4
+```
+
+Danach `build/hoch/<film>[-en].mp4` und `build/cover/<film>[-en].jpg` nach `.gitbook/assets/videos/` kopieren. Ohne `--sprache` dasselbe für die deutsche Fassung.
+
 **Achtung beim Neubauen:** `bauen.py` schreibt immer auch `<film>.jpg` neu, als Standbild aus dem Film. Bei Filmen, deren Seite ein Cover aus `cover.py` zeigt (z. B. Furnace Golem), ist das Cover danach weg. Danach `git restore .gitbook/assets/videos/<film>.jpg`, wenn das Cover bleiben soll.
 
 ## Was gebraucht wird

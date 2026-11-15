@@ -7,8 +7,10 @@ Die Figuren kommen gross gerendert aus modelle.py:
     python3 modelle.py --groesse 1536 goblin_cover shroom_cover golem_cover mala_cover warpett_cover forest_cover \\
         fgolem_cover
     python3 cover.py [film ...]          -> build/cover/<film>.jpg
+    python3 cover.py --sprache en [film ...]   -> build/cover/<film>-en.jpg (englische Texte)
     python3 cover.py --vorne ORDNER      Cover als erste Sekunde vor ORDNER/<film>.mp4 setzen
                                          (Discord zeigt das erste Bild als Vorschau)
+    python3 cover.py --sprache en --vorne ORDNER   dasselbe fuer ORDNER/<film>-en.mp4
 """
 import os
 import subprocess
@@ -16,8 +18,9 @@ import sys
 
 from PIL import Image
 
+import basis
 import mc
-from basis import (SPRITES, BLENDE, WORTMARKE, av, funkeln, glanz,
+from basis import (L, SPRITES, BLENDE, WORTMARKE, av, funkeln, glanz,
                    skaliert, wappen_bei)
 
 HIER = os.path.dirname(os.path.abspath(__file__))
@@ -66,7 +69,7 @@ def rahmen():
 def abschluss(f):
     mc.einfuegen(f, WORTMARKE, 40, 22, .95)
     # Hinweis unten links: Mala erklaert, also mit Ton
-    av(f, "Mala erklärt  ·  Ton an", TEXT_X, 960, 32, "demi", (255, 222, 130), schatten=.5)
+    av(f, L("Mala erklärt  ·  Ton an", "Sound on"), TEXT_X, 960, 32, "demi", (255, 222, 130), schatten=.5)
     return f
 
 
@@ -75,8 +78,10 @@ def bewohner():
     licht(f, 1420, 560, 620, (120, 255, 160), 120)
     figur(f, "shroom_cover", 15, 1790, 500, 500, spiegeln=True)
     figur(f, "goblin_cover", 10, 1430, 200, 1050)
-    text(f, "KI-BEWOHNER", ["Deine Insel", "lebt"], "Nachbarn, die mit dir reden",
-         ["Goblins und Shroomlinge im Chat", "Vertrauen aufbauen und handeln", "Forestlinge und ihr Segen"])
+    text(f, L("KI-BEWOHNER", "AI RESIDENTS"), L(["Deine Insel", "lebt"], ["Your island", "is alive"]),
+         L("Nachbarn, die mit dir reden", "Neighbours who talk to you"),
+         L(["Goblins und Shroomlinge im Chat", "Vertrauen aufbauen und handeln", "Forestlinge und ihr Segen"],
+           ["Goblins and Shroomlings in chat", "Build trust and trade", "Forestlings and their blessing"]))
     return abschluss(f)
 
 
@@ -89,8 +94,10 @@ def skilltree():
         skaliert(f, orb, cx, cy, g)
     for cx, cy, g in ((960, 250, 26), (1850, 520, 22), (1690, 140, 30), (1110, 600, 18)):
         funkeln(f, cx, cy, g, 1.0)
-    text(f, "SKILLTREE", ["Mana &", "Biome"], "So wächst deine Inselwelt",
-         ["Mana verdienen: Quests, Votes, Erz", "Acht Kristall-Pfade im Skilltree", "Biomquest, dann neues Biom"])
+    text(f, L("SKILLTREE", "SKILL TREE"), L(["Mana &", "Biome"], ["Mana &", "biomes"]),
+         L("So wächst deine Inselwelt", "How your island world grows"),
+         L(["Mana verdienen: Quests, Votes, Erz", "Acht Kristall-Pfade im Skilltree", "Biomquest, dann neues Biom"],
+           ["Earn Mana: quests, votes, ore", "Eight crystal paths in the skill tree", "Biome quest, then a new biome"]))
     return abschluss(f)
 
 
@@ -103,8 +110,9 @@ def clans():
     for cx, cy, g in ((1180, 300, 28), (1690, 330, 24), (1880, 900, 22), (1010, 950, 20)):
         funkeln(f, cx, cy, g, 1.0)
     av(f, "NBW", 1415, 870, 96, "heavy", (85, 255, 85), schatten=.6, anker="m")
-    text(f, "CLANSYSTEM", ["Clans"], "Gemeinsam mehr erreichen",
-         ["Kürzel, Farbe und Wappen", "Clan-Chat über alle Server", "Wochenauftrag und Clan-Stufen"])
+    text(f, L("CLANSYSTEM", "CLAN SYSTEM"), ["Clans"], L("Gemeinsam mehr erreichen", "Achieve more together"),
+         L(["Kürzel, Farbe und Wappen", "Clan-Chat über alle Server", "Wochenauftrag und Clan-Stufen"],
+           ["Tag, colour and crest", "Clan chat across all servers", "Weekly task and clan levels"]))
     return abschluss(f)
 
 
@@ -113,8 +121,9 @@ def start():
     licht(f, 1400, 560, 640, (255, 160, 240), 130)
     figur(f, "warpett_cover", 0, 1800, 600, 440)
     figur(f, "mala_cover", 20, 1460, 170, 1100)
-    text(f, "DEIN START", ["Dein Start"], "Von der Lobby bis zur Insel",
-         ["Startbiom wählen", "Mit Mala im Luftschiff", "Der erste Bewohner"])
+    text(f, L("DEIN START", "YOUR START"), L(["Dein Start"], ["Your start"]), L("Von der Lobby bis zur Insel", "From the lobby to your island"),
+         L(["Startbiom wählen", "Mit Mala im Luftschiff", "Der erste Bewohner"],
+           ["Choose your starting biome", "With Mala in the airship", "Your first resident"]))
     return abschluss(f)
 
 
@@ -131,8 +140,9 @@ def mobplates():
         skaliert(f, plate(name), cx, cy, g)
     for cx, cy, g in ((1180, 170, 28), (1640, 150, 24), (1880, 540, 22), (960, 560, 20)):
         funkeln(f, cx, cy, g, 1.0)
-    text(f, "MOBPLATES", ["Mobs", "einfangen"], "Und woanders wieder freisetzen",
-         ["Leere Plate craften", "Mob markieren und besiegen", "127 Plates, vom Huhn bis zum Enderman"])
+    text(f, "MOBPLATES", L(["Mobs", "einfangen"], ["Catch", "mobs"]), L("Und woanders wieder freisetzen", "And release them somewhere else"),
+         L(["Leere Plate craften", "Mob markieren und besiegen", "127 Plates, vom Huhn bis zum Enderman"],
+           ["Craft an empty plate", "Mark the mob and defeat it", "127 plates, from chicken to Enderman"]))
     return abschluss(f)
 
 
@@ -145,8 +155,9 @@ def forestlinge():
         skaliert(f, apfel, cx, cy, g)
     for cx, cy, g in ((960, 230, 26), (1860, 520, 22), (1690, 140, 30), (1080, 620, 18)):
         funkeln(f, cx, cy, g, 1.0)
-    text(f, "FORESTLINGE", ["Forestlinge"], "Kleine Waldelfen mit einem Segen",
-         ["Segen gegen Mana und einen Mana-Apfel", "Sprünge von Insel zu Insel", "Mit der Mobplate mitnehmen"])
+    text(f, L("FORESTLINGE", "FORESTLINGS"), L(["Forestlinge"], ["Forestlings"]), L("Kleine Waldelfen mit einem Segen", "Little forest elves with a blessing"),
+         L(["Segen gegen Mana und einen Mana-Apfel", "Sprünge von Insel zu Insel", "Mit der Mobplate mitnehmen"],
+           ["A blessing for Mana and a Mana Apple", "Jumps from island to island", "Take one along in a Mobplate"]))
     return abschluss(f)
 
 
@@ -161,8 +172,9 @@ def furnace_golem():
         skaliert(f, bild, cx, cy, g)
     for cx, cy, g in ((960, 210, 26), (1885, 660, 22), (1640, 130, 30), (1100, 600, 18)):
         funkeln(f, cx, cy, g, 1.0)
-    text(f, "FURNACE GOLEM", ["Furnace", "Golem"], "Mana einzahlen, Scherben verbacken",
-         ["Mana ein- und abheben", "Mana-Scherben aus der Geode", "1 Mana je Scherbe, 20 am Tag"])
+    text(f, "FURNACE GOLEM", ["Furnace", "Golem"], L("Mana einzahlen, Scherben verbacken", "Deposit Mana, bake shards"),
+         L(["Mana ein- und abheben", "Mana-Scherben aus der Geode", "1 Mana je Scherbe, 20 am Tag"],
+           ["Deposit and withdraw Mana", "Mana Shards from the geode", "1 Mana per shard, 20 a day"]))
     return abschluss(f)
 
 
@@ -192,16 +204,24 @@ def vorne(ordner, name):
 
 
 def main():
-    if sys.argv[1:2] == ["--vorne"]:
-        ordner = sys.argv[2]
-        for name in sys.argv[3:] or list(COVER):
-            if any(os.path.isfile(os.path.join(ordner, name + e)) for e in (".mp4", ".ohne-cover.mp4")):
-                vorne(ordner, name)
+    """Mit --sprache en (an beliebiger Stelle) englische Cover: <film>-en.jpg, und --vorne
+    setzt sie vor <film>-en.mp4 – wie die Dateinamen von bauen.py."""
+    args = sys.argv[1:]
+    if "--sprache" in args:
+        i = args.index("--sprache")
+        basis.SPRACHE = args[i + 1]
+        del args[i:i + 2]
+    endung = "" if basis.SPRACHE == "de" else "-" + basis.SPRACHE
+    if args[:1] == ["--vorne"]:
+        ordner = args[1]
+        for name in args[2:] or list(COVER):
+            if any(os.path.isfile(os.path.join(ordner, name + endung + e)) for e in (".mp4", ".ohne-cover.mp4")):
+                vorne(ordner, name + endung)
         return
-    namen = sys.argv[1:] or list(COVER)
+    namen = args or list(COVER)
     os.makedirs(ZIEL, exist_ok=True)
     for name in namen:
-        pfad = os.path.join(ZIEL, name + ".jpg")
+        pfad = os.path.join(ZIEL, name + endung + ".jpg")
         COVER[name]().convert("RGB").save(pfad, quality=92)
         print(pfad)
 

@@ -7,7 +7,7 @@ icon: house-user
 
 # AI Residents
 
-<figure><img src="../.gitbook/assets/videos/bewohner-en.jpg" alt="Residents chopping, harvesting, forging, resting and sleeping"><figcaption><p>From the video “Your island is alive”</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/videos/bewohner-en.jpg" alt="Cover of the video “Your island is alive” with a Goblin and a Shroomling"><figcaption><p>The video “Your island is alive” – sound on</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/bewohner-en.mp4" %}
 **Video: Your island is alive** (1:23, with sound) – AI residents and Forestlings, introduced by Mala.

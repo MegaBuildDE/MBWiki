@@ -7,7 +7,7 @@ icon: rocket
 
 # Getting Started
 
-<figure><img src="../.gitbook/assets/videos/start-en.jpg" alt="Mala and an AI resident on the meeting island"><figcaption><p>From the video "Your start"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/videos/start-en.jpg" alt="Cover of the video “Your start” with Mala and a Warpett"><figcaption><p>The video “Your start” – sound on</p></figcaption></figure>
 
 {% file src="../.gitbook/assets/videos/start-en.mp4" %}
 **Video: Your start** (1:35, with sound) – Mala takes you from the lobby to your first resident.
