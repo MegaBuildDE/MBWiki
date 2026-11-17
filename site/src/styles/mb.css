@@ -498,6 +498,14 @@ header.header {
 	image-rendering: pixelated;
 }
 
+/* Pixel-Icons in Tabellen (z. B. Pets) behalten ihre Größe, statt von der Spalte gestaucht zu werden */
+.sl-markdown-content td > img.mb-pixel {
+	max-width: none;
+}
+.sl-markdown-content tr:has(> td > img.mb-pixel) > td {
+	vertical-align: middle;
+}
+
 /* Ein Inventarplatz: dunkel, mit Pixelkante wie im Spiel */
 .mb-slot {
 	--mb-slot-size: var(--mb-slot, 3rem);

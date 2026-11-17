@@ -134,5 +134,5 @@
 		},
 		"mobplates/alle.png": { "gallery": "mobplates" }
 	},
-	"pixelated": ["mana/", "feder/", "mobplates/"]
+	"pixelated": ["mana/", "feder/", "mobplates/", "pets/"]
 }

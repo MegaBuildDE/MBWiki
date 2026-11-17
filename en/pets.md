@@ -68,50 +68,31 @@ With `/pet hide` or under **Settings** you hide other players' pets. The setting
 
 ## All pets
 
-Every pet has a **rarity**. You buy pets and skins in the [shop](https://shop.megabuild.de/).
+Every pet has a **rarity**, and the rarity sets the price. You buy pets and skins in the [shop](https://shop.megabuild.de/).
 
-{% tabs %}
-{% tab title="Common" %}
-| Pet | What it's like | Price |
-| --- | -------------- | ----- |
-| **Capybara** | Calm itself. Likes to sit next to you and watch. | free for everyone |
+| Icon | Pet | Rarity | Price | What it's like |
+| ---- | --- | ------ | ----- | -------------- |
+| <img src="../.gitbook/assets/pets/pet_capybara.png" alt="Capybara" width="64" height="64"> | **Capybara** | Common | free | Calm itself. Likes to sit next to you and watch. |
+| <img src="../.gitbook/assets/pets/pet_alpaca.png" alt="Alpaca" width="64" height="64"> | **Alpaca** | Rare | €4.99 | A ball of wool on four legs that likes to carry things for you. |
+| <img src="../.gitbook/assets/pets/pet_pelican.png" alt="Pelican" width="64" height="64"> | **Pelican** | Rare | €4.99 | More fits into its throat pouch than you would think. |
+| <img src="../.gitbook/assets/pets/pet_hedgehog.png" alt="Hedgehog" width="64" height="64"> | **Hedgehog** | Rare | €4.99 | Trots after you sniffing and rolls up into a spiky ball. |
+| <img src="../.gitbook/assets/pets/pet_flamingo.png" alt="Flamingo" width="64" height="64"> | **Flamingo** | Rare | €4.99 | Long legs, long strides. Likes to stand on one leg while waiting. |
+| <img src="../.gitbook/assets/pets/pet_penguin.png" alt="Penguin" width="64" height="64"> | **Penguin** | Rare | €4.99 | Waddles after you everywhere. |
+| <img src="../.gitbook/assets/pets/pet_raccoon.png" alt="Raccoon" width="64" height="64"> | **Raccoon** | Rare | €4.99 | Curious to the tip of its tail. Collects anything that glitters. |
+| <img src="../.gitbook/assets/pets/pet_red_panda.png" alt="Red Panda" width="64" height="64"> | **Red Panda** | Rare | €4.99 | Climbs everything and still always comes down gently. |
+| <img src="../.gitbook/assets/pets/pet_toucan.png" alt="Toucan" width="64" height="64"> | **Toucan** | Rare | €4.99 | Picks up whatever lies around with its big, colourful beak. |
+| <img src="../.gitbook/assets/pets/pet_dragonfly.png" alt="Dragonfly" width="64" height="64"> | **Dragonfly** | Rare | €4.99 | An emperor dragonfly in blue and green that shimmers in the light. |
+| <img src="../.gitbook/assets/pets/pet_frog.png" alt="Tree Frog" width="64" height="64"> | **Tree Frog** | Rare | €4.99 | Leaps on long hind legs and croaks with its throat sac. |
+| <img src="../.gitbook/assets/pets/pet_llama_dolly.png" alt="Llama Dolly" width="64" height="64"> | **Llama Dolly** | Epic | €6.99 | Proud, fluffy and always ready to carry your luggage. |
+| <img src="../.gitbook/assets/pets/pet_peacock.png" alt="Peacock" width="64" height="64"> | **Peacock** | Epic | €6.99 | Fans its tail as soon as anyone looks. |
+| <img src="../.gitbook/assets/pets/pet_dog.png" alt="Dog as a Corgi" width="64" height="64"> | **Dog** | Epic | €6.99 | Goes for walks with you, fetches and sits up. The base model is a Corgi. |
+| <img src="../.gitbook/assets/pets/pet_falcon.png" alt="Falcon" width="64" height="64"> | **Falcon** | Epic | €6.99 | Swoops down from above and brings back whatever it finds. |
+| <img src="../.gitbook/assets/pets/pet_wolf_pup.png" alt="Wolf Pup" width="64" height="64"> | **Wolf Pup** | Epic | €6.99 | Howls at the moon, chases its own tail and brings you what lies around. |
+| <img src="../.gitbook/assets/pets/pet_fawn.png" alt="Fawn" width="64" height="64"> | **Fawn** | Legendary | €9.99 | Trots with high knees, listens to the forest and curls up to sleep. |
+| <img src="../.gitbook/assets/pets/pet_otter.png" alt="Otter" width="64" height="64"> | **Otter** | Legendary | €9.99 | Bounds along, shakes itself dry and juggles a pebble. |
+| <img src="../.gitbook/assets/pets/pet_hummingbird.png" alt="Hummingbird" width="64" height="64"> | **Hummingbird** | Legendary | €9.99 | Hovers in place, darts forward and sips nectar mid-air. |
 
 More common pets are meant to come later with the [quests](quests.md).
-{% endtab %}
-
-{% tab title="Rare · €4.99" %}
-| Pet | What it's like |
-| --- | -------------- |
-| **Alpaca** | A ball of wool on four legs that likes to carry things for you. |
-| **Pelican** | More fits into its throat pouch than you would think. |
-| **Hedgehog** | Trots after you sniffing and rolls up into a spiky ball. |
-| **Flamingo** | Long legs, long strides. Likes to stand on one leg while waiting. |
-| **Penguin** | Waddles after you everywhere. |
-| **Raccoon** | Curious to the tip of its tail. Collects anything that glitters. |
-| **Red Panda** | Climbs everything and still always comes down gently. |
-| **Toucan** | Picks up whatever lies around with its big, colourful beak. |
-| **Dragonfly** | An emperor dragonfly in blue and green that shimmers in the light. |
-| **Tree Frog** | Leaps on long hind legs and croaks with its throat sac. |
-{% endtab %}
-
-{% tab title="Epic · €6.99" %}
-| Pet | What it's like |
-| --- | -------------- |
-| **Llama Dolly** | Proud, fluffy and always ready to carry your luggage. |
-| **Peacock** | Fans its tail as soon as anyone looks. |
-| **Dog** | Goes for walks with you, fetches and sits up. The base model is a Corgi. |
-| **Falcon** | Swoops down from above and brings back whatever it finds. |
-| **Wolf Pup** | Howls at the moon, chases its own tail and brings you what lies around. |
-{% endtab %}
-
-{% tab title="Legendary · €9.99" %}
-| Pet | What it's like |
-| --- | -------------- |
-| **Fawn** | Trots with high knees, listens to the forest and curls up to sleep. |
-| **Otter** | Bounds along, shakes itself dry and juggles a pebble. |
-| **Hummingbird** | Hovers in place, darts forward and sips nectar mid-air. |
-{% endtab %}
-{% endtabs %}
 
 {% hint style="info" %}
 **As of November 2026.** Prices may change – the [shop](https://shop.megabuild.de/) always has the final word.
@@ -121,11 +102,13 @@ More common pets are meant to come later with the [quests](quests.md).
 
 A skin gives your pet a different look. It only changes the look, nothing else. Every skin costs **€1.99**.
 
-| Pet | Skins |
-| --- | ----- |
-| **Capybara** | Baby, Ginger, Yuzu |
-| **Llama Dolly** | Jolly |
-| **Dog** | Golden Retriever |
+| Icon | Skin | For the pet | Price |
+| ---- | ---- | ----------- | ----- |
+| <img src="../.gitbook/assets/pets/pet_capybara_baby.png" alt="Capybara with the Baby skin" width="64" height="64"> | **Baby** | Capybara | €1.99 |
+| <img src="../.gitbook/assets/pets/pet_capybara_ginger.png" alt="Capybara with the Ginger skin" width="64" height="64"> | **Ginger** | Capybara | €1.99 |
+| <img src="../.gitbook/assets/pets/pet_capybara_yuzu.png" alt="Capybara with the Yuzu skin" width="64" height="64"> | **Yuzu** | Capybara | €1.99 |
+| <img src="../.gitbook/assets/pets/pet_llama_jolly.png" alt="Llama Dolly with the Jolly skin" width="64" height="64"> | **Jolly** | Llama Dolly | €1.99 |
+| <img src="../.gitbook/assets/pets/pet_dog_golden.png" alt="Dog with the Golden Retriever skin" width="64" height="64"> | **Golden Retriever** | Dog | €1.99 |
 
 For the **Dog**, the breeds are skins: you have one dog and make it a Corgi or a Golden Retriever. In the shop, pets with skins say **"Customize this pet with skins"**.
 

@@ -68,50 +68,31 @@ Mit `/pet hide` oder unter **Einstellungen** blendest du die Pets anderer Spiele
 
 ## Alle Pets
 
-Jedes Pet hat eine **Seltenheit**. Pets und Skins kaufst du im [Shop](https://shop.megabuild.de/).
+Jedes Pet hat eine **Seltenheit**, und die bestimmt den Preis. Pets und Skins kaufst du im [Shop](https://shop.megabuild.de/).
 
-{% tabs %}
-{% tab title="Gewöhnlich" %}
-| Pet | So ist es | Preis |
-| --- | --------- | ----- |
-| **Capybara** | Die Ruhe selbst. Sitzt am liebsten neben dir und schaut zu. | gratis für alle |
+| Bild | Pet | Seltenheit | Preis | So ist es |
+| ---- | --- | ---------- | ----- | --------- |
+| <img src="../.gitbook/assets/pets/pet_capybara.png" alt="Capybara" width="64" height="64"> | **Capybara** | Gewöhnlich | gratis | Die Ruhe selbst. Sitzt am liebsten neben dir und schaut zu. |
+| <img src="../.gitbook/assets/pets/pet_alpaca.png" alt="Alpaka" width="64" height="64"> | **Alpaka** | Selten | 4,99 € | Ein Wollknäuel auf vier Beinen, das gern etwas für dich trägt. |
+| <img src="../.gitbook/assets/pets/pet_pelican.png" alt="Pelikan" width="64" height="64"> | **Pelikan** | Selten | 4,99 € | In seinen Kehlsack passt mehr, als man denkt. |
+| <img src="../.gitbook/assets/pets/pet_hedgehog.png" alt="Igel" width="64" height="64"> | **Igel** | Selten | 4,99 € | Trippelt schnüffelnd hinter dir her und rollt sich zur Stachelkugel ein. |
+| <img src="../.gitbook/assets/pets/pet_flamingo.png" alt="Flamingo" width="64" height="64"> | **Flamingo** | Selten | 4,99 € | Lange Beine, große Schritte. Steht beim Warten gern auf einem Bein. |
+| <img src="../.gitbook/assets/pets/pet_penguin.png" alt="Pinguin" width="64" height="64"> | **Pinguin** | Selten | 4,99 € | Watschelt dir überallhin nach. |
+| <img src="../.gitbook/assets/pets/pet_raccoon.png" alt="Waschbär" width="64" height="64"> | **Waschbär** | Selten | 4,99 € | Neugierig bis in die Schwanzspitze. Sammelt alles, was glitzert. |
+| <img src="../.gitbook/assets/pets/pet_red_panda.png" alt="Roter Panda" width="64" height="64"> | **Roter Panda** | Selten | 4,99 € | Klettert auf alles und kommt trotzdem immer sanft wieder herunter. |
+| <img src="../.gitbook/assets/pets/pet_toucan.png" alt="Tukan" width="64" height="64"> | **Tukan** | Selten | 4,99 € | Pickt mit seinem großen, bunten Schnabel auf, was herumliegt. |
+| <img src="../.gitbook/assets/pets/pet_dragonfly.png" alt="Libelle" width="64" height="64"> | **Libelle** | Selten | 4,99 € | Eine Große Königslibelle in Blau und Grün, die im Licht schimmert. |
+| <img src="../.gitbook/assets/pets/pet_frog.png" alt="Laubfrosch" width="64" height="64"> | **Laubfrosch** | Selten | 4,99 € | Springt auf langen Hinterbeinen und quakt mit seinem Kehlsack. |
+| <img src="../.gitbook/assets/pets/pet_llama_dolly.png" alt="Lama Dolly" width="64" height="64"> | **Lama Dolly** | Episch | 6,99 € | Stolz, flauschig und immer bereit, dein Gepäck zu tragen. |
+| <img src="../.gitbook/assets/pets/pet_peacock.png" alt="Pfau" width="64" height="64"> | **Pfau** | Episch | 6,99 € | Schlägt sein Rad, sobald jemand hinschaut. |
+| <img src="../.gitbook/assets/pets/pet_dog.png" alt="Hund als Corgi" width="64" height="64"> | **Hund** | Episch | 6,99 € | Geht mit dir spazieren, apportiert und macht Männchen. Das Grundmodell ist ein Corgi. |
+| <img src="../.gitbook/assets/pets/pet_falcon.png" alt="Falke" width="64" height="64"> | **Falke** | Episch | 6,99 € | Stößt aus der Höhe herab und bringt dir zurück, was er findet. |
+| <img src="../.gitbook/assets/pets/pet_wolf_pup.png" alt="Wolfswelpe" width="64" height="64"> | **Wolfswelpe** | Episch | 6,99 € | Heult den Mond an, jagt seinen eigenen Schwanz und bringt dir, was herumliegt. |
+| <img src="../.gitbook/assets/pets/pet_fawn.png" alt="Rehkitz" width="64" height="64"> | **Rehkitz** | Legendär | 9,99 € | Trabt mit hohen Knien, lauscht in den Wald und rollt sich zum Schlafen ein. |
+| <img src="../.gitbook/assets/pets/pet_otter.png" alt="Otter" width="64" height="64"> | **Otter** | Legendär | 9,99 € | Galoppiert in Sprüngen, schüttelt sich trocken und jongliert einen Kiesel. |
+| <img src="../.gitbook/assets/pets/pet_hummingbird.png" alt="Kolibri" width="64" height="64"> | **Kolibri** | Legendär | 9,99 € | Schwirrt auf der Stelle, schießt ruckartig vor und trinkt Nektar im Schwebeflug. |
 
 Weitere gewöhnliche Pets sollen später mit den [Quests](../sb/quests.md) kommen.
-{% endtab %}
-
-{% tab title="Selten · 4,99 €" %}
-| Pet | So ist es |
-| --- | --------- |
-| **Alpaka** | Ein Wollknäuel auf vier Beinen, das gern etwas für dich trägt. |
-| **Pelikan** | In seinen Kehlsack passt mehr, als man denkt. |
-| **Igel** | Trippelt schnüffelnd hinter dir her und rollt sich zur Stachelkugel ein. |
-| **Flamingo** | Lange Beine, große Schritte. Steht beim Warten gern auf einem Bein. |
-| **Pinguin** | Watschelt dir überallhin nach. |
-| **Waschbär** | Neugierig bis in die Schwanzspitze. Sammelt alles, was glitzert. |
-| **Roter Panda** | Klettert auf alles und kommt trotzdem immer sanft wieder herunter. |
-| **Tukan** | Pickt mit seinem großen, bunten Schnabel auf, was herumliegt. |
-| **Libelle** | Eine Große Königslibelle in Blau und Grün, die im Licht schimmert. |
-| **Laubfrosch** | Springt auf langen Hinterbeinen und quakt mit seinem Kehlsack. |
-{% endtab %}
-
-{% tab title="Episch · 6,99 €" %}
-| Pet | So ist es |
-| --- | --------- |
-| **Lama Dolly** | Stolz, flauschig und immer bereit, dein Gepäck zu tragen. |
-| **Pfau** | Schlägt sein Rad, sobald jemand hinschaut. |
-| **Hund** | Geht mit dir spazieren, apportiert und macht Männchen. Das Grundmodell ist ein Corgi. |
-| **Falke** | Stößt aus der Höhe herab und bringt dir zurück, was er findet. |
-| **Wolfswelpe** | Heult den Mond an, jagt seinen eigenen Schwanz und bringt dir, was herumliegt. |
-{% endtab %}
-
-{% tab title="Legendär · 9,99 €" %}
-| Pet | So ist es |
-| --- | --------- |
-| **Rehkitz** | Trabt mit hohen Knien, lauscht in den Wald und rollt sich zum Schlafen ein. |
-| **Otter** | Galoppiert in Sprüngen, schüttelt sich trocken und jongliert einen Kiesel. |
-| **Kolibri** | Schwirrt auf der Stelle, schießt ruckartig vor und trinkt Nektar im Schwebeflug. |
-{% endtab %}
-{% endtabs %}
 
 {% hint style="info" %}
 **Stand: November 2026.** Preise können sich ändern – maßgeblich ist immer der [Shop](https://shop.megabuild.de/).
@@ -121,11 +102,13 @@ Weitere gewöhnliche Pets sollen später mit den [Quests](../sb/quests.md) komme
 
 Ein Skin gibt deinem Pet ein anderes Aussehen. Er ändert nur das Aussehen, sonst nichts. Jeder Skin kostet **1,99 €**.
 
-| Pet | Skins |
-| --- | ----- |
-| **Capybara** | Baby, Ingwer, Yuzu |
-| **Lama Dolly** | Jolly |
-| **Hund** | Golden Retriever |
+| Bild | Skin | Für das Pet | Preis |
+| ---- | ---- | ----------- | ----- |
+| <img src="../.gitbook/assets/pets/pet_capybara_baby.png" alt="Capybara im Skin Baby" width="64" height="64"> | **Baby** | Capybara | 1,99 € |
+| <img src="../.gitbook/assets/pets/pet_capybara_ginger.png" alt="Capybara im Skin Ingwer" width="64" height="64"> | **Ingwer** | Capybara | 1,99 € |
+| <img src="../.gitbook/assets/pets/pet_capybara_yuzu.png" alt="Capybara im Skin Yuzu" width="64" height="64"> | **Yuzu** | Capybara | 1,99 € |
+| <img src="../.gitbook/assets/pets/pet_llama_jolly.png" alt="Lama Dolly im Skin Jolly" width="64" height="64"> | **Jolly** | Lama Dolly | 1,99 € |
+| <img src="../.gitbook/assets/pets/pet_dog_golden.png" alt="Hund im Skin Golden Retriever" width="64" height="64"> | **Golden Retriever** | Hund | 1,99 € |
 
 Beim **Hund** sind die Rassen Skins: Du hast einen Hund und gestaltest ihn als Corgi oder als Golden Retriever. Im Shop steht bei Pets mit Skins **„Gestalte dieses Pet mit Skins“**.
 
