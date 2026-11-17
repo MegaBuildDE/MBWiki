@@ -120,7 +120,7 @@ Im öffentlichen Chat steht nur das farbige Kürzel.
 * **Besuchen:** In der Mitgliederliste des Clans ein Linksklick, oder `/clan visit <Name>` bzw. `/sky visit <Name>` – auch aus der Lobby.
 * **Zurück:** `/clan home` oder `/sky` → **Zur eigenen Insel**.
 * **Was du dort darfst,** stellt der Besitzer mit dem [Clan-Zugang](mitglieder.md#clan-und-freunde) ein: niemand, Besucher, Helfer oder Mitbauer. Neulinge kommen höchstens als Besucher. Steht er auf niemand, kommst du ohne anderen Zugang nur als [Zuschauer](reisen.md) hinein, wenn die Insel das erlaubt.
-* **Dein Inventar reist mit.** Was du auf einer anderen Insel findest, nimmst du mit nach Hause. Endertruhe und Level bleiben auf jeder Insel für sich.
+* **Dein Inventar reist mit.** Was du auf einer anderen Insel findest, nimmst du mit nach Hause. Auch deine [Enderkiste](../ag/rang.md#enderkiste) ist auf allen Inseln dieselbe. Nur die Level bleiben auf jeder Insel für sich.
 * **Treffpunkt:** `/clan meet` lädt deinen Clan mit einem Klick auf die Insel, auf der du gerade stehst. Hinein kommt nur, wer dort Zugang hat.
 
 Wer den Clan verlässt, verliert den Clan-Zugang sofort und wechselt in die Lobby – oder bleibt als [Zuschauer](reisen.md), wenn die Insel das erlaubt.

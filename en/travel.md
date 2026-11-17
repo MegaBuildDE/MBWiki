@@ -40,7 +40,7 @@ There's no travel menu in the lobby. There you travel with `/sky visit <name>`.
 
 If the island is asleep and you may only watch there, a line tells you that it's asleep right now. You can watch once someone is playing on it.
 
-**Your inventory travels with you** – ender chest and levels stay on each island.
+**Your inventory and your [ender chest](ranks.md#ender-chest) travel with you** – only levels stay on each island.
 
 ## Fellow player or spectator?
 

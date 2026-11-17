@@ -120,7 +120,7 @@ In the public chat, only the coloured tag shows.
 * **Visiting:** Left-click in the clan's member list, or `/clan visit <name>` or `/sky visit <name>` – from the lobby too.
 * **Back:** `/clan home` or `/sky` → **To your own island**.
 * **What you may do there** is set by the owner with the [clan access](members.md#clan-and-friends): nobody, Visitor, Helper or Builder. Recruits come in as visitors at most. If it's set to nobody and you have no other access, you only get in as a [spectator](travel.md), if the island allows it.
-* **Your inventory travels with you.** What you find on another island, you take home. Ender chest and levels stay on each island.
+* **Your inventory travels with you.** What you find on another island, you take home. Your [ender chest](ranks.md#ender-chest) is the same on every island too. Only levels stay on each island.
 * **Meeting point:** `/clan meet` invites your clan with one click to the island you're standing on. Only those with access there can come in.
 
 Anyone who leaves the clan loses clan access immediately and switches to the lobby – or stays as a [spectator](travel.md), if the island allows it.

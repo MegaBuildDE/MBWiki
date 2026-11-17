@@ -40,7 +40,7 @@ In der Lobby gibt es das Reisemenü nicht. Dort reist du mit `/sky visit <Name>`
 
 Schläft die Insel und darfst du dort nur zuschauen, sagt dir eine Zeile, dass sie gerade schläft. Zuschauen geht, sobald jemand auf ihr spielt.
 
-**Dein Inventar reist mit** – Endertruhe und Level bleiben auf jeder Insel für sich.
+**Dein Inventar und deine [Enderkiste](../ag/rang.md#enderkiste) reisen mit** – nur die Level bleiben auf jeder Insel für sich.
 
 ## Mitspieler oder Zuschauer?
 

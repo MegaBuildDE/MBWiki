@@ -73,6 +73,22 @@ Mana lässt sich nicht verschicken – nur Ruby.
 
 Nur auf den Inseln. Alle Befehle stehen unter [ChestShops](../sb/chestshop.md#befehle).
 
+## Rang-Befehle
+
+| Befehl | Rang | Was er macht |
+| ------ | ---- | ------------ |
+| `/craft` | Gold | Eine Werkbank ohne Block. Auch `/workbench`, `/wb` |
+| `/stonecutter` · `/loom` · `/cartography` | Platin | Steinsäge, Webstuhl oder Kartentisch ohne Block |
+| `/trash` | Gold | Der Mülleimer – weg ist nur, was du bestätigst |
+| `/trash undo` | Gold | Holt das zuletzt Weggeworfene 5 Minuten lang zurück |
+| `/ec` | Gold | Deine [Enderkiste](rang.md#enderkiste) von überall. Auch `/enderchest` |
+| `/ptime morning` · `noon` · `evening` · `night` | Platin | Deine eigene Uhrzeit – nur du siehst sie |
+| `/ptime <Uhrzeit>` | Titan | Jede Uhrzeit, zum Beispiel `/ptime 21:30` |
+| `/ptime freeze` | Titan | Deine Uhrzeit anhalten oder weiterlaufen lassen |
+| `/ptime reset` | Platin | Wieder die Uhrzeit der Insel |
+
+Auf allen Sky-Inseln, auch als Besucher – nicht in den 10 Sekunden nach einem Treffer und nicht als Kunde auf einem fremden Markt. Ein höherer Rang hat alles vom Rang darunter. Mehr dazu unter [Ränge](rang.md#vorteile-auf-den-sky-inseln).
+
 ## Freunde & Nachrichten
 
 | Befehl | Was er macht |
@@ -110,4 +126,5 @@ Nur auf den Inseln. Alle Befehle stehen unter [ChestShops](../sb/chestshop.md#be
 * [Nachrichten & Post](nachrichten.md)
 * [Mana & Ruby](../sb/eco.md)
 * [ChestShops](../sb/chestshop.md)
+* [Ränge](rang.md)
 * [Discord](discord.md)

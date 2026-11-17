@@ -72,7 +72,7 @@ Custom items are listed under their German names, even on an English client, and
 
 One click on an offer opens **Travel there?** – one more click on **Travel there** and you're on your way. You land right in front of the sign or at the market's arrival point.
 
-* **Your whole inventory travels with you.** Ender chest and levels stay on each island.
+* **Your whole inventory travels with you,** your [ender chest](ranks.md#ender-chest) too. Only levels stay on each island.
 * **Cooldown:** 20 seconds between two trips.
 * **You can't set off** if you took damage in the last 5 seconds, or while falling or gliding.
 * **Sleeping islands** aren't woken up. You'll read “This island is asleep right now” and try again later.

@@ -73,6 +73,22 @@ Mana can't be sent – only Ruby.
 
 Only on the islands. All commands are listed under [ChestShops](chestshop.md#commands).
 
+## Rank commands
+
+| Command | Rank | What it does |
+| ------- | ---- | ------------ |
+| `/craft` | Gold | A crafting table without a block. Also `/workbench`, `/wb` |
+| `/stonecutter` · `/loom` · `/cartography` | Platin | Stonecutter, loom or cartography table without a block |
+| `/trash` | Gold | The trash – only what you confirm is gone |
+| `/trash undo` | Gold | Gets back what you threw away last, for 5 minutes |
+| `/ec` | Gold | Your [ender chest](ranks.md#ender-chest) from anywhere. Also `/enderchest` |
+| `/ptime morning` · `noon` · `evening` · `night` | Platin | Your own time of day – only you see it |
+| `/ptime <time>` | Titan | Any time, for example `/ptime 21:30` |
+| `/ptime freeze` | Titan | Stop your time or let it run again |
+| `/ptime reset` | Platin | Back to the island's time |
+
+On all Sky islands, as a visitor too – not for 10 seconds after a hit and not as a customer on someone else's market. A higher rank has everything from the rank below. More under [Ranks](ranks.md#perks-on-the-sky-islands).
+
 ## Friends & messages
 
 | Command | What it does |
@@ -109,4 +125,5 @@ Only on the islands. All commands are listed under [ChestShops](chestshop.md#com
 * [Messages & Mail](messages.md)
 * [Mana & Ruby](economy.md)
 * [ChestShops](chestshop.md)
+* [Ranks](ranks.md)
 * [Discord](discord.md)

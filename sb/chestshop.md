@@ -68,7 +68,7 @@ In den Angebotslisten stehen nur Shops, an denen du gerade handeln kannst. Du ka
 
 Ein Klick auf ein Angebot öffnet **Hinreisen?** – mit einem weiteren Klick auf **Hinreisen** bist du unterwegs. Du landest direkt vor dem Schild oder am Ankunftspunkt des Marktes.
 
-* **Dein ganzes Inventar reist mit.** Endertruhe und Level bleiben auf jeder Insel für sich.
+* **Dein ganzes Inventar reist mit,** auch deine [Enderkiste](../ag/rang.md#enderkiste). Nur die Level bleiben auf jeder Insel für sich.
 * **Abklingzeit:** Zwischen zwei Reisen liegen 20 Sekunden.
 * **Nicht losreisen** kannst du, wenn du in den letzten 5 Sekunden Schaden bekommen hast, gerade fällst oder gleitest.
 * **Schlafende Inseln** werden nicht geweckt. Dann heißt es „Diese Insel schläft gerade“, und du versuchst es später noch einmal.
