@@ -95,7 +95,7 @@ Nebeninseln haben höchstens ein kleines Bauwerk. Dazu kommen die Häuser und La
 
 * **Wie oft:** In jedem Gebiet aus 5 × 5 Feldern (1.100 × 1.100 Blöcke) schwebt von jeder Art ein Portal – also etwa über jeder 25. Hauptinsel. Zwei Portale teilen sich nie eine Insel, und über der Startinsel steht keins.
 * **Wie weit:** Bis zum nächsten Portal einer Art fliegst du meist nur ein paar hundert Blöcke.
-* **Wie hoch:** rund 25 bis 30 Blöcke über der Hauptinsel. Hinauf kommst du wie zu jedem schwebenden Bauwerk – mit Blöcken oder Enderperlen.
+* **Wie hoch:** rund 20 bis 26 Blöcke über der Hauptinsel, gemessen bis zur Unterkante der Portalinsel. Hinauf kommst du wie zu jedem schwebenden Bauwerk – mit Blöcken oder Enderperlen.
 * **Ältere Portale:** Früher standen Nether- und Wasser-Portale unten auf der Hauptinsel. Die schon stehen, bleiben dort – in Gegenden, die du schon erkundet hast, findest du sie also auch am Boden.
 * **Abbauen:** Ein Portal baust du ab und um wie jeden anderen Inselblock, nach den Rechten der Insel. Von selbst verändert es sich samt seiner Insel aber nicht: Creeper sprengen nichts davon weg, Feuer verbrennt nichts, Wasser friert nicht zu, Kies und Sand fallen nicht herunter, und Endermen nehmen nichts mit. Was du selbst daran veränderst oder hinbaust, schützt das Portal nicht mehr.
 
