@@ -95,6 +95,23 @@ Only on the islands. All commands are listed under [ChestShops](chestshop.md#com
 
 `/nick` and `/status` work across the whole network. All other rank commands work on all Sky islands, as a visitor too – not for 10 seconds after a hit and not as a customer on someone else's market. A higher rank has everything from the rank below. More under [Ranks](ranks.md#perks-across-the-network).
 
+## Pets
+
+| Command | What it does |
+| ------- | ------------ |
+| `/pet` | The pet menu. Also `/pets` |
+| `/pet call <pet>` | Call a pet. Without a pet: your pets |
+| `/pet dismiss` | Send your pet home |
+| `/pet rename <name>` | Rename your pet. Without a name: reset the name |
+| `/pet skin [skin\|default]` | Pick your pet's skin |
+| `/pet preview <pet>` | 30-second preview, only for you |
+| `/pet hide` | Hide or show other players' pets |
+| `/pet shop` | The pet shop |
+| `/pet vouchers` | Redeem free pets from your rank |
+| `/pet help` | All pet commands |
+
+Everywhere in the network, including the lobby. More under [Pets](pets.md).
+
 ## Friends & messages
 
 | Command | What it does |
@@ -132,4 +149,5 @@ Only on the islands. All commands are listed under [ChestShops](chestshop.md#com
 * [Mana & Ruby](economy.md)
 * [ChestShops](chestshop.md)
 * [Ranks](ranks.md)
+* [Pets](pets.md)
 * [Discord](discord.md)

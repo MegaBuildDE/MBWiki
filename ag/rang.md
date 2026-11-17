@@ -12,7 +12,8 @@ Auf MegaBuild.de kannst du dir einen Rang holen und damit gleichzeitig den Serve
 **Die ersten Rang-Vorteile sind da:**
 
 * **im ganzen Netzwerk** Chatfarben, Nick, Status und ein größeres Postfach – siehe [Vorteile im ganzen Netzwerk](#vorteile-im-ganzen-netzwerk),
-* **auf den Sky-Inseln** Werkbank, Mülleimer, Enderkiste, eigene Uhrzeit, Hut, Posen, Umbenennen und Spielerköpfe – siehe [Vorteile auf den Sky-Inseln](#vorteile-auf-den-sky-inseln).
+* **auf den Sky-Inseln** Werkbank, Mülleimer, Enderkiste, eigene Uhrzeit, Hut, Posen, Umbenennen und Spielerköpfe – siehe [Vorteile auf den Sky-Inseln](#vorteile-auf-den-sky-inseln),
+* **Pet-Gutscheine:** Jeder Rang bringt zwei Gratis-Pets – siehe [Pets](pets.md#gutscheine-aus-rängen).
 
 Weitere Vorteile folgen. Sie stehen hier, sobald sie freigeschaltet sind.
 {% endhint %}
@@ -40,6 +41,7 @@ Jeder höhere Rang hat alles vom Rang darunter: Platin hat alles von Gold, Titan
 | [`/nick`](#nick) – anderer Name in Chat und Tablist | – | – | ja | ja |
 | [`/status`](#status) – Text hinter deinem Namen in der Tablist | – | – | ja | ja |
 | [Postfach](#größeres-postfach) | 200 Nachrichten | 300 | 400 | 500 |
+| [Pet-Gutscheine](pets.md#gutscheine-aus-rängen) | – | 2 bis Selten | dazu 2 bis Episch | dazu 2 bis Legendär |
 
 In der [Tablist](../sb/hud.md#tablist) stehen Spieler mit Rang oben, der höchste Rang zuerst.
 
@@ -222,7 +224,7 @@ Gutscheine gibt es ab 5,99 € – praktisch, wenn du jemandem etwas schenken m�
 {% column %}
 ### 🐾 Pets
 
-Pets sind in Planung. Mit den [Warpetts](../sb/warpetts.md) haben sie nichts zu tun.
+Pets und Skins gibt es im Shop ab 1,99 €, das Capybara hat jeder gratis. Jeder Rang bringt dazu zwei Pet-Gutscheine. Alles dazu unter [Pets](pets.md).
 {% endcolumn %}
 {% endcolumns %}
 

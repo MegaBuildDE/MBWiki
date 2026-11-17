@@ -95,6 +95,23 @@ Nur auf den Inseln. Alle Befehle stehen unter [ChestShops](../sb/chestshop.md#be
 
 `/nick` und `/status` gehen im ganzen Netzwerk. Alle anderen Rang-Befehle gehen auf allen Sky-Inseln, auch als Besucher – nicht in den 10 Sekunden nach einem Treffer und nicht als Kunde auf einem fremden Markt. Ein höherer Rang hat alles vom Rang darunter. Mehr dazu unter [Ränge](rang.md#vorteile-im-ganzen-netzwerk).
 
+## Pets
+
+| Befehl | Was er macht |
+| ------ | ------------ |
+| `/pet` | Das Pet-Menü. Auch `/pets` |
+| `/pet call <Pet>` | Ein Pet rufen. Ohne Pet: deine Pets |
+| `/pet dismiss` | Dein Pet nach Hause schicken |
+| `/pet rename <Name>` | Dein Pet umbenennen. Ohne Name: Name zurücksetzen |
+| `/pet skin [Skin\|default]` | Skin deines Pets wählen |
+| `/pet preview <Pet>` | 30 Sekunden Vorschau, nur für dich |
+| `/pet hide` | Pets anderer Spieler aus- und einblenden |
+| `/pet shop` | Der Pet-Shop |
+| `/pet vouchers` | Gratis-Pets aus deinem Rang einlösen |
+| `/pet help` | Alle Pet-Befehle |
+
+Überall im Netzwerk, auch in der Lobby. Mehr dazu unter [Pets](pets.md).
+
 ## Freunde & Nachrichten
 
 | Befehl | Was er macht |
@@ -133,4 +150,5 @@ Nur auf den Inseln. Alle Befehle stehen unter [ChestShops](../sb/chestshop.md#be
 * [Mana & Ruby](../sb/eco.md)
 * [ChestShops](../sb/chestshop.md)
 * [Ränge](rang.md)
+* [Pets](pets.md)
 * [Discord](discord.md)

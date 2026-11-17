@@ -1,6 +1,6 @@
 ---
 description: Pets on MegaBuild.de – small companions that follow you on every server. Calling, renaming, skins, the shop and vouchers from ranks.
-icon: paw
+icon: dog
 ---
 
 # Pets

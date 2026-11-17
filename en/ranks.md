@@ -12,7 +12,8 @@ You can get a rank on MegaBuild.de and support the server at the same time.
 **The first rank perks are here:**
 
 * **across the whole network** chat colours, nick, status and a bigger mailbox – see [Perks across the network](#perks-across-the-network),
-* **on the Sky islands** crafting table, trash, ender chest, your own time of day, hat, poses, renaming and player heads – see [Perks on the Sky islands](#perks-on-the-sky-islands).
+* **on the Sky islands** crafting table, trash, ender chest, your own time of day, hat, poses, renaming and player heads – see [Perks on the Sky islands](#perks-on-the-sky-islands),
+* **pet vouchers:** every rank comes with two free pets – see [Pets](pets.md#vouchers-from-ranks).
 
 More perks will follow. They will be listed here as soon as they are unlocked.
 {% endhint %}
@@ -40,6 +41,7 @@ Each higher rank has everything from the rank below: Platin has everything from 
 | [`/nick`](#nick) – another name in chat and the tab list | – | – | yes | yes |
 | [`/status`](#status) – text behind your name in the tab list | – | – | yes | yes |
 | [Mailbox](#bigger-mailbox) | 200 messages | 300 | 400 | 500 |
+| [Pet vouchers](pets.md#vouchers-from-ranks) | – | 2 up to Rare | plus 2 up to Epic | plus 2 up to Legendary |
 
 In the [tab list](hud.md#tab-list), players with a rank are at the top, the highest rank first.
 
@@ -222,7 +224,7 @@ Gift cards start at €5.99 – handy if you want to give someone a present.
 {% column %}
 ### 🐾 Pets
 
-Pets are planned. They have nothing to do with the [Warpetts](warpetts.md).
+Pets and skins are in the shop from €1.99, and everyone gets the Capybara for free. On top of that, every rank comes with two pet vouchers. All about it under [Pets](pets.md).
 {% endcolumn %}
 {% endcolumns %}
 

@@ -1,6 +1,6 @@
 ---
 description: Pets auf MegaBuild.de – kleine Begleiter, die dir auf allen Servern folgen. Rufen, umbenennen, Skins, Shop und Gutscheine aus Rängen.
-icon: paw
+icon: dog
 ---
 
 # Pets
