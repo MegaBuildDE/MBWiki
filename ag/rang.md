@@ -9,13 +9,14 @@ icon: crown
 Auf MegaBuild.de kannst du dir einen Rang holen und damit gleichzeitig den Server unterstützen.
 
 {% hint style="info" %}
-**Die ersten Rang-Vorteile sind da:**
+**Das bringt dir ein Rang:**
 
 * **im ganzen Netzwerk** Chatfarben, Nick, Status und ein größeres Postfach – siehe [Vorteile im ganzen Netzwerk](#vorteile-im-ganzen-netzwerk),
 * **auf den Sky-Inseln** Werkbank, Mülleimer, Enderkiste, eigene Uhrzeit, Hut, Posen, Umbenennen und Spielerköpfe – siehe [Vorteile auf den Sky-Inseln](#vorteile-auf-den-sky-inseln),
+* **Kosmetik:** Spuren, Präfix-Stile, Namensfarbe, Chat-Emojis, Insel-Begrüßung und dein Luftschiff – siehe [Kosmetik](kosmetik.md),
 * **Pet-Gutscheine:** Jeder Rang bringt zwei Gratis-Pets – siehe [Pets](pets.md#gutscheine-aus-rängen).
 
-Weitere Vorteile folgen. Sie stehen hier, sobald sie freigeschaltet sind.
+Weitere Kosmetik folgt. Sie steht hier, sobald sie freigeschaltet ist.
 {% endhint %}
 
 ## Verfügbare Ränge
@@ -36,14 +37,16 @@ Jeder höhere Rang hat alles vom Rang darunter: Platin hat alles von Gold, Titan
 
 | Was | ohne Rang | Gold | Platin | Titan |
 | --- | --- | --- | --- | --- |
-| Dein Rang vor deinem Namen in Chat und Tablist | – | ja | ja | ja |
+| Dein [Rang-Abzeichen](kosmetik.md#präfix-stile) vor deinem Namen in Chat und Tablist | – | einfarbig | mit Farbverlauf | animiert, Stil wählbar |
+| [Namensfarbe](kosmetik.md#namensfarbe) | – | – | 12 Farben | dazu 6 Verläufe |
 | [Farben im Chat](#chatfarben) | – | `&`-Farbcodes | dazu RGB | dazu RGB |
+| [Chat-Emojis](kosmetik.md#chat-emojis) wie `:herz:` | – | 24 | 24 | 24 |
 | [`/nick`](#nick) – anderer Name in Chat und Tablist | – | – | ja | ja |
 | [`/status`](#status) – Text hinter deinem Namen in der Tablist | – | – | ja | ja |
 | [Postfach](#größeres-postfach) | 200 Nachrichten | 300 | 400 | 500 |
 | [Pet-Gutscheine](pets.md#gutscheine-aus-rängen) | – | 2 bis Selten | dazu 2 bis Episch | dazu 2 bis Legendär |
 
-In der [Tablist](../sb/hud.md#tablist) stehen Spieler mit Rang oben, der höchste Rang zuerst.
+In der [Tablist](../sb/hud.md#tablist) stehen Spieler mit Rang oben, der höchste Rang zuerst. Abzeichen, Namensfarbe und Emojis wählst du unter [Kosmetik](kosmetik.md).
 
 ### Chatfarben
 
@@ -95,6 +98,11 @@ Auch hier hat jeder höhere Rang alles vom Rang darunter.
 | [`/sit`, `/lay`, `/crawl`](#sitzen-liegen-kriechen) | – | ja | ja | ja |
 | [`/rename`](#items-umbenennen) – Item umbenennen | – | nur Text | mit Farben | mit RGB und Verlauf |
 | [`/head`](#spielerköpfe) – Spielerkopf | – | 1 im Monat | 1 in der Woche | 1 am Tag |
+| [Spuren](kosmetik.md#spuren) beim Laufen und Gleiten | – | 2 | 6 | alle 16 |
+| [Insel-Begrüßung](kosmetik.md#insel-begrüßung) mit Laut | – | ja | ja | dazu 4 Laute |
+| [Luftschiff](kosmetik.md#luftschiff) deiner Insel | – | Wimpel | Wimpel, 2 Anstriche | Segel, alle 8 Anstriche |
+
+Spuren, Begrüßung und Luftschiff stellst du im [Kosmetik-Menü](kosmetik.md#das-kosmetik-menü) ein.
 
 ### Wo die Befehle gelten
 
@@ -270,6 +278,7 @@ Nein. Ränge gibt es nur im [Shop](https://shop.megabuild.de/) – nicht gegen M
 
 ## Verwandte Seiten
 
+* [Kosmetik](kosmetik.md)
 * [Befehle](befehle.md#rang-befehle)
 * [Nachrichten & Post](nachrichten.md)
 * [Reisen & Zuschauen](../sb/reisen.md)

@@ -246,7 +246,7 @@ Ja. Auf einer Insel öffnest du mit `/sky` → **Reisen** oder `/sky visit` das 
 
 <summary>Welche Ränge gibt es?</summary>
 
-Im [Shop](https://shop.megabuild.de/): **Gold** (9,99 €), **Platin** (19,99 €) und **Titan** (34,99 €), jeder dauerhaft. Mit einem Rang hast du im ganzen Netzwerk zum Beispiel Chatfarben und ein größeres Postfach, ab Platin `/nick` und `/status`. Auf den Sky-Inseln kommen `/craft`, `/trash`, `/ec`, `/hat`, `/rename` und mehr dazu.
+Im [Shop](https://shop.megabuild.de/): **Gold** (9,99 €), **Platin** (19,99 €) und **Titan** (34,99 €), jeder dauerhaft. Mit einem Rang hast du im ganzen Netzwerk zum Beispiel Chatfarben und ein größeres Postfach, ab Platin `/nick` und `/status`. Auf den Sky-Inseln kommen `/craft`, `/trash`, `/ec`, `/hat`, `/rename` und mehr dazu, außerdem [Kosmetik](../ag/kosmetik.md) wie Spuren, Namensfarben und Chat-Emojis.
 
 {% content-ref url="../ag/rang.md" %}
 [rang.md](../ag/rang.md)

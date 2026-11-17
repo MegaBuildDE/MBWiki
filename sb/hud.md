@@ -50,6 +50,8 @@ Die Tablist zeigt, wer online ist. Jeder Eintrag steht in dieser Reihenfolge:
 3. der Name – oder der [Nick](../ag/rang.md#nick) mit `~` davor,
 4. grau dahinter der [Status](../ag/rang.md#status), wenn einer gesetzt ist.
 
+Mit Rang trägt dein Abzeichen einen [Stil](../ag/kosmetik.md#präfix-stile) und dein Name eine [Farbe](../ag/kosmetik.md#namensfarbe), wenn du sie gewählt hast.
+
 **Spieler mit Rang stehen oben,** der höchste Rang zuerst, Spieler ohne Rang darunter. Das sortiert erst Minecraft 1.21.2 und neuer – ältere Versionen sortieren nach dem Namen.
 
 Unter den Spielern stehen die [Bewohner](bewohner.md#tablist), mit denen du schon gesprochen hast.

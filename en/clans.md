@@ -201,7 +201,7 @@ With gold every week you reach level 4 after 3 weeks and level 10 after 25. In t
 | **Group jump** | 2 | When you buy the Blossom Leap or the Shadow Portal from a [Forestling](forestlings.md), clan members within 8 blocks jump along if they agree. You pay for every jumper. On Bedrock you agree with `/sky groupjump <code>` |
 | **Clan banner** | 3 | The leader registers a banner. Members stamp the pattern onto a blank banner of their own in the menu, with one dye per layer. Right-clicking a placed clan banner shows the clan profile |
 | **Clan blessing** | 6 | At the weekend (Saturday 4 am to Monday 4 am) **10% more Mana** from [actions](economy.md#from-actions). The daily limit stays |
-| **Flight trail** | 8 | Sparks in your clan colour while you glide with elytra. You can switch it off under **My notices** |
+| **Flight trail** | 8 | Sparks in your clan colour while you glide with elytra. You can switch it off under **My notices**. If you wear an [elytra trail](cosmetics.md#trails), it covers the flight trail |
 
 Under **My notices** in the clan menu you also set whether you get a message when members come online, call for help or invite you to their meeting point.
 

@@ -50,6 +50,8 @@ The tab list shows who's online. Each entry is in this order:
 3. the name – or the [nick](ranks.md#nick) with `~` in front,
 4. in grey behind it, the [status](ranks.md#status) if one is set.
 
+With a rank your badge has a [style](cosmetics.md#prefix-styles) and your name a [colour](cosmetics.md#name-colour), if you chose them.
+
 **Players with a rank are at the top,** the highest rank first, players without a rank below. Only Minecraft 1.21.2 and newer sorts like this – older versions sort by name.
 
 Below the players are the [residents](residents.md#tab-list) you've already talked to.

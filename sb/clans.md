@@ -201,7 +201,7 @@ Mit Gold in jeder Woche erreicht ihr Stufe 4 nach 3 Wochen und Stufe 10 nach 25.
 | **Gruppensprung** | 2 | Kaufst du bei einem [Forestling](forestlinge.md) den Kirschblütensprung oder das Schattenportal, springen Clanmitglieder im Umkreis von 8 Blöcken mit, wenn sie zustimmen. Du zahlst für jeden Springer. Auf Bedrock stimmst du mit `/sky groupjump <Kennwort>` zu |
 | **Clan-Banner** | 3 | Der Anführer meldet ein Banner an. Mitglieder prägen das Muster im Menü auf ein eigenes leeres Banner, mit einem Farbstoff je Schicht. Ein Rechtsklick auf ein gesetztes Clan-Banner zeigt das Clan-Profil |
 | **Clan-Segen** | 6 | Am Wochenende (Samstag 4 Uhr bis Montag 4 Uhr) **10 % mehr Mana** aus [Aktionen](eco.md#durch-aktionen). Das Tageslimit bleibt |
-| **Flugspur** | 8 | Funken in Clanfarbe, wenn du mit Elytren gleitest. Abschalten kannst du sie unter **Meine Meldungen** |
+| **Flugspur** | 8 | Funken in Clanfarbe, wenn du mit Elytren gleitest. Abschalten kannst du sie unter **Meine Meldungen**. Trägst du eine [Elytra-Spur](../ag/kosmetik.md#spuren), verdeckt sie die Flugspur |
 
 Unter **Meine Meldungen** im Clan-Menü stellst du auch ein, ob du Meldungen bekommst, wenn Mitglieder online kommen, um Hilfe rufen oder zum Treffpunkt einladen.
 

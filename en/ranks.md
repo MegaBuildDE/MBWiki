@@ -9,13 +9,14 @@ icon: crown
 You can get a rank on MegaBuild.de and support the server at the same time.
 
 {% hint style="info" %}
-**The first rank perks are here:**
+**What a rank gives you:**
 
 * **across the whole network** chat colours, nick, status and a bigger mailbox – see [Perks across the network](#perks-across-the-network),
 * **on the Sky islands** crafting table, trash, ender chest, your own time of day, hat, poses, renaming and player heads – see [Perks on the Sky islands](#perks-on-the-sky-islands),
+* **cosmetics:** trails, prefix styles, name colour, chat emojis, island greeting and your airship – see [Cosmetics](cosmetics.md),
 * **pet vouchers:** every rank comes with two free pets – see [Pets](pets.md#vouchers-from-ranks).
 
-More perks will follow. They will be listed here as soon as they are unlocked.
+More cosmetics will follow. They will be listed here as soon as they are unlocked.
 {% endhint %}
 
 ## Available ranks
@@ -36,14 +37,16 @@ Each higher rank has everything from the rank below: Platin has everything from 
 
 | What | no rank | Gold | Platin | Titan |
 | --- | --- | --- | --- | --- |
-| Your rank in front of your name in chat and the tab list | – | yes | yes | yes |
+| Your [rank badge](cosmetics.md#prefix-styles) in front of your name in chat and the tab list | – | single colour | with gradient | animated, style of your choice |
+| [Name colour](cosmetics.md#name-colour) | – | – | 12 colours | plus 6 gradients |
 | [Colours in chat](#chat-colours) | – | `&` colour codes | plus RGB | plus RGB |
+| [Chat emojis](cosmetics.md#chat-emojis) like `:herz:` | – | 24 | 24 | 24 |
 | [`/nick`](#nick) – another name in chat and the tab list | – | – | yes | yes |
 | [`/status`](#status) – text behind your name in the tab list | – | – | yes | yes |
 | [Mailbox](#bigger-mailbox) | 200 messages | 300 | 400 | 500 |
 | [Pet vouchers](pets.md#vouchers-from-ranks) | – | 2 up to Rare | plus 2 up to Epic | plus 2 up to Legendary |
 
-In the [tab list](hud.md#tab-list), players with a rank are at the top, the highest rank first.
+In the [tab list](hud.md#tab-list), players with a rank are at the top, the highest rank first. You choose your badge, name colour and emojis under [Cosmetics](cosmetics.md).
 
 ### Chat colours
 
@@ -95,6 +98,11 @@ Here too, each higher rank has everything from the rank below.
 | [`/sit`, `/lay`, `/crawl`](#sit-lie-down-crawl) | – | yes | yes | yes |
 | [`/rename`](#renaming-items) – rename an item | – | text only | with colours | with RGB and gradients |
 | [`/head`](#player-heads) – a player head | – | 1 a month | 1 a week | 1 a day |
+| [Trails](cosmetics.md#trails) when walking and gliding | – | 2 | 6 | all 16 |
+| [Island greeting](cosmetics.md#island-greeting) with a sound | – | yes | yes | plus 4 sounds |
+| Your island's [airship](cosmetics.md#airship) | – | pennant | pennant, 2 paints | sail, all 8 paints |
+
+You set trails, greeting and airship in the [cosmetics menu](cosmetics.md#the-cosmetics-menu).
 
 ### Where the commands work
 
@@ -270,6 +278,7 @@ No. Ranks are only available in the [shop](https://shop.megabuild.de/) – not f
 
 ## Related pages
 
+* [Cosmetics](cosmetics.md)
 * [Commands](commands.md#rank-commands)
 * [Messages & Mail](messages.md)
 * [Travel & Watching](travel.md)

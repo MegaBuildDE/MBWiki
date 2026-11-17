@@ -95,6 +95,21 @@ Nur auf den Inseln. Alle Befehle stehen unter [ChestShops](../sb/chestshop.md#be
 
 `/nick` und `/status` gehen im ganzen Netzwerk. Alle anderen Rang-Befehle gehen auf allen Sky-Inseln, auch als Besucher – nicht in den 10 Sekunden nach einem Treffer und nicht als Kunde auf einem fremden Markt. Ein höherer Rang hat alles vom Rang darunter. Mehr dazu unter [Ränge](rang.md#vorteile-im-ganzen-netzwerk).
 
+## Kosmetik
+
+| Befehl | Rang | Was er macht |
+| ------ | ---- | ------------ |
+| `/cosmetics` | – | Das [Kosmetik-Menü](kosmetik.md#das-kosmetik-menü). Auch `/cos`. `/cosmetics view` öffnet „Was ich sehe“ |
+| `/trail [Spur]` | Gold | Deine [Spur](kosmetik.md#spuren) wählen. `/trail off` legt sie ab |
+| `/cosmetics preview <Spur>` | – | Eine Spur 10 Sekunden lang ansehen, nur für dich |
+| `/prefix` | Platin | Der Stil deines [Rang-Abzeichens](kosmetik.md#präfix-stile) – Farbverläufe ab Platin, animiert mit Titan |
+| `/namecolor` | Platin | Die [Farbe deines Namens](kosmetik.md#namensfarbe). `/namecolor reset` nimmt sie weg |
+| `/emojis` | Gold | Alle [Chat-Emojis](kosmetik.md#chat-emojis) wie `:herz:` |
+| `/sky greeting` | Gold | Die [Begrüßung](kosmetik.md#insel-begrüßung) deiner Insel – nur als Inselbesitzer |
+| `/sky ship` | Gold | Wimpel, Segel und Anstrich deines [Luftschiffs](kosmetik.md#luftschiff). Auch `/sky ship paint` |
+
+Das Kosmetik-Menü, Spuren, Begrüßung und Luftschiff gibt es auf den Sky-Inseln.
+
 ## Pets
 
 | Befehl | Was er macht |
@@ -150,5 +165,6 @@ Nur auf den Inseln. Alle Befehle stehen unter [ChestShops](../sb/chestshop.md#be
 * [Mana & Ruby](../sb/eco.md)
 * [ChestShops](../sb/chestshop.md)
 * [Ränge](rang.md)
+* [Kosmetik](kosmetik.md)
 * [Pets](pets.md)
 * [Discord](discord.md)

@@ -28,6 +28,7 @@ Just type in chat and your line goes to **every player on the network**, no matt
 * At most **one line per second** and **256 characters** per line. If you were too fast, the line doesn't get through – chat shows it back to you with its text so you can send it again.
 * The chat filter and mutes apply just like in normal chat (see below).
 * **Colours:** With a rank you colour your lines – `&` codes from Gold, RGB from Platin. How it works is under [Chat colours](ranks.md#chat-colours).
+* **Emojis:** From Gold, `:herz:`, `:feuer:` or `:gg:` turn into a picture – all of them are under [Chat emojis](cosmetics.md#chat-emojis).
 * **During the intro** on the intro server, your line stays there and nothing from the global chat arrives – otherwise the whole network's chat would run through Mala's story. `/g` still reaches everyone.
 
 {% hint style="info" %}

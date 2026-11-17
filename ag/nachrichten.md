@@ -28,6 +28,7 @@ Schreibst du einfach in den Chat, geht deine Zeile an **alle Spieler im Netzwerk
 * Höchstens **eine Zeile je Sekunde** und **256 Zeichen** je Zeile. Warst du zu schnell, kommt die Zeile nicht an – der Chat zeigt sie dir mit ihrem Text zurück, damit du sie noch einmal schicken kannst.
 * Chatfilter und Stummschaltung gelten wie im normalen Chat (siehe unten).
 * **Farben:** Mit einem Rang färbst du deine Zeilen – `&`-Codes ab Gold, RGB ab Platin. Wie, steht unter [Chatfarben](rang.md#chatfarben).
+* **Emojis:** Ab Gold wird `:herz:`, `:feuer:` oder `:gg:` zu einem Bild – alle stehen unter [Chat-Emojis](kosmetik.md#chat-emojis).
 * **Im Vorspann** auf dem Intro-Server bleibt deine Zeile dort, und vom Globalchat kommt nichts an – sonst liefe der Chat des ganzen Netzwerks durch Malas Erzählung. Mit `/g` erreichst du trotzdem alle.
 
 {% hint style="info" %}

@@ -95,6 +95,21 @@ Only on the islands. All commands are listed under [ChestShops](chestshop.md#com
 
 `/nick` and `/status` work across the whole network. All other rank commands work on all Sky islands, as a visitor too – not for 10 seconds after a hit and not as a customer on someone else's market. A higher rank has everything from the rank below. More under [Ranks](ranks.md#perks-across-the-network).
 
+## Cosmetics
+
+| Command | Rank | What it does |
+| ------- | ---- | ------------ |
+| `/cosmetics` | – | The [cosmetics menu](cosmetics.md#the-cosmetics-menu). Also `/cos`. `/cosmetics view` opens “What I see” |
+| `/trail [trail]` | Gold | Choose your [trail](cosmetics.md#trails). `/trail off` takes it off |
+| `/cosmetics preview <trail>` | – | Look at a trail for 10 seconds, only for you |
+| `/prefix` | Platin | The style of your [rank badge](cosmetics.md#prefix-styles) – gradients from Platin, animated with Titan |
+| `/namecolor` | Platin | The [colour of your name](cosmetics.md#name-colour). `/namecolor reset` takes it away |
+| `/emojis` | Gold | All [chat emojis](cosmetics.md#chat-emojis) like `:herz:` |
+| `/sky greeting` | Gold | Your island's [greeting](cosmetics.md#island-greeting) – island owner only |
+| `/sky ship` | Gold | Pennant, sail and paint of your [airship](cosmetics.md#airship). Also `/sky ship paint` |
+
+The cosmetics menu, trails, greeting and airship are on the Sky islands.
+
 ## Pets
 
 | Command | What it does |
@@ -149,5 +164,6 @@ Everywhere in the network, including the lobby. More under [Pets](pets.md).
 * [Mana & Ruby](economy.md)
 * [ChestShops](chestshop.md)
 * [Ranks](ranks.md)
+* [Cosmetics](cosmetics.md)
 * [Pets](pets.md)
 * [Discord](discord.md)
