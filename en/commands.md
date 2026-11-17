@@ -86,8 +86,14 @@ Only on the islands. All commands are listed under [ChestShops](chestshop.md#com
 | `/ptime <time>` | Titan | Any time, for example `/ptime 21:30` |
 | `/ptime freeze` | Titan | Stop your time or let it run again |
 | `/ptime reset` | Platin | Back to the island's time |
+| `/hat` | Gold | The item in your hand as a hat – only for show. `/hat off` takes it off |
+| `/sit` · `/lay` · `/crawl` | Gold | Sit, lie down, crawl. Type it again or sneak to get up |
+| `/rename [name]` | Gold | Rename the item in your hand – with colours from Platin, also RGB and gradients with Titan. `/rename clear` removes the name |
+| `/head <player>` | Gold | Get a player's head, bound to you. Gold 1 a month, Platin 1 a week, Titan 1 a day |
+| `/nick <name>` | Platin | Another name in chat and the tab list, with `~` in front. `/nick clear` removes it |
+| `/status <text>` | Platin | A text behind your name in the tab list. `/status clear` removes it |
 
-On all Sky islands, as a visitor too – not for 10 seconds after a hit and not as a customer on someone else's market. A higher rank has everything from the rank below. More under [Ranks](ranks.md#perks-on-the-sky-islands).
+`/nick` and `/status` work across the whole network. All other rank commands work on all Sky islands, as a visitor too – not for 10 seconds after a hit and not as a customer on someone else's market. A higher rank has everything from the rank below. More under [Ranks](ranks.md#perks-across-the-network).
 
 ## Friends & messages
 
@@ -108,7 +114,7 @@ On all Sky islands, as a visitor too – not for 10 seconds after a hit and not 
 | Command | What it does |
 | ------- | ------------ |
 | `/hub` | Back to the lobby. Also `/lobby` |
-| `/ot [player]` | Playtime and first join. Also `/onlinetime`, `/pt` |
+| `/ot [player]` | Playtime and first join. Also `/onlinetime`, `/playertime`, `/otime`, `/pt` – but not `/ptime`, that's the rank command for your [own time of day](ranks.md#your-own-time-of-day) |
 | `/vote` | Vote link, your reward and how often you've already voted today. Also `/votes` |
 | `/connect` | Link your Minecraft and Discord accounts. `/connect status` shows the current state, `/connect disconnect` removes the link |
 | `/linkaccount` | Link your Java and Bedrock accounts |

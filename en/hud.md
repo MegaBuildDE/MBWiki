@@ -41,6 +41,19 @@ Right above your hunger bar you see your **Mana** (pink orb), and above that you
 
 In the lobby, the boxes show the **time**, the **server** you're on and how many **players** are online in the network.
 
+## Tab list
+
+The tab list shows who's online. Each entry is in this order:
+
+1. the [rank](ranks.md),
+2. the [clan tag](clans.md),
+3. the name – or the [nick](ranks.md#nick) with `~` in front,
+4. in grey behind it, the [status](ranks.md#status) if one is set.
+
+**Players with a rank are at the top,** the highest rank first, players without a rank below. Only Minecraft 1.21.2 and newer sorts like this – older versions sort by name.
+
+Below the players are the [residents](residents.md#tab-list) you've already talked to.
+
 ## On Bedrock
 
 Bedrock shows the same numbers, with a few differences:
@@ -80,7 +93,7 @@ On other players' islands you need the **Statistics** right for this. Your fello
 /ot [player]
 ```
 
-Shows your total playtime in the network and your first join – or another player's. `/onlinetime` and `/pt` work too.
+Shows your total playtime in the network and your first join – or another player's. `/onlinetime`, `/playertime`, `/otime` and `/pt` work too. `/ptime` doesn't show your playtime – that's the rank command for your [own time of day](ranks.md#your-own-time-of-day).
 
 ## Language
 

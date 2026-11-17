@@ -15,7 +15,7 @@ icon: envelope
 !<text>
 ```
 
-Just type in chat and your line goes to **every player on the network**, no matter which server they're on – the same goes for `/g <text>`. The line starts with `[Global]`, your [rank](ranks.md), your [clan tag](clans.md) and your name; clicking the name suggests `/msg`.
+Just type in chat and your line goes to **every player on the network**, no matter which server they're on – the same goes for `/g <text>`. The line starts with `[Global]`, your [rank](ranks.md), your [clan tag](clans.md) and your name; clicking the name suggests `/msg`. If you have a [nick](ranks.md#nick), it shows there with `~` in front.
 
 | How you write | Who reads it |
 | ------------- | ------------ |
@@ -27,6 +27,7 @@ Just type in chat and your line goes to **every player on the network**, no matt
 * A letter or digit has to follow the `!` – a lone “!” or “!!!” is a normal line.
 * At most **one line per second** and **256 characters** per line. If you were too fast, the line doesn't get through – chat shows it back to you with its text so you can send it again.
 * The chat filter and mutes apply just like in normal chat (see below).
+* **Colours:** With a rank you colour your lines – `&` codes from Gold, RGB from Platin. How it works is under [Chat colours](ranks.md#chat-colours).
 * **During the intro** on the intro server, your line stays there and nothing from the global chat arrives – otherwise the whole network's chat would run through Mala's story. `/g` still reaches everyone.
 
 {% hint style="info" %}
@@ -48,7 +49,7 @@ Use `/msg` to write to a player privately and `/r` to reply to the last private 
 
 ## The mailbox
 
-Open it with `/mail`. `/post` works too. The mailbox works across the whole network. Messages stay there until you delete them – so tidy up now and then.
+Open it with `/mail`. `/post` works too. The mailbox works across the whole network.
 
 Unread messages are shown with the name in bold. When you open a message, you can:
 
@@ -57,6 +58,20 @@ Unread messages are shown with the name in bold. When you open a message, you ca
 * **Delete** the message
 
 When you log in, you'll see whether new mail is waiting for you. Messages from the server land here too – for example the reward for a [vote](vote.md) while you were offline, or a thank-you for a [bug report](discord.md#bug-bounty-and-clipcoin).
+
+### How much fits
+
+The mailbox keeps the **200 newest messages**, more with a [rank](ranks.md#bigger-mailbox): Gold 300, Platin 400, Titan 500. Beyond that, the oldest message you've already read moves to the **archive**, where you can still read it. Unread mail always stays, and new mail always arrives.
+
+Under **Tidy up** in `/mail` you set what happens to read mail after 30 days – counted from when you read it:
+
+| Setting | What happens |
+| ------- | ------------ |
+| **Keep everything** | Nothing. This is the default |
+| **Archive** | It moves to the archive and stays readable there |
+| **Delete** | It disappears from the mailbox – above the limit too, instead of going to the archive |
+
+That's also where you open the **archive**.
 
 ### Writing a message
 

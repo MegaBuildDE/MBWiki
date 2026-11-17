@@ -41,6 +41,19 @@ Direkt über deiner Hungerleiste steht dein **Mana** (rosa Kugel), darüber dein
 
 In der Lobby zeigen die Kästen die **Uhrzeit**, den **Server**, auf dem du bist, und wie viele **Spieler** im Netzwerk online sind.
 
+## Tablist
+
+Die Tablist zeigt, wer online ist. Jeder Eintrag steht in dieser Reihenfolge:
+
+1. der [Rang](../ag/rang.md),
+2. das [Clan-Kürzel](clans.md),
+3. der Name – oder der [Nick](../ag/rang.md#nick) mit `~` davor,
+4. grau dahinter der [Status](../ag/rang.md#status), wenn einer gesetzt ist.
+
+**Spieler mit Rang stehen oben,** der höchste Rang zuerst, Spieler ohne Rang darunter. Das sortiert erst Minecraft 1.21.2 und neuer – ältere Versionen sortieren nach dem Namen.
+
+Unter den Spielern stehen die [Bewohner](bewohner.md#tablist), mit denen du schon gesprochen hast.
+
 ## Auf Bedrock
 
 Bedrock zeigt dieselben Zahlen, mit ein paar Unterschieden:
@@ -80,7 +93,7 @@ Auf fremden Inseln brauchst du dafür das Recht **Statistik**. Die Spielzeit dei
 /ot [Spieler]
 ```
 
-Zeigt deine gesamte Spielzeit im Netzwerk und deinen ersten Join – oder die eines anderen Spielers. Auch `/onlinetime` und `/pt` funktionieren.
+Zeigt deine gesamte Spielzeit im Netzwerk und deinen ersten Join – oder die eines anderen Spielers. Auch `/onlinetime`, `/playertime`, `/otime` und `/pt` funktionieren. `/ptime` zeigt nicht die Spielzeit – das ist der Rang-Befehl für deine [eigene Uhrzeit](../ag/rang.md#eigene-uhrzeit).
 
 ## Sprache
 

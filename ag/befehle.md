@@ -86,8 +86,14 @@ Nur auf den Inseln. Alle Befehle stehen unter [ChestShops](../sb/chestshop.md#be
 | `/ptime <Uhrzeit>` | Titan | Jede Uhrzeit, zum Beispiel `/ptime 21:30` |
 | `/ptime freeze` | Titan | Deine Uhrzeit anhalten oder weiterlaufen lassen |
 | `/ptime reset` | Platin | Wieder die Uhrzeit der Insel |
+| `/hat` | Gold | Das Item in deiner Hand als Hut – nur zum Anschauen. `/hat off` nimmt ihn ab |
+| `/sit` · `/lay` · `/crawl` | Gold | Sitzen, liegen, kriechen. Noch einmal tippen oder schleichen zum Aufstehen |
+| `/rename [Name]` | Gold | Das Item in deiner Hand umbenennen – mit Platin farbig, mit Titan auch RGB und Verlauf. `/rename clear` nimmt den Namen ab |
+| `/head <Spieler>` | Gold | Den Kopf eines Spielers holen, an dich gebunden. Gold 1 im Monat, Platin 1 in der Woche, Titan 1 am Tag |
+| `/nick <Name>` | Platin | Ein anderer Name in Chat und Tablist, mit `~` davor. `/nick clear` nimmt ihn weg |
+| `/status <Text>` | Platin | Ein Text hinter deinem Namen in der Tablist. `/status clear` nimmt ihn weg |
 
-Auf allen Sky-Inseln, auch als Besucher – nicht in den 10 Sekunden nach einem Treffer und nicht als Kunde auf einem fremden Markt. Ein höherer Rang hat alles vom Rang darunter. Mehr dazu unter [Ränge](rang.md#vorteile-auf-den-sky-inseln).
+`/nick` und `/status` gehen im ganzen Netzwerk. Alle anderen Rang-Befehle gehen auf allen Sky-Inseln, auch als Besucher – nicht in den 10 Sekunden nach einem Treffer und nicht als Kunde auf einem fremden Markt. Ein höherer Rang hat alles vom Rang darunter. Mehr dazu unter [Ränge](rang.md#vorteile-im-ganzen-netzwerk).
 
 ## Freunde & Nachrichten
 
@@ -108,7 +114,7 @@ Auf allen Sky-Inseln, auch als Besucher – nicht in den 10 Sekunden nach einem 
 | Befehl | Was er macht |
 | ------ | ------------ |
 | `/hub` | Zurück in die Lobby. Auch `/lobby` |
-| `/ot [Spieler]` | Spielzeit und erster Join. Auch `/onlinetime`, `/pt` |
+| `/ot [Spieler]` | Spielzeit und erster Join. Auch `/onlinetime`, `/playertime`, `/otime`, `/pt` – aber nicht `/ptime`, das ist der Rang-Befehl für die [eigene Uhrzeit](rang.md#eigene-uhrzeit) |
 | `/vote` | Vote-Link, deine Belohnung und wie oft du heute schon gevotet hast. Auch `/votes` |
 | `/connect` | Minecraft- und Discord-Account verbinden. `/connect status` zeigt den Stand, `/connect trennen` löst die Verbindung |
 | `/linkaccount` | Java- und Bedrock-Account verbinden |

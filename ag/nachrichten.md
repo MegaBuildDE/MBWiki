@@ -15,7 +15,7 @@ icon: envelope
 !<Text>
 ```
 
-Schreibst du einfach in den Chat, geht deine Zeile an **alle Spieler im Netzwerk**, egal auf welchem Server sie gerade sind – ebenso mit `/g <Text>`. Vor der Zeile steht `[Global]`, dein [Rang](rang.md), dein [Clan-Kürzel](../sb/clans.md) und dein Name; ein Klick auf den Namen schlägt dir `/msg` vor.
+Schreibst du einfach in den Chat, geht deine Zeile an **alle Spieler im Netzwerk**, egal auf welchem Server sie gerade sind – ebenso mit `/g <Text>`. Vor der Zeile steht `[Global]`, dein [Rang](rang.md), dein [Clan-Kürzel](../sb/clans.md) und dein Name; ein Klick auf den Namen schlägt dir `/msg` vor. Hast du einen [Nick](rang.md#nick), steht er dort mit `~` davor.
 
 | So schreibst du | Wer liest mit |
 | --------------- | ------------- |
@@ -27,6 +27,7 @@ Schreibst du einfach in den Chat, geht deine Zeile an **alle Spieler im Netzwerk
 * Nach dem `!` muss ein Buchstabe oder eine Ziffer kommen – ein einzelnes „!“ oder „!!!“ ist eine normale Zeile.
 * Höchstens **eine Zeile je Sekunde** und **256 Zeichen** je Zeile. Warst du zu schnell, kommt die Zeile nicht an – der Chat zeigt sie dir mit ihrem Text zurück, damit du sie noch einmal schicken kannst.
 * Chatfilter und Stummschaltung gelten wie im normalen Chat (siehe unten).
+* **Farben:** Mit einem Rang färbst du deine Zeilen – `&`-Codes ab Gold, RGB ab Platin. Wie, steht unter [Chatfarben](rang.md#chatfarben).
 * **Im Vorspann** auf dem Intro-Server bleibt deine Zeile dort, und vom Globalchat kommt nichts an – sonst liefe der Chat des ganzen Netzwerks durch Malas Erzählung. Mit `/g` erreichst du trotzdem alle.
 
 {% hint style="info" %}
@@ -48,7 +49,7 @@ Mit `/msg` schreibst du einem Spieler privat, mit `/r` antwortest du auf die let
 
 ## Das Postfach
 
-Öffne es mit `/mail`. Auch `/post` funktioniert. Das Postfach gilt im ganzen Netzwerk. Nachrichten bleiben dort, bis du sie löschst – räum ab und zu auf.
+Öffne es mit `/mail`. Auch `/post` funktioniert. Das Postfach gilt im ganzen Netzwerk.
 
 Ungelesene Nachrichten erkennst du am fett geschriebenen Namen. Wenn du eine Nachricht öffnest, kannst du:
 
@@ -57,6 +58,20 @@ Ungelesene Nachrichten erkennst du am fett geschriebenen Namen. Wenn du eine Nac
 * die Nachricht **löschen**
 
 Beim Einloggen siehst du, ob neue Post auf dich wartet. Auch Nachrichten vom Server landen hier – etwa die Belohnung für einen [Vote](vote.md), während du offline warst, oder ein Danke für eine [Bug-Meldung](discord.md#bug-bounty-und-clipcoin).
+
+### Wie viel hineinpasst
+
+Das Postfach hebt die **200 neuesten Nachrichten** auf, mit [Rang](rang.md#größeres-postfach) mehr: Gold 300, Platin 400, Titan 500. Darüber wandert die älteste schon gelesene Nachricht ins **Archiv**, wo du sie weiter lesen kannst. Ungelesenes bleibt immer liegen, und neue Post kommt immer an.
+
+Unter **Aufräumen** in `/mail` stellst du ein, was mit gelesener Post nach 30 Tagen passiert – gezählt ab dem Lesen:
+
+| Einstellung | Was passiert |
+| ----------- | ------------ |
+| **Alles behalten** | Nichts. So ist es von Haus aus |
+| **Archivieren** | Sie wandert ins Archiv und bleibt dort lesbar |
+| **Löschen** | Sie verschwindet aus dem Postfach – auch über dem Limit, statt ins Archiv zu gehen |
+
+Dort öffnest du auch das **Archiv**.
 
 ### Nachricht schreiben
 

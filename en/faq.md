@@ -246,7 +246,7 @@ Yes. On an island, `/sky` → **Travel** or `/sky visit` opens the travel menu w
 
 <summary>Which ranks are there?</summary>
 
-In the [shop](https://shop.megabuild.de/): **Gold** (€9.99), **Platin** (€19.99) and **Titan** (€49.99, currently on sale). The perks in Skyblock will be announced later.
+In the [shop](https://shop.megabuild.de/): **Gold** (€9.99), **Platin** (€19.99) and **Titan** (€34.99), each one permanent. With a rank you get chat colours and a bigger mailbox across the whole network, for example, and `/nick` and `/status` from Platin. On the Sky islands you also get `/craft`, `/trash`, `/ec`, `/hat`, `/rename` and more.
 
 {% content-ref url="ranks.md" %}
 [ranks.md](ranks.md)
