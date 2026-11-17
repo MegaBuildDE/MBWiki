@@ -1,7 +1,7 @@
 ---
 description: >-
   Die Inselwelt auf MegaBuild.de – wie neue Inseln beim Erkunden entstehen,
-  Biom-Gegenden, Höhlen, Erze, Bauwerke, Tiere und Monster.
+  Biom-Gegenden, Höhlen, Erze, Bauwerke, Portale, Tiere und Monster.
 icon: earth-europe
 cover: ../.gitbook/assets/screenshots/mbsky-blasser-garten.webp
 coverY: 0
@@ -77,12 +77,48 @@ Mit etwas Glück findest du auf einer Insel:
 * **Außenposten** der Plünderer
 * **Einzelne Bauten** abseits der Dörfer
 * **Schwebende Bauwerke** über der Insel – etwa jede elfte Hauptinsel hat eins
+* **Portale**, die hoch über manchen Hauptinseln schweben – siehe [Portale](#portale)
 
 Nebeninseln haben höchstens ein kleines Bauwerk. Dazu kommen die Häuser und Lager der [KI-Bewohner](bewohner.md).
 
 <figure><img src="../.gitbook/assets/screenshots/mbsky-wuestenhaus.webp" alt="Ein Wüstenhaus mit Kakteen"><figcaption><p>Ein Dorf in der Wüste</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/screenshots/mbsky-wald.webp" alt="Eine alte Statue im Wald"><figcaption><p>Eine alte Statue im Wald</p></figcaption></figure>
+
+### Portale
+
+Über manchen Hauptinseln schweben **Portale** – im Spiel heißen sie auch *Tore*. Es gibt drei Arten: **Nether**, **Wasser** und **End**. Jedes Portal steht auf seiner eigenen kleinen Insel. Bei Nether- und Wasser-Portalen passen Oberfläche, Fels und Pflanzen dieser Insel zum Biom der Hauptinsel darunter.
+
+{% hint style="info" %}
+**Noch geschlossen.** Die Portale haben noch keine Funktion, sie werden erst später freigeschaltet. Auch Enderaugen lassen sich noch nicht in den Rahmen des End-Portals setzen. Den [Dungeon im End-Portal](#der-dungeon-im-end-portal) kannst du aber schon spielen.
+{% endhint %}
+
+* **Wie oft:** In jedem Gebiet aus 5 × 5 Feldern (1.100 × 1.100 Blöcke) schwebt von jeder Art ein Portal – also etwa über jeder 25. Hauptinsel. Zwei Portale teilen sich nie eine Insel, und über der Startinsel steht keins.
+* **Wie weit:** Bis zum nächsten Portal einer Art fliegst du meist nur ein paar hundert Blöcke.
+* **Wie hoch:** rund 25 bis 30 Blöcke über der Hauptinsel. Hinauf kommst du wie zu jedem schwebenden Bauwerk – mit Blöcken oder Enderperlen.
+* **Ältere Portale:** Früher standen Nether- und Wasser-Portale unten auf der Hauptinsel. Die schon stehen, bleiben dort – in Gegenden, die du schon erkundet hast, findest du sie also auch am Boden.
+* **Abbauen:** Ein Portal baust du ab und um wie jeden anderen Inselblock, nach den Rechten der Insel. Von selbst verändert es sich samt seiner Insel aber nicht: Creeper sprengen nichts davon weg, Feuer verbrennt nichts, Wasser friert nicht zu, Kies und Sand fallen nicht herunter, und Endermen nehmen nichts mit. Was du selbst daran veränderst oder hinbaust, schützt das Portal nicht mehr.
+
+### Der Dungeon im End-Portal
+
+Im End-Portal stehen **Prüfungsspawner** und **Tresore**. Sie arbeiten schon, obwohl das Portal selbst noch geschlossen ist.
+
+1. Komm einem der Prüfungsspawner auf **14 Blöcke** nahe – sehen musst du ihn nicht. Dann beginnt ein Lauf aus **1 bis 5 Wellen**. Jede Welle kündigt ein Titel an, etwa „Welle 2 von 4“, darunter ihr Name. Ab drei Wellen ist die letzte eine Schlusswelle wie „Der Torwächter“.
+2. Nach der letzten Welle fällt der **End-Schlüssel**, dazu etwas Beute – je länger der Lauf, desto mehr. Stehst du nicht beim Spawner, fällt beides vor deine Füße.
+3. Mit dem End-Schlüssel öffnest du einen **Tresor**, und zwar in jedem End-Portal. Jeder Tresor öffnet sich für dich einmal, jedes End-Portal hat eigene. Darin liegt auch etwas aus dem Biom der Insel darunter.
+4. Mit etwas Glück findest du in der Beute oder im Tresor eine **Unheilvolle Flasche**. Trinkst du sie und kommst wieder, hast du **Bad Omen** (Böses Omen): Es kommen mehr und stärkere Monster, und am Ende fällt der **Unheilvolle End-Schlüssel** für den unheilvollen Tresor mit der besseren Beute.
+
+* Die Prüfungsspawner sitzen oben in den Türmen. Hinauf musst du nicht: Die Monster kommen zu dir, und dein Lohn auch.
+* Spielt ihr zu mehreren, kommen mehr Monster. Die Beute wird für jeden Spieler neu ausgewürfelt.
+* Zombies und Skelette verbrennen hier bei Tag nicht.
+* Nach seinem Lohn ruht ein Prüfungsspawner 30 Minuten. Mit Bad Omen geht es sofort weiter.
+* Ist 5 Minuten lang niemand in der Nähe, verschwinden die Monster, und der Lauf fängt von vorn an.
+* Am Portalrahmen sitzt außerdem ein normaler Spawner mit Silberfischen. Sie zählen nicht zur Welle.
+* Überfälle gibt es auf den Inseln nicht – Bad Omen wirkt nur hier. Auch ein Plünderer-Hauptmann lässt die Unheilvolle Flasche fallen.
+
+{% hint style="warning" %}
+**Lava im Hof.** Im Hof des End-Portals liegt Lava – pass auf, wo du kämpfst.
+{% endhint %}
 
 ### Beute
 

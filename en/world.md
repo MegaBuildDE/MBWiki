@@ -1,7 +1,7 @@
 ---
 description: >-
   The island world on MegaBuild.de – how new islands appear as you explore,
-  biome areas, caves, ores, structures, animals and monsters.
+  biome areas, caves, ores, structures, portals, animals and monsters.
 icon: earth-europe
 cover: ../.gitbook/assets/screenshots/mbsky-blasser-garten.webp
 coverY: 0
@@ -77,12 +77,48 @@ With a bit of luck you'll find on an island:
 * Pillager **outposts**
 * **Standalone buildings** away from the villages
 * **Floating structures** above the island – about one main island in eleven has one
+* **Portals** floating high above some main islands – see [Portals](#portals)
 
 Side islands have at most one small structure. On top of that there are the houses and camps of the [AI residents](residents.md).
 
 <figure><img src="../.gitbook/assets/screenshots/mbsky-wuestenhaus.webp" alt="A desert house with cacti"><figcaption><p>A village in the desert</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/screenshots/mbsky-wald.webp" alt="An old statue in the forest"><figcaption><p>An old statue in the forest</p></figcaption></figure>
+
+### Portals
+
+**Portals** float above some main islands – in the game they're also called *gates*. There are three kinds: **Nether**, **Water** and **End**. Each portal stands on its own small island. For Nether and Water portals, that island's surface, rock and plants match the biome of the main island below.
+
+{% hint style="info" %}
+**Still closed.** The portals don't do anything yet – they'll be unlocked later. You can't put Eyes of Ender into the frame of the End portal yet either. The [dungeon in the End portal](#the-dungeon-in-the-end-portal) is already playable, though.
+{% endhint %}
+
+* **How often:** In every square of 5 × 5 cells (1,100 × 1,100 blocks), one portal of each kind floats above a main island – about one main island in 25. Two portals never share an island, and there's none above the starting island.
+* **How far:** The nearest portal of a kind is usually just a few hundred blocks away.
+* **How high:** about 25 to 30 blocks above the main island. You get up there the same way as to any floating structure – with blocks or ender pearls.
+* **Older portals:** Nether and Water portals used to stand down on the main island. The ones already there stay put – so in areas you've already explored, you'll find them on the ground too.
+* **Mining:** You can mine and rebuild a portal like any other island block, according to the island's rights. But neither the portal nor its island changes by itself: creepers don't blow any of it away, fire doesn't burn any of it, water doesn't freeze over, gravel and sand don't fall down, and endermen don't take anything. Whatever you change or build on it yourself is no longer protected by the portal.
+
+### The dungeon in the End portal
+
+The End portal holds **trial spawners** and **vaults**. They already work, even though the portal itself is still closed.
+
+1. Get within **14 blocks** of one of the trial spawners – you don't need to see it. That starts a run of **1 to 5 waves**. A title announces each wave, such as "Wave 2 of 4", with its name below. From three waves on, the last one is a final wave such as "The Gate Warden".
+2. After the last wave the **End Key** drops, along with some loot – the longer the run, the more. If you're not standing at the spawner, both drop at your feet.
+3. The End Key opens one **vault**, in any End portal. Each vault opens once for you, and every End portal has its own. It also holds something from the biome of the island below.
+4. With a bit of luck you'll find an **Ominous Bottle** in the loot or in the vault. Drink it and come back, and you'll have **Bad Omen**: more and stronger monsters come, and at the end the **Ominous End Key** drops for the ominous vault with the better loot.
+
+* The trial spawners sit high up in the towers. You don't have to climb up: the monsters come to you, and so does your reward.
+* If you play together, more monsters come. The loot is rolled anew for every player.
+* Zombies and skeletons don't burn in daylight here.
+* After giving its reward, a trial spawner rests for 30 minutes. With Bad Omen it starts again right away.
+* If nobody is nearby for 5 minutes, the monsters disappear and the run starts over.
+* There's also a normal spawner with silverfish at the portal frame. They don't count towards the wave.
+* There are no raids on the islands – Bad Omen only has an effect here. A pillager captain also drops the Ominous Bottle.
+
+{% hint style="warning" %}
+**Lava in the courtyard.** There's lava in the courtyard of the End portal – watch where you fight.
+{% endhint %}
 
 ### Loot
 
