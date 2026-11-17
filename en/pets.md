@@ -88,6 +88,7 @@ Every pet has a **rarity**, and the rarity sets the price. You buy pets and skin
 | <img src="../.gitbook/assets/pets/pet_dog.png" alt="Dog as a Corgi" width="64" height="64"> | **Dog** | Epic | €6.99 | Goes for walks with you, fetches and sits up. The base model is a Corgi. |
 | <img src="../.gitbook/assets/pets/pet_falcon.png" alt="Falcon" width="64" height="64"> | **Falcon** | Epic | €6.99 | Swoops down from above and brings back whatever it finds. |
 | <img src="../.gitbook/assets/pets/pet_wolf_pup.png" alt="Wolf Pup" width="64" height="64"> | **Wolf Pup** | Epic | €6.99 | Howls at the moon, chases its own tail and brings you what lies around. |
+| <img src="../.gitbook/assets/pets/pet_cat.png" alt="Cat" width="64" height="64"> | **Cat** | Epic | €6.99 | Plays with a ball of yarn, stretches and licks its paws clean. The base model is a house cat. |
 | <img src="../.gitbook/assets/pets/pet_fawn.png" alt="Fawn" width="64" height="64"> | **Fawn** | Legendary | €9.99 | Trots with high knees, listens to the forest and curls up to sleep. |
 | <img src="../.gitbook/assets/pets/pet_otter.png" alt="Otter" width="64" height="64"> | **Otter** | Legendary | €9.99 | Bounds along, shakes itself dry and juggles a pebble. |
 | <img src="../.gitbook/assets/pets/pet_hummingbird.png" alt="Hummingbird" width="64" height="64"> | **Hummingbird** | Legendary | €9.99 | Hovers in place, darts forward and sips nectar mid-air. |
@@ -109,8 +110,14 @@ A skin gives your pet a different look. It only changes the look, nothing else. 
 | <img src="../.gitbook/assets/pets/pet_capybara_yuzu.png" alt="Capybara with the Yuzu skin" width="64" height="64"> | **Yuzu** | Capybara | €1.99 |
 | <img src="../.gitbook/assets/pets/pet_llama_jolly.png" alt="Llama Dolly with the Jolly skin" width="64" height="64"> | **Jolly** | Llama Dolly | €1.99 |
 | <img src="../.gitbook/assets/pets/pet_dog_golden.png" alt="Dog with the Golden Retriever skin" width="64" height="64"> | **Golden Retriever** | Dog | €1.99 |
+| <img src="../.gitbook/assets/pets/pet_dog_malinois.png" alt="Dog with the Malinois skin" width="64" height="64"> | **Malinois** | Dog | €1.99 |
+| <img src="../.gitbook/assets/pets/pet_dog_husky.png" alt="Dog with the Husky skin" width="64" height="64"> | **Husky** | Dog | €1.99 |
+| <img src="../.gitbook/assets/pets/pet_dog_dachshund.png" alt="Dog with the Dachshund skin" width="64" height="64"> | **Dachshund** | Dog | €1.99 |
+| <img src="../.gitbook/assets/pets/pet_cat_siamese.png" alt="Cat with the Siamese skin" width="64" height="64"> | **Siamese** | Cat | €1.99 |
+| <img src="../.gitbook/assets/pets/pet_cat_maine_coon.png" alt="Cat with the Maine Coon skin" width="64" height="64"> | **Maine Coon** | Cat | €1.99 |
+| <img src="../.gitbook/assets/pets/pet_cat_british.png" alt="Cat with the British Shorthair skin" width="64" height="64"> | **British Shorthair** | Cat | €1.99 |
 
-For the **Dog**, the breeds are skins: you have one dog and make it a Corgi or a Golden Retriever. In the shop, pets with skins say **"Customize this pet with skins"**.
+For the **Dog** and the **Cat**, the breeds are skins: you have one dog and make it a Corgi, Golden Retriever, Malinois, Husky or Dachshund. Without a skin the cat is a house cat; with a skin it becomes a Siamese, Maine Coon or British Shorthair. In the shop, pets with skins say **"Customize this pet with skins"**.
 
 Pick the skin on the pet page under **Skins** or with `/pet skin`. `/pet skin default` brings back the default look.
 

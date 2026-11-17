@@ -88,6 +88,7 @@ Jedes Pet hat eine **Seltenheit**, und die bestimmt den Preis. Pets und Skins ka
 | <img src="../.gitbook/assets/pets/pet_dog.png" alt="Hund als Corgi" width="64" height="64"> | **Hund** | Episch | 6,99 € | Geht mit dir spazieren, apportiert und macht Männchen. Das Grundmodell ist ein Corgi. |
 | <img src="../.gitbook/assets/pets/pet_falcon.png" alt="Falke" width="64" height="64"> | **Falke** | Episch | 6,99 € | Stößt aus der Höhe herab und bringt dir zurück, was er findet. |
 | <img src="../.gitbook/assets/pets/pet_wolf_pup.png" alt="Wolfswelpe" width="64" height="64"> | **Wolfswelpe** | Episch | 6,99 € | Heult den Mond an, jagt seinen eigenen Schwanz und bringt dir, was herumliegt. |
+| <img src="../.gitbook/assets/pets/pet_cat.png" alt="Katze" width="64" height="64"> | **Katze** | Episch | 6,99 € | Spielt mit einem Wollknäuel, streckt sich und putzt sich die Pfoten. Das Grundmodell ist eine Hauskatze. |
 | <img src="../.gitbook/assets/pets/pet_fawn.png" alt="Rehkitz" width="64" height="64"> | **Rehkitz** | Legendär | 9,99 € | Trabt mit hohen Knien, lauscht in den Wald und rollt sich zum Schlafen ein. |
 | <img src="../.gitbook/assets/pets/pet_otter.png" alt="Otter" width="64" height="64"> | **Otter** | Legendär | 9,99 € | Galoppiert in Sprüngen, schüttelt sich trocken und jongliert einen Kiesel. |
 | <img src="../.gitbook/assets/pets/pet_hummingbird.png" alt="Kolibri" width="64" height="64"> | **Kolibri** | Legendär | 9,99 € | Schwirrt auf der Stelle, schießt ruckartig vor und trinkt Nektar im Schwebeflug. |
@@ -109,8 +110,14 @@ Ein Skin gibt deinem Pet ein anderes Aussehen. Er ändert nur das Aussehen, sons
 | <img src="../.gitbook/assets/pets/pet_capybara_yuzu.png" alt="Capybara im Skin Yuzu" width="64" height="64"> | **Yuzu** | Capybara | 1,99 € |
 | <img src="../.gitbook/assets/pets/pet_llama_jolly.png" alt="Lama Dolly im Skin Jolly" width="64" height="64"> | **Jolly** | Lama Dolly | 1,99 € |
 | <img src="../.gitbook/assets/pets/pet_dog_golden.png" alt="Hund im Skin Golden Retriever" width="64" height="64"> | **Golden Retriever** | Hund | 1,99 € |
+| <img src="../.gitbook/assets/pets/pet_dog_malinois.png" alt="Hund im Skin Malinois" width="64" height="64"> | **Malinois** | Hund | 1,99 € |
+| <img src="../.gitbook/assets/pets/pet_dog_husky.png" alt="Hund im Skin Husky" width="64" height="64"> | **Husky** | Hund | 1,99 € |
+| <img src="../.gitbook/assets/pets/pet_dog_dachshund.png" alt="Hund im Skin Dackel" width="64" height="64"> | **Dackel** | Hund | 1,99 € |
+| <img src="../.gitbook/assets/pets/pet_cat_siamese.png" alt="Katze im Skin Siamkatze" width="64" height="64"> | **Siamkatze** | Katze | 1,99 € |
+| <img src="../.gitbook/assets/pets/pet_cat_maine_coon.png" alt="Katze im Skin Maine Coon" width="64" height="64"> | **Maine Coon** | Katze | 1,99 € |
+| <img src="../.gitbook/assets/pets/pet_cat_british.png" alt="Katze im Skin Britisch Kurzhaar" width="64" height="64"> | **Britisch Kurzhaar** | Katze | 1,99 € |
 
-Beim **Hund** sind die Rassen Skins: Du hast einen Hund und gestaltest ihn als Corgi oder als Golden Retriever. Im Shop steht bei Pets mit Skins **„Gestalte dieses Pet mit Skins“**.
+Beim **Hund** und bei der **Katze** sind die Rassen Skins: Du hast einen Hund und gestaltest ihn als Corgi, Golden Retriever, Malinois, Husky oder Dackel. Die Katze ist ohne Skin eine Hauskatze, mit Skin eine Siamkatze, Maine Coon oder Britisch Kurzhaar. Im Shop steht bei Pets mit Skins **„Gestalte dieses Pet mit Skins“**.
 
 Den Skin wählst du auf der Pet-Seite unter **Skins** oder mit `/pet skin`. `/pet skin default` holt das Standard-Aussehen zurück.
 
