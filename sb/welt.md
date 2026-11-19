@@ -97,7 +97,7 @@ Nebeninseln haben höchstens ein kleines Bauwerk. Dazu kommen die Häuser und La
 * **Wie weit:** Bis zum nächsten Portal einer Art fliegst du meist nur ein paar hundert Blöcke.
 * **Wie hoch:** rund 20 bis 26 Blöcke über der Hauptinsel, gemessen bis zur Unterkante der Portalinsel. Hinauf kommst du wie zu jedem schwebenden Bauwerk – mit Blöcken oder Enderperlen.
 * **Ältere Portale:** Früher standen Nether- und Wasser-Portale unten auf der Hauptinsel. Die schon stehen, bleiben dort – in Gegenden, die du schon erkundet hast, findest du sie also auch am Boden.
-* **Abbauen:** Ein Portal baust du ab und um wie jeden anderen Inselblock, nach den Rechten der Insel. Von selbst verändert es sich samt seiner Insel aber nicht: Creeper sprengen nichts davon weg, Feuer verbrennt nichts, Wasser friert nicht zu, Kies und Sand fallen nicht herunter, und Endermen nehmen nichts mit. Was du selbst daran veränderst oder hinbaust, schützt das Portal nicht mehr.
+* **Abbauen:** Ein Portal baust du ab und um wie jeden anderen Inselblock, nach den Rechten der Insel. Nur die **Tresore** im End-Portal lassen sich nicht abbauen – versuchst du es, sagt dir der Chat, dass der Tresor zum Tor gehört. Von selbst verändert sich ein Portal samt seiner Insel aber nicht: Creeper sprengen nichts davon weg, Feuer verbrennt nichts, Wasser friert nicht zu, Kies und Sand fallen nicht herunter, und Endermen nehmen nichts mit. Was du selbst daran veränderst oder hinbaust, schützt das Portal nicht mehr.
 
 ### Der Dungeon im End-Portal
 

@@ -97,7 +97,7 @@ Side islands have at most one small structure. On top of that there are the hous
 * **How far:** The nearest portal of a kind is usually just a few hundred blocks away.
 * **How high:** about 20 to 26 blocks above the main island, measured to the bottom of the portal's island. You get up there the same way as to any floating structure – with blocks or ender pearls.
 * **Older portals:** Nether and Water portals used to stand down on the main island. The ones already there stay put – so in areas you've already explored, you'll find them on the ground too.
-* **Mining:** You can mine and rebuild a portal like any other island block, according to the island's rights. But neither the portal nor its island changes by itself: creepers don't blow any of it away, fire doesn't burn any of it, water doesn't freeze over, gravel and sand don't fall down, and endermen don't take anything. Whatever you change or build on it yourself is no longer protected by the portal.
+* **Mining:** You can mine and rebuild a portal like any other island block, according to the island's rights. Only the **vaults** in the End portal can't be mined – if you try, the chat tells you that the vault belongs to the gate. But neither the portal nor its island changes by itself: creepers don't blow any of it away, fire doesn't burn any of it, water doesn't freeze over, gravel and sand don't fall down, and endermen don't take anything. Whatever you change or build on it yourself is no longer protected by the portal.
 
 ### The dungeon in the End portal
 
